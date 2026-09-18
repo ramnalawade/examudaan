@@ -1,0 +1,44 @@
+{
+  "organization": "उत्तर प्रदेश अधीनस्थ सेवा चयन आयोग",
+  "department": "उत्तर प्रदेश जल निगम (ग्रामीण), लखनऊ",
+  "notification_number": "50/16/विज्ञापन अनुभाग(ग्यारह)/2026/14-परीक्षा/2026",
+  "advt_number": "14-परीक्षा/2026",
+  "post_name": "सहायक लेखाकार",
+  "total_vacancies": 1957,
+  "category_breakdown": {
+    "general": 8,
+    "obc": 6,
+    "sc": 4,
+    "st": 0,
+    "ews": 2
+  },
+  "pay_scale": "5200-20200, ग्रेड-पे: 2800",
+  "important_dates": {
+    "notification_date": "01-08-2026",
+    "application_start": "14-07-2026",
+    "application_end": "03-08-2026",
+    "fee_last_date": "10-08-2026",
+    "exam_date": null
+  },
+  "application_fee": {
+    "general": null,
+    "obc": null,
+    "sc_st": null,
+    "pwd": null
+  },
+  "age_limit": {
+    "min_years": 21,
+    "max_years": 40,
+    "age_relaxation": "उत्तर प्रदेश सरकार के नियमों के अनुसार"
+  },
+  "eligibility": {
+    "education": [
+      "विधि द्वारा स्थापित विश्वविद्यालय से कामर्स में स्नातक की उपाधि अथवा सरकार द्वारा मान्यता प्राप्त विश्वविद्यालय अथवा संस्था से एकाउन्टेन्सी में स्नातकोत्तर डिप्लोमा",
+      "सरकार द्वारा मान्यता प्राप्त किसी संस्थान से कम्प्यूटर संचालन में 'ओ' लेवल डिप्लोमा"
+    ],
+    "experience": null
+  },
+  "selection_process": [],
+  "how_to_apply": "ऑनलाइन",
+  "language": "Hindi"
+}

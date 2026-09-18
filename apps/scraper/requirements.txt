@@ -1,0 +1,57 @@
+# ============================================================
+# apps/scraper/requirements.txt
+# Redesigned: Direct PostgreSQL via psycopg2, removed slow proxy rotation
+# ============================================================
+
+# Core Scrapy
+scrapy>=2.11.0
+
+# Direct PostgreSQL (used by db.py AND classify_exam_notifications.py)
+# psycopg2-binary works on Windows without libpq — do NOT use psycopg v3 here
+psycopg2-binary>=2.9.9
+
+# Pydantic for structured Gemini output validation
+pydantic>=2.0.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Google Gemini AI for PDF/HTML extraction (new SDK)
+google-genai>=1.0.0
+
+# DeepSeek AI (OpenAI-compatible API)
+openai>=1.0.0
+
+# Groq AI (LLaMA/Mixtral)
+groq>=0.9.0
+
+# PDF text extraction (for DeepSeek/Groq which don't support native PDF)
+pdfplumber>=0.10.0
+# PyPDF2 as fallback
+PyPDF2>=3.0.0
+
+# HTTP requests for downloading PDFs
+requests>=2.31.0
+
+# Fast XML/HTML parsing
+lxml>=5.0.0
+
+# Scrapling — JS rendering + Cloudflare bypass (PMC, Thane Police)
+# Uses Playwright (DynamicFetcher) and Camoufox (StealthyFetcher)
+scrapling[all]>=0.4.14
+
+# Brotli decompression (needed for modern gov sites)
+brotli
+brotlicffi
+
+# Date parsing
+python-dateutil>=2.9.0
+
+# Rate limiting + retry helper
+tenacity>=8.2.0
+
+# For slug generation (unicode normalization)
+Unidecode>=1.3.8
+
+# RSS/Atom feed parsing (used by rss_spider.py)
+feedparser>=6.0
