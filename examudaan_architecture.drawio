@@ -1,0 +1,233 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="examudaan-exec-arch-v2" name="ExamUdaan Executive Architecture">
+    <mxGraphModel dx="2400" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2250" pageHeight="1250" background="#F8FAFC">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="100" value="EXAMUDAAN — GOVERNMENT EXAM &amp; RECRUITMENT AGGREGATOR — EXECUTIVE ARCHITECTURE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="2170" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="101" value="High-Availability Ingestion. Zero-Lag 2-Duplicate Guard. Dual-Language AI Engine (English &amp; Marathi). Real-Time Aspirant Alerting." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#64748B;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="52" width="2170" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="102" value="USERS &amp; CHANNELS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="85" width="1560" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="103" value="Aspirants / Students&#10;(All-India &amp; State Jobs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="110" width="195" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="104" value="Mobile Job Seekers&#10;(Responsive Drawer &amp; Nav)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="110" width="195" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="105" value="Desktop Applicants&#10;(Sticky Sidebar Filters)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="110" width="195" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="106" value="Admins &amp; Editorial Ops&#10;(Feedback &amp; Suggestion Desk)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="110" width="205" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="107" value="Public Web Portals&#10;(Next.js 14 App Router)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="910" y="110" width="205" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="108" value="Interactive AI Matcher&#10;(AiMatcher.js Eligibility)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="110" width="215" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="109" value="Paid Alert Subscribers&#10;(WhatsApp / SMS ₹29/49/99)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="110" width="220" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="110" value="SECURITY LAYER" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="170" height="550" as="geometry"/>
+        </mxCell>
+        <mxCell id="111" value="Data Encryption&#10;(In Transit TLS 1.3&#10;&amp; At Rest AES-256)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="220" width="150" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="112" value="IAM &amp; Secrets&#10;(Rotated Gemini Keys&#10;&amp; PostgreSQL .env)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="305" width="150" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="113" value="Session &amp; Auth&#10;(Custom JWT / lib/auth.js&#10;HttpOnly Cookies)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="390" width="150" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="114" value="Anti-Ban / Throttling&#10;(Rotating User-Agents&#10;&amp; Crawl Delay 1-3s)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="475" width="150" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="115" value="DPDP Act 2023&#10;(Gov Non-Affiliation&#10;&amp; User Data Consent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="560" width="150" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="116" value="Audit &amp; Traceability&#10;(Monthly Partitioned&#10;Raw HTML &amp; Logs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="645" width="150" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="117" value="API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3B82F6;strokeColor=#2563EB;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="190" width="65" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="118" value="&lt;b&gt;API &amp; INGESTION GATEWAY&lt;/b&gt;&lt;br/&gt;&lt;font color='#64748B'&gt;Scrapy Crawler Daemon, Scheduled Runner, Next.js REST API &amp; Route Dispatcher&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#334155;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="295" y="190" width="410" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="119" value="&lt;b&gt;REST APIs&lt;/b&gt;: &lt;code&gt;/api/notifications&lt;/code&gt; (Universal filtered listing) | &lt;code&gt;/api/feedback&lt;/code&gt; (Suggestions &amp; Bug desk)&lt;br/&gt;&lt;b&gt;Ingestion Control&lt;/b&gt;: &lt;code&gt;run_scraper.py&lt;/code&gt; CLI | &lt;code&gt;cron_6h.sh&lt;/code&gt; (6-hour cron scheduler) | Async Pipeline Dispatcher&lt;br/&gt;&lt;b&gt;Query Mapping&lt;/b&gt;: &lt;code&gt;?type=job&lt;/code&gt; → recruitment | &lt;code&gt;?type=result&lt;/code&gt; → result | &lt;code&gt;?type=admit-card&lt;/code&gt; → admit_card" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="190" width="890" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="120" value="SCRAPE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B5CF6;strokeColor=#7C3AED;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="280" width="65" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="121" value="&lt;b&gt;SCRAPING &amp; CRAWLING ENGINE&lt;/b&gt;&lt;br/&gt;&lt;font color='#64748B'&gt;34+ Autonomous Portals, Dynamic JS Headless Crawler &amp; 2-Tier Deduplication&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#334155;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="295" y="280" width="410" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="122" value="&lt;b&gt;Central Portals&lt;/b&gt;: SSC, UPSC, RRB, IBPS, SBI, NTA, BPSC, Employment News (Every 6h)&lt;br/&gt;&lt;b&gt;Maharashtra &amp; Municipal&lt;/b&gt;: MPSC (Crawl4AI Headless Browser), MahaPolice, Mumbai/Thane Police, BMC, PMC, TMC, SRPF, Prisons&lt;br/&gt;&lt;b&gt;Research &amp; PSUs&lt;/b&gt;: ACTREC, AIIMS Nagpur, CSIR-NEERI, IIPS, IISER Pune, ICT, CIRCOT, NBSSLUP, Konkan Railway, MECL, MOIL&lt;br/&gt;&lt;b&gt;2-Tier Deduplication&lt;/b&gt;: &lt;code&gt;DuplicateStopMixin&lt;/code&gt; (Early CloseSpider after 2 dups) + &lt;code&gt;DeduplicationPipeline&lt;/code&gt; (Priority 10)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="280" width="890" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="123" value="AI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#10B981;strokeColor=#059669;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="375" width="65" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="124" value="&lt;b&gt;AI / ML &amp; INTELLIGENCE LAYER&lt;/b&gt;&lt;br/&gt;&lt;font color='#64748B'&gt;Multi-LLM Native PDF Extraction, Pydantic Structured Output &amp; Marathi Translation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#334155;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="295" y="375" width="410" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="125" value="&lt;b&gt;Official PDF Analysis&lt;/b&gt;: Google Gemini 2.5 Flash native PDF reader with multi-key rotation (DeepSeek-V3 &amp; Groq fallbacks)&lt;br/&gt;&lt;b&gt;Promoted Fast-Filters&lt;/b&gt;: Auto-extracts total vacancies, salary range (min/max), age limits, walk-in interview dates &amp; venues&lt;br/&gt;&lt;b&gt;Deep Classification&lt;/b&gt;: &lt;code&gt;ai_extracted_data&lt;/code&gt; JSONB (Police, Engineering, Medical, Teaching, Central vs State Govt levels)&lt;br/&gt;&lt;b&gt;Automatic Marathi Engine&lt;/b&gt;: &lt;code&gt;translate_to_marathi.py&lt;/code&gt; (10-item batch Gemini calls: &lt;code&gt;title_mr&lt;/code&gt;, &lt;code&gt;summary_mr&lt;/code&gt;, &lt;code&gt;qualifications_mr&lt;/code&gt;)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="375" width="890" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="126" value="DB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F59E0B;strokeColor=#D97706;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="470" width="65" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="127" value="&lt;b&gt;DATA &amp; STORAGE LAYER&lt;/b&gt;&lt;br/&gt;&lt;font color='#64748B'&gt;Transactional PostgreSQL, JSONB Semi-Structured Payloads &amp; Monthly Partitions&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#334155;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="295" y="470" width="410" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="128" value="&lt;b&gt;Primary Table&lt;/b&gt;: &lt;code&gt;exam_notifications&lt;/code&gt; (1,115+ rows, indexed slug, &lt;code&gt;ON CONFLICT (slug) DO UPDATE&lt;/code&gt;)&lt;br/&gt;&lt;b&gt;Granular Vacancies&lt;/b&gt;: &lt;code&gt;posts&lt;/code&gt; (Per-post category, pay scale, qualifications, reservation JSONB)&lt;br/&gt;&lt;b&gt;Lookups &amp; Registry&lt;/b&gt;: &lt;code&gt;organizations&lt;/code&gt; (Unique UPPER acronyms: MPSC, SSC) | &lt;code&gt;scrape_sources&lt;/code&gt;&lt;br/&gt;&lt;b&gt;Audit Vault&lt;/b&gt;: &lt;code&gt;raw_scraped_data&lt;/code&gt; (Range-partitioned monthly by &lt;code&gt;scraped_at&lt;/code&gt;) | &lt;code&gt;scrape_log&lt;/code&gt; execution history" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="470" width="890" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="129" value="PUB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#06B6D4;strokeColor=#0891B2;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="560" width="65" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="130" value="&lt;b&gt;PUBLISHING &amp; BILINGUAL ENGINE&lt;/b&gt;&lt;br/&gt;&lt;font color='#64748B'&gt;Next.js 14 App Router, Zero-Reload English ↔ Marathi Parity &amp; Dynamic SEO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#334155;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="295" y="560" width="410" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="131" value="&lt;b&gt;Universal UI Components&lt;/b&gt;: &lt;code&gt;JobCard.js&lt;/code&gt; (Bilingual title &amp; tags) | &lt;code&gt;ListingPage.js&lt;/code&gt; (Amazon-style sticky sidebar filters)&lt;br/&gt;&lt;b&gt;Interactive Tools&lt;/b&gt;: &lt;code&gt;AiMatcher.js&lt;/code&gt; (Instant qualification, category, age relaxation slider &amp; live vacancy counter)&lt;br/&gt;&lt;b&gt;Reactive Language Engine&lt;/b&gt;: &lt;code&gt;LanguageContext.js&lt;/code&gt; (Cookie/localStorage sync, instant swap to Marathi, &lt;code&gt;&amp;lt;T&amp;gt;&lt;/code&gt; dictionary)&lt;br/&gt;&lt;b&gt;Automated SEO&lt;/b&gt;: Dynamic Meta titles, Canonical URLs, schema.org &lt;code&gt;JobPosting&lt;/code&gt; JSON-LD for Google Jobs indexing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="560" width="890" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="132" value="ALERT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EC4899;strokeColor=#DB2777;fontColor=#FFFFFF;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="225" y="650" width="65" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="133" value="&lt;b&gt;NOTIFICATION &amp; SUBSCRIPTION SERVICES&lt;/b&gt;&lt;br/&gt;&lt;font color='#64748B'&gt;Paid Aspirant Multi-Channel Alerts, Razorpay Gateway &amp; Admin Crawl Reports&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#334155;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="295" y="650" width="410" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="134" value="&lt;b&gt;Paid Aspirant Subscriptions&lt;/b&gt;: ₹29/month (Basic WhatsApp), ₹49/month (SMS + Email + PDFs), ₹99/month (VIP Custom Alerts)&lt;br/&gt;&lt;b&gt;Payment Processing&lt;/b&gt;: Razorpay Webhook &amp; Orders API | Automated subscription activation &amp; billing lifecycle&lt;br/&gt;&lt;b&gt;Scraper Health Reporting&lt;/b&gt;: Brevo (Sendinblue) SMTP API dispatching 6-hour crawl summaries &amp; spider crash alerts&lt;br/&gt;&lt;b&gt;Multi-Channel Push (Planned)&lt;/b&gt;: AiSensy/Gupshup WhatsApp Business API + MSG91 / Fast2SMS for instant admit card alerts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="650" width="890" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="135" value="PIPELINE FRAMEWORK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1615" y="190" width="150" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="136" value="Standardized&#10;Item Schemas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontColor=#334155;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1625" y="218" width="130" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="137" value="2-Duplicate&#10;Early Exit Rule" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontColor=#334155;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1625" y="268" width="130" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="138" value="Gemini Multi-Key&#10;Rotation Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontColor=#334155;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1625" y="318" width="130" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="139" value="Rotating User-Agents&#10;&amp; Proxy Middleware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontColor=#334155;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1625" y="368" width="130" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="140" value="Idempotent DB Upsert&#10;(ON CONFLICT)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontColor=#334155;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1625" y="418" width="130" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="141" value="Atomic Batch&#10;Marathi Updates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontColor=#334155;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1625" y="468" width="130" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="142" value="VENDOR &amp; PARTNER INTEGRATIONS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1780" y="85" width="430" height="435" as="geometry"/>
+        </mxCell>
+        <mxCell id="143" value="&lt;b&gt;Google Gemini AI API&lt;/b&gt; — &lt;code&gt;gemini-2.5-flash&lt;/code&gt; Native PDF parsing &amp; Marathi translation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1795" y="115" width="400" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="144" value="&lt;b&gt;DeepSeek &amp; Groq Cloud APIs&lt;/b&gt; — LLM fallbacks for qualification extraction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1795" y="170" width="400" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="145" value="&lt;b&gt;Crawl4AI &amp; Playwright&lt;/b&gt; — Headless browser execution for JavaScript portal rendering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1795" y="225" width="400" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="146" value="&lt;b&gt;Brevo (Sendinblue) SMTP API&lt;/b&gt; — Automated 6h scraper execution summary &amp; error logs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1795" y="280" width="400" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="147" value="&lt;b&gt;Razorpay Payment Gateway&lt;/b&gt; — Paid subscription checkout &amp; recurring billing webhooks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1795" y="335" width="400" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="148" value="&lt;b&gt;AiSensy &amp; MSG91&lt;/b&gt; — WhatsApp Business &amp; SMS OTP gateways for candidate notifications" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1795" y="390" width="400" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="149" value="&lt;b&gt;34+ Official Government Portals&lt;/b&gt; — SSC, UPSC, RRB, MPSC, BMC, PMC, State Police, etc." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#0F172A;fontSize=10;align=left;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1795" y="445" width="400" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="150" value="CLOUD &amp; DATA INFRASTRUCTURE (PRIMARY &amp; VAULT RESILIENCE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="755" width="1560" height="305" as="geometry"/>
+        </mxCell>
+        <mxCell id="151" value="PRIMARY PRODUCTION CLOUD (Active)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#0F172A;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="785" width="760" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="152" value="Compute: Web&#10;(Next.js 14 App Router&#10;Vercel / Node Edge)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="75" y="815" width="160" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="153" value="Compute: Scraper&#10;(Python 3.12 VM&#10;run_scraper.py / 6h Cron)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="245" y="815" width="165" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="154" value="Primary Database&#10;(PostgreSQL 16 Engine&#10;10.0.2.160:5432 / test_n_new)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="815" width="180" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="155" value="Headless Engine&#10;(Playwright / Chromium&#10;Crawl4AI for MPSC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="610" y="815" width="190" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="156" value="Connection Pools: &lt;code&gt;pg&lt;/code&gt; (Next.js Web, 20 conns) + &lt;code&gt;psycopg2-binary&lt;/code&gt; (Scrapy Pipeline)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="75" y="890" width="725" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="157" value="STORAGE VAULT &amp; DATA RESILIENCE (Audit &amp; Dedup)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontColor=#0F172A;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="785" width="740" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="158" value="Raw Scraped Archive&#10;(Monthly Partitioned&#10;raw_scraped_data_YYYY_MM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="855" y="815" width="165" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="159" value="Preloaded Dedup Sets&#10;(known_urls &amp; known_hashes&#10;in Memory at Crawl Start)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="815" width="175" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="160" value="Database Backups&#10;(Daily Point-In-Time&#10;pg_dump Vault)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1215" y="815" width="165" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="161" value="14-Day Scrape Logs&#10;(Rotating Execution Logs&#10;in apps/scraper/logs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="815" width="175" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="162" value="Data Replication: Direct PostgreSQL connection bypassing PgBouncer for DDL &amp; transactional safety" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;fontColor=#0F172A;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="855" y="890" width="710" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="163" value="Automated 6-Hour Cron Schedule&#10;(Linux cron_6h.sh / Windows Task Scheduler)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="960" width="360" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="164" value="Two-Tier 2-Duplicate Early Stop&#10;(Closes spider in 1.2s if no new notices)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="435" y="960" width="360" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="165" value="Automatic Post-Crawl Translation&#10;(Batches of 10 notifications per Gemini prompt)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="810" y="960" width="380" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="166" value="Sub-Millisecond Indexed Query Lookup&#10;(Cached database queries via lib/pgdb.js)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1205" y="960" width="375" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="167" value="OBSERVABILITY (SecOps | Ops | FinOps)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=11;fontStyle=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1615" y="535" width="595" height="525" as="geometry"/>
+        </mxCell>
+        <mxCell id="168" value="&lt;b&gt;SECURITY &amp; COMPLIANCE (SecOps)&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Anti-Scraping Throttling&lt;/b&gt;: 1-3s download delays, domain-specific concurrency = 1&lt;br/&gt;• &lt;b&gt;Non-Affiliation Compliance&lt;/b&gt;: Prominent disclaimer that ExamUdaan is a private portal&lt;br/&gt;• &lt;b&gt;External Link Integrity&lt;/b&gt;: Official PDF links always point to gov domains with &lt;code&gt;rel='noopener'&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;SQL Injection Prevention&lt;/b&gt;: 100% parameterized queries in &lt;code&gt;pgdb.js&lt;/code&gt; &amp; &lt;code&gt;db.py&lt;/code&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=9;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="565" width="565" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="169" value="&lt;b&gt;OPERATIONS &amp; RELIABILITY (Ops)&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;Automated Crawl Logs&lt;/b&gt;: Timestamps, duration, scraped count in &lt;code&gt;scraper_YYYYMMDD_HHMMSS.log&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;Brevo Email Alerts&lt;/b&gt;: Instant email summary to admin on spider success / failure&lt;br/&gt;• &lt;b&gt;Graceful Failures&lt;/b&gt;: Spiders catch timeouts &amp; 404s without crashing subsequent crawlers&lt;br/&gt;• &lt;b&gt;Next.js App Router Build&lt;/b&gt;: All 43 static &amp; dynamic routes validated (PASSED code 0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=9;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="690" width="565" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="170" value="&lt;b&gt;COST &amp; RESOURCE OPTIMIZATION (FinOps)&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;2-Duplicate Early Exit&lt;/b&gt;: Saves 90%+ server compute and network bandwidth per crawl&lt;br/&gt;• &lt;b&gt;Batch Gemini Translation&lt;/b&gt;: 10 jobs per prompt cuts API costs &amp; rate limits by 90%&lt;br/&gt;• &lt;b&gt;Skip Reprocessing&lt;/b&gt;: Existing records with &lt;code&gt;title_mr IS NOT NULL&lt;/code&gt; never re-prompted&lt;br/&gt;• &lt;b&gt;Pure Vanilla CSS&lt;/b&gt;: Zero runtime JavaScript CSS overhead; minimal bundle size" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#1E293B;fontSize=9;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="820" width="565" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="171" value="&lt;b&gt;KEY RELIABILITY METRICS&lt;/b&gt;: 34+ Monitored Government Portals | 1,115+ Live Database Records | 1.19s Early-Exit Latency | 43 Next.js Routes | 2 Languages (EN/MR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;fontColor=#1E293B;fontSize=10;align=center;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="950" width="565" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="172" value="&lt;b&gt;KEY PRINCIPLES:&lt;/b&gt;   High Availability (99.9%)  •  Real-Time Ingestion (6h Cron)  •  Zero-Quota Waste Deduplication  •  Dual-Language Parity (English &amp; Marathi)  •  Strict Gov Non-Affiliation  •  Mobile-First Responsive UX  •  Cost Optimized Multi-LLM Routing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1075" width="2170" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="173" value="&lt;b&gt;LEGEND:&lt;/b&gt;  ■ Ingestion Gateway (Blue)   ■ Scraping Engine (Purple)   ■ AI / ML Intelligence (Green)   ■ PostgreSQL Data (Amber)   ■ Publishing Web (Teal)   ■ Alerts &amp; Subscriptions (Pink)   ■ Cloud Infrastructure (Slate)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1105" width="2170" height="25" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
