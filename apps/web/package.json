@@ -1,0 +1,31 @@
+{
+  "name": "examudaan-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.45.0",
+    "bcryptjs": "^3.0.3",
+    "joi": "^17.13.4",
+    "jsonwebtoken": "^9.0.2",
+    "jssha": "^3.3.2",
+    "next": "^16.2.12",
+    "pg": "^8.22.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
+    "eslint": "^10.8.0",
+    "eslint-config-next": "^16.2.12"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

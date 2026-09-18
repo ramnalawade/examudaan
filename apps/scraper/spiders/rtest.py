@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore', message='Unverified HTTPS request')
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Your API key
-API_KEY = "AQ.Ab8RN6Ik3sFL75h2Otd9Ipx5fBmV0iMMHO3h_InLYteL2f76dw"  # Replace with your actual key
+API_KEY = ""  # Replace with your actual key
 
 
 # Your working model
