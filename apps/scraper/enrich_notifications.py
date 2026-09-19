@@ -311,14 +311,119 @@ def is_enrichable(row: dict) -> bool:
         if pat in title:
             return False
 
-    # Must have some content to extract from (title alone is too little
-    # unless we can fetch the source page)
-    has_desc = bool(row.get("description") and len(str(row["description"])) > 50)
-    has_source = bool(row.get("source_url"))
+    # Row has usable content if any of these are true:
+    has_desc    = bool(row.get("description") and len(str(row["description"])) > 50)
+    has_source  = bool(row.get("source_url"))
+    has_pdf_url = bool(
+        row.get("source_url", "").lower().endswith(".pdf")
+        or (row.get("notification_pdf") or "").lower().endswith(".pdf")
+    )
+
+    # If source_url is a PDF we can always try Gemini vision — allow through
+    if has_pdf_url:
+        return True
+
+    # Otherwise need at least description or a fetchable source URL
     if not has_desc and not has_source:
         return False
 
     return True
+
+
+# ============================================================
+# PDF CONTENT EXTRACTION via Gemini vision
+# ============================================================
+
+_PDF_HEADERS  = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+_MAX_PDF_SIZE = 15 * 1024 * 1024  # 15 MB Gemini inline limit
+
+def extract_fields_from_pdf(
+    row: dict, pdf_url: str, max_retries: int = 3
+) -> Optional["EnrichmentResult"]:
+    """
+    ONE Gemini call: download the PDF and extract all structured fields in a
+    single request by sending the PDF bytes inline together with the system
+    prompt and JSON schema.
+
+    This replaces the old two-call pattern:
+      old: _get_pdf_as_text() [call 1]  +  extract_fields() [call 2]
+      new: extract_fields_from_pdf()    [single call]
+
+    Works for both text-layer PDFs and fully scanned (image-only) PDFs.
+    """
+    # 1. Download the PDF
+    try:
+        resp = requests.get(pdf_url, headers=_PDF_HEADERS, timeout=30, verify=False)
+        resp.raise_for_status()
+        if len(resp.content) > _MAX_PDF_SIZE:
+            logger.warning("  PDF too large (%d bytes): %s", len(resp.content), pdf_url)
+            return None
+        pdf_bytes = resp.content
+    except Exception as e:
+        logger.warning("  PDF download failed: %s — %s", pdf_url, e)
+        return None
+
+    logger.info("  PDF downloaded: %d bytes — sending to Gemini (single call).", len(pdf_bytes))
+
+    # 2. Build a compact user prompt with any metadata we already have
+    meta_parts = []
+    if row.get("title"):
+        meta_parts.append(f"TITLE: {row['title']}")
+    if row.get("advt_no"):
+        meta_parts.append(f"ADVT NO: {row['advt_no']}")
+    meta_parts.append(f"PDF URL: {pdf_url}")
+    user_prompt = (
+        "Extract ALL structured data from this Indian government recruitment PDF.\n\n"
+        + "\n".join(meta_parts)
+    )
+
+    # 3. Build schema once
+    response_schema = _get_response_schema()
+
+    from google.genai import types as _gtypes
+
+    for attempt in range(max_retries):
+        try:
+            client = get_client()
+            response = client.models.generate_content(
+                model=MODEL_NAME,
+                contents=[
+                    # PDF sent inline — Gemini vision handles both text and scanned PDFs
+                    _gtypes.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
+                    SYSTEM_PROMPT,
+                    user_prompt,
+                ],
+                config={
+                    "response_mime_type":   "application/json",
+                    "response_json_schema": response_schema,
+                },
+            )
+            if not response.text:
+                raise RuntimeError("Gemini returned empty response")
+
+            result = EnrichmentResult.model_validate_json(response.text)
+            logger.info("  PDF extraction done in 1 API call.")
+            return result
+
+        except Exception as exc:
+            last_err = exc
+            err_str  = str(exc).lower()
+            if "429" in err_str or "quota" in err_str or "rate" in err_str:
+                rotate_key()
+                wait = (2 ** attempt) + random.uniform(0, 1)
+                logger.warning(
+                    "  Rate limit (attempt %d/%d). Waiting %.1fs.", attempt + 1, max_retries, wait
+                )
+                time.sleep(wait)
+            elif "401" in err_str or "unauthenticated" in err_str:
+                rotate_key()
+            else:
+                logger.warning("  PDF extract error (attempt %d/%d): %s",
+                               attempt + 1, max_retries, str(exc)[:200])
+                time.sleep(1)
+
+    logger.error("  PDF extraction failed after %d retries.", max_retries)
+    return None
 
 
 # ============================================================
@@ -333,6 +438,7 @@ def fetch_page_text(url: str, max_chars: int = 8000) -> str:
     """
     if not url:
         return ""
+
     try:
         headers = {
             "User-Agent": (
@@ -669,24 +775,35 @@ def main():
             skipped += 1
             continue
 
-        # Optionally fetch source page when description is empty
-        page_text = ""
-        if args.fetch and not row.get("description"):
-            source_url = row.get("source_url", "")
-            if source_url:
+        # --- Determine content source and call Gemini ---
+        source_url = row.get("source_url", "")
+        result: Optional[EnrichmentResult] = None
+
+        if not row.get("description") and source_url.lower().endswith(".pdf"):
+            # PDF source — single Gemini call (vision + structured extraction)
+            logger.info("  source_url is a PDF — using single-call Gemini vision extraction.")
+            # Store PDF URL in notification_pdf if not already set
+            if not row.get("notification_pdf"):
+                row["notification_pdf"] = source_url
+            result = extract_fields_from_pdf(row, source_url)
+
+        else:
+            # HTML/text source — optionally fetch page, then call Gemini
+            page_text = ""
+            if not row.get("description") and args.fetch and source_url:
                 logger.info("  Fetching source page: %s", source_url)
                 page_text = fetch_page_text(source_url)
                 if page_text:
                     logger.info("  Got %d chars from source page.", len(page_text))
 
-        # Skip if still no usable content after optional fetch
-        if not row.get("description") and not page_text:
-            logger.warning("  No content to extract from — skipping id=%d", row_id)
-            skipped += 1
-            continue
+            # Skip if still no usable content
+            if not row.get("description") and not page_text:
+                logger.warning("  No content to extract from — skipping id=%d", row_id)
+                skipped += 1
+                continue
 
-        # Call Gemini for structured extraction
-        result = extract_fields(row, page_text=page_text)
+            result = extract_fields(row, page_text=page_text)
+
         if not result:
             logger.warning("  Gemini extraction failed for id=%d", row_id)
             skipped += 1
