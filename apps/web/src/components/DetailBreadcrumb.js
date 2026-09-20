@@ -7,10 +7,11 @@
 
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
+import { formatTitle } from '../lib/formatTitle'
 
 export default function DetailBreadcrumb({ sectionLabel, sectionHref, orgAcronym, title, titleMr }) {
   const { t, isMarathi } = useLanguage()
-  const displayTitle = (isMarathi && titleMr) ? titleMr : title
+  const displayTitle = formatTitle((isMarathi && titleMr) ? titleMr : title)
 
   return (
     <nav className="breadcrumb" aria-label="Breadcrumb" style={{ marginBottom: 16 }}>

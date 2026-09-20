@@ -17,6 +17,14 @@ from dotenv import load_dotenv
 load_dotenv()
 logger = logging.getLogger(__name__)
 
+try:
+    from title_cleaner import clean_title_case
+except ImportError:
+    try:
+        from .title_cleaner import clean_title_case
+    except ImportError:
+        clean_title_case = lambda t: t
+
 # ---- Connection DSN ----
 # Prefers DIRECT_URL (bypasses PgBouncer for DDL/pgvector), falls back to parts
 #DIRECT_URL = os.getenv("DIRECT_URL", "")
@@ -314,7 +322,9 @@ def upsert_notification(conn, org_id: str, source_id: str, data: dict) -> int:
     - Filtering columns: salary_min/max, max_age_limit, is_walk_in, employment_type, etc.
     - Verification: last_source_sync, last_verified_at, is_archived
     """
-    slug = make_slug(data.get('title', ''))
+    raw_title = data.get('title') or ''
+    title = clean_title_case(raw_title) if raw_title else ''
+    slug = make_slug(title or raw_title)
 
     # Build important_dates JSONB from flat date fields if not provided
     important_dates = data.get('important_dates') or {}
@@ -406,6 +416,7 @@ def upsert_notification(conn, org_id: str, source_id: str, data: dict) -> int:
             )
             ON CONFLICT (slug) DO UPDATE SET
                 -- Core fields (always update)
+                title                = EXCLUDED.title,
                 advt_no              = EXCLUDED.advt_no,
                 description          = EXCLUDED.description,
                 notification_pdf     = EXCLUDED.notification_pdf,
@@ -502,7 +513,7 @@ def upsert_notification(conn, org_id: str, source_id: str, data: dict) -> int:
                 # Core identity
                 org_id, source_id,
                 data.get('advt_no'),
-                data.get('title'),
+                title,
                 slug,
                 data.get('description'),
                 # Dates

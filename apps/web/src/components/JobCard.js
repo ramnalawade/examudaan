@@ -5,6 +5,7 @@
 
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
+import { formatTitle } from '../lib/formatTitle'
 
 const ICON_MAP = {
   police:   'local_police',
@@ -115,9 +116,9 @@ export default function JobCard({ job }) {
   const typeBadge = TYPE_BADGE[notification_type] || TYPE_BADGE.other
   const badgeText = isMr ? (MR_TYPE_LABEL[notification_type] || typeBadge.label) : typeBadge.label
 
-  const displayTitle = (isMr && title_mr) ? title_mr : title
-  const secondaryTitle = (isMr && title_mr && title_mr !== title) ? title : (!isMr && title_mr) ? title_mr : null
-  const displayOrg = isMr && (job?.org_name_mr || job?.name_mr) ? (job.org_name_mr || job.name_mr) : (department || organization)
+  const displayTitle = formatTitle((isMr && title_mr) ? title_mr : title)
+  const secondaryTitle = (isMr && title_mr && title_mr !== title) ? formatTitle(title) : (!isMr && title_mr) ? formatTitle(title_mr) : null
+  const displayOrg = formatTitle(isMr && (job?.org_name_mr || job?.name_mr) ? (job.org_name_mr || job.name_mr) : (department || organization))
 
   const formatDate = (d) => {
     if (!d) return 'TBA'

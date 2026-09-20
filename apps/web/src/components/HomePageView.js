@@ -9,6 +9,8 @@ import Link from 'next/link'
 import JobCard from './JobCard'
 import AiMatcher from './AiMatcher'
 import { useLanguage } from '../context/LanguageContext'
+import { SITE_CONFIG } from '../lib/constants'
+import { formatTitle } from '../lib/formatTitle'
 
 const MR_TYPE_LABELS = {
   recruitment: 'भरती',
@@ -73,10 +75,15 @@ export default function HomePageView({ jobs = [], walkIns = [], quickUpdates = [
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <Link href="/pricing" style={{ color: 'var(--primary-cta)', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+            <a
+              href={SITE_CONFIG?.social?.whatsappChannel || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v'}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#16a34a', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}
+            >
               <span className="material-symbols-outlined" style={{ fontSize: 16 }}>chat</span>
               {t('hero.btn_whatsapp')}
-            </Link>
+            </a>
             <span style={{ color: 'var(--outline-variant)' }}>|</span>
             <Link href="/feedback" style={{ color: 'var(--secondary)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
               <span className="material-symbols-outlined" style={{ fontSize: 16 }}>feedback</span>
@@ -185,12 +192,13 @@ export default function HomePageView({ jobs = [], walkIns = [], quickUpdates = [
                 <span className="material-symbols-outlined" style={{ fontSize: 20 }}>search</span>
                 {t('hero.btn_browse')}
               </Link>
-              <Link
-                href="/pricing"
+              <a
+                href={SITE_CONFIG?.social?.whatsappChannel || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v'}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
-                  background: 'var(--surface-container-lowest)',
-                  color: 'var(--primary)',
-                  border: '1.5px solid var(--primary)',
+                  background: '#22c55e',
+                  color: '#ffffff',
                   padding: '12px 24px',
                   borderRadius: 'var(--radius-md)',
                   fontWeight: 700,
@@ -199,11 +207,12 @@ export default function HomePageView({ jobs = [], walkIns = [], quickUpdates = [
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: 8,
+                  boxShadow: '0 4px 14px rgba(34, 197, 94, 0.35)',
                 }}
               >
                 <span className="material-symbols-outlined" style={{ fontSize: 20 }}>chat</span>
                 {t('hero.btn_whatsapp')}
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -381,8 +390,8 @@ export default function HomePageView({ jobs = [], walkIns = [], quickUpdates = [
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16 }}>
               {walkIns.map((item) => {
-                const displayTitle = isMarathi && item.title_mr ? item.title_mr : item.title
-                const displayOrg = isMarathi && item.name_mr ? item.name_mr : (item.org_acronym || item.org_name)
+                const displayTitle = formatTitle(isMarathi && item.title_mr ? item.title_mr : item.title)
+                const displayOrg = formatTitle(isMarathi && item.name_mr ? item.name_mr : (item.org_acronym || item.org_name))
                 const vacanciesText = item.total_vacancies
                   ? `${item.total_vacancies} ${t('card.vacancies')}`
                   : (isMarathi ? 'नियमानुसार' : 'As per norms')
@@ -612,8 +621,10 @@ export default function HomePageView({ jobs = [], walkIns = [], quickUpdates = [
                 {t('home.wa_desc')}
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Link
-                  href="/pricing"
+                <a
+                  href={SITE_CONFIG?.social?.whatsappChannel || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v'}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     background: '#22c55e',
                     color: '#ffffff',
@@ -629,21 +640,45 @@ export default function HomePageView({ jobs = [], walkIns = [], quickUpdates = [
                   }}
                 >
                   <span className="material-symbols-outlined" style={{ fontSize: 20 }}>chat</span>
-                  {t('home.wa_btn')}
-                </Link>
+                  {t('home.join_wa_channel')}
+                </a>
+                <a
+                  href={SITE_CONFIG?.social?.telegramChannel || 'https://t.me/examudaan'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: '#0284c7',
+                    color: '#ffffff',
+                    padding: '12px 22px',
+                    borderRadius: 'var(--radius-md)',
+                    fontWeight: 700,
+                    fontSize: 15,
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 8,
+                    boxShadow: '0 4px 14px rgba(2, 132, 199, 0.35)',
+                  }}
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: 20 }}>send</span>
+                  {t('home.join_tg_channel')}
+                </a>
                 <Link
-                  href="/faq"
+                  href="/pricing"
                   style={{
                     color: '#ffffff',
-                    border: '1px solid rgba(255,255,255,0.3)',
+                    border: '1px solid rgba(255,255,255,0.4)',
                     padding: '12px 20px',
                     borderRadius: 'var(--radius-md)',
                     fontWeight: 600,
                     fontSize: 14,
                     textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 6,
                   }}
                 >
-                  {t('home.wa_how_it_works')}
+                  {t('home.custom_alerts_btn')}
                 </Link>
               </div>
             </div>

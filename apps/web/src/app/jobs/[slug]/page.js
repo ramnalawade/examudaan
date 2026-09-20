@@ -8,6 +8,7 @@ import React from 'react'
 import Link from 'next/link'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
+import DetailHowToApply from '../../../components/DetailHowToApply'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 
@@ -900,34 +901,27 @@ export default async function JobDetailPage({ params }) {
                 <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>description</span>
                 <T k="detail.how_to_apply" fallback="How to Apply" />
               </h2>
-              <ol style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {applySteps.map((step, i) => (
-                  <li key={i} style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.6 }}>{step}</li>
-                ))}
-              </ol>
+              <DetailHowToApply
+                website={en.application_links?.official_website || en.application_links?.detail_page || en.org_website || `${(en.org_acronym || '').toLowerCase()}.gov.in`}
+                advtRefNo={advtRefNo}
+                isWalkIn={isWalkIn}
+                customProcess={appProcess}
+                customNote={appNote}
+                requiredDocs={requiredDocs}
+              />
 
               {/* Application email */}
               {en.application_email && (
                 <div style={{ marginTop: 16, padding: '12px 16px', background: 'var(--surface-container)', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 20 }}>mail</span>
                   <div>
-                    <div style={{ fontSize: 12, color: 'var(--secondary)', fontWeight: 600 }}>Send Applications To:</div>
+                    <div style={{ fontSize: 12, color: 'var(--secondary)', fontWeight: 600 }}>
+                      <T k="detail.send_applications_to" fallback="Send Applications To:" />
+                    </div>
                     <a href={`mailto:${en.application_email}`} style={{ fontSize: 14, color: 'var(--primary)', fontWeight: 600 }}>
                       {en.application_email}
                     </a>
                   </div>
-                </div>
-              )}
-
-              {/* Required documents */}
-              {requiredDocs.length > 0 && (
-                <div style={{ marginTop: 16 }}>
-                  <h3 style={{ fontSize: 14, fontWeight: 600, color: 'var(--on-surface)', marginBottom: 8 }}>Required Documents</h3>
-                  <ul style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    {requiredDocs.map((doc, i) => (
-                      <li key={i} style={{ fontSize: 13, color: 'var(--secondary)', lineHeight: 1.5 }}>{doc}</li>
-                    ))}
-                  </ul>
                 </div>
               )}
             </section>
@@ -937,7 +931,7 @@ export default async function JobDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>location_on</span>
-                  Exam Cities / Centres
+                  <T k="detail.exam_cities" fallback="Exam Cities / Centres" />
                 </h2>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {examCities.map(city => (
@@ -961,7 +955,7 @@ export default async function JobDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>info</span>
-                  About This Notification
+                  <T k="detail.about_notification" fallback="About This Notification" />
                 </h2>
                 <p style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.8, whiteSpace: 'pre-line' }}>
                   {en.description.length > 2000
@@ -1002,11 +996,13 @@ export default async function JobDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>label</span>
-                  Job Classification
+                  <T k="detail.job_classification" fallback="Job Classification" />
                 </h2>
                 {jobCategories.length > 0 && (
                   <div style={{ marginBottom: 12 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Job Category</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.job_category" fallback="Job Category" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {jobCategories.map(c => (
                         <span key={c} style={{ padding: '4px 10px', background: 'var(--surface-container-low)', border: '1px solid var(--outline-variant)', borderRadius: 999, fontSize: 12, color: 'var(--on-surface)' }}>
@@ -1018,7 +1014,9 @@ export default async function JobDetailPage({ params }) {
                 )}
                 {careerStreams.length > 0 && (
                   <div style={{ marginBottom: 12 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Career Stream</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.career_stream" fallback="Career Stream" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {careerStreams.map(s => (
                         <span key={s} style={{ padding: '4px 10px', background: 'var(--surface-container-low)', border: '1px solid var(--outline-variant)', borderRadius: 999, fontSize: 12, color: 'var(--on-surface)' }}>
@@ -1030,7 +1028,9 @@ export default async function JobDetailPage({ params }) {
                 )}
                 {recruitmentTypes.length > 0 && (
                   <div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Recruitment Type</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.recruitment_type" fallback="Recruitment Type" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {recruitmentTypes.map(t => (
                         <span key={t} style={{ padding: '4px 10px', background: 'var(--surface-container-low)', border: '1px solid var(--outline-variant)', borderRadius: 999, fontSize: 12, color: 'var(--on-surface)' }}>
@@ -1178,7 +1178,7 @@ export default async function JobDetailPage({ params }) {
                   borderRadius: '12px', padding: '16px',
                 }}>
                   <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>
-                    Organization
+                    <T k="detail.organization" fallback="Organization" />
                   </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {en.org_website && (
@@ -1189,7 +1189,7 @@ export default async function JobDetailPage({ params }) {
                         style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--primary)', textDecoration: 'none' }}
                       >
                         <span className="material-symbols-outlined" style={{ fontSize: 16 }}>language</span>
-                        Official Website
+                        <T k="detail.official_website" fallback="Official Website" />
                       </a>
                     )}
                     {en.org_address && (

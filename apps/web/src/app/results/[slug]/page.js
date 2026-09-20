@@ -7,6 +7,7 @@
 import Link from 'next/link'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
+import { ResultCheckSteps } from '../../../components/DetailActionSteps'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 
@@ -278,7 +279,7 @@ export default async function ResultDetailPage({ params }) {
                 style={{ background: 'linear-gradient(135deg,#16A34A,#15803D)' }}
               >
                 <span className="material-symbols-outlined fill" style={{ fontSize: 18 }}>open_in_new</span>
-                Check Result / Download Scorecard
+                <T k="card.check_result" fallback="Check Result / Download Scorecard" />
               </a>
             )}
             {pdfLink && pdfLink !== resultLink && (
@@ -291,7 +292,7 @@ export default async function ResultDetailPage({ params }) {
                 id="result-pdf-btn"
               >
                 <span className="material-symbols-outlined" style={{ fontSize: 18 }}>picture_as_pdf</span>
-                Official Notification PDF
+                <T k="detail.view_pdf" fallback="Official Notification PDF" />
               </a>
             )}
           </div>
@@ -307,7 +308,7 @@ export default async function ResultDetailPage({ params }) {
             <section style={sectionStyle}>
               <h2 style={sectionHeadStyle}>
                 <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>calendar_month</span>
-                Important Dates
+                <T k="detail.important_dates" fallback="Important Dates" />
               </h2>
               {[
                 { label: 'Exam Conducted',                  value: formatDate(examDate) },
@@ -326,11 +327,13 @@ export default async function ResultDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>info</span>
-                  About This Result
+                  <T k="detail.about_result" fallback="About This Result" />
                 </h2>
                 {educationLevels.length > 0 && (
                   <div style={{ marginBottom: 12 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Education Level</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.education_level" fallback="Education Level" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {educationLevels.map(l => (
                         <span key={l} style={{ padding: '4px 10px', background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#C2410C' }}>
@@ -342,7 +345,9 @@ export default async function ResultDetailPage({ params }) {
                 )}
                 {jobCategories.length > 0 && (
                   <div style={{ marginBottom: 12 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Job Category</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.job_category" fallback="Job Category" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {jobCategories.map(c => (
                         <span key={c} style={{ padding: '4px 10px', background: 'var(--surface-container-low)', border: '1px solid var(--outline-variant)', borderRadius: 999, fontSize: 12, color: 'var(--on-surface)' }}>
@@ -354,7 +359,9 @@ export default async function ResultDetailPage({ params }) {
                 )}
                 {selectionMethods.length > 0 && (
                   <div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Selection Process Was</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.selection_stages" fallback="Selection Process Was" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {selectionMethods.map((m, i) => (
                         <span key={i} style={{ padding: '4px 10px', background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 999, fontSize: 12, color: '#15803D' }}>
@@ -372,7 +379,7 @@ export default async function ResultDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>description</span>
-                  Result Details
+                  <T k="detail.result_details" fallback="Result Details" />
                 </h2>
                 <p style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.8, whiteSpace: 'pre-line' }}>
                   {en.description.length > 2000
@@ -386,13 +393,9 @@ export default async function ResultDetailPage({ params }) {
             <section style={sectionStyle}>
               <h2 style={sectionHeadStyle}>
                 <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>help_outline</span>
-                How to Check Result
+                <T k="detail.how_to_check_result" fallback="How to Check Result" />
               </h2>
-              <ol style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {checkSteps.map((step, i) => (
-                  <li key={i} style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.6 }}>{step}</li>
-                ))}
-              </ol>
+              <ResultCheckSteps website={en.application_links?.official_website || en.org_website} title={en.title} />
             </section>
 
             {/* Quick Links */}
@@ -400,7 +403,7 @@ export default async function ResultDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>link</span>
-                  Quick Links
+                  <T k="detail.quick_links" fallback="Quick Links" />
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {allLinks.map(({ label, url, icon }) => (
@@ -431,7 +434,7 @@ export default async function ResultDetailPage({ params }) {
             <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 12, padding: '14px 18px', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 20, flexShrink: 0, marginTop: 2 }}>warning</span>
               <p style={{ fontSize: 13, color: '#92400E', lineHeight: 1.6 }}>
-                Always verify your result on the official government website. ExamUdaan aggregates information and may not reflect last-minute updates.
+                <T k="detail.disclaimer_note" fallback="Always verify your result on the official government website. ExamUdaan aggregates information and may not reflect last-minute updates." />
               </p>
             </div>
           </div>
@@ -444,7 +447,9 @@ export default async function ResultDetailPage({ params }) {
             }}>
               {/* Quick Info */}
               <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: 20 }}>
-                <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 16 }}>Quick Info</h3>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 16 }}>
+                  <T k="detail.quick_info" fallback="Quick Info" />
+                </h3>
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
                   {[
                     { label: 'Organization', value: en.org_acronym || en.org_name },
@@ -470,7 +475,7 @@ export default async function ResultDetailPage({ params }) {
                     style={{ width: '100%', justifyContent: 'center', marginTop: 16, background: 'linear-gradient(135deg,#16A34A,#15803D)' }}
                   >
                     <span className="material-symbols-outlined fill" style={{ fontSize: 18 }}>open_in_new</span>
-                    Check Result
+                    <T k="card.check_result" fallback="Check Result" />
                   </a>
                 )}
               </div>
@@ -478,12 +483,14 @@ export default async function ResultDetailPage({ params }) {
               {/* Org Info */}
               {(en.org_website || en.org_address || en.org_phone) && (
                 <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: 16 }}>
-                  <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>Organization</h3>
+                  <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>
+                    <T k="detail.organization" fallback="Organization" />
+                  </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {en.org_website && (
                       <a href={en.org_website} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--primary)', textDecoration: 'none' }}>
                         <span className="material-symbols-outlined" style={{ fontSize: 16 }}>language</span>
-                        Official Website
+                        <T k="detail.official_website" fallback="Official Website" />
                       </a>
                     )}
                     {en.org_address && (
@@ -508,7 +515,9 @@ export default async function ResultDetailPage({ params }) {
         {/* Related results */}
         {relatedResults.length > 0 && (
           <section style={{ marginTop: 40, paddingTop: 32, borderTop: '1px solid var(--outline-variant)' }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 20 }}>Other Recent Results</h2>
+            <h2 style={{ fontSize: 20, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 20 }}>
+              <T k="detail.similar_results" fallback="Other Recent Results" />
+            </h2>
             <div className="grid-2">
               {relatedResults.map(r => (
                 <Link key={r.slug} href={`/results/${r.slug}`} className="job-card" style={{ flexDirection: 'column', gap: 8, textDecoration: 'none' }}>

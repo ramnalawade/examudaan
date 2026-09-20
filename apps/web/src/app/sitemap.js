@@ -9,6 +9,9 @@
 
 import { query as pgQuery } from '../lib/pgdb'
 
+// Revalidate sitemap from database every 24 hours (86,400 seconds)
+export const revalidate = 86400
+
 const rawBase = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
 const BASE_URL = (rawBase && !rawBase.includes('localhost')) ? rawBase : 'https://examudaan.in'
 

@@ -52,6 +52,8 @@ const schema = Joi.object({
   min_salary:       Joi.number().integer().min(0).max(10000000).allow(null, ''),
   max_age:          Joi.number().integer().min(18).max(65).allow(null, ''),
   govt_level:       Joi.string().valid('Central', 'State', 'PSU', 'Local').allow(null, ''),
+  min_vacancies:    Joi.number().integer().min(0).max(1000000).allow(null, ''),
+  min_days_left:    Joi.number().integer().min(0).max(365).allow(null, ''),
   page:             Joi.number().integer().min(1).default(1),
   limit:            Joi.number().integer().min(1).max(50).default(PAGE_SIZE),
   sort:             Joi.string().valid('latest', 'closing', 'vacancies').default('latest'),
@@ -91,6 +93,7 @@ export async function GET(req) {
   const {
     status, type, org, q, state, city,
     qualification, employment_type, min_salary, max_age, govt_level,
+    min_vacancies, min_days_left,
     page, limit, sort,
   } = params
   const offset = (page - 1) * limit
@@ -159,11 +162,14 @@ export async function GET(req) {
     values.push(`%${city}%`)
   }
 
-  // Qualification filter — search in qualifications JSONB text representation
+  // Qualification filter — search across qualifications JSONB, education arrays, and ai_extracted_data
   if (qualification) {
     const qualKw = QUAL_MAP[qualification] || qualification
     conditions.push(
-      `(en.qualifications::text ILIKE $${values.length + 1})`
+      `(en.qualifications::text ILIKE $${values.length + 1}
+        OR en.education_qualifications::text ILIKE $${values.length + 1}
+        OR en.education_levels::text ILIKE $${values.length + 1}
+        OR en.ai_extracted_data::text ILIKE $${values.length + 1})`
     )
     values.push(`%${qualKw}%`)
   }
@@ -194,6 +200,20 @@ export async function GET(req) {
       `en.ai_extracted_data->>'government_level' ILIKE $${values.length + 1}`
     )
     values.push(govt_level)
+  }
+
+  // Minimum vacancies filter (e.g. for marquee ticker or post-count filtering)
+  if (min_vacancies !== undefined && min_vacancies !== null && min_vacancies !== '') {
+    conditions.push(`en.total_vacancies >= $${values.length + 1}`)
+    values.push(min_vacancies)
+  }
+
+  // Minimum days remaining before deadline (e.g. at least 3 days for longer-duration ticker items)
+  if (min_days_left !== undefined && min_days_left !== null && min_days_left !== '') {
+    conditions.push(
+      `(en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE + ($${values.length + 1} * interval '1 day'))`
+    )
+    values.push(min_days_left)
   }
 
   const whereClause = conditions.length ? `WHERE ${conditions.join(' AND ')}` : ''
@@ -255,13 +275,15 @@ export async function GET(req) {
       [...values, limit, offset]
     )
 
-    return ok({
+    const res = ok({
       notifications: dataRows,
       total,
       page,
       limit,
       totalPages,
     })
+    res.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=600')
+    return res
 
   } catch (err) {
     // Likely DB not configured yet — return friendly empty response

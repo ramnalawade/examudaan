@@ -18,6 +18,7 @@ export const SITE_CONFIG = {
   contact: {
     email: 'support@examudaan.in',
     privacyEmail: 'privacy@examudaan.in',
+    grievanceEmail: 'grievance@examudaan.in',
     phone: '+91 91523 44889',
     phoneFormatted: '+91 91523 44889',
     phoneRaw: '919152344889',
@@ -26,6 +27,12 @@ export const SITE_CONFIG = {
     whatsappLink: 'https://wa.me/919152344889',
     whatsappAlertQueryLink: 'https://wa.me/919152344889?text=Hi%20ExamUdaan%20Support,%20I%20have%20a%20query%20regarding%20my%20alerts',
     whatsappGeneralQueryLink: 'https://wa.me/919152344889?text=Hi%20ExamUdaan,%20I%20have%20a%20question%20regarding%20the%20platform',
+  },
+
+  // Alert Broadcast Channels
+  social: {
+    whatsappChannel: process.env.NEXT_PUBLIC_WHATSAPP_CHANNEL_URL || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v',
+    telegramChannel: process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL || 'https://t.me/examudaan',
   },
 
   // Physical Location & Geo Coordinates (Pune, Maharashtra)
@@ -52,10 +59,10 @@ export const SITE_CONFIG = {
 
   // Statutory Grievance Redressal (DPDP Act 2023 & IT Act 2000)
   grievanceOfficer: {
-    title: 'Designated Grievance Officer: Legal & Data Privacy',
-    email: 'privacy@examudaan.in',
+    title: 'Designated Grievance & Takedown Officer',
+    email: 'grievance@examudaan.in',
     supportEmail: 'support@examudaan.in',
-    resolutionDays: 15,
+    resolutionDays: 2, // 48 business hours
   },
 
   // Subscription Pricing

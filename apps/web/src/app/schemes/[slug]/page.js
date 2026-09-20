@@ -311,7 +311,7 @@ export default async function SyllabusDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>info</span>
-                  About This Syllabus
+                  <T k="detail.about_scheme" fallback="About This Syllabus" />
                 </h2>
                 <p style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.8, whiteSpace: 'pre-line' }}>
                   {en.description.length > 2000
@@ -338,7 +338,7 @@ export default async function SyllabusDetailPage({ params }) {
                   id="thin-syllabus-pdf-btn"
                 >
                   <span className="material-symbols-outlined" style={{ fontSize: 18 }}>download</span>
-                  Download Official Syllabus
+                  <T k="detail.view_pdf" fallback="Download Official Syllabus" />
                 </a>
               </section>
             ) : null}
@@ -379,10 +379,10 @@ export default async function SyllabusDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>school</span>
-                  Eligibility
+                  <T k="detail.eligibility" fallback="Eligibility" />
                 </h2>
                 <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8 }}>
-                  Education Required
+                  <T k="detail.education_level" fallback="Education Required" />
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                   {educationLevels.map(l => (
@@ -399,12 +399,12 @@ export default async function SyllabusDetailPage({ params }) {
               </section>
             )}
 
-            {/* ── Official Links ────────────────────────────── */}
+            {/* ── Official Links ────────────────────── */}
             {allLinks.length > 0 && (
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>link</span>
-                  Official Links
+                  <T k="detail.official_links" fallback="Official Links" />
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {allLinks.map(({ label, url, icon }) => (
@@ -438,7 +438,7 @@ export default async function SyllabusDetailPage({ params }) {
             <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 12, padding: '14px 18px', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 20, flexShrink: 0, marginTop: 2 }}>info</span>
               <p style={{ fontSize: 13, color: '#92400E', lineHeight: 1.6 }}>
-                Always verify the syllabus on the official website before preparing. ExamUdaan aggregates data and may not reflect last-minute changes.
+                <T k="detail.disclaimer_note" fallback="Always verify the syllabus on the official website before preparing. ExamUdaan aggregates data and may not reflect last-minute changes." />
               </p>
             </div>
           </div>
@@ -450,7 +450,7 @@ export default async function SyllabusDetailPage({ params }) {
               {/* Quick Summary */}
               <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: 20, boxShadow: '0 1px 4px rgba(28,25,23,0.04)' }}>
                 <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 16 }}>
-                  Quick Summary
+                  <T k="detail.quick_summary" fallback="Quick Summary" />
                 </h3>
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
                   {[
@@ -460,7 +460,7 @@ export default async function SyllabusDetailPage({ params }) {
                     en.advt_no         ? { label: 'Advt No',    value: en.advt_no }                         : null,
                     en.published_at    ? { label: 'Published',  value: formatDate(en.published_at) }        : null,
                     selectionMethods.length > 0
-                      ? { label: 'Exam Type', value: selectionMethods.slice(0, 2).join(', ') } : null,
+                    ? { label: 'Exam Type', value: selectionMethods.slice(0, 2).join(', ') } : null,
                   ].filter(Boolean).map(({ label, value }) => (
                     <li key={label} style={{
                       display: 'flex', justifyContent: 'space-between', gap: 8,
@@ -483,7 +483,7 @@ export default async function SyllabusDetailPage({ params }) {
                     id="sidebar-syllabus-pdf-btn"
                   >
                     <span className="material-symbols-outlined fill" style={{ fontSize: 18 }}>download</span>
-                    Download Syllabus
+                    <T k="card.syllabus" fallback="Download Syllabus" />
                   </a>
                 )}
               </div>
@@ -491,7 +491,9 @@ export default async function SyllabusDetailPage({ params }) {
               {/* Related Syllabi */}
               {relatedSyllabi.length > 0 && (
                 <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: 20, boxShadow: '0 1px 4px rgba(28,25,23,0.04)' }}>
-                  <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>Related Syllabi</h3>
+                  <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>
+                    <T k="detail.similar_schemes" fallback="Related Syllabi" />
+                  </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {relatedSyllabi.map(s => (
                       <Link
@@ -513,7 +515,9 @@ export default async function SyllabusDetailPage({ params }) {
               {/* Org Info */}
               {(en.org_website || en.org_phone || en.org_address) && (
                 <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: 20, boxShadow: '0 1px 4px rgba(28,25,23,0.04)' }}>
-                  <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>Organisation</h3>
+                  <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>
+                    <T k="detail.organization" fallback="Organisation" />
+                  </h3>
                   <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--on-surface)', marginBottom: 4 }}>{en.org_name}</div>
                   {en.org_address && (
                     <div style={{ fontSize: 12, color: 'var(--secondary)', marginBottom: 6, lineHeight: 1.5 }}>{en.org_address}</div>
@@ -525,7 +529,7 @@ export default async function SyllabusDetailPage({ params }) {
                   )}
                   {en.org_website && (
                     <a href={en.org_website} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: 'var(--primary)', fontWeight: 600, textDecoration: 'none' }}>
-                      Visit Official Website →
+                      <T k="detail.official_website" fallback="Visit Official Website" /> →
                     </a>
                   )}
                 </div>

@@ -17,7 +17,9 @@ export default function Footer() {
     { href: '/faq', label: t('footer.faq', 'FAQ') },
     { href: '/feedback', label: t('footer.suggest', 'Suggest Exam / Feedback') },
     { href: '/contact', label: t('footer.contact', 'Contact Us') },
-    { href: '/pricing', label: t('footer.whatsapp_alerts', 'WhatsApp Alerts (Coming Soon)') },
+    { href: 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v', label: isMarathi ? 'WhatsApp चॅनेल' : 'WhatsApp Channel', isExternal: true },
+    { href: 'https://t.me/examudaanjobs', label: isMarathi ? 'Telegram अलर्ट' : 'Telegram Alerts', isExternal: true },
+    { href: '/pricing', label: t('footer.pricing_plans', 'Alert Plans') },
     { href: '/terms', label: t('footer.terms', 'Terms of Service') },
     { href: '/privacy', label: t('footer.privacy', 'Privacy Policy') },
     { href: '/disclaimer', label: t('footer.disclaimer', 'Disclaimer') },
@@ -49,10 +51,22 @@ export default function Footer() {
 
           {/* Links */}
           <nav className="footer-links" aria-label="Footer navigation" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px 24px', alignItems: 'center' }}>
-            {links.map(({ href, label }) => (
-              <Link key={href} href={href} style={{ color: 'var(--secondary)', textDecoration: 'none', fontSize: 14, fontWeight: 500 }}>
-                {label}
-              </Link>
+            {links.map(({ href, label, isExternal }) => (
+              isExternal ? (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'var(--secondary)', textDecoration: 'none', fontSize: 14, fontWeight: 500 }}
+                >
+                  {label}
+                </a>
+              ) : (
+                <Link key={href} href={href} style={{ color: 'var(--secondary)', textDecoration: 'none', fontSize: 14, fontWeight: 500 }}>
+                  {label}
+                </Link>
+              )
             ))}
           </nav>
         </div>
@@ -63,18 +77,32 @@ export default function Footer() {
           paddingTop: 16,
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           flexWrap: 'wrap',
-          gap: 12,
+          gap: 16,
           width: '100%',
           fontSize: 12,
           color: 'var(--secondary)',
         }}>
-          <p style={{ margin: 0, maxWidth: 680, lineHeight: 1.5 }}>
-            <strong>{isMarathi ? 'अस्वीकरण: ' : 'Disclaimer: '}</strong>
-            {t('footer.disclaimer_text', 'ExamUdaan.in is an independent platform and is not affiliated with, endorsed by, or representing any government department or recruiting board. Always cross-verify notifications with official government gazettes.')}
-          </p>
-          <div className="footer-copy" style={{ margin: 0 }}>
+          <div style={{ maxWidth: 760, lineHeight: 1.6 }}>
+            <p style={{ margin: '0 0 6px 0' }}>
+              <strong>{isMarathi ? 'अस्वीकरण: ' : 'Disclaimer: '}</strong>
+              {t('footer.disclaimer_text', 'ExamUdaan.in is an independent educational portal and is not affiliated with, endorsed by, or representing any government department or recruiting commission. All information is aggregated from public gazettes and official websites for informational purposes only.')}
+            </p>
+            <p style={{ margin: 0, fontSize: 11, color: 'var(--secondary)' }}>
+              <strong>{isMarathi ? 'सामग्री तक्रार / दुरुस्ती निवारण (Takedown Notice): ' : 'Content Takedown & Grievance Notice: '}</strong>
+              {isMarathi
+                ? 'जर कोणत्याही भरती मंडळाला किंवा अधिकारधारकाला या संकेतस्थळावरील सामग्रीबाबत आक्षेप असल्यास किंवा दुरुस्ती/काढून टाकण्याची विनंती असल्यास, कृपया '
+                : 'If any recruiting board, organization, or copyright holder wishes to request correction or removal of any content, please contact us at '}
+              <a href="mailto:grievance@examudaan.in" style={{ color: 'var(--primary-cta)', fontWeight: 600, textDecoration: 'underline' }}>
+                grievance@examudaan.in
+              </a>
+              {isMarathi
+                ? ' वर ईमेल पाठवावा. २४ ते ४८ तासांत योग्य कार्यवाही केली जाईल.'
+                : ' with relevant details. All valid notices will be acted upon within 24–48 hours.'}
+            </p>
+          </div>
+          <div className="footer-copy" style={{ margin: 0, whiteSpace: 'nowrap' }}>
             © {new Date().getFullYear()} ExamUdaan.in — {t('footer.rights', 'All rights reserved.')}
           </div>
         </div>

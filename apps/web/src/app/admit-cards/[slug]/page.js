@@ -7,6 +7,7 @@
 import Link from 'next/link'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
+import { AdmitCardDownloadSteps, AdmitCardDocsToCarry } from '../../../components/DetailActionSteps'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 
@@ -290,7 +291,7 @@ export default async function AdmitCardDetailPage({ params }) {
                 style={{ background: 'linear-gradient(135deg,#1D4ED8,#1E40AF)' }}
               >
                 <span className="material-symbols-outlined fill" style={{ fontSize: 18 }}>download</span>
-                Download Hall Ticket
+                <T k="nav.admit_cards" fallback="Download Hall Ticket" />
               </a>
             )}
             {pdfLink && pdfLink !== downloadLink && (
@@ -303,7 +304,7 @@ export default async function AdmitCardDetailPage({ params }) {
                 id="admit-card-pdf-btn"
               >
                 <span className="material-symbols-outlined" style={{ fontSize: 18 }}>picture_as_pdf</span>
-                Official Notification PDF
+                <T k="detail.view_pdf" fallback="Official Notification PDF" />
               </a>
             )}
           </div>
@@ -319,7 +320,7 @@ export default async function AdmitCardDetailPage({ params }) {
             <section style={sectionStyle}>
               <h2 style={sectionHeadStyle}>
                 <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>calendar_month</span>
-                Important Dates
+                <T k="detail.important_dates" fallback="Important Dates" />
               </h2>
               {[
                 { label: 'Available From',     value: formatDate(availableFrom) },
@@ -338,7 +339,7 @@ export default async function AdmitCardDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>location_on</span>
-                  Exam Cities / Centres ({examCities.length})
+                  <T k="detail.exam_cities" fallback="Exam Cities / Centres" /> ({examCities.length})
                 </h2>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {examCities.map(city => (
@@ -361,26 +362,18 @@ export default async function AdmitCardDetailPage({ params }) {
             <section style={sectionStyle}>
               <h2 style={sectionHeadStyle}>
                 <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>download</span>
-                How to Download Admit Card
+                <T k="detail.how_to_download_admit" fallback="How to Download Admit Card" />
               </h2>
-              <ol style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {downloadSteps.map((step, i) => (
-                  <li key={i} style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.6 }}>{step}</li>
-                ))}
-              </ol>
+              <AdmitCardDownloadSteps website={en.application_links?.official_website || en.org_website} examName={en.title} />
             </section>
 
             {/* Documents to Carry */}
             <section style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 12, padding: 20 }}>
               <h2 style={{ ...sectionHeadStyle, color: '#1E40AF' }}>
                 <span className="material-symbols-outlined">checklist</span>
-                Documents to Carry to Exam Hall
+                <T k="detail.docs_to_carry" fallback="Documents to Carry to Exam Hall" />
               </h2>
-              <ul style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                {docsToCarry.map((doc, i) => (
-                  <li key={i} style={{ fontSize: 14, color: '#1D4ED8', lineHeight: 1.6 }}>{doc}</li>
-                ))}
-              </ul>
+              <AdmitCardDocsToCarry customDocs={docsToCarry.length > 0 && docsToCarry[0] !== 'Printed copy of this Admit Card (clear printout)' ? docsToCarry : []} />
             </section>
 
             {/* About / Classification context */}
@@ -388,11 +381,13 @@ export default async function AdmitCardDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>info</span>
-                  About This Exam
+                  <T k="detail.about_admit_card" fallback="About This Exam" />
                 </h2>
                 {educationLevels.length > 0 && (
                   <div style={{ marginBottom: 12 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Education Level</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.education_level" fallback="Education Level" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {educationLevels.map(l => (
                         <span key={l} style={{ padding: '4px 10px', background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 999, fontSize: 12, fontWeight: 600, color: '#C2410C' }}>
@@ -404,7 +399,9 @@ export default async function AdmitCardDetailPage({ params }) {
                 )}
                 {jobCategories.length > 0 && (
                   <div style={{ marginBottom: 12 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Job Category</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.job_category" fallback="Job Category" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {jobCategories.map(c => (
                         <span key={c} style={{ padding: '4px 10px', background: 'var(--surface-container-low)', border: '1px solid var(--outline-variant)', borderRadius: 999, fontSize: 12, color: 'var(--on-surface)' }}>
@@ -416,7 +413,9 @@ export default async function AdmitCardDetailPage({ params }) {
                 )}
                 {selectionMethods.length > 0 && (
                   <div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>Selection Stages</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>
+                      <T k="detail.selection_stages" fallback="Selection Stages" />
+                    </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {selectionMethods.map((m, i) => (
                         <span key={i} style={{ padding: '4px 10px', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 999, fontSize: 12, color: '#1D4ED8' }}>
@@ -434,7 +433,7 @@ export default async function AdmitCardDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>description</span>
-                  Notification Details
+                  <T k="detail.notification_details" fallback="Notification Details" />
                 </h2>
                 <p style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.8, whiteSpace: 'pre-line' }}>
                   {en.description.length > 2000
@@ -449,7 +448,7 @@ export default async function AdmitCardDetailPage({ params }) {
               <section style={sectionStyle}>
                 <h2 style={sectionHeadStyle}>
                   <span className="material-symbols-outlined" style={{ color: 'var(--primary)' }}>link</span>
-                  Quick Links
+                  <T k="detail.quick_links" fallback="Quick Links" />
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {allLinks.map(({ label, url, icon }) => (
@@ -480,7 +479,7 @@ export default async function AdmitCardDetailPage({ params }) {
             <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 12, padding: '14px 18px', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 20, flexShrink: 0, marginTop: 2 }}>warning</span>
               <p style={{ fontSize: 13, color: '#92400E', lineHeight: 1.6 }}>
-                Always download your admit card from the official government website. ExamUdaan aggregates information and may not reflect last-minute changes.
+                <T k="detail.disclaimer_note" fallback="Always download your admit card from the official government website. ExamUdaan aggregates information and may not reflect last-minute changes." />
               </p>
             </div>
           </div>
@@ -492,7 +491,9 @@ export default async function AdmitCardDetailPage({ params }) {
               display: 'flex', flexDirection: 'column', gap: 16,
             }}>
               <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: 20 }}>
-                <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 16 }}>Quick Info</h3>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 16 }}>
+                  <T k="detail.quick_info" fallback="Quick Info" />
+                </h3>
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
                   {[
                     { label: 'Organization', value: en.org_acronym || en.org_name },
@@ -519,7 +520,7 @@ export default async function AdmitCardDetailPage({ params }) {
                     style={{ width: '100%', justifyContent: 'center', marginTop: 16, background: 'linear-gradient(135deg,#1D4ED8,#1E40AF)' }}
                   >
                     <span className="material-symbols-outlined fill" style={{ fontSize: 18 }}>download</span>
-                    Download Hall Ticket
+                    <T k="nav.admit_cards" fallback="Download Hall Ticket" />
                   </a>
                 )}
               </div>
@@ -527,11 +528,14 @@ export default async function AdmitCardDetailPage({ params }) {
               {/* Org Info */}
               {(en.org_website || en.org_address || en.org_phone) && (
                 <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: 16 }}>
-                  <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>Organization</h3>
+                  <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>
+                    <T k="detail.organization" fallback="Organization" />
+                  </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     {en.org_website && (
                       <a href={en.org_website} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--primary)', textDecoration: 'none' }}>
-                        <span className="material-symbols-outlined" style={{ fontSize: 16 }}>language</span>Official Website
+                        <span className="material-symbols-outlined" style={{ fontSize: 16 }}>language</span>
+                        <T k="detail.official_website" fallback="Official Website" />
                       </a>
                     )}
                     {en.org_address && (
@@ -555,7 +559,9 @@ export default async function AdmitCardDetailPage({ params }) {
         {/* Related admit cards */}
         {relatedCards.length > 0 && (
           <section style={{ marginTop: 40, paddingTop: 32, borderTop: '1px solid var(--outline-variant)' }}>
-            <h2 style={{ fontSize: 20, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 20 }}>Other Admit Cards</h2>
+            <h2 style={{ fontSize: 20, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 20 }}>
+              <T k="detail.similar_admit_cards" fallback="Other Admit Cards" />
+            </h2>
             <div className="grid-2">
               {relatedCards.map(r => (
                 <Link key={r.slug} href={`/admit-cards/${r.slug}`} className="job-card" style={{ flexDirection: 'column', gap: 8, textDecoration: 'none' }}>

@@ -4,22 +4,28 @@ run_scraper.py — ExamUdaan full pipeline runner
 ================================================
 Runs the complete scraping + enrichment + translation pipeline:
 
-  Step 1 — Scrapy spiders        (parallel, configurable)
-  Step 2 — Notification enrich   (Gemini fills dates, vacancies, fee from PDF or HTML)
-  Step 3 — PDF date enrich       (Gemini vision for scanned PDFs with missing dates)
-  Step 4 — Marathi translation
-  Step 5 — Summary email
+  Step 1   — Scrapy spiders        (parallel, configurable — 75 spiders)
+  Step 1.5 — NCS gov jobs sync     (AES-256 decrypted active jobs from National Career Service)
+  Step 2   — Notification enrich   (Gemini fills dates, vacancies, fee from PDF or HTML)
+  Step 3   — PDF date enrich       (Gemini vision for scanned PDFs with missing dates)
+  Step 4   — Marathi translation
+  Step 5   — Alert broadcast       (Telegram Channel @examudaanjobs + WhatsApp Digest)
+  Step 6   — Summary email         (Brevo consolidated crawl report)
 
 Usage:
-    python run_scraper.py                         # run everything
+    python run_scraper.py                         # run everything (includes Telegram broadcast)
     python run_scraper.py --spider mppsc          # run one spider only
     python run_scraper.py --parallel 6            # 6 spiders at a time (default: 4)
-    python run_scraper.py --dry-run               # print commands, don\'t execute
+    python run_scraper.py --dry-run               # print commands, don't execute
+    python run_scraper.py --skip-ncs              # skip NCS sync
+    python run_scraper.py --ncs-pages 20          # sync up to 20 pages of NCS (default: 15)
     python run_scraper.py --skip-enrich           # skip notification enrichment
     python run_scraper.py --enrich-limit 100      # enrich up to 100 records (default: 50)
     python run_scraper.py --skip-pdf-enrich       # skip PDF date enrichment
     python run_scraper.py --pdf-limit 50          # enrich up to 50 PDFs (default: 30)
     python run_scraper.py --skip-translation      # skip Marathi translation
+    python run_scraper.py --skip-broadcast        # skip Telegram/WhatsApp alert broadcast
+    python run_scraper.py --broadcast-limit 15    # broadcast up to 15 new jobs (default: 10)
     python run_scraper.py --no-email              # skip summary email
 
 Scheduled runs: see cron_setup.md for Linux cron and Windows Task Scheduler.
@@ -72,12 +78,14 @@ SPIDERS = [
 
     # --- Teaching / Education ---
     "ctet",                 # CTET + State TETs (7 portals)
+    "universities",         # Central & State Universities
 
     # --- Health / Medical ----
     "aiims_central",        # AIIMS Exams + PGIMER + JIPMER + ESIC
 
     # --- PSU Mega (20+ Insurance, Energy, Infrastructure, Autonomous) ---
     "psu_mega",             # UIIC, NIACL, LIC, NTPC, ONGC, IOCL, PGCIL, DRDO, BARC, HAL, BEL, AAI, DMRC, FCI, ESIC etc.
+    "lic",                  # Life Insurance Corporation (dedicated portal)
 
     # --- Central PSUs (individual spiders) ---
     "nabard",
@@ -116,6 +124,7 @@ SPIDERS = [
     # --- Maharashtra State & Police ---
     "mpsc_crawl4ai",
     "mahapolice",
+    "mumbai_police",
     "srpf",
     "maharashtra_prisons",
 
@@ -164,6 +173,8 @@ SPIDERS = [
 
     # --- Multi-site & AI Assisted ---
     "multi_govt_jobs",
+    "aggregator",
+    "youtube_spider",
     "ai_spider",
 ]
 
@@ -264,6 +275,62 @@ def run_all_parallel(spiders: list, logger: logging.Logger, max_parallel: int, d
             logger.info(f"[{done}/{total}] '{spider_name}' → {'OK' if success else 'FAIL'} ({duration_str})")
 
     return results
+
+
+# ============================================================
+# STEP 1.5 — NCS GOV JOBS INGESTION (sync_ncs_jobs.py)
+# ============================================================
+
+def run_ncs_sync(
+    logger: logging.Logger,
+    dry_run: bool = False,
+    pages: int = 15,
+    min_delay: float = 2.0,
+    max_delay: float = 4.5,
+):
+    """
+    Step 1.5: Ingest fresh, active government jobs from the National Career Service (NCS) API.
+    Uses reverse-engineered AES-256-CBC crypto with human-like delays and rotation.
+    Strictly strips recruiter personal details for DPDP Act 2023 compliance.
+    """
+    ncs_script = SCRAPER_DIR / "sync_ncs_jobs.py"
+    if not ncs_script.exists():
+        logger.warning("[NCS-SYNC] %s not found — skipping NCS sync.", ncs_script)
+        return
+
+    cmd = [
+        PYTHON_EXE, str(ncs_script),
+        "--pages", str(pages),
+        "--min-delay", str(min_delay),
+        "--max-delay", str(max_delay),
+    ]
+    if dry_run:
+        cmd.append("--dry-run")
+
+    logger.info("=" * 60)
+    logger.info("[NCS-SYNC] Step 1.5: National Career Service (NCS) Gov Jobs Sync")
+    logger.info("[NCS-SYNC] Pages limit: %d (random delays %0.1fs - %0.1fs)", pages, min_delay, max_delay)
+
+    if dry_run:
+        logger.info("[NCS-SYNC] DRY RUN — would run: %s", ' '.join(cmd))
+        return
+
+    start = datetime.now()
+    try:
+        result = subprocess.run(
+            cmd,
+            cwd=str(SCRAPER_DIR),
+            timeout=1800,  # 30-minute safety timeout
+        )
+        elapsed = datetime.now() - start
+        if result.returncode == 0:
+            logger.info("[NCS-SYNC] Finished successfully in %s", str(elapsed).split('.')[0])
+        else:
+            logger.warning("[NCS-SYNC] Exited with code %d after %s", result.returncode, str(elapsed).split('.')[0])
+    except subprocess.TimeoutExpired:
+        logger.error("[NCS-SYNC] Timed out after 30 minutes!")
+    except Exception as exc:
+        logger.error("[NCS-SYNC] Failed: %s", exc)
 
 
 # ============================================================
@@ -676,13 +743,33 @@ def run_marathi_translation(logger: logging.Logger, dry_run: bool = False):
         logger.error(f"[ERROR] Marathi translation step failed: {exc}")
 
 
+def run_broadcast_alerts(logger, dry_run=False, limit=10):
+    """
+    Step 5 — Broadcast newly ingested notifications to Telegram and format WhatsApp digests.
+    """
+    logger.info("=" * 60)
+    logger.info("[BROADCAST] Running automated alert broadcast (Telegram & WhatsApp)...")
+    logger.info("=" * 60)
+
+    try:
+        from broadcast_alerts import broadcast_new_jobs
+        sent, failed = broadcast_new_jobs(limit=limit, dry_run=dry_run)
+        logger.info(f"[BROADCAST] Complete. Broadcasted: {sent}, Failed: {failed}")
+    except Exception as exc:
+        logger.error(f"[ERROR] Alert broadcast step failed: {exc}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="ExamUdaan full pipeline runner")
     parser.add_argument("--spider",           help="Run only this spider (name)")
     parser.add_argument("--dry-run",          action="store_true", help="Print commands without running")
+    parser.add_argument("--skip-ncs",         action="store_true", help="Skip National Career Service (NCS) sync")
+    parser.add_argument("--ncs-pages",        type=int, default=15, help="Max NCS pages to sync (default: 15)")
     parser.add_argument("--skip-translation", action="store_true", help="Skip automatic Marathi translation")
     parser.add_argument("--skip-enrich",      action="store_true", help="Skip notification enrichment step")
     parser.add_argument("--skip-pdf-enrich",  action="store_true", help="Skip PDF date enrichment step")
+    parser.add_argument("--skip-broadcast",   action="store_true", help="Skip Telegram and WhatsApp alert broadcast step")
+    parser.add_argument("--broadcast-limit",  type=int, default=10, help="Max new jobs to broadcast per run (default: 10)")
     parser.add_argument("--no-email",         action="store_true", help="Skip sending consolidated Brevo summary email")
     parser.add_argument("--enrich-limit",     type=int, default=50,
                         help="Max records to enrich per run (default: 50)")
@@ -707,6 +794,7 @@ def main():
     logger.info(f"   Spiders    : {len(spiders_to_run)} total")
     logger.info(f"   Parallel   : {args.parallel} at a time")
     logger.info(f"   Page limit : 10 pages + 50 items per spider (settings.py)")
+    logger.info(f"   NCS sync   : {'skip' if args.skip_ncs else f'up to {args.ncs_pages} pages'}")
     logger.info(f"   Enrich     : {'skip' if args.skip_enrich else f'up to {args.enrich_limit} records'}")
     logger.info(f"   PDF enrich : {'skip' if args.skip_pdf_enrich else f'up to {args.pdf_limit} records'}")
     logger.info("=" * 60)
@@ -732,6 +820,12 @@ def main():
     logger.info(f"   Total: {ok_count} OK, {fail_count} FAIL out of {len(results)}")
     logger.info("=" * 60)
 
+    # Step 1.5 — National Career Service (NCS) Ingestion
+    if not args.skip_ncs:
+        run_ncs_sync(logger, dry_run=args.dry_run, pages=args.ncs_pages)
+    else:
+        logger.info("[NCS-SYNC] Skipped per --skip-ncs flag.")
+
     # Step 2 — Notification enrichment (fill dates, vacancies, fee from description or PDF)
     if not args.skip_enrich:
         run_enrich_notifications(logger, dry_run=args.dry_run, limit=args.enrich_limit)
@@ -749,6 +843,12 @@ def main():
         run_marathi_translation(logger, dry_run=args.dry_run)
     else:
         logger.info("[TRANSLATE] Skipped per --skip-translation flag.")
+
+    # Step 5 — Automated Alert Broadcasting (Telegram Channel & WhatsApp Digest)
+    if not args.skip_broadcast:
+        run_broadcast_alerts(logger, dry_run=args.dry_run, limit=args.broadcast_limit)
+    else:
+        logger.info("[BROADCAST] Skipped per --skip-broadcast flag.")
 
     # Send ONE consolidated summary email for all crawled websites
     if not args.no_email and not args.dry_run:

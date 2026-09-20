@@ -6,11 +6,14 @@
 'use client'
 
 import { useLanguage } from '../context/LanguageContext'
+import { formatTitle } from '../lib/formatTitle'
 
 export default function JobDetailTitle({ title, title_mr, orgName, orgNameMr, orgDepartment }) {
   const { isMarathi } = useLanguage()
-  const primaryTitle = (isMarathi && title_mr) ? title_mr : title
-  const secondaryTitle = (isMarathi && title_mr) ? title : title_mr
+  const rawPrimary = (isMarathi && title_mr) ? title_mr : title
+  const rawSecondary = (isMarathi && title_mr) ? title : title_mr
+  const primaryTitle = formatTitle(rawPrimary)
+  const secondaryTitle = rawSecondary ? formatTitle(rawSecondary) : null
 
   return (
     <div>

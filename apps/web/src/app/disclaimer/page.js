@@ -188,11 +188,85 @@ export default function DisclaimerPage() {
           </div>
         </div>
 
+        {/* Content Sourcing, Copyright & Takedown Policy */}
+        <div style={{
+          marginTop: 40,
+          background: 'var(--surface-container-lowest)',
+          border: '1px solid var(--outline-variant)',
+          borderRadius: 'var(--radius-md)',
+          padding: '32px',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+            <span className="material-symbols-outlined" style={{ fontSize: 28, color: 'var(--primary-cta)' }}>
+              shield
+            </span>
+            <h2 style={{ fontSize: 20, fontWeight: 800, color: 'var(--on-surface)', margin: 0 }}>
+              Content Sourcing, Copyright & Takedown Policy (IT Act Sec 79)
+            </h2>
+          </div>
+
+          <div style={{ fontSize: 14, color: 'var(--on-surface-variant)', lineHeight: 1.8, display: 'flex', flexDirection: 'column', gap: 16 }}>
+            <p style={{ margin: 0 }}>
+              <strong>1. Public Interest & Educational Purpose:</strong> ExamUdaan.in is a free educational information aggregator. All recruitment notifications, exam schedules, public notices, and PDF gazettes referenced on this portal are collected from publicly accessible government websites, gazettes, and official press releases for the purpose of informing aspirants in the public interest (pursuant to Section 52(1)(a) of the Indian Copyright Act, 1957 — Fair Dealing for public education and reporting).
+            </p>
+            <p style={{ margin: 0 }}>
+              <strong>2. No Claim Over Official Marks:</strong> ExamUdaan.in does not claim any ownership, copyright, or proprietary rights over official government logos, recruiting commission trademarks, or original notification PDFs. All trademarks and gazettes belong to their respective government departments.
+            </p>
+            <p style={{ margin: 0 }}>
+              <strong>3. Intermediary Safe Harbor:</strong> In accordance with Section 79 of the Information Technology Act, 2000 and Rule 3 of the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, ExamUdaan.in functions as an intermediary platform providing informational indexing. We do not initiate the transmission, select the receiver, or modify the underlying official gazettes.
+            </p>
+            <div style={{
+              background: 'var(--surface-container-low)',
+              border: '1px solid var(--primary-cta)',
+              borderRadius: 'var(--radius-sm)',
+              padding: '16px 20px',
+              marginTop: 8,
+            }}>
+              <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--on-surface)', margin: '0 0 8px 0' }}>
+                How to Request a Content Correction or Takedown
+              </h3>
+              <p style={{ margin: '0 0 10px 0', fontSize: 13, color: 'var(--secondary)' }}>
+                If any government authority, recruitment board, university, or copyright holder believes that any content, link, or document on this portal contains errors, is published erroneously, or infringes upon any legal rights, please send a written takedown notice to our designated Grievance Desk:
+              </p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+                <a
+                  href="mailto:grievance@examudaan.in"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 6,
+                    background: 'var(--primary-cta)',
+                    color: '#fff',
+                    padding: '8px 16px',
+                    borderRadius: 'var(--radius-sm)',
+                    fontWeight: 700,
+                    fontSize: 13,
+                    textDecoration: 'none',
+                  }}
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>mail</span>
+                  grievance@examudaan.in
+                </a>
+                <span style={{ fontSize: 13, color: 'var(--secondary)' }}>
+                  (Response & Action Commitment: <strong>Within 24 to 48 business hours</strong>)
+                </span>
+              </div>
+              <p style={{ margin: '10px 0 0 0', fontSize: 12, color: 'var(--outline)' }}>
+                Please include: (a) Exact URL(s) of the affected page on ExamUdaan, (b) Description of the error or objection, and (c) Official authority/proof of representation.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Contact Note */}
         <div style={{ textAlign: 'center', marginTop: 36, color: 'var(--secondary)', fontSize: 14 }}>
-          Found any incorrect link or notification? Let us know at{' '}
+          General questions or feedback? Contact us at{' '}
           <a href={`mailto:${SITE_CONFIG.contact.email}`} style={{ color: 'var(--primary-cta)', fontWeight: 600 }}>
             {SITE_CONFIG.contact.email}
+          </a>
+          {' '}| For takedown requests:{' '}
+          <a href={`mailto:${SITE_CONFIG.contact.grievanceEmail || 'grievance@examudaan.in'}`} style={{ color: 'var(--primary-cta)', fontWeight: 600 }}>
+            {SITE_CONFIG.contact.grievanceEmail || 'grievance@examudaan.in'}
           </a>
         </div>
       </div>

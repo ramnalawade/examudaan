@@ -16,6 +16,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import JobCard from './JobCard'
 import { useLanguage } from '../context/LanguageContext'
+import { formatTitle } from '../lib/formatTitle'
 
 // ── Category tabs shown at top of every listing page ──────────
 const CATEGORY_TABS = [
@@ -91,6 +92,14 @@ const SALARY_RANGES = [
   { id: '100000', label: '₹1 Lakh+' },
 ]
 
+const VACANCY_RANGES = [
+  { id: '10',   label: '10+ Posts',    label_mr: '१०+ जागा' },
+  { id: '50',   label: '50+ Posts',    label_mr: '५०+ जागा' },
+  { id: '100',  label: '100+ Posts',   label_mr: '१००+ जागा' },
+  { id: '500',  label: '500+ Posts',   label_mr: '५००+ जागा' },
+  { id: '1000', label: '1,000+ Posts', label_mr: '१,०००+ जागा' },
+]
+
 const PAGE_SIZE = 20
 
 // ── Convert API row → JobCard shape ───────────────────────────
@@ -101,11 +110,11 @@ function toCard(n) {
   return {
     id,
     slug,
-    title:            n.title,
+    title:            formatTitle(n.title),
     title_mr:         n.title_mr,
     summary_mr:       n.summary_mr,
     org_name_mr:      n.org_name_mr,
-    department:       n.org_name,
+    department:       formatTitle(n.org_name),
     organization:     orgAcronym,
     vacancies:        n.total_vacancies || n.vacancies || null,
     apply_start:      n.apply_start_date || n.application_start,
@@ -169,6 +178,7 @@ export default function ListingPage({
   const [selState,    setSelState]    = useState('')
   const [selSalary,   setSelSalary]   = useState('')
   const [selGovtLevel, setSelGovtLevel] = useState('')  // Central|State|PSU|Local
+  const [selVacancies, setSelVacancies] = useState('')  // min_vacancies filter
   const [sort,        setSort]        = useState('latest')
 
   // ── Data ──────────────────────────────────────────────────
@@ -204,6 +214,7 @@ export default function ListingPage({
     if (selQual)          p.set('qualification', selQual)
     if (selSalary)        p.set('min_salary', selSalary)
     if (selGovtLevel)     p.set('govt_level', selGovtLevel)
+    if (selVacancies)     p.set('min_vacancies', selVacancies)
 
     try {
       const res = await fetch(`/api/notifications?${p}`)
@@ -226,7 +237,7 @@ export default function ListingPage({
     } finally {
       setLoading(false)
     }
-  }, [activeTab, search, sort, selOrgs, selState, selQual, selSalary, selGovtLevel, page, isMarathi])
+  }, [activeTab, search, sort, selOrgs, selState, selQual, selSalary, selGovtLevel, selVacancies, page, isMarathi])
 
   // Re-fetch when filters change (reset to page 1)
   const searchTimer = useRef(null)
@@ -235,7 +246,7 @@ export default function ListingPage({
     searchTimer.current = setTimeout(() => fetchItems(true), search ? 350 : 0)
     return () => clearTimeout(searchTimer.current)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeTab, sort, selOrgs, selState, selQual, selSalary, selGovtLevel, search])
+  }, [activeTab, sort, selOrgs, selState, selQual, selSalary, selGovtLevel, selVacancies, search])
 
   // Load more
   useEffect(() => {
@@ -254,9 +265,11 @@ export default function ListingPage({
     setSelState('')
     setSelSalary('')
     setSelGovtLevel('')
+    setSelVacancies('')
+    setSearch('')
   }
 
-  const hasFilters = selOrgs.length > 0 || selQual || selState || selSalary || selGovtLevel
+  const hasFilters = selOrgs.length > 0 || selQual || selState || selSalary || selGovtLevel || selVacancies || search
   const hasMore    = items.length < total
 
   // ── Page label ────────────────────────────────────────────
@@ -388,7 +401,7 @@ export default function ListingPage({
           aria-label="Open filters"
         >
           <span className="material-symbols-outlined">tune</span>
-          {hasFilters ? `${t('listing.filter_title', 'Filters')} (${selOrgs.length + (selQual?1:0) + (selState?1:0) + (selSalary?1:0)})` : t('listing.filter_title', 'Filters')}
+          {hasFilters ? `${t('listing.filter_title', 'Filters')} (${selOrgs.length + (selQual?1:0) + (selState?1:0) + (selSalary?1:0) + (selGovtLevel?1:0) + (selVacancies?1:0)})` : t('listing.filter_title', 'Filters')}
         </button>
 
         {/* Sort */}
@@ -439,6 +452,12 @@ export default function ListingPage({
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 999, fontSize: 12, color: '#15803D', fontWeight: 600 }}>
               {STATES.find(s => s.id === selState)?.label}
               <button onClick={() => setSelState('')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
+            </span>
+          )}
+          {selVacancies && (
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 999, fontSize: 12, color: '#EA580C', fontWeight: 600 }}>
+              {VACANCY_RANGES.find(v => v.id === selVacancies)?.label || `${selVacancies}+ Posts`}
+              <button onClick={() => setSelVacancies('')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
             </span>
           )}
         </div>
@@ -608,6 +627,33 @@ export default function ListingPage({
                     />
                     <span style={{ fontSize: 14, color: selSalary === s.id ? '#C2410C' : 'var(--on-surface)', fontWeight: selSalary === s.id ? 600 : 400 }}>
                       {s.label}
+                    </span>
+                  </label>
+                ))}
+              </div>
+            </FilterSection>
+          )}
+
+          {/* Vacancies / Posts filter — only on recruitment/all */}
+          {(activeTab === 'all' || activeTab === 'recruitment') && (
+            <FilterSection title={t('listing.filter_vacancies', isMarathi ? 'एकूण पदे / जागा' : 'Number of Posts / Vacancies')} defaultOpen={true}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                {VACANCY_RANGES.map(v => (
+                  <label
+                    key={v.id}
+                    style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: selVacancies === v.id ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                    htmlFor={`filter-vacancies-${v.id}`}
+                  >
+                    <input
+                      type="radio"
+                      id={`filter-vacancies-${v.id}`}
+                      name="min_vacancies"
+                      checked={selVacancies === v.id}
+                      onChange={() => setSelVacancies(prev => prev === v.id ? '' : v.id)}
+                      style={{ accentColor: '#EA580C', width: 16, height: 16 }}
+                    />
+                    <span style={{ fontSize: 14, color: selVacancies === v.id ? '#EA580C' : 'var(--on-surface)', fontWeight: selVacancies === v.id ? 700 : 400 }}>
+                      {isMarathi && v.label_mr ? v.label_mr : v.label}
                     </span>
                   </label>
                 ))}
