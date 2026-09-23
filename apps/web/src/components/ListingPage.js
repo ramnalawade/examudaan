@@ -12,7 +12,8 @@
 
 'use client'
 
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import JobCard from './JobCard'
 import { useLanguage } from '../context/LanguageContext'
@@ -63,7 +64,7 @@ const QUALIFICATIONS = [
 const STATES = [
   { id: 'all-india',    label: 'All India' },
   { id: 'maharashtra',  label: 'Maharashtra' },
-  { id: 'up',           label: 'Uttar Pradesh' },
+  { id: 'uttar-pradesh',label: 'Uttar Pradesh' },
   { id: 'bihar',        label: 'Bihar' },
   { id: 'rajasthan',    label: 'Rajasthan' },
   { id: 'gujarat',      label: 'Gujarat' },
@@ -159,7 +160,7 @@ function FilterSection({ title, children, defaultOpen = true }) {
 }
 
 // ── Main shared component ─────────────────────────────────────
-export default function ListingPage({
+function ListingPageInner({
   defaultType,
   title,
   subtitle,
@@ -167,6 +168,8 @@ export default function ListingPage({
   accentColor,
 }) {
   const { lang, t, isMarathi } = useLanguage()
+  const searchParams = useSearchParams()
+  const initialSyncRef = useRef(false)
 
   // ── Active tab = same as defaultType ──────────────────────
   const [activeTab, setActiveTab] = useState(defaultType || 'all')
@@ -180,6 +183,35 @@ export default function ListingPage({
   const [selGovtLevel, setSelGovtLevel] = useState('')  // Central|State|PSU|Local
   const [selVacancies, setSelVacancies] = useState('')  // min_vacancies filter
   const [sort,        setSort]        = useState('latest')
+
+  // Sync incoming search params on mount
+  useEffect(() => {
+    if (initialSyncRef.current || !searchParams) return
+    initialSyncRef.current = true
+
+    const st = searchParams.get('state')
+    const q = searchParams.get('q')
+    const o = searchParams.get('org')
+    const qual = searchParams.get('qualification')
+    const lvl = searchParams.get('govt_level')
+    const vac = searchParams.get('min_vacancies')
+    const sal = searchParams.get('min_salary')
+    const tp = searchParams.get('type')
+
+    if (st) {
+      const lower = st.toLowerCase().trim()
+      if (lower === 'up') setSelState('uttar-pradesh')
+      else if (lower === 'mp') setSelState('madhya-pradesh')
+      else setSelState(lower)
+    }
+    if (q) setSearch(q)
+    if (o) setSelOrgs(o.split(',').filter(Boolean))
+    if (qual) setSelQual(qual)
+    if (lvl) setSelGovtLevel(lvl)
+    if (vac) setSelVacancies(vac)
+    if (sal) setSelSalary(sal)
+    if (tp && tp !== 'all') setActiveTab(tp)
+  }, [searchParams])
 
   // ── Data ──────────────────────────────────────────────────
   const [items,   setItems]   = useState([])
@@ -363,9 +395,9 @@ export default function ListingPage({
       </div>
 
       {/* ── Search + Sort row ─────────────────────────────── */}
-      <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
-        {/* Search */}
-        <div className="search-hero" style={{ flex: 1 }}>
+      <div style={{ display: 'flex', gap: 10, marginBottom: 20, alignItems: 'center' }}>
+        {/* Search - Dominant width */}
+        <div className="search-hero" style={{ flex: 1, minWidth: 0 }}>
           <span className="material-symbols-outlined search-icon">search</span>
           <input
             type="text"
@@ -374,6 +406,7 @@ export default function ListingPage({
             onChange={e => setSearch(e.target.value)}
             id="listing-search-input"
             aria-label={`Search ${tabLabel}`}
+            style={{ height: 48, fontSize: 15 }}
           />
           {search && (
             <button
@@ -395,7 +428,7 @@ export default function ListingPage({
             borderRadius: 12, padding: '0 14px',
             display: 'none', alignItems: 'center', gap: 6,
             cursor: 'pointer', color: hasFilters ? '#fff' : 'var(--on-surface)',
-            fontFamily: 'inherit', fontSize: 14,
+            fontFamily: 'inherit', fontSize: 14, height: 48,
           }}
           id="mobile-filter-toggle"
           aria-label="Open filters"
@@ -404,19 +437,41 @@ export default function ListingPage({
           {hasFilters ? `${t('listing.filter_title', 'Filters')} (${selOrgs.length + (selQual?1:0) + (selState?1:0) + (selSalary?1:0) + (selGovtLevel?1:0) + (selVacancies?1:0)})` : t('listing.filter_title', 'Filters')}
         </button>
 
-        {/* Sort */}
-        <select
-          value={sort}
-          onChange={e => setSort(e.target.value)}
-          className="form-select"
-          style={{ minWidth: 150, paddingRight: 32 }}
-          id="listing-sort-select"
-          aria-label="Sort"
-        >
-          <option value="latest">{t('listing.sort_latest', 'Latest First')}</option>
-          <option value="closing">{t('listing.sort_closing', 'Closing Soon')}</option>
-          <option value="vacancies">{t('listing.sort_vacancies', 'Most Posts')}</option>
-        </select>
+        {/* Sort - Compact */}
+        <div style={{ position: 'relative', flexShrink: 0, width: 'auto' }}>
+          <select
+            value={sort}
+            onChange={e => setSort(e.target.value)}
+            className="form-select"
+            style={{
+              width: 'auto',
+              minWidth: 140,
+              maxWidth: 175,
+              flexShrink: 0,
+              height: 48,
+              padding: '0 34px 0 14px',
+              fontSize: 14,
+              fontWeight: 600,
+              borderRadius: 12,
+              background: 'var(--surface-container-lowest)',
+              border: '1px solid var(--outline-variant)',
+              cursor: 'pointer',
+              color: 'var(--on-surface)',
+            }}
+            id="listing-sort-select"
+            aria-label="Sort"
+          >
+            <option value="latest">{t('listing.sort_latest', 'Latest First')}</option>
+            <option value="closing">{t('listing.sort_closing', 'Closing Soon')}</option>
+            <option value="vacancies">{t('listing.sort_vacancies', 'Most Posts')}</option>
+          </select>
+          <span className="material-symbols-outlined" style={{
+            position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)',
+            pointerEvents: 'none', color: 'var(--secondary)', fontSize: 20
+          }}>
+            expand_more
+          </span>
+        </div>
       </div>
 
       {/* ── Count + active filter chips ───────────────────── */}
@@ -727,5 +782,17 @@ export default function ListingPage({
         </main>
       </div>
     </div>
+  )
+}
+
+export default function ListingPage(props) {
+  return (
+    <Suspense fallback={
+      <div className="container" style={{ padding: '60px 0', textAlign: 'center' }}>
+        <span className="spinner" style={{ width: 36, height: 36, display: 'inline-block' }} />
+      </div>
+    }>
+      <ListingPageInner {...props} />
+    </Suspense>
   )
 }

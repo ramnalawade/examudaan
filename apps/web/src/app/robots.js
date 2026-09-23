@@ -1,6 +1,6 @@
 // ============================================================
 // app/robots.js — Robots.txt Generation
-// ExamUdaan | Next.js App Router robots.txt
+// ExamUdaan.in | Comprehensive Bot Security & Crawler Directives
 // Served at /robots.txt automatically by Next.js
 // ============================================================
 
@@ -11,19 +11,68 @@ export default function robots() {
   return {
     rules: [
       {
-        // Allow all well-behaved crawlers
+        // Allow legitimate search engine crawlers (Google, Bing, etc.)
         userAgent: '*',
         allow: '/',
         disallow: [
-          '/admin',           // block admin panel from indexing
-          '/dashboard',       // user dashboard — private
-          '/api/',            // API routes — not for indexing
-          '/_next/',          // Next.js internals
+          '/admin',
+          '/admin/',
+          '/dashboard',
+          '/dashboard/',
+          '/api/',
+          '/_next/',
+          '/*?*', // Disallow crawling search/filter URLs with query params to avoid spider traps
         ],
+        crawlDelay: 2,
       },
       {
-        // Block AI training bots (same as sarkarijobfind)
-        userAgent: ['GPTBot', 'ClaudeBot', 'Google-Extended', 'CCBot', 'Bytespider', 'Amazonbot'],
+        // Block scraping frameworks, headless scripts & abusive crawlers
+        userAgent: [
+          'Scrapy',
+          'python-requests',
+          'aiohttp',
+          'httpx',
+          'Go-http-client',
+          'Java',
+          'Wget',
+          'curl',
+          'SemrushBot',
+          'AhrefsBot',
+          'DotBot',
+          'MJ12bot',
+          'PetalBot',
+          'MegaIndex',
+          'Seekport',
+          'ZoominfoBot',
+          'Barkrowler',
+          'BLEXBot',
+          'DataForSeoBot',
+          'SerpstatBot',
+          'SeznamBot',
+          'trendictionbot',
+          'YaK',
+          'Turnitin',
+          'Screaming Frog SEO Spider',
+        ],
+        disallow: '/',
+      },
+      {
+        // Block AI training crawlers & content harvesters
+        userAgent: [
+          'GPTBot',
+          'ClaudeBot',
+          'Google-Extended',
+          'CCBot',
+          'Bytespider',
+          'Amazonbot',
+          'FacebookBot',
+          'cohere-ai',
+          'omgili',
+          'anthropic-ai',
+          'PerplexityBot',
+          'Diffbot',
+          'ImagesiftBot',
+        ],
         disallow: '/',
       },
     ],

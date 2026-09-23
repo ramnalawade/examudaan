@@ -1,66 +1,52 @@
 // ============================================================
-// app/api/admin/stats/route.js — Admin Dashboard Stats (from PostgreSQL)
+// app/api/admin/stats/route.js — Site Statistics API (Admin Only)
+// Returns high-level counts for the admin dashboard
 // ============================================================
 
-import { NextResponse } from 'next/server'
-import { query }        from '../../../../lib/pgdb'
-import { withAuth }     from '../../../../lib/auth'
+import { NextResponse }       from 'next/server'
+import { query }              from '../../../../lib/pgdb'
+import { verifyAccessToken }  from '../../../../lib/auth'
+import { AI_TOOLS }           from '../../../../lib/aiToolsData'
+import { MOCK_TESTS }         from '../../../../lib/mockTestsData'
+import { SYLLABUS_EXAMS }     from '../../../../lib/syllabusData'
 
-export const GET = withAuth(async (request, ctx, user) => {
+// Extract and verify admin user from Bearer token
+function getAdminUser(request) {
+  const auth    = request.headers.get('authorization') || ''
+  const token   = auth.replace(/^Bearer\s+/i, '').trim()
+  if (!token) return null
+  const decoded = verifyAccessToken(token)
+  return decoded?.data || null
+}
+
+export async function GET(request) {
   try {
-    // Parallel queries against PostgreSQL
-    const [
-      userRows,
-      alertRows,
-      paymentRows,
-      scraperRows,
-      notifRows,
-    ] = await Promise.all([
-      query(`SELECT COUNT(*) AS total FROM users`),
-      query(`SELECT COUNT(*) AS total FROM alert_subscriptions WHERE is_active = true`),
-      query(`
-        SELECT id, email, amount, plan, status, created_at AS date
-        FROM payments
-        ORDER BY created_at DESC
-        LIMIT 5
-      `),
-      query(`
-        SELECT source_id, started_at, finished_at, records_added, records_updated, errors
-        FROM scrape_log
-        ORDER BY started_at DESC
-        LIMIT 5
-      `),
-      query(`
-        SELECT
-          COUNT(*) FILTER (WHERE status = 'published') AS published,
-          COUNT(*) FILTER (WHERE status = 'closed')    AS closed,
-          COALESCE(SUM(total_vacancies), 0)            AS total_vacancies,
-          COUNT(DISTINCT organization_id)              AS orgs
-        FROM exam_notifications
-      `),
+    const user = getAdminUser(request)
+    if (!user || !user.is_admin) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    // Run all stat queries in parallel for speed
+    const [jobsRes, usersRes, enquiriesRes, todayRes] = await Promise.all([
+      query(`SELECT COUNT(*) AS cnt FROM exam_notifications WHERE status = 'published' AND deleted_at IS NULL`).catch(() => []),
+      query(`SELECT COUNT(*) AS cnt FROM users`).catch(() => []),
+      query(`SELECT COUNT(*) AS cnt FROM academy_enquiries`).catch(() => []),
+      query(`SELECT COUNT(*) AS cnt FROM exam_notifications WHERE DATE(created_at) = CURRENT_DATE`).catch(() => []),
     ])
 
     return NextResponse.json({
-      success: true,
-      data: {
-        totalUsers:      parseInt(userRows[0]?.total   || '0', 10),
-        activeAlerts:    parseInt(alertRows[0]?.total  || '0', 10),
-        notifications: {
-          published:       parseInt(notifRows[0]?.published || '0', 10),
-          closed:          parseInt(notifRows[0]?.closed    || '0', 10),
-          total_vacancies: parseInt(notifRows[0]?.total_vacancies || '0', 10),
-          orgs:            parseInt(notifRows[0]?.orgs      || '0', 10),
-        },
-        recentPayments:  paymentRows  || [],
-        scraperStatus:   scraperRows  || [],
+      stats: {
+        total_jobs:      parseInt(jobsRes?.[0]?.cnt      || jobsRes?.rows?.[0]?.cnt      || 0),
+        total_users:     parseInt(usersRes?.[0]?.cnt     || usersRes?.rows?.[0]?.cnt     || 0),
+        total_enquiries: parseInt(enquiriesRes?.[0]?.cnt || enquiriesRes?.rows?.[0]?.cnt || 0),
+        jobs_today:      parseInt(todayRes?.[0]?.cnt      || todayRes?.rows?.[0]?.cnt      || 0),
+        total_ai_tools:   (AI_TOOLS || []).length,
+        total_mock_tests: (MOCK_TESTS || []).length,
+        total_syllabi:    (SYLLABUS_EXAMS || []).length,
       },
     })
-
   } catch (err) {
-    console.error('[admin/stats] error:', err.message)
-    return NextResponse.json(
-      { success: false, message: 'Server error', error: err.message },
-      { status: 500 }
-    )
+    console.error('[admin/stats]', err)
+    return NextResponse.json({ error: 'Server error' }, { status: 500 })
   }
-})
+}

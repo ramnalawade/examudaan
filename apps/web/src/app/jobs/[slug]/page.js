@@ -49,34 +49,51 @@ function formatSalary(salary, posts) {
 
 // ──────────────────────────────────────────────────────────────
 // Database fetch helper
-// ──────────────────────────────────────────────────────────────
 async function getJobData(slugParam) {
-  // Extract numeric ID from slug (e.g. "bmc-514" → 514, or "514" → 514)
-  let id = null
-  const idMatch = slugParam.match(/-(\d+)$/) || slugParam.match(/^(\d+)$/)
-  if (idMatch) id = parseInt(idMatch[1], 10)
+  // 1. First: exact match by full slug column
+  let en = await queryOne(
+    `SELECT en.*,
+            o.name        AS org_name,
+            o.name_mr     AS org_name_mr,
+            o.acronym     AS org_acronym,
+            o.website     AS org_website,
+            o.department  AS org_department,
+            o.parent_org  AS org_parent_org,
+            o.address     AS org_address,
+            o.phone       AS org_phone
+     FROM exam_notifications en
+     JOIN organizations o ON o.id = en.organization_id
+     WHERE en.slug = $1`,
+    [slugParam]
+  )
 
-  let en = null
-  if (id) {
-    en = await queryOne(
-      `SELECT en.*,
-              o.name        AS org_name,
-              o.name_mr     AS org_name_mr,
-              o.acronym     AS org_acronym,
-              o.website     AS org_website,
-              o.department  AS org_department,
-              o.parent_org  AS org_parent_org,
-              o.address     AS org_address,
-              o.phone       AS org_phone
-       FROM exam_notifications en
-       JOIN organizations o ON o.id = en.organization_id
-       WHERE en.id = $1`,
-      [id]
-    )
+  // 2. Second: extract numeric ID from slug (e.g. "bmc-514" → 514, or "514" → 514)
+  if (!en) {
+    let id = null
+    const idMatch = slugParam.match(/-(\d+)$/) || slugParam.match(/^(\d+)$/)
+    if (idMatch) id = parseInt(idMatch[1], 10)
+    if (id) {
+      en = await queryOne(
+        `SELECT en.*,
+                o.name        AS org_name,
+                o.name_mr     AS org_name_mr,
+                o.acronym     AS org_acronym,
+                o.website     AS org_website,
+                o.department  AS org_department,
+                o.parent_org  AS org_parent_org,
+                o.address     AS org_address,
+                o.phone       AS org_phone
+         FROM exam_notifications en
+         JOIN organizations o ON o.id = en.organization_id
+         WHERE en.id = $1`,
+        [id]
+      )
+    }
   }
 
-  // Fallback: match by full slug column
+  // 3. Third: fuzzy fallback by acronym or title to gracefully resolve legacy or descriptive URLs
   if (!en) {
+    const cleanWord = slugParam.replace(/[-_0-9]/g, ' ').trim().split(/\s+/)[0]
     en = await queryOne(
       `SELECT en.*,
               o.name        AS org_name,
@@ -89,8 +106,11 @@ async function getJobData(slugParam) {
               o.phone       AS org_phone
        FROM exam_notifications en
        JOIN organizations o ON o.id = en.organization_id
-       WHERE en.slug = $1`,
-      [slugParam]
+       WHERE en.status = 'published'
+         AND (en.slug ILIKE $1 OR en.title ILIKE $2 OR o.acronym ILIKE $3)
+       ORDER BY en.published_at DESC NULLS LAST
+       LIMIT 1`,
+      [`%${slugParam}%`, `%${cleanWord || slugParam}%`, `%${cleanWord || slugParam}%`]
     )
   }
 

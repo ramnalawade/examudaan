@@ -1,0 +1,262 @@
+/* ============================================================
+   app/mock-tests/mockTests.module.css
+   ExamUdaan.in — Mock test listing styles
+   ============================================================ */
+
+.page { background: var(--surface-container-lowest); min-height: 100vh; }
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #1e1035 0%, #2d1b5e 50%, #3b246d 100%);
+  padding: 60px 0 52px;
+  text-align: center;
+  color: #fff;
+}
+
+.heroContent { max-width: 700px; margin: 0 auto; }
+
+.heroLabel {
+  display: inline-block;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 100px;
+  padding: 4px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(26px, 4.5vw, 42px);
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero p { font-size: 16px; color: rgba(255,255,255,.82); margin: 0 0 36px; line-height: 1.7; }
+.hero p strong { color: #fde68a; }
+
+.heroStats { display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; }
+
+.stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.stat strong { font-size: 32px; font-weight: 800; font-family: 'Outfit', sans-serif; color: #a78bfa; }
+.stat span { font-size: 13px; color: rgba(255,255,255,.65); }
+
+/* ── Tests Grid ─────────────────────────────────────────────── */
+.testsSection { padding: 56px 0; }
+
+.testsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ── Test Card ─────────────────────────────────────────────── */
+.testCard {
+  background: #fff;
+  border-radius: 16px;
+  border: 1.5px solid var(--outline-variant);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.testCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.1);
+  border-color: #a78bfa;
+}
+
+.testCardTop { display: flex; align-items: center; gap: 10px; }
+
+.examBadge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.examBadge[data-exam="MPSC"] { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+.examBadge[data-exam="Police Bharti"] { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+.examBadge[data-exam="Talathi Bharti"] { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+.examBadge[data-exam="IBPS"] { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.examBadge[data-exam="SSC"] { background: #fefce8; color: #ca8a04; border: 1px solid #fef08a; }
+.examBadge[data-exam="Banking"] { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.examBadge[data-exam="UPSC"] { background: #faf5ff; color: #7c3aed; border: 1px solid #e9d5ff; }
+.examBadge[data-exam="RRB"] { background: #fdf2f8; color: #9d174d; border: 1px solid #fbcfe8; }
+
+.diffBadge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1.5px solid;
+  margin-left: auto;
+}
+
+.testTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.testDesc {
+  font-size: 13px;
+  color: var(--secondary);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.testMeta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+.negativeNote {
+  font-size: 12px;
+  color: #dc2626;
+  background: #fef2f2;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+.startBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #ea580c;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  align-self: flex-start;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.testCard:hover .startBtn {
+  background: #c2410c;
+  transform: translateX(2px);
+}
+
+/* ── Coming Soon Card ───────────────────────────────────────── */
+.comingSoon {
+  opacity: .7;
+  cursor: default;
+  pointer-events: none;
+}
+
+.comingSoonBadge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: #f3f4f6;
+  color: #6b7280;
+  margin-left: auto;
+}
+
+.comingSoonOverlay {
+  font-size: 18px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-align: center;
+  padding-top: 8px;
+}
+
+/* ── How it works ───────────────────────────────────────────── */
+.howSection {
+  padding: 56px 0;
+  background: #fff;
+}
+
+.howTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 40px;
+  color: var(--on-surface);
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step {
+  text-align: center;
+  max-width: 180px;
+  padding: 0 12px;
+}
+
+.stepNum {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.step h3 { font-size: 15px; font-weight: 700; color: var(--on-surface); margin: 0 0 6px; }
+.step p { font-size: 13px; color: var(--secondary); margin: 0; line-height: 1.5; }
+
+.stepArrow { font-size: 28px; color: #d1d5db; padding: 0 8px; }
+
+/* ── CTA ───────────────────────────────────────────────────── */
+.ctaSection { padding: 40px 0 56px; }
+
+.ctaBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+  padding: 24px 28px;
+  flex-wrap: wrap;
+}
+
+.ctaBox > span { font-size: 40px; flex-shrink: 0; }
+
+.ctaBox div { flex: 1; }
+.ctaBox h2 { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 4px; color: var(--on-surface); }
+.ctaBox p { font-size: 14px; color: var(--secondary); margin: 0; }
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .testsGrid { grid-template-columns: 1fr; }
+  .heroStats { gap: 28px; }
+  .steps { flex-direction: column; }
+  .stepArrow { transform: rotate(90deg); }
+  .ctaBox { flex-direction: column; text-align: center; }
+}

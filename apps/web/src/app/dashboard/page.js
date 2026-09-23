@@ -59,6 +59,7 @@ export default function DashboardPage() {
   const [criteria,      setCriteria]      = useState([])
   const [loading,       setLoading]       = useState(true)
   const [error,         setError]         = useState('')
+  const [siteStats,     setSiteStats]     = useState(null)
 
   // ── Criteria form state ──
   const [showCriteriaForm, setShowCriteriaForm] = useState(false)
@@ -170,6 +171,12 @@ export default function DashboardPage() {
         const d = await criteriaRes.json()
         setCriteria(d.data?.criteria || [])
       }
+
+      // Fetch live dynamic site statistics
+      fetch('/api/stats')
+        .then(res => res.json())
+        .then(d => { if (d.data) setSiteStats(d.data) })
+        .catch(() => {})
     } catch (err) {
       console.error('[Dashboard] Fetch error:', err)
       setError('Failed to load dashboard data.')
@@ -507,6 +514,52 @@ export default function DashboardPage() {
                     <div style={{ fontSize: 12, color: 'var(--secondary)' }}>{stat.label}</div>
                   </div>
                 ))}
+              </div>
+
+              {/* Platform Pulse & Daily Study Launchpad */}
+              <div style={{
+                background: 'linear-gradient(135deg, rgba(234,88,12,0.06) 0%, rgba(37,99,235,0.04) 100%)',
+                border: '1.5px solid var(--outline-variant)',
+                borderRadius: 14,
+                padding: '18px 20px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 14,
+              }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 10 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 22 }}>bolt</span>
+                    <strong style={{ fontSize: 15, color: 'var(--on-surface)' }}>ExamUdaan Prep Pulse</strong>
+                    <span style={{ fontSize: 11, background: '#DCFCE7', color: '#166534', padding: '2px 8px', borderRadius: 999, fontWeight: 700 }}>Live Platform Stats</span>
+                  </div>
+                  <Link href="/daily-quiz" style={{ fontSize: 12, fontWeight: 700, color: 'var(--primary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
+                    <span>🔥 Start Today&apos;s 5-Min Quiz</span>
+                    <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
+                  </Link>
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10 }}>
+                  <Link href="/jobs" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Active Govt Jobs</span>
+                    <strong style={{ fontSize: 18, color: 'var(--on-surface)' }}>{siteStats?.total_jobs || '700+'}</strong>
+                    <span style={{ fontSize: 11, color: 'var(--primary)', fontWeight: 600 }}>Browse alerts →</span>
+                  </Link>
+                  <Link href="/ai-tools" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>AI Study Tools</span>
+                    <strong style={{ fontSize: 18, color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : '29 Tools'}</strong>
+                    <span style={{ fontSize: 11, color: '#2563eb', fontWeight: 600 }}>Explore tools →</span>
+                  </Link>
+                  <Link href="/pyq" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Solved PYQ Bank</span>
+                    <strong style={{ fontSize: 18, color: '#16a34a' }}>{siteStats?.total_questions ? `${siteStats.total_questions}+ MCQs` : '560+ MCQs'}</strong>
+                    <span style={{ fontSize: 11, color: '#16a34a', fontWeight: 600 }}>15-Yr papers →</span>
+                  </Link>
+                  <Link href="/mock-tests" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>CBT Mock Tests</span>
+                    <strong style={{ fontSize: 18, color: '#7c3aed' }}>{siteStats?.total_mock_tests ? `${siteStats.total_mock_tests} Tests` : '12+ Tests'}</strong>
+                    <span style={{ fontSize: 11, color: '#7c3aed', fontWeight: 600 }}>TCS/MPSC exams →</span>
+                  </Link>
+                </div>
               </div>
 
               {/* Recent Saved Jobs */}

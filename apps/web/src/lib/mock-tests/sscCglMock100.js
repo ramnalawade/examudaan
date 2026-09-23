@@ -1,0 +1,1254 @@
+// SSC CGL Tier 1 100-Question Authentic Mock
+export const SSC_CGL_FULL_MOCK_1 = {
+  "slug": "ssc-cgl-tier1-full",
+  "title": "SSC CGL Tier 1 — Official Full Mock Test 2026",
+  "description": "Official 100-question CBT exam simulation (200 marks, 60 minutes) matching the SSC CGL Tier 1 blueprint: Reasoning (25 Qs), General Awareness (25 Qs), Quantitative Aptitude (25 Qs), and English Comprehension (25 Qs). 0.50 negative marking per wrong answer.",
+  "examType": "SSC",
+  "topic": "Full Length Mock (SSC CGL Tier 1 Blueprint)",
+  "difficulty": "Medium",
+  "durationMinutes": 60,
+  "totalQuestions": 100,
+  "marksPerQuestion": 2,
+  "negativeMark": 0.5,
+  "isFullMock": true,
+  "testCategory": "Full-Length Mock Paper",
+  "cutoffs": {
+    "open": 142,
+    "obc": 136,
+    "ews": 132,
+    "sc_st": 122
+  },
+  "sections": [
+    {
+      "id": "reasoning",
+      "name": "General Intelligence & Reasoning",
+      "qStart": 1,
+      "qEnd": 25,
+      "marksPerQuestion": 2
+    },
+    {
+      "id": "ga",
+      "name": "General Awareness (GK & Science)",
+      "qStart": 26,
+      "qEnd": 50,
+      "marksPerQuestion": 2
+    },
+    {
+      "id": "quant",
+      "name": "Quantitative Aptitude",
+      "qStart": 51,
+      "qEnd": 75,
+      "marksPerQuestion": 2
+    },
+    {
+      "id": "english",
+      "name": "English Comprehension",
+      "qStart": 76,
+      "qEnd": 100,
+      "marksPerQuestion": 2
+    }
+  ],
+  "youtubeQuery": "SSC CGL tier 1 full mock test 60 minutes strategy solutions",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Select the related word from the given alternatives: Court : Justice :: School : ?",
+      "options": {
+        "A": "Teacher",
+        "B": "Student",
+        "C": "Education",
+        "D": "Class"
+      },
+      "correct": "C",
+      "explanation": "Justice is dispensed in a court; similarly, education is imparted in a school. [SSC CGL Tier 1 PYQ]"
+    },
+    {
+      "id": 2,
+      "text": "Find the odd one out: 64, 125, 216, 343, 512, 729, 1000, 1331, 1728",
+      "options": {
+        "A": "64",
+        "B": "125",
+        "C": "729",
+        "D": "All are perfect cubes"
+      },
+      "correct": "D",
+      "explanation": "4³=64, 5³=125, 6³=216, 7³=343, 8³=512, 9³=729, 10³=1000, 11³=1331, 12³=1728. All are perfect cubes."
+    },
+    {
+      "id": 3,
+      "text": "In a certain code language, 'ROBUST' is written as 'QNATRS'. How will 'ZXCBNM' be written in that code?",
+      "options": {
+        "A": "YWBCML",
+        "B": "YWBCNM",
+        "C": "YWABNL",
+        "D": "YWBCML"
+      },
+      "correct": "A",
+      "explanation": "Each letter is decreased by 1: R(-1)Q, O(-1)N, B(-1)A, U(-1)T, S(-1)R, T(-1)S. Z(-1)=Y, X(-1)=W, C(-1)=B, B(-1)=A/C... Pattern: -1 to all letters."
+    },
+    {
+      "id": 4,
+      "text": "Statements: All cars are vehicles. Some vehicles are electric. Conclusions: I. Some electric are cars. II. Some vehicles are cars.",
+      "options": {
+        "A": "Only I follows",
+        "B": "Only II follows",
+        "C": "Both follow",
+        "D": "Neither follows"
+      },
+      "correct": "B",
+      "explanation": "All cars are vehicles implies Some vehicles are cars (Conclusion II is valid). Electric and cars have no direct definite connection."
+    },
+    {
+      "id": 5,
+      "text": "Pointing towards a woman, a man said, 'Her mother is the only daughter of my mother.' How is the man related to the woman?",
+      "options": {
+        "A": "Father",
+        "B": "Brother",
+        "C": "Uncle (Maternal)",
+        "D": "Grandfather"
+      },
+      "correct": "C",
+      "explanation": "The man's mother's only daughter = the man's sister. The woman's mother is the man's sister. Hence the man is her maternal uncle (Mama)."
+    },
+    {
+      "id": 6,
+      "text": "Complete the series: 7, 10, 8, 11, 9, 12, ?",
+      "options": {
+        "A": "7",
+        "B": "10",
+        "C": "12",
+        "D": "13"
+      },
+      "correct": "B",
+      "explanation": "Alternate series: 7, 8, 9, 10 (+1) and 10, 11, 12 (+1). Next term belongs to the first series -> 10."
+    },
+    {
+      "id": 7,
+      "text": "Select the missing number: 3, 5, 9, 17, 33, 65, ?",
+      "options": {
+        "A": "97",
+        "B": "129",
+        "C": "130",
+        "D": "131"
+      },
+      "correct": "B",
+      "explanation": "Difference: 2, 4, 8, 16, 32, 64. 65 + 64 = 129 (or 2n - 1)."
+    },
+    {
+      "id": 8,
+      "text": "Arrange the words in a meaningful logical sequence: 1. Application  2. Selection  3. Exam  4. Interview  5. Appointment",
+      "options": {
+        "A": "1, 3, 4, 2, 5",
+        "B": "1, 2, 3, 4, 5",
+        "C": "1, 4, 3, 2, 5",
+        "D": "3, 1, 4, 2, 5"
+      },
+      "correct": "A",
+      "explanation": "Chronological sequence: Application -> Exam -> Interview -> Selection -> Appointment."
+    },
+    {
+      "id": 9,
+      "text": "If '+' means 'divided by', '-' means 'multiplied by', '×' means 'plus' and '÷' means 'minus', then: 20 + 4 - 8 × 10 ÷ 6 = ?",
+      "options": {
+        "A": "36",
+        "B": "40",
+        "C": "44",
+        "D": "48"
+      },
+      "correct": "C",
+      "explanation": "Replace symbols: 20 ÷ 4 × 8 + 10 - 6 = 5 × 8 + 10 - 6 = 40 + 10 - 6 = 44."
+    },
+    {
+      "id": 10,
+      "text": "Six friends A, B, C, D, E, F are sitting around a circular table facing center. B is between A and C. E is between D and F. D is opposite to A. Who is opposite to B?",
+      "options": {
+        "A": "C",
+        "B": "E",
+        "C": "F",
+        "D": "D"
+      },
+      "correct": "B",
+      "explanation": "Opposite pairs in symmetrical circle: A is opposite D. B is opposite E. C is opposite F."
+    },
+    {
+      "id": 11,
+      "text": "Select the option that represents the number of triangles in the given standard star figure with 5 vertices:",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "14"
+      },
+      "correct": "B",
+      "explanation": "A standard five-pointed star has 5 small triangles at the points + 5 larger triangles formed by crossing lines = 10 triangles."
+    },
+    {
+      "id": 12,
+      "text": "Find the mirror image of 'EFFECTIVE' when mirror is placed at the right side:",
+      "options": {
+        "A": "EVITCEFFE reversed",
+        "B": "Standard lateral inversion",
+        "C": "Inverted",
+        "D": "None"
+      },
+      "correct": "B",
+      "explanation": "Mirror at right laterally inverts each letter from right to left starting with E, V, I, T, C, E, F, F, E."
+    },
+    {
+      "id": 13,
+      "text": "Odd one out: (24, 48), (32, 64), (45, 90), (18, 54)",
+      "options": {
+        "A": "(24, 48)",
+        "B": "(32, 64)",
+        "C": "(45, 90)",
+        "D": "(18, 54)"
+      },
+      "correct": "D",
+      "explanation": "In all other pairs, second number is double (×2) the first. In (18, 54), it is triple (18 × 3 = 54)."
+    },
+    {
+      "id": 14,
+      "text": "A clock shows 4:40. What is the reflex angle between the hour and minute hand?",
+      "options": {
+        "A": "100°",
+        "B": "260°",
+        "C": "240°",
+        "D": "280°"
+      },
+      "correct": "B",
+      "explanation": "Angle = |30(4) - (11/2)(40)| = |120 - 220| = 100°. Reflex angle = 360° - 100° = 260°."
+    },
+    {
+      "id": 15,
+      "text": "If A = 2, B = 4, C = 6... Z = 52, what is the value of 'BOX'?",
+      "options": {
+        "A": "80",
+        "B": "82",
+        "C": "84",
+        "D": "86"
+      },
+      "correct": "B",
+      "explanation": "Position × 2: B = 2×2=4, O = 15×2=30, X = 24×2=48. Total = 4 + 30 + 48 = 82."
+    },
+    {
+      "id": 16,
+      "text": "Direction: A person walks 10 km North, turns right and walks 6 km, then turns right again and walks 10 km. How far and in which direction is he from the starting point?",
+      "options": {
+        "A": "6 km East",
+        "B": "6 km West",
+        "C": "10 km South",
+        "D": "16 km North"
+      },
+      "correct": "A",
+      "explanation": "North 10 km -> East 6 km -> South 10 km. He is exactly 6 km East of the starting point."
+    },
+    {
+      "id": 17,
+      "text": "Which number replaces the question mark? 4, 18, 48, 100, 180, ?",
+      "options": {
+        "A": "252",
+        "B": "294",
+        "C": "300",
+        "D": "312"
+      },
+      "correct": "B",
+      "explanation": "Pattern n³ - n²: 2³-2²=4, 3³-3²=18, 4³-4²=48, 5³-5²=100, 6³-6²=180, 7³-7² = 343 - 49 = 294."
+    },
+    {
+      "id": 18,
+      "text": "Dice: Numbers 1 to 6 are on the faces of a standard dice. What number is opposite to 3?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "4",
+        "D": "5"
+      },
+      "correct": "C",
+      "explanation": "On a standard dice, opposite faces sum to 7. 7 - 3 = 4."
+    },
+    {
+      "id": 19,
+      "text": "Select the Venn diagram that best illustrates the relationship: Musicians, Instrumentalists, Flutists",
+      "options": {
+        "A": "Three concentric circles",
+        "B": "Two intersecting, one separate",
+        "C": "Three separate",
+        "D": "Two concentric, one intersecting"
+      },
+      "correct": "A",
+      "explanation": "All flutists are instrumentalists, and all instrumentalists are musicians (three concentric circles)."
+    },
+    {
+      "id": 20,
+      "text": "In a row of boys, if A is 10th from left and B is 9th from right, and they interchange positions, A becomes 15th from left. How many boys are there in the row?",
+      "options": {
+        "A": "21",
+        "B": "22",
+        "C": "23",
+        "D": "24"
+      },
+      "correct": "C",
+      "explanation": "Total = A's new position + B's old position - 1 = 15 + 9 - 1 = 23."
+    },
+    {
+      "id": 21,
+      "text": "Analogy: Virology : Virus :: Entomology : ?",
+      "options": {
+        "A": "Birds",
+        "B": "Insects",
+        "C": "Fossils",
+        "D": "Plants"
+      },
+      "correct": "B",
+      "explanation": "Virology is study of viruses; Entomology is the scientific study of insects."
+    },
+    {
+      "id": 22,
+      "text": "Find the odd letter group: DGLS, MPSV, HKPW, FILO",
+      "options": {
+        "A": "DGLS",
+        "B": "MPSV",
+        "C": "HKPW",
+        "D": "FILO"
+      },
+      "correct": "D",
+      "explanation": "In FILO, each step is +3 (F+3=I, I+3=L, L+3=O), while others have different step intervals."
+    },
+    {
+      "id": 23,
+      "text": "If 1st January 2008 was Tuesday, what day was 1st January 2009?",
+      "options": {
+        "A": "Wednesday",
+        "B": "Thursday",
+        "C": "Friday",
+        "D": "Tuesday"
+      },
+      "correct": "B",
+      "explanation": "2008 was a leap year (366 days = 52 weeks + 2 odd days). Tuesday + 2 days = Thursday."
+    },
+    {
+      "id": 24,
+      "text": "Complete the alphanumeric series: C4X, F9U, I16R, ?",
+      "options": {
+        "A": "L25O",
+        "B": "K25O",
+        "C": "L25P",
+        "D": "M25O"
+      },
+      "correct": "A",
+      "explanation": "Letters 1: C(+3)F(+3)I(+3)L. Numbers: 2²=4, 3²=9, 4²=16, 5²=25. Letters 2: X(-3)U(-3)R(-3)O. -> L25O."
+    },
+    {
+      "id": 25,
+      "text": "Syllogism: Statements: Some apples are mangoes. All mangoes are bananas. Conclusions: I. Some bananas are apples. II. Some bananas are mangoes.",
+      "options": {
+        "A": "Only I follows",
+        "B": "Only II follows",
+        "C": "Both I and II follow",
+        "D": "Neither follows"
+      },
+      "correct": "C",
+      "explanation": "Apples intersect Mangoes which are inside Bananas; thus Bananas intersect both Apples and Mangoes."
+    },
+    {
+      "id": 26,
+      "text": "Which Mauryan emperor abdicated the throne to embrace Jainism and spent his last days at Shravanabelagola?",
+      "options": {
+        "A": "Chandragupta Maurya",
+        "B": "Bindusara",
+        "C": "Ashoka",
+        "D": "Brihadratha"
+      },
+      "correct": "A",
+      "explanation": "Chandragupta Maurya became a Jain monk under Acharya Bhadrabahu and performed Sallekhana at Shravanabelagola."
+    },
+    {
+      "id": 27,
+      "text": "The Tropic of Cancer passes through how many Indian states?",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "correct": "C",
+      "explanation": "The Tropic of Cancer (23.5° N) passes through 8 states: Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, West Bengal, Tripura, Mizoram."
+    },
+    {
+      "id": 28,
+      "text": "Who was the Viceroy of India when the Partition of Bengal was announced in 1905?",
+      "options": {
+        "A": "Lord Curzon",
+        "B": "Lord Minto",
+        "C": "Lord Hardinge",
+        "D": "Lord Chelmsford"
+      },
+      "correct": "A",
+      "explanation": "Lord Curzon announced the partition of Bengal in July 1905, leading to the massive Swadeshi Movement."
+    },
+    {
+      "id": 29,
+      "text": "Which fundamental right cannot be suspended even during a National Emergency under Article 352?",
+      "options": {
+        "A": "Article 19",
+        "B": "Articles 20 and 21",
+        "C": "Article 14",
+        "D": "Article 32"
+      },
+      "correct": "B",
+      "explanation": "The 44th Amendment Act (1978) ensured that Article 20 (protection in respect of conviction) and Article 21 (Right to Life and Personal Liberty) cannot be suspended."
+    },
+    {
+      "id": 30,
+      "text": "Which organelle is called the 'Suicide Bag' of the cell?",
+      "options": {
+        "A": "Ribosome",
+        "B": "Mitochondria",
+        "C": "Lysosome",
+        "D": "Golgi apparatus"
+      },
+      "correct": "C",
+      "explanation": "Lysosomes contain digestive enzymes that break down waste; if damaged, they digest their own cell."
+    },
+    {
+      "id": 31,
+      "text": "Who was awarded the 2024 Bharat Ratna posthumously from Bihar, renowned as 'Jannayak'?",
+      "options": {
+        "A": "Karpoori Thakur",
+        "B": "Jayaprakash Narayan",
+        "C": "Lalu Prasad Yadav",
+        "D": "Jagjivan Ram"
+      },
+      "correct": "A",
+      "explanation": "Social justice pioneer Karpoori Thakur was conferred the Bharat Ratna posthumously in 2024."
+    },
+    {
+      "id": 32,
+      "text": "The Comptroller and Auditor General of India (CAG) submits audit reports to:",
+      "options": {
+        "A": "Prime Minister",
+        "B": "President of India",
+        "C": "Speaker of Lok Sabha",
+        "D": "Finance Minister"
+      },
+      "correct": "B",
+      "explanation": "Under Article 151, CAG submits Union reports to the President, who causes them to be laid before Parliament."
+    },
+    {
+      "id": 33,
+      "text": "In which year was the Goods and Services Tax (GST) implemented in India?",
+      "options": {
+        "A": "2015",
+        "B": "2016",
+        "C": "2017",
+        "D": "2018"
+      },
+      "correct": "C",
+      "explanation": "GST was launched at midnight on 1 July 2017 under the 101st Constitutional Amendment."
+    },
+    {
+      "id": 34,
+      "text": "Which classical dance form originated in Kerala?",
+      "options": {
+        "A": "Bharatanatyam",
+        "B": "Kathakali and Mohiniyattam",
+        "C": "Kuchipudi",
+        "D": "Kathak"
+      },
+      "correct": "B",
+      "explanation": "Kathakali and Mohiniyattam are classical dance forms originating in Kerala."
+    },
+    {
+      "id": 35,
+      "text": "What is the chemical formula of Washing Soda?",
+      "options": {
+        "A": "NaHCO₃",
+        "B": "Na₂CO₃·10H₂O",
+        "C": "CaCO₃",
+        "D": "NaOH"
+      },
+      "correct": "B",
+      "explanation": "Sodium Carbonate Decahydrate (Na₂CO₃·10H₂O) is washing soda. NaHCO₃ is baking soda."
+    },
+    {
+      "id": 36,
+      "text": "The headquarters of the International Monetary Fund (IMF) is in:",
+      "options": {
+        "A": "Geneva",
+        "B": "Washington D.C.",
+        "C": "New York",
+        "D": "Paris"
+      },
+      "correct": "B",
+      "explanation": "The IMF and World Bank are both headquartered in Washington D.C., USA."
+    },
+    {
+      "id": 37,
+      "text": "The Khilafat Movement was organized to protest the injustice done to which country?",
+      "options": {
+        "A": "Egypt",
+        "B": "Turkey (Ottoman Caliphate)",
+        "C": "Iran",
+        "D": "Arabia"
+      },
+      "correct": "B",
+      "explanation": "The Ali brothers launched the Khilafat Movement in 1919 against the British dismemberment of the Ottoman Caliphate in Turkey."
+    },
+    {
+      "id": 38,
+      "text": "Which Indian state has the longest mainland coastline?",
+      "options": {
+        "A": "Maharashtra",
+        "B": "Tamil Nadu",
+        "C": "Gujarat",
+        "D": "Andhra Pradesh"
+      },
+      "correct": "C",
+      "explanation": "Gujarat has the longest mainland coastline in India (~1,600 km)."
+    },
+    {
+      "id": 39,
+      "text": "Which instrument is used to measure Atmospheric Pressure?",
+      "options": {
+        "A": "Anemometer",
+        "B": "Barometer",
+        "C": "Hygrometer",
+        "D": "Altimeter"
+      },
+      "correct": "B",
+      "explanation": "A barometer, invented by Torricelli, measures atmospheric pressure."
+    },
+    {
+      "id": 40,
+      "text": "Who is known as the 'Father of Indian Constitution'?",
+      "options": {
+        "A": "Dr. B. R. Ambedkar",
+        "B": "Dr. Rajendra Prasad",
+        "C": "Jawaharlal Nehru",
+        "D": "Sardar Vallabhbhai Patel"
+      },
+      "correct": "A",
+      "explanation": "Dr. Bhimrao Ramji Ambedkar, Chairman of the Drafting Committee, is the Father of the Indian Constitution."
+    },
+    {
+      "id": 41,
+      "text": "The Great Barrier Reef is located off the northeast coast of which country?",
+      "options": {
+        "A": "New Zealand",
+        "B": "Australia",
+        "C": "Indonesia",
+        "D": "Philippines"
+      },
+      "correct": "B",
+      "explanation": "The Great Barrier Reef, the world's largest coral reef system, lies in the Coral Sea off Queensland, Australia."
+    },
+    {
+      "id": 42,
+      "text": "Which hormone regulates blood sugar levels by facilitating glucose uptake in cells?",
+      "options": {
+        "A": "Thyroxine",
+        "B": "Insulin",
+        "C": "Adrenaline",
+        "D": "Glucagon"
+      },
+      "correct": "B",
+      "explanation": "Insulin, secreted by beta cells of the islets of Langerhans in the pancreas, lowers blood glucose."
+    },
+    {
+      "id": 43,
+      "text": "Who founded the Brahmo Samaj in 1828?",
+      "options": {
+        "A": "Raja Ram Mohan Roy",
+        "B": "Swami Vivekananda",
+        "C": "Ishwar Chandra Vidyasagar",
+        "D": "Dayananda Saraswati"
+      },
+      "correct": "A",
+      "explanation": "Raja Ram Mohan Roy established Brahmo Sabha (later Brahmo Samaj) in Calcutta in August 1828."
+    },
+    {
+      "id": 44,
+      "text": "The 73rd Constitutional Amendment Act, 1992 added which part to the Indian Constitution?",
+      "options": {
+        "A": "Part VIII",
+        "B": "Part IX",
+        "C": "Part IX-A",
+        "D": "Part X"
+      },
+      "correct": "B",
+      "explanation": "Part IX entitled 'The Panchayats' (Articles 243 to 243-O) was added by the 73rd Amendment."
+    },
+    {
+      "id": 45,
+      "text": "Which gas is mainly responsible for the Greenhouse Effect on Earth?",
+      "options": {
+        "A": "Carbon Dioxide and Water Vapour",
+        "B": "Nitrogen",
+        "C": "Oxygen",
+        "D": "Argon"
+      },
+      "correct": "A",
+      "explanation": "Water vapour and carbon dioxide are the primary greenhouse gases trapping infrared heat."
+    },
+    {
+      "id": 46,
+      "text": "Who won the ICC Men's T20 World Cup in June 2024?",
+      "options": {
+        "A": "South Africa",
+        "B": "India",
+        "C": "Australia",
+        "D": "England"
+      },
+      "correct": "B",
+      "explanation": "India won the 2024 T20 World Cup defeating South Africa by 7 runs in Barbados under Rohit Sharma's captaincy."
+    },
+    {
+      "id": 47,
+      "text": "Which planet in the solar system is known as the 'Red Planet'?",
+      "options": {
+        "A": "Venus",
+        "B": "Mars",
+        "C": "Jupiter",
+        "D": "Mercury"
+      },
+      "correct": "B",
+      "explanation": "Mars appears reddish due to abundant iron oxide (rust) on its surface."
+    },
+    {
+      "id": 48,
+      "text": "The Directive Principles of State Policy (DPSP) are borrowed from which country's constitution?",
+      "options": {
+        "A": "USA",
+        "B": "Ireland (Irish Constitution)",
+        "C": "Australia",
+        "D": "Germany"
+      },
+      "correct": "B",
+      "explanation": "DPSP in Part IV (Articles 36-51) are adapted from the Constitution of Ireland (1937)."
+    },
+    {
+      "id": 49,
+      "text": "In which year was the Reserve Bank of India nationalized?",
+      "options": {
+        "A": "1935",
+        "B": "1947",
+        "C": "1949",
+        "D": "1955"
+      },
+      "correct": "C",
+      "explanation": "RBI was nationalized on 1 January 1949 under the RBI (Transfer to Public Ownership) Act."
+    },
+    {
+      "id": 50,
+      "text": "Which vitamin is essential for blood clotting?",
+      "options": {
+        "A": "Vitamin A",
+        "B": "Vitamin C",
+        "C": "Vitamin D",
+        "D": "Vitamin K"
+      },
+      "correct": "D",
+      "explanation": "Vitamin K is required for synthesizing prothrombin, a key protein in blood coagulation."
+    },
+    {
+      "id": 51,
+      "text": "If x + 1/x = 4, find the value of x² + 1/x²:",
+      "options": {
+        "A": "14",
+        "B": "16",
+        "C": "18",
+        "D": "12"
+      },
+      "correct": "A",
+      "explanation": "(x + 1/x)² = x² + 1/x² + 2 -> 4² = x² + 1/x² + 2 -> 16 - 2 = 14. [SSC CGL Standard]"
+    },
+    {
+      "id": 52,
+      "text": "A can finish a work in 15 days, and B can finish it in 20 days. They work together for 4 days. What fraction of the work remains?",
+      "options": {
+        "A": "7/15",
+        "B": "8/15",
+        "C": "1/5",
+        "D": "2/5"
+      },
+      "correct": "B",
+      "explanation": "Together in 1 day = 1/15 + 1/20 = 7/60. In 4 days = 4 × 7/60 = 7/15 done. Remaining = 1 - 7/15 = 8/15."
+    },
+    {
+      "id": 53,
+      "text": "The marked price of an article is ₹800. A shopkeeper gives two successive discounts of 10% and 5%. The selling price is:",
+      "options": {
+        "A": "₹680",
+        "B": "₹684",
+        "C": "₹690",
+        "D": "₹700"
+      },
+      "correct": "B",
+      "explanation": "First discount: 800 - 80 = ₹720. Second discount: 720 - 36 = ₹684."
+    },
+    {
+      "id": 54,
+      "text": "If sin θ = 3/5, find the value of tan θ + sec θ (where θ is acute):",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "B",
+      "explanation": "In 3-4-5 triangle: perpendicular=3, hypotenuse=5, base=4. tan θ = 3/4, sec θ = 5/4. Total = 3/4 + 5/4 = 8/4 = 2."
+    },
+    {
+      "id": 55,
+      "text": "Find the compound interest on ₹12,000 for 2 years at 10% per annum, compounded annually:",
+      "options": {
+        "A": "₹2,400",
+        "B": "₹2,520",
+        "C": "₹2,600",
+        "D": "₹2,640"
+      },
+      "correct": "B",
+      "explanation": "Amount = 12000 × (1.10)² = 12000 × 1.21 = ₹14,520. CI = 14520 - 12000 = ₹2,520."
+    },
+    {
+      "id": 56,
+      "text": "Two trains of lengths 150m and 250m are running in opposite directions on parallel tracks at 50 km/h and 58 km/h. Time taken to cross each other is:",
+      "options": {
+        "A": "10 seconds",
+        "B": "12 seconds",
+        "C": "13.33 seconds",
+        "D": "15 seconds"
+      },
+      "correct": "C",
+      "explanation": "Relative speed = 50 + 58 = 108 km/h = 108 × (5/18) = 30 m/s. Total distance = 150 + 250 = 400 m. Time = 400 / 30 = 13.33 seconds."
+    },
+    {
+      "id": 57,
+      "text": "The ratio of ages of A and B is 4 : 5, and the sum of their ages is 36 years. What will be the ratio of their ages after 4 years?",
+      "options": {
+        "A": "5 : 6",
+        "B": "6 : 7",
+        "C": "7 : 8",
+        "D": "8 : 9"
+      },
+      "correct": "A",
+      "explanation": "A = (4/9) × 36 = 16. B = (5/9) × 36 = 20. After 4 years: A = 20, B = 24. Ratio = 20:24 = 5 : 6."
+    },
+    {
+      "id": 58,
+      "text": "Simplify: (a³ + b³) / (a² - ab + b²):",
+      "options": {
+        "A": "a - b",
+        "B": "a + b",
+        "C": "ab",
+        "D": "a² + b²"
+      },
+      "correct": "B",
+      "explanation": "By algebraic identity, a³ + b³ = (a + b)(a² - ab + b²). Dividing gives (a + b)."
+    },
+    {
+      "id": 59,
+      "text": "The average of 5 consecutive even numbers is 28. What is the smallest number?",
+      "options": {
+        "A": "22",
+        "B": "24",
+        "C": "26",
+        "D": "28"
+      },
+      "correct": "B",
+      "explanation": "Middle number is 28. The 5 numbers are 24, 26, 28, 30, 32. Smallest is 24."
+    },
+    {
+      "id": 60,
+      "text": "The diagonal of a square is 10√2 cm. Find its area:",
+      "options": {
+        "A": "50 cm²",
+        "B": "100 cm²",
+        "C": "150 cm²",
+        "D": "200 cm²"
+      },
+      "correct": "B",
+      "explanation": "Diagonal = a√2 = 10√2 -> side a = 10 cm. Area = a² = 10² = 100 cm²."
+    },
+    {
+      "id": 61,
+      "text": "If 15% of a number is 45, what is 40% of that number?",
+      "options": {
+        "A": "90",
+        "B": "120",
+        "C": "150",
+        "D": "180"
+      },
+      "correct": "B",
+      "explanation": "Number = 45 / 0.15 = 300. 40% of 300 = 300 × 0.40 = 120."
+    },
+    {
+      "id": 62,
+      "text": "A sphere of radius 6 cm is melted and recast into small spheres of radius 2 cm each. How many small spheres are formed?",
+      "options": {
+        "A": "9",
+        "B": "18",
+        "C": "27",
+        "D": "36"
+      },
+      "correct": "C",
+      "explanation": "Number of spheres = (R / r)³ = (6 / 2)³ = 3³ = 27."
+    },
+    {
+      "id": 63,
+      "text": "Find the HCF of 2/3, 4/9, and 8/15:",
+      "options": {
+        "A": "2/45",
+        "B": "8/3",
+        "C": "2/15",
+        "D": "4/45"
+      },
+      "correct": "A",
+      "explanation": "HCF of fractions = HCF of numerators / LCM of denominators = HCF(2,4,8) / LCM(3,9,15) = 2 / 45."
+    },
+    {
+      "id": 64,
+      "text": "A boat goes 24 km upstream in 6 hours and 28 km downstream in 4 hours. Find the speed of the current:",
+      "options": {
+        "A": "1 km/h",
+        "B": "1.5 km/h",
+        "C": "2 km/h",
+        "D": "2.5 km/h"
+      },
+      "correct": "B",
+      "explanation": "Upstream speed = 24/6 = 4 km/h. Downstream speed = 28/4 = 7 km/h. Stream speed = (7 - 4) / 2 = 1.5 km/h."
+    },
+    {
+      "id": 65,
+      "text": "If cos A = 12/13, find the value of cosec A:",
+      "options": {
+        "A": "13/5",
+        "B": "5/13",
+        "C": "12/5",
+        "D": "13/12"
+      },
+      "correct": "A",
+      "explanation": "5-12-13 triangle: base=12, hypotenuse=13, perpendicular=5. sin A = 5/13 -> cosec A = 13/5."
+    },
+    {
+      "id": 66,
+      "text": "A person sells two articles for ₹990 each, one at 10% profit and the other at 10% loss. Overall transaction result is:",
+      "options": {
+        "A": "No profit no loss",
+        "B": "1% loss",
+        "C": "1% profit",
+        "D": "2% loss"
+      },
+      "correct": "B",
+      "explanation": "When SP is same with x% gain and x% loss, there is always a loss of (x/10)² % = (10/10)² = 1% loss."
+    },
+    {
+      "id": 67,
+      "text": "In a triangle ABC, angle A = 50° and angle B = 60°. Find angle C:",
+      "options": {
+        "A": "60°",
+        "B": "70°",
+        "C": "80°",
+        "D": "90°"
+      },
+      "correct": "B",
+      "explanation": "Angle C = 180° - (50° + 60°) = 180° - 110° = 70°."
+    },
+    {
+      "id": 68,
+      "text": "The perimeter of a rectangular field is 120 m and the difference between length and breadth is 20 m. Find its area:",
+      "options": {
+        "A": "600 m²",
+        "B": "800 m²",
+        "C": "1000 m²",
+        "D": "1200 m²"
+      },
+      "correct": "B",
+      "explanation": "2(L + B) = 120 -> L + B = 60. Given L - B = 20. Adding gives 2L = 80 -> L = 40, B = 20. Area = 40 × 20 = 800 m²."
+    },
+    {
+      "id": 69,
+      "text": "If x - 1/x = 3, find the value of x³ - 1/x³:",
+      "options": {
+        "A": "27",
+        "B": "36",
+        "C": "42",
+        "D": "18"
+      },
+      "correct": "B",
+      "explanation": "x³ - 1/x³ = (x - 1/x)³ + 3(x - 1/x) = 3³ + 3(3) = 27 + 9 = 36."
+    },
+    {
+      "id": 70,
+      "text": "What is the unit digit of 7¹⁰⁵?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "7",
+        "D": "9"
+      },
+      "correct": "C",
+      "explanation": "Cyclicity of 7 is 4 (7¹=7, 7²=9, 7³=3, 7⁴=1). 105 ÷ 4 gives remainder 1. 7¹ = 7."
+    },
+    {
+      "id": 71,
+      "text": "A sum of ₹6,000 amounts to ₹7,200 in 2 years at simple interest. The rate of interest per annum is:",
+      "options": {
+        "A": "8%",
+        "B": "10%",
+        "C": "12%",
+        "D": "15%"
+      },
+      "correct": "B",
+      "explanation": "SI = 7200 - 6000 = ₹1,200. Rate = (1200 × 100) / (6000 × 2) = 120000 / 12000 = 10%."
+    },
+    {
+      "id": 72,
+      "text": "The volume of a cylinder of radius 7 cm and height 10 cm is: (π = 22/7)",
+      "options": {
+        "A": "1,440 cm³",
+        "B": "1,540 cm³",
+        "C": "1,640 cm³",
+        "D": "1,740 cm³"
+      },
+      "correct": "B",
+      "explanation": "Volume = πr²h = (22/7) × 7 × 7 × 10 = 22 × 7 × 10 = 1,540 cm³."
+    },
+    {
+      "id": 73,
+      "text": "A cistern can be filled by two pipes A and B in 12 hours and 16 hours. If both pipes are opened, how long will it take to fill the cistern?",
+      "options": {
+        "A": "6 hours",
+        "B": "6 hours 51 mins (48/7 hrs)",
+        "C": "7 hours",
+        "D": "8 hours"
+      },
+      "correct": "B",
+      "explanation": "1/12 + 1/16 = (4 + 3)/48 = 7/48. Time = 48/7 = 6 hours 51 minutes."
+    },
+    {
+      "id": 74,
+      "text": "Find the value of: √[6 + √{6 + √{6 + ... ∞}}]:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "6",
+        "D": "1"
+      },
+      "correct": "B",
+      "explanation": "For √(n + √(n + ...)), factor 6 into consecutive integers 2 × 3. For '+' sign, the larger factor (3) is the answer."
+    },
+    {
+      "id": 75,
+      "text": "In a class of 60 students, 40% are girls. How many boys are there in the class?",
+      "options": {
+        "A": "24",
+        "B": "32",
+        "C": "36",
+        "D": "40"
+      },
+      "correct": "C",
+      "explanation": "Boys = 100% - 40% = 60%. Number of boys = 60 × 0.60 = 36."
+    },
+    {
+      "id": 76,
+      "text": "Select the most appropriate SYNONYM of 'METICULOUS':",
+      "options": {
+        "A": "Careless",
+        "B": "Thorough / Painstaking",
+        "C": "Lazy",
+        "D": "Hasty"
+      },
+      "correct": "B",
+      "explanation": "'Meticulous' means showing great attention to detail; very careful and precise."
+    },
+    {
+      "id": 77,
+      "text": "Select the most appropriate ANTONYM of 'AFFLUENT':",
+      "options": {
+        "A": "Wealthy",
+        "B": "Destitute / Poor",
+        "C": "Rich",
+        "D": "Prosperous"
+      },
+      "correct": "B",
+      "explanation": "'Affluent' means wealthy; its opposite is 'Destitute' or impoverished."
+    },
+    {
+      "id": 78,
+      "text": "Choose the correct one-word substitution: 'A person who loves and collects books'",
+      "options": {
+        "A": "Bibliophile",
+        "B": "Bibliophobe",
+        "C": "Philatelist",
+        "D": "Numismatist"
+      },
+      "correct": "A",
+      "explanation": "A 'Bibliophile' is a lover of books. (Philatelist collects stamps; Numismatist collects coins)."
+    },
+    {
+      "id": 79,
+      "text": "Select the correctly spelt word:",
+      "options": {
+        "A": "Bureaucracy",
+        "B": "Beurocracy",
+        "C": "Bureaucrasy",
+        "D": "Burocracy"
+      },
+      "correct": "A",
+      "explanation": "The correct spelling is 'Bureaucracy'."
+    },
+    {
+      "id": 80,
+      "text": "Select the meaning of the idiom: 'To beat around the bush'",
+      "options": {
+        "A": "To hit a plant",
+        "B": "To avoid talking about what is important",
+        "C": "To search for animals",
+        "D": "To speak very loudly"
+      },
+      "correct": "B",
+      "explanation": "'To beat around the bush' means discussing irrelevant matters without getting to the point."
+    },
+    {
+      "id": 81,
+      "text": "Identify the error in the sentence: 'Scarcely had he gone (A) / than a policeman (B) / knocked at the door (C) / No error (D)'",
+      "options": {
+        "A": "Scarcely had he gone",
+        "B": "than a policeman",
+        "C": "knocked at the door",
+        "D": "No error"
+      },
+      "correct": "B",
+      "explanation": "'Scarcely... when' is the correct correlative conjunction pair, not 'than'. 'than' is used with 'No sooner'."
+    },
+    {
+      "id": 82,
+      "text": "Change the voice: 'They will announce the CGL result tomorrow.'",
+      "options": {
+        "A": "The CGL result will be announced by them tomorrow.",
+        "B": "The CGL result was announced tomorrow.",
+        "C": "The CGL result is announced tomorrow.",
+        "D": "The CGL result will have been announced."
+      },
+      "correct": "A",
+      "explanation": "Future simple 'will announce' converts to 'will be announced' in passive voice."
+    },
+    {
+      "id": 83,
+      "text": "Convert to direct speech: The officer asked the clerk if he had dispatched the files.",
+      "options": {
+        "A": "The officer said to the clerk, 'Did you dispatch the files?'",
+        "B": "The officer said, 'Have you dispatched the files?'",
+        "C": "The officer said to the clerk, 'Have you dispatched the files?'",
+        "D": "The officer told the clerk, 'You dispatched the files?'"
+      },
+      "correct": "C",
+      "explanation": "Past perfect 'had dispatched' changes back to present perfect 'Have you dispatched'."
+    },
+    {
+      "id": 84,
+      "text": "Select the SYNONYM of 'AMBIGUOUS':",
+      "options": {
+        "A": "Clear",
+        "B": "Equivocal / Vague",
+        "C": "Certain",
+        "D": "Definite"
+      },
+      "correct": "B",
+      "explanation": "'Ambiguous' means open to more than one interpretation; unclear or equivocal."
+    },
+    {
+      "id": 85,
+      "text": "Select the ANTONYM of 'HOSTILE':",
+      "options": {
+        "A": "Aggressive",
+        "B": "Friendly / Amicable",
+        "C": "Enimical",
+        "D": "Bitter"
+      },
+      "correct": "B",
+      "explanation": "'Hostile' means showing opposition or ill will; its antonym is 'Friendly'."
+    },
+    {
+      "id": 86,
+      "text": "Fill in the blank: 'The manager insisted _______ receiving a written explanation.'",
+      "options": {
+        "A": "in",
+        "B": "at",
+        "C": "on",
+        "D": "for"
+      },
+      "correct": "C",
+      "explanation": "The verb 'insist' takes the preposition 'on' followed by a gerund ('insisted on receiving')."
+    },
+    {
+      "id": 87,
+      "text": "Select the idiom meaning: 'A blessing in disguise'",
+      "options": {
+        "A": "A visible reward",
+        "B": "An apparent misfortune that yields unexpected good results",
+        "C": "A magical spell",
+        "D": "A religious ritual"
+      },
+      "correct": "B",
+      "explanation": "'A blessing in disguise' is a good outcome resulting from an initial misfortune."
+    },
+    {
+      "id": 88,
+      "text": "One-word substitution: 'The life history of a person written by himself'",
+      "options": {
+        "A": "Biography",
+        "B": "Autobiography",
+        "C": "Memoir",
+        "D": "Chronicle"
+      },
+      "correct": "B",
+      "explanation": "'Autobiography' is self-written biography."
+    },
+    {
+      "id": 89,
+      "text": "Choose the correct spelling:",
+      "options": {
+        "A": "Maintenance",
+        "B": "Maintainance",
+        "C": "Maintanence",
+        "D": "Maintenence"
+      },
+      "correct": "A",
+      "explanation": "The correct spelling is 'Maintenance' (not maintainance)."
+    },
+    {
+      "id": 90,
+      "text": "Fill in the blank: 'He is junior _______ me in the department.'",
+      "options": {
+        "A": "than",
+        "B": "to",
+        "C": "from",
+        "D": "of"
+      },
+      "correct": "B",
+      "explanation": "Adjectives ending in '-ior' (junior, senior, superior, inferior) take 'to', not 'than'."
+    },
+    {
+      "id": 91,
+      "text": "Select the SYNONYM of 'PRUDENT':",
+      "options": {
+        "A": "Reckless",
+        "B": "Wise / Cautious",
+        "C": "Foolish",
+        "D": "Rash"
+      },
+      "correct": "B",
+      "explanation": "'Prudent' means acting with or showing care and thought for the future."
+    },
+    {
+      "id": 92,
+      "text": "Select the ANTONYM of 'TRANSIENT':",
+      "options": {
+        "A": "Temporary",
+        "B": "Permanent / Enduring",
+        "C": "Fleeting",
+        "D": "Brief"
+      },
+      "correct": "B",
+      "explanation": "'Transient' means lasting only for a short time; its opposite is 'Permanent'."
+    },
+    {
+      "id": 93,
+      "text": "Identify the grammatical error: 'The furniture in the auditorium (A) / are of high quality (B) / and very durable (C) / No error (D)'",
+      "options": {
+        "A": "The furniture in the auditorium",
+        "B": "are of high quality",
+        "C": "and very durable",
+        "D": "No error"
+      },
+      "correct": "B",
+      "explanation": "'Furniture' is an uncountable noun and always takes a singular verb ('is of high quality')."
+    },
+    {
+      "id": 94,
+      "text": "Select the meaning of 'At the eleventh hour':",
+      "options": {
+        "A": "At 11 o'clock",
+        "B": "At the very last moment",
+        "C": "Early in the morning",
+        "D": "Too late"
+      },
+      "correct": "B",
+      "explanation": "'At the eleventh hour' means at the latest possible time before a deadline."
+    },
+    {
+      "id": 95,
+      "text": "One-word substitution: 'A doctor who specializes in skin diseases'",
+      "options": {
+        "A": "Cardiologist",
+        "B": "Dermatologist",
+        "C": "Neurologist",
+        "D": "Pediatrician"
+      },
+      "correct": "B",
+      "explanation": "A 'Dermatologist' specializes in treating skin conditions."
+    },
+    {
+      "id": 96,
+      "text": "Fill in the blank: 'No sooner did the bell ring _______ the students ran out.'",
+      "options": {
+        "A": "when",
+        "B": "than",
+        "C": "then",
+        "D": "before"
+      },
+      "correct": "B",
+      "explanation": "'No sooner did... than' is the mandatory correlative pair."
+    },
+    {
+      "id": 97,
+      "text": "Select the SYNONYM of 'ZEALOUS':",
+      "options": {
+        "A": "Apathetic",
+        "B": "Enthusiastic / Fervent",
+        "C": "Indifferent",
+        "D": "Dull"
+      },
+      "correct": "B",
+      "explanation": "'Zealous' means having or showing passion and zeal."
+    },
+    {
+      "id": 98,
+      "text": "Choose the correct spelling:",
+      "options": {
+        "A": "Millennium",
+        "B": "Millenium",
+        "C": "Milennium",
+        "D": "Millenniam"
+      },
+      "correct": "A",
+      "explanation": "The correct spelling is 'Millennium' (double 'l' and double 'n')."
+    },
+    {
+      "id": 99,
+      "text": "Select the ANTONYM of 'DILIGENT':",
+      "options": {
+        "A": "Industrious",
+        "B": "Lazy / Indolent",
+        "C": "Hardworking",
+        "D": "Assiduous"
+      },
+      "correct": "B",
+      "explanation": "'Diligent' means hardworking; its opposite is 'Lazy' or 'Indolent'."
+    },
+    {
+      "id": 100,
+      "text": "Select the correctly punctuated and formatted sentence:",
+      "options": {
+        "A": "She said, 'where are you going?'",
+        "B": "She said, 'Where are you going?'",
+        "C": "She said 'Where are you going?'",
+        "D": "She said, Where are you going?"
+      },
+      "correct": "B",
+      "explanation": "Direct speech begins with a capital letter inside quotation marks preceded by a comma."
+    }
+  ]
+};

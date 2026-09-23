@@ -19,10 +19,9 @@ export default function Navbar() {
   const router = useRouter()
   const { lang, setLang, t } = useLanguage()
   const [menuOpen,      setMenuOpen]      = useState(false)
-  const [searchOpen,    setSearchOpen]    = useState(false)
-  const [searchQuery,   setSearchQuery]   = useState('')
   const [navUser,       setNavUser]       = useState(null)   // { first_name, last_name, avatar_url }
-  const [dropdownOpen,  setDropdownOpen]  = useState(false)
+  const [dropdownOpen,      setDropdownOpen]      = useState(false)
+  const [moreDropdownOpen,  setMoreDropdownOpen]  = useState(false)
 
   // ── Read auth state from localStorage (client-side only) ──
   useEffect(() => {
@@ -45,20 +44,56 @@ export default function Navbar() {
     return () => window.removeEventListener('storage', syncUser)
   }, [])
 
-  const NAV_ITEMS = [
-    { href: '/', label: t('nav.home', 'Home'), icon: 'home' },
-    { href: '/jobs', label: t('nav.jobs', 'Jobs'), icon: 'work' },
-    { href: '/results', label: t('nav.results', 'Results'), icon: 'emoji_events' },
-    { href: '/admit-cards', label: t('nav.admit_cards', 'Admit Card'), icon: 'badge' },
-    { href: '/alerts', label: t('nav.alerts', 'Alerts'), icon: 'notifications' },
-    { href: '/pricing', label: t('nav.alert_plans', 'Alert Plans'), icon: 'payments' },
+  const PRIMARY_NAV_ITEMS = [
+    { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
+    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'New' },
+    { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free' },
+    { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQs'),        icon: 'history_edu',           badge: 'Hot' },
+    { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min' },
+    { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus'),          icon: 'menu_book' },
+  ]
+
+  const MORE_NAV_ITEMS = [
+    { href: '/score-calculator',   label: t('nav.score_calc',      'Key Score Calculator'), icon: 'score',                 badge: 'Viral', desc: 'TCS iON, MPSC & Police Response Sheet Calculator' },
+    { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'),    icon: 'calculate',             badge: '150M',  desc: 'Physical + Written composite merit cutoff calculator' },
+    { href: '/cutoffs',            label: t('nav.cutoffs',         '10-Yr Cutoff Explorer'),icon: 'leaderboard',                           desc: 'Category cutoffs for MPSC, Police, Talathi & SSC' },
+    { href: '/salary-calculator',  label: t('nav.salary',          'Salary Calculator'),    icon: 'payments',                              desc: '7th Pay Commission in-hand salary matrix' },
+    { href: '/blog',               label: t('nav.blog',            'Exam Blog & Guides'),   icon: 'menu_book',             badge: 'Guides',desc: 'In-depth exam blueprints, 90-day plans & PYQ trends' },
+    { href: '/youtube',            label: t('nav.youtube',         'YouTube Classes'),      icon: 'play_circle',                           desc: 'Free lectures, strategy & exam updates' },
+    { href: '/ai-tools',           label: t('nav.ai_tools',        'AI Study Tools'),       icon: 'smart_toy',                             desc: '54+ curated AI study aids' },
+    { href: '/ai-academy',         label: t('nav.ai_academy',      'AI Academy'),           icon: 'school',                badge: 'New',   desc: 'Master AI skills, prompts & workflows' },
+    { href: '/mock-interview',     label: t('nav.mock_interview',  'Mock Interview AI'),    icon: 'mic',                   badge: 'AI',    desc: 'Real-time AI voice/chat board mock interview' },
+    { href: '/ai-news',            label: t('nav.ai_news',         'AI News Feed'),         icon: 'feed',                  badge: 'Live',  desc: 'Real-time AI research & tech updates' },
+    { href: '/alerts',             label: t('nav.alerts',          'Job Alerts'),           icon: 'notifications',                         desc: 'Instant exam alerts on WhatsApp & SMS' },
+  ]
+
+  const MOBILE_NAV_ITEMS = [
+    { href: '/',                   label: t('nav.home',            'Home'),              icon: 'home' },
+    { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
+    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'New' },
+    { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free' },
+    { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQ Bank'),    icon: 'history_edu',           badge: 'Hot' },
+    { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min' },
+    { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus'),          icon: 'menu_book' },
+    { href: '/score-calculator',   label: t('nav.score_calc',      'Score Calculator'),  icon: 'score',                 badge: 'Viral' },
+    { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'), icon: 'calculate',             badge: '150M' },
+    { href: '/cutoffs',            label: t('nav.cutoffs',         '10-Yr Cutoffs'),     icon: 'leaderboard' },
+    { href: '/salary-calculator',  label: t('nav.salary',          'Salary Calc'),       icon: 'payments' },
+    { href: '/blog',               label: t('nav.blog',            'Exam Blog'),         icon: 'menu_book',             badge: 'Guides' },
+    { href: '/youtube',            label: t('nav.youtube',         'YouTube'),           icon: 'play_circle' },
+    { href: '/ai-tools',           label: t('nav.ai_tools',        'AI Tools'),          icon: 'smart_toy' },
+    { href: '/ai-academy',         label: t('nav.ai_academy',      'AI Academy'),        icon: 'school',                badge: 'New' },
+    { href: '/mock-interview',     label: t('nav.mock_interview',  'Mock Interview'),    icon: 'mic',                   badge: 'AI' },
+    { href: '/ai-news',            label: t('nav.ai_news',         'AI News'),           icon: 'feed',                  badge: 'Live' },
+    { href: '/alerts',             label: t('nav.alerts',          'Job Alerts'),        icon: 'notifications' },
+    { href: '/pricing',            label: t('nav.alert_plans',     'Alert Plans'),       icon: 'local_offer' },
   ]
 
   // Close menus on route change
   useEffect(() => {
     setMenuOpen(false)
-    setSearchOpen(false)
     setDropdownOpen(false)
+    setMoreDropdownOpen(false)
   }, [pathname])
 
   // ── Sign out: call API + clear localStorage ──
@@ -95,13 +130,7 @@ export default function Navbar() {
     setLang(newLang)
   }
 
-  const handleSearchSubmit = (e) => {
-    e.preventDefault()
-    if (searchQuery.trim()) {
-      router.push(`/jobs?q=${encodeURIComponent(searchQuery.trim())}`)
-      setSearchOpen(false)
-    }
-  }
+  // Search is available on individual listing pages — no global navbar search needed
 
   return (
     <header className="navbar" style={{ position: 'relative' }}>
@@ -132,9 +161,9 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* ---- Center: Desktop & Laptop Navigation (Hidden on mobile <768px) ---- */}
+        {/* ---- Center: Desktop & Laptop Navigation ---- */}
         <nav className="navbar-nav" aria-label="Main navigation">
-          {NAV_ITEMS.map(({ href, label }) => {
+          {PRIMARY_NAV_ITEMS.map(({ href, label, badge }) => {
             const isActive = href === '/'
               ? pathname === '/'
               : pathname.startsWith(href)
@@ -144,37 +173,119 @@ export default function Navbar() {
                 href={href}
                 className={`nav-link${isActive ? ' active' : ''}`}
               >
-                {label}
+                <span>{label}</span>
+                {badge && (
+                  <span style={{
+                    fontSize: 9,
+                    fontWeight: 800,
+                    lineHeight: 1,
+                    padding: '2px 5px',
+                    borderRadius: 999,
+                    background: badge === 'New' ? '#16a34a' : 'var(--primary)',
+                    color: '#fff',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.04em',
+                    flexShrink: 0,
+                  }}>
+                    {badge}
+                  </span>
+                )}
               </Link>
             )
           })}
+
+          {/* More Prep Tools Dropdown */}
+          <div
+            style={{ position: 'relative' }}
+            onMouseEnter={() => setMoreDropdownOpen(true)}
+            onMouseLeave={() => setMoreDropdownOpen(false)}
+          >
+            <button
+              type="button"
+              onClick={() => setMoreDropdownOpen(o => !o)}
+              className={`nav-link${MORE_NAV_ITEMS.some(m => pathname.startsWith(m.href)) ? ' active' : ''}`}
+              style={{
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                fontFamily: 'inherit',
+                fontSize: 15,
+                fontWeight: 500,
+              }}
+            >
+              <span>More</span>
+              <span className="material-symbols-outlined" style={{ fontSize: 18, transition: 'transform 0.2s', transform: moreDropdownOpen ? 'rotate(180deg)' : 'none' }}>
+                expand_more
+              </span>
+            </button>
+
+            {moreDropdownOpen && (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 'calc(100% + 4px)',
+                  right: 0,
+                  width: 280,
+                  background: '#ffffff',
+                  border: '1px solid var(--outline-variant)',
+                  borderRadius: 12,
+                  boxShadow: '0 12px 32px rgba(0,0,0,0.12)',
+                  padding: '8px',
+                  zIndex: 99,
+                }}
+              >
+                {MORE_NAV_ITEMS.map(item => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: 12,
+                      padding: '10px 12px',
+                      borderRadius: 8,
+                      textDecoration: 'none',
+                      color: 'var(--on-surface)',
+                      transition: 'background 0.15s',
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.background = '#f8fafc'}
+                    onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                  >
+                    <span className="material-symbols-outlined" style={{ fontSize: 20, color: 'var(--primary)', marginTop: 2 }}>
+                      {item.icon}
+                    </span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontWeight: 600, fontSize: 13 }}>
+                        <span>{item.label}</span>
+                        {item.badge && (
+                          <span style={{
+                            fontSize: 9,
+                            fontWeight: 800,
+                            padding: '1px 5px',
+                            borderRadius: 999,
+                            background: 'var(--primary)',
+                            color: '#fff',
+                          }}>
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ fontSize: 11, color: 'var(--secondary)', marginTop: 2, lineHeight: 1.3 }}>
+                        {item.desc}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </nav>
 
-        {/* ---- Right: Search + Language Toggle + Auth ---- */}
+        {/* ---- Right: Language Toggle + Auth ---- */}
         <div className="navbar-actions">
-          {/* Desktop & Tablet Search */}
-          <form onSubmit={handleSearchSubmit} className="navbar-search">
-            <span className="material-symbols-outlined search-icon">search</span>
-            <input
-              type="text"
-              placeholder={t('nav.search_placeholder', 'Search jobs, exams...')}
-              aria-label="Search jobs"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </form>
-
-          {/* Mobile search toggle button (Hidden on tablet/laptop/desktop) */}
-          <button
-            className="navbar-mobile-search-btn"
-            onClick={() => setSearchOpen(!searchOpen)}
-            aria-label="Search"
-            id="navbar-mobile-search-btn"
-          >
-            <span className="material-symbols-outlined" style={{ fontSize: 20 }}>
-              {searchOpen ? 'close' : 'search'}
-            </span>
-          </button>
 
           {/* Language toggle */}
           <div className="lang-toggle" role="group" aria-label="Language selector">
@@ -306,64 +417,12 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ---- Mobile Search Expandable Bar (<768px) ---- */}
-      {searchOpen && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '100%',
-            left: 0,
-            right: 0,
-            background: 'var(--surface-container-lowest)',
-            borderBottom: '1px solid var(--outline-variant)',
-            padding: '10px 16px',
-            boxShadow: '0 4px 12px rgba(28,25,23,0.08)',
-            zIndex: 48,
-          }}
-        >
-          <form onSubmit={handleSearchSubmit} style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-            <div style={{ position: 'relative', flex: 1 }}>
-              <span
-                className="material-symbols-outlined"
-                style={{
-                  position: 'absolute',
-                  left: 10,
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  fontSize: 18,
-                  color: 'var(--secondary)',
-                }}
-              >
-                search
-              </span>
-              <input
-                type="text"
-                placeholder="Search jobs, exams, boards..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                autoFocus
-                style={{
-                  width: '100%',
-                  padding: '9px 12px 9px 36px',
-                  borderRadius: 'var(--radius-md)',
-                  border: '1px solid var(--outline-variant)',
-                  background: 'var(--surface-container-low)',
-                  color: 'var(--on-surface)',
-                  fontSize: 14,
-                  outline: 'none',
-                }}
-              />
-            </div>
-            <button type="submit" className="btn-primary" style={{ padding: '9px 16px', fontSize: 13, flexShrink: 0 }}>
-              Search
-            </button>
-          </form>
-        </div>
-      )}
+      {/* Search moved to individual listing pages — no global search bar */}
 
       {/* ---- Mobile Drawer Menu (<768px only) ---- */}
       {menuOpen && (
         <div
+          id="navbar-mobile-menu"
           style={{
             position: 'absolute',
             top: '100%',
@@ -371,12 +430,12 @@ export default function Navbar() {
             right: 0,
             background: 'var(--surface-container-lowest)',
             borderBottom: '1px solid var(--outline-variant)',
-            padding: '8px 0',
+            padding: '12px 0',
             boxShadow: '0 8px 24px rgba(28,25,23,0.12)',
             zIndex: 49,
           }}
         >
-          {NAV_ITEMS.map(({ href, label, icon }) => {
+          {MOBILE_NAV_ITEMS.map(({ href, label, icon, badge }) => {
             const isActive = href === '/'
               ? pathname === '/'
               : pathname.startsWith(href)
@@ -403,7 +462,20 @@ export default function Navbar() {
                 >
                   {icon}
                 </span>
-                {label}
+                <span style={{ flex: 1 }}>{label}</span>
+                {badge && (
+                  <span style={{
+                    fontSize: 10,
+                    fontWeight: 800,
+                    padding: '2px 6px',
+                    borderRadius: 999,
+                    background: badge === 'New' ? '#22c55e' : 'var(--primary)',
+                    color: '#fff',
+                    textTransform: 'uppercase',
+                  }}>
+                    {badge}
+                  </span>
+                )}
               </Link>
             )
           })}

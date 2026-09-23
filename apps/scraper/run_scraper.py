@@ -117,6 +117,7 @@ SPIDERS = [
     "upsssc",          # Uttar Pradesh SSC
     "uppbpb",          # UP Police Recruitment Board
     "jkssb",           # J&K Services Selection Board (new)
+    "apsc",            # Assam PSC — North-East India
 
     # --- High Courts (13 state high courts) ---
     "high_courts",
@@ -164,6 +165,7 @@ SPIDERS = [
 
     # --- Maharashtra Municipal Corporations (beyond BMC/PMC/TMC) ---
     "maha_municipalities",    # Nashik, Nagpur, Aurangabad, Solapur, Kolhapur, NMMC, PCMC, KDMC...
+    "mahaswayam",             # MahaSwayam Sewayojan — district/taluka level MH govt jobs
 
     # --- State Education & Teacher Recruitment ---
     "state_education",        # KVS, NVS, DSSSB, REET, HTET, TN TRB, Maha Pariksha Parishad, UP BEB...

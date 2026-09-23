@@ -19,29 +19,46 @@ function formatDate(d) {
 }
 
 async function getAdmitCardData(slugParam) {
-  let id = null
-  const idMatch = slugParam.match(/-(\d+)$/) || slugParam.match(/^(\d+)$/)
-  if (idMatch) id = parseInt(idMatch[1], 10)
+  // 1. Exact match on slug column
+  let en = await queryOne(
+    `SELECT en.*, o.name AS org_name, o.name_mr AS org_name_mr, o.acronym AS org_acronym,
+            o.website AS org_website, o.address AS org_address, o.phone AS org_phone
+     FROM exam_notifications en
+     JOIN organizations o ON o.id = en.organization_id
+     WHERE en.slug = $1`,
+    [slugParam]
+  )
 
-  let en = null
-  if (id) {
-    en = await queryOne(
-      `SELECT en.*, o.name AS org_name, o.name_mr AS org_name_mr, o.acronym AS org_acronym,
-              o.website AS org_website, o.address AS org_address, o.phone AS org_phone
-       FROM exam_notifications en
-       JOIN organizations o ON o.id = en.organization_id
-       WHERE en.id = $1`,
-      [id]
-    )
-  }
+  // 2. Numeric ID match
   if (!en) {
+    let id = null
+    const idMatch = slugParam.match(/-(\d+)$/) || slugParam.match(/^(\d+)$/)
+    if (idMatch) id = parseInt(idMatch[1], 10)
+    if (id) {
+      en = await queryOne(
+        `SELECT en.*, o.name AS org_name, o.name_mr AS org_name_mr, o.acronym AS org_acronym,
+                o.website AS org_website, o.address AS org_address, o.phone AS org_phone
+         FROM exam_notifications en
+         JOIN organizations o ON o.id = en.organization_id
+         WHERE en.id = $1`,
+        [id]
+      )
+    }
+  }
+
+  // 3. Fuzzy fallback
+  if (!en) {
+    const cleanWord = slugParam.replace(/[-_0-9]/g, ' ').trim().split(/\s+/)[0]
     en = await queryOne(
       `SELECT en.*, o.name AS org_name, o.name_mr AS org_name_mr, o.acronym AS org_acronym,
               o.website AS org_website, o.address AS org_address, o.phone AS org_phone
        FROM exam_notifications en
        JOIN organizations o ON o.id = en.organization_id
-       WHERE en.slug = $1`,
-      [slugParam]
+       WHERE en.status = 'published'
+         AND (en.slug ILIKE $1 OR en.title ILIKE $2 OR o.acronym ILIKE $3)
+       ORDER BY en.published_at DESC NULLS LAST
+       LIMIT 1`,
+      [`%${slugParam}%`, `%${cleanWord || slugParam}%`, `%${cleanWord || slugParam}%`]
     )
   }
   if (!en) return null

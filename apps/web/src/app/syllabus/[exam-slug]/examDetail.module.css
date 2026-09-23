@@ -1,0 +1,729 @@
+/* ============================================================
+   app/syllabus/[exam-slug]/examDetail.module.css
+   ExamUdaan.in — Per-exam syllabus detail page styles
+   ============================================================ */
+
+.detailPage { background: var(--surface-container-lowest); }
+
+/* ── Hero & Integrated Breadcrumb ───────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e293b 100%);
+  padding: 24px 0 52px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: var(--exam-color, var(--primary));
+  opacity: .12;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* ── Integrated Breadcrumb ─────────────────────────────────── */
+.heroBreadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.heroBreadcrumb a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.heroBreadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.breadcrumbSep {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.breadcrumbCurrent {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.examLevelBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+  background: var(--exam-color, var(--primary));
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(24px, 3.5vw, 38px);
+  font-weight: 800;
+  margin: 0 0 10px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.conductingBody { color: rgba(255,255,255,.7); font-size: 14px; margin: 0 0 24px; }
+.conductingBody strong { color: #ffffff; }
+
+/* ── Key Stats ─────────────────────────────────────────────── */
+.keyStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.keyStat {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  padding: 12px 16px;
+  backdrop-filter: blur(6px);
+}
+
+.keyStat .material-symbols-outlined {
+  font-size: 22px;
+  color: var(--exam-color, #f97316);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.keyStat div { display: flex; flex-direction: column; gap: 2px; }
+.keyStat strong { font-size: 11px; color: rgba(255,255,255,.5); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+.keyStat span { font-size: 13px; color: #fff; line-height: 1.4; }
+
+/* ── Posts ─────────────────────────────────────────────────── */
+.postsList { margin-bottom: 26px; }
+.postsList > strong { font-size: 12px; color: rgba(255,255,255,.6); display: block; margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+
+.postsRow { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.postChip {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.9);
+}
+
+/* ── Hero Buttons ──────────────────────────────────────────── */
+.heroButtons { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+
+.heroOfficialBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--primary, #ea580c);
+  color: #ffffff !important;
+  border: none;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+  transition: all 0.2s ease;
+}
+
+.heroOfficialBtn:hover {
+  background: #c2410c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.5);
+  color: #ffffff !important;
+}
+
+.heroOfficialBtn .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.heroMockBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.heroMockBtn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.heroMockBtn .material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* ── Stages Card (Selection Process) ───────────────────────── */
+.stagesCard {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  padding: 22px 24px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+}
+
+.stagesHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.stagesHeader .material-symbols-outlined {
+  font-size: 22px;
+  color: var(--exam-color, var(--primary));
+}
+
+.stagesHeader h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.stagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.stageItem {
+  display: flex;
+  gap: 14px;
+}
+
+.stageIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.stageBadge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--exam-color, var(--primary));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.stageConnector {
+  width: 2px;
+  flex: 1;
+  min-height: 28px;
+  background: rgba(255,255,255,0.22);
+  margin: 4px 0;
+}
+
+.stageContent {
+  padding-bottom: 20px;
+  flex: 1;
+}
+
+.stageItem:last-child .stageContent {
+  padding-bottom: 0;
+}
+
+.stageStageLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 3px;
+}
+
+.stageTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Section Common ────────────────────────────────────────── */
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 0 0 28px;
+}
+
+.sectionTitle .material-symbols-outlined { font-size: 28px; color: var(--primary); }
+
+/* ── Syllabus Section ──────────────────────────────────────── */
+.syllabusSection { padding: 56px 0; }
+
+.stageGroup { margin-bottom: 40px; }
+
+.stageLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--outline-variant);
+}
+
+.papersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ── Paper Card ─────────────────────────────────────────────── */
+.paperCard {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--outline-variant);
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,.05);
+}
+
+.paperHeader {
+  padding: 16px 20px;
+  border-left: 4px solid var(--primary);
+  background: #fafafa;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.paperName {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--on-surface);
+  font-family: 'Outfit', sans-serif;
+}
+
+.paperMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--secondary);
+}
+
+.paperMeta strong { color: var(--on-surface); }
+
+.paperType {
+  padding: 2px 10px;
+  background: #e0f2fe;
+  color: #0369a1;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ── Topics ─────────────────────────────────────────────────── */
+.topicList { padding: 8px 0; }
+
+.topicItem {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.topicItem:last-child { border-bottom: none; }
+
+.topicName {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--on-surface);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background .15s;
+}
+
+.topicName:hover { background: #f8fafc; }
+
+.topicName .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--secondary);
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+
+details[open] .topicName .material-symbols-outlined { transform: rotate(90deg); }
+
+.subtopicList {
+  list-style: disc;
+  margin: 0 0 12px;
+  padding-left: 52px;
+}
+
+.subtopicList li {
+  font-size: 13px;
+  color: var(--secondary);
+  padding: 3px 0;
+  line-height: 1.5;
+}
+
+/* ── PYQ Section ───────────────────────────────────────────── */
+.pyqSection { padding: 56px 0; background: #fff; }
+
+.pyqNote {
+  font-size: 13px;
+  color: var(--secondary);
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+}
+
+.pyqHeaderRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.pyqHeaderRow .sectionTitle {
+  margin: 0 0 6px;
+}
+
+.pyqSubtitle {
+  font-size: 14px;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.pyqCountBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: #f1f5f9;
+  border: 1px solid var(--outline-variant);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.pyqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pyqCardItem {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--outline-variant);
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.03);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.pyqCardItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  border-color: #cbd5e1;
+}
+
+.pyqYearCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.pyqYearText {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1;
+}
+
+.pyqYearBadge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-top: 4px;
+  opacity: .85;
+}
+
+.pyqInfoCol {
+  flex: 1;
+  min-width: 220px;
+}
+
+.pyqPaperTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0 0 4px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.pyqExamMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.pyqExamMeta .material-symbols-outlined {
+  font-size: 16px;
+  color: #64748b;
+}
+
+.pyqActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pyqPaperBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #f8fafc;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .15s, color .15s, border-color .15s;
+}
+
+.pyqPaperBtn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.pyqPaperBtn .material-symbols-outlined:first-child {
+  font-size: 18px;
+  color: #3b82f6;
+}
+
+.pyqPaperBtn .material-symbols-outlined:last-child {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.pyqAnswerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+}
+
+.pyqAnswerBtn:hover {
+  background: #d1fae5;
+  border-color: #6ee7b7;
+}
+
+.pyqAnswerBtn .material-symbols-outlined:first-child {
+  font-size: 18px;
+  color: #10b981;
+}
+
+.pyqAnswerBtn .material-symbols-outlined:last-child {
+  font-size: 14px;
+  color: #059669;
+}
+
+@media (max-width: 768px) {
+  .pyqCardItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .pyqYearCol {
+    flex-direction: row;
+    gap: 8px;
+    min-width: auto;
+    padding: 4px 10px;
+  }
+  .pyqActions {
+    width: 100%;
+  }
+  .pyqPaperBtn, .pyqAnswerBtn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.pyqItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: background .15s, border-color .15s;
+}
+
+.pyqItem:hover { background: #eff6ff; border-color: #bfdbfe; }
+.pyqYear { font-size: 28px; font-weight: 800; font-family: 'Outfit', sans-serif; min-width: 64px; }
+.pyqInfo { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.pyqInfo strong { font-size: 15px; color: var(--on-surface); }
+.pyqInfo span { font-size: 13px; color: var(--secondary); }
+.pyqArrow { font-size: 20px; color: var(--secondary); }
+
+/* ── Books Section ─────────────────────────────────────────── */
+.booksSection { padding: 56px 0; }
+
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.bookCard {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.bookNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.bookCard div { display: flex; flex-direction: column; gap: 4px; }
+.bookCard strong { font-size: 14px; color: var(--on-surface); }
+.bookCard span { font-size: 12px; color: var(--secondary); }
+
+/* ── Related Section ───────────────────────────────────────── */
+.relatedSection { padding: 40px 0 56px; background: #fff; }
+
+.relatedGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 600px;
+}
+
+.relatedCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: background .15s;
+}
+
+.relatedCard:hover { background: #eff6ff; }
+.relatedCard .material-symbols-outlined { font-size: 28px; flex-shrink: 0; }
+.relatedCard div { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.relatedCard strong { font-size: 15px; color: var(--on-surface); }
+.relatedCard span { font-size: 13px; color: var(--secondary); }
+.relatedArrow { font-size: 20px; color: var(--secondary); }
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .heroInner { grid-template-columns: 1fr; }
+  .heroRight { display: none; }
+  .keyStats { grid-template-columns: 1fr; }
+  .papersGrid { grid-template-columns: 1fr; }
+  .booksGrid { grid-template-columns: 1fr; }
+}

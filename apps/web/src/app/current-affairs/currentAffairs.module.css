@@ -1,0 +1,360 @@
+/* ============================================================
+   app/current-affairs/currentAffairs.module.css
+   ExamUdaan.in — Current Affairs page styles
+   ============================================================ */
+
+.page { background: var(--surface-container-lowest); min-height: 100vh; }
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #0c1445 0%, #1a237e 50%, #283593 100%);
+  padding: 56px 0 48px;
+  color: #fff;
+  text-align: center;
+}
+
+.heroContent { max-width: 680px; margin: 0 auto; }
+
+.heroLabel {
+  display: inline-block;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 100px;
+  padding: 4px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 800;
+  margin: 0 0 14px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 16px;
+  color: rgba(255,255,255,.82);
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+.hero em { font-style: italic; color: #fde68a; }
+
+.heroStats { display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; }
+
+.stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.stat strong { font-size: 30px; font-weight: 800; font-family: 'Outfit', sans-serif; color: #93c5fd; }
+.stat span { font-size: 13px; color: rgba(255,255,255,.65); }
+
+/* ── Filter Bar ─────────────────────────────────────────────── */
+.filterBar {
+  background: #fff;
+  border-bottom: 1px solid var(--outline-variant);
+  padding: 24px 0 20px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 1px 3px rgba(0,0,0,.03);
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 10px;
+  padding: 8px 14px;
+  margin-bottom: 14px;
+  max-width: 480px;
+}
+
+.searchBox .material-symbols-outlined { font-size: 20px; color: var(--secondary); flex-shrink: 0; }
+
+.searchInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--on-surface);
+  outline: none;
+}
+
+.clearSearch {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--secondary);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pills { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--secondary);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all .15s;
+  white-space: nowrap;
+}
+
+.pill .material-symbols-outlined { font-size: 15px; }
+
+.pill:hover { border-color: var(--primary); color: var(--primary); }
+
+.pillActive { font-weight: 700; }
+
+.pillSmall { font-size: 12px; padding: 4px 12px; }
+
+.pillExamActive {
+  background: #fff7ed;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.resultCount {
+  font-size: 13px;
+  color: var(--secondary);
+  margin: 4px 0 0;
+}
+
+/* ── Cards ──────────────────────────────────────────────────── */
+.cardsSection { padding: 40px 0 56px; }
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* ── CA Card ────────────────────────────────────────────────── */
+.caCard {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--outline-variant);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.caCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.1);
+}
+
+.cardBar { height: 4px; }
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 8px;
+}
+
+.cardCat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+.cardCat .material-symbols-outlined { font-size: 14px; }
+
+.cardDate { font-size: 12px; color: var(--secondary); }
+
+.cardTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0 0 10px;
+  padding: 0 18px;
+  line-height: 1.35;
+}
+
+.cardSummary {
+  font-size: 13px;
+  color: var(--secondary);
+  line-height: 1.65;
+  margin: 0 0 12px;
+  padding: 0 18px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Why Box ────────────────────────────────────────────────── */
+.whyBox {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #fffbeb;
+  border-top: 1px solid #fef3c7;
+  border-bottom: 1px solid #fef3c7;
+  padding: 12px 18px;
+}
+
+.whyIcon {
+  font-size: 16px;
+  line-height: 1.2;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.whyBox p { font-size: 12px; color: #78350f; line-height: 1.6; margin: 0; }
+.whyBox p strong { color: #92400e; }
+
+/* ── Card Footer ────────────────────────────────────────────── */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.examTags { display: flex; gap: 5px; flex-wrap: wrap; }
+
+.examTag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 100px;
+  background: #f1f5f9;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+.cardActions { display: flex; gap: 8px; align-items: center; }
+
+.ytBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff !important;
+  background: #dc2626;
+  border-radius: 6px;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: background .15s, transform .15s;
+}
+
+.ytBtn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.liveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.sourceBtn {
+  font-size: 12px;
+  color: var(--secondary);
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+
+.sourceBtn:hover { background: #f1f5f9; color: var(--primary); }
+
+/* ── Empty State ────────────────────────────────────────────── */
+.empty {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--secondary);
+}
+
+.empty .material-symbols-outlined { font-size: 56px; color: #d1d5db; margin-bottom: 12px; }
+.empty p { font-size: 16px; }
+
+/* ── CTA Row ────────────────────────────────────────────────── */
+.ctaRow { padding: 0 0 56px; }
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ctaCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+  padding: 20px 24px;
+  flex-wrap: wrap;
+}
+
+.ctaCard > span { font-size: 36px; flex-shrink: 0; }
+.ctaCard div { flex: 1; }
+.ctaCard h3 { font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+.ctaCard p { font-size: 13px; color: var(--secondary); margin: 0; }
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .filterBar { position: static; }
+  .cardsGrid { grid-template-columns: 1fr; }
+  .ctaGrid { grid-template-columns: 1fr; }
+  .heroStats { gap: 28px; }
+  .filterGroup { gap: 6px; }
+}

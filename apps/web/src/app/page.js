@@ -6,6 +6,8 @@
 
 import HomePageView from '../components/HomePageView'
 import { query } from '../lib/pgdb'
+import { AI_TOOLS } from '../lib/aiToolsData'
+import { MOCK_TESTS } from '../lib/mockTestsData'
 
 export const metadata = {
   title: 'ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
@@ -150,13 +152,17 @@ async function getSiteStats() {
       total_jobs: Number(totalJobs).toLocaleString('en-IN'),
       total_boards: Number(totalBoards).toLocaleString('en-IN'),
       total_vacancies: Number(totalVacancies).toLocaleString('en-IN'),
+      total_ai_tools: `${(AI_TOOLS || []).length} AI Tools`,
+      total_mock_tests: `${(MOCK_TESTS || []).length} Tests`,
     }
   } catch (err) {
     console.error('[homepage] DB error fetching stats:', err.message)
     return {
-      total_jobs: '1,200+',
+      total_jobs: '700+',
       total_boards: '37+',
-      total_vacancies: '50,000+',
+      total_vacancies: '80,000+',
+      total_ai_tools: `${(AI_TOOLS || []).length} AI Tools`,
+      total_mock_tests: `${(MOCK_TESTS || []).length} Tests`,
     }
   }
 }
@@ -196,9 +202,8 @@ function toJobCardShape(n) {
 }
 
 export default async function HomePage() {
-  const [recruitments, walkIns, quickUpdates, stats] = await Promise.all([
+  const [recruitments, quickUpdates, stats] = await Promise.all([
     getLatestRecruitments(),
-    getWalkIns(),
     getQuickUpdates(),
     getSiteStats(),
   ])
@@ -208,7 +213,6 @@ export default async function HomePage() {
   return (
     <HomePageView
       jobs={jobs}
-      walkIns={walkIns}
       quickUpdates={quickUpdates}
       stats={stats}
     />

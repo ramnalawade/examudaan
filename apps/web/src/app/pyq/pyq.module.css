@@ -1,0 +1,347 @@
+/* ============================================================
+   apps/web/src/app/pyq/pyq.module.css
+   ExamUdaan.in — 15-Year Topic-wise Searchable PYQ Bank Styles
+   ============================================================ */
+
+.page {
+  background: var(--surface-container-lowest);
+  min-height: 100vh;
+  padding-bottom: 64px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+  color: #fff;
+  padding: 48px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 860px;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(165, 180, 252, 0.15);
+  color: #c7d2fe;
+  border: 1px solid rgba(165, 180, 252, 0.3);
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.hero p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e0e7ff;
+  margin: 0 0 24px;
+}
+
+/* ── Search Bar Box ── */
+.searchBoxWrap {
+  background: #fff;
+  border-radius: 14px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.searchIcon {
+  color: #6366f1;
+  font-size: 24px;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #0f172a;
+  padding: 8px 0;
+  font-family: inherit;
+}
+
+.searchClearBtn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Trending Tags ── */
+.trendingRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.trendingLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trendChip {
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.trendChip:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ── Filter Bar ── */
+.filterBar {
+  background: #fff;
+  border-bottom: 1px solid var(--outline-variant);
+  padding: 14px 0;
+  position: sticky;
+  top: 60px;
+  z-index: 10;
+}
+
+.filterScroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  align-items: center;
+  scrollbar-width: thin;
+}
+
+.filterBtn {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .15s;
+}
+
+.filterBtnActive {
+  background: #4338ca !important;
+  color: #fff !important;
+  border-color: #4338ca !important;
+}
+
+/* ── PYQ List ── */
+.pyqSection {
+  padding: 32px 0;
+}
+
+.resultsCount {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pyqGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pyqCard {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--outline-variant);
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  transition: transform .15s, box-shadow .15s;
+}
+
+.pyqCard:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.topicBadge {
+  font-size: 12px;
+  font-weight: 800;
+  color: #4338ca;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.examMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0369a1;
+  background: #f0f9ff;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.questionText {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.optionsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  font-size: 14px;
+  color: #334155;
+  cursor: pointer;
+  transition: all .12s;
+}
+
+.optionItem:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.optionKey {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+}
+
+.optionItemCorrect {
+  background: #ecfdf5 !important;
+  border-color: #34d399 !important;
+  color: #047857 !important;
+  font-weight: 700;
+}
+.optionItemCorrect .optionKey {
+  background: #059669;
+  color: #fff;
+}
+
+.optionItemUserWrong {
+  background: #fef2f2 !important;
+  border-color: #f87171 !important;
+  color: #b91c1c !important;
+}
+.optionItemUserWrong .optionKey {
+  background: #dc2626;
+  color: #fff;
+}
+
+/* ── Card Footer Actions ── */
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.toggleAnswerBtn {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #4338ca;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .15s;
+}
+
+.toggleAnswerBtn:hover {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+.explanationBox {
+  margin-top: 16px;
+  background: #fdf4ff;
+  border: 1px solid #f5d0fe;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.explanationBox .material-symbols-outlined {
+  color: #a21caf;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.explanationBox p {
+  margin: 0;
+  font-size: 13px;
+  color: #701a75;
+  line-height: 1.6;
+}

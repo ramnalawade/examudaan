@@ -1,0 +1,261 @@
+/* ============================================================
+   cutoffs.module.css — 10-Year Historical Cutoff & Trend Explorer
+   ExamUdaan Design System: Warm Ivory (#FFFBF5), Deep Saffron (#EA580C)
+   ============================================================ */
+
+.pageWrapper {
+  min-height: 100vh;
+  background-color: var(--surface-container-lowest, #fffbf5);
+  padding: 32px 16px 80px;
+  font-family: var(--font-inter, system-ui, sans-serif);
+  color: var(--on-surface, #1e293b);
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(234, 88, 12, 0.12);
+  color: var(--primary, #ea580c);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: var(--font-outfit, sans-serif);
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--on-surface, #0f172a);
+  margin: 0 0 10px 0;
+}
+
+.subtitle {
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--secondary, #64748b);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* Filter Card */
+.filterCard {
+  background: #ffffff;
+  border: 1px solid var(--outline-variant, #e2e8f0);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.05);
+}
+
+.filterGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--on-surface, #334155);
+}
+
+.select, .searchInput {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--outline-variant, #cbd5e1);
+  background-color: #ffffff;
+  font-size: 14px;
+  color: var(--on-surface, #1e293b);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.select:focus, .searchInput:focus {
+  border-color: var(--primary, #ea580c);
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+}
+
+/* Category Quick Selector Chips */
+.categoryBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--outline-variant, #f1f5f9);
+  flex-wrap: wrap;
+}
+
+.catChip {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.catChipActive {
+  background: var(--primary, #ea580c);
+  border-color: var(--primary, #ea580c);
+  color: #ffffff;
+}
+
+/* Cutoff Cards Grid */
+.cardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cutoffCard {
+  background: #ffffff;
+  border: 1px solid var(--outline-variant, #e2e8f0);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.cutoffCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.examTitle {
+  font-family: var(--font-outfit, sans-serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.postSubtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.yearTrendPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yearTag {
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.trendTagUp {
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.trendTagStable {
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.trendTagDown {
+  background: #f0fdf4;
+  color: #16a34a;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Cutoff Marks Grid */
+.marksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.markBox {
+  text-align: center;
+  padding: 6px;
+}
+
+.markBoxHighlight {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.markCategory {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.markVal {
+  font-family: var(--font-outfit, sans-serif);
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 8px;
+}
