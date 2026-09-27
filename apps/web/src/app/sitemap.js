@@ -11,12 +11,11 @@
 // 5. All active government exam notifications from PostgreSQL
 // ============================================================
 
-import { query as pgQuery } from '../lib/pgdb'
-import { AI_TOOLS } from '../lib/aiToolsData'
-import { PRECOOKED_VIDEOS, EXAM_FILTERS } from '../lib/youtubeData'
-import { MOCK_TESTS } from '../lib/mockTestsData'
-import { SYLLABUS_EXAMS } from '../lib/syllabusData'
-import { getAllBlogPosts } from '../lib/blogData'
+import { query as pgQuery } from '../lib/pgdb.js'
+import { AI_TOOLS } from '../lib/aiToolsData.js'
+import { MOCK_TESTS } from '../lib/mockTestsData.js'
+import { SYLLABUS_EXAMS } from '../lib/syllabusData.js'
+import { getAllBlogPosts } from '../lib/blogData.js'
 
 // Revalidate sitemap from database & RSS every 24 hours (86,400s)
 export const revalidate = 86400
@@ -37,6 +36,7 @@ const STATIC_PAGES = [
   { url: '/daily-quiz',        priority: 0.92, changeFrequency: 'daily'   },
   { url: '/blog',              priority: 0.92, changeFrequency: 'daily'   },
   { url: '/mock-tests',        priority: 0.92, changeFrequency: 'daily'   },
+  { url: '/study-planner',     priority: 0.92, changeFrequency: 'daily'   },
   { url: '/syllabus',          priority: 0.92, changeFrequency: 'weekly'  },
   { url: '/cutoffs',           priority: 0.90, changeFrequency: 'weekly'  },
   { url: '/pyq',               priority: 0.90, changeFrequency: 'weekly'  },
@@ -62,6 +62,10 @@ const STATIC_PAGES = [
   { url: '/disclaimer',        priority: 0.40, changeFrequency: 'monthly' },
   { url: '/login',             priority: 0.30, changeFrequency: 'yearly'  },
   { url: '/register',          priority: 0.30, changeFrequency: 'yearly'  },
+  // Hyperlocal district index
+  { url: '/jobs/district',     priority: 0.90, changeFrequency: 'daily'   },
+  // Official Question Papers & Keys Directory
+  { url: '/question-papers',   priority: 0.92, changeFrequency: 'daily'   },
 ]
 
 // Notification Type to Route Path
@@ -92,39 +96,7 @@ export default async function sitemap() {
     priority:        0.85,
   }))
 
-  // Key AI Tools Landing & Feature Filters
-  const aiFeatureEntries = [
-    { url: `${BASE_URL}/ai-tools?tool=resume`,   lastModified: now, changeFrequency: 'weekly', priority: 0.88 },
-    { url: `${BASE_URL}/ai-tools?filter=mpsc`,   lastModified: now, changeFrequency: 'daily',  priority: 0.85 },
-    { url: `${BASE_URL}/ai-tools?filter=Study`,  lastModified: now, changeFrequency: 'weekly', priority: 0.80 },
-    { url: `${BASE_URL}/ai-tools?filter=Writing`,lastModified: now, changeFrequency: 'weekly', priority: 0.80 },
-  ]
-
-  // 3. YouTube Educational Learning Hubs & Curated Video Endpoints
-  const youtubeExamEntries = (EXAM_FILTERS || [])
-    .filter(ef => ef.id !== 'all')
-    .map(ef => ({
-      url:             `${BASE_URL}/youtube?exam=${ef.id}`,
-      lastModified:    now,
-      changeFrequency: 'daily',
-      priority:        0.82,
-    }))
-
-  const youtubeVideoEntries = (PRECOOKED_VIDEOS || []).map(v => ({
-    url:             `${BASE_URL}/youtube?v=${v.videoId}`,
-    lastModified:    now,
-    changeFrequency: 'weekly',
-    priority:        0.80,
-  }))
-
-  // 4. AI News RSS & Intelligence Feeds
-  const aiNewsFeedEntries = [
-    { url: `${BASE_URL}/ai-news?source=rss`,   lastModified: now, changeFrequency: 'hourly', priority: 0.85 },
-    { url: `${BASE_URL}/ai-news?source=arxiv`, lastModified: now, changeFrequency: 'daily',  priority: 0.85 },
-    { url: `${BASE_URL}/ai-news?source=hn`,    lastModified: now, changeFrequency: 'hourly', priority: 0.82 },
-  ]
-
-  // 5. Authentic CBT Mock Test Detail Pages (/mock-tests/[slug])
+  // 3. Authentic CBT Mock Test Detail Pages (/mock-tests/[slug])
   const mockTestEntries = (MOCK_TESTS || [])
     .filter(t => t && t.slug)
     .map(test => ({
@@ -134,7 +106,7 @@ export default async function sitemap() {
       priority:        0.88,
     }))
 
-  // 6. Comprehensive Exam Syllabus Detail Pages (/syllabus/[exam-slug])
+  // 4. Comprehensive Exam Syllabus Detail Pages (/syllabus/[exam-slug])
   const syllabusEntries = (SYLLABUS_EXAMS || [])
     .filter(s => s && s.slug)
     .map(exam => ({
@@ -144,17 +116,7 @@ export default async function sitemap() {
       priority:        0.88,
     }))
 
-  // 7. Live Current Affairs Category Feeds
-  const currentAffairsCategories = [
-    'National', 'Maharashtra', 'Economy', 'Science & Tech', 'Environment', 'Sports'
-  ].map(cat => ({
-    url:             `${BASE_URL}/current-affairs?cat=${encodeURIComponent(cat)}`,
-    lastModified:    now,
-    changeFrequency: 'daily',
-    priority:        0.85,
-  }))
-
-  // 8. Flagship SEO Blog & Exam Strategy Guides (/blog/[slug])
+  // 5. Flagship SEO Blog & Exam Strategy Guides (/blog/[slug])
   const blogEntries = (getAllBlogPosts() || [])
     .filter(p => p && p.slug)
     .map(post => ({
@@ -164,7 +126,31 @@ export default async function sitemap() {
       priority:        0.88,
     }))
 
-  // 9. Database Exam Notifications (Up to 45,000 published entries)
+  // 5b. Hyperlocal District Job Pages (/jobs/district/[district])
+  const DISTRICT_SLUGS = [
+    'pune', 'mumbai', 'nagpur', 'nashik', 'thane',
+    'aurangabad', 'kolhapur', 'solapur', 'amravati', 'nanded',
+  ]
+  const districtEntries = DISTRICT_SLUGS.map(slug => ({
+    url:             `${BASE_URL}/jobs/district/${slug}`,
+    lastModified:    now,
+    changeFrequency: 'daily',   // Job listings update frequently
+    priority:        0.90,       // High — these target hyperlocal search traffic
+  }))
+
+  // 5c. Subject-wise Question Library Pages (/pyq/[subject]) — 1,100 PYQs
+  const PYQ_SUBJECTS = [
+    'polity', 'history', 'geography', 'economy', 'science',
+    'marathi', 'english', 'reasoning', 'law'
+  ]
+  const pyqSubjectEntries = PYQ_SUBJECTS.map(subj => ({
+    url:             `${BASE_URL}/pyq/${subj}`,
+    lastModified:    now,
+    changeFrequency: 'weekly',
+    priority:        0.90,       // High — high-yield topic-wise question traffic
+  }))
+
+  // 6. Database Exam Notifications (Up to 45,000 published entries)
   let postEntries = []
   try {
     const rows = await pgQuery(`
@@ -192,14 +178,11 @@ export default async function sitemap() {
   return [
     ...staticEntries,
     ...aiToolEntries,
-    ...aiFeatureEntries,
-    ...youtubeExamEntries,
-    ...youtubeVideoEntries,
-    ...aiNewsFeedEntries,
     ...mockTestEntries,
     ...syllabusEntries,
-    ...currentAffairsCategories,
     ...blogEntries,
+    ...districtEntries,
+    ...pyqSubjectEntries,
     ...postEntries,
   ]
 }

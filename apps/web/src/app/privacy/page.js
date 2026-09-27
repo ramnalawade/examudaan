@@ -9,6 +9,9 @@ import { SITE_CONFIG } from '../../lib/constants'
 export const metadata = {
   title: 'Privacy Policy — ExamUdaan.in',
   description: 'Learn how ExamUdaan.in collects, protects, and handles your personal information, mobile numbers, and WhatsApp alert preferences.',
+  alternates: {
+    canonical: 'https://examudaan.in/privacy',
+  },
 }
 
 export default function PrivacyPage() {

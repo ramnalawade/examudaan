@@ -7,6 +7,9 @@ import ListingPage from '../../components/ListingPage'
 export const metadata = {
   title: 'Answer Keys 2026 — Download Official Keys | ExamUdaan',
   description: 'Official and provisional answer keys for government exams. Calculate your score before results are declared.',
+  alternates: {
+    canonical: 'https://examudaan.in/answer-keys',
+  },
 }
 
 export default function AnswerKeysPage() {

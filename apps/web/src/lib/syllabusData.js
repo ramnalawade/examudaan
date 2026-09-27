@@ -75,12 +75,12 @@ export const SYLLABUS_EXAMS = [
       }
     ],
     pyqLinks: [
-      { year: 2024, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2024 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2023, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2023 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2022, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2022 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2021, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2021 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2020, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2020 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2019, exam: "Prelims & Mains GS", label: "MPSC 2019 Question Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
+      { year: 2024, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2024 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2023, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2023 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2022, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2022 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2021, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2021 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2020, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2020 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2019, exam: "Prelims & Mains GS", label: "MPSC 2019 Question Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
     ],
     books: [
       { title: "भारतीय राज्यघटना आणि राजकारण — एम. लक्ष्मीकांत (मराठी अनुवाद)", useFor: "Polity & Constitution (Prelims + Mains GS-II)" },
@@ -164,12 +164,12 @@ export const SYLLABUS_EXAMS = [
       }
     ],
     pyqLinks: [
-      { year: 2024, exam: "Group B & C Prelims", label: "MPSC Combined 2024 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2023, exam: "Group B & C Prelims", label: "MPSC Combined 2023 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2022, exam: "Group B & C Prelims", label: "MPSC Combined 2022 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2021, exam: "Group B & C Prelims", label: "MPSC Combined 2021 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2020, exam: "Group B & C Prelims", label: "MPSC Combined 2020 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2019, exam: "Group B Combined Prelims", label: "MPSC 2019 Combined Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
+      { year: 2024, exam: "Group B & C Prelims", label: "MPSC Combined 2024 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2023, exam: "Group B & C Prelims", label: "MPSC Combined 2023 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2022, exam: "Group B & C Prelims", label: "MPSC Combined 2022 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2021, exam: "Group B & C Prelims", label: "MPSC Combined 2021 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2020, exam: "Group B & C Prelims", label: "MPSC Combined 2020 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2019, exam: "Group B Combined Prelims", label: "MPSC 2019 Combined Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
     ],
     books: [
       { title: "मराठी व्याकरण — मो. रा. वाळंबे", useFor: "Mains Paper 1 Marathi (50 marks)" },
@@ -234,11 +234,11 @@ export const SYLLABUS_EXAMS = [
       }
     ],
     pyqLinks: [
-      { year: 2024, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2024 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2023, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2023 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2022, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2022 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2021, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2021 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2020, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2020 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
+      { year: 2024, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2024 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2023, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2023 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2022, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2022 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2021, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2021 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2020, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2020 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
     ],
     books: [
       { title: "कायद्याचे ज्ञान (Law for PSI) — विठ्ठल पुंगळे / Unique Academy", useFor: "PSI Paper 2 Major Acts & Minor Acts" },
@@ -566,11 +566,11 @@ export const SYLLABUS_EXAMS = [
       }
     ],
     pyqLinks: [
-      { year: 2024, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2024 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2023, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2023 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2022, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2022 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2021, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2021 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
-      { year: 2019, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2019 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/candidate_information", answerKeyUrl: "https://mpsconline.gov.in/candidate", url: "https://mpsc.gov.in" },
+      { year: 2024, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2024 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2023, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2023 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2022, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2022 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2021, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2021 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      { year: 2019, exam: "Vanseva Mains Paper I & II", label: "MPSC Vanseva 2019 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
     ],
     books: [
       { title: "Forestry at a Glance — K.T. Parthiban", useFor: "Silviculture, Agroforestry & Forest Mensuration" },

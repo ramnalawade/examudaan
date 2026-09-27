@@ -13,6 +13,9 @@ export const metadata = {
   title: 'ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
   description:
     'Instant Maharashtra government job alerts for MPSC, Police Bharti, BMC, ZP, Talathi, and Central exams. AI-powered eligibility matching & real-time WhatsApp alerts.',
+  alternates: {
+    canonical: 'https://examudaan.in',
+  },
 }
 
 // ISR — revalidate every 5 minutes

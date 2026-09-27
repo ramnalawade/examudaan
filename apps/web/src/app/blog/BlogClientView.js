@@ -183,7 +183,7 @@ export default function BlogClientView({ initialPosts = [] }) {
             className={styles.whatsappBtn}
           >
             <span className="material-symbols-outlined">chat</span>
-            <span>Join 25,000+ on WhatsApp</span>
+            <span>Get Free WhatsApp Alerts</span>
           </a>
         </section>
       </main>

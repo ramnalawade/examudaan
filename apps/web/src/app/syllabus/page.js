@@ -11,6 +11,9 @@ export const metadata = {
   title: 'Exam Syllabus 2026 — MPSC, UPSC, IBPS, SSC, Police Bharti | ExamUdaan',
   description: 'Download complete syllabus and previous year question papers (PYQ) for MPSC State Services, UPSC CSE, IBPS PO, SSC CGL, and Maharashtra Police Bharti 2026.',
   keywords: 'MPSC syllabus 2026, UPSC syllabus, IBPS PO syllabus, SSC CGL syllabus, police bharti syllabus, exam syllabus download, PYQ papers',
+  alternates: {
+    canonical: 'https://examudaan.in/syllabus',
+  },
 }
 
 // Exam level filter groups

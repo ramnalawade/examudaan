@@ -9,6 +9,9 @@ import { SITE_CONFIG } from '../../lib/constants'
 export const metadata = {
   title: 'Terms of Service — ExamUdaan.in',
   description: 'Terms and conditions governing the use of ExamUdaan.in, including free exam aggregation services and paid WhatsApp alert subscriptions.',
+  alternates: {
+    canonical: 'https://examudaan.in/terms',
+  },
 }
 
 export default function TermsPage() {

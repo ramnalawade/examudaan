@@ -5,6 +5,7 @@
 // ============================================================
 
 import Link from 'next/link'
+import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import { ResultCheckSteps } from '../../../components/DetailActionSteps'
@@ -80,6 +81,14 @@ async function getResultData(slugParam) {
   return { en, related }
 }
 
+const TYPE_TO_PATH = {
+  recruitment: '/jobs',
+  result:      '/results',
+  admit_card:  '/admit-cards',
+  answer_key:  '/answer-keys',
+  syllabus:    '/schemes',
+}
+
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const data = await getResultData(resolvedParams.slug)
@@ -93,7 +102,9 @@ export async function generateMetadata({ params }) {
     `${en.title} result declared by ${en.org_name}. Download scorecard, check merit list, and find out next steps.`
   const rawUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
   const siteUrl = (rawUrl && !rawUrl.includes('localhost')) ? rawUrl : 'https://examudaan.in'
-  const canonicalUrl = `${siteUrl}/results/${resolvedParams.slug}`
+  const targetSection = TYPE_TO_PATH[en.notification_type] || '/results'
+  const canonicalSlug = en.slug || resolvedParams.slug
+  const canonicalUrl = `${siteUrl}${targetSection}/${canonicalSlug}`
   return {
     title: metaTitle,
     description: metaDesc.slice(0, 160),
@@ -121,6 +132,13 @@ export default async function ResultDetailPage({ params }) {
   }
 
   const { en, related } = data
+  const targetSection = TYPE_TO_PATH[en.notification_type] || '/results'
+  const canonicalSlug = en.slug || resolvedParams.slug
+
+  // If accessed via non-canonical slug alias or wrong notification section, 301 redirect to canonical URL
+  if (resolvedParams.slug !== canonicalSlug || targetSection !== '/results') {
+    permanentRedirect(`${targetSection}/${canonicalSlug}`)
+  }
 
   // ── ai_extracted_data ──────────────────────────────────────
   const ai = en.ai_extracted_data || {}

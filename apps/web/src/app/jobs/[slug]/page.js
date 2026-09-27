@@ -6,6 +6,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import DetailHowToApply from '../../../components/DetailHowToApply'
@@ -146,6 +147,14 @@ async function getJobData(slugParam) {
 // ──────────────────────────────────────────────────────────────
 // SEO Metadata
 // ──────────────────────────────────────────────────────────────
+const TYPE_TO_PATH = {
+  recruitment: '/jobs',
+  result:      '/results',
+  admit_card:  '/admit-cards',
+  answer_key:  '/answer-keys',
+  syllabus:    '/schemes',
+}
+
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const data = await getJobData(resolvedParams.slug)
@@ -161,7 +170,9 @@ export async function generateMetadata({ params }) {
     `Apply for ${en.title}. Total vacancies: ${en.total_vacancies || 'Various'}. Last date: ${formatDate(en.apply_end_date)}. Check eligibility, fee, and how to apply.`
   const rawUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
   const siteUrl = (rawUrl && !rawUrl.includes('localhost')) ? rawUrl : 'https://examudaan.in'
-  const canonicalUrl = `${siteUrl}/jobs/${resolvedParams.slug}`
+  const targetSection = TYPE_TO_PATH[en.notification_type] || '/jobs'
+  const canonicalSlug = en.slug || resolvedParams.slug
+  const canonicalUrl = `${siteUrl}${targetSection}/${canonicalSlug}`
 
   return {
     title: metaTitle,
@@ -202,6 +213,13 @@ export default async function JobDetailPage({ params }) {
   }
 
   const { en, posts, related } = data
+  const targetSection = TYPE_TO_PATH[en.notification_type] || '/jobs'
+  const canonicalSlug = en.slug || resolvedParams.slug
+
+  // If accessed via non-canonical slug alias or wrong notification section, 301 redirect to canonical URL
+  if (resolvedParams.slug !== canonicalSlug || targetSection !== '/jobs') {
+    permanentRedirect(`${targetSection}/${canonicalSlug}`)
+  }
 
   // ── ai_extracted_data (AI classification) ──────────────
   const ai = en.ai_extracted_data || {}
@@ -365,18 +383,44 @@ export default async function JobDetailPage({ params }) {
   const siteUrl = (rawUrl && !rawUrl.includes('localhost')) ? rawUrl : 'https://examudaan.in'
   const pageUrl = `${siteUrl}/jobs/${resolvedParams.slug}`
 
+  // Build rich HTML description for Google for Jobs (prevents short description penalties)
+  const fullJobDescParts = [
+    en.summary_mr ? `<p>${en.summary_mr}</p>` : null,
+    en.description ? `<p>${en.description}</p>` : null,
+    en.title ? `<p><strong>Role / Position:</strong> ${en.title}</p>` : null,
+    en.org_name ? `<p><strong>Organization / Department:</strong> ${en.org_name}</p>` : null,
+    en.total_vacancies ? `<p><strong>Total Vacancies:</strong> ${en.total_vacancies}</p>` : null,
+    (en.ai_extracted_data?.education_levels?.length) ? `<p><strong>Required Education:</strong> ${en.ai_extracted_data.education_levels.join(', ')}</p>` : null,
+    (en.age_limit?.max || en.age_limit?.min) ? `<p><strong>Age Criteria:</strong> ${en.age_limit.min ? en.age_limit.min + ' to ' : ''}${en.age_limit.max || ''} years</p>` : null,
+    en.apply_end_date ? `<p><strong>Application Last Date:</strong> ${new Date(en.apply_end_date).toLocaleDateString('en-IN')}</p>` : null,
+    `<p><strong>Application Details:</strong> Apply online through the official recruitment portal or verify the official notification PDF. For direct links and details visit ${pageUrl}.</p>`
+  ].filter(Boolean)
+
+  const richDescription = fullJobDescParts.length > 0 ? fullJobDescParts.join('\n') : (en.title || 'Government recruitment notification')
+
+  // Parse salary if present
+  const salaryNum = en.salary?.amount ? Number(en.salary.amount) : (en.salary?.breakdown?.base ? Number(en.salary.breakdown.base) : null)
+
   const jobPostingSchema = {
     '@context': 'https://schema.org',
     '@type': 'JobPosting',
     title: en.title,
-    description: en.summary_mr || en.description || en.title,
+    description: richDescription,
     datePosted: en.published_at ? new Date(en.published_at).toISOString() : new Date().toISOString(),
-    validThrough: en.apply_end_date ? new Date(en.apply_end_date).toISOString() : undefined,
+    validThrough: en.apply_end_date
+      ? new Date(en.apply_end_date).toISOString()
+      : new Date(Date.now() + 45 * 24 * 60 * 60 * 1000).toISOString(),
     employmentType: en.employment_type === 'contractual' ? 'CONTRACTOR' : 'FULL_TIME',
     hiringOrganization: {
       '@type': 'Organization',
       name: en.org_name || 'Government of Maharashtra',
       sameAs: en.org_website || siteUrl,
+      logo: `${siteUrl}/icon.png`,
+    },
+    identifier: {
+      '@type': 'PropertyValue',
+      name: en.org_name || 'Government of Maharashtra',
+      value: String(en.id || resolvedParams.slug),
     },
     jobLocation: {
       '@type': 'Place',
@@ -387,6 +431,23 @@ export default async function JobDetailPage({ params }) {
         addressCountry: 'IN',
       },
     },
+    ...(salaryNum && !isNaN(salaryNum) && salaryNum > 0 ? {
+      baseSalary: {
+        '@type': 'MonetaryAmount',
+        currency: 'INR',
+        value: {
+          '@type': 'QuantitativeValue',
+          value: salaryNum,
+          unitText: 'MONTH',
+        },
+      },
+    } : {}),
+    ...(en.ai_extracted_data?.education_levels?.length ? {
+      educationRequirements: {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: en.ai_extracted_data.education_levels.join(', '),
+      },
+    } : {}),
     directApply: true,
   }
 

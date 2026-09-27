@@ -7,6 +7,9 @@ import ListingPage from '../../components/ListingPage'
 export const metadata = {
   title: 'Exam Results 2026 — Check Now | ExamUdaan',
   description: 'Latest declared exam results for UPSC, SSC, Railway, MPSC, Banking & State PSC. Check merit list, scorecard, and cut-off.',
+  alternates: {
+    canonical: 'https://examudaan.in/results',
+  },
 }
 
 export default function ResultsPage() {

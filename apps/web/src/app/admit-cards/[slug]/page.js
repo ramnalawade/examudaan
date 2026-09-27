@@ -5,6 +5,7 @@
 // ============================================================
 
 import Link from 'next/link'
+import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import { AdmitCardDownloadSteps, AdmitCardDocsToCarry } from '../../../components/DetailActionSteps'
@@ -80,6 +81,14 @@ async function getAdmitCardData(slugParam) {
   return { en, related }
 }
 
+const TYPE_TO_PATH = {
+  recruitment: '/jobs',
+  result:      '/results',
+  admit_card:  '/admit-cards',
+  answer_key:  '/answer-keys',
+  syllabus:    '/schemes',
+}
+
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const data = await getAdmitCardData(resolvedParams.slug)
@@ -87,7 +96,9 @@ export async function generateMetadata({ params }) {
   const { en } = data
   const rawUrl2 = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
   const siteUrl2 = (rawUrl2 && !rawUrl2.includes('localhost')) ? rawUrl2 : 'https://examudaan.in'
-  const canonicalUrl = `${siteUrl2}/admit-cards/${resolvedParams.slug}`
+  const targetSection = TYPE_TO_PATH[en.notification_type] || '/admit-cards'
+  const canonicalSlug = en.slug || resolvedParams.slug
+  const canonicalUrl = `${siteUrl2}${targetSection}/${canonicalSlug}`
   return {
     title: `${en.title} Admit Card — Download Hall Ticket | ExamUdaan`,
     description: `Download ${en.title} admit card / hall ticket from ${en.org_name}. Exam date: ${formatDate(en.exam_date)}. Check exam centers and download steps.`.slice(0, 160),
@@ -115,6 +126,13 @@ export default async function AdmitCardDetailPage({ params }) {
   }
 
   const { en, related } = data
+  const targetSection = TYPE_TO_PATH[en.notification_type] || '/admit-cards'
+  const canonicalSlug = en.slug || resolvedParams.slug
+
+  // If accessed via non-canonical slug alias or wrong notification section, 301 redirect to canonical URL
+  if (resolvedParams.slug !== canonicalSlug || targetSection !== '/admit-cards') {
+    permanentRedirect(`${targetSection}/${canonicalSlug}`)
+  }
 
   // ── ai_extracted_data ──────────────────────────────────────
   const ai = en.ai_extracted_data || {}

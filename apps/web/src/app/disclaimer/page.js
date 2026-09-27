@@ -9,6 +9,9 @@ import { SITE_CONFIG } from '../../lib/constants'
 export const metadata = {
   title: 'Disclaimer & Non-Affiliation Policy — ExamUdaan.in',
   description: 'ExamUdaan.in is an independent recruitment aggregation platform and is NOT affiliated with any central or state government organization or recruiting commission.',
+  alternates: {
+    canonical: 'https://examudaan.in/disclaimer',
+  },
 }
 
 export default function DisclaimerPage() {

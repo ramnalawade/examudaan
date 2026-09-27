@@ -20,9 +20,20 @@ export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const tool = getToolBySlug(resolvedParams?.slug)
   if (!tool) return { title: 'AI Tools | ExamUdaan' }
+  const canonicalUrl = `https://examudaan.in/ai-tools/${tool.slug}`
   return {
     title: `${tool.name} — How to Use for Exam Prep & Research | ExamUdaan AI Tools`,
     description: tool.tagline,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${tool.name} — AI Tool Guide | ExamUdaan`,
+      description: tool.tagline,
+      url: canonicalUrl,
+      type: 'article',
+      siteName: 'ExamUdaan.in',
+    },
   }
 }
 

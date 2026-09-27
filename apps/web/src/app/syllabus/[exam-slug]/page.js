@@ -6,6 +6,7 @@ import { use } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getExamBySlug, ALL_EXAM_SLUGS, SYLLABUS_EXAMS } from '@/lib/syllabusData'
+import InteractiveSyllabusTracker from '@/components/InteractiveSyllabusTracker'
 import styles from './examDetail.module.css'
 
 // Static params for Next.js build
@@ -18,10 +19,21 @@ export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const exam = getExamBySlug(resolvedParams['exam-slug'])
   if (!exam) return {}
+  const canonicalUrl = `https://examudaan.in/syllabus/${exam.slug}`
   return {
     title: `${exam.nameEn} Syllabus 2026 — Complete Topic-wise Guide | ExamUdaan`,
     description: `Full ${exam.nameEn} syllabus 2026 with paper-wise topics, previous year question papers, recommended books, and exam pattern. Free for all aspirants.`,
     keywords: `${exam.nameEn} syllabus 2026, ${exam.shortName} exam pattern, ${exam.shortName} PYQ papers`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${exam.nameEn} Syllabus 2026 | ExamUdaan`,
+      description: `Full ${exam.nameEn} syllabus with topic breakdown and paper pattern.`,
+      url: canonicalUrl,
+      type: 'article',
+      siteName: 'ExamUdaan.in',
+    },
   }
 }
 
@@ -143,24 +155,15 @@ export default function ExamDetailPage({ params }) {
         </div>
       </section>
 
-      {/* ── Syllabus Papers ── */}
+      {/* ── Interactive Syllabus Tracker & Topic Checklist ── */}
       <section className={styles.syllabusSection}>
         <div className="container">
           <h2 className={styles.sectionTitle}>
             <span className="material-symbols-outlined">menu_book</span>
-            Exam Syllabus — Paper & Topic Breakdown
+            Exam Syllabus & Interactive Checklist
           </h2>
 
-          {exam.papers.map(stageGroup => (
-            <div key={stageGroup.stage} className={styles.stageGroup}>
-              <h3 className={styles.stageLabel}>{stageGroup.stage}</h3>
-              <div className={styles.papersGrid}>
-                {stageGroup.papers.map(paper => (
-                  <PaperCard key={paper.name} paper={paper} examColor={exam.color} />
-                ))}
-              </div>
-            </div>
-          ))}
+          <InteractiveSyllabusTracker exam={exam} />
         </div>
       </section>
 
@@ -271,40 +274,5 @@ export default function ExamDetailPage({ params }) {
         </section>
       )}
     </main>
-  )
-}
-
-// ── Paper Card Component ──────────────────────────────────────
-function PaperCard({ paper, examColor }) {
-  return (
-    <div className={styles.paperCard}>
-      {/* Paper header */}
-      <div className={styles.paperHeader} style={{ borderLeftColor: examColor }}>
-        <h4 className={styles.paperName}>{paper.name}</h4>
-        <div className={styles.paperMeta}>
-          {paper.marks && <span><strong>{paper.marks}</strong> marks</span>}
-          {paper.questions && <span><strong>{paper.questions}</strong> questions</span>}
-          {paper.duration && <span>⏱ {paper.duration}</span>}
-          {paper.type && <span className={styles.paperType}>{paper.type}</span>}
-        </div>
-      </div>
-
-      {/* Topics */}
-      <div className={styles.topicList}>
-        {paper.topics.map(topic => (
-          <details key={topic.name} className={styles.topicItem}>
-            <summary className={styles.topicName}>
-              <span className="material-symbols-outlined">chevron_right</span>
-              {topic.name}
-            </summary>
-            <ul className={styles.subtopicList}>
-              {topic.subtopics.map(sub => (
-                <li key={sub}>{sub}</li>
-              ))}
-            </ul>
-          </details>
-        ))}
-      </div>
-    </div>
   )
 }

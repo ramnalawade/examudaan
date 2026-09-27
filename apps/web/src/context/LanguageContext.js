@@ -184,7 +184,7 @@ const DICTIONARY = {
     'home.step3_desc': 'You receive instant personalized alerts with the official application link and authentic PDF attachment before deadlines close.',
     'home.wa_network_tag': 'WhatsApp Alert Network',
     'home.wa_title': 'Never Miss a Last Date. Get Alerts on Your Phone.',
-    'home.wa_desc': 'Join over 25,000 Maharashtra aspirants who receive filtered, personalized WhatsApp messages for their specific qualification (10th, 12th, Graduate, ITI, Police).',
+    'home.wa_desc': 'Join Maharashtra aspirants who receive filtered, personalized WhatsApp messages for their specific qualification (10th, 12th, Graduate, ITI, Police).',
     'home.wa_btn': 'WhatsApp Alerts — Coming Soon',
     'home.wa_how_it_works': 'How it works →',
     'home.stats_active_jobs': 'Active Notifications',

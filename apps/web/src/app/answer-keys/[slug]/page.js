@@ -5,6 +5,7 @@
 // ============================================================
 
 import Link from 'next/link'
+import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import { T } from '../../../context/LanguageContext'
@@ -79,6 +80,14 @@ async function getAnswerKeyData(slugParam) {
   return { en, related }
 }
 
+const TYPE_TO_PATH = {
+  recruitment: '/jobs',
+  result:      '/results',
+  admit_card:  '/admit-cards',
+  answer_key:  '/answer-keys',
+  syllabus:    '/schemes',
+}
+
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const data = await getAnswerKeyData(resolvedParams.slug)
@@ -86,7 +95,9 @@ export async function generateMetadata({ params }) {
   const { en } = data
   const rawUrlMeta = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
   const siteUrlMeta = (rawUrlMeta && !rawUrlMeta.includes('localhost')) ? rawUrlMeta : 'https://examudaan.in'
-  const canonicalUrl = `${siteUrlMeta}/answer-keys/${resolvedParams.slug}`
+  const targetSection = TYPE_TO_PATH[en.notification_type] || '/answer-keys'
+  const canonicalSlug = en.slug || resolvedParams.slug
+  const canonicalUrl = `${siteUrlMeta}${targetSection}/${canonicalSlug}`
   return {
     title: `${en.title} Answer Key — Download & Calculate Score | ExamUdaan`,
     description: `Download ${en.title} official answer key from ${en.org_name}. Calculate your expected score, raise objections if any, and check expected cut-off.`.slice(0, 160),
@@ -114,6 +125,13 @@ export default async function AnswerKeyDetailPage({ params }) {
   }
 
   const { en, related } = data
+  const targetSection = TYPE_TO_PATH[en.notification_type] || '/answer-keys'
+  const canonicalSlug = en.slug || resolvedParams.slug
+
+  // If accessed via non-canonical slug alias or wrong notification section, 301 redirect to canonical URL
+  if (resolvedParams.slug !== canonicalSlug || targetSection !== '/answer-keys') {
+    permanentRedirect(`${targetSection}/${canonicalSlug}`)
+  }
 
   // ── ai_extracted_data ──────────────────────────────────────
   const ai = en.ai_extracted_data || {}

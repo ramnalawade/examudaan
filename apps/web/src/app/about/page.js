@@ -8,6 +8,9 @@ import Link from 'next/link'
 export const metadata = {
   title: 'About Us — ExamUdaan.in',
   description: 'Learn about ExamUdaan.in, Maharashtra\'s premier AI-powered government exam and job alerts platform. Monitored across 37+ official state and central portals.',
+  alternates: {
+    canonical: 'https://examudaan.in/about',
+  },
 }
 
 export default function AboutPage() {
@@ -15,7 +18,7 @@ export default function AboutPage() {
     { value: '37+', label: 'Official Portals Tracked', icon: 'travel_explore' },
     { value: '100%', label: 'Direct Govt PDF Links', icon: 'verified' },
     { value: '< 5 min', label: 'Instant Alert Latency', icon: 'bolt' },
-    { value: '25,000+', label: 'Aspirants Empowered', icon: 'groups' },
+    { value: 'Maharashtra', label: 'Trusted by Aspirants Across', icon: 'handshake' },
   ]
 
   const pillars = [

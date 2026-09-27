@@ -9,6 +9,9 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Resources & Study Materials — ExamUdaan',
   description: 'Free study resources for MPSC, UPSC, Banking, SSC, Railways — syllabus PDFs, official links, YouTube channels, and AI study tools.',
+  alternates: {
+    canonical: 'https://examudaan.in/resources',
+  },
 }
 
 // ── Verified Syllabus & Guide Links (No 404s) ────────────────

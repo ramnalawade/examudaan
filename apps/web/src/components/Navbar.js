@@ -54,13 +54,14 @@ export default function Navbar() {
   ]
 
   const MORE_NAV_ITEMS = [
+    { href: '/study-planner',      label: t('nav.study_planner',   'AI Study Planner'),     icon: 'auto_schedule',         badge: 'AI',    desc: 'Adaptive day-by-day exam study timetable & targets' },
     { href: '/score-calculator',   label: t('nav.score_calc',      'Key Score Calculator'), icon: 'score',                 badge: 'Viral', desc: 'TCS iON, MPSC & Police Response Sheet Calculator' },
     { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'),    icon: 'calculate',             badge: '150M',  desc: 'Physical + Written composite merit cutoff calculator' },
     { href: '/cutoffs',            label: t('nav.cutoffs',         '10-Yr Cutoff Explorer'),icon: 'leaderboard',                           desc: 'Category cutoffs for MPSC, Police, Talathi & SSC' },
     { href: '/salary-calculator',  label: t('nav.salary',          'Salary Calculator'),    icon: 'payments',                              desc: '7th Pay Commission in-hand salary matrix' },
     { href: '/blog',               label: t('nav.blog',            'Exam Blog & Guides'),   icon: 'menu_book',             badge: 'Guides',desc: 'In-depth exam blueprints, 90-day plans & PYQ trends' },
     { href: '/youtube',            label: t('nav.youtube',         'YouTube Classes'),      icon: 'play_circle',                           desc: 'Free lectures, strategy & exam updates' },
-    { href: '/ai-tools',           label: t('nav.ai_tools',        'AI Study Tools'),       icon: 'smart_toy',                             desc: '54+ curated AI study aids' },
+    { href: '/ai-tools',           label: t('nav.ai_tools',        'AI Study Tools'),       icon: 'smart_toy',                             desc: '84+ curated AI study aids' },
     { href: '/ai-academy',         label: t('nav.ai_academy',      'AI Academy'),           icon: 'school',                badge: 'New',   desc: 'Master AI skills, prompts & workflows' },
     { href: '/mock-interview',     label: t('nav.mock_interview',  'Mock Interview AI'),    icon: 'mic',                   badge: 'AI',    desc: 'Real-time AI voice/chat board mock interview' },
     { href: '/ai-news',            label: t('nav.ai_news',         'AI News Feed'),         icon: 'feed',                  badge: 'Live',  desc: 'Real-time AI research & tech updates' },
@@ -69,12 +70,13 @@ export default function Navbar() {
 
   const MOBILE_NAV_ITEMS = [
     { href: '/',                   label: t('nav.home',            'Home'),              icon: 'home' },
+    { href: '/study-planner',      label: t('nav.study_planner',   'Study Planner'),     icon: 'auto_schedule',         badge: 'AI' },
     { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
     { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'New' },
     { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free' },
     { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQ Bank'),    icon: 'history_edu',           badge: 'Hot' },
     { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min' },
-    { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus'),          icon: 'menu_book' },
+    { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus Tracker'),  icon: 'menu_book' },
     { href: '/score-calculator',   label: t('nav.score_calc',      'Score Calculator'),  icon: 'score',                 badge: 'Viral' },
     { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'), icon: 'calculate',             badge: '150M' },
     { href: '/cutoffs',            label: t('nav.cutoffs',         '10-Yr Cutoffs'),     icon: 'leaderboard' },

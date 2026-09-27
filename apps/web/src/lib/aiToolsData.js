@@ -3485,6 +3485,1836 @@ export const AI_TOOLS = [
       "canva",
       "descript"
     ]
+  },
+  {
+    "slug": "suno",
+    "name": "Suno AI",
+    "tagline": "Generate educational mnemonic songs, audio memory hooks, and study tracks.",
+    "category": "Study",
+    "badge": "🎵 Audio Mnemonics",
+    "free": true,
+    "url": "https://suno.com",
+    "logo": "music_note",
+    "targetUsers": [
+      "MPSC Aspirants",
+      "UPSC Students",
+      "History & Polity Learners",
+      "Auditory Learners"
+    ],
+    "whatIs": "Suno AI transforms text prompts, historical timelines, and constitutional articles into full-fledged catchy songs, ballads, or rhythmic tracks with realistic vocals. Aspirants use it to turn hard-to-memorize historical dates, fundamental rights, and science facts into memorable tunes.",
+    "whyItMatters": "Audio mnemonics trigger episodic memory. Listening to a 2-minute rhythmically catchy song about the 12 Constitutional Schedules ensures you never forget them in exam halls.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Suno AI",
+        "desc": "Visit suno.com and sign up for a free account (includes 50 free credits daily = 10 songs)."
+      },
+      {
+        "step": 2,
+        "title": "Select Custom Mode",
+        "desc": "Click \"Create\" and toggle \"Custom\" mode on to input your own educational lyrics."
+      },
+      {
+        "step": 3,
+        "title": "Paste Study Facts",
+        "desc": "Paste constitutional articles, historical chronologies, or science laws formatted in verse or rhyming couplets."
+      },
+      {
+        "step": 4,
+        "title": "Select Music Genre",
+        "desc": "Choose an upbeat acoustic, rap, or classical Indian style that aids rhythmic recall."
+      },
+      {
+        "step": 5,
+        "title": "Download & Listen Daily",
+        "desc": "Save the generated audio MP3 and add it to your daily commute or revision playlist."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Constitutional Articles Song",
+        "text": "Create an upbeat mnemonic song summarizing Fundamental Rights Articles 14 to 32 of the Indian Constitution, with the chorus highlighting Right to Constitutional Remedies Article 32."
+      },
+      {
+        "title": "Maharashtra Social Reformers",
+        "text": "Write a rhythmic acoustic ballad detailing the social reform milestones of Mahatma Jyotirao Phule, Rajarshi Shahu Maharaj, and Dr. B.R. Ambedkar with key founding dates."
+      }
+    ],
+    "limitations": "Free tier grants 50 credits/day (non-commercial use). Generated songs are up to 2 minutes per clip but can be extended.",
+    "relatedSlugs": [
+      "elevenlabs",
+      "notebooklm",
+      "speechify"
+    ]
+  },
+  {
+    "slug": "krea",
+    "name": "Krea AI",
+    "tagline": "Real-time generative AI canvas, image upscaler, and visual concept generator.",
+    "category": "Design",
+    "badge": "🎨 Real-time Canvas",
+    "free": true,
+    "url": "https://www.krea.ai",
+    "logo": "brush",
+    "targetUsers": [
+      "Content Creators",
+      "Visual Learners",
+      "Geography Students",
+      "Presentation Designers"
+    ],
+    "whatIs": "Krea AI is an ultra-fast real-time generative canvas where you draw basic shapes or upload rough sketches, and the AI renders hyper-realistic graphics and diagrams instantly. It also includes an industry-leading free AI image upscaler and enhancer.",
+    "whyItMatters": "Transform low-resolution textbook diagrams, historical maps, and handwritten flowcharts into crisp 4K visuals for study notes and slide decks.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Launch Real-time Canvas",
+        "desc": "Navigate to krea.ai and click \"Realtime Generation\"."
+      },
+      {
+        "step": 2,
+        "title": "Draw Rough Outlines",
+        "desc": "Use simple geometric shapes, colors, or pen strokes on the left panel."
+      },
+      {
+        "step": 3,
+        "title": "Add Descriptive Prompt",
+        "desc": "Type prompts like \"Cross section of volcanic mountain with magma chamber, educational textbook illustration\"."
+      },
+      {
+        "step": 4,
+        "title": "Adjust AI Strength",
+        "desc": "Slide the AI strength bar to balance your sketch outline with AI-rendered realism."
+      },
+      {
+        "step": 5,
+        "title": "Upscale & Export",
+        "desc": "Use Krea Enhancer to upscale the diagram to 4K resolution and download for notes."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Geography Plate Tectonics",
+        "text": "Diagram showing convergent continental and oceanic plate boundaries with subduction trench, volcanic arc, and mantle convection currents, clear educational schematic."
+      },
+      {
+        "title": "Historical Fort Architecture",
+        "text": "Architectural schematic cross-section of a Maratha hill fort showing bastion walls, water reservoirs, and defense gates, architectural diagram."
+      }
+    ],
+    "limitations": "Free plan has basic generation speed and daily generation limits. Higher resolution video features require paid tier.",
+    "relatedSlugs": [
+      "canva",
+      "ideogram",
+      "recraft"
+    ]
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft AI",
+    "tagline": "Generate free vector graphics, SVG icons, and clean infographic art for notes.",
+    "category": "Design",
+    "badge": "📐 Vector & SVG",
+    "free": true,
+    "url": "https://www.recraft.ai",
+    "logo": "polyline",
+    "targetUsers": [
+      "UPSC Aspirants",
+      "Note Makers",
+      "Infographic Designers",
+      "Teachers & Educators"
+    ],
+    "whatIs": "Recraft is a dedicated vector and raster design studio powered by AI. Unlike pixel-based generators, Recraft generates infinitely scalable SVG vector icons, 3D illustrations, and diagrams that can be recolored and edited node-by-node.",
+    "whyItMatters": "Creates clean, professional vector illustrations for economy flowcharts, environmental food webs, and governance structures without pixelation or watermarks.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Create Free Account",
+        "desc": "Go to recraft.ai and sign in with Google."
+      },
+      {
+        "step": 2,
+        "title": "Select Vector Style",
+        "desc": "Choose \"Vector Art\", \"Icon\", or \"Line Art\" from the style picker."
+      },
+      {
+        "step": 3,
+        "title": "Enter Diagram Prompt",
+        "desc": "Describe your concept: \"Wind turbine clean energy cycle icon with power grid arrows\"."
+      },
+      {
+        "step": 4,
+        "title": "Recolor & Edit Nodes",
+        "desc": "Change color palette or erase/replace specific sub-elements with AI inpainting."
+      },
+      {
+        "step": 5,
+        "title": "Download Scalable SVG",
+        "desc": "Export as SVG or high-res PNG to embed in Notion, Word, or presentation slides."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Economic Circular Flow",
+        "text": "Clean minimal vector icon representing circular economy recycling loop, green energy transitions, flat line art SVG style."
+      },
+      {
+        "title": "Judicial Hierarchy Flowchart",
+        "text": "Flat vector diagram icons for Supreme Court of India, High Court, and District Courts, clean institutional iconography."
+      }
+    ],
+    "limitations": "Free generations are public by default. Private generations and commercial raster upscales require paid membership.",
+    "relatedSlugs": [
+      "canva",
+      "krea",
+      "napkin"
+    ]
+  },
+  {
+    "slug": "leonardo",
+    "name": "Leonardo.ai",
+    "tagline": "High-fidelity generative art, educational concept visuals, and architectural rendering.",
+    "category": "Design",
+    "badge": "✨ 150 Free Daily Tokens",
+    "free": true,
+    "url": "https://leonardo.ai",
+    "logo": "palette",
+    "targetUsers": [
+      "Aspirants",
+      "Educators",
+      "Designers",
+      "Visual Storytellers"
+    ],
+    "whatIs": "Leonardo.ai offers state-of-the-art fine-tuned image generation models with daily free token replenishments. It features prompt assist, background removal, motion animation, and precise control over visual styles.",
+    "whyItMatters": "Aspirants and teachers can generate vivid historical battle illustrations, ancient civilization reconstructions (Indus Valley, Maurya), and geography cross-sections for immersive learning.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Log in & Collect Tokens",
+        "desc": "Log into leonardo.ai; get 150 free generation tokens renewed every single day."
+      },
+      {
+        "step": 2,
+        "title": "Pick Model",
+        "desc": "Select Leonardo Phoenix or Kino XL for photorealistic and educational illustrations."
+      },
+      {
+        "step": 3,
+        "title": "Craft Prompt",
+        "desc": "Type your prompt with camera angle and artistic details."
+      },
+      {
+        "step": 4,
+        "title": "Enable Prompt Magic",
+        "desc": "Turn on Prompt Magic for enhanced accuracy in complex cultural and historical details."
+      },
+      {
+        "step": 5,
+        "title": "Download Clean Asset",
+        "desc": "Save rendered images for your blog articles, study flashcards, or YouTube banners."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Ancient Indus Valley Settlement",
+        "text": "Aerial historical reconstruction of Harappa city layout, Great Bath, brick houses, grid planning, bustling market, historical documentary illustration."
+      },
+      {
+        "title": "Agro-forestry Concept",
+        "text": "Diagrammatic view of multi-tier agroforestry farm with solar pumps, drip irrigation, and intercropping, bright daylight photorealistic."
+      }
+    ],
+    "limitations": "Daily 150 fast tokens limit. Queue times may increase during peak hours on free accounts.",
+    "relatedSlugs": [
+      "ideogram",
+      "krea",
+      "midjourney"
+    ]
+  },
+  {
+    "slug": "qwen",
+    "name": "Qwen 2.5 (Alibaba Cloud)",
+    "tagline": "Top-ranked open-weights AI model with exceptional math, coding, and multilingual reasoning.",
+    "category": "AI Hub",
+    "badge": "🧠 Math & Logic Titan",
+    "free": true,
+    "url": "https://chat.qwenlm.ai",
+    "logo": "psychology",
+    "targetUsers": [
+      "Engineering Students",
+      "Competitive Math Aspirants",
+      "Developers",
+      "Multilingual Researchers"
+    ],
+    "whatIs": "Qwen 2.5 by Alibaba is one of the world's highest-ranking open foundation models, beating GPT-4o in mathematical reasoning, coding benchmarks, and multilingual comprehension, with fluent support for Indian languages and long context.",
+    "whyItMatters": "Outstanding at solving complex CSAT quantitative aptitude questions, step-by-step algebra, and translating governance documents with high linguistic fidelity.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Access Qwen Chat",
+        "desc": "Go to chat.qwenlm.ai and log in for free access to Qwen 2.5 72B."
+      },
+      {
+        "step": 2,
+        "title": "Select Thinking Mode",
+        "desc": "Select Qwen 2.5-Coder for coding questions or Qwen 2.5 72B for general aptitude and essays."
+      },
+      {
+        "step": 3,
+        "title": "Paste Math/Aptitude Problem",
+        "desc": "Paste speed-time-distance, permutations, or data interpretation questions."
+      },
+      {
+        "step": 4,
+        "title": "Get Step-by-Step Proof",
+        "desc": "Qwen breaks down reasoning formula by formula without skipping intermediate steps."
+      },
+      {
+        "step": 5,
+        "title": "Multilingual Querying",
+        "desc": "Ask questions in Marathi or Hindi and receive grammatically sound, natural explanations."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "CSAT Probability Solver",
+        "text": "Solve this step-by-step: A bag contains 5 red, 4 green, and 3 blue marbles. 3 marbles are drawn at random. What is the probability that at least 2 are green? Show formula and calculation."
+      },
+      {
+        "title": "Bilingual Policy Summary",
+        "text": "Explain the PM-KUSUM solar scheme in Marathi and English side-by-side with subsidy slabs, eligibility, and beneficiary farmers benefits."
+      }
+    ],
+    "limitations": "Web interface has occasional rate limits during high global server traffic.",
+    "relatedSlugs": [
+      "deepseek",
+      "chatgpt",
+      "gemini"
+    ]
+  },
+  {
+    "slug": "cohere-coral",
+    "name": "Cohere Coral",
+    "tagline": "Enterprise knowledge search with direct document citations and hallucination-free answers.",
+    "category": "Research",
+    "badge": "📚 Grounded Search",
+    "free": true,
+    "url": "https://cohere.com/coral",
+    "logo": "find_in_page",
+    "targetUsers": [
+      "Research Scholars",
+      "Policy Analysts",
+      "UPSC Mains Candidates",
+      "Law Students"
+    ],
+    "whatIs": "Cohere Coral is an enterprise-grade conversational AI assistant specifically optimized for retrieval-augmented generation (RAG). It ingests complex whitepapers, acts, and policy reports, answering queries with exact footnote citations.",
+    "whyItMatters": "Crucial for writing UPSC/MPSC Mains answers where factual correctness, statutory provisions, and verified government report citations are required.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Cohere Coral",
+        "desc": "Visit cohere.com/coral and sign in with a free account."
+      },
+      {
+        "step": 2,
+        "title": "Upload Official Reports",
+        "desc": "Upload NITI Aayog reports, Finance Commission recommendations, or state economic surveys."
+      },
+      {
+        "step": 3,
+        "title": "Enable Web Grounding",
+        "desc": "Turn on \"Web Search Grounding\" for live corroboration across online sources."
+      },
+      {
+        "step": 4,
+        "title": "Query Specific Provisions",
+        "desc": "Ask: \"What are the 16th Finance Commission terms of reference regarding devolution to local bodies?\"."
+      },
+      {
+        "step": 5,
+        "title": "Inspect Footnotes",
+        "desc": "Click citation numbers to verify the exact page and paragraph from which the insight was pulled."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Fiscal Deficit Analysis",
+        "text": "Based on the latest Union and Maharashtra budgets, what are the primary drivers of revenue deficit and capital expenditure trends? Cite exact figures."
+      },
+      {
+        "title": "Constitutional Case Law",
+        "text": "Summarize the Kesavananda Bharati basic structure doctrine with direct citations to the 13-judge bench findings and subsequent applications."
+      }
+    ],
+    "limitations": "Free tier has daily query caps on playground. Best suited for document-grounded research rather than creative tasks.",
+    "relatedSlugs": [
+      "perplexity",
+      "consensus",
+      "scite"
+    ]
+  },
+  {
+    "slug": "blackbox-ai",
+    "name": "Blackbox AI",
+    "tagline": "Free AI code search, autocomplete, and code extraction from videos.",
+    "category": "Dev",
+    "badge": "💻 Code Search",
+    "free": true,
+    "url": "https://www.blackbox.ai",
+    "logo": "terminal",
+    "targetUsers": [
+      "CS Aspirants",
+      "Govt IT Officers",
+      "Software Engineers",
+      "Coding Beginners"
+    ],
+    "whatIs": "Blackbox AI is a specialized coding copilot that lets programmers search for code snippets, generate algorithms from natural language, debug errors across 20+ languages, and even copy code directly out of YouTube tutorial videos.",
+    "whyItMatters": "Helps aspirants preparing for State IT Officer, NIC, and Banking IT Specialist exams master Data Structures and Algorithms with instant code explanations.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Go to Blackbox.ai",
+        "desc": "Visit blackbox.ai or install the Chrome / VS Code extension."
+      },
+      {
+        "step": 2,
+        "title": "Type Coding Question",
+        "desc": "Ask in plain English: \"Write Dijkstra's algorithm in Python with time complexity analysis\"."
+      },
+      {
+        "step": 3,
+        "title": "Get Annotated Code",
+        "desc": "View complete code with line-by-line comments and big-O notation."
+      },
+      {
+        "step": 4,
+        "title": "Use Video Code Snipping",
+        "desc": "Select video code region on YouTube tutorials to extract text as editable code."
+      },
+      {
+        "step": 5,
+        "title": "Debug Errors",
+        "desc": "Paste stack traces to find root causes and fixed code snippets immediately."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "SQL Query Optimization",
+        "text": "Write a PostgreSQL query to find the 2nd highest salary by department, and explain how to optimize it with indexes and window functions."
+      },
+      {
+        "title": "Binary Search Tree Code",
+        "text": "Implement a Binary Search Tree deletion operation in C++ with detailed edge cases (leaf node, one child, two children)."
+      }
+    ],
+    "limitations": "Free web chat has occasional advertisements. Advanced auto-commit features require paid plan.",
+    "relatedSlugs": [
+      "cursor",
+      "phind",
+      "github-copilot"
+    ]
+  },
+  {
+    "slug": "tabnine",
+    "name": "Tabnine",
+    "tagline": "Privacy-centric AI code completion assistant with local context awareness.",
+    "category": "Dev",
+    "badge": "🔒 Privacy-First",
+    "free": true,
+    "url": "https://www.tabnine.com",
+    "logo": "data_object",
+    "targetUsers": [
+      "Developers",
+      "Data Science Students",
+      "Govt Tech Contractors",
+      "System Admins"
+    ],
+    "whatIs": "Tabnine provides AI code completions that run locally or in secure cloud instances, ensuring your source code never leaves your computer or trains public models. Supports VS Code, IntelliJ, and major IDEs.",
+    "whyItMatters": "Ideal for students and developers working on sensitive government projects, proprietary scripts, or offline environments requiring private autocomplete.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Install Plugin",
+        "desc": "Install Tabnine extension in Visual Studio Code or JetBrains IDE."
+      },
+      {
+        "step": 2,
+        "title": "Sign In Free",
+        "desc": "Sign in to activate the free starter plan for whole-line code completions."
+      },
+      {
+        "step": 3,
+        "title": "Start Typing Code",
+        "desc": "As you write functions, Tabnine suggests context-aware completions in real-time."
+      },
+      {
+        "step": 4,
+        "title": "Accept Suggestions",
+        "desc": "Press Tab to complete lines, loops, and repetitive boilerplate patterns."
+      },
+      {
+        "step": 5,
+        "title": "Chat With Tabnine",
+        "desc": "Use Tabnine Chat inside your IDE to ask questions about your local workspace."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Python Web Scraper Script",
+        "text": "Write a Python script using BeautifulSoup to parse exam notification titles and PDF download URLs from a public government page."
+      },
+      {
+        "title": "FastAPI REST Endpoint",
+        "text": "Generate a FastAPI async route with Pydantic validation for registering student mock test scores into PostgreSQL."
+      }
+    ],
+    "limitations": "Free plan offers basic line completions; full repository contextual chat requires Pro tier.",
+    "relatedSlugs": [
+      "cursor",
+      "github-copilot",
+      "blackbox-ai"
+    ]
+  },
+  {
+    "slug": "you-com",
+    "name": "You.com",
+    "tagline": "AI search engine with dedicated Genius mode, multi-step research, and live web access.",
+    "category": "Research",
+    "badge": "🔍 Multi-modal Search",
+    "free": true,
+    "url": "https://you.com",
+    "logo": "search",
+    "targetUsers": [
+      "Competitive Exam Candidates",
+      "Journalists",
+      "Fact Checkers",
+      "General Aspirants"
+    ],
+    "whatIs": "You.com is a search assistant that combines web search with multi-step reasoning models (Genius mode). It synthesizes web findings, generates interactive Python code, renders mathematical graphs, and cross-checks sources.",
+    "whyItMatters": "Delivers comprehensive 360-degree summaries of breaking news, Union Budget provisions, and Supreme Court constitutional bench verdicts with linked news sources.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit You.com",
+        "desc": "Go to you.com and start searching without requiring a login."
+      },
+      {
+        "step": 2,
+        "title": "Pick Research Mode",
+        "desc": "Switch between \"Smart\" (fast answers) and \"Genius\" (deep multi-step research)."
+      },
+      {
+        "step": 3,
+        "title": "Search News & Polity",
+        "desc": "Search current events like: \"Maharashtra Maratha reservation historical timeline and court challenges\"."
+      },
+      {
+        "step": 4,
+        "title": "Explore Source Citations",
+        "desc": "Hover over citations to read original newspaper reports and official press releases."
+      },
+      {
+        "step": 5,
+        "title": "Download Formatted Notes",
+        "desc": "Copy the compiled timeline directly into your current affairs revision notebook."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Current Affairs Timeline",
+        "text": "Provide a chronological summary of all major space missions conducted by ISRO in the last 18 months, with payload objectives and launch vehicles."
+      },
+      {
+        "title": "Economic Policy Comparison",
+        "text": "Compare the Old Pension Scheme (OPS) vs Unified Pension Scheme (UPS) vs National Pension System (NPS) with employee contribution, guaranteed pension, and fiscal impact."
+      }
+    ],
+    "limitations": "Free tier limits the number of complex Genius mode research queries per day.",
+    "relatedSlugs": [
+      "perplexity",
+      "consensus",
+      "gemini"
+    ]
+  },
+  {
+    "slug": "scispace",
+    "name": "SciSpace (Typeset.io)",
+    "tagline": "Your AI copilot to decode research papers, literature reviews, and academic PDFs.",
+    "category": "Research",
+    "badge": "🔬 Paper Copilot",
+    "free": true,
+    "url": "https://typeset.io",
+    "logo": "science",
+    "targetUsers": [
+      "Postgraduate Students",
+      "UPSC Science & Tech Prep",
+      "PhD Scholars",
+      "Professors"
+    ],
+    "whatIs": "SciSpace allows students to upload complex scientific papers, highlight confusing math equations or paragraphs, and get instant ELI5 (explain like I'm 5) explanations, related paper recommendations, and literature matrices.",
+    "whyItMatters": "Demystifies intricate scientific studies on biotechnology, renewable energy, and climate change for Mains GS-3 answer writing.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open SciSpace",
+        "desc": "Go to typeset.io and search across 200M+ research papers or upload your own PDF."
+      },
+      {
+        "step": 2,
+        "title": "Highlight Text / Formula",
+        "desc": "Click and drag over any dense paragraph, mathematical equation, or table."
+      },
+      {
+        "step": 3,
+        "title": "Click \"Explain\"",
+        "desc": "The AI copilot gives a plain-English explanation of what the equation or findings mean."
+      },
+      {
+        "step": 4,
+        "title": "Generate Literature Matrix",
+        "desc": "Compare 5 top papers on a topic across columns: Methodology, Sample Size, Key Results."
+      },
+      {
+        "step": 5,
+        "title": "Export Insights",
+        "desc": "Export summary tables to CSV or citation format for your research bibliography."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Decode Science Paper",
+        "text": "Explain the mechanism of CRISPR-Cas9 gene editing described in this paper in 3 simple bullet points suitable for a civil service GS paper."
+      },
+      {
+        "title": "Climate Change Impact",
+        "text": "Summarize the IPCC 6th Assessment Report findings regarding monsoonal pattern shifts and agricultural vulnerability in South Asia."
+      }
+    ],
+    "limitations": "Free plan has monthly PDF upload limits and daily AI copilot question quotas.",
+    "relatedSlugs": [
+      "consensus",
+      "semantic-scholar",
+      "elicit"
+    ]
+  },
+  {
+    "slug": "research-rabbit",
+    "name": "Research Rabbit",
+    "tagline": "Visual citation network explorer and Spotify-like discovery for academic research.",
+    "category": "Research",
+    "badge": "🐇 Citation Mapping",
+    "free": true,
+    "url": "https://www.researchrabbit.ai",
+    "logo": "hub",
+    "targetUsers": [
+      "Academics",
+      "UPSC Optionals Candidates",
+      "Essay Writers",
+      "Researchers"
+    ],
+    "whatIs": "Research Rabbit is a visual citation tool. Add a single seed paper or topic, and it generates interactive graphs showing co-citations, author networks, early foundational papers, and newly published follow-ups.",
+    "whyItMatters": "Aspirants preparing literature for specialized optionals (Economics, Sociology, Agriculture) can trace seminal theories and contemporary critiques in seconds.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Sign Up Free",
+        "desc": "Visit researchrabbit.ai and create a 100% free account."
+      },
+      {
+        "step": 2,
+        "title": "Add a Seed Paper",
+        "desc": "Search for a landmark paper (e.g. Amartya Sen's Poverty and Famines)."
+      },
+      {
+        "step": 3,
+        "title": "Explore Graph View",
+        "desc": "Click \"Similar Work\" or \"Earlier Work\" to see an interconnected network graph."
+      },
+      {
+        "step": 4,
+        "title": "Discover Follow-ups",
+        "desc": "Identify which recent papers have cited this work to understand current debates."
+      },
+      {
+        "step": 5,
+        "title": "Sync with Zotero",
+        "desc": "Export all discovered papers directly to reference managers for bibliography building."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Land Reform Studies",
+        "text": "Map the most cited academic papers analyzing the economic impact of Maharashtra's Land Ceiling and tenancy reforms."
+      },
+      {
+        "title": "Sociology Caste Dynamics",
+        "text": "Discover foundational sociological studies on mobility, Sanskritization, and subaltern assertions in Western India."
+      }
+    ],
+    "limitations": "Primarily designed for academic discovery rather than generating direct text answers.",
+    "relatedSlugs": [
+      "connected-papers",
+      "scispace",
+      "semantic-scholar"
+    ]
+  },
+  {
+    "slug": "open-knowledge-maps",
+    "name": "Open Knowledge Maps",
+    "tagline": "Visual discovery engine for scientific knowledge and open-access publications.",
+    "category": "Research",
+    "badge": "🌐 100% Open Access",
+    "free": true,
+    "url": "https://openknowledgemaps.org",
+    "logo": "account_tree",
+    "targetUsers": [
+      "Public Policy Aspirants",
+      "Open Science Advocates",
+      "Students",
+      "Self Learners"
+    ],
+    "whatIs": "Open Knowledge Maps is a non-profit open-access tool that presents scientific literature as topic clusters and visual topical maps based on PubMed and BASE datasets, highlighting key open-access papers instantly.",
+    "whyItMatters": "Provides an instant bird's-eye view of scientific fields like groundwater depletion, organic farming, or cyber governance without getting lost in search results.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit Open Knowledge Maps",
+        "desc": "Go to openknowledgemaps.org (no account or payment required)."
+      },
+      {
+        "step": 2,
+        "title": "Enter Search Topic",
+        "desc": "Search topics like \"Artificial Intelligence in Healthcare India\" or \"Water Crisis Maharashtra\"."
+      },
+      {
+        "step": 3,
+        "title": "Explore Topic Bubbles",
+        "desc": "Click on themed visual bubbles representing sub-disciplines and research clusters."
+      },
+      {
+        "step": 4,
+        "title": "Access Open PDFs",
+        "desc": "Click any paper card inside the bubble to read or download full open-access PDFs."
+      },
+      {
+        "step": 5,
+        "title": "Save Topic Map",
+        "desc": "Bookmark or download the interactive map for your long-term research file."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Renewable Energy Grid",
+        "text": "Generate a visual overview of recent research on battery energy storage systems (BESS) and grid stability in developing economies."
+      },
+      {
+        "title": "Malnutrition Interventions",
+        "text": "Map open-access research on maternal and child malnutrition interventions in tribal districts of India."
+      }
+    ],
+    "limitations": "Focuses strictly on open-access and scientific repository papers; does not index paywalled commercial journals.",
+    "relatedSlugs": [
+      "research-rabbit",
+      "connected-papers",
+      "consensus"
+    ]
+  },
+  {
+    "slug": "quizlet-qchat",
+    "name": "Quizlet Q-Chat",
+    "tagline": "AI Socratic tutor that tests, quizzes, and reinforces your knowledge on flashcard decks.",
+    "category": "Study",
+    "badge": "🎯 Socratic Tutor",
+    "free": true,
+    "url": "https://quizlet.com",
+    "logo": "quiz",
+    "targetUsers": [
+      "MPSC Pre Candidates",
+      "Police Bharti Aspirants",
+      "SSC CGL Students",
+      "Language Learners"
+    ],
+    "whatIs": "Quizlet's Q-Chat is an AI tutor built into the Quizlet flashcard ecosystem. Instead of passive card flipping, Q-Chat asks you Socratic questions, adapts to your mistakes, and provides hints until you master the concept.",
+    "whyItMatters": "Tests active recall on Marathi grammar rules, English vocabulary, Indian geography capitals, and national parks through engaging conversational quizzes.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Flashcard Set",
+        "desc": "Log in to quizlet.com and select any exam revision flashcard deck."
+      },
+      {
+        "step": 2,
+        "title": "Launch Q-Chat",
+        "desc": "Click the \"Q-Chat\" icon on the study activity menu."
+      },
+      {
+        "step": 3,
+        "title": "Choose Practice Mode",
+        "desc": "Select \"Quiz me\", \"Teach me\", or \"Apply my knowledge in a story\"."
+      },
+      {
+        "step": 4,
+        "title": "Answer Socratic Prompts",
+        "desc": "Respond to conversational questions; if you get it wrong, Q-Chat provides clues."
+      },
+      {
+        "step": 5,
+        "title": "Review Weak Cards",
+        "desc": "Q-Chat automatically flags terms you struggled with for targeted re-drilling."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Marathi Grammar Drill",
+        "text": "Quiz me on Marathi Sandhi (संधी) rules and types with 5 challenging examples, explaining the vowel combination in each."
+      },
+      {
+        "title": "Polity Amendments Quiz",
+        "text": "Test my knowledge on major Constitutional Amendments (42nd, 44th, 73rd, 86th, 101st) through interactive scenario questions."
+      }
+    ],
+    "limitations": "Free Quizlet tier includes daily Q-Chat study sessions; unlimited access requires Quizlet Plus.",
+    "relatedSlugs": [
+      "anki",
+      "khanmigo",
+      "socratic"
+    ]
+  },
+  {
+    "slug": "socratic",
+    "name": "Socratic by Google",
+    "tagline": "Visual homework solver and fundamental concept explainer powered by Google AI.",
+    "category": "Study",
+    "badge": "📱 Mobile Learning",
+    "free": true,
+    "url": "https://socratic.org",
+    "logo": "lightbulb",
+    "targetUsers": [
+      "School & College Students",
+      "Talathi Candidates",
+      "Constable Aspirants",
+      "Self Learners"
+    ],
+    "whatIs": "Socratic by Google uses optical character recognition and voice AI to analyze textbook questions, equations, and diagrams, instantly connecting students to curated explainers, animations, and step-by-step solutions.",
+    "whyItMatters": "Enables rural and Marathi-medium aspirants to photograph difficult science or math problems and receive immediate visual breakdowns for free.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Download Socratic App",
+        "desc": "Download Socratic by Google on Android or iOS (100% completely free, no ads)."
+      },
+      {
+        "step": 2,
+        "title": "Snap Photo of Question",
+        "desc": "Take a picture of any printed math equation, physics problem, or biology diagram."
+      },
+      {
+        "step": 3,
+        "title": "Crop & Confirm",
+        "desc": "Adjust crop handles around the exact question text."
+      },
+      {
+        "step": 4,
+        "title": "View Visual Breakdown",
+        "desc": "Socratic displays step-by-step mathematical solutions, visual cards, and YouTube explainers."
+      },
+      {
+        "step": 5,
+        "title": "Explore Concept Tree",
+        "desc": "Scroll through foundational underlying concepts to master why the answer works."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Quadratic Equation Solver",
+        "text": "Solve 2x^2 + 5x - 12 = 0 by factorization method, showing intermediate split terms clearly."
+      },
+      {
+        "title": "Physics Optics Ray Diagram",
+        "text": "Explain image formation by a concave mirror when the object is placed between focus and center of curvature."
+      }
+    ],
+    "limitations": "Primarily mobile-first app experience. Best for high school and general foundational science/math concepts.",
+    "relatedSlugs": [
+      "photomath",
+      "mathway",
+      "wolfram-alpha"
+    ]
+  },
+  {
+    "slug": "tome",
+    "name": "Tome AI",
+    "tagline": "Generative storytelling and presentation builder for executive briefings.",
+    "category": "Presentation",
+    "badge": "📊 Executive Slides",
+    "free": true,
+    "url": "https://tome.app",
+    "logo": "slideshow",
+    "targetUsers": [
+      "Interview Candidates",
+      "Project Presenters",
+      "Educators",
+      "Administrators"
+    ],
+    "whatIs": "Tome turns any outline, policy document, or topic prompt into a visually captivating, multi-page slide deck complete with AI-generated narrative copy, titles, and illustrative imagery.",
+    "whyItMatters": "Great for preparing administrative case study decks, interview presentations, and public seminar slides in under 2 minutes.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Tome.app",
+        "desc": "Sign in to tome.app with free starter credits."
+      },
+      {
+        "step": 2,
+        "title": "Type Prompt Command",
+        "desc": "Click \"Create\" and type: \"Create a presentation on Maharashtra Smart Cities Mission milestones and challenges\"."
+      },
+      {
+        "step": 3,
+        "title": "Review Generated Outline",
+        "desc": "Tome generates an 8-slide outline with titles and structure."
+      },
+      {
+        "step": 4,
+        "title": "Generate Full Deck",
+        "desc": "Click generate; Tome builds slides with paragraphs, headers, and AI visuals."
+      },
+      {
+        "step": 5,
+        "title": "Customize & Present",
+        "desc": "Adjust text, replace visuals with official charts, and present in full-screen mode."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Administrative Reform Deck",
+        "text": "Create a 6-slide presentation on \"Digital Governance in Maharashtra: Aaple Sarkar Portal impact on citizen service delivery\"."
+      },
+      {
+        "title": "Disaster Management Plan",
+        "text": "Generate an executive slide deck detailing standard operating procedures for coastal cyclone preparedness and evacuation."
+      }
+    ],
+    "limitations": "Free plan uses starter credit allocation. Exporting to PDF requires Pro tier on newer Tome plans.",
+    "relatedSlugs": [
+      "gamma",
+      "napkin",
+      "beautiful-ai"
+    ]
+  },
+  {
+    "slug": "decktopus",
+    "name": "Decktopus AI",
+    "tagline": "Instant presentation generator with tailored layouts, speaker notes, and scripts.",
+    "category": "Presentation",
+    "badge": "🎙️ Speaker Notes",
+    "free": true,
+    "url": "https://www.decktopus.com",
+    "logo": "co_present",
+    "targetUsers": [
+      "Public Speakers",
+      "Mock Interviewees",
+      "Coaching Faculties",
+      "Students"
+    ],
+    "whatIs": "Decktopus AI asks for your presentation topic, audience, and objective, then automatically produces complete slides with custom layouts, talking points, and timed speaker notes for each slide.",
+    "whyItMatters": "Helps aspirants and teachers structure mock interview briefings, lecture webinars, and study group sessions with professional visual hierarchy.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Start with Topic",
+        "desc": "Go to decktopus.com and enter your topic title."
+      },
+      {
+        "step": 2,
+        "title": "Define Target Audience",
+        "desc": "Specify audience (e.g. \"Civil service aspirants\") and target duration (e.g. \"15 minutes\")."
+      },
+      {
+        "step": 3,
+        "title": "Pick Visual Theme",
+        "desc": "Choose a minimalist corporate or clean academic theme."
+      },
+      {
+        "step": 4,
+        "title": "Review Generated Slides",
+        "desc": "Decktopus builds slides with bullet points, icons, and automated speaker notes."
+      },
+      {
+        "step": 5,
+        "title": "Rehearse with Notes",
+        "desc": "Use speaker view to practice verbal delivery while reading AI-generated talking points."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Mock Interview Case Study",
+        "text": "Build an 8-slide deck presenting a comprehensive administrative strategy to tackle urban waterlogging in Mumbai."
+      },
+      {
+        "title": "Constitution Day Lecture",
+        "text": "Create a presentation on the making of the Indian Constitution, role of the Drafting Committee, and Preamble philosophy."
+      }
+    ],
+    "limitations": "Free tier limits the number of AI-generated slide decks and export formats.",
+    "relatedSlugs": [
+      "gamma",
+      "tome",
+      "piktochart"
+    ]
+  },
+  {
+    "slug": "wordtune",
+    "name": "Wordtune",
+    "tagline": "AI sentence rephraser, clarity enhancer, and formal tone transformer.",
+    "category": "Writing",
+    "badge": "✍️ Style Rephraser",
+    "free": true,
+    "url": "https://www.wordtune.com",
+    "logo": "edit_note",
+    "targetUsers": [
+      "English Paper Aspirants",
+      "Essay Writers",
+      "MPSC Mains Candidates",
+      "Job Applicants"
+    ],
+    "whatIs": "Wordtune analyzes your writing and offers alternative sentence structures with options to make it more casual, formal, shorter, or expanded, while preserving the original meaning.",
+    "whyItMatters": "Helps non-native English speakers elevate essays, formal administrative letters, and Mains answers to articulate, professional bureaucratic English.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Wordtune Editor",
+        "desc": "Visit wordtune.com or install the Chrome browser extension."
+      },
+      {
+        "step": 2,
+        "title": "Paste Your Draft",
+        "desc": "Paste your essay paragraph, SOP, or letter."
+      },
+      {
+        "step": 3,
+        "title": "Highlight Sentence",
+        "desc": "Select any sentence that feels clunky, repetitive, or informal."
+      },
+      {
+        "step": 4,
+        "title": "Click \"Formal\" or \"Shorten\"",
+        "desc": "Wordtune displays 5 alternative phrased versions with varied vocabulary."
+      },
+      {
+        "step": 5,
+        "title": "Select Best Fit",
+        "desc": "Click to replace the sentence with the refined, crisp formulation."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Elevate Mains Conclusion",
+        "text": "Rephrase this conclusion into formal administrative diction: \"So government should do something fast to stop farmers from having debts and make schemes reach them.\""
+      },
+      {
+        "title": "Formal Representation Tone",
+        "text": "Make this letter excerpt formal and respectful: \"I am writing this because your answer key has a mistake in question number 42 and my option is right.\""
+      }
+    ],
+    "limitations": "Free tier gives 10 daily rewrites and basic summaries. Unlimited rewrites require premium.",
+    "relatedSlugs": [
+      "quillbot",
+      "grammarly",
+      "hemingway"
+    ]
+  },
+  {
+    "slug": "rytr",
+    "name": "Rytr",
+    "tagline": "Fast, lightweight AI writing assistant for study notes, essays, and official emails.",
+    "category": "Writing",
+    "badge": "⚡ 10k Free Chars/Mo",
+    "free": true,
+    "url": "https://rytr.me",
+    "logo": "history_edu",
+    "targetUsers": [
+      "Content Writers",
+      "Aspirants",
+      "Email Drafters",
+      "Application Writers"
+    ],
+    "whatIs": "Rytr is an intuitive AI copywriting assistant supporting 30+ languages, 20+ tones of voice, and 40+ use-cases, from cover letters and blog posts to essay outlines and official communication.",
+    "whyItMatters": "Quickly draft formal RTI requests, representations to recruiting commissions, and essay introductions with balanced administrative vocabulary.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Rytr App",
+        "desc": "Sign up free at rytr.me (includes 10,000 characters free every month)."
+      },
+      {
+        "step": 2,
+        "title": "Select Language & Tone",
+        "desc": "Choose English, Marathi, or Hindi, and set tone to \"Formal\", \"Convincing\", or \"Informative\"."
+      },
+      {
+        "step": 3,
+        "title": "Choose Use Case",
+        "desc": "Select \"Blog Outline\", \"Email\", or \"Job Description\"."
+      },
+      {
+        "step": 4,
+        "title": "Provide Key Keywords",
+        "desc": "Input your topic: \"RTI application seeking cutoff marks for Talathi Exam 2023\"."
+      },
+      {
+        "step": 5,
+        "title": "Click Ryte for Me",
+        "desc": "Generate and edit the output in Rytr's rich-text document editor."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "RTI Application Draft",
+        "text": "Draft a formal Right to Information (RTI) application addressed to the Public Information Officer requesting certified copies of OMR answer sheets."
+      },
+      {
+        "title": "Essay Section Outline",
+        "text": "Generate an essay outline on \"Artificial Intelligence in Indian Agriculture: Opportunities, Ethics, and Rural Challenges\"."
+      }
+    ],
+    "limitations": "Free tier capped at 10,000 characters per month. Long-form book writing requires premium subscription.",
+    "relatedSlugs": [
+      "copy-ai",
+      "claude",
+      "quillbot"
+    ]
+  },
+  {
+    "slug": "hix-ai",
+    "name": "HIX.AI",
+    "tagline": "All-in-one AI writing copilot, academic summarizer, and multi-format document creator.",
+    "category": "Writing",
+    "badge": "🛠️ All-in-One Copilot",
+    "free": true,
+    "url": "https://hix.ai",
+    "logo": "article",
+    "targetUsers": [
+      "Essayists",
+      "Academic Writers",
+      "Researchers",
+      "Students"
+    ],
+    "whatIs": "HIX.AI provides 120+ specialized AI writing tools including long-form essay writers, grammar checkers, paraphrasers, and YouTube video summarizers in one unified interface.",
+    "whyItMatters": "Summarize 2-hour editorial discussions from YouTube or long gazette PDFs into crisp essay points and debate arguments.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit HIX.AI",
+        "desc": "Go to hix.ai and browse the 120+ AI writing tools available."
+      },
+      {
+        "step": 2,
+        "title": "Select Specific Tool",
+        "desc": "Pick \"Essay Writer\", \"Grammar Checker\", or \"YouTube Summarizer\"."
+      },
+      {
+        "step": 3,
+        "title": "Input Prompt or URL",
+        "desc": "Paste an editorial URL, video link, or raw essay draft."
+      },
+      {
+        "step": 4,
+        "title": "Generate Content",
+        "desc": "Get structured thesis statements, supporting arguments, and concluding remarks."
+      },
+      {
+        "step": 5,
+        "title": "Export & Proofread",
+        "desc": "Copy the proofread text directly into your notes or word processor."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Editorial Debate Summary",
+        "text": "Summarize the arguments for and against \"Simultaneous Elections (One Nation One Election)\" from a constitutional and federal perspective."
+      },
+      {
+        "title": "Academic Grammar Polish",
+        "text": "Proofread and polish this 250-word answer on Judicial Activism vs Judicial Overreach, fixing syntax and ensuring formal academic prose."
+      }
+    ],
+    "limitations": "Free plan provides basic words credit per week. Advanced GPT-4o output requires premium credits.",
+    "relatedSlugs": [
+      "quillbot",
+      "copy-ai",
+      "hemingway"
+    ]
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "tagline": "Automated meeting, lecture, and discussion transcription with AI summaries.",
+    "category": "Productivity",
+    "badge": "🎙️ Voice Transcriber",
+    "free": true,
+    "url": "https://fireflies.ai",
+    "logo": "graphic_eq",
+    "targetUsers": [
+      "Group Study Circles",
+      "Online Webinar Students",
+      "Coaching Batches",
+      "Professionals"
+    ],
+    "whatIs": "Fireflies.ai connects to Google Meet, Zoom, and Teams to automatically record, transcribe, and summarize audio discussions, identifying key action items, topic timestamps, and speaker sentiments.",
+    "whyItMatters": "Record online peer study circle discussions or coaching lectures and receive complete, searchable transcripts with key bullet points automatically.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Connect Fireflies",
+        "desc": "Sign up at fireflies.ai with Google/Outlook account."
+      },
+      {
+        "step": 2,
+        "title": "Invite Bot to Call",
+        "desc": "Add fred@fireflies.ai to your Google Meet or Zoom study group calendar invite."
+      },
+      {
+        "step": 3,
+        "title": "Hold Study Session",
+        "desc": "Conduct your 1-hour peer revision session naturally as Fireflies records."
+      },
+      {
+        "step": 4,
+        "title": "Review Auto-Summary",
+        "desc": "Within 5 minutes of call completion, view full transcript, bullet summary, and action items."
+      },
+      {
+        "step": 5,
+        "title": "Search Audio by Keyword",
+        "desc": "Search for terms like \"Article 21\" to jump to the exact audio second it was discussed."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Study Circle Summary",
+        "text": "Generate an executive summary of this study call, listing all topics discussed, doubts raised, and chapters assigned for tomorrow."
+      },
+      {
+        "title": "Action Item Extraction",
+        "text": "Extract all study deadlines, mock test targets, and syllabus milestones mentioned by members during the session."
+      }
+    ],
+    "limitations": "Free tier includes 800 minutes of storage and limited AI summary credits per month.",
+    "relatedSlugs": [
+      "otter",
+      "tldv",
+      "fathom"
+    ]
+  },
+  {
+    "slug": "fathom",
+    "name": "Fathom AI",
+    "tagline": "Free AI meeting recorder that highlights, transcribes, and summarizes online sessions.",
+    "category": "Productivity",
+    "badge": "⭐ 100% Free Recorder",
+    "free": true,
+    "url": "https://fathom.video",
+    "logo": "videocam",
+    "targetUsers": [
+      "Online Coaching Students",
+      "Mentors",
+      "Study Groups",
+      "Interviewees"
+    ],
+    "whatIs": "Fathom is a meeting copilot that records, transcribes, and generates instant actionable summaries for Zoom, Meet, and Teams calls with zero transcription limits on its free tier.",
+    "whyItMatters": "Allows aspirants to participate in live masterclasses and mock interview debriefs without wasting time manually jotting down notes.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Install Fathom App",
+        "desc": "Install Fathom on your desktop or browser from fathom.video."
+      },
+      {
+        "step": 2,
+        "title": "Start Online Class",
+        "desc": "Click \"Record\" when joining your Zoom or Google Meet coaching session."
+      },
+      {
+        "step": 3,
+        "title": "Click \"Highlight\" During Lecture",
+        "desc": "Press the highlight button whenever the teacher shares an important exam tip."
+      },
+      {
+        "step": 4,
+        "title": "Instant Summary Generated",
+        "desc": "The moment the call ends, get a structured summary divided by topics with timestamp links."
+      },
+      {
+        "step": 5,
+        "title": "Share with Batchmates",
+        "desc": "Copy a clean summary link to share with your study group or save in Google Docs."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Lecture Key Takeaways",
+        "text": "Summarize the teacher's key takeaways from this Indian Economy session, focusing on Inflation metrics and RBI monetary policy tools."
+      },
+      {
+        "title": "Mock Interview Feedback Log",
+        "text": "Transcribe and organize the interviewer's feedback into: Strengths, Areas for Improvement, and Recommended Books."
+      }
+    ],
+    "limitations": "Desktop app must be running during calls. Unlimited transcription is free for personal use.",
+    "relatedSlugs": [
+      "fireflies",
+      "tldv",
+      "otter"
+    ]
+  },
+  {
+    "slug": "harpa-ai",
+    "name": "HARPA AI",
+    "tagline": "Hybrid AI browser automation agent, page monitor, and web summarizer.",
+    "category": "Productivity",
+    "badge": "🤖 Browser Automation",
+    "free": true,
+    "url": "https://harpa.ai",
+    "logo": "smart_toy",
+    "targetUsers": [
+      "Alert Seekers",
+      "Researchers",
+      "Competitive Candidates",
+      "Web Power Users"
+    ],
+    "whatIs": "HARPA AI is a Chrome extension that blends web automation with AI. It can track government portal pages for notification changes, summarize articles, extract tables into Excel, and write auto-replies.",
+    "whyItMatters": "Track official commission websites (MPSC, SSC, Police) for new PDF uploads or merit list releases and receive instant browser notifications.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Install HARPA Extension",
+        "desc": "Add HARPA AI extension to Google Chrome or Brave browser."
+      },
+      {
+        "step": 2,
+        "title": "Open Government Portal",
+        "desc": "Navigate to an official exam notification page (e.g. mpsc.gov.in)."
+      },
+      {
+        "step": 3,
+        "title": "Set Page Monitor",
+        "desc": "Type /monitor and select the notification table to check for updates every 30 minutes."
+      },
+      {
+        "step": 4,
+        "title": "Summarize Web Articles",
+        "desc": "On any editorial, press Alt+A and type /summary to get 5 bullet point insights."
+      },
+      {
+        "step": 5,
+        "title": "Extract Tables to Sheets",
+        "desc": "Use /extract to convert HTML merit list tables directly into copyable CSV format."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Track Result Notification",
+        "text": "Monitor this portal section for any new row containing \"Result\" or \"Merit List\", and alert me when the HTML content changes."
+      },
+      {
+        "title": "Editorial 3-Minute Brief",
+        "text": "Extract the central thesis, supporting empirical data, and policy recommendations from this 2000-word editorial."
+      }
+    ],
+    "limitations": "Runs locally in your desktop browser; browser must remain open for periodic page monitoring tasks.",
+    "relatedSlugs": [
+      "monica",
+      "sider",
+      "notion-ai"
+    ]
+  },
+  {
+    "slug": "monica",
+    "name": "Monica AI",
+    "tagline": "All-in-one AI copilot sidebar for chatting with web pages, PDFs, and videos.",
+    "category": "Productivity",
+    "badge": "🌐 Universal Sidebar",
+    "free": true,
+    "url": "https://monica.im",
+    "logo": "splitscreen",
+    "targetUsers": [
+      "Online Researchers",
+      "Speed Readers",
+      "Students",
+      "General Aspirants"
+    ],
+    "whatIs": "Monica is a browser sidebar powered by leading AI models (Claude, GPT, Gemini) that allows you to chat with any open webpage, highlight foreign words for instant translation, and summarize PDFs on the fly.",
+    "whyItMatters": "Read English The Hindu or Indian Express editorials with inline translations into Marathi and instant contextual definitions of legal terms.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Install Extension",
+        "desc": "Install Monica from monica.im on Chrome or Edge."
+      },
+      {
+        "step": 2,
+        "title": "Hit Shortcut",
+        "desc": "Press Ctrl+M (or Cmd+M on Mac) on any webpage to bring up the sidebar."
+      },
+      {
+        "step": 3,
+        "title": "Chat With Page",
+        "desc": "Click \"Chat with this page\" to ask questions about the current article without copying text."
+      },
+      {
+        "step": 4,
+        "title": "Summarize YouTube Videos",
+        "desc": "Open any educational lecture video and click Monica's \"Summarize Video\" button."
+      },
+      {
+        "step": 5,
+        "title": "Translate Complex Sentences",
+        "desc": "Highlight difficult sentences to get nuanced bilingual translations in Marathi or Hindi."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Explain Gazette Clause",
+        "text": "What are the exact eligibility criteria, cutoff age dates, and application fee waivers stated on this government webpage?"
+      },
+      {
+        "title": "Editorial Counter-Arguments",
+        "text": "What counter-arguments could an opponent raise against the author's stance in this editorial column?"
+      }
+    ],
+    "limitations": "Free tier provides daily free AI credits. Advanced Claude 3.5 Sonnet queries consume more credits.",
+    "relatedSlugs": [
+      "sider",
+      "harpa-ai",
+      "perplexity"
+    ]
+  },
+  {
+    "slug": "sider",
+    "name": "Sider AI",
+    "tagline": "Browser sidebar assistant integrating ChatGPT, Claude, and Gemini for instant reading.",
+    "category": "Productivity",
+    "badge": "📑 Multimodel Sidebar",
+    "free": true,
+    "url": "https://sider.ai",
+    "logo": "side_navigation",
+    "targetUsers": [
+      "Daily Readers",
+      "Editorial Analyzers",
+      "College Students",
+      "Job Seekers"
+    ],
+    "whatIs": "Sider embeds a multi-model AI sidebar directly into Chrome/Edge. It allows users to explain, summarize, translate, or rewrite text from any webpage without leaving their current tab.",
+    "whyItMatters": "Analyze complex government statistical tables and press releases while reading them on PIB or RBI portals.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Add to Chrome",
+        "desc": "Install Sider from the Chrome Web Store via sider.ai."
+      },
+      {
+        "step": 2,
+        "title": "Choose AI Engine",
+        "desc": "Switch between ChatGPT 4o-mini, Claude 3.5 Haiku, or Gemini 1.5 in one unified sidebar."
+      },
+      {
+        "step": 3,
+        "title": "Select Text for Quick Bar",
+        "desc": "Highlight any text to see instant floating buttons: Explain, Translate, Grammar, Rephrase."
+      },
+      {
+        "step": 4,
+        "title": "Chat with Uploaded PDFs",
+        "desc": "Drop syllabus or PYQ PDF directly into the sidebar to query questions."
+      },
+      {
+        "step": 5,
+        "title": "Compare Responses",
+        "desc": "Use multi-model compare to see how two different models answer the same analytical prompt."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "PIB Press Release Digest",
+        "text": "Break down this PIB cabinet decision release into: 1) Scheme Name, 2) Ministry, 3) Outlay Budget, 4) Target Beneficiaries."
+      },
+      {
+        "title": "Legal Term Clarifier",
+        "text": "Define the legal term \"Certiorari\" and explain how it differs from \"Prohibition\" with real-world constitutional exam examples."
+      }
+    ],
+    "limitations": "Free plan has 30 daily basic query credits. Heavy daily users may need to upgrade.",
+    "relatedSlugs": [
+      "monica",
+      "harpa-ai",
+      "chatgpt"
+    ]
+  },
+  {
+    "slug": "humata",
+    "name": "Humata AI",
+    "tagline": "Chat with complex documents, technical gazettes, and legal acts with instant citations.",
+    "category": "Study",
+    "badge": "📄 Document Intel",
+    "free": true,
+    "url": "https://www.humata.ai",
+    "logo": "description",
+    "targetUsers": [
+      "Law Students",
+      "UPSC Law Optional",
+      "MPSC Aspirants",
+      "Govt Policy Analysts"
+    ],
+    "whatIs": "Humata AI lets you upload complex PDFs (up to 60 pages free) and ask natural language questions. It quotes the exact page, highlights clauses, and writes syntheses 10x faster.",
+    "whyItMatters": "Navigate dense 200-page Acts (e.g. RTI Act, Bharatiya Nyaya Sanhita, Maharashtra Land Revenue Code) and pinpoint penalties, definitions, and exceptions instantly.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Go to Humata.ai",
+        "desc": "Sign in to humata.ai with a free account."
+      },
+      {
+        "step": 2,
+        "title": "Upload Government Act PDF",
+        "desc": "Upload statutory acts, departmental gazettes, or court judgments."
+      },
+      {
+        "step": 3,
+        "title": "Ask Questions",
+        "desc": "Type queries like: \"What are the penal provisions for non-compliance under Section 19?\"."
+      },
+      {
+        "step": 4,
+        "title": "View Direct Page Quotes",
+        "desc": "Humata highlights the exact sentence on the PDF page proving the answer."
+      },
+      {
+        "step": 5,
+        "title": "Export Summaries",
+        "desc": "Generate section-by-section study notes and export to your revision binder."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Statutory Act Query",
+        "text": "What exceptions to disclosure are provided under Section 8 of the Right to Information Act 2005? List with sub-clauses."
+      },
+      {
+        "title": "Govt Resolution (GR) Summary",
+        "text": "What is the date of implementation and which government departments are bound by this Government Resolution (GR)?"
+      }
+    ],
+    "limitations": "Free account allows documents up to 60 pages and 60 questions per month.",
+    "relatedSlugs": [
+      "chatpdf",
+      "notebooklm",
+      "pdf-gear"
+    ]
+  },
+  {
+    "slug": "pdf-gear",
+    "name": "PDFgear AI",
+    "tagline": "100% free full-featured PDF editor and AI Copilot with zero page limits.",
+    "category": "Study",
+    "badge": "💯 100% Free / No Limits",
+    "free": true,
+    "url": "https://www.pdfgear.com",
+    "logo": "picture_as_pdf",
+    "targetUsers": [
+      "All Aspirants",
+      "Government Staff",
+      "College Students",
+      "Self Learners"
+    ],
+    "whatIs": "PDFgear is a completely free Windows/Mac/Web PDF editor that includes an integrated GPT-powered AI Copilot. Unlike online tools with strict 5-page limits, PDFgear chats with whole textbooks without subscriptions.",
+    "whyItMatters": "A rare genuinely free, watermark-free tool for highlighting, annotating, merging, and AI-querying 500-page Laxmikanth or NCERT textbooks.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Download PDFgear",
+        "desc": "Download free from pdfgear.com for Windows, Mac, or iOS."
+      },
+      {
+        "step": 2,
+        "title": "Open Any Large PDF",
+        "desc": "Open complete 400-page textbooks, PYQ books, or compilations."
+      },
+      {
+        "step": 3,
+        "title": "Open Copilot Sidebar",
+        "desc": "Click the \"Chat with PDF\" icon in the right sidebar."
+      },
+      {
+        "step": 4,
+        "title": "Ask Any Concept",
+        "desc": "Ask: \"Summarize Chapter 14 on Center-State Relations into 5 main bullet points\"."
+      },
+      {
+        "step": 5,
+        "title": "Edit & Annotate",
+        "desc": "Highlight text, add sticky notes, and compress PDF directly in the same window."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Chapter Summary",
+        "text": "Summarize the core themes and key conclusions of Chapter 3 in this textbook with reference page numbers."
+      },
+      {
+        "title": "Extract MCQ Questions",
+        "text": "Generate 15 challenging multiple choice questions based on the uploaded history chapter with answer keys."
+      }
+    ],
+    "limitations": "Completely free with no paywall, but requires desktop app download for processing large multi-hundred-page files offline.",
+    "relatedSlugs": [
+      "chatpdf",
+      "notebooklm",
+      "humata"
+    ]
+  },
+  {
+    "slug": "resume-worded",
+    "name": "Resume Worded",
+    "tagline": "AI resume and LinkedIn scoring platform with recruiter feedback and ATS insights.",
+    "category": "Career",
+    "badge": "🎯 ATS Resume Score",
+    "free": true,
+    "url": "https://resumeworded.com",
+    "logo": "badge",
+    "targetUsers": [
+      "Corporate Job Seekers",
+      "Banking Aspirants",
+      "Engineering Graduates",
+      "Career Changers"
+    ],
+    "whatIs": "Resume Worded grades your CV against 50+ ATS metrics (action verbs, quantifiable metrics, formatting, bullet point strength) and suggests line-by-line rewrites based on top recruiter datasets.",
+    "whyItMatters": "Essential for candidates applying to PSU management trainee positions, private sector backups, and IT specialist roles.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Upload Resume PDF",
+        "desc": "Go to resumeworded.com and upload your current resume in PDF format."
+      },
+      {
+        "step": 2,
+        "title": "Get Instant Score (0-100)",
+        "desc": "View your overall ATS compatibility score and category breakdown."
+      },
+      {
+        "step": 3,
+        "title": "Review Bullet Point Critiques",
+        "desc": "Identify weak bullet points that lack metrics (e.g. \"managed project\" vs \"managed 5 engineers to deliver 15% faster\")."
+      },
+      {
+        "step": 4,
+        "title": "Apply Sample Rewrites",
+        "desc": "Browse hundreds of recruiter-written bullet point formulas for your specific field."
+      },
+      {
+        "step": 5,
+        "title": "Re-upload to Verify",
+        "desc": "Re-upload your updated resume to confirm your score exceeds 80+."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Bullet Point Quantifier",
+        "text": "Rewrite this resume line with strong action verbs and quantifiable metrics: \"Worked on state scholarship distribution portal and solved student complaints.\""
+      },
+      {
+        "title": "PSU Application Summary",
+        "text": "Draft a professional 3-sentence summary for a Mechanical Engineer applying for BHEL / IOCL Management Trainee position."
+      }
+    ],
+    "limitations": "Free account provides comprehensive resume score and high-priority fixes; full line-by-line rewrite library requires Pro.",
+    "relatedSlugs": [
+      "kickresume",
+      "enhancv",
+      "linkedin-ai"
+    ]
+  },
+  {
+    "slug": "enhancv",
+    "name": "Enhancv AI",
+    "tagline": "Modern resume and CV builder with AI content suggestions and sleek layouts.",
+    "category": "Career",
+    "badge": "👔 Visual CV",
+    "free": true,
+    "url": "https://enhancv.com",
+    "logo": "contact_page",
+    "targetUsers": [
+      "Graduates",
+      "Civil Service Interviewees",
+      "Career Starters",
+      "Executives"
+    ],
+    "whatIs": "Enhancv helps candidates craft visually impressive, professional resumes with AI-assisted phrasing, skill highlights, and recruiter-approved modern templates.",
+    "whyItMatters": "Create polished Detailed Application Forms (DAF) summaries, bio-data profiles for commission interviews, and corporate backup CVs.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Select Modern Template",
+        "desc": "Visit enhancv.com and choose from contemporary, clean resume layouts."
+      },
+      {
+        "step": 2,
+        "title": "Input Education & Experience",
+        "desc": "Fill in your academic degrees, graduation projects, and competitive exams qualified."
+      },
+      {
+        "step": 3,
+        "title": "Use AI Content Generator",
+        "desc": "Click AI Suggest to automatically craft impactful job descriptions based on your role."
+      },
+      {
+        "step": 4,
+        "title": "Add Personal Character Section",
+        "desc": "Add sections for \"Core Philosophy\", \"Books That Shaped Me\", or \"Proudest Achievement\"."
+      },
+      {
+        "step": 5,
+        "title": "Export ATS-Ready PDF",
+        "desc": "Download a clean, machine-readable PDF for job portals and interview panels."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Interview Bio-Data Summary",
+        "text": "Write a compelling 60-word professional bio for an MPSC interview candidate with a Computer Engineering degree and passion for rural digital literacy."
+      },
+      {
+        "title": "Extracurricular Achievement Phrasing",
+        "text": "Phrase participation in NSS (National Service Scheme) rural village development camp as a leadership achievement on a CV."
+      }
+    ],
+    "limitations": "Free version allows building and downloading basic resume with small Enhancv branding footer.",
+    "relatedSlugs": [
+      "kickresume",
+      "resume-worded",
+      "canva"
+    ]
+  },
+  {
+    "slug": "flowgpt",
+    "name": "FlowGPT",
+    "tagline": "Global prompt community and interactive AI bots for learning, coding, and exam prep.",
+    "category": "AI Hub",
+    "badge": "🌐 Prompt Library",
+    "free": true,
+    "url": "https://flowgpt.com",
+    "logo": "hub",
+    "targetUsers": [
+      "Prompt Engineers",
+      "Self Learners",
+      "Aspirants",
+      "Creatives"
+    ],
+    "whatIs": "FlowGPT is one of the world's largest open prompt-sharing platforms where millions of users test, share, and chat with specialized AI personas, from UPSC Socratic examiners to language tutors.",
+    "whyItMatters": "Access hundreds of ready-to-run prompt templates specifically created for competitive exam interview practice, syllabus pacing, and essay critique.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit FlowGPT",
+        "desc": "Navigate to flowgpt.com and explore top trending prompts for education."
+      },
+      {
+        "step": 2,
+        "title": "Search Exam Bots",
+        "desc": "Search for \"UPSC\", \"MPSC\", \"History Tutor\", or \"Math Coach\"."
+      },
+      {
+        "step": 3,
+        "title": "Chat Directly in Browser",
+        "desc": "Interact with community-crafted AI agents directly inside FlowGPT's chat interface."
+      },
+      {
+        "step": 4,
+        "title": "Copy Prompt Template",
+        "desc": "Click \"Copy Prompt\" to use the specialized instructions inside your own ChatGPT or Claude."
+      },
+      {
+        "step": 5,
+        "title": "Save to Favorites",
+        "desc": "Bookmark high-yield study prompts to your personal library for quick daily practice."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Strict UPSC Interviewer Persona",
+        "text": "Act as a senior UPSC board chairman. Grill me on my decision to pursue civil services after an engineering degree. Be skeptical, concise, and challenge every justification."
+      },
+      {
+        "title": "Socratic History Debate",
+        "text": "Engage me in a Socratic dialogue examining whether the 1857 revolt was a sepoy mutiny or the first war of Indian independence."
+      }
+    ],
+    "limitations": "Community-submitted prompts vary in quality; always verify factual assertions independently.",
+    "relatedSlugs": [
+      "poe",
+      "chatgpt",
+      "claude"
+    ]
+  },
+  {
+    "slug": "claude-artifacts",
+    "name": "Claude Artifacts",
+    "tagline": "Interactive sandboxed UI, study flashcard apps, and dynamic charts inside AI chat.",
+    "category": "Productivity",
+    "badge": "⚡ Interactive Apps",
+    "free": true,
+    "url": "https://claude.ai",
+    "logo": "developer_board",
+    "targetUsers": [
+      "Visual Learners",
+      "Educators",
+      "Developers",
+      "Aspirants"
+    ],
+    "whatIs": "Claude Artifacts by Anthropic lets users generate interactive React components, SVG diagrams, flashcard mini-apps, and timelines in a dedicated side-by-side interactive window alongside chat.",
+    "whyItMatters": "Ask Claude to \"create an interactive timeline of Indian freedom struggle\" or \"a formula calculator for simple and compound interest\" and run the app right inside your browser.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Claude.ai",
+        "desc": "Sign in to claude.ai with free tier access."
+      },
+      {
+        "step": 2,
+        "title": "Request Interactive Artifact",
+        "desc": "Ask: \"Create an interactive flashcard quiz app in React to test the Fundamental Rights of Indian Constitution\"."
+      },
+      {
+        "step": 3,
+        "title": "View Side-by-Side Window",
+        "desc": "Claude displays the live, clickable application in the right Artifacts pane."
+      },
+      {
+        "step": 4,
+        "title": "Interact & Test",
+        "desc": "Click through cards, submit answers, and test your knowledge directly inside the chat window."
+      },
+      {
+        "step": 5,
+        "title": "Copy Code or Remix",
+        "desc": "Copy the complete React/HTML code or ask Claude to add timer and score counter features."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Interactive Timeline App",
+        "text": "Create an interactive React timeline of the Indian National Movement from 1885 to 1947. Clicking any event should show key leaders and historical significance."
+      },
+      {
+        "title": "CSAT Speed Math Trainer",
+        "text": "Build an interactive web app that flashes 2-digit multiplication problems with a 10-second countdown timer and score tracker."
+      }
+    ],
+    "limitations": "Free tier has daily message limits on Claude.ai based on server demand.",
+    "relatedSlugs": [
+      "claude",
+      "v0",
+      "bolt"
+    ]
   }
 ]
 
@@ -3697,6 +5527,75 @@ const SLUG_ALIASES = {
   runwayml: 'runway',
   'runway-ml': 'runway',
   'runway-ai': 'runway',
+
+  // Added 30 Free AI Tools Aliases
+  'sunoai': 'suno',
+  'suno-ai': 'suno',
+  'kreaai': 'krea',
+  'krea-ai': 'krea',
+  'recraftai': 'recraft',
+  'recraft-ai': 'recraft',
+  'leonardoai': 'leonardo',
+  'leonardo-ai': 'leonardo',
+  'qwen-ai': 'qwen',
+  'qwen2': 'qwen',
+  'qwen-2-5': 'qwen',
+  'qwenlm': 'qwen',
+  'cohere-ai': 'cohere-coral',
+  'cohere': 'cohere-coral',
+  'coral': 'cohere-coral',
+  'blackbox': 'blackbox-ai',
+  'black-box': 'blackbox-ai',
+  'tabnineai': 'tabnine',
+  'tab-nine': 'tabnine',
+  'you': 'you-com',
+  'you-ai': 'you-com',
+  'youcom': 'you-com',
+  'typeset': 'scispace',
+  'typeset-io': 'scispace',
+  'sci-space': 'scispace',
+  'researchrabbit': 'research-rabbit',
+  'research-rabbit-ai': 'research-rabbit',
+  'openknowledgemaps': 'open-knowledge-maps',
+  'okmaps': 'open-knowledge-maps',
+  'qchat': 'quizlet-qchat',
+  'q-chat': 'quizlet-qchat',
+  'quizlet': 'quizlet-qchat',
+  'socratic-ai': 'socratic',
+  'socratic-by-google': 'socratic',
+  'tome-app': 'tome',
+  'tomeai': 'tome',
+  'tome-ai': 'tome',
+  'decktopusai': 'decktopus',
+  'decktopus-ai': 'decktopus',
+  'word-tune': 'wordtune',
+  'wordtuneai': 'wordtune',
+  'rytrai': 'rytr',
+  'rytr-ai': 'rytr',
+  'hix': 'hix-ai',
+  'hix-app': 'hix-ai',
+  'firefliesai': 'fireflies',
+  'fireflies-ai': 'fireflies',
+  'fathomai': 'fathom',
+  'fathom-ai': 'fathom',
+  'harpa': 'harpa-ai',
+  'harpa-extension': 'harpa-ai',
+  'monicaai': 'monica',
+  'monica-ai': 'monica',
+  'siderai': 'sider',
+  'sider-ai': 'sider',
+  'humataai': 'humata',
+  'humata-ai': 'humata',
+  'pdfgear': 'pdf-gear',
+  'pdf-gear-ai': 'pdf-gear',
+  'resumeworded': 'resume-worded',
+  'resume-worded-ai': 'resume-worded',
+  'enhancvai': 'enhancv',
+  'enhancv-ai': 'enhancv',
+  'flow_gpt': 'flowgpt',
+  'flow-gpt': 'flowgpt',
+  'artifacts': 'claude-artifacts',
+  'claude-artifact': 'claude-artifacts',
 }
 
 // Helper: get a tool by slug (with case-insensitivity and alias resolution)
@@ -3728,3 +5627,4 @@ export const AI_TOOL_CATEGORIES = [
   'AI Hub',
   'Career',
 ]
+

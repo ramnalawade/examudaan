@@ -52,9 +52,6 @@ export const metadata = {
     'ZP bharti', 'talathi bharti', 'sarkari naukri', 'government jobs',
     'exam udaan', 'maharashtra recruitment',
   ],
-  alternates: {
-    canonical: SITE_URL,
-  },
   openGraph: {
     title: 'ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
     description:

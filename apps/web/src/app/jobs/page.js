@@ -8,6 +8,9 @@ import ListingPage from '../../components/ListingPage'
 export const metadata = {
   title: 'Government Jobs 2026 — Apply Online | ExamUdaan',
   description: 'Browse latest government jobs. Filter by organization, education, state. MPSC, UPSC, SSC, Railway, Banking & more.',
+  alternates: {
+    canonical: 'https://examudaan.in/jobs',
+  },
 }
 
 export default function JobsPage() {

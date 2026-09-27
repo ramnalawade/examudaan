@@ -11,19 +11,21 @@ export default function robots() {
   return {
     rules: [
       {
-        // Allow legitimate search engine crawlers (Google, Bing, etc.)
+        // Allow legitimate search engine crawlers (Googlebot, Bingbot, etc.)
         userAgent: '*',
-        allow: '/',
+        allow: [
+          '/',
+          '/_next/static/',
+          '/_next/image/',
+        ],
         disallow: [
           '/admin',
           '/admin/',
           '/dashboard',
           '/dashboard/',
           '/api/',
-          '/_next/',
-          '/*?*', // Disallow crawling search/filter URLs with query params to avoid spider traps
+          '/auth-success',
         ],
-        crawlDelay: 2,
       },
       {
         // Block scraping frameworks, headless scripts & abusive crawlers
