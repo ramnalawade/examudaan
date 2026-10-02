@@ -163,13 +163,123 @@ export const SYLLABUS_EXAMS = [
         ]
       }
     ],
+    officialPdfs: [
+      {
+        id: 13763,
+        year: 2026,
+        label: "2026 Group B Combined Prelims (Latest)",
+        title: "Advt. No. 011/2026 MPSC Group-B Services Combined Preliminary Examination 2026 — Question Paper",
+        size: "975 KB",
+        url: "/downloads/mpsc/question_papers/2026/13763_011-2026 Group-B Pre 2026 - Question Paper.pdf",
+        badge: "LATEST 2026",
+        isAnswerKey: false
+      },
+      {
+        id: 13768,
+        year: 2026,
+        label: "2026 Group B First Answer Key",
+        title: "Advt. No. 011/2026 MPSC Group-B Services Combined Prelims 2026 — Official First Answer Key",
+        size: "480 KB",
+        url: "/downloads/mpsc/answer_keys/2026/13768_011-2026 Group-B Pre 2026 - First Answer Key.pdf",
+        badge: "ANSWER KEY",
+        isAnswerKey: true
+      },
+      {
+        id: 12496,
+        year: 2025,
+        label: "2025 Group B Combined Prelims",
+        title: "MPSC Group-B Services Combined Preliminary Examination 2025 — Official Question Paper",
+        size: "1.34 MB",
+        url: "/downloads/mpsc/question_papers/2025/12496_GROUP-B SERVICES COMBINED PRE EXAMINATION - 2025.pdf",
+        isAnswerKey: false
+      },
+      {
+        id: 12540,
+        year: 2025,
+        label: "2025 Group B First Answer Key",
+        title: "MPSC Group-B Combined Preliminary Examination 2025 — Official First Answer Key",
+        size: "520 KB",
+        url: "/downloads/mpsc/answer_keys/2025/12540_First Answer Key of Maharashtra Group B (Non Gazzeted) Services Combined Preliminary Examination 2025.pdf",
+        isAnswerKey: true
+      },
+      {
+        id: 10063,
+        year: 2024,
+        label: "2024 Group B Combined Prelims",
+        title: "MPSC Non-Gazetted Group B Combined Preliminary Exam 2024 — Official Question Paper",
+        size: "982 KB",
+        url: "/downloads/mpsc/question_papers/2024/10063_GROUP_B_PRE_2024.pdf",
+        isAnswerKey: false
+      },
+      {
+        id: 10214,
+        year: 2024,
+        label: "2024 Group B Final Answer Key",
+        title: "MPSC Group B Non-Gazetted Combined Prelims 2024 — Final Official Answer Key",
+        size: "444 KB",
+        url: "/downloads/mpsc/answer_keys/2024/10214_maharashtra  gr-b non-gazzetted combined pre exam 2024 final key 4225 pdf.pdf",
+        isAnswerKey: true
+      },
+      {
+        id: 10893,
+        year: 2024,
+        label: "2024 Group C Combined Prelims",
+        title: "MPSC Group C Combined Preliminary Examination 2024 — Official Question Paper",
+        size: "1.24 MB",
+        url: "/downloads/mpsc/question_papers/2024/10893_GROUP_C_PRE_2024.pdf",
+        isAnswerKey: false
+      },
+      {
+        id: 11232,
+        year: 2024,
+        label: "2024 Group C Final Answer Key",
+        title: "MPSC Group C Combined Preliminary Examination 2024 — Final Official Answer Key",
+        size: "452 KB",
+        url: "/downloads/mpsc/answer_keys/2024/11232_Maharashtra Group C  pre exam 2024 Final Answer key.pdf",
+        isAnswerKey: true
+      }
+    ],
     pyqLinks: [
-      { year: 2024, exam: "Group B & C Prelims", label: "MPSC Combined 2024 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
-      { year: 2023, exam: "Group B & C Prelims", label: "MPSC Combined 2023 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
-      { year: 2022, exam: "Group B & C Prelims", label: "MPSC Combined 2022 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
-      { year: 2021, exam: "Group B & C Prelims", label: "MPSC Combined 2021 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
-      { year: 2020, exam: "Group B & C Prelims", label: "MPSC Combined 2020 Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
-      { year: 2019, exam: "Group B Combined Prelims", label: "MPSC 2019 Combined Prelims Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+      {
+        year: 2026,
+        exam: "Combined Prelims Group B",
+        label: "MPSC Combined Prelims 2026 Question Paper & First Key",
+        paperUrl: "/downloads/mpsc/question_papers/2026/13763_011-2026 Group-B Pre 2026 - Question Paper.pdf",
+        answerKeyUrl: "/downloads/mpsc/answer_keys/2026/13768_011-2026 Group-B Pre 2026 - First Answer Key.pdf",
+        url: "/downloads/mpsc/question_papers/2026/13763_011-2026 Group-B Pre 2026 - Question Paper.pdf"
+      },
+      {
+        year: 2025,
+        exam: "Combined Prelims Group B",
+        label: "MPSC Combined Prelims 2025 Question Paper & Key",
+        paperUrl: "/downloads/mpsc/question_papers/2025/12496_GROUP-B SERVICES COMBINED PRE EXAMINATION - 2025.pdf",
+        answerKeyUrl: "/downloads/mpsc/answer_keys/2025/12540_First Answer Key of Maharashtra Group B (Non Gazzeted) Services Combined Preliminary Examination 2025.pdf",
+        url: "/downloads/mpsc/question_papers/2025/12496_GROUP-B SERVICES COMBINED PRE EXAMINATION - 2025.pdf"
+      },
+      {
+        year: 2024,
+        exam: "Combined Prelims Group B",
+        label: "MPSC Combined Prelims 2024 Question Paper & Final Key",
+        paperUrl: "/downloads/mpsc/question_papers/2024/10063_GROUP_B_PRE_2024.pdf",
+        answerKeyUrl: "/downloads/mpsc/answer_keys/2024/10214_maharashtra  gr-b non-gazzetted combined pre exam 2024 final key 4225 pdf.pdf",
+        url: "/downloads/mpsc/question_papers/2024/10063_GROUP_B_PRE_2024.pdf"
+      },
+      {
+        year: 2024,
+        exam: "Combined Prelims Group C",
+        label: "MPSC Group C Prelims 2024 Question Paper & Final Key",
+        paperUrl: "/downloads/mpsc/question_papers/2024/10893_GROUP_C_PRE_2024.pdf",
+        answerKeyUrl: "/downloads/mpsc/answer_keys/2024/11232_Maharashtra Group C  pre exam 2024 Final Answer key.pdf",
+        url: "/downloads/mpsc/question_papers/2024/10893_GROUP_C_PRE_2024.pdf"
+      },
+      {
+        year: 2023,
+        exam: "Group B & C Prelims",
+        label: "MPSC Combined 2023 Prelims Paper & Key",
+        paperUrl: "https://mpsc.gov.in/prev_que_papers/9",
+        answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10",
+        url: "https://mpsc.gov.in/prev_que_papers/9"
+      }
     ],
     books: [
       { title: "मराठी व्याकरण — मो. रा. वाळंबे", useFor: "Mains Paper 1 Marathi (50 marks)" },

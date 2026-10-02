@@ -71,18 +71,68 @@ def close_pool():
 # ============================================================
 
 def make_slug(text, max_len=280):
-    """Convert any string to a URL-safe slug."""
+    """Convert any string to a URL-safe slug (ASCII/English only)."""
     import re
+    if not text:
+        return ''
     try:
         from unidecode import unidecode
-        text = unidecode(text)
+        text = unidecode(text)  # Converts Devanagari to romanised transliteration
     except ImportError:
         pass
     text = text.lower()
+    # Strip ALL non-ASCII and non-alphanumeric chars — drops Marathi if unidecode unavailable
     text = re.sub(r'[^a-z0-9\s-]', '', text)
     text = re.sub(r'\s+', '-', text.strip())
     text = re.sub(r'-+', '-', text)
-    return text[:max_len]
+    return text[:max_len].strip('-')
+
+
+def build_job_slug(org_acronym: str, post_name_en: str, year: str, notification_id) -> str:
+    """
+    Build a clean, human-readable English slug for a job notification.
+    Pattern: {org}-{post_en_words}-{year}-{id}
+    Example: mumbai-police-constable-2026-459
+
+    Args:
+        org_acronym: e.g. "MUMBAI_POLICE" → "mumbai-police"
+        post_name_en: English post name, e.g. "Police Constable (Shipai)"
+        year: 4-digit year string, e.g. "2026"
+        notification_id: DB id integer
+    Returns:
+        slug string, always ASCII, always non-empty
+    """
+    import re
+
+    def _slugify_part(text, max_words=5):
+        """Slugify a text fragment, keeping only first max_words."""
+        if not text:
+            return ''
+        try:
+            from unidecode import unidecode
+            text = unidecode(text)
+        except ImportError:
+            pass
+        text = text.lower()
+        text = re.sub(r'[^a-z0-9\s]', ' ', text)   # Replace non-alphanum with space
+        words = text.split()[:max_words]
+        return '-'.join(w for w in words if w)
+
+    # Clean org part: convert underscores/spaces to hyphens, take first 3 words
+    org_part = _slugify_part(org_acronym.replace('_', ' '), max_words=3)
+
+    # Clean post part: take first 4 words of English post name
+    post_part = _slugify_part(post_name_en or '', max_words=4)
+
+    # Year part: just the 4-digit year
+    year_part = str(year or '').strip()[:4]
+
+    # Build segments, skip empty ones
+    parts = [p for p in [org_part, post_part, year_part, str(notification_id)] if p]
+    slug = '-'.join(parts)
+    # Safety: ensure no double-dash, no leading/trailing dash
+    slug = re.sub(r'-+', '-', slug).strip('-')
+    return slug or f'notification-{notification_id}'
 
 
 def make_dedup_hash(source_id: str, url: str) -> str:
@@ -324,7 +374,15 @@ def upsert_notification(conn, org_id: str, source_id: str, data: dict) -> int:
     """
     raw_title = data.get('title') or ''
     title = clean_title_case(raw_title) if raw_title else ''
-    slug = make_slug(title or raw_title)
+
+    # --- Slug strategy ---
+    # NEW: Use 'post_name_en' (English post name) when available for a clean,
+    # keyword-rich, human-readable English slug: {org}-{post_en}-{year}-{id}
+    # We build a temporary slug from title first (for the INSERT unique constraint),
+    # then UPDATE it to the canonical English slug after we have the DB-assigned id.
+    # Fallback: make_slug(title) for backwards compatibility.
+    slug = make_slug(title or raw_title)  # Temporary slug — gets updated after INSERT
+
 
     # Build important_dates JSONB from flat date fields if not provided
     important_dates = data.get('important_dates') or {}
@@ -571,8 +629,42 @@ def upsert_notification(conn, org_id: str, source_id: str, data: dict) -> int:
         row = cur.fetchone()
         conn.commit()
         notification_id = row['id']
+
+        # --- Update to canonical English slug (post-insert, now we have the real id) ---
+        # Spiders should pass org_acronym and post_name_en (English post name) in data.
+        org_acronym = data.get('org_acronym', '')
+        post_name_en = data.get('post_name_en', '')  # e.g. "Police Constable"
+
+        # Derive year from the first available date field
+        year = ''
+        for date_field in ['apply_end_date', 'apply_start_date', 'exam_date']:
+            raw_date = data.get(date_field)
+            if raw_date:
+                try:
+                    y = str(raw_date)[:4]   # "2026-03-31" → "2026"
+                    if y.isdigit() and len(y) == 4:
+                        year = y
+                        break
+                except Exception:
+                    pass
+        if not year:
+            year = str(datetime.now().year)
+
+        if org_acronym:
+            # Build canonical English slug and update the row
+            canonical_slug = build_job_slug(
+                org_acronym, post_name_en or title, year, notification_id
+            )
+            cur.execute(
+                "UPDATE exam_notifications SET slug = %s WHERE id = %s",
+                (canonical_slug, notification_id)
+            )
+            conn.commit()
+            logger.info(f"[DB] Slug set: {canonical_slug} for id={notification_id}")
+
         logger.info(f"[DB] Upserted notification id={notification_id}: {data.get('title', '')[:60]}")
         return notification_id
+
 
 
 # ============================================================
@@ -588,11 +680,64 @@ def upsert_post(conn, notification_id: int, data: dict) -> int:
                pay_scale, reservation_json, qualification, experience,
                custom_attributes, job_type, tags, slug
     """
+    import re as _re
+    raw_post_name = data.get('post_name', '') or 'Various Posts'
+
+    # Normalize post_name: strip whitespace, collapse spaces
+    # This prevents "पोलिस शिपाई" vs "पोलीस  शिपाई" counting as different posts
+    post_name = _re.sub(r'\s+', ' ', raw_post_name.strip())
+
     slug = data.get('slug') or make_slug(
-        f"{data.get('post_name', '')} {notification_id}"
+        f"{post_name} {notification_id}"
     )
 
+    # ── Duplicate guard ─────────────────────────────────────────────────────
+    # Before inserting, check if a post with the SAME notification_id and a
+    # normalized (whitespace-collapsed) post_name already exists.
+    # This catches Marathi spelling variants inserted by the PDF parser
+    # (e.g. "पोलिस शिपाई" and "पोलीस शिपाई") as effectively the same post.
+    #
+    # Strategy: if total_vacancies matches too, it's almost certainly a dup.
+    # We UPDATE the existing row instead of inserting a new one.
     with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
+        cur.execute(
+            """
+            SELECT id, slug FROM posts
+            WHERE notification_id = %s
+              AND total_vacancies = %s
+              AND TRIM(REGEXP_REPLACE(post_name, '\\s+', ' ', 'g')) = %s
+            LIMIT 1
+            """,
+            (
+                notification_id,
+                data.get('total_vacancies'),
+                post_name,
+            )
+        )
+        existing = cur.fetchone()
+        if existing:
+            # Duplicate found — update instead of inserting a second row
+            cur.execute(
+                """
+                UPDATE posts SET
+                    pay_scale        = COALESCE(%s, pay_scale),
+                    category         = COALESCE(%s, category),
+                    qualification    = COALESCE(%s, qualification)
+                WHERE id = %s
+                RETURNING id
+                """,
+                (
+                    data.get('pay_scale'),
+                    data.get('category'),
+                    data.get('qualification'),
+                    existing['id'],
+                )
+            )
+            conn.commit()
+            logger.info(f"[DB] Dedup: merged duplicate post '{post_name}' id={existing['id']}")
+            return existing['id']
+
+
         cur.execute(
             """
             INSERT INTO posts (
@@ -616,7 +761,8 @@ def upsert_post(conn, notification_id: int, data: dict) -> int:
             """,
             (
                 notification_id,
-                data.get('post_name', 'Various Posts'),
+                post_name,  # normalized (whitespace-collapsed) post_name
+
                 data.get('post_code'),
                 data.get('total_vacancies'),
                 data.get('category'),

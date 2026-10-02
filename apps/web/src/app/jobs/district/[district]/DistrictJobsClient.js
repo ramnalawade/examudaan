@@ -237,14 +237,16 @@ export default function DistrictJobsClient({ district }) {
               </div>
             </details>
 
-            <details className={styles.faqItem}>
-              <summary className={styles.faqQ}>
-                {district.faqExtra.split('?')[0]}?
-              </summary>
-              <div className={styles.faqA}>
-                {district.faqExtra.split('?').slice(1).join('?').trim()}
-              </div>
-            </details>
+            {district.faqExtra && (
+              <details className={styles.faqItem}>
+                <summary className={styles.faqQ}>
+                  {district.faqExtra.split('?')[0]}?
+                </summary>
+                <div className={styles.faqA}>
+                  {district.faqExtra.split('?').slice(1).join('?').trim()}
+                </div>
+              </details>
+            )}
           </div>
         </section>
 

@@ -66,10 +66,10 @@ export default function Navbar() {
 
   const PRIMARY_NAV_ITEMS = [
     { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
-    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'New' },
-    { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free' },
-    { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQs'),        icon: 'history_edu',           badge: 'Hot' },
-    { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min' },
+    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'New',   badgeBg: '#16a34a' },
+    { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free',  badgeBg: '#9a3412' },
+    { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQs'),        icon: 'history_edu',           badge: 'Hot',   badgeBg: '#7c2d12' },
+    { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min', badgeBg: '#9a3412' },
     { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus'),          icon: 'menu_book' },
   ]
 
@@ -190,7 +190,7 @@ export default function Navbar() {
 
         {/* ---- Center: Desktop & Laptop Navigation ---- */}
         <nav className="navbar-nav" aria-label="Main navigation">
-          {PRIMARY_NAV_ITEMS.map(({ href, label, badge }) => {
+          {PRIMARY_NAV_ITEMS.map(({ href, label, badge, badgeBg }) => {
             const isActive = href === '/'
               ? pathname === '/'
               : pathname.startsWith(href)
@@ -203,16 +203,21 @@ export default function Navbar() {
                 <span>{label}</span>
                 {badge && (
                   <span style={{
-                    fontSize: 9,
+                    fontSize: '9.5px',
                     fontWeight: 800,
                     lineHeight: 1,
-                    padding: '2px 5px',
+                    padding: '2.5px 6.5px',
                     borderRadius: 999,
-                    background: badge === 'New' ? '#16a34a' : 'var(--primary)',
-                    color: '#fff',
+                    background: badgeBg || (badge === 'New' ? '#16a34a' : 'var(--primary)'),
+                    color: '#ffffff',
                     textTransform: 'uppercase',
                     letterSpacing: '0.04em',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    verticalAlign: 'middle',
                     flexShrink: 0,
+                    marginLeft: '2px',
                   }}>
                     {badge}
                   </span>

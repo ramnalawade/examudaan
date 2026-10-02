@@ -1,0 +1,239 @@
+/* footer.module.css — Precision 5-Column Grouped Footer matching Mockup (Screenshot 2) */
+
+.footer {
+  background: #F4F7FB;
+  border-top: 1px solid #E2E8F0;
+  padding: 52px 0 36px;
+  color: #1E293B;
+  font-family: var(--font-inter, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: 88px; /* Clears fixed mobile bottom navigation bar */
+  }
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* ── 5-Column Grid ───────────────────────────── */
+.columnsGrid {
+  display: grid;
+  grid-template-columns: 1.35fr 1.05fr 1.22fr 1.22fr 1.16fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+@media (max-width: 1120px) {
+  .columnsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .columnsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+  }
+}
+
+@media (max-width: 520px) {
+  .columnsGrid {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+}
+
+/* ── Column 1: Brand ─────────────────────────── */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.brandDesc {
+  font-size: 12.5px;
+  color: #64748B;
+  line-height: 1.62;
+  margin: 0;
+  max-width: 290px;
+}
+
+.waBtn {
+  background: #25D366;
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+  transition: all 0.15s ease-in-out;
+  margin-top: 2px;
+}
+
+.waBtn:hover {
+  background: #1EBE5D;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.38);
+}
+
+/* ── Column Titles & Lists ───────────────────── */
+.colTitle {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0F172A;
+  margin: 0 0 16px;
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLink {
+  color: #475569;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 500;
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-block;
+}
+
+.footerLink:hover {
+  color: var(--primary, #EA580C);
+  transform: translateX(2px);
+}
+
+/* ── Column 5: Mobile Apps & Helpdesk ────────── */
+.appText {
+  font-size: 12.5px;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+
+.appButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.appStoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid #DCE3EE;
+  padding: 8px 14px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #0F172A;
+  font-size: 12.5px;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  max-width: 215px;
+}
+
+.appStoreBtn:hover {
+  background: #FFFFFF;
+  border-color: var(--primary, #EA580C);
+  color: var(--primary, #EA580C);
+  box-shadow: 0 3px 10px rgba(234, 88, 12, 0.12);
+  transform: translateY(-1px);
+}
+
+.storeBtnText {
+  white-space: nowrap;
+}
+
+.quickNavRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 8px;
+  margin-top: 2px;
+}
+
+.quickNavLink {
+  font-size: 11.5px;
+  color: #64748B;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.quickNavLink:hover {
+  color: var(--primary, #EA580C);
+  text-decoration: underline;
+}
+
+.dot {
+  font-size: 10px;
+  color: #CBD5E1;
+}
+
+/* ── Bottom Strip ────────────────────────────── */
+.bottomStrip {
+  border-top: 1px solid #E2E8F0;
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 11.5px;
+  color: #64748B;
+}
+
+.disclaimerText {
+  margin: 0;
+  max-width: 740px;
+  line-height: 1.58;
+  font-size: 11.5px;
+  color: #64748B;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  white-space: nowrap;
+}
+
+.legalLink {
+  color: #64748B;
+  text-decoration: none;
+  font-size: 11.5px;
+  transition: color 0.15s ease;
+}
+
+.legalLink:hover {
+  color: var(--primary, #EA580C);
+  text-decoration: underline;
+}
+
+.sep {
+  color: #CBD5E1;
+  font-size: 11px;
+}

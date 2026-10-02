@@ -184,7 +184,7 @@ export default function RootLayout({ children }) {
           <Navbar />
 
           {/* Page content */}
-          <main style={{ paddingBottom: '90px' }}>{children}</main>
+          <main>{children}</main>
 
           {/* Desktop footer */}
           <Footer />

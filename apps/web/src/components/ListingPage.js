@@ -87,6 +87,28 @@ const STATES = [
   { id: 'goa',          label: 'Goa' },
 ]
 
+const MAHARASHTRA_DISTRICTS = [
+  { id: 'Nagpur',      label: 'Nagpur',                    label_mr: 'नागपूर' },
+  { id: 'Mumbai',      label: 'Mumbai',                    label_mr: 'मुंबई' },
+  { id: 'Pune',        label: 'Pune',                      label_mr: 'पुणे' },
+  { id: 'Nashik',      label: 'Nashik',                    label_mr: 'नाशिक' },
+  { id: 'Thane',       label: 'Thane',                     label_mr: 'ठाणे' },
+  { id: 'Aurangabad',  label: 'Chh. Sambhajinagar',        label_mr: 'छत्रपती संभाजीनगर' },
+  { id: 'Kolhapur',    label: 'Kolhapur',                  label_mr: 'कोल्हापूर' },
+  { id: 'Solapur',     label: 'Solapur',                   label_mr: 'सोलापूर' },
+  { id: 'Amravati',    label: 'Amravati',                  label_mr: 'अमरावती' },
+  { id: 'Nanded',      label: 'Nanded',                    label_mr: 'नांदेड' },
+  { id: 'Jalgaon',     label: 'Jalgaon',                   label_mr: 'जळगाव' },
+  { id: 'Satara',      label: 'Satara',                    label_mr: 'सातारा' },
+  { id: 'Sangli',      label: 'Sangli',                    label_mr: 'सांगली' },
+  { id: 'Akola',       label: 'Akola',                     label_mr: 'अकोला' },
+  { id: 'Latur',       label: 'Latur',                     label_mr: 'लातूर' },
+  { id: 'Dhule',       label: 'Dhule',                     label_mr: 'धुळे' },
+  { id: 'Ahmednagar',  label: 'Ahilyanagar',               label_mr: 'अहिल्यानगर' },
+  { id: 'Chandrapur',  label: 'Chandrapur',                label_mr: 'चंद्रपूर' },
+  { id: 'Ratnagiri',   label: 'Ratnagiri',                 label_mr: 'रत्नागिरी' },
+]
+
 const SALARY_RANGES = [
   { id: '10000',  label: '₹10,000+' },
   { id: '25000',  label: '₹25,000+' },
@@ -180,6 +202,7 @@ function ListingPageInner({
   const [selOrgs,     setSelOrgs]     = useState([])  // multi-select org
   const [selQual,     setSelQual]     = useState('')
   const [selState,    setSelState]    = useState('')
+  const [selCity,     setSelCity]     = useState('')
   const [selSalary,   setSelSalary]   = useState('')
   const [selGovtLevel, setSelGovtLevel] = useState('')  // Central|State|PSU|Local
   const [selVacancies, setSelVacancies] = useState('')  // min_vacancies filter
@@ -191,6 +214,7 @@ function ListingPageInner({
     initialSyncRef.current = true
 
     const st = searchParams.get('state')
+    const ct = searchParams.get('city') || searchParams.get('district')
     const q = searchParams.get('q')
     const o = searchParams.get('org')
     const qual = searchParams.get('qualification')
@@ -205,6 +229,7 @@ function ListingPageInner({
       else if (lower === 'mp') setSelState('madhya-pradesh')
       else setSelState(lower)
     }
+    if (ct) setSelCity(ct)
     if (q) setSearch(q)
     if (o) setSelOrgs(o.split(',').filter(Boolean))
     if (qual) setSelQual(qual)
@@ -244,6 +269,7 @@ function ListingPageInner({
     // Send all selected orgs as comma-separated string
     if (selOrgs.length > 0) p.set('org', selOrgs.join(','))
     if (selState)         p.set('state', selState)
+    if (selCity)          p.set('city', selCity)
     if (selQual)          p.set('qualification', selQual)
     if (selSalary)        p.set('min_salary', selSalary)
     if (selGovtLevel)     p.set('govt_level', selGovtLevel)
@@ -270,7 +296,7 @@ function ListingPageInner({
     } finally {
       setLoading(false)
     }
-  }, [activeTab, search, sort, selOrgs, selState, selQual, selSalary, selGovtLevel, selVacancies, page, isMarathi])
+  }, [activeTab, search, sort, selOrgs, selState, selCity, selQual, selSalary, selGovtLevel, selVacancies, page, isMarathi])
 
   // Re-fetch when filters change (reset to page 1)
   const searchTimer = useRef(null)
@@ -279,7 +305,7 @@ function ListingPageInner({
     searchTimer.current = setTimeout(() => fetchItems(true), search ? 350 : 0)
     return () => clearTimeout(searchTimer.current)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeTab, sort, selOrgs, selState, selQual, selSalary, selGovtLevel, selVacancies, search])
+  }, [activeTab, sort, selOrgs, selState, selCity, selQual, selSalary, selGovtLevel, selVacancies, search])
 
   // Load more
   useEffect(() => {
@@ -296,13 +322,14 @@ function ListingPageInner({
     setSelOrgs([])
     setSelQual('')
     setSelState('')
+    setSelCity('')
     setSelSalary('')
     setSelGovtLevel('')
     setSelVacancies('')
     setSearch('')
   }
 
-  const hasFilters = selOrgs.length > 0 || selQual || selState || selSalary || selGovtLevel || selVacancies || search
+  const hasFilters = selOrgs.length > 0 || selQual || selState || selCity || selSalary || selGovtLevel || selVacancies || search
   const hasMore    = items.length < total
 
   // ── Page label ────────────────────────────────────────────
@@ -396,6 +423,60 @@ function ListingPageInner({
         })}
       </div>
 
+      {/* ── Quick Filter Bar ── */}
+      <div
+        id="listing-quick-chips"
+        style={{
+          display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 8,
+          marginBottom: 16, scrollbarWidth: 'none',
+        }}
+      >
+        {[
+          { label: isMarathi ? '🚩 महाराष्ट्र' : '🚩 Maharashtra', type: 'state', value: 'maharashtra' },
+          { label: isMarathi ? '🏛️ केंद्र सरकार' : '🏛️ Central Govt', type: 'govt_level', value: 'Central' },
+          { label: isMarathi ? '📍 नागपूर' : '📍 Nagpur', type: 'city', value: 'Nagpur' },
+          { label: isMarathi ? '📍 मुंबई' : '📍 Mumbai', type: 'city', value: 'Mumbai' },
+          { label: isMarathi ? '📍 पुणे' : '📍 Pune', type: 'city', value: 'Pune' },
+          { label: isMarathi ? '🎓 १०वी उत्तीर्ण' : '🎓 10th Pass', type: 'qualification', value: '10th' },
+          { label: isMarathi ? '🎓 १२वी उत्तीर्ण' : '🎓 12th Pass', type: 'qualification', value: '12th' },
+          { label: isMarathi ? '🎓 पदवीधर' : '🎓 Graduate', type: 'qualification', value: 'graduate' },
+          { label: isMarathi ? '⏰ अंतिम मुदत जवळ' : '⏰ Closing Soon', type: 'sort', value: 'closing' },
+        ].map(chip => {
+          let isChipActive = false
+          if (chip.type === 'state') isChipActive = selState === chip.value
+          if (chip.type === 'govt_level') isChipActive = selGovtLevel === chip.value
+          if (chip.type === 'city') isChipActive = selCity === chip.value
+          if (chip.type === 'qualification') isChipActive = selQual === chip.value
+          if (chip.type === 'sort') isChipActive = sort === chip.value
+
+          return (
+            <button
+              key={chip.label}
+              type="button"
+              onClick={() => {
+                if (chip.type === 'state') setSelState(prev => prev === chip.value ? '' : chip.value)
+                if (chip.type === 'govt_level') setSelGovtLevel(prev => prev === chip.value ? '' : chip.value)
+                if (chip.type === 'city') setSelCity(prev => prev === chip.value ? '' : chip.value)
+                if (chip.type === 'qualification') setSelQual(prev => prev === chip.value ? '' : chip.value)
+                if (chip.type === 'sort') setSort(prev => prev === chip.value ? 'latest' : chip.value)
+              }}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 4,
+                padding: '6px 14px', borderRadius: 999, whiteSpace: 'nowrap',
+                border: isChipActive ? `1.5px solid ${primaryColor}` : '1px solid var(--outline-variant)',
+                background: isChipActive ? '#FFF7ED' : 'var(--surface-container-low)',
+                color: isChipActive ? primaryColor : 'var(--on-surface)',
+                fontWeight: isChipActive ? 700 : 500, fontSize: 13,
+                cursor: 'pointer', transition: 'all 0.15s',
+              }}
+            >
+              {chip.label}
+              {isChipActive && <span className="material-symbols-outlined" style={{ fontSize: 14 }}>check</span>}
+            </button>
+          )
+        })}
+      </div>
+
       {/* ── Search + Sort row ─────────────────────────────── */}
       <div style={{ display: 'flex', gap: 10, marginBottom: 20, alignItems: 'center' }}>
         {/* Search - Dominant width */}
@@ -436,7 +517,7 @@ function ListingPageInner({
           aria-label="Open filters"
         >
           <span className="material-symbols-outlined">tune</span>
-          {hasFilters ? `${t('listing.filter_title', 'Filters')} (${selOrgs.length + (selQual?1:0) + (selState?1:0) + (selSalary?1:0) + (selGovtLevel?1:0) + (selVacancies?1:0)})` : t('listing.filter_title', 'Filters')}
+          {hasFilters ? `${t('listing.filter_title', 'Filters')} (${selOrgs.length + (selQual?1:0) + (selState?1:0) + (selCity?1:0) + (selSalary?1:0) + (selGovtLevel?1:0) + (selVacancies?1:0)})` : t('listing.filter_title', 'Filters')}
         </button>
 
         {/* Sort - Compact */}
@@ -509,6 +590,12 @@ function ListingPageInner({
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 999, fontSize: 12, color: '#15803D', fontWeight: 600 }}>
               {STATES.find(s => s.id === selState)?.label}
               <button onClick={() => setSelState('')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
+            </span>
+          )}
+          {selCity && (
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#FEF3C7', border: '1px solid #FDE68A', borderRadius: 999, fontSize: 12, color: '#B45309', fontWeight: 600 }}>
+              📍 {selCity}
+              <button onClick={() => setSelCity('')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
             </span>
           )}
           {selVacancies && (
@@ -627,6 +714,31 @@ function ListingPageInner({
                   />
                   <span style={{ fontSize: 14, color: selState === s.id ? '#15803D' : 'var(--on-surface)', fontWeight: selState === s.id ? 600 : 400 }}>
                     {s.label}
+                  </span>
+                </label>
+              ))}
+            </div>
+          </FilterSection>
+
+          {/* Maharashtra District / City filter */}
+          <FilterSection title={isMarathi ? 'महाराष्ट्र जिल्हे' : 'Maharashtra District'} defaultOpen={true}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, maxHeight: 220, overflowY: 'auto', paddingRight: 4 }}>
+              {MAHARASHTRA_DISTRICTS.map(d => (
+                <label
+                  key={d.id}
+                  style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '5px 8px', borderRadius: 8, background: selCity === d.id ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                  htmlFor={`filter-district-${d.id}`}
+                >
+                  <input
+                    type="radio"
+                    id={`filter-district-${d.id}`}
+                    name="city"
+                    checked={selCity === d.id}
+                    onChange={() => setSelCity(prev => prev === d.id ? '' : d.id)}
+                    style={{ accentColor: 'var(--primary)', width: 16, height: 16 }}
+                  />
+                  <span style={{ fontSize: 13, color: selCity === d.id ? 'var(--primary)' : 'var(--on-surface)', fontWeight: selCity === d.id ? 700 : 400 }}>
+                    {isMarathi ? d.label_mr : d.label}
                   </span>
                 </label>
               ))}

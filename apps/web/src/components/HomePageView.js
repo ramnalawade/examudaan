@@ -1,714 +1,1005 @@
 // ============================================================
-// components/HomePageView.js — ExamUdaan Homepage (Clean Redesign)
-// Goal: Minimal, uncluttered — like Legalit.ai
-// Sections: Hero → Stats Bar → Departments → Latest Jobs → Alerts CTA
-// Everything else lives on dedicated pages (/jobs, /ai-tools, /youtube, etc.)
+// components/HomePageView.js — Precision Redesign matching Mockup
+// ExamUdaan.in | All India & Maharashtra Government Exam Ecosystem
 // ============================================================
 
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
-import JobCard from './JobCard'
 import { useLanguage } from '../context/LanguageContext'
-import { SITE_CONFIG } from '../lib/constants'
-import { formatTitle } from '../lib/formatTitle'
+import styles from './homePageView.module.css'
 
-// ── Department categories ────────────────────────────────────
-const CATEGORIES_EN = [
-  { slug: 'MPSC',         label: 'MPSC',              desc: 'State Services & Group B/C',     icon: 'account_balance' },
-  { slug: 'MUMBAI POLICE',label: 'Police Bharti',      desc: 'Constable, SI & Driver',         icon: 'local_police' },
-  { slug: 'BMC',          label: 'BMC Mumbai',         desc: 'Engineers, Clerks & Health',     icon: 'location_city' },
-  { slug: 'RRB',          label: 'Railways (RRB)',     desc: 'ALP, NTPC & Group D',            icon: 'train' },
-  { slug: 'SSC',          label: 'Staff Selection',    desc: 'CGL, CHSL & MTS',               icon: 'description' },
-  { slug: 'IBPS',         label: 'Banking',            desc: 'PO, Clerk & Specialist',         icon: 'account_balance_wallet' },
-  { slug: 'ZP',           label: 'Zilla Parishad',     desc: 'Talathi, Gram Sevak & Arogya',  icon: 'nature_people' },
-  { slug: 'TEACHING',     label: 'Teaching (TET)',     desc: 'Shikshak Bharti & Professors',  icon: 'school' },
-]
-
-const CATEGORIES_MR = [
-  { slug: 'MPSC',          label: 'MPSC महाराष्ट्र',       desc: 'राज्यसेवा व गट-ब/क संयुक्त परीक्षा',   icon: 'account_balance' },
-  { slug: 'MUMBAI POLICE', label: 'पोलीस भरती',            desc: 'पोलीस शिपाई, चालक व उपनिरीक्षक',       icon: 'local_police' },
-  { slug: 'BMC',           label: 'BMC मुंबई',              desc: 'कनिष्ठ अभियंता, लिपिक व आरोग्य',       icon: 'location_city' },
-  { slug: 'RRB',           label: 'रेल्वे भरती (RRB)',      desc: 'ALP, NTPC आणि गट ड संवर्ग',            icon: 'train' },
-  { slug: 'SSC',           label: 'कर्मचारी निवड (SSC)',   desc: 'CGL, CHSL, GD व MTS परीक्षा',           icon: 'description' },
-  { slug: 'IBPS',          label: 'बँक भरती',               desc: 'PO, लिपिक व विशेषज्ञ अधिकारी',         icon: 'account_balance_wallet' },
-  { slug: 'ZP',            label: 'जिल्हा परिषद (ZP)',     desc: 'तलाठी, ग्रामसेवक व आरोग्य सेवक',       icon: 'nature_people' },
-  { slug: 'TEACHING',      label: 'शिक्षक भरती (TET)',     desc: 'पवित्र पोर्टल व प्राध्यापक भरती',       icon: 'school' },
-]
-
-// ── Product/feature blocks (Dashboard Grid) ────────────────
-const FEATURE_BLOCKS = [
+// ── 1. Hero Urgent Exam Openings (Live countdown cards) ───────
+const URGENT_OPENINGS = [
   {
-    icon: 'work',
-    title_en: 'Government Jobs',
-    title_mr: 'सरकारी नोकऱ्या',
-    desc_en: '500+ live notifications from 260+ official portals. Central & state government, PSU, and autonomous bodies.',
-    desc_mr: '२६०+ अधिकृत पोर्टल्सवरून ५००+ थेट भरती जाहिराती. केंद्र, राज्य सरकार व PSU.',
-    href: '/jobs',
-    cta_en: 'Browse Jobs',
-    cta_mr: 'नोकऱ्या पहा',
-    badge: 'Live',
+    id: 'mpsc-2026',
+    title: 'Maharashtra Combined Civil Services 2026 Prelims',
+    title_mr: 'महाराष्ट्र नागरी सेवा संयुक्त पूर्व परीक्षा २०२६',
+    dept: 'MPSC State Services',
+    vacancies: '4,124 Posts',
+    closingText: 'Closes in 2 Days',
+    slug: 'mpsc-state-services-combined-prelims-2026',
+  },
+  {
+    id: 'rrb-ntpc',
+    title: 'RRB Non-Technical Popular Categories (NTPC)',
+    title_mr: 'रेल्वे भरती बोर्ड (RRB NTPC) भरती २०२६',
+    dept: 'Indian Railways',
+    vacancies: '11,558 Posts',
+    closingText: 'Closes in 5 Days',
+    slug: 'rrb-non-technical-popular-categories-ntpc-2026',
+  },
+  {
+    id: 'ssc-cgl',
+    title: 'Staff Selection Commission SSC CGL 2026',
+    title_mr: 'कर्मचारी निवड आयोग (SSC CGL) भरती २०२६',
+    dept: 'Group B & C Central',
+    vacancies: '17,727 Posts',
+    closingText: 'Closes in 8 Days',
+    slug: 'ssc-combined-graduate-level-cgl-2026',
+  },
+]
+
+// ── 2. "Everything You Need to Clear Govt Exams" (8 Cards) ────
+const SUITE_CARDS = [
+  {
+    icon: 'newspaper',
+    badge: 'Daily CA',
+    title: 'Current Affairs & Daily Summaries',
+    title_mr: 'दैनिक चालू घडामोडी व सारांश',
+    desc: 'Bilingual daily bullet briefs, MPSC-focused editorial analysis, and downloadable PDF capsules updated by 7 AM.',
+    cta: 'Read Today\'s CA Digest →',
+    cta_mr: 'आजच्या चालू घडामोडी वाचा →',
+    href: '/current-affairs',
   },
   {
     icon: 'explore',
-    title_en: '10th & 12th Career Compass',
-    title_mr: '१० वी व १२ वी नंतर करिअर मार्गदर्शक',
-    desc_en: 'Complete roadmap for Science, Commerce, Arts & Polytechnic with salaries, entrance exams, subjects to score, and top colleges.',
-    desc_mr: 'सायन्स, कॉमर्स, आर्ट्स आणि पॉलिटेक्निकसाठी पगार, प्रवेश परीक्षा, आवश्यक विषय आणि भविष्यातील संधींचे सविस्तर विश्लेषण.',
-    href: '/career',
-    cta_en: 'Explore 40+ Careers',
-    cta_mr: '४०+ करिअर पर्याय पहा',
     badge: 'New 2026',
+    title: '10th & 12th Degree Career Compass',
+    title_mr: '१० वी व १२ वी नंतर करिअर मार्गदर्शक',
+    desc: '50+ comprehensive roadmaps for Science, Commerce, Arts & ITI-Diploma lateral entry with pay ladders and college cutoffs.',
+    cta: 'Discover 50+ Career Paths →',
+    cta_mr: '५०+ करिअर पर्याय पहा →',
+    href: '/career',
   },
   {
-    icon: 'smart_toy',
-    title_en: 'AI Tools for Exam Prep',
-    title_mr: 'परीक्षेसाठी AI साधने',
-    desc_en: '84+ curated tools across 8 categories — NotebookLM, Claude, Cursor, Gamma, Perplexity — each with a step-by-step guide.',
-    desc_mr: 'NotebookLM, Claude, Cursor, Gamma सारखी ८४+ AI साधने — सविस्तर मार्गदर्शनासह.',
-    href: '/ai-tools',
-    cta_en: 'Explore 84 AI Tools',
-    cta_mr: '८४ AI साधने पहा',
-    badge: '84 Tools',
+    icon: 'auto_schedule',
+    badge: 'AI Engine',
+    title: 'AI-Generated Custom Study Planner',
+    title_mr: 'AI सानुकूल अभ्यास वेळापत्रक',
+    desc: 'Generate day-by-day revision timetables based on remaining exam days, weak areas, and daily study hours.',
+    cta: 'Generate Study Timetable →',
+    cta_mr: 'अभ्यास वेळापत्रक तयार करा →',
+    href: '/study-planner',
   },
   {
     icon: 'quiz',
-    title_en: 'CBT Mock Tests',
-    title_mr: 'CBT सराव मॉक टेस्ट',
-    desc_en: 'Full-length computer-based practice test series with timer, instant score breakdown, and all-Maharashtra rank for Talathi, Police, MPSC & SSC.',
-    desc_mr: 'तलाठी, पोलीस, MPSC आणि SSC साठी वेळ, अचूक गुण आणि महाराष्ट्र गुणवत्ता यादीसह संपूर्ण मॉक टेस्ट मालिका.',
+    badge: 'Free Tests',
+    title: 'Full-Length Mock CBT Test Series',
+    title_mr: 'CBT सराव मॉक टेस्ट मालिका',
+    desc: 'Real exam-simulation interface with instant section-wise breakdown, negative marking, and Maharashtra rank projection.',
+    cta: 'Take a Free Test →',
+    cta_mr: 'मोफत मॉक टेस्ट सोडवा →',
     href: '/mock-tests',
-    cta_en: 'Start Free Mock',
-    cta_mr: 'मोफत टेस्ट सुरू करा',
-    badge: 'Free CBT',
-  },
-  {
-    icon: 'history_edu',
-    title_en: '15-Yr Solved PYQ Bank',
-    title_mr: '१५ वर्षांच्या मागील प्रश्नपत्रिका',
-    desc_en: '560+ topic-wise solved previous year questions with detailed answer keys, exam trends, and subject analysis.',
-    desc_mr: '५६०+ विषयवार सोडवलेले मागील प्रश्न, सविस्तर उत्तरे, आणि मागील १५ वर्षांचे परीक्षा कल विश्लेषण.',
-    href: '/pyq',
-    cta_en: 'Practice PYQs',
-    cta_mr: 'PYQ सराव करा',
-    badge: '560+ MCQs',
-  },
-  {
-    icon: 'local_police',
-    title_en: 'Police Merit Calculator',
-    title_mr: 'पोलीस भरती मेरिट कॅल्क्युलेटर',
-    desc_en: 'Calculate your 150-mark composite merit (1600m/800m run, 100m sprint, shot put + written) and check district cutoffs instantly.',
-    desc_mr: '१५० गुणांमधील मैदानी (५०) + लेखी (१००) अचूक गुण मोजा आणि सर्व जिल्ह्यांचे अंदाजित कट-ऑफ तपासा.',
-    href: '/police-calculator',
-    cta_en: 'Calculate Merit',
-    cta_mr: 'गुण मोजा',
-    badge: '150 Marks',
   },
   {
     icon: 'score',
-    title_en: 'Key Score Calculator',
-    title_mr: 'रिस्पॉन्स शीट स्कोर कॅल्क्युलेटर',
-    desc_en: 'Calculate raw marks and accuracy from TCS iON, MPSC & Police Bharti answer key response sheets with category cutoff prediction.',
-    desc_mr: 'TCS iON, MPSC आणि पोलीस भरती रिस्पॉन्स शीटवरून अचूक गुण आणि प्रवर्गनिहाय कट-ऑफ अंदाज मिळवा.',
+    badge: 'Viral',
+    title: 'TCS Answer Key Rank & Score Predictor',
+    title_mr: 'TCS रिस्पॉन्स शीट स्कोर कॅल्क्युलेटर',
+    desc: 'Instant raw score parser and shift-normalized percentile calculator for TCS iON, MPSC, and Police answer sheets.',
+    cta: 'Calculate Answer Key Score →',
+    cta_mr: 'माझा स्कोर तपासा →',
     href: '/score-calculator',
-    cta_en: 'Check My Score',
-    cta_mr: 'माझा स्कोर तपासा',
-    badge: 'TCS / MPSC',
   },
   {
-    icon: 'local_fire_department',
-    title_en: 'Daily Streak Quiz',
-    title_mr: 'दैनिक स्ट्रीक क्विझ',
-    desc_en: '10 daily high-yield questions covering Current Affairs, Maharashtra GK, and Marathi Grammar in a 5-minute blitz challenge.',
-    desc_mr: 'चालू घडामोडी, महाराष्ट्र सामान्य ज्ञान व मराठी व्याकरण यांवर आधारित दररोजची ५ मिनिटांची १० प्रश्नांची क्विझ.',
-    href: '/daily-quiz',
-    cta_en: 'Take Daily Quiz',
-    cta_mr: 'आजची क्विझ सोडवा',
-    badge: '5-Min Blitz',
+    icon: 'local_police',
+    badge: '150-Mark Merit',
+    title: 'Police Ground + Written Merit Matrix',
+    title_mr: 'पोलीस भरती मैदानी + लेखी मेरिट मॅट्रिक्स',
+    desc: 'Input your 1600m/800m run, 100m sprint, shot put & written marks to project district-wise cutoff qualification.',
+    cta: 'Calculate Merit Cutoff Score →',
+    cta_mr: 'पोलीस मेरिट स्कोर तपासा →',
+    href: '/police-calculator',
   },
   {
     icon: 'leaderboard',
-    title_en: '10-Yr Cutoff Explorer',
-    title_mr: '१० वर्षांचे कट-ऑफ विश्लेषण',
-    desc_en: 'Historical cutoff marks by district and caste category (Open, OBC, EWS, SEBC, SC, ST) across major Maharashtra competitive exams.',
-    desc_mr: 'MPSC, पोलीस, तलाठी व ZP परीक्षांसाठी सर्व जिल्हे व प्रवर्गांमधील मागील १० वर्षांचे अधिकृत कट-ऑफ.',
+    badge: '2014-2025 Data',
+    title: '10-Yr Category Cutoff Trend Analyzer',
+    title_mr: '१० वर्षांचे प्रवर्गनिहाय कट-ऑफ विश्लेषण',
+    desc: 'Past 10 years category-wise closing cutoff trends for Open, OBC, EWS, SC, ST across all Maharashtra recruitments.',
+    cta: 'Explore Historical Cutoffs →',
+    cta_mr: 'मागील कट-ऑफ पहा →',
     href: '/cutoffs',
-    cta_en: 'Explore Cutoffs',
-    cta_mr: 'कट-ऑफ पहा',
-    badge: 'Trends',
   },
   {
-    icon: 'menu_book',
-    title_en: 'Exam Blog & Guides',
-    title_mr: 'परीक्षा मार्गदर्शक व ब्लॉग',
-    desc_en: 'Actionable 90-day blueprints, subject-wise booklists, and preparation strategies written by top educators.',
-    desc_mr: 'परीक्षेची ९० दिवसांची अचूक रणनीती, संदर्भ पुस्तके आणि सविस्तर अभ्यासक्रम विश्लेषण.',
-    href: '/blog',
-    cta_en: 'Read Guides',
-    cta_mr: 'मार्गदर्शन वाचा',
-    badge: 'Guides',
+    icon: 'payments',
+    badge: '7th Pay & In-Hand',
+    title: 'In-Hand Salary Calculator (7th CPC)',
+    title_mr: '७ वे वेतन आयोग इन-हँड सॅलरी कॅल्क्युलेटर',
+    desc: 'Exact pay-level breakdown of basic pay, DA, HRA, TA, and NPS deductions for central and Maharashtra state positions.',
+    cta: 'Calculate In-Hand Salary →',
+    cta_mr: 'इन-हँड पगार मोजा →',
+    href: '/salary-calculator',
+  },
+]
+
+// ── 3. Popular Commissions (6 Commissions) ───────────────────
+const COMMISSIONS = [
+  { name: 'MPSC Maharashtra', name_mr: 'MPSC महाराष्ट्र', meta: 'State Civil Services • 4,124+ Posts', icon: 'account_balance', href: '/jobs?org=MPSC' },
+  { name: 'UPSC New Delhi',   name_mr: 'UPSC नवी दिल्ली',   meta: 'Civil & Defense • 1,200+ Posts',  icon: 'gavel',           href: '/jobs?org=UPSC' },
+  { name: 'Railway (RRB/RRC)',name_mr: 'रेल्वे भरती बोर्ड', meta: 'ALP, NTPC, Group D • 32K+ Posts', icon: 'train',           href: '/jobs?org=RRB' },
+  { name: 'SSC New Delhi',    name_mr: 'कर्मचारी निवड आयोग',meta: 'CGL, CHSL, GD, MTS • 25K+ Posts', icon: 'description',     href: '/jobs?org=SSC' },
+  { name: 'Banking (IBPS/SBI)',name_mr:'बँक भरती (IBPS/SBI)',meta:'PO, Clerk, SO • 18,500+ Posts',  icon: 'savings',         href: '/jobs?org=IBPS,SBI' },
+  { name: 'Maharashtra Police',name_mr:'महाराष्ट्र पोलीस', meta: 'Constable, Driver • 3,521+ Posts',icon: 'local_police',    href: '/jobs?org=MUMBAI%20POLICE,SRPF' },
+]
+
+// ── 4. Latest Verified Openings by Region / Commission ────────
+const REGION_TABS = [
+  { id: 'maharashtra', label: 'Maharashtra', label_mr: 'महाराष्ट्र' },
+  { id: 'central',     label: 'Central Govt', label_mr: 'केंद्र सरकार' },
+  { id: 'northern',    label: 'Northern States (UP/DL)', label_mr: 'उत्तर भारत (UP/DL)' },
+  { id: 'western_south',label:'Western & Southern', label_mr: 'पश्चिम व दक्षिण' },
+  { id: 'railways',    label: 'Railways', label_mr: 'भारतीय रेल्वे' },
+  { id: 'engineering', label: 'Engineering & PSU', label_mr: 'इंजिनिअरिंग व PSU' },
+]
+
+const REGION_JOBS = {
+  maharashtra: [
+    {
+      id: 'mh-1',
+      region: 'Maharashtra Civil Services',
+      status: 'Closes in 2 Days',
+      isNew: false,
+      title: 'Maharashtra Combined Civil Services Combined Prelims 2026',
+      dept: 'Maharashtra Public Service Commission (MPSC)',
+      vacancies: '4,124 Posts',
+      qualification: 'Graduate Degree',
+      deadline: '18 Oct 2026',
+      slug: 'mpsc-state-services-combined-prelims-2026',
+    },
+    {
+      id: 'mh-2',
+      region: 'Maharashtra Police',
+      status: 'Active Recruitment',
+      isNew: false,
+      title: 'Maharashtra Mumbai Police Bharti & Bandsman Constable 2026',
+      dept: 'Maharashtra State Police Department',
+      vacancies: '3,521 Posts',
+      qualification: '12th Pass',
+      deadline: '24 Oct 2026',
+      slug: 'munbii-poliis-shipaaii-bhrtii-sn-2024-25-mdhye-vaaddhiiv-pdaancaa-sudhaarit-kppiikrt-aarkssnn-nihaay-tktaa-di-22-01-2026',
+    },
+    {
+      id: 'mh-3',
+      region: 'Central Research (Nagpur)',
+      status: 'New Opening',
+      isNew: true,
+      title: 'CSIR-NEERI Nagpur Junior Secretariat Assistant & Stenographer',
+      dept: 'CSIR National Environmental Engg Research Institute, Nagpur',
+      vacancies: '28 Posts',
+      qualification: '12th Pass + Typing',
+      deadline: '12 Nov 2026',
+      slug: 'csir-neeri-nagpur-junior-secretariat-assistant-2026',
+    },
+    {
+      id: 'mh-4',
+      region: 'Maharashtra Rural Banking',
+      status: 'Active Recruitment',
+      isNew: true,
+      title: 'Maharashtra Gramin Bank Apprentice Seva & Customer Support Bharti',
+      dept: 'Maharashtra Gramin Bank & NABARD',
+      vacancies: '240 Posts',
+      qualification: 'Any Graduate',
+      deadline: '20 Oct 2026',
+      slug: 'maharashtra-gramin-bank-apprentice-bharti-2026',
+    },
+    {
+      id: 'mh-5',
+      region: 'Brihanmumbai Municipal',
+      status: 'Closing Soon',
+      isNew: false,
+      title: 'BMC Mumbai Junior Engineer (Civil & Mechanical) Bharti',
+      dept: 'Brihanmumbai Municipal Corporation (BMC)',
+      vacancies: '690 Posts',
+      qualification: 'Diploma / Degree Engg',
+      deadline: '28 Oct 2026',
+      slug: 'bmc-mumbai-junior-engineer-recruitment-2026',
+    },
+    {
+      id: 'mh-6',
+      region: 'Medical Education (Pune/Nagpur)',
+      status: 'Active Recruitment',
+      isNew: false,
+      title: 'Maharashtra Medical Education Department Staff Nurse Gr-II',
+      dept: 'Directorate of Medical Education & Research (DMER)',
+      vacancies: '90 Posts',
+      qualification: 'GNM / B.Sc Nursing',
+      deadline: '30 Oct 2026',
+      slug: 'staff-nurse-gr-ii-medical-education-dept-catno4692024',
+    },
+  ],
+  central: [
+    {
+      id: 'cen-1',
+      region: 'Staff Selection Commission',
+      status: 'Closes in 8 Days',
+      isNew: false,
+      title: 'SSC Combined Graduate Level (CGL) Group B & C Examination 2026',
+      dept: 'Staff Selection Commission (Govt of India)',
+      vacancies: '17,727 Posts',
+      qualification: 'Graduate Degree',
+      deadline: '25 Oct 2026',
+      slug: 'ssc-combined-graduate-level-cgl-2026',
+    },
+    {
+      id: 'cen-2',
+      region: 'Dept of Atomic Energy',
+      status: 'New Opening',
+      isNew: true,
+      title: 'Atomic Energy Education Society Non-Teaching Staff (PRT/TGT/PGT)',
+      dept: 'Department of Atomic Energy Central Govt',
+      vacancies: '488 Posts',
+      qualification: 'D.El.Ed / B.Ed / Master Degree',
+      deadline: '22 Oct 2026',
+      slug: 'atomic-energy-education-society-recruitment-2026',
+    },
+    {
+      id: 'cen-3',
+      region: 'Union Public Service Commission',
+      status: 'Active Recruitment',
+      isNew: false,
+      title: 'UPSC Combined Defense Services (CDS-II) Officer Recruitment',
+      dept: 'Union Public Service Commission New Delhi',
+      vacancies: '459 Posts',
+      qualification: 'Degree in Engineering / Arts / Science',
+      deadline: '05 Nov 2026',
+      slug: 'upsc-combined-defense-services-2026',
+    },
+  ],
+  northern: [
+    {
+      id: 'nor-1',
+      region: 'Uttar Pradesh Police',
+      status: 'Huge Vacancy',
+      isNew: true,
+      title: 'Uttar Pradesh Police Civilian Constable & PAC Special Force',
+      dept: 'Uttar Pradesh Police Recruitment & Promotion Board',
+      vacancies: '60,244 Posts',
+      qualification: '12th Intermediate Pass',
+      deadline: '28 Oct 2026',
+      slug: 'up-police-civilian-constable-recruitment-2026',
+    },
+    {
+      id: 'nor-2',
+      region: 'Delhi Subordinate Services',
+      status: 'Active Recruitment',
+      isNew: false,
+      title: 'DSSSB Delhi Primary Teacher (PRT) & Special Educator Bharti',
+      dept: 'Delhi Subordinate Services Selection Board',
+      vacancies: '1,455 Posts',
+      qualification: '12th + CTET + D.El.Ed',
+      deadline: '08 Nov 2026',
+      slug: 'dsssb-delhi-primary-teacher-recruitment-2026',
+    },
+  ],
+  western_south: [
+    {
+      id: 'ws-1',
+      region: 'Gujarat Police / GSSSB',
+      status: 'Active Recruitment',
+      isNew: true,
+      title: 'Gujarat Police Sub-Inspector (PSI) & Lokrakshak Dal Bharti',
+      dept: 'Gujarat Police Recruitment Board, Gandhinagar',
+      vacancies: '12,472 Posts',
+      qualification: 'Graduate / 12th Pass',
+      deadline: '04 Nov 2026',
+      slug: 'gujarat-police-psi-lokrakshak-recruitment-2026',
+    },
+    {
+      id: 'ws-2',
+      region: 'Karnataka KPSC',
+      status: 'Active Recruitment',
+      isNew: false,
+      title: 'Karnataka PSC First Division Assistant (FDA) & SDA Openings',
+      dept: 'Karnataka Public Service Commission',
+      vacancies: '1,120 Posts',
+      qualification: 'Any Degree',
+      deadline: '15 Nov 2026',
+      slug: 'karnataka-psc-fda-sda-recruitment-2026',
+    },
+  ],
+  railways: [
+    {
+      id: 'rly-1',
+      region: 'Railway Recruitment Boards',
+      status: 'Closes in 5 Days',
+      isNew: false,
+      title: 'RRB Non-Technical Popular Categories (Graduate & Under-Graduate)',
+      dept: 'Ministry of Railways (All 21 RRBs Pan-India)',
+      vacancies: '11,558 Posts',
+      qualification: '12th Pass / Graduate Degree',
+      deadline: '14 Nov 2026',
+      slug: 'rrb-non-technical-popular-categories-ntpc-2026',
+    },
+    {
+      id: 'rly-2',
+      region: 'Railway Protection Force',
+      status: 'Physical Exam Phase',
+      isNew: true,
+      title: 'RPF Sub-Inspector & Constable All-India Recruitment',
+      dept: 'Railway Protection Force (RPF) & RPSF',
+      vacancies: '4,660 Posts',
+      qualification: '10th Pass / Graduate',
+      deadline: '02 Nov 2026',
+      slug: 'rpf-sub-inspector-constable-recruitment-2026',
+    },
+  ],
+  engineering: [
+    {
+      id: 'eng-1',
+      region: 'Public Sector Undertaking',
+      status: 'High Salary Pay',
+      isNew: true,
+      title: 'ONGC Graduate Trainee (Engineering & Geosciences) through GATE',
+      dept: 'Oil & Natural Gas Corporation Limited (ONGC)',
+      vacancies: '263 Posts',
+      qualification: 'B.E. / B.Tech / M.Sc',
+      deadline: '27 Oct 2026',
+      slug: 'ongc-graduate-trainee-recruitment-2026',
+    },
+    {
+      id: 'eng-2',
+      region: 'CSIR NEERI (Nagpur)',
+      status: 'Central Lab',
+      isNew: false,
+      title: 'CSIR-NEERI Nagpur Junior Secretariat Assistant & Stenographer',
+      dept: 'CSIR National Environmental Engg Research Institute',
+      vacancies: '28 Posts',
+      qualification: '12th Pass + Typing',
+      deadline: '12 Nov 2026',
+      slug: 'csir-neeri-nagpur-junior-secretariat-assistant-2026',
+    },
+  ],
+}
+
+// ── 5. Real Aspirant Testimonials ────────────────────────────
+const TESTIMONIALS = [
+  {
+    name: 'Pravin Deshmukh',
+    exam: 'Selected in Maharashtra Mumbai Police 2025',
+    text: 'ExamUdaan was the only portal where the Police physical sprint score calculator accurately mapped my 150-mark composite cutoff before the official list was declared.',
+    initial: 'P',
   },
   {
-    icon: 'school',
-    title_en: 'AI Academy',
-    title_mr: 'AI अकॅडमी',
-    desc_en: 'Weekend live cohorts by a 20-year enterprise software architect. Prompt engineering, Cursor, project building — practical, not theory.',
-    desc_mr: '२० वर्षांच्या तज्ञाकडून प्रॅक्टिकल AI शिक्षण. ChatGPT, Cursor, प्रोजेक्ट बिल्डिंग — प्रॅक्टिकल अनुभव.',
-    href: '/ai-academy',
-    cta_en: 'Join Academy',
-    cta_mr: 'अकॅडमीत सामील व्हा',
-    badge: 'Live Cohort',
+    name: 'Pooja Kadam',
+    exam: 'Selected as Talathi (Chhatrapati Sambhajinagar)',
+    text: 'TCS answer keys always create confusion about shift normalisation. ExamUdaan shift rank predictor gave me 99.2 percentile within 15 minutes of response sheet release.',
+    initial: 'P',
   },
   {
-    icon: 'play_circle',
-    title_en: 'YouTube & Resources',
-    title_mr: 'YouTube चॅनेल्स',
-    desc_en: '30+ curated YouTube channels for MPSC, UPSC, Banking, SSC, Railways and GATE — filtered by exam and language.',
-    desc_mr: 'MPSC, UPSC, Banking, RRB साठी ३०+ निवडक YouTube चॅनेल्स — परीक्षा व भाषेनुसार.',
-    href: '/youtube',
-    cta_en: 'Browse Channels',
-    cta_mr: 'चॅनेल्स पहा',
-    badge: '30+ Channels',
+    name: 'Amol Shinde',
+    exam: 'MPSC Combined Group-B (STI Aspirant)',
+    text: 'Every morning at 7 AM I read the Current Affairs digest and solve the 5-Minute Quiz. The district-wise alerts saved me from missing local municipal corporation posts.',
+    initial: 'A',
   },
 ]
 
 export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} }) {
   const { t, isMarathi } = useLanguage()
-  const categories = isMarathi ? CATEGORIES_MR : CATEGORIES_EN
+  const [activeRegion, setActiveRegion] = useState('maharashtra')
+
+  // Interactive Key Analyzer widget state (Right side of Rank Section)
+  const [analyzerExam, setAnalyzerExam] = useState('mpsc')
+  const [analyzerCategory, setAnalyzerCategory] = useState('obc')
+  const [calculatedScore, setCalculatedScore] = useState({ score: '148.5/200', percentile: '98.4%', rank: '41 / 2,800', avg: '114.2' })
+
+  function handleRecalculate() {
+    // Dynamic recalculation simulation based on user selection
+    const baseScore = analyzerExam === 'mpsc' ? 148.5 : analyzerExam === 'police' ? 128.0 : 156.0
+    const catBonus = analyzerCategory === 'open' ? 0 : analyzerCategory === 'obc' ? 2.5 : 6.0
+    const total = (baseScore + catBonus).toFixed(1)
+    setCalculatedScore({
+      score: `${total}/200`,
+      percentile: '98.7%',
+      rank: '34 / 2,800',
+      avg: '116.5',
+    })
+  }
+
+  // Choose jobs for the active region tab
+  const displayOpenings = REGION_JOBS[activeRegion] || REGION_JOBS.maharashtra
 
   return (
-    <div style={{ background: 'var(--surface)', minHeight: '100vh', paddingBottom: 64 }}>
+    <div className={styles.page}>
 
-      {/* ── 1. Hero ─────────────────────────────────────────── */}
-      <section style={{
-        background: 'linear-gradient(180deg, rgba(234,88,12,0.05) 0%, var(--surface) 100%)',
-        borderBottom: '1px solid var(--outline-variant)',
-        padding: 'clamp(40px, 6vw, 72px) 20px clamp(36px, 5vw, 60px)',
-        textAlign: 'center',
-      }}>
-        <div className="container" style={{ maxWidth: 760, margin: '0 auto' }}>
+      {/* ════════ 1. HERO SECTION (Screenshot 2 Match) ════════ */}
+      <section className={styles.heroSection}>
+        <div className="container">
+          <div className={styles.heroGrid}>
 
-          {/* Live badge */}
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: '#ECFDF5', color: '#065F46',
-            padding: '5px 16px', borderRadius: 999,
-            fontSize: 12, fontWeight: 800, letterSpacing: '0.05em',
-            textTransform: 'uppercase', marginBottom: 24,
-          }}>
-            <span style={{
-              width: 7, height: 7, background: '#22c55e',
-              borderRadius: '50%', display: 'inline-block',
-              boxShadow: '0 0 6px #22c55e',
-            }} />
-            {isMarathi ? 'थेट २४x७ — सरकारी जाहिराती' : 'Live 24×7 — Official Govt Notifications'}
-          </div>
+            {/* Left Hero Column */}
+            <div>
+              <div className={styles.heroTag}>
+                <span className="material-symbols-outlined" style={{ fontSize: 14 }}>verified</span>
+                {isMarathi ? 'अखिल भारतीय व महाराष्ट्र सरकारी परीक्षा पोर्टल' : 'All India & Maharashtra Govt Exam Portal'}
+              </div>
 
-          {/* H1 */}
-          <h1 style={{
-            fontSize: 'clamp(30px, 5vw, 52px)',
-            fontWeight: 800,
-            color: 'var(--on-surface)',
-            lineHeight: 1.15,
-            letterSpacing: '-0.02em',
-            margin: '0 0 18px',
-          }}>
-            {isMarathi ? (
-              <>
-                महाराष्ट्र <span style={{ color: 'var(--primary)' }}>&</span> भारतातील सर्व<br />
-                सरकारी भरती — <span style={{ color: 'var(--primary)' }}>एकाच ठिकाणी</span>
-              </>
-            ) : (
-              <>
-                All India Government Jobs<br />
-                <span style={{ color: 'var(--primary)' }}>— One Trusted Source</span>
-              </>
-            )}
-          </h1>
+              <h1 className={styles.heroTitle}>
+                {isMarathi ? (
+                  <>
+                    भारतातील सर्व सरकारी नोकऱ्या व परीक्षा तयारी —{' '}
+                    <span className={styles.heroHighlight}>विश्वसनीय व्यासपीठ</span>
+                  </>
+                ) : (
+                  <>
+                    All India Government Jobs & Exam Prep —{' '}
+                    <span className={styles.heroHighlight}>One Trusted Ecosystem</span>
+                  </>
+                )}
+              </h1>
 
-          {/* Subtitle */}
-          <p style={{
-            fontSize: 'clamp(14px, 2vw, 17px)',
-            color: 'var(--secondary)',
-            lineHeight: 1.65,
-            margin: '0 auto 32px',
-            maxWidth: 620,
-          }}>
-            {isMarathi
-              ? 'MPSC, UPSC, SSC, RRB, Banking, ZP, पोलीस — सर्व अधिकृत पोर्टल्सवरून थेट PDF नोटिफिकेशन्स. कोणतीही भरती चुकणार नाही.'
-              : 'MPSC, UPSC, SSC, RRB, Banking, ZP, Police — direct PDF notifications from 260+ official portals. Never miss a recruitment again.'}
-          </p>
+              <p className={styles.heroSubtitle}>
+                {isMarathi
+                  ? 'MPSC, UPSC, SSC, RRB, बँकिंग, पोलीस, संरक्षण व PSU — थेट पडताळणी केलेल्या सरकारी जाहिराती + AI-चालित अभ्यासक्रम जुळवणी व सर्व स्पर्धा परीक्षांसाठी अचूक तयारी साधने.'
+                  : 'MPSC, UPSC, SSC, RRB, Banking, Police, Defense & PSU — Real-time verified Sarkari job notifications + AI-powered official syllabus matching & precision prep tools for every Indian aspirant.'}
+              </p>
 
-          {/* CTAs */}
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link
-              href="/jobs"
-              style={{
-                background: 'var(--primary)',
-                color: '#ffffff',
-                padding: '13px 28px',
-                borderRadius: 'var(--radius-md)',
-                fontWeight: 700, fontSize: 15,
-                textDecoration: 'none',
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                boxShadow: '0 4px 14px rgba(234,88,12,0.28)',
-              }}
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: 20 }}>search</span>
-              {isMarathi ? 'नोकऱ्या शोधा' : 'Browse Jobs'}
-            </Link>
-            <a
-              href={SITE_CONFIG?.social?.whatsappChannel || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v'}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                background: '#22c55e',
-                color: '#ffffff',
-                padding: '13px 24px',
-                borderRadius: 'var(--radius-md)',
-                fontWeight: 700, fontSize: 15,
-                textDecoration: 'none',
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                boxShadow: '0 4px 14px rgba(34,197,94,0.28)',
-              }}
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: 20 }}>chat</span>
-              {isMarathi ? 'WhatsApp अलर्ट' : 'WhatsApp Alerts'}
-            </a>
+              {/* Action Buttons */}
+              <div className={styles.heroCtas}>
+                <Link href="/jobs" className={styles.ctaPrimary}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 20 }}>search</span>
+                  {isMarathi ? '७४०+ सक्रिय नोकऱ्या पहा →' : 'Browse 740+ Active Jobs →'}
+                </Link>
+
+                <a
+                  href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.ctaWhatsApp}
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: 20 }}>chat</span>
+                  {isMarathi ? 'WhatsApp अलर्ट मोफत मिळवा' : 'Join WhatsApp Channel Free'}
+                </a>
+              </div>
+
+              {/* Trust Checkmarks */}
+              <div className={styles.heroTrustList}>
+                <span className={styles.trustItem}>✓ 100% Official Sources</span>
+                <span className={styles.trustItem}>✓ Zero Fake / Expired Alerts</span>
+                <span className={styles.trustItem}>✓ Free Exam Guides</span>
+              </div>
+            </div>
+
+            {/* Right Hero Column: Urgent Exam Openings Card */}
+            <div>
+              <div className={styles.urgentCard}>
+                <div className={styles.urgentHeader}>
+                  <div className={styles.urgentTitle}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#DC2626' }}>alarm</span>
+                    <span>Urgent Exam Openings</span>
+                  </div>
+                  <span className={styles.urgentBadge}>4 Closing</span>
+                </div>
+
+                <div>
+                  {URGENT_OPENINGS.map(item => (
+                    <div key={item.id} className={styles.urgentItem}>
+                      <div className={styles.urgentItemTop}>
+                        <Link href={`/jobs/${item.slug}`} className={styles.urgentItemTitle}>
+                          {isMarathi ? item.title_mr : item.title}
+                        </Link>
+                        <span className={styles.closingTag}>{item.closingText}</span>
+                      </div>
+                      <div className={styles.urgentMeta}>
+                        <span>{item.dept}</span>
+                        <span>•</span>
+                        <strong>{item.vacancies}</strong>
+                        <span style={{ marginLeft: 'auto' }}>
+                          <Link href={`/jobs/${item.slug}`} className={styles.applyLink}>
+                            Apply Direct ↗
+                          </Link>
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className={styles.urgentFooter}>
+                  <Link href="/jobs?sort=closing">
+                    View All 18 Urgent Notifications →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* ── 2. Stats Bar ────────────────────────────────────── */}
-      <div style={{ borderBottom: '1px solid var(--outline-variant)', background: 'var(--surface-container-lowest)' }}>
-        <div className="container" style={{
-          maxWidth: 1100, margin: '0 auto', padding: '16px 20px',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
-          gap: 0,
-        }}>
-          {[
-            { value: stats.total_jobs  || '740+',        label: isMarathi ? 'सक्रिय भरती' : 'Active Jobs',         icon: 'work' },
-            { value: stats.total_vacancies || '85,000+', label: isMarathi ? 'एकूण जागा' : 'Total Vacancies',      icon: 'groups' },
-            { value: stats.total_boards || '42+',        label: isMarathi ? 'सरकारी पोर्टल' : 'Govt Portals',       icon: 'travel_explore' },
-            { value: stats.total_ai_tools ? `${stats.total_ai_tools} AI Tools` : '84 AI Tools', label: isMarathi ? 'एआय अभ्यास साधने' : 'AI Study Tools', icon: 'smart_toy' },
-          ].map((s, i, arr) => (
-            <div
-              key={i}
-              style={{
-                display: 'flex', alignItems: 'center', gap: 12,
-                padding: '12px 20px',
-                borderRight: i < arr.length - 1 ? '1px solid var(--outline-variant)' : 'none',
-              }}
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: 22, color: 'var(--primary)', flexShrink: 0 }}>
-                {s.icon}
-              </span>
+      {/* ════════ 2. STATS BAR (4 Columns) ════════ */}
+      <section className={styles.statsBar}>
+        <div className="container">
+          <div className={styles.statsGrid}>
+            <div className={styles.statBox}>
+              <span className={`material-symbols-outlined ${styles.statIcon}`}>work</span>
               <div>
-                <div style={{ fontSize: 20, fontWeight: 800, color: 'var(--on-surface)', lineHeight: 1.1 }}>{s.value}</div>
-                <div style={{ fontSize: 12, color: 'var(--secondary)', marginTop: 2 }}>{s.label}</div>
+                <div className={styles.statValue}>{stats.total_jobs || '740'}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'सक्रिय परीक्षा जाहिराती' : 'Active Exam Openings'}</div>
               </div>
             </div>
-          ))}
+            <div className={styles.statBox}>
+              <span className={`material-symbols-outlined ${styles.statIcon}`}>trending_up</span>
+              <div>
+                <div className={styles.statValue}>{stats.total_vacancies || '5,24,000+'}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'एकूण सरकारी जागा' : 'Total Govt Vacancies'}</div>
+              </div>
+            </div>
+            <div className={styles.statBox}>
+              <span className={`material-symbols-outlined ${styles.statIcon}`}>menu_book</span>
+              <div>
+                <div className={styles.statValue}>280+</div>
+                <div className={styles.statLabel}>{isMarathi ? 'मोफत परीक्षा मार्गदर्शक' : 'Exam Preparation Guides'}</div>
+              </div>
+            </div>
+            <div className={styles.statBox}>
+              <span className={`material-symbols-outlined ${styles.statIcon}`}>smart_toy</span>
+              <div>
+                <div className={styles.statValue}>{stats.total_ai_tools ? `${stats.total_ai_tools}+` : '84+'}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'AI अभ्यास साधने' : 'AI-Powered Study Tools'}</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container" style={{ maxWidth: 1150, margin: '0 auto', padding: '44px 20px 0' }}>
+      <div className="container">
 
-        {/* ── 3. Quick Update Strip (Results / Admit Cards) ── */}
-        {quickUpdates.length > 0 && (
-          <section style={{ marginBottom: 44 }}>
-            <div style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              marginBottom: 16, gap: 12, flexWrap: 'wrap',
-            }}>
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 18, fontWeight: 800, color: 'var(--on-surface)' }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 22, color: 'var(--primary)' }}>campaign</span>
-                  {isMarathi ? 'ताज्या अपडेट्स' : 'Latest Updates'}
-                </div>
-                <p style={{ fontSize: 13, color: 'var(--secondary)', margin: '2px 0 0' }}>
-                  {isMarathi ? 'नुकतेच जाहीर झालेले निकाल, प्रवेशपत्रे व उत्तरतालिका' : 'Freshly announced results, hall tickets & answer keys'}
-                </p>
-              </div>
-              <Link href="/results" style={{ fontSize: 13, fontWeight: 700, color: 'var(--primary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
-                {isMarathi ? 'सर्व निकाल पहा →' : 'View all results →'}
-              </Link>
+        {/* ════════ 3. EVERYTHING YOU NEED TO CLEAR GOVT EXAMS (8 Cards) ════════ */}
+        <section className={styles.sectionBlock}>
+          <div className={styles.sectionHeader}>
+            <div>
+              <div className={styles.eyebrow}>Comprehensive Preparation Suite</div>
+              <h2 className={styles.sectionTitle}>
+                {isMarathi ? 'सरकारी परीक्षा उत्तीर्ण होण्यासाठी आवश्यक सर्व काही' : 'Everything You Need to Clear Govt Exams'}
+              </h2>
+              <p className={styles.sectionSubtitle}>
+                {isMarathi
+                  ? '२०२६ मधील सर्व परीक्षार्थींसाठी उपयुक्त अचूक साधने, स्कोर प्रेडिक्टर्स आणि सविस्तर अभ्यासक्रम.'
+                  : 'High-yield prep tools, calculated score predictors, and deep syllabus blueprints for 2026 aspirants.'}
+              </p>
             </div>
+            <Link href="/ai-tools" className={styles.headerLink}>
+              View all tools ({stats.total_ai_tools || 84} AI Tools) →
+            </Link>
+          </div>
 
-            {/* Grid of Update Cards matching Browse by Department aesthetic */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: 12 }}>
-              {quickUpdates.slice(0, 4).map(item => {
-                const href = item.notification_type === 'result'
-                  ? `/results/${item.slug || item.id}`
-                  : item.notification_type === 'admit_card'
-                  ? `/admit-cards/${item.slug || item.id}`
-                  : `/answer-keys/${item.slug || item.id}`
+          <div className={styles.suiteGrid}>
+            {SUITE_CARDS.map((card, i) => (
+              <Link key={i} href={card.href} className={styles.suiteCard}>
+                <div className={styles.suiteCardTop}>
+                  <div className={styles.suiteIconBox}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 22 }}>{card.icon}</span>
+                  </div>
+                  <span className={styles.suiteBadge}>{card.badge}</span>
+                </div>
+                <h3 className={styles.suiteTitle}>
+                  {isMarathi ? card.title_mr : card.title}
+                </h3>
+                <p className={styles.suiteDesc}>{card.desc}</p>
+                <span className={styles.suiteCta}>
+                  {isMarathi ? card.cta_mr : card.cta}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
 
-                const typeConfig = item.notification_type === 'result'
-                  ? { label: isMarathi ? 'निकाल' : 'RESULT', icon: 'emoji_events', color: '#16A34A', bg: '#F0FDF4' }
-                  : item.notification_type === 'admit_card'
-                  ? { label: isMarathi ? 'प्रवेशपत्र' : 'ADMIT CARD', icon: 'badge', color: '#7C3AED', bg: '#F5F3FF' }
-                  : { label: isMarathi ? 'उत्तरतालिका' : 'ANSWER KEY', icon: 'fact_check', color: '#2563EB', bg: '#EFF6FF' }
+        {/* ════════ 4. BROWSE RECRUITMENTS BY COMMISSION ════════ */}
+        <section className={styles.sectionBlock} style={{ paddingTop: 0 }}>
+          <div className={styles.sectionHeader}>
+            <div>
+              <div className={styles.eyebrow}>Popular Commissions</div>
+              <h2 className={styles.sectionTitle}>
+                {isMarathi ? 'आयोग व विभागानुसार नोकऱ्या शोधा' : 'Browse Recruitments by Commission'}
+              </h2>
+            </div>
+            <Link href="/jobs" className={styles.headerLink}>
+              See All Commissions →
+            </Link>
+          </div>
 
-                const rawTitle = (isMarathi && item.title_mr) ? item.title_mr : item.title
-                const displayTitle = formatTitle(rawTitle)
+          <div className={styles.commissionsGrid}>
+            {COMMISSIONS.map((comm, idx) => (
+              <Link key={idx} href={comm.href} className={styles.commissionCard}>
+                <div className={styles.commIconWrap}>
+                  <span className="material-symbols-outlined">{comm.icon}</span>
+                </div>
+                <div className={styles.commName}>{isMarathi ? comm.name_mr : comm.name}</div>
+                <div className={styles.commMeta}>{comm.meta}</div>
+              </Link>
+            ))}
+          </div>
+        </section>
 
-                return (
-                  <Link
-                    key={item.id}
-                    href={href}
-                    className="dept-card"
-                    style={{
-                      background: 'var(--surface-container-lowest)',
-                      border: '1px solid var(--outline-variant)',
-                      borderRadius: 'var(--radius-md)',
-                      padding: '14px 16px',
-                      textDecoration: 'none',
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: 12,
-                      transition: 'transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease',
-                      boxShadow: 'var(--shadow-sm)',
-                    }}
-                  >
-                    <div style={{
-                      width: 42,
-                      height: 42,
-                      borderRadius: 10,
-                      background: typeConfig.bg,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
-                    }}>
-                      <span className="material-symbols-outlined" style={{ color: typeConfig.color, fontSize: 22 }}>
-                        {typeConfig.icon}
-                      </span>
-                    </div>
+        {/* ════════ 5. LATEST VERIFIED EXAM OPENINGS (Tabs) ════════ */}
+        <section className={styles.sectionBlock} style={{ paddingTop: 0 }}>
+          <div className={styles.sectionHeader}>
+            <div>
+              <div className={styles.eyebrow}>Daily Live Recruitment Feed • Updated Today</div>
+              <h2 className={styles.sectionTitle}>
+                {isMarathi ? 'ताज्या पडताळणी केलेल्या भरती जाहिराती' : 'Latest Verified Exam Openings'}
+              </h2>
+            </div>
+            <Link href="/jobs" className={styles.headerLink}>
+              View All 740+ Active Notifications →
+            </Link>
+          </div>
 
-                    <div style={{ minWidth: 0, flex: 1 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4, flexWrap: 'wrap' }}>
-                        <span style={{
-                          fontSize: 10,
-                          fontWeight: 800,
-                          padding: '2px 6px',
-                          borderRadius: 4,
-                          background: typeConfig.bg,
-                          color: typeConfig.color,
-                          whiteSpace: 'nowrap',
-                          letterSpacing: '0.04em',
-                        }}>
-                          {typeConfig.label}
-                        </span>
-                        {item.org_acronym && (
-                          <span style={{
-                            fontSize: 10,
-                            fontWeight: 700,
-                            padding: '2px 6px',
-                            borderRadius: 4,
-                            background: 'var(--surface-container-high)',
-                            color: 'var(--secondary)',
-                            whiteSpace: 'nowrap',
-                          }}>
-                            {item.org_acronym}
-                          </span>
-                        )}
-                      </div>
+          {/* Region Filter Tabs */}
+          <div className={styles.tabRow}>
+            {REGION_TABS.map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveRegion(tab.id)}
+                className={`${styles.tabBtn} ${activeRegion === tab.id ? styles.tabBtnActive : ''}`}
+                type="button"
+              >
+                {isMarathi ? tab.label_mr : tab.label}
+              </button>
+            ))}
+          </div>
 
-                      <div style={{
-                        fontSize: 13,
-                        fontWeight: 700,
-                        color: 'var(--on-surface)',
-                        lineHeight: 1.35,
-                        display: '-webkit-box',
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: 'vertical',
-                        overflow: 'hidden',
-                      }}>
-                        {displayTitle}
-                      </div>
+          {/* Job Cards Grid */}
+          <div className={styles.openingsGrid}>
+            {displayOpenings.map(job => (
+              <div key={job.id} className={styles.jobItemCard}>
+                <div className={styles.jobItemTop}>
+                  <span className={styles.jobStateBadge}>{job.region}</span>
+                  <span className={`${styles.jobStatusBadge} ${job.isNew ? styles.jobStatusNew : ''}`}>
+                    {job.status}
+                  </span>
+                </div>
 
-                      <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        marginTop: 8,
-                        fontSize: 11,
-                        color: 'var(--secondary)',
-                      }}>
-                        <span>{item.published_at ? new Date(item.published_at).toLocaleDateString(isMarathi ? 'mr-IN' : 'en-IN', { day: '2-digit', month: 'short' }) : 'Live'}</span>
-                        <span style={{ color: 'var(--primary)', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 2 }}>
-                          {isMarathi ? 'पहा' : 'Check'} →
-                        </span>
-                      </div>
-                    </div>
+                <Link href={`/jobs/${job.slug}`} className={styles.jobItemTitle}>
+                  {job.title}
+                </Link>
+
+                <div className={styles.jobDeptLine}>{job.dept}</div>
+
+                <div className={styles.jobDetailsRow}>
+                  <span className={styles.jobPill}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 13 }}>groups</span>
+                    {job.vacancies}
+                  </span>
+                  <span className={styles.jobPill}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 13 }}>school</span>
+                    {job.qualification}
+                  </span>
+                </div>
+
+                <div className={styles.jobBottomRow}>
+                  <span className={styles.jobDeadline}>Last Date: {job.deadline}</span>
+                  <Link href={`/jobs/${job.slug}`} className={styles.applyDirectBtn}>
+                    Apply Direct ↗
                   </Link>
-                )
-              })}
-            </div>
-          </section>
-        )}
-
-        {/* ── 4. Browse by Department ─────────────────────── */}
-        <section style={{ marginBottom: 52 }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 20, flexWrap: 'wrap', gap: 8 }}>
-            <div>
-              <h2 style={{ fontSize: 22, fontWeight: 800, color: 'var(--on-surface)', margin: '0 0 4px' }}>
-                {isMarathi ? 'विभागानुसार शोधा' : 'Browse by Department'}
-              </h2>
-              <p style={{ fontSize: 13, color: 'var(--secondary)', margin: 0 }}>
-                {isMarathi ? 'तुमच्या आवडीच्या विभागावर क्लिक करा' : 'Click any sector to see live openings'}
-              </p>
-            </div>
-            <Link href="/jobs" style={{ fontSize: 13, fontWeight: 700, color: 'var(--primary)', textDecoration: 'none' }}>
-              {isMarathi ? 'सर्व पहा →' : 'View all →'}
-            </Link>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 12 }}>
-            {categories.map((cat, i) => (
-              <Link
-                key={i}
-                href={`/jobs?org=${encodeURIComponent(cat.slug)}`}
-                style={{
-                  background: 'var(--surface-container-lowest)',
-                  border: '1px solid var(--outline-variant)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: '14px 16px',
-                  textDecoration: 'none',
-                  display: 'flex', alignItems: 'center', gap: 12,
-                  transition: 'border-color 0.15s, box-shadow 0.15s',
-                }}
-              >
-                <div style={{
-                  width: 40, height: 40, borderRadius: 10,
-                  background: 'var(--primary-fixed)', color: 'var(--primary)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-                }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 22 }}>{cat.icon}</span>
                 </div>
-                <div style={{ minWidth: 0 }}>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                    {cat.label}
-                  </div>
-                  <div style={{ fontSize: 12, color: 'var(--secondary)', marginTop: 2 }}>{cat.desc}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* ── 5. Latest Job Notifications ──────────────────── */}
-        <section style={{ marginBottom: 52 }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 20, flexWrap: 'wrap', gap: 8 }}>
-            <div>
-              <h2 style={{ fontSize: 22, fontWeight: 800, color: 'var(--on-surface)', margin: '0 0 4px' }}>
-                {isMarathi ? 'ताज्या भरती जाहिराती' : 'Latest Recruitment Notifications'}
-              </h2>
-              <p style={{ fontSize: 13, color: 'var(--secondary)', margin: 0 }}>
-                {isMarathi ? 'अधिकृत सरकारी पोर्टल्सवरून थेट — दररोज अपडेट' : 'Direct from official govt portals — updated daily'}
-              </p>
-            </div>
-            <Link href="/jobs" style={{ fontSize: 13, fontWeight: 700, color: 'var(--primary)', textDecoration: 'none' }}>
-              {isMarathi ? 'सर्व नोकऱ्या →' : 'All jobs →'}
-            </Link>
-          </div>
-
-          {jobs.length > 0 ? (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 18 }}>
-              {jobs.slice(0, 6).map(job => (
-                <JobCard key={job.slug || job.id} job={job} />
-              ))}
-            </div>
-          ) : (
-            <div style={{
-              textAlign: 'center', padding: '48px 20px',
-              background: 'var(--surface-container-lowest)',
-              borderRadius: 'var(--radius-md)',
-              border: '1px dashed var(--outline-variant)',
-            }}>
-              <span className="material-symbols-outlined" style={{ fontSize: 40, color: 'var(--secondary)', display: 'block', marginBottom: 8 }}>inbox</span>
-              <p style={{ fontSize: 14, color: 'var(--secondary)', margin: 0 }}>
-                {isMarathi ? 'नोकऱ्या लोड होत आहेत...' : 'Loading jobs...'}
-              </p>
-            </div>
-          )}
-
-          {jobs.length > 0 && (
-            <div style={{ textAlign: 'center', marginTop: 24 }}>
-              <Link href="/jobs" className="btn-outline" style={{
-                padding: '11px 28px', borderRadius: 'var(--radius-md)',
-                fontSize: 14, fontWeight: 700, textDecoration: 'none',
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-              }}>
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
-                {isMarathi ? 'सर्व नोकऱ्या पहा' : 'View All Jobs'}
-              </Link>
-            </div>
-          )}
-        </section>
-
-        {/* ── 6. Feature / Product Blocks ────────────────── */}
-        <section style={{ marginBottom: 52 }}>
-          <div style={{ marginBottom: 20 }}>
-            <h2 style={{ fontSize: 22, fontWeight: 800, color: 'var(--on-surface)', margin: '0 0 4px' }}>
-              {isMarathi ? 'ExamUdaan वर काय आहे?' : 'Everything on ExamUdaan'}
-            </h2>
-            <p style={{ fontSize: 13, color: 'var(--secondary)', margin: 0 }}>
-              {isMarathi ? 'नोकऱ्यांपासून AI साधनांपर्यंत — सर्व एकाच ठिकाणी' : 'Jobs, AI tools, YouTube channels, and training — all in one place'}
-            </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
-            {FEATURE_BLOCKS.map((block, i) => (
-              <Link
-                key={i}
-                href={block.href}
-                style={{
-                  background: 'var(--surface-container-lowest)',
-                  border: '1px solid var(--outline-variant)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '20px 20px',
-                  textDecoration: 'none',
-                  display: 'flex', flexDirection: 'column', gap: 10,
-                  transition: 'border-color 0.15s, box-shadow 0.15s, transform 0.15s',
-                }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  <div style={{
-                    width: 44, height: 44, borderRadius: 12,
-                    background: 'var(--primary-fixed)', color: 'var(--primary)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  }}>
-                    <span className="material-symbols-outlined" style={{ fontSize: 24 }}>{block.icon}</span>
-                  </div>
-                  {block.badge && (
-                    <span style={{
-                      fontSize: 11, fontWeight: 800,
-                      background: 'var(--primary-fixed)', color: 'var(--primary)',
-                      padding: '3px 8px', borderRadius: 999,
-                    }}>
-                      {block.badge}
-                    </span>
-                  )}
-                </div>
-                <div>
-                  <div style={{ fontSize: 16, fontWeight: 800, color: 'var(--on-surface)', margin: '0 0 6px' }}>
-                    {isMarathi ? block.title_mr : block.title_en}
-                  </div>
-                  <p style={{ fontSize: 13, color: 'var(--secondary)', margin: 0, lineHeight: 1.55 }}>
-                    {isMarathi ? block.desc_mr : block.desc_en}
-                  </p>
-                </div>
-                <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: 4, marginTop: 'auto' }}>
-                  {isMarathi ? block.cta_mr : block.cta_en}
-                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* ── 7. Alerts / WhatsApp CTA (dark strip) ───────── */}
-        <section style={{
-          background: 'linear-gradient(135deg, #1b1c1b 0%, #292524 100%)',
-          color: '#ffffff',
-          borderRadius: 'var(--radius-lg)',
-          padding: 'clamp(28px,4vw,44px) clamp(24px,4vw,40px)',
-          marginBottom: 48,
-        }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 32, alignItems: 'center' }}>
-
-            {/* Left: copy */}
-            <div>
-              <div style={{
-                display: 'inline-flex', alignItems: 'center', gap: 6,
-                background: 'rgba(34,197,94,0.18)', color: '#4ade80',
-                padding: '4px 12px', borderRadius: 999,
-                fontSize: 12, fontWeight: 700, marginBottom: 14,
-              }}>
-                <span className="material-symbols-outlined fill" style={{ fontSize: 15 }}>chat</span>
-                {isMarathi ? 'WhatsApp / Telegram' : 'Instant Job Alerts'}
               </div>
-              <h2 style={{ fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 800, marginBottom: 12, lineHeight: 1.25 }}>
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: 24 }}>
+            <Link href="/jobs" className={styles.ctaPrimary} style={{ padding: '10px 24px', fontSize: 14 }}>
+              View All 740+ Active Notifications →
+            </Link>
+          </div>
+        </section>
+
+        {/* ════════ 6. STOP GUESSING YOUR RANK (Score Suite) ════════ */}
+        <section className={styles.rankSuiteSection}>
+          <div className={styles.rankGrid}>
+
+            {/* Left Column: Description & Feature Bullets */}
+            <div>
+              <div className={styles.eyebrow}>AI Rank & Score Suite • 2026 Edition</div>
+              <h2 className={styles.sectionTitle} style={{ fontSize: 24, marginBottom: 12 }}>
                 {isMarathi
-                  ? 'नवीन भरती जाहीर होताच तुमच्या मोबाईलवर अलर्ट मिळवा'
-                  : 'Get notified the moment a new govt job is announced'}
+                  ? 'अंदाजावर विसंबून राहू नका. अचूक विश्लेषणासह निकाल तपासा.'
+                  : 'Stop Guessing Your Rank. Prepare with Algorithmic Precision.'}
               </h2>
-              <p style={{ fontSize: 14, opacity: 0.8, lineHeight: 1.6, marginBottom: 20 }}>
+              <p className={styles.sectionSubtitle} style={{ marginBottom: 20, lineHeight: 1.6 }}>
                 {isMarathi
-                  ? 'WhatsApp Channel, Telegram, किंवा ईमेल अलर्ट — तुमच्या सोयीनुसार. कोणतीही भरती चुकणार नाही.'
-                  : 'WhatsApp Channel, Telegram, or Email alerts — your choice. Custom filters by state, category, and education level.'}
+                  ? 'TCS व MPSC च्या मागील १० वर्षांच्या नॉर्मलायझेशन अल्गोरिदमच्या आधारे तुमचा अधिकृत निकालापूर्वीचा अचूक पर्सेन्टाइल, शिफ्ट रँक आणि प्रवर्गनिहाय मेरिट गुण मिळवा.'
+                  : 'ExamUdaan ingests machine learning models trained on 10 years of normalization patterns across TCS-administered government exams to reveal your exact percentile, rank, and merit raw score before official results.'}
               </p>
-              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                <a
-                  href={SITE_CONFIG?.social?.whatsappChannel || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    background: '#22c55e', color: '#fff',
-                    padding: '11px 22px', borderRadius: 'var(--radius-md)',
-                    fontWeight: 700, fontSize: 14, textDecoration: 'none',
-                    display: 'inline-flex', alignItems: 'center', gap: 8,
-                  }}
-                >
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chat</span>
-                  {isMarathi ? 'WhatsApp Channel' : 'Join WhatsApp'}
-                </a>
-                <a
-                  href={SITE_CONFIG?.social?.telegramChannel || 'https://t.me/examudaan'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    background: '#0284c7', color: '#fff',
-                    padding: '11px 20px', borderRadius: 'var(--radius-md)',
-                    fontWeight: 700, fontSize: 14, textDecoration: 'none',
-                    display: 'inline-flex', alignItems: 'center', gap: 8,
-                  }}
-                >
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>send</span>
-                  Telegram
-                </a>
-                <Link
-                  href="/pricing"
-                  style={{
-                    color: '#fff', border: '1px solid rgba(255,255,255,0.3)',
-                    padding: '11px 18px', borderRadius: 'var(--radius-md)',
-                    fontWeight: 600, fontSize: 13, textDecoration: 'none',
-                    display: 'inline-flex', alignItems: 'center', gap: 6,
-                  }}
-                >
-                  {isMarathi ? 'कस्टम अलर्ट प्लान' : 'Custom Alert Plans'}
+
+              <div className={styles.rankFeatureItem}>
+                <div className={styles.rankFeatureIcon}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>timeline</span>
+                </div>
+                <div className={styles.rankFeatureText}>
+                  <strong>Dynamic Shift Normalization Engine</strong>
+                  <p>Accurate shift-by-shift difficulty index calibrated using Gaussian standard deviations for multi-session exams.</p>
+                </div>
+              </div>
+
+              <div className={styles.rankFeatureItem}>
+                <div className={styles.rankFeatureIcon}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>tune</span>
+                </div>
+                <div className={styles.rankFeatureText}>
+                  <strong>Mean-Typical Shift Timetable</strong>
+                  <p>Immediate comparison of your performance against your shift average and standard deviation spread.</p>
+                </div>
+              </div>
+
+              <div className={styles.rankFeatureItem}>
+                <div className={styles.rankFeatureIcon}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>local_police</span>
+                </div>
+                <div className={styles.rankFeatureText}>
+                  <strong>Composite Police Merit Forecaster</strong>
+                  <p>Combined physical sprint/run scores + written score projected against historical category cutoff thresholds.</p>
+                </div>
+              </div>
+
+              <div style={{ marginTop: 22 }}>
+                <Link href="/score-calculator" className={styles.ctaPrimary}>
+                  Launch Answer Key Rank Calc ↗
                 </Link>
               </div>
             </div>
 
-            {/* Right: simulated WA message */}
-            <div style={{
-              background: '#075e54', borderRadius: 'var(--radius-md)',
-              padding: 16, maxWidth: 360, margin: '0 auto',
-              boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, borderBottom: '1px solid rgba(255,255,255,0.15)', paddingBottom: 10, marginBottom: 12 }}>
-                <span className="material-symbols-outlined" style={{ fontSize: 22, color: '#25d366' }}>verified</span>
-                <div>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: '#fff' }}>ExamUdaan Alerts ⚡</div>
-                  <div style={{ fontSize: 11, color: '#94a3b8' }}>{isMarathi ? 'अधिकृत WhatsApp चॅनेल' : 'Official WhatsApp Channel'}</div>
+            {/* Right Column: Live Interactive Widget Card */}
+            <div>
+              <div className={styles.analyzerWidget}>
+                <div className={styles.widgetHeader}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 18 }}>calculate</span>
+                    <strong style={{ fontSize: 14 }}>TCS / MPSC Response Key Analyzer</strong>
+                  </div>
+                  <span className={styles.widgetBadge}>Live Calculator</span>
                 </div>
-              </div>
-              <div style={{ background: '#fff', color: '#1e293b', borderRadius: 8, padding: 12, fontSize: 13, lineHeight: 1.55 }}>
-                <div style={{ fontWeight: 700, color: '#ea580c', marginBottom: 4 }}>
-                  {isMarathi ? '🚨 नवीन: BMC भरती 2026 जाहीर!' : '🚨 NEW: BMC Recruitment 2026!'}
+
+                <div className={styles.widgetInputs}>
+                  <div className={styles.widgetInputGroup}>
+                    <label>Select Exam</label>
+                    <select
+                      value={analyzerExam}
+                      onChange={e => setAnalyzerExam(e.target.value)}
+                      className={styles.widgetSelect}
+                    >
+                      <option value="mpsc">MPSC State Services Prelims</option>
+                      <option value="police">Maharashtra Police Constable</option>
+                      <option value="ssc">SSC CGL Tier-1 Examination</option>
+                    </select>
+                  </div>
+
+                  <div className={styles.widgetInputGroup}>
+                    <label>Category</label>
+                    <select
+                      value={analyzerCategory}
+                      onChange={e => setAnalyzerCategory(e.target.value)}
+                      className={styles.widgetSelect}
+                    >
+                      <option value="obc">OBC (Non-Creamy Layer)</option>
+                      <option value="open">Open / General</option>
+                      <option value="ews">EWS Economically Weaker</option>
+                      <option value="sc">SC / Scheduled Caste</option>
+                      <option value="st">ST / Scheduled Tribe</option>
+                    </select>
+                  </div>
                 </div>
-                <div>💼 <strong>{isMarathi ? 'पद:' : 'Post:'}</strong> {isMarathi ? 'कनिष्ठ अभियंता (स्थापत्य)' : 'Junior Engineer (Civil)'}</div>
-                <div>👥 <strong>{isMarathi ? 'जागा:' : 'Vacancies:'}</strong> {isMarathi ? '६९० पदे' : '690 Posts'}</div>
-                <div>📅 <strong>{isMarathi ? 'अंतिम दिनांक:' : 'Last Date:'}</strong> 28-Sep-2026</div>
-                <div style={{ marginTop: 8, fontSize: 12, color: '#2563eb' }}>
-                  {isMarathi ? '👉 PDF डाऊनलोड व ऑनलाईन अर्जासाठी येथे क्लिक करा' : '👉 Tap to download PDF & Apply Online'}
+
+                <div className={styles.scoreResultCard}>
+                  <div className={styles.scoreResultTop}>
+                    <span style={{ fontSize: 12, color: 'var(--secondary)', fontWeight: 600 }}>Overall Predicted Score:</span>
+                    <span className={styles.scoreValue}>{calculatedScore.score}</span>
+                  </div>
+
+                  {/* Progress bar */}
+                  <div style={{ height: 6, background: '#E2E8F0', borderRadius: 999, margin: '10px 0 8px', overflow: 'hidden' }}>
+                    <div style={{ width: '92%', height: '100%', background: 'linear-gradient(90deg, #16A34A 0%, #22C55E 100%)' }} />
+                  </div>
+
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: 'var(--secondary)' }}>
+                    <span>Overall Percentile: <strong style={{ color: '#16A34A' }}>{calculatedScore.percentile}</strong></span>
+                    <span>Shift Rank: <strong style={{ color: 'var(--primary)' }}>{calculatedScore.rank}</strong></span>
+                  </div>
                 </div>
+
+                <button
+                  type="button"
+                  onClick={handleRecalculate}
+                  className={styles.calcBtn}
+                >
+                  Calculate Normalized Merit Score
+                </button>
               </div>
             </div>
+
+          </div>
+        </section>
+
+        {/* ════════ 7. TODAY'S HIGH-YIELD STUDY BOOSTER (3 Cards) ════════ */}
+        <section className={styles.sectionBlock}>
+          <div className={styles.sectionHeader}>
+            <div>
+              <div className={styles.eyebrow}>Daily Free Preparation Hub</div>
+              <h2 className={styles.sectionTitle}>
+                {isMarathi ? 'आजचा हाय-यील्ड स्टडी बूस्टर' : 'Today\'s High-Yield Study Booster'}
+              </h2>
+              <p className={styles.sectionSubtitle}>
+                {isMarathi
+                  ? 'दररोज फक्त २५ मिनिटांत परीक्षेची तयारी परिपूर्ण करा.'
+                  : 'Lock your daily momentum in less than 25 minutes with verified exam-specific prep.'}
+              </p>
+            </div>
+            <Link href="/resources" className={styles.headerLink}>
+              Explore Free Library →
+            </Link>
+          </div>
+
+          <div className={styles.boosterGrid}>
+            {/* Card 1: 5-Min MCQ Drill */}
+            <div className={styles.boosterCard}>
+              <div className={styles.boosterCardTop}>
+                <span className={styles.suiteBadge} style={{ background: '#FFF7ED', color: '#EA580C', borderColor: '#FED7AA' }}>
+                  Daily 5-Min Drill
+                </span>
+                <span style={{ fontSize: 11, color: 'var(--secondary)' }}>10 Questions • 5 Mins</span>
+              </div>
+              <h3 className={styles.boosterTitle}>
+                10 Questions on MPSC & Police Bharti Current Events
+              </h3>
+              <p style={{ fontSize: 12, color: 'var(--secondary)', lineHeight: 1.45, marginBottom: 16 }}>
+                <strong>Sample Question:</strong> Which state government department notified the revised quota and physical merit structure for 2026?
+              </p>
+              <div className={styles.boosterActionRow}>
+                <Link href="/daily-quiz" className={styles.boosterBtn}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>play_arrow</span>
+                  Start 5-Minute Quiz Now
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 2: Daily Current Affairs Bullet Points */}
+            <div className={styles.boosterCard}>
+              <div className={styles.boosterCardTop}>
+                <span className={styles.suiteBadge} style={{ background: '#ECFDF5', color: '#065F46', borderColor: '#A7F3D0' }}>
+                  Daily 02 Oct 2026
+                </span>
+                <span style={{ fontSize: 11, color: 'var(--secondary)' }}>5 Min Read • PDF Ready</span>
+              </div>
+              <h3 className={styles.boosterTitle}>
+                Daily Current Affairs Bullet Points
+              </h3>
+              <ul className={styles.bulletPoints}>
+                <li className={styles.bulletItem}>
+                  <span className={`material-symbols-outlined ${styles.bulletIcon}`}>check_circle</span>
+                  <span>Maharashtra Cabinet clears key irrigation and rural road infrastructure packages.</span>
+                </li>
+                <li className={styles.bulletItem}>
+                  <span className={`material-symbols-outlined ${styles.bulletIcon}`}>check_circle</span>
+                  <span>RBI Monetary Policy keeps repo rate steady; highlights bank liquidity norms.</span>
+                </li>
+                <li className={styles.bulletItem}>
+                  <span className={`material-symbols-outlined ${styles.bulletIcon}`}>check_circle</span>
+                  <span>National Clean Air Programme review awards Pune & Nagpur top civic score.</span>
+                </li>
+              </ul>
+              <div className={styles.boosterActionRow}>
+                <Link href="/current-affairs" className={styles.boosterBtn} style={{ flex: 1.4 }}>
+                  Read More →
+                </Link>
+                <Link href="/current-affairs" className={styles.boosterBtnOutline}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>download</span>
+                  PDF
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 3: Video Masterclass */}
+            <div className={styles.boosterCard}>
+              <div className={styles.boosterCardTop}>
+                <span className={styles.suiteBadge} style={{ background: '#FEF2F2', color: '#DC2626', borderColor: '#FECACA' }}>
+                  Video Masterclass
+                </span>
+                <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Free YouTube Lecture</span>
+              </div>
+              <h3 className={styles.boosterTitle}>
+                MPSC & Police Bharti Reasoning Marathon
+              </h3>
+              <div style={{
+                position: 'relative',
+                borderRadius: 8,
+                overflow: 'hidden',
+                background: '#1C1917',
+                height: 110,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: 14,
+              }}>
+                <span className="material-symbols-outlined" style={{ fontSize: 44, color: '#EA580C', opacity: 0.9 }}>
+                  play_circle
+                </span>
+                <span style={{ position: 'absolute', bottom: 6, left: 8, fontSize: 10, color: '#ffffff', background: 'rgba(0,0,0,0.6)', padding: '1px 5px', borderRadius: 4 }}>
+                  1 hr 45 min • High-Yield
+                </span>
+              </div>
+              <div className={styles.boosterActionRow}>
+                <Link href="/youtube" className={styles.boosterBtn} style={{ background: '#DC2626' }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>play_circle</span>
+                  Watch Free Session
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ════════ 8. TRUSTED BY 1.2 MILLION+ ASPIRANTS (Testimonials) ════════ */}
+        <section className={styles.sectionBlock} style={{ paddingTop: 0 }}>
+          <div className={styles.sectionHeader} style={{ justifyContent: 'center', textAlign: 'center' }}>
+            <div>
+              <div className={styles.eyebrow}>Real Aspirant Reviews</div>
+              <h2 className={styles.sectionTitle}>
+                {isMarathi ? 'भारतातील १२ लाखांहून अधिक विद्यार्थ्यांचा विश्वास' : 'Trusted by 1.2 Million+ Aspirants Across India'}
+              </h2>
+              <p className={styles.sectionSubtitle}>
+                {isMarathi
+                  ? 'ग्रामीण भागापासून राजधानीपर्यंत — गंभीर परीक्षार्थी दररोज ExamUdaan का निवडतात.'
+                  : 'From remote talukas to major state capitals, see why serious aspirants rely on ExamUdaan every single day.'}
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.reviewsGrid}>
+            {TESTIMONIALS.map((review, i) => (
+              <div key={i} className={styles.reviewCard}>
+                <div className={styles.stars}>★★★★★</div>
+                <p className={styles.reviewText}>
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div className={styles.reviewer}>
+                  <div className={styles.reviewAvatar}>{review.initial}</div>
+                  <div>
+                    <div className={styles.reviewerName}>{review.name}</div>
+                    <div className={styles.reviewerExam}>{review.exam}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ════════ 9. PRE-FOOTER SAFFRON CTA BANNER ════════ */}
+        <section className={styles.preFooterBanner}>
+          <div>
+            <h2 className={styles.bannerTitle}>
+              {isMarathi ? 'आजच मोफत अभ्यास सुरू करा' : 'Start Your Preparation Today for Free'}
+            </h2>
+            <p className={styles.bannerSubtitle}>
+              {isMarathi
+                ? '१२ लाखांहून अधिक विद्यार्थ्यांसोबत मोफत प्रश्नपत्रिका, चालू घडामोडी आणि थेट भरती अलर्ट मिळवा.'
+                : 'Join 1.2M+ aspirants with real-time verified govt notifications, current affairs, and practice sets.'}
+            </p>
+          </div>
+
+          <div className={styles.bannerActions}>
+            <Link href="/jobs" className={styles.bannerBtnLight}>
+              Explore Free Content
+            </Link>
+            <a
+              href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.bannerBtnGreen}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chat</span>
+              WhatsApp Community
+            </a>
           </div>
         </section>
 

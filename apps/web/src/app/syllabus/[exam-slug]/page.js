@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getExamBySlug, ALL_EXAM_SLUGS, SYLLABUS_EXAMS } from '@/lib/syllabusData'
 import InteractiveSyllabusTracker from '@/components/InteractiveSyllabusTracker'
+import OfficialPdfViewer from '@/components/OfficialPdfViewer'
 import styles from './examDetail.module.css'
 
 // Static params for Next.js build
@@ -177,55 +178,65 @@ export default function ExamDetailPage({ params }) {
                 Previous Year Question Papers & Official Answer Keys (5+ Years)
               </h2>
               <p className={styles.pyqSubtitle}>
-                Authentic question papers and official answer keys directly from {exam.conductingBody}.
+                Read and download authentic question papers and official answer keys directly from {exam.conductingBody}.
               </p>
             </div>
             <span className={styles.pyqCountBadge}>{exam.pyqLinks.length} Sets Available</span>
           </div>
 
-          <div className={styles.pyqList}>
-            {exam.pyqLinks.map((link, i) => (
-              <div key={i} className={styles.pyqCardItem}>
-                <div className={styles.pyqYearCol} style={{ backgroundColor: `${exam.color}15`, color: exam.color }}>
-                  <span className={styles.pyqYearText}>{link.year}</span>
-                  <span className={styles.pyqYearBadge}>Q & A</span>
-                </div>
-                <div className={styles.pyqInfoCol}>
-                  <h3 className={styles.pyqPaperTitle}>{link.label}</h3>
-                  <p className={styles.pyqExamMeta}>
-                    <span className="material-symbols-outlined">fact_check</span>
-                    {link.exam} • Official {exam.conductingBody}
-                  </p>
-                </div>
-                <div className={styles.pyqActions}>
-                  <a
-                    href={link.paperUrl || link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.pyqPaperBtn}
-                    title="Download / View Question Paper"
-                  >
-                    <span className="material-symbols-outlined">description</span>
-                    Question Paper
-                    <span className="material-symbols-outlined">open_in_new</span>
-                  </a>
-                  {link.answerKeyUrl && (
+          {/* Embedded Official In-Browser PDF Document Viewer & Directory Workspace */}
+          {exam.officialPdfs && exam.officialPdfs.length > 0 ? (
+            <OfficialPdfViewer
+              papers={exam.officialPdfs}
+              conductingBody={exam.conductingBody}
+              officialWebsite={exam.officialWebsite}
+              examName={exam.nameEn}
+            />
+          ) : (
+            <div className={styles.pyqList}>
+              {exam.pyqLinks.map((link, i) => (
+                <div key={i} className={styles.pyqCardItem}>
+                  <div className={styles.pyqYearCol} style={{ backgroundColor: `${exam.color}15`, color: exam.color }}>
+                    <span className={styles.pyqYearText}>{link.year}</span>
+                    <span className={styles.pyqYearBadge}>Q & A</span>
+                  </div>
+                  <div className={styles.pyqInfoCol}>
+                    <h3 className={styles.pyqPaperTitle}>{link.label}</h3>
+                    <p className={styles.pyqExamMeta}>
+                      <span className="material-symbols-outlined">fact_check</span>
+                      {link.exam} • Official {exam.conductingBody}
+                    </p>
+                  </div>
+                  <div className={styles.pyqActions}>
                     <a
-                      href={link.answerKeyUrl}
+                      href={link.paperUrl || link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={styles.pyqAnswerBtn}
-                      title="Download / View Official Answer Key"
+                      className={styles.pyqPaperBtn}
+                      title="Download / View Question Paper"
                     >
-                      <span className="material-symbols-outlined">task_alt</span>
-                      Answer Key / Answers
+                      <span className="material-symbols-outlined">description</span>
+                      Question Paper
                       <span className="material-symbols-outlined">open_in_new</span>
                     </a>
-                  )}
+                    {link.answerKeyUrl && (
+                      <a
+                        href={link.answerKeyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.pyqAnswerBtn}
+                        title="Download / View Official Answer Key"
+                      >
+                        <span className="material-symbols-outlined">task_alt</span>
+                        Answer Key / Answers
+                        <span className="material-symbols-outlined">open_in_new</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

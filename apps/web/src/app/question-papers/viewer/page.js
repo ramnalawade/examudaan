@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 // app/question-papers/viewer/page.js — In-Browser PDF Viewer
 // Embeds the PDF via iframe so the user STAYS on ExamUdaan.
 // URL: /question-papers/viewer?pdf=/question-papers/mpsc/...pdf&title=...
@@ -14,12 +14,17 @@ export const metadata = {
 
 // Viewer is a client component because we read searchParams at render time.
 // Next.js 14 App Router: searchParams is passed as a prop to the page.
-export default function PaperViewerPage({ searchParams }) {
-  const pdfPath = searchParams?.pdf || ''
-  const title   = searchParams?.title || 'Question Paper'
+export default async function PaperViewerPage({ searchParams }) {
+  const resolvedParams = await Promise.resolve(searchParams)
+  const pdfPath = resolvedParams?.pdf || ''
+  const title   = resolvedParams?.title || 'Official Question Paper'
 
-  // Security: only allow PDFs from our own /question-papers/ folder
-  const safeToEmbed = pdfPath.startsWith('/question-papers/') && pdfPath.endsWith('.pdf')
+  // Security: allow PDFs from our own /question-papers/ or /downloads/mpsc/ folder or /api/mpsc-pdf/
+  const safeToEmbed = (
+    pdfPath.startsWith('/question-papers/') ||
+    pdfPath.startsWith('/downloads/mpsc/') ||
+    pdfPath.startsWith('/api/mpsc-pdf/')
+  ) && (pdfPath.endsWith('.pdf') || pdfPath.includes('/api/mpsc-pdf/'))
 
   return (
     <div style={{ background: '#FFFBF5', minHeight: '100vh' }}>

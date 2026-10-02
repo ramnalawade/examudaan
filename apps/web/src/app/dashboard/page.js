@@ -465,6 +465,33 @@ export default function DashboardPage() {
             ))}
           </nav>
 
+          {/* Quick study access: Question Papers & Keys */}
+          <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid var(--outline-variant)' }}>
+            <Link
+              href="/question-papers"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
+                padding: '10px 14px',
+                borderRadius: '10px',
+                fontSize: 13,
+                fontWeight: 600,
+                color: '#EA580C',
+                background: '#FFF7ED',
+                textDecoration: 'none',
+                border: '1px solid #FFEDD5',
+                transition: 'all 0.15s ease'
+              }}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#EA580C' }}>description</span>
+              <span style={{ flex: 1 }}>Question Papers & Keys</span>
+              <span style={{ fontSize: 10, fontWeight: 700, background: '#EA580C', color: '#FFF', padding: '1px 6px', borderRadius: 99 }}>
+                214+
+              </span>
+            </Link>
+          </div>
+
           {/* Upgrade banner */}
           {user?.plan === 'free' && (
             <div style={{
@@ -563,6 +590,92 @@ export default function DashboardPage() {
                     <span style={{ fontSize: 11, color: 'var(--secondary)' }}>CBT Mock Tests</span>
                     <strong style={{ fontSize: 18, color: '#7c3aed' }}>{siteStats?.total_mock_tests ? `${siteStats.total_mock_tests} Tests` : '12 Tests'}</strong>
                     <span style={{ fontSize: 11, color: '#7c3aed', fontWeight: 600 }}>TCS/MPSC exams →</span>
+                  </Link>
+                  <Link href="/question-papers" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1.5px solid #EA580C', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                    <span style={{ fontSize: 11, color: '#C2410C', fontWeight: 700 }}>Official Question Papers</span>
+                    <strong style={{ fontSize: 18, color: '#EA580C' }}>214+ PDFs</strong>
+                    <span style={{ fontSize: 11, color: '#EA580C', fontWeight: 600 }}>MPSC Papers & Keys →</span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* ── Official MPSC Question Papers & Answer Keys Study Hub Banner ── */}
+              <div style={{
+                background: 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)',
+                border: '1.5px solid #FED7AA',
+                borderRadius: 14,
+                padding: '20px 22px',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                gap: 16,
+                boxShadow: '0 2px 8px rgba(234, 88, 12, 0.06)'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                  <div style={{
+                    width: 46,
+                    height: 46,
+                    borderRadius: 12,
+                    background: '#EA580C',
+                    color: '#FFFFFF',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0
+                  }}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 26 }}>description</span>
+                  </div>
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 3 }}>
+                      <span style={{ fontSize: 10, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '2px 8px', borderRadius: 4, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        NEW FEATURE
+                      </span>
+                      <strong style={{ fontSize: 15, color: '#1F2937' }}>
+                        Official Previous Year Question Papers & Answer Keys
+                      </strong>
+                    </div>
+                    <p style={{ margin: 0, fontSize: 13, color: '#4B5563', lineHeight: 1.45 }}>
+                      214+ authentic original question papers & official final answer keys (2024–2026). Read directly in-browser with zero ads.
+                    </p>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                  <Link
+                    href="/question-papers"
+                    style={{
+                      background: '#EA580C',
+                      color: '#FFFFFF',
+                      fontWeight: 700,
+                      fontSize: 13,
+                      padding: '9px 16px',
+                      borderRadius: 8,
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 6
+                    }}
+                  >
+                    <span>Browse Question Papers</span>
+                    <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
+                  </Link>
+                  <Link
+                    href="/syllabus/mpsc-combined"
+                    style={{
+                      background: '#FFFFFF',
+                      color: '#374151',
+                      border: '1px solid #D1D5DB',
+                      fontWeight: 600,
+                      fontSize: 13,
+                      padding: '9px 14px',
+                      borderRadius: 8,
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 6
+                    }}
+                  >
+                    <span>MPSC Combined Prelims</span>
                   </Link>
                 </div>
               </div>

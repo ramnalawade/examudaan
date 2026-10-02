@@ -11,6 +11,8 @@
 // 5. All active government exam notifications from PostgreSQL
 // ============================================================
 
+import fs from 'fs'
+import path from 'path'
 import { query as pgQuery } from '../lib/pgdb.js'
 import { AI_TOOLS } from '../lib/aiToolsData.js'
 import { MOCK_TESTS } from '../lib/mockTestsData.js'
@@ -183,6 +185,46 @@ export default async function sitemap() {
     })
   }
 
+  // 5f. Downloaded Authentic MPSC Question Papers & Answer Keys (In-Browser Viewer URLs)
+  let mpscPaperEntries = []
+  try {
+    let mpscBase = path.join(process.cwd(), 'public', 'downloads', 'mpsc')
+    if (!fs.existsSync(mpscBase)) {
+      mpscBase = path.join(process.cwd(), 'apps', 'web', 'public', 'downloads', 'mpsc')
+    }
+    if (fs.existsSync(mpscBase)) {
+      const publicDir = mpscBase.includes(path.join('apps', 'web', 'public'))
+        ? path.join(process.cwd(), 'apps', 'web', 'public')
+        : path.join(process.cwd(), 'public')
+
+      function scanDir(dir) {
+        let results = []
+        const entries = fs.readdirSync(dir, { withFileTypes: true })
+        for (const entry of entries) {
+          const full = path.join(dir, entry.name)
+          if (entry.isDirectory()) {
+            results = results.concat(scanDir(full))
+          } else if (entry.name.endsWith('.pdf')) {
+            const rel = path.relative(publicDir, full).replace(/\\/g, '/')
+            const stats = fs.statSync(full)
+            results.push({ rel, mtime: stats.mtime.toISOString() })
+          }
+        }
+        return results
+      }
+
+      const files = scanDir(mpscBase)
+      mpscPaperEntries = files.map(f => ({
+        url:             `${BASE_URL}/question-papers/viewer?pdf=/${encodeURI(f.rel)}`,
+        lastModified:    f.mtime || now,
+        changeFrequency: 'monthly',
+        priority:        0.88,
+      }))
+    }
+  } catch (mpscErr) {
+    console.error('Sitemap MPSC files scan error:', mpscErr)
+  }
+
   // 6. Database Exam Notifications (Up to 45,000 published entries)
   let postEntries = []
   try {
@@ -218,6 +260,7 @@ export default async function sitemap() {
     ...blogEntries,
     ...districtEntries,
     ...pyqSubjectEntries,
+    ...mpscPaperEntries,
     ...postEntries,
   ]
 }

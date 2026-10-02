@@ -54,6 +54,7 @@ const schema = Joi.object({
   govt_level:       Joi.string().valid('Central', 'State', 'PSU', 'Local').allow(null, ''),
   min_vacancies:    Joi.number().integer().min(0).max(1000000).allow(null, ''),
   min_days_left:    Joi.number().integer().min(0).max(365).allow(null, ''),
+  active_only:      Joi.string().valid('true', 'false').allow(null, ''),
   walk_in:          Joi.string().valid('true', 'false').allow(null, ''),  // filter walk-in only
   page:             Joi.number().integer().min(1).default(1),
   limit:            Joi.number().integer().min(1).max(50).default(PAGE_SIZE),
@@ -94,7 +95,7 @@ export async function GET(req) {
   const {
     status, type, org, q, state, city,
     qualification, employment_type, min_salary, max_age, govt_level,
-    min_vacancies, min_days_left, walk_in,
+    min_vacancies, min_days_left, active_only, walk_in,
     page, limit, sort,
   } = params
   const offset = (page - 1) * limit
@@ -107,6 +108,13 @@ export async function GET(req) {
   if (status !== 'all') {
     conditions.push(`en.status = $${values.length + 1}`)
     values.push(status)
+  }
+
+  // Active only filter (omits closed recruitments and past deadlines)
+  if (active_only === 'true') {
+    conditions.push(
+      `(en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE) AND en.status != 'closed'`
+    )
   }
 
   // Notification type filter
@@ -152,15 +160,19 @@ export async function GET(req) {
     values.push(`%${resolvedState.replace(/-/g, '%')}%`)
   }
 
-  // City filter (exam_cities is TEXT[] — use ANY with ILIKE via unnest)
+  // City / District filter — checks exam_cities array, title, title_mr, and ai_extracted_data
   if (city) {
     conditions.push(
-      `EXISTS (
-        SELECT 1 FROM unnest(en.exam_cities) AS c
-        WHERE c ILIKE $${values.length + 1}
+      `((en.exam_cities IS NOT NULL AND EXISTS (
+          SELECT 1 FROM unnest(en.exam_cities) AS c
+          WHERE c ILIKE $${values.length + 1}
+        ))
+        OR en.title ILIKE $${values.length + 2}
+        OR en.title_mr ILIKE $${values.length + 3}
+        OR (en.ai_extracted_data IS NOT NULL AND en.ai_extracted_data::text ILIKE $${values.length + 4})
       )`
     )
-    values.push(`%${city}%`)
+    values.push(`%${city}%`, `%${city}%`, `%${city}%`, `%${city}%`)
   }
 
   // Qualification filter — search across qualifications JSONB, education arrays, and ai_extracted_data

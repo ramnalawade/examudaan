@@ -241,10 +241,22 @@ def build_consolidated_email_html(metrics: dict, spider_results: dict, start_tim
 
     # Latest Notifications list
     notifications_html = ""
-    site_base = os.getenv("NEXT_PUBLIC_SITE_URL", "https://examudaan.in")
+    raw_site = os.getenv("NEXT_PUBLIC_SITE_URL", "https://examudaan.in")
+    site_base = raw_site if (raw_site and "localhost" not in raw_site) else "https://examudaan.in"
+    site_base = site_base.rstrip("/")
+
+    type_route_map = {
+        "recruitment": "jobs",
+        "result": "results",
+        "admit_card": "admit-cards",
+        "answer_key": "answer-keys",
+        "syllabus": "schemes"
+    }
+
     for row in latest_notifications:
         title, org, state, ntype, ext_link, slug, created_at = row
-        detail_url = f"{site_base}/jobs/{slug}" if slug else (ext_link or site_base)
+        route_prefix = type_route_map.get(ntype, "jobs")
+        detail_url = f"{site_base}/{route_prefix}/{slug}" if slug else (ext_link or site_base)
         state_label = state.replace("-", " ").title()
         notifications_html += f"""
         <div style='padding:12px 14px;border-bottom:1px solid #f1f5f9'>

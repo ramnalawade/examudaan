@@ -16,14 +16,56 @@ import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
 import { formatTitle } from '../lib/formatTitle'
 
-// Static fallback items (all verified against active database jobs)
+// Static fallback items (verified major recruitments with high vacancies)
 const FALLBACK_ITEMS = [
+  {
+    id: '18001',
+    slug: 'rrb-non-technical-popular-categories-ntpc-2026',
+    title: 'RRB Non-Technical Popular Categories (NTPC)',
+    title_mr: 'रेल्वे भरती बोर्ड (RRB NTPC) भरती २०२६',
+    total_vacancies: 11558,
+  },
+  {
+    id: '18002',
+    slug: 'ssc-combined-graduate-level-cgl-2026',
+    title: 'SSC Combined Graduate Level (CGL) 2026',
+    title_mr: 'कर्मचारी निवड आयोग (SSC CGL) भरती २०२६',
+    total_vacancies: 17727,
+  },
+  {
+    id: '18003',
+    slug: 'up-police-civilian-constable-recruitment-2026',
+    title: 'Uttar Pradesh Police Civilian Constable Bharti',
+    title_mr: 'उत्तर प्रदेश पोलीस कॉन्स्टेबल भरती',
+    total_vacancies: 60244,
+  },
   {
     id: '3993',
     slug: 'munbii-poliis-shipaaii-bhrtii-sn-2024-25-mdhye-vaaddhiiv-pdaancaa-sudhaarit-kppiikrt-aarkssnn-nihaay-tktaa-di-22-01-2026',
     title: 'Maharashtra Mumbai Police Bharti 2026',
-    title_mr: 'मुंबई पोलीस शिपाई भरती २०२४-२५ सुधारित आरक्षण',
+    title_mr: 'मुंबई पोलीस शिपाई भरती २०२६ सुधारित आरक्षण',
     total_vacancies: 3521,
+  },
+  {
+    id: '18004',
+    slug: 'mpsc-state-services-combined-prelims-2026',
+    title: 'Maharashtra Combined Civil Services Prelims 2026',
+    title_mr: 'महाराष्ट्र नागरी सेवा संयुक्त पूर्व परीक्षा २०२६ (MPSC)',
+    total_vacancies: 4124,
+  },
+  {
+    id: '18005',
+    slug: 'income-tax-filing-executive-recruitment-2026',
+    title: 'Income Tax Department Tax Assistant & Executive',
+    title_mr: 'आयकर विभाग कर सहाय्यक भरती २०२६',
+    total_vacancies: 50,
+  },
+  {
+    id: '18006',
+    slug: 'csir-neeri-nagpur-junior-secretariat-assistant-2026',
+    title: 'CSIR-NEERI Nagpur Junior Secretariat Assistant & Steno',
+    title_mr: 'CSIR-NEERI नागपूर कनिष्ठ सचिवालय सहाय्यक भरती',
+    total_vacancies: 28,
   },
   {
     id: '3998',
@@ -31,48 +73,6 @@ const FALLBACK_ITEMS = [
     title: 'Mumbai Police Bandsman & Jail Constable Bharti',
     title_mr: 'मुंबई पोलीस शिपाई / बॅण्डस्मन / कारागृह शिपाई भरती',
     total_vacancies: 2641,
-  },
-  {
-    id: '17420',
-    slug: 'bima-sakhi',
-    title: 'Bima Sakhi Recruitment 2026',
-    title_mr: 'विमा सखी भरती २०२६',
-    total_vacancies: 100,
-  },
-  {
-    id: '17419',
-    slug: 'back-office-executive',
-    title: 'Back Office Executive Recruitment',
-    title_mr: 'बॅक ऑफिस एक्झिक्युटिव्ह भरती',
-    total_vacancies: 100,
-  },
-  {
-    id: '8279',
-    slug: 'staff-nurse-gr-ii-medical-education-dept-catno4692024',
-    title: 'Staff Nurse Gr-II Medical Education Department',
-    title_mr: 'स्टाफ नर्स गट-२ भरती',
-    total_vacancies: 90,
-  },
-  {
-    id: '17412',
-    slug: 'freelancer-part-time',
-    title: 'Freelancer Part Time Recruitment',
-    title_mr: 'फ्रीलान्सर पार्ट टाईम भरती',
-    total_vacancies: 50,
-  },
-  {
-    id: '17418',
-    slug: 'business-development-manager',
-    title: 'Business Development Manager Recruitment',
-    title_mr: 'बिझनेस डेव्हलपमेंट मॅनेजर भरती',
-    total_vacancies: 50,
-  },
-  {
-    id: '17409',
-    slug: 'csc-center',
-    title: 'CSC Center Executive Recruitment',
-    title_mr: 'सीएससी केंद्र एक्झिक्युटिव्ह भरती',
-    total_vacancies: 50,
   },
 ]
 
@@ -115,9 +115,9 @@ export default function TickerBar() {
 
     async function fetchLatest() {
       try {
-        // Query recruitment jobs with at least 10 vacancies and longer duration (at least 3 days left)
+        // Query active recruitment jobs with highest vacancies (active only, no closed jobs)
         const res = await fetch(
-          '/api/notifications?type=recruitment&min_vacancies=10&min_days_left=3&status=published&sort=vacancies&limit=15'
+          '/api/notifications?type=recruitment&active_only=true&min_vacancies=10&status=published&sort=vacancies&limit=15'
         )
         if (!res.ok) return
         const json = await res.json()
