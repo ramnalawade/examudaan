@@ -31,11 +31,12 @@ const mukta = Mukta({
 })
 
 // ── Analytics IDs (set in .env) ──
-// GTM manages GA4 internally — no need for a separate gtag script.
-// GTM_ID:     GTM-NH9V94Q9 (set in NEXT_PUBLIC_GTM_ID)
-// CLARITY_ID: yh913yaes0   (set in NEXT_PUBLIC_CLARITY_ID)
-const GTM_ID     = process.env.NEXT_PUBLIC_GTM_ID     || 'GTM-NH9V94Q9'
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || 'yh913yaes0'
+// GTM_ID:            GTM-NH9V94Q9 (set in NEXT_PUBLIC_GTM_ID)
+// GA_MEASUREMENT_ID: G-PG16F0L21G (set in NEXT_PUBLIC_GA_MEASUREMENT_ID)
+// CLARITY_ID:        yh913yaes0   (set in NEXT_PUBLIC_CLARITY_ID)
+const GTM_ID            = process.env.NEXT_PUBLIC_GTM_ID            || 'GTM-NH9V94Q9'
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-PG16F0L21G'
+const CLARITY_ID        = process.env.NEXT_PUBLIC_CLARITY_ID        || 'yh913yaes0'
 const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
 const SITE_URL   = (rawSiteUrl && !rawSiteUrl.includes('localhost')) ? rawSiteUrl : 'https://examudaan.in'
 
@@ -108,23 +109,46 @@ export default function RootLayout({ children }) {
       </head>
 
       {/* ──────────────────────────────────────────────────────
-          Google Tag Manager — manages GA4 (G-PG16F0L21G) and any
-          future tags from the GTM dashboard.
+          Google tag (gtag.js) — Google Analytics 4 (GA4)
+          Measurement ID: G-PG16F0L21G
+          Loads after hydration (afterInteractive)
+      ────────────────────────────────────────────────────── */}
+      {GA_MEASUREMENT_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+          </Script>
+        </>
+      )}
+
+      {/* ──────────────────────────────────────────────────────
+          Google Tag Manager — manages additional marketing tags
           Strategy: afterInteractive = loads after hydration, non-blocking.
           GTM ID: GTM-NH9V94Q9
       ────────────────────────────────────────────────────── */}
-      <Script id="gtm-head" strategy="afterInteractive">{`
-        (function(w,d,s,l,i){
-          w[l]=w[l]||[];
-          w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-          var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),
-              dl=l!='dataLayer'?'&l='+l:'';
-          j.async=true;
-          j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-          f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','${GTM_ID}');
-      `}</Script>
+      {GTM_ID && (
+        <Script id="gtm-head" strategy="afterInteractive">{`
+          (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','${GTM_ID}');
+        `}</Script>
+      )}
 
       {/* ──────────────────────────────────────────────────────
           Microsoft Clarity — session recordings + heatmaps.

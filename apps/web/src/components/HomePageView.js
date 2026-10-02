@@ -50,15 +50,26 @@ const FEATURE_BLOCKS = [
     badge: 'Live',
   },
   {
+    icon: 'explore',
+    title_en: '10th & 12th Career Compass',
+    title_mr: '१० वी व १२ वी नंतर करिअर मार्गदर्शक',
+    desc_en: 'Complete roadmap for Science, Commerce, Arts & Polytechnic with salaries, entrance exams, subjects to score, and top colleges.',
+    desc_mr: 'सायन्स, कॉमर्स, आर्ट्स आणि पॉलिटेक्निकसाठी पगार, प्रवेश परीक्षा, आवश्यक विषय आणि भविष्यातील संधींचे सविस्तर विश्लेषण.',
+    href: '/career',
+    cta_en: 'Explore 40+ Careers',
+    cta_mr: '४०+ करिअर पर्याय पहा',
+    badge: 'New 2026',
+  },
+  {
     icon: 'smart_toy',
     title_en: 'AI Tools for Exam Prep',
     title_mr: 'परीक्षेसाठी AI साधने',
-    desc_en: '54 curated tools across 8 categories — NotebookLM, Claude, Cursor, Gamma, Perplexity — each with a step-by-step guide.',
-    desc_mr: 'NotebookLM, Claude, Cursor, Gamma सारखी ५४ AI साधने — सविस्तर मार्गदर्शनासह.',
+    desc_en: '84+ curated tools across 8 categories — NotebookLM, Claude, Cursor, Gamma, Perplexity — each with a step-by-step guide.',
+    desc_mr: 'NotebookLM, Claude, Cursor, Gamma सारखी ८४+ AI साधने — सविस्तर मार्गदर्शनासह.',
     href: '/ai-tools',
-    cta_en: 'Explore 54 AI Tools',
-    cta_mr: '५४ AI साधने पहा',
-    badge: '54 Tools',
+    cta_en: 'Explore 84 AI Tools',
+    cta_mr: '८४ AI साधने पहा',
+    badge: '84 Tools',
   },
   {
     icon: 'quiz',
@@ -277,10 +288,10 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
           gap: 0,
         }}>
           {[
-            { value: stats.total_jobs  || '700+',        label: isMarathi ? 'सक्रिय भरती' : 'Active Jobs',         icon: 'work' },
-            { value: stats.total_vacancies || '80,000+', label: isMarathi ? 'एकूण जागा' : 'Total Vacancies',      icon: 'groups' },
-            { value: stats.total_boards || '37+',        label: isMarathi ? 'सरकारी पोर्टल' : 'Govt Portals',       icon: 'travel_explore' },
-            { value: stats.total_ai_tools || '29 AI Tools', label: isMarathi ? 'एआय अभ्यास साधने' : 'AI Study Tools', icon: 'smart_toy' },
+            { value: stats.total_jobs  || '740+',        label: isMarathi ? 'सक्रिय भरती' : 'Active Jobs',         icon: 'work' },
+            { value: stats.total_vacancies || '85,000+', label: isMarathi ? 'एकूण जागा' : 'Total Vacancies',      icon: 'groups' },
+            { value: stats.total_boards || '42+',        label: isMarathi ? 'सरकारी पोर्टल' : 'Govt Portals',       icon: 'travel_explore' },
+            { value: stats.total_ai_tools ? `${stats.total_ai_tools} AI Tools` : '84 AI Tools', label: isMarathi ? 'एआय अभ्यास साधने' : 'AI Study Tools', icon: 'smart_toy' },
           ].map((s, i, arr) => (
             <div
               key={i}

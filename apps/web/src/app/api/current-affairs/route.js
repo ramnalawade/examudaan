@@ -143,20 +143,48 @@ export async function GET(request) {
 
   const liveItems = []
 
-  // ── Fetch PIB & Google News Live RSS Feeds ──────────────────
+  // ── Fetch live RSS feeds — PIB, Google News, MPSC-specific sources ───────────
   try {
     const feeds = [
+      // National Governance
       {
         url: 'https://news.google.com/rss/search?q=government+scheme+OR+MPSC+OR+UPSC+OR+budget+when:5d&hl=en-IN&gl=IN&ceid=IN:en',
         source: 'National Governance Feed',
       },
+      // Maharashtra Specific — MPSC, Police Bharti, State Govt
       {
         url: 'https://news.google.com/rss/search?q=Maharashtra+government+OR+Mantralaya+OR+MPSC+when:5d&hl=en-IN&gl=IN&ceid=IN:en',
         source: 'Maharashtra Governance Feed',
       },
+      // MPSC-Specific (Marathi language Google News)
+      {
+        url: 'https://news.google.com/rss/search?q=MPSC+2026+OR+MPSC+bharti+OR+MPSC+result+when:7d&hl=mr&gl=IN&ceid=IN:mr',
+        source: 'MPSC Current Affairs',
+      },
+      // Economy & Banking (RBI, SEBI, Budget)
       {
         url: 'https://news.google.com/rss/search?q=RBI+OR+repo+rate+OR+inflation+OR+GDP+India+when:5d&hl=en-IN&gl=IN&ceid=IN:en',
         source: 'Economic & Banking Feed',
+      },
+      // Police Bharti & Recruitment
+      {
+        url: 'https://news.google.com/rss/search?q=Maharashtra+police+bharti+OR+police+recruitment+Maharashtra+2026&hl=en-IN&gl=IN&ceid=IN:en',
+        source: 'Police Bharti Feed',
+      },
+      // PIB India — official government press releases
+      {
+        url: 'https://www.pib.gov.in/RssMain.aspx',
+        source: 'PIB India — Govt Press Releases',
+      },
+      // Drishti IAS — curated current affairs (great for MPSC/UPSC)
+      {
+        url: 'https://www.drishtiias.com/rss.rss',
+        source: 'Drishti IAS Current Affairs',
+      },
+      // AffairsCloud — daily current affairs digest
+      {
+        url: 'https://affairscloud.com/feed/',
+        source: 'AffairsCloud Daily Digest',
       },
     ]
 

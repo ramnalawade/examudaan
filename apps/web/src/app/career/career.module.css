@@ -1,0 +1,798 @@
+/* career.module.css — Stream & Career Decision Explorer Design System */
+
+.page {
+  background: var(--surface-container-lowest, #fffbf5);
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* ── Hero Section ── */
+.hero {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fffbf5 100%);
+  border-bottom: 1px solid #fed7aa;
+  padding: 44px 0 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ea580c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.25);
+}
+
+.heroTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #1c1917;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 26px;
+  }
+}
+
+.heroDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #57534e;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+/* Search Bar */
+.searchWrapper {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 14px 20px 14px 46px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  border: 2px solid #fdba74;
+  border-radius: 12px;
+  background: #fff;
+  color: #1c1917;
+  outline: none;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.08);
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: #ea580c;
+  box-shadow: 0 4px 20px rgba(234, 88, 12, 0.16);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ea580c;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+/* ── Stream Selector Tabs ── */
+.streamSelector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+  .streamSelector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .streamSelector {
+    grid-template-columns: 1fr;
+  }
+}
+
+.streamTab {
+  background: #fff;
+  border: 2px solid #e7e5e4;
+  border-radius: 14px;
+  padding: 16px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.streamTab:hover {
+  border-color: #fdba74;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.streamTabActive {
+  border-color: #ea580c;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.12);
+}
+
+.streamTabActive::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: #ea580c;
+  border-radius: 3px 3px 0 0;
+}
+
+.streamIconRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.streamIcon {
+  font-size: 24px;
+}
+
+.streamBadge {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.streamName {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1917;
+  margin-top: 4px;
+}
+
+.streamSub {
+  font-size: 12px;
+  color: #78716c;
+  line-height: 1.35;
+}
+
+/* ── Stream Overview Banner ── */
+.streamBanner {
+  background: #fff;
+  border: 1px solid #fed7aa;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 28px auto 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.streamBannerTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1917;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+}
+
+.combinationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.combCard {
+  background: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.combCode {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ea580c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.combSubjs {
+  font-size: 13px;
+  font-weight: 600;
+  color: #292524;
+  margin: 2px 0 4px;
+}
+
+.combBestFor {
+  font-size: 12px;
+  color: #57534e;
+  line-height: 1.4;
+}
+
+/* ── Domain / Category Filter Bar ── */
+.categoryBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 2px 16px;
+  margin-bottom: 20px;
+}
+
+.catBtn {
+  background: #fff;
+  border: 1px solid #d6d3d1;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #44403c;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.catBtn:hover {
+  border-color: #ea580c;
+  color: #ea580c;
+}
+
+.catBtnActive {
+  background: #ea580c;
+  color: #fff;
+  border-color: #ea580c;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.25);
+}
+
+/* ── Career Cards Grid ── */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 480px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.careerCard {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.careerCard:hover {
+  border-color: #fdba74;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  color: #1c1917;
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.cardRole {
+  font-size: 13px;
+  color: #78716c;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.badgeCategory {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #f5f5f4;
+  color: #57534e;
+  white-space: nowrap;
+}
+
+/* Card Sections */
+.cardMetaBlock {
+  background: #fafaf9;
+  border: 1px solid #f5f5f4;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 12px 0;
+}
+
+.cardMetaRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #44403c;
+  margin-bottom: 8px;
+}
+
+.cardMetaRow:last-child {
+  margin-bottom: 0;
+}
+
+.cardMetaIcon {
+  font-size: 18px;
+  color: #ea580c;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cardMetaLabel {
+  font-weight: 700;
+  color: #1c1917;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.cardSalaryBanner {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.salaryEntry {
+  font-size: 12px;
+  color: #065f46;
+}
+
+.salaryEntry strong {
+  font-size: 14px;
+  font-weight: 800;
+  color: #047857;
+  display: block;
+}
+
+.btnExplore {
+  background: #ea580c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btnExplore:hover {
+  background: #c2410c;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+
+/* ── In-Depth Modal / Drawer ── */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modalBox {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: modalSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modalHeader {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid #fed7aa;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.modalTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1c1917;
+  margin: 0 0 4px;
+}
+
+.modalRole {
+  font-size: 14px;
+  color: #78716c;
+  margin: 0;
+}
+
+.closeBtn {
+  background: #fff;
+  border: 1px solid #d6d3d1;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #44403c;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.closeBtn:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.modalBody {
+  padding: 28px;
+}
+
+/* Dossier Section */
+.dossierSection {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f5f5f4;
+}
+
+.dossierSection:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dossierHeading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1c1917;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+/* Subject Score Matrix */
+.subjectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.subjectCard {
+  background: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.subjectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.subjectName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1c1917;
+}
+
+.subjectScore {
+  font-size: 12px;
+  font-weight: 800;
+  color: #ea580c;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.subjectReason {
+  font-size: 12px;
+  color: #57534e;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Entrance Exams Table */
+.examTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.examTable th {
+  background: #f5f5f4;
+  text-align: left;
+  padding: 10px 14px;
+  font-weight: 700;
+  color: #44403c;
+  border-bottom: 2px solid #e7e5e4;
+}
+
+.examTable td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f5f5f4;
+  color: #292524;
+}
+
+/* Salary Ladder Block */
+.salaryLadderGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 640px) {
+  .salaryLadderGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ladderPill {
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid #e7e5e4;
+  background: #fafaf9;
+}
+
+.ladderPill[data-level="entry"] {
+  border-color: #6ee7b7;
+  background: #f0fdf4;
+}
+
+.ladderPill[data-level="mid"] {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.ladderPill[data-level="senior"] {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+.ladderLevel {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #78716c;
+  margin-bottom: 4px;
+}
+
+.ladderAmount {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1c1917;
+  margin-bottom: 4px;
+}
+
+/* Roadmap List */
+.roadmapList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.roadmapItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13.5px;
+  color: #44403c;
+  line-height: 1.5;
+}
+
+.roadmapNum {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ea580c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* External Links List */
+.extLinksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.extLinkCard {
+  background: #fff;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.extLinkCard:hover {
+  background: #fff7ed;
+  border-color: #ea580c;
+  transform: translateY(-2px);
+}
+
+.extLinkTitle {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.extLinkNote {
+  font-size: 12px;
+  color: #78716c;
+}
+
+/* Synergy Box */
+.synergyCard {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1px solid #fdba74;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.synergyText strong {
+  font-size: 14px;
+  color: #9a3412;
+  display: block;
+}
+
+.synergyText p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #431407;
+}
+
+/* ── Comparison Table Section ── */
+.compTableWrap {
+  overflow-x: auto;
+  margin: 40px 0;
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.compTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  min-width: 680px;
+}
+
+.compTable th {
+  background: #fafaf9;
+  padding: 14px 18px;
+  font-weight: 700;
+  color: #1c1917;
+  text-align: left;
+  border-bottom: 2px solid #e7e5e4;
+}
+
+.compTable td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f5f5f4;
+  color: #44403c;
+  vertical-align: top;
+}
+
+.compTable tr:hover td {
+  background: #fffbf5;
+}

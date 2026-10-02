@@ -14,6 +14,8 @@ export default function Footer() {
 
   const links = [
     { href: '/about', label: t('footer.about', 'About Us') },
+    { href: '/career', label: isMarathi ? 'करिअर मार्गदर्शक' : 'Career Guide' },
+    { href: '/walk-in-interviews', label: isMarathi ? 'वॉक-इन मुलाखत' : 'Walk-in Interviews' },
     { href: '/faq', label: t('footer.faq', 'FAQ') },
     { href: '/feedback', label: t('footer.suggest', 'Suggest Exam / Feedback') },
     { href: '/study-planner', label: isMarathi ? 'अभ्यास वेळापत्रक (AI)' : 'AI Study Planner' },
@@ -33,6 +35,7 @@ export default function Footer() {
     { href: '/privacy', label: t('footer.privacy', 'Privacy Policy') },
     { href: '/disclaimer', label: t('footer.disclaimer', 'Disclaimer') },
   ]
+
 
   return (
     <footer className="footer" role="contentinfo" style={{ display: 'block', padding: '36px 20px 80px' }}>

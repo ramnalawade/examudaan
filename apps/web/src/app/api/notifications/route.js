@@ -54,6 +54,7 @@ const schema = Joi.object({
   govt_level:       Joi.string().valid('Central', 'State', 'PSU', 'Local').allow(null, ''),
   min_vacancies:    Joi.number().integer().min(0).max(1000000).allow(null, ''),
   min_days_left:    Joi.number().integer().min(0).max(365).allow(null, ''),
+  walk_in:          Joi.string().valid('true', 'false').allow(null, ''),  // filter walk-in only
   page:             Joi.number().integer().min(1).default(1),
   limit:            Joi.number().integer().min(1).max(50).default(PAGE_SIZE),
   sort:             Joi.string().valid('latest', 'closing', 'vacancies').default('latest'),
@@ -93,7 +94,7 @@ export async function GET(req) {
   const {
     status, type, org, q, state, city,
     qualification, employment_type, min_salary, max_age, govt_level,
-    min_vacancies, min_days_left,
+    min_vacancies, min_days_left, walk_in,
     page, limit, sort,
   } = params
   const offset = (page - 1) * limit
@@ -216,6 +217,13 @@ export async function GET(req) {
     values.push(min_days_left)
   }
 
+  // Walk-in interview filter
+  if (walk_in === 'true') {
+    conditions.push('en.is_walk_in = TRUE')
+  } else if (walk_in === 'false') {
+    conditions.push('en.is_walk_in = FALSE')
+  }
+
   const whereClause = conditions.length ? `WHERE ${conditions.join(' AND ')}` : ''
   const orderClause = SORT_MAP[sort] || SORT_MAP.latest
 
@@ -263,6 +271,11 @@ export async function GET(req) {
          en.title_mr,
          en.summary_mr,
          en.qualifications_mr,
+         en.job_categories,
+         en.education_levels,
+         en.state_normalized,
+         en.cities_normalized,
+         en.government_level,
          o.name     AS org_name,
          o.name_mr  AS org_name_mr,
          o.acronym  AS org_acronym,

@@ -9,14 +9,14 @@ import { SYLLABUS_EXAMS } from '@/lib/syllabusData'
 import mpscLocalPapers from '@/lib/mpscLocalPapers.json'
 
 export const metadata = {
-  title: 'Official Previous Year Question Papers (PYQ) & Answer Keys PDF — 2015 to 2024 | ExamUdaan',
-  description: 'Download official Maharashtra & Central Government previous year question papers with answer keys PDF for MPSC, Police Bharti, Talathi, ZP, UPSC, SSC, and RRB. 100% direct official links.',
+  title: 'Official Previous Year Question Papers (PYQ) & Answer Keys — 2018 to 2024 | ExamUdaan',
+  description: 'View official Maharashtra & Central Government previous year question papers with answer keys for MPSC, Police Bharti, Talathi, ZP, UPSC, SSC, and RRB. Read in-browser — 100% direct official sources.',
   alternates: {
     canonical: 'https://examudaan.in/question-papers',
   },
   openGraph: {
     title: 'Official Previous Year Question Papers (PYQ) with Answer Keys | ExamUdaan',
-    description: 'Free download of official question papers and answer keys for MPSC, Police Bharti, Talathi, and Central exams.',
+    description: 'View official question papers and answer keys for MPSC, Police Bharti, Talathi, and Central exams — right in your browser.',
     url: 'https://examudaan.in/question-papers',
     siteName: 'ExamUdaan.in',
     type: 'website',
@@ -156,7 +156,7 @@ export default function QuestionPapersPage() {
               Previous Year Question Papers & Official Keys
             </h1>
             <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '16px', color: '#4B5563', margin: '0 0 20px 0', maxWidth: '820px', lineHeight: 1.6 }}>
-              Download official question papers and verified final answer keys from 2015 to 2024 for MPSC, Maharashtra Police Bharti, TCS Talathi, ZP, UPSC, SSC, and Railway exams. No sign-up required, no dead links.
+              Read official question papers and verified final answer keys from 2018 to 2024 for MPSC, Maharashtra Police Bharti, TCS Talathi, ZP, UPSC, SSC, and Railway exams — right in your browser. No sign-up, no ads.
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link
@@ -253,29 +253,32 @@ export default function QuestionPapersPage() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '10px', marginBottom: '16px', borderBottom: '1px solid #FED7AA', paddingBottom: '14px' }}>
               <div>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 700, color: '#C2410C', background: '#FFF7ED', padding: '3px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '6px' }}>
-                  <span>⚡</span> थेट डाऊनलोड (Zero Ads & Direct Official PDFs)
+                  <span>⚡</span> इन-ब्राउझर वाचन व मोफत सराव (100% Official & Safe)
                 </span>
                 <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '22px', fontWeight: 800, color: '#111827', margin: 0 }}>
-                  एमपीएससी मूळ प्रश्नपत्रिका व अंतिम उत्तरतालिका (स्थानिक संग्रह)
+                  एमपीएससी मूळ प्रश्नपत्रिका व ऑनलाइन प्रॅक्टिस सेट्स
                 </h2>
                 <p style={{ margin: '4px 0 0 0', fontSize: '14px', color: '#4B5563' }}>
-                  कोणत्याही बाह्य जाहिराती किंवा रिडायरेक्ट्सशिवाय थेट ExamUdaan वरून स्वच्छ PDF डाऊनलोड करा.
+                  कोणत्याही बाह्य जाहिरातींशिवाय थेट ExamUdaan वरून मूळ PDF वाचा आणि 28+ परीक्षांचा ऑनलाइन सराव करा.
                 </p>
               </div>
               <span style={{ fontSize: '13px', fontWeight: 600, color: '#EA580C', background: '#FFF7ED', border: '1px solid #FFEDD5', padding: '6px 12px', borderRadius: '8px' }}>
-                {mpscLocalPapers.length} अधिकृत फाइल्स उपलब्ध
+                {mpscLocalPapers.length} अधिकृत संच उपलब्ध
               </span>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(310px, 1fr))', gap: '14px' }}>
+            {/* Paper cards grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(310px, 1fr))', gap: '14px', marginBottom: '24px' }}>
               {mpscLocalPapers.map((paper, idx) => {
                 const isKey = paper.type === 'answer-key'
+                const isLocal = paper.hasLocalPdf && paper.localPath
+
                 return (
                   <div
                     key={idx}
                     style={{
                       background: '#FFFBF5',
-                      border: '1px solid #E5E7EB',
+                      border: isLocal ? '1.5px solid #EA580C' : '1px solid #E5E7EB',
                       borderRadius: '10px',
                       padding: '14px 16px',
                       display: 'flex',
@@ -291,37 +294,34 @@ export default function QuestionPapersPage() {
                           fontWeight: 700,
                           padding: '2px 8px',
                           borderRadius: '4px',
-                          background: isKey ? '#DCFCE7' : '#EFF6FF',
-                          color: isKey ? '#166534' : '#1D4ED8'
+                          background: isLocal ? (isKey ? '#DCFCE7' : '#FFF7ED') : '#EFF6FF',
+                          color: isLocal ? (isKey ? '#166534' : '#C2410C') : '#1D4ED8'
                         }}>
-                          {isKey ? '✓ Official Final Key' : '📄 Question Paper'}
+                          {isLocal ? (isKey ? '✓ Official Final Key' : '📄 Official PDF Paper') : '💻 Interactive CBT Mock'}
                         </span>
                         <span style={{ fontSize: '12px', fontWeight: 600, color: '#6B7280' }}>
-                          {paper.year}
+                          {paper.year} · {paper.sizeFormatted || 'Online'}
                         </span>
                       </div>
                       <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '15px', fontWeight: 700, color: '#1F2937', margin: '0 0 4px 0', lineHeight: 1.35 }}>
                         {paper.title}
                       </h3>
                       <div style={{ fontSize: '12px', color: '#6B7280' }}>
-                        आकार: <strong>{paper.sizeFormatted}</strong> · MPSC अधिकृत Set A
+                        {isLocal ? 'अधिकृत मूळ PDF — ExamUdaan वर थेट वाचा' : 'अधिकृत परीक्षा पॅटर्न — मोफत ऑनलाइन सराव'}
                       </div>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                      <a
-                        href={paper.localPath}
-                        download
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {/* Action Button: In-Browser Viewer for Local PDFs, or CBT Practice Link */}
+                    {isLocal ? (
+                      <Link
+                        href={`/question-papers/viewer?pdf=${encodeURIComponent(paper.localPath)}&title=${encodeURIComponent(paper.title)}`}
                         style={{
-                          flex: 1,
                           textAlign: 'center',
                           background: isKey ? '#16A34A' : '#EA580C',
                           color: '#FFFFFF',
                           fontWeight: 600,
                           fontSize: '13px',
-                          padding: '8px 12px',
+                          padding: '9px 12px',
                           borderRadius: '6px',
                           textDecoration: 'none',
                           display: 'inline-flex',
@@ -330,12 +330,63 @@ export default function QuestionPapersPage() {
                           gap: '6px'
                         }}
                       >
-                        <span>⬇</span> थेट PDF डाऊनलोड ({paper.sizeFormatted})
+                        <span>👁️</span> ब्राउझरमध्ये वाचा (In-Browser Viewer)
+                      </Link>
+                    ) : (
+                      <a
+                        href={paper.practiceUrl || '#'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textAlign: 'center',
+                          background: '#1D4ED8',
+                          color: '#FFFFFF',
+                          fontWeight: 600,
+                          fontSize: '13px',
+                          padding: '9px 12px',
+                          borderRadius: '6px',
+                          textDecoration: 'none',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '6px'
+                        }}
+                      >
+                        <span>🎯</span> सराव सुरू करा (Online Practice) ↗
                       </a>
-                    </div>
+                    )}
                   </div>
                 )
               })}
+            </div>
+
+            {/* ── Related Content Bar — keeps users on ExamUdaan ── */}
+            <div style={{
+              background: 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)',
+              border: '1px solid #FED7AA',
+              borderRadius: '12px',
+              padding: '18px 20px'
+            }}>
+              <p style={{ fontFamily: 'Outfit, sans-serif', fontSize: '14px', fontWeight: 700, color: '#92400E', margin: '0 0 12px 0' }}>
+                📚 प्रश्नपत्रिका वाचल्यानंतर — पुढे काय करायचे?
+              </p>
+              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                <Link href="/pyq" style={{ background: '#EA580C', color: '#FFF', padding: '8px 14px', borderRadius: '8px', fontWeight: 600, fontSize: '13px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  🔍 1,100+ PYQ Practice Bank
+                </Link>
+                <Link href="/mock-tests" style={{ background: '#1D4ED8', color: '#FFF', padding: '8px 14px', borderRadius: '8px', fontWeight: 600, fontSize: '13px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  ⏱️ Full CBT Mock Tests
+                </Link>
+                <Link href="/ai-tools" style={{ background: '#7C3AED', color: '#FFF', padding: '8px 14px', borderRadius: '8px', fontWeight: 600, fontSize: '13px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  🤖 84 Free AI Study Tools
+                </Link>
+                <Link href="/study-planner" style={{ background: '#0D9488', color: '#FFF', padding: '8px 14px', borderRadius: '8px', fontWeight: 600, fontSize: '13px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  📅 AI Study Planner
+                </Link>
+                <Link href="/score-calculator" style={{ background: '#374151', color: '#FFF', padding: '8px 14px', borderRadius: '8px', fontWeight: 600, fontSize: '13px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  🧮 Score Calculator
+                </Link>
+              </div>
             </div>
           </section>
 

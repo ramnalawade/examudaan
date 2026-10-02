@@ -162,12 +162,49 @@ export async function generateMetadata({ params }) {
     return { title: 'Government Job | ExamUdaan' }
   }
   const { en } = data
-  const metaTitle =
-    en.seo_metadata?.meta_title ||
-    `${en.title} Recruitment — Apply Online | ExamUdaan`
+
+  // ── Title Tag: keep under ~60 chars for SERP display ─────────
+  // Pattern: {Post Name} — {Org} {Year} ({Vacancies} Posts) | ExamUdaan
+  // If seo_metadata.meta_title is set by admin, use that directly.
+  let metaTitle = en.seo_metadata?.meta_title
+
+  if (!metaTitle) {
+    // Use English title field if available; fall back to main title
+    const postTitle = en.title_en || en.title || ''
+
+    // Strip pure Marathi (Devanagari-only) tokens from the title
+    const englishTitle = postTitle
+      .split(/\s+/)
+      .filter(w => !/^[\u0900-\u097F]+$/.test(w))  // drop Devanagari words
+      .join(' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+
+    const displayTitle = englishTitle || postTitle  // fallback to full title if all tokens were Marathi
+
+    const orgName = en.org_acronym || en.org_name || ''
+    const year = en.apply_end_date
+      ? new Date(en.apply_end_date).getFullYear()
+      : (en.published_at ? new Date(en.published_at).getFullYear() : new Date().getFullYear())
+    const vacancies = en.total_vacancies ? ` (${en.total_vacancies.toLocaleString('en-IN')} Posts)` : ''
+
+    // Build compact title
+    // e.g. "Police Constable — Mumbai Police 2026 (3,521 Posts) | ExamUdaan"
+    const compact = `${displayTitle} — ${orgName} ${year}${vacancies} | ExamUdaan`
+
+    // Trim to 60 chars if still too long (remove vacancies first, then year)
+    if (compact.length <= 60) {
+      metaTitle = compact
+    } else {
+      const noVacancies = `${displayTitle} — ${orgName} ${year} | ExamUdaan`
+      metaTitle = noVacancies.length <= 60 ? noVacancies : `${displayTitle.slice(0, 35)} | ExamUdaan`
+    }
+  }
+
   const metaDesc =
     en.seo_metadata?.meta_description ||
-    `Apply for ${en.title}. Total vacancies: ${en.total_vacancies || 'Various'}. Last date: ${formatDate(en.apply_end_date)}. Check eligibility, fee, and how to apply.`
+    `Apply for ${en.title_en || en.title}. Vacancies: ${en.total_vacancies || 'Various'}. Last date: ${formatDate(en.apply_end_date)}. Eligibility, fee & how to apply.`
+
   const rawUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
   const siteUrl = (rawUrl && !rawUrl.includes('localhost')) ? rawUrl : 'https://examudaan.in'
   const targetSection = TYPE_TO_PATH[en.notification_type] || '/jobs'
@@ -189,6 +226,7 @@ export async function generateMetadata({ params }) {
     },
   }
 }
+
 
 // ──────────────────────────────────────────────────────────────
 // Main Page (Server Component)

@@ -16,6 +16,7 @@ import { AI_TOOLS } from '../lib/aiToolsData.js'
 import { MOCK_TESTS } from '../lib/mockTestsData.js'
 import { SYLLABUS_EXAMS } from '../lib/syllabusData.js'
 import { getAllBlogPosts } from '../lib/blogData.js'
+import { CAREER_PATHS } from '../lib/careerGuideData.js'
 
 // Revalidate sitemap from database & RSS every 24 hours (86,400s)
 export const revalidate = 86400
@@ -26,7 +27,9 @@ const BASE_URL = (rawBase && !rawBase.includes('localhost')) ? rawBase : 'https:
 // Primary Hub & Static Pages
 const STATIC_PAGES = [
   { url: '/',                  priority: 1.0,  changeFrequency: 'hourly'  },
+  { url: '/career',            priority: 0.95, changeFrequency: 'daily'   },
   { url: '/jobs',              priority: 0.95, changeFrequency: 'hourly'  },
+  { url: '/walk-in-interviews', priority: 0.95, changeFrequency: 'daily'   },
   { url: '/results',           priority: 0.95, changeFrequency: 'hourly'  },
   { url: '/admit-cards',       priority: 0.95, changeFrequency: 'hourly'  },
   { url: '/answer-keys',       priority: 0.85, changeFrequency: 'daily'   },
@@ -150,6 +153,36 @@ export default async function sitemap() {
     priority:        0.90,       // High — high-yield topic-wise question traffic
   }))
 
+  // 5d. Dedicated Career Decision Roadmaps (/career/[slug]) — All 50 Paths
+  const careerEntries = (CAREER_PATHS || []).map(career => ({
+    url:             `${BASE_URL}/career/${career.id}`,
+    lastModified:    now,
+    changeFrequency: 'weekly',
+    priority:        0.90,       // High — Evergreen educational roadmap traffic
+  }))
+
+  // 5e. Recent Daily "Chalu Ghadamodi" Current Affairs Summaries (/current-affairs/[date]) — Last 30 Days
+  const currentAffairsEntries = []
+  const monthNames = [
+    'january', 'february', 'march', 'april', 'may', 'june',
+    'july', 'august', 'september', 'october', 'november', 'december'
+  ]
+  const today = new Date()
+  for (let i = 0; i < 30; i++) {
+    const d = new Date(today)
+    d.setDate(today.getDate() - i)
+    const day = String(d.getDate()).padStart(2, '0')
+    const month = monthNames[d.getMonth()]
+    const year = d.getFullYear()
+    const slug = `${day}-${month}-${year}`
+    currentAffairsEntries.push({
+      url:             `${BASE_URL}/current-affairs/${slug}`,
+      lastModified:    d.toISOString(),
+      changeFrequency: i === 0 ? 'hourly' : 'daily',
+      priority:        i < 7 ? 0.92 : 0.80,
+    })
+  }
+
   // 6. Database Exam Notifications (Up to 45,000 published entries)
   let postEntries = []
   try {
@@ -177,6 +210,8 @@ export default async function sitemap() {
 
   return [
     ...staticEntries,
+    ...careerEntries,
+    ...currentAffairsEntries,
     ...aiToolEntries,
     ...mockTestEntries,
     ...syllabusEntries,

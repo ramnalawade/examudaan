@@ -86,12 +86,18 @@ export default function SyllabusPage() {
 
       {/* ── CTA ── */}
       <section className={styles.ctaSection}>
-        <div className="container">
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           <div className={styles.ctaBox}>
             <span className={styles.ctaIcon}>🎯</span>
             <h2>Practice with Free Mock Tests</h2>
             <p>Apply your syllabus knowledge with our timed MCQ practice tests — structured exam-by-exam.</p>
             <Link href="/mock-tests" className="btn-primary">Start Free Mock Test →</Link>
+          </div>
+          <div className={styles.ctaBox} style={{ background: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)', borderColor: '#fdba74' }}>
+            <span className={styles.ctaIcon}>🧭</span>
+            <h2>10th & 12th Career Compass</h2>
+            <p>Confused between Science, Commerce, Arts & Polytechnic? Explore 40+ career roadmaps, salary ladders & entrance exams.</p>
+            <Link href="/career" className="btn-primary" style={{ background: '#ea580c' }}>Explore 40+ Career Paths →</Link>
           </div>
         </div>
       </section>

@@ -541,22 +541,27 @@ export default function DashboardPage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10 }}>
                   <Link href="/jobs" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
                     <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Active Govt Jobs</span>
-                    <strong style={{ fontSize: 18, color: 'var(--on-surface)' }}>{siteStats?.total_jobs || '700+'}</strong>
+                    <strong style={{ fontSize: 18, color: 'var(--on-surface)' }}>{siteStats?.total_jobs || '740+'}</strong>
                     <span style={{ fontSize: 11, color: 'var(--primary)', fontWeight: 600 }}>Browse alerts →</span>
+                  </Link>
+                  <Link href="/career" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Career Compass</span>
+                    <strong style={{ fontSize: 18, color: '#ea580c' }}>{siteStats?.total_careers ? `${siteStats.total_careers}+ Paths` : '40+ Paths'}</strong>
+                    <span style={{ fontSize: 11, color: '#ea580c', fontWeight: 600 }}>Science / Comm / Arts →</span>
                   </Link>
                   <Link href="/ai-tools" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
                     <span style={{ fontSize: 11, color: 'var(--secondary)' }}>AI Study Tools</span>
-                    <strong style={{ fontSize: 18, color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : '29 Tools'}</strong>
+                    <strong style={{ fontSize: 18, color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : '84 Tools'}</strong>
                     <span style={{ fontSize: 11, color: '#2563eb', fontWeight: 600 }}>Explore tools →</span>
                   </Link>
                   <Link href="/pyq" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
                     <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Solved PYQ Bank</span>
-                    <strong style={{ fontSize: 18, color: '#16a34a' }}>{siteStats?.total_questions ? `${siteStats.total_questions}+ MCQs` : '560+ MCQs'}</strong>
+                    <strong style={{ fontSize: 18, color: '#16a34a' }}>{siteStats?.total_questions ? `${siteStats.total_questions}+ MCQs` : '1,100+ MCQs'}</strong>
                     <span style={{ fontSize: 11, color: '#16a34a', fontWeight: 600 }}>15-Yr papers →</span>
                   </Link>
                   <Link href="/mock-tests" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
                     <span style={{ fontSize: 11, color: 'var(--secondary)' }}>CBT Mock Tests</span>
-                    <strong style={{ fontSize: 18, color: '#7c3aed' }}>{siteStats?.total_mock_tests ? `${siteStats.total_mock_tests} Tests` : '12+ Tests'}</strong>
+                    <strong style={{ fontSize: 18, color: '#7c3aed' }}>{siteStats?.total_mock_tests ? `${siteStats.total_mock_tests} Tests` : '12 Tests'}</strong>
                     <span style={{ fontSize: 11, color: '#7c3aed', fontWeight: 600 }}>TCS/MPSC exams →</span>
                   </Link>
                 </div>

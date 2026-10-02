@@ -6,8 +6,7 @@
 
 import HomePageView from '../components/HomePageView'
 import { query } from '../lib/pgdb'
-import { AI_TOOLS } from '../lib/aiToolsData'
-import { MOCK_TESTS } from '../lib/mockTestsData'
+import { getPlatformStats } from '../lib/platformStats'
 
 export const metadata = {
   title: 'ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
@@ -133,41 +132,9 @@ async function getQuickUpdates() {
   }
 }
 
-// ---- Fetch live stats directly from PostgreSQL ----
+// ---- Fetch live stats from central platformStats module ----
 async function getSiteStats() {
-  try {
-    const rows = await query(`
-      SELECT
-        COUNT(*) FILTER (WHERE status = 'published') AS total_jobs,
-        COUNT(DISTINCT organization_id)              AS total_boards
-      FROM exam_notifications
-    `)
-
-    const vacanciesRows = await query(`
-      SELECT COALESCE(SUM(total_vacancies), 0) AS total_vacancies FROM posts
-    `)
-
-    const totalJobs = rows[0]?.total_jobs || 0
-    const totalBoards = rows[0]?.total_boards || 0
-    const totalVacancies = vacanciesRows[0]?.total_vacancies || 0
-
-    return {
-      total_jobs: Number(totalJobs).toLocaleString('en-IN'),
-      total_boards: Number(totalBoards).toLocaleString('en-IN'),
-      total_vacancies: Number(totalVacancies).toLocaleString('en-IN'),
-      total_ai_tools: `${(AI_TOOLS || []).length} AI Tools`,
-      total_mock_tests: `${(MOCK_TESTS || []).length} Tests`,
-    }
-  } catch (err) {
-    console.error('[homepage] DB error fetching stats:', err.message)
-    return {
-      total_jobs: '700+',
-      total_boards: '37+',
-      total_vacancies: '80,000+',
-      total_ai_tools: `${(AI_TOOLS || []).length} AI Tools`,
-      total_mock_tests: `${(MOCK_TESTS || []).length} Tests`,
-    }
-  }
+  return await getPlatformStats()
 }
 
 // ---- Helper to map notification row to JobCard props ----

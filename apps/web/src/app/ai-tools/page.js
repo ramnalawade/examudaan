@@ -377,7 +377,7 @@ Document:
                   type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-                  placeholder={isMarathi ? '५४+ AI साधने शोधा (उदा. NotebookLM, फ्लॅशकार्ड, गणित, कोडिंग)...' : 'Search 54+ AI tools (e.g., NotebookLM, flashcards, math, literature, coding)...'}
+                  placeholder={isMarathi ? `${AI_TOOLS.length}+ AI साधने शोधा (उदा. NotebookLM, फ्लॅशकार्ड, गणित, कोडिंग)...` : `Search ${AI_TOOLS.length}+ AI tools (e.g., NotebookLM, flashcards, math, literature, coding)...`}
                   style={{ height: 48, fontSize: 15 }}
                 />
                 {searchQuery && (

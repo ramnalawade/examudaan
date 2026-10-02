@@ -7,12 +7,13 @@
 
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLanguage } from '../context/LanguageContext'
 import { apiFetch } from '../lib/apiClient'
+import VoiceSearchButton from './VoiceSearchButton'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -22,6 +23,25 @@ export default function Navbar() {
   const [navUser,       setNavUser]       = useState(null)   // { first_name, last_name, avatar_url }
   const [dropdownOpen,      setDropdownOpen]      = useState(false)
   const [moreDropdownOpen,  setMoreDropdownOpen]  = useState(false)
+
+  // Ref for delayed close timer — prevents dropdown from closing when mouse
+  // briefly passes through the gap between the More button and the dropdown panel
+  const moreCloseTimer = useRef(null)
+
+  function openMoreDropdown() {
+    if (moreCloseTimer.current) {
+      clearTimeout(moreCloseTimer.current)
+      moreCloseTimer.current = null
+    }
+    setMoreDropdownOpen(true)
+  }
+
+  function scheduleCloseMoreDropdown() {
+    // Give user 250ms to move from the button into the panel without it closing
+    moreCloseTimer.current = setTimeout(() => {
+      setMoreDropdownOpen(false)
+    }, 250)
+  }
 
   // ── Read auth state from localStorage (client-side only) ──
   useEffect(() => {
@@ -54,6 +74,8 @@ export default function Navbar() {
   ]
 
   const MORE_NAV_ITEMS = [
+    { href: '/career',             label: t('nav.career',          'Career Guide'),         icon: 'map',                   badge: 'New',   desc: 'Career streams, pay scales, eligibility for all Govt jobs' },
+    { href: '/walk-in-interviews', label: t('nav.walk_in',         'Walk-in Interviews'),   icon: 'directions_walk',       badge: 'Live',  desc: 'No online form needed — daily walk-in vacancies' },
     { href: '/study-planner',      label: t('nav.study_planner',   'AI Study Planner'),     icon: 'auto_schedule',         badge: 'AI',    desc: 'Adaptive day-by-day exam study timetable & targets' },
     { href: '/score-calculator',   label: t('nav.score_calc',      'Key Score Calculator'), icon: 'score',                 badge: 'Viral', desc: 'TCS iON, MPSC & Police Response Sheet Calculator' },
     { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'),    icon: 'calculate',             badge: '150M',  desc: 'Physical + Written composite merit cutoff calculator' },
@@ -70,12 +92,14 @@ export default function Navbar() {
 
   const MOBILE_NAV_ITEMS = [
     { href: '/',                   label: t('nav.home',            'Home'),              icon: 'home' },
-    { href: '/study-planner',      label: t('nav.study_planner',   'Study Planner'),     icon: 'auto_schedule',         badge: 'AI' },
+    { href: '/career',             label: t('nav.career',          'Career Guide'),      icon: 'map',                   badge: 'New' },
+    { href: '/walk-in-interviews', label: t('nav.walk_in',         'Walk-in'),           icon: 'directions_walk',       badge: 'Live' },
     { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
     { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'New' },
     { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free' },
     { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQ Bank'),    icon: 'history_edu',           badge: 'Hot' },
     { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min' },
+    { href: '/study-planner',      label: t('nav.study_planner',   'Study Planner'),     icon: 'auto_schedule',         badge: 'AI' },
     { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus Tracker'),  icon: 'menu_book' },
     { href: '/score-calculator',   label: t('nav.score_calc',      'Score Calculator'),  icon: 'score',                 badge: 'Viral' },
     { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'), icon: 'calculate',             badge: '150M' },
@@ -90,6 +114,7 @@ export default function Navbar() {
     { href: '/alerts',             label: t('nav.alerts',          'Job Alerts'),        icon: 'notifications' },
     { href: '/pricing',            label: t('nav.alert_plans',     'Alert Plans'),       icon: 'local_offer' },
   ]
+
 
   // Close menus on route change
   useEffect(() => {
@@ -199,8 +224,8 @@ export default function Navbar() {
           {/* More Prep Tools Dropdown */}
           <div
             style={{ position: 'relative' }}
-            onMouseEnter={() => setMoreDropdownOpen(true)}
-            onMouseLeave={() => setMoreDropdownOpen(false)}
+            onMouseEnter={openMoreDropdown}
+            onMouseLeave={scheduleCloseMoreDropdown}
           >
             <button
               type="button"
@@ -226,9 +251,11 @@ export default function Navbar() {
 
             {moreDropdownOpen && (
               <div
+                onMouseEnter={openMoreDropdown}
+                onMouseLeave={scheduleCloseMoreDropdown}
                 style={{
                   position: 'absolute',
-                  top: 'calc(100% + 4px)',
+                  top: 'calc(100% + 0px)',  /* No gap — prevents mouse leaving dead zone */
                   right: 0,
                   width: 280,
                   background: '#ffffff',
@@ -237,8 +264,13 @@ export default function Navbar() {
                   boxShadow: '0 12px 32px rgba(0,0,0,0.12)',
                   padding: '8px',
                   zIndex: 99,
+                  /* Transparent top padding bridges any sub-pixel gap between button and panel */
+                  paddingTop: 12,
+                  marginTop: -4,
                 }}
               >
+                {/* Invisible bridge strip at the very top prevents gap-related close */}
+                <div style={{ position: 'absolute', top: -8, left: 0, right: 0, height: 8, background: 'transparent' }} />
                 {MORE_NAV_ITEMS.map(item => (
                   <Link
                     key={item.href}
@@ -286,8 +318,15 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* ---- Right: Language Toggle + Auth ---- */}
+        {/* ---- Right: Voice Search + Language Toggle + Auth ---- */}
         <div className="navbar-actions">
+
+          {/* Voice search button — uses Web Speech API, shows only on supported browsers */}
+          <VoiceSearchButton
+            redirect
+            size="md"
+            placeholder="Speak: MPSC, Police Bharti, SSC..."
+          />
 
           {/* Language toggle */}
           <div className="lang-toggle" role="group" aria-label="Language selector">

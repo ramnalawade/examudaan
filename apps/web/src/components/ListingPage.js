@@ -27,6 +27,7 @@ const CATEGORY_TABS = [
   { id: 'admit_card',  label: 'Admit Cards',   icon: 'badge',              href: '/admit-cards' },
   { id: 'answer_key',  label: 'Answer Keys',   icon: 'fact_check',         href: '/answer-keys' },
   { id: 'syllabus',    label: 'Syllabus',      icon: 'menu_book',          href: '/schemes' },
+  { id: 'career',      label: 'Career Guide',  icon: 'explore',            href: '/career' },
 ]
 
 // ── Static filter options ─────────────────────────────────────
@@ -324,6 +325,7 @@ function ListingPageInner({
     { id: 'admit_card',  label: t('listing.admit_cards', 'Admit Cards'), icon: 'badge',         href: '/admit-cards' },
     { id: 'answer_key',  label: t('listing.answer_keys', 'Answer Keys'), icon: 'fact_check',    href: '/answer-keys' },
     { id: 'syllabus',    label: t('listing.syllabus', 'Syllabus'),       icon: 'menu_book',     href: '/schemes' },
+    { id: 'career',      label: t('nav.career', 'Career Guide'),         icon: 'explore',       href: '/career' },
   ]
 
   const qualList = isMarathi ? [
@@ -715,6 +717,26 @@ function ListingPageInner({
               </div>
             </FilterSection>
           )}
+
+          {/* Career Compass Promo Card */}
+          <div style={{ marginTop: 24, padding: '16px', background: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)', border: '1px solid #fdba74', borderRadius: 12 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+              <span className="material-symbols-outlined" style={{ color: '#ea580c', fontSize: 20 }}>explore</span>
+              <strong style={{ fontSize: 13, color: '#9a3412' }}>{isMarathi ? '१० वी व १२ वी करिअर दिशा' : 'Career Compass 2026'}</strong>
+            </div>
+            <p style={{ fontSize: 12, color: '#7c2d12', margin: '0 0 10px', lineHeight: 1.45 }}>
+              {isMarathi ? 'सायन्स, कॉमर्स, आर्ट्स आणि पॉलिटेक्निकमधील ४०+ करिअर रोडमॅप, पगार व परीक्षा चक्र.' : 'Science, Commerce & Arts decision roadmaps, salary ladders & entrance exams.'}
+            </p>
+            <Link
+              href="/career"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 4,
+                fontSize: 12, fontWeight: 700, color: '#ea580c', textDecoration: 'none'
+              }}
+            >
+              <span>{isMarathi ? 'सर्व करिअर पर्याय पहा →' : 'Explore 40+ Careers →'}</span>
+            </Link>
+          </div>
         </aside>
 
         {/* ════ MAIN CONTENT ════ */}
