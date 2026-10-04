@@ -7,6 +7,9 @@
 # NEVER commit .env files — they contain DB passwords, API keys
 .env
 .env.*
+
+next.config.js
+next.config.*
 !.env.example          # Allow example/template env files
 **/.env
 **/.env.*
