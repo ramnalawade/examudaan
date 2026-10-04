@@ -31,7 +31,14 @@ async function getPool() {
   const port = parseInt((process.env.DB_PORT || '5432').trim(), 10)
   const database = process.env.DB_DATABASE?.trim()
   const user = process.env.DB_USERNAME?.trim()
-  const password = process.env.DB_PASSWORD?.trim()
+  let password = process.env.DB_PASSWORD?.trim()
+
+  if (password) {
+    if ((password.startsWith('"') && password.endsWith('"')) || (password.startsWith("'") && password.endsWith("'"))) {
+      password = password.slice(1, -1)
+    }
+    password = password.replace(/\\\$/g, '$')
+  }
 
   if (!host || !database || !user) {
     // DB not configured — return null silently (API routes handle this)

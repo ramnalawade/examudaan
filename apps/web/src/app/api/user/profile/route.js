@@ -71,6 +71,9 @@ export const GET = withAuth(async (req, ctx, currentUser) => {
     const email = user?.email || userEmail || ''
     const phone = user?.phone || currentUser?.phone || ''
 
+    const isAdmin = Boolean(user?.is_admin || user?.role === 'admin' || currentUser?.is_admin || currentUser?.role === 'admin')
+    const role    = user?.role || currentUser?.role || (isAdmin ? 'admin' : 'candidate')
+
     return ok({
       id:            user?.id || userId,
       email:         email,                                // unmasked for private profile display
@@ -91,6 +94,8 @@ export const GET = withAuth(async (req, ctx, currentUser) => {
       has_password:  !!user?.password_hash,
       created_at:    user?.created_at || null,
       alert_count:   alertCount,
+      role:          role,
+      is_admin:      isAdmin,
     })
 
   } catch (err) {
@@ -98,6 +103,7 @@ export const GET = withAuth(async (req, ctx, currentUser) => {
     // Fallback gracefully so the client is never locked out of their profile
     const email = currentUser?.email || ''
     const phone = currentUser?.phone || ''
+    const isAdmin = Boolean(currentUser?.is_admin || currentUser?.role === 'admin')
     return ok({
       id:            currentUser?.user_id ?? currentUser?.id ?? null,
       email:         email,
@@ -117,6 +123,8 @@ export const GET = withAuth(async (req, ctx, currentUser) => {
       avatar_url:    currentUser?.avatar_url || null,
       has_password:  false,
       alert_count:   0,
+      role:          currentUser?.role || (isAdmin ? 'admin' : 'candidate'),
+      is_admin:      isAdmin,
     })
   }
 })

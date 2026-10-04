@@ -520,6 +520,28 @@ export default function CareerExplorerClient() {
             </details>
           </div>
         </section>
+
+        {/* ── Career Guidance Advisory & Due Diligence Box with * Conditions ── */}
+        <section className={styles.advisoryBox} aria-label="Career Guidance Advisory">
+          <div className={styles.advisoryHeader}>
+            <span className="material-symbols-outlined" style={{ color: '#ea580c', fontSize: '24px' }}>gavel</span>
+            <h3>* Career Decision Advisory & Mandatory Due Diligence Notice</h3>
+          </div>
+          <p className={styles.advisoryText}>
+            Students, aspirants, and parents are advised to review the following conditions before finalizing any stream, coaching admission, or degree program:
+          </p>
+          <ul className={styles.advisoryList}>
+            <li>
+              <strong>* Condition 1 (AI-Assisted Educational Intelligence):</strong> Career roadmaps, syllabus portions, college cutoffs, and future AI demand indices displayed on ExamUdaan are synthesized using AI models from public university curriculums, recruitment surveys, and past examination trends for informational guidance.
+            </li>
+            <li>
+              <strong>* Condition 2 (Compensation & Package Disparities):</strong> All salary figures (entry-level, mid-level, and peak earning ceilings) are estimated market approximations. Actual packages depend strictly on individual skill, university accreditation, economic cycles, location, and recruiter hiring standards.
+            </li>
+            <li>
+              <strong>* Condition 3 (Statutory Due Diligence Required):</strong> Admission eligibility criteria, reservation percentages, seat intake, and entrance exam patterns (NEET, JEE, CLAT, CAT, MHT-CET) are governed solely by statutory regulatory authorities (UGC, AICTE, NMC, BCI, DTE Maharashtra). Candidates must independently cross-verify all details directly with official university portals and government directorates before taking career or financial decisions.
+            </li>
+          </ul>
+        </section>
       </main>
 
       {/* ── In-Depth Career Dossier Modal ── */}

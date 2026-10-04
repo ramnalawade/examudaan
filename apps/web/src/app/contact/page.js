@@ -32,13 +32,22 @@ export default function ContactPage() {
 
   const contactCards = [
     {
+      icon: 'send',
+      title: 'Telegram Helpdesk & Alerts',
+      subtitle: 'Official broadcast channel & instant aspirant updates',
+      value: '@examudaan',
+      actionLabel: 'Join on Telegram',
+      href: 'https://t.me/examudaanjobs',
+      badge: 'Primary Channel',
+    },
+    {
       icon: 'chat',
       title: 'WhatsApp Support',
       subtitle: 'Instant chat for alert queries & plan activation',
       value: SITE_CONFIG.contact.phoneFormatted,
       actionLabel: 'Chat on WhatsApp',
       href: SITE_CONFIG.contact.whatsappAlertQueryLink,
-      badge: 'Fastest Response',
+      badge: 'Secondary',
     },
     {
       icon: 'mail',

@@ -19,20 +19,20 @@ export const SITE_CONFIG = {
     email: 'support@examudaan.in',
     privacyEmail: 'privacy@examudaan.in',
     grievanceEmail: 'grievance@examudaan.in',
-    phone: '+91 91523 44889',
-    phoneFormatted: '+91 91523 44889',
-    phoneRaw: '919152344889',
-    whatsappNumber: '+91 91523 44889',
-    whatsappRaw: '919152344889',
-    whatsappLink: 'https://wa.me/919152344889',
-    whatsappAlertQueryLink: 'https://wa.me/919152344889?text=Hi%20ExamUdaan%20Support,%20I%20have%20a%20query%20regarding%20my%20alerts',
-    whatsappGeneralQueryLink: 'https://wa.me/919152344889?text=Hi%20ExamUdaan,%20I%20have%20a%20question%20regarding%20the%20platform',
+    phone: '+91 1234567890',
+    phoneFormatted: '+91 1234567890',
+    phoneRaw: '1234567890',
+    whatsappNumber: '+91 1234567890',
+    whatsappRaw: '1234567890',
+    whatsappLink: 'https://wa.me/911234567890',
+    whatsappAlertQueryLink: 'https://wa.me/911234567890?text=Hi%20ExamUdaan%20Support,%20I%20have%20a%20query%20regarding%20my%20alerts',
+    whatsappGeneralQueryLink: 'https://wa.me/911234567890?text=Hi%20ExamUdaan,%20I%20have%20a%20question%20regarding%20the%20platform',
   },
 
   // Alert Broadcast Channels
   social: {
     whatsappChannel: process.env.NEXT_PUBLIC_WHATSAPP_CHANNEL_URL || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v',
-    telegramChannel: process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL || 'https://t.me/examudaan',
+    telegramChannel: process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL || 'https://t.me/examudaanjobs',
   },
 
   // Physical Location & Geo Coordinates (Pune, Maharashtra)

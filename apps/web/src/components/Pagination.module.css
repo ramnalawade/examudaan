@@ -1,0 +1,219 @@
+/* ============================================================
+   Pagination.module.css — Universal Reusable Pagination & LoadMore
+   ExamUdaan Design System: Vanilla CSS & CSS Variables
+   ============================================================ */
+
+/* ── Load More Container ── */
+.loadMoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 16px;
+  width: 100%;
+}
+
+/* Counter & Progress Text */
+.progressWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.counterText {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary, #64748B);
+  letter-spacing: 0.02em;
+}
+
+.counterHighlight {
+  color: var(--on-surface, #1E293B);
+  font-weight: 700;
+}
+
+/* Subtle Progress Bar */
+.progressBarBg {
+  width: 100%;
+  height: 4px;
+  background: var(--surface-container-low, #F1F5F9);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: var(--primary, #EA580C);
+  border-radius: 999px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* The Load More Button */
+.loadMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 32px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--surface-container-lowest, #FFFFFF);
+  color: var(--primary, #EA580C);
+  border: 1.5px solid var(--primary, #EA580C);
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.08);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 46px;
+}
+
+.loadMoreBtn:hover:not(:disabled) {
+  background: var(--primary, #EA580C);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.25);
+  transform: translateY(-1px);
+}
+
+.loadMoreBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.loadMoreBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* All Items Loaded State */
+.allLoadedWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--surface-container-low, #F8FAFC);
+  border: 1px solid var(--outline-variant, #E2E8F0);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary, #64748B);
+}
+
+.allLoadedCheck {
+  color: #16A34A;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ── Standard Page-Numbered Pagination ── */
+.numberedContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 28px 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.pageBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--surface-container-lowest, #FFFFFF);
+  color: var(--on-surface, #1E293B);
+  border: 1px solid var(--outline-variant, #E2E8F0);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+
+.pageBtn:hover:not(:disabled) {
+  border-color: var(--primary, #EA580C);
+  color: var(--primary, #EA580C);
+  background: #FFF7ED;
+}
+
+.pageBtnActive {
+  background: var(--primary, #EA580C) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary, #EA580C) !important;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.25);
+  font-weight: 700;
+}
+
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: var(--outline-variant, #E2E8F0);
+}
+
+.ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 40px;
+  color: var(--secondary, #94A3B8);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.pageNavBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 14px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--surface-container-lowest, #FFFFFF);
+  color: var(--on-surface, #1E293B);
+  border: 1px solid var(--outline-variant, #E2E8F0);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.pageNavBtn:hover:not(:disabled) {
+  border-color: var(--primary, #EA580C);
+  color: var(--primary, #EA580C);
+  background: #FFF7ED;
+}
+
+.pageNavBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageNavIcon {
+  font-size: 18px;
+}
+
+/* Mini spinner */
+.btnSpinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -722,7 +722,8 @@ def upsert_post(conn, notification_id: int, data: dict) -> int:
                 UPDATE posts SET
                     pay_scale        = COALESCE(%s, pay_scale),
                     category         = COALESCE(%s, category),
-                    qualification    = COALESCE(%s, qualification)
+                    qualification    = COALESCE(%s, qualification),
+                    reservation_json = COALESCE(%s::jsonb, reservation_json)
                 WHERE id = %s
                 RETURNING id
                 """,
@@ -730,6 +731,7 @@ def upsert_post(conn, notification_id: int, data: dict) -> int:
                     data.get('pay_scale'),
                     data.get('category'),
                     data.get('qualification'),
+                    json.dumps(data.get('reservation_json')) if data.get('reservation_json') else None,
                     existing['id'],
                 )
             )

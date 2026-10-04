@@ -36,46 +36,75 @@ const PAGE_SIZE = 20
 
 // ---- Validation schema ----
 const schema = Joi.object({
-  status:           Joi.string().valid('published', 'closed', 'all').default('published'),
-  type:             Joi.string().valid(
-                      'recruitment', 'result', 'answer_key', 'admit_card',
-                      'syllabus', 'correction', 'other'
-                    ).allow(null, ''),
-  org:              Joi.string().max(200).allow(null, ''),  // comma-separated for multi-org
-  q:                Joi.string().trim().max(200).allow(null, ''),
-  state:            Joi.string().max(50).allow(null, ''),
-  city:             Joi.string().max(100).allow(null, ''),
-  qualification:    Joi.string().valid(
-                      '10th', '12th', 'graduate', 'post_graduate', 'diploma', 'iti'
-                    ).allow(null, ''),
-  employment_type:  Joi.string().valid('permanent', 'contractual').allow(null, ''),
-  min_salary:       Joi.number().integer().min(0).max(10000000).allow(null, ''),
-  max_age:          Joi.number().integer().min(18).max(65).allow(null, ''),
-  govt_level:       Joi.string().valid('Central', 'State', 'PSU', 'Local').allow(null, ''),
-  min_vacancies:    Joi.number().integer().min(0).max(1000000).allow(null, ''),
-  min_days_left:    Joi.number().integer().min(0).max(365).allow(null, ''),
-  active_only:      Joi.string().valid('true', 'false').allow(null, ''),
-  walk_in:          Joi.string().valid('true', 'false').allow(null, ''),  // filter walk-in only
-  page:             Joi.number().integer().min(1).default(1),
-  limit:            Joi.number().integer().min(1).max(50).default(PAGE_SIZE),
-  sort:             Joi.string().valid('latest', 'closing', 'vacancies').default('latest'),
+  status: Joi.string().valid('published', 'closed', 'all').default('published'),
+  type: Joi.string().valid(
+    'recruitment', 'result', 'answer_key', 'admit_card',
+    'syllabus', 'correction', 'other'
+  ).allow(null, ''),
+  org: Joi.string().max(200).allow(null, ''),  // comma-separated for multi-org
+  q: Joi.string().trim().max(200).allow(null, ''),
+  state: Joi.string().max(50).allow(null, ''),
+  city: Joi.string().max(100).allow(null, ''),
+  qualification: Joi.string().valid(
+    '10th', '12th', 'graduate', 'post_graduate', 'diploma', 'iti'
+  ).allow(null, ''),
+  employment_type: Joi.string().valid('permanent', 'contractual').allow(null, ''),
+  min_salary: Joi.number().integer().min(0).max(10000000).allow(null, ''),
+  max_age: Joi.number().integer().min(18).max(65).allow(null, ''),
+  govt_level: Joi.string().valid('Central', 'State', 'PSU', 'Local').allow(null, ''),
+  min_vacancies: Joi.number().integer().min(0).max(1000000).allow(null, ''),
+  min_days_left: Joi.number().integer().min(0).max(365).allow(null, ''),
+  active_only: Joi.string().valid('true', 'false').allow(null, ''),
+  include_closed: Joi.string().valid('true', 'false').allow(null, ''),
+  walk_in: Joi.string().valid('true', 'false').allow(null, ''),  // filter walk-in only
+  page: Joi.number().integer().min(1).default(1),
+  limit: Joi.number().integer().min(1).max(50).default(PAGE_SIZE),
+  sort: Joi.string().valid('latest', 'closing', 'vacancies').default('latest'),
 })
 
 // ---- Qualification keyword map ----
 const QUAL_MAP = {
-  '10th':         '10th',
-  '12th':         '12th',
-  'graduate':     'graduate',
-  'post_graduate':'post graduate',
-  'diploma':      'diploma',
-  'iti':          'iti',
+  '10th': '10th',
+  '12th': '12th',
+  'graduate': 'graduate',
+  'post_graduate': 'post graduate',
+  'diploma': 'diploma',
+  'iti': 'iti',
 }
+
+// ---- Deadline-first Priority Tier ----
+// Guarantees active upcoming deadlines show FIRST so candidates never miss closing dates
+const DEADLINE_TIER_SQL = `
+  (CASE
+    -- Tier 1: Urgent current deadlines closing within next 7 days (CRITICAL DEADLINES FIRST)
+    WHEN (en.apply_end_date >= CURRENT_DATE AND en.apply_end_date <= CURRENT_DATE + interval '7 days') THEN 1
+    -- Tier 2: Active upcoming deadlines beyond 7 days OR upcoming walk-in interview dates
+    WHEN (en.apply_end_date > CURRENT_DATE + interval '7 days' OR (en.is_walk_in = TRUE AND en.exam_date >= CURRENT_DATE)) THEN 2
+    -- Tier 3: Active open jobs without fixed closing date (ongoing / open)
+    WHEN (en.status = 'published' AND en.apply_end_date IS NULL) THEN 3
+    -- Tier 4: Closed / expired jobs (surfaced on demand or at bottom)
+    ELSE 4
+  END)
+`
 
 // ---- Sort → SQL ----
 const SORT_MAP = {
-  latest:    'en.published_at DESC NULLS LAST, en.created_at DESC',
-  closing:   'en.apply_end_date ASC NULLS LAST',
-  vacancies: 'en.total_vacancies DESC NULLS LAST',  // Fixed: was sorting by apply_end_date
+  latest: `
+    ${DEADLINE_TIER_SQL} ASC,
+    (CASE WHEN en.apply_end_date >= CURRENT_DATE AND en.apply_end_date <= CURRENT_DATE + interval '7 days' THEN en.apply_end_date END) ASC,
+    en.published_at DESC NULLS LAST,
+    en.created_at DESC
+  `,
+  closing: `
+    ${DEADLINE_TIER_SQL} ASC,
+    (CASE WHEN en.apply_end_date >= CURRENT_DATE THEN en.apply_end_date END) ASC,
+    en.published_at DESC NULLS LAST
+  `,
+  vacancies: `
+    ${DEADLINE_TIER_SQL} ASC,
+    en.total_vacancies DESC NULLS LAST,
+    en.published_at DESC NULLS LAST
+  `,
 }
 
 export async function GET(req) {
@@ -95,7 +124,7 @@ export async function GET(req) {
   const {
     status, type, org, q, state, city,
     qualification, employment_type, min_salary, max_age, govt_level,
-    min_vacancies, min_days_left, active_only, walk_in,
+    min_vacancies, min_days_left, active_only, include_closed, walk_in,
     page, limit, sort,
   } = params
   const offset = (page - 1) * limit
@@ -104,10 +133,20 @@ export async function GET(req) {
   const conditions = []
   const values = []
 
-  // Status filter (skip if 'all')
-  if (status !== 'all') {
-    conditions.push(`en.status = $${values.length + 1}`)
-    values.push(status)
+  // Status & closed on-demand filter:
+  // - Default / 'published': strictly active open notifications (excludes expired deadlines)
+  // - 'closed': past-deadline or closed notifications
+  // - 'all' or include_closed=true: both active and closed (ordered with active dates first)
+  if (include_closed === 'true' || status === 'all') {
+    // Show all — DEADLINE_TIER_SQL ensures active dates appear first
+  } else if (status === 'closed') {
+    conditions.push(
+      `(en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < CURRENT_DATE))`
+    )
+  } else {
+    conditions.push(
+      `(en.status = 'published' AND (en.notification_type != 'recruitment' OR en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE))`
+    )
   }
 
   // Active only filter (omits closed recruitments and past deadlines)

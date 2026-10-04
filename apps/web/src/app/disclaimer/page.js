@@ -33,6 +33,10 @@ export default function DisclaimerPage() {
       text: 'ExamUdaan.in does not issue admit cards, accept official job applications, or process government employment examinations. We solely direct aspirants to official government registration portals (such as mahampsc.mahaonline.gov.in, mahapolice.gov.in, ssc.gov.in, etc.). We do not collect government examination fees or guarantee selection or appointment.',
     },
     {
+      title: 'AI-Generated Content & Mandatory Candidate Due Diligence (* Conditions)',
+      text: 'Portions of this platform — including job summaries, eligibility criteria classifications, career roadmaps, salary projections, current affairs exam relevance notes, and mock interview questions — utilize artificial intelligence and automated document parsing. Candidates must strictly observe the following conditions:\n\n* Condition 1 (Informational Purpose Only): AI-generated content is provided solely for academic guidance, rapid notification discovery, and study reference.\n* Condition 2 (Mandatory Independent Due Diligence): Candidates must exercise their own due diligence by opening and reading the official government notification PDF and verifying all qualification criteria, age relaxations, reservation categories, and deadlines before submitting applications or paying exam fees.\n* Condition 3 (No Liability for Corrigenda/Variances): ExamUdaan assumes no liability for automated classification edge-cases or subsequent corrigenda/addenda issued by recruiting commissions.',
+    },
+    {
       title: 'External Third-Party Links',
       text: 'Our portal contains hyperlinks to third-party government websites. We have no control over the content, uptime, availability, or privacy policies of those external servers. Clicking on external links is done at the user\'s own discretion.',
     },
@@ -119,10 +123,15 @@ export default function DisclaimerPage() {
           gap: 28,
         }}>
           {points.map((p, idx) => (
-            <div key={idx} style={{
-              borderBottom: idx < points.length - 1 ? '1px solid var(--outline-variant)' : 'none',
-              paddingBottom: idx < points.length - 1 ? 24 : 0,
-            }}>
+            <div
+              key={idx}
+              id={p.title.includes('AI') ? 'ai-policy' : undefined}
+              style={{
+                borderBottom: idx < points.length - 1 ? '1px solid var(--outline-variant)' : 'none',
+                paddingBottom: idx < points.length - 1 ? 24 : 0,
+                scrollMarginTop: '100px',
+              }}
+            >
               <h2 style={{ fontSize: 18, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 10 }}>
                 <span style={{
                   width: 24,

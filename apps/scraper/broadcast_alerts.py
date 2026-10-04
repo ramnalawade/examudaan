@@ -50,7 +50,7 @@ logger = logging.getLogger("broadcast_alerts")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "@examudaanjobs").strip()
 WHATSAPP_CHANNEL_URL = os.getenv("WHATSAPP_CHANNEL_URL", "https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v").strip()
-TELEGRAM_CHANNEL_URL = os.getenv("TELEGRAM_CHANNEL_URL", "https://t.me/examudaanjobs").strip()
+TELEGRAM_CHANNEL_URL = os.getenv("TELEGRAM_CHANNEL_URL", "https://t.me/examudaanjobsjobs").strip()
 
 HISTORY_FILE = Path(__file__).parent / "broadcast_history.json"
 WHATSAPP_DIGEST_FILE = Path(__file__).parent / "todays_whatsapp_posts.txt"

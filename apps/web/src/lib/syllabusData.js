@@ -74,6 +74,52 @@ export const SYLLABUS_EXAMS = [
         ]
       }
     ],
+    officialPdfs: [
+      {
+        id: 13629,
+        year: 2026,
+        label: "2026 Rajyaseva Gazetted Prelims Paper 1 (GS)",
+        title: "Advt. No. 132/2025 Maharashtra Civil Services Gazetted Combined Preliminary Examination 2026 — Paper No. 1 General Studies",
+        size: "1.82 MB",
+        url: "/downloads/mpsc/question_papers/2025/13629_PAPER_1.pdf",
+        badge: "LATEST 2026",
+        isAnswerKey: false,
+        pairId: 13801
+      },
+      {
+        id: 13801,
+        year: 2026,
+        label: "2026 Rajyaseva Prelims Paper 1 Final Key",
+        title: "Advt. No. 132/2025 Maharashtra Civil Services Gazetted Prelims 2026 — Paper No. 1 Final Answer Key",
+        size: "468 KB",
+        url: "/downloads/mpsc/answer_keys/2025/13801_Final Answerkey of Maharashtra Civil Services Gazetted Paper I.pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true,
+        pairId: 13629
+      },
+      {
+        id: 13628,
+        year: 2026,
+        label: "2026 Rajyaseva Gazetted Prelims Paper 2 (CSAT)",
+        title: "Advt. No. 132/2025 Maharashtra Civil Services Gazetted Combined Preliminary Examination 2026 — Paper No. 2 CSAT",
+        size: "2.14 MB",
+        url: "/downloads/mpsc/question_papers/2025/13628_PAPER_2.pdf",
+        badge: "CSAT 2026",
+        isAnswerKey: false,
+        pairId: 13802
+      },
+      {
+        id: 13802,
+        year: 2026,
+        label: "2026 Rajyaseva Prelims Paper 2 Final Key",
+        title: "Advt. No. 132/2025 Maharashtra Civil Services Gazetted Prelims 2026 — Paper No. 2 CSAT Final Answer Key",
+        size: "455 KB",
+        url: "/downloads/mpsc/answer_keys/2025/13802_Final Answerkey of Maharashtra Civil Services Gazetted Paper II.pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true,
+        pairId: 13628
+      }
+    ],
     pyqLinks: [
       { year: 2024, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2024 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
       { year: 2023, exam: "Prelims GS Paper I & CSAT", label: "MPSC 2023 Prelims Question Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },

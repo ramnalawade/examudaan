@@ -503,6 +503,33 @@ export default function MockInterviewPage() {
               ))}
             </div>
 
+            {/* ── AI Mock Interview Advisory & Due Diligence Notice (* Conditions) ── */}
+            <div style={{
+              marginTop: 40,
+              background: '#FFFBEB',
+              border: '1.5px solid #FEF3C7',
+              borderLeft: '4px solid var(--primary, #EA580C)',
+              borderRadius: 14,
+              padding: '20px 24px',
+              color: '#78350F'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 800, fontSize: 14, color: '#92400E', marginBottom: 6 }}>
+                <span className="material-symbols-outlined" style={{ color: '#EA580C', fontSize: 20 }}>smart_toy</span>
+                <span>* Important Advisory: AI-Generated Simulation &amp; Due Diligence Notice</span>
+              </div>
+              <p style={{ margin: '0 0 8px', fontSize: 13, lineHeight: 1.55 }}>
+                This executive interview board is an AI simulation platform designed for oral practice and spontaneous answering:
+              </p>
+              <ul style={{ margin: 0, paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <li style={{ fontSize: 12.5, lineHeight: 1.55 }}>
+                  <strong style={{ color: '#9A3412' }}>* Condition 1 (Practice Simulation Only):</strong> All interview questions, rubric scores, feedback notes, and diagnostic dossiers are generated using AI models and do not guarantee or reflect official commission interview marks.
+                </li>
+                <li style={{ fontSize: 12.5, lineHeight: 1.55 }}>
+                  <strong style={{ color: '#9A3412' }}>* Condition 2 (Statutory Due Diligence):</strong> Real-world administrative rules, service preferences, and statutory facts should always be verified from official commission manuals and government gazettes.
+                </li>
+              </ul>
+            </div>
+
           </div>
         </section>
       </main>

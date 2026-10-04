@@ -97,6 +97,112 @@
 }
 
 /* ============================================================
+   THEME 2: Electric Aurora (Dark Mode with Neon Cyan & Saffron)
+   Reference: examudaan_fresh_electric_aurora_dashboard_2
+   ============================================================ */
+[data-theme="electric-aurora"], html.dark[data-theme="electric-aurora"] {
+  --surface:                  #090d16;
+  --surface-bright:           #1e293b;
+  --surface-dim:              #06090f;
+  --surface-container-lowest: #0f172a;
+  --surface-container-low:    #0f172a;
+  --surface-container:        #151f32;
+  --surface-container-high:   #1e293b;
+  --surface-container-highest:#334155;
+  --surface-variant:          #1e293b;
+  --background:               #090d16;
+
+  --on-surface:               #f8fafc;
+  --on-surface-variant:       #94a3b8;
+  --on-background:            #f8fafc;
+  --inverse-surface:          #f8fafc;
+  --inverse-on-surface:       #090d16;
+
+  --primary:                  #f97316;
+  --primary-cta:              #f97316;
+  --primary-cta-hover:        #ea580c;
+  --on-primary:               #ffffff;
+  --primary-container:        #c2410c;
+  --on-primary-container:     #fed7aa;
+  --primary-fixed:            #1e293b;
+  --primary-fixed-dim:        #334155;
+  --on-primary-fixed:         #fed7aa;
+  --on-primary-fixed-variant: #f97316;
+  --surface-tint:             #f97316;
+
+  --secondary:                #38bdf8;
+  --on-secondary:             #0b111e;
+  --secondary-container:      #0284c7;
+  --on-secondary-container:   #e0f2fe;
+
+  --tertiary:                 #2dd4bf;
+  --on-tertiary:              #042f2e;
+  --tertiary-container:       #0f766e;
+  --on-tertiary-container:    #ccfbf1;
+
+  --outline:                  #334155;
+  --outline-variant:          #1e293b;
+}
+
+[data-theme="electric-aurora"] body {
+  background-color: var(--background);
+  color: var(--on-surface);
+}
+
+/* ============================================================
+   THEME 3: Emerald & Amber (Sage Light Mode with Mint & Amber)
+   Reference: examudaan_emerald_amber_dashboard_variant
+   ============================================================ */
+[data-theme="emerald-amber"] {
+  --surface:                  #fafaf9;
+  --surface-bright:           #ffffff;
+  --surface-dim:              #f4f6f0;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low:    #f6f8f4;
+  --surface-container:        #eef2ea;
+  --surface-container-high:   #e4ece0;
+  --surface-container-highest:#d8e4d2;
+  --surface-variant:          #eef2ea;
+  --background:               #fafaf9;
+
+  --on-surface:               #0f172a;
+  --on-surface-variant:       #475569;
+  --on-background:            #0f172a;
+  --inverse-surface:          #0f172a;
+  --inverse-on-surface:       #fafaf9;
+
+  --primary:                  #059669;
+  --primary-cta:              #059669;
+  --primary-cta-hover:        #047857;
+  --on-primary:               #ffffff;
+  --primary-container:        #047857;
+  --on-primary-container:     #d1fae5;
+  --primary-fixed:            #d1fae5;
+  --primary-fixed-dim:        #a7f3d0;
+  --on-primary-fixed:         #064e3b;
+  --on-primary-fixed-variant: #047857;
+  --surface-tint:             #059669;
+
+  --secondary:                #ea580c;
+  --on-secondary:             #ffffff;
+  --secondary-container:      #ffedd5;
+  --on-secondary-container:   #7c2d12;
+
+  --tertiary:                 #d97706;
+  --on-tertiary:              #ffffff;
+  --tertiary-container:       #fef3c7;
+  --on-tertiary-container:    #78350f;
+
+  --outline:                  #d1dcd0;
+  --outline-variant:          #e2ebd0;
+}
+
+[data-theme="emerald-amber"] body {
+  background-color: var(--background);
+  color: var(--on-surface);
+}
+
+/* ============================================================
    BASE RESET
    ============================================================ */
 *, *::before, *::after {

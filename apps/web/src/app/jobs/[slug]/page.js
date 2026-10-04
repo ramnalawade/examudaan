@@ -783,11 +783,41 @@ export default async function JobDetailPage({ params }) {
                     {en.age_limit.obc_relax && <li style={{ fontSize: 14, color: 'var(--secondary)' }}>OBC Relaxation: +{en.age_limit.obc_relax} Years</li>}
                     {en.age_limit.sc_st_relax && <li style={{ fontSize: 14, color: 'var(--secondary)' }}>SC/ST Relaxation: +{en.age_limit.sc_st_relax} Years</li>}
                   </ul>
+                  {(en.age_limit?.age_relaxation_note || en.age_limit?.note) && (
+                    <div style={{
+                      marginTop: 10,
+                      padding: '10px 14px',
+                      background: 'var(--surface-container-low)',
+                      border: '1px solid var(--outline-variant)',
+                      borderRadius: 8,
+                      fontSize: 13,
+                      color: 'var(--secondary)',
+                      lineHeight: 1.6
+                    }}>
+                      <strong style={{ color: 'var(--on-surface)', display: 'block', marginBottom: 2 }}>ℹ️ Age Relaxation & Concessions:</strong>
+                      {en.age_limit.age_relaxation_note || en.age_limit.note}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <div style={{ marginBottom: 16 }}>
                   <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--on-surface)', marginBottom: 8 }}>Age Limit</h3>
                   <p style={{ fontSize: 14, color: 'var(--secondary)', paddingLeft: 8 }}>Refer to the official notification PDF for age limits and relaxation rules.</p>
+                  {(en.age_limit?.age_relaxation_note || en.age_limit?.note) && (
+                    <div style={{
+                      marginTop: 10,
+                      padding: '10px 14px',
+                      background: 'var(--surface-container-low)',
+                      border: '1px solid var(--outline-variant)',
+                      borderRadius: 8,
+                      fontSize: 13,
+                      color: 'var(--secondary)',
+                      lineHeight: 1.6
+                    }}>
+                      <strong style={{ color: 'var(--on-surface)', display: 'block', marginBottom: 2 }}>ℹ️ Age Relaxation & Concessions:</strong>
+                      {en.age_limit.age_relaxation_note || en.age_limit.note}
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -906,30 +936,37 @@ export default async function JobDetailPage({ params }) {
                               <td style={{ fontSize: 13, color: 'var(--secondary)' }}>{post.job_type || '—'}</td>
                             )}
                           </tr>
-                          {post.reservation_json && Object.keys(post.reservation_json).length > 0 && (
-                            <tr style={{ background: '#FFFBF5' }}>
-                              <td
-                                colSpan={2 + (allPosts.some(p => p.pay_scale) ? 1 : 0) + (allPosts.some(p => p.qualification) ? 1 : 0) + (allPosts.some(p => p.job_type) ? 1 : 0)}
-                                style={{ padding: '6px 12px 10px' }}
-                              >
-                                <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
-                                  Category-wise Breakup:
-                                </div>
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                                  {Object.entries(post.reservation_json).map(([cat, count]) => (
-                                    <span key={cat} style={{
-                                      padding: '3px 10px',
-                                      background: 'var(--surface-container-low)',
-                                      border: '1px solid var(--outline-variant)',
-                                      borderRadius: 999, fontSize: 12, fontWeight: 600, color: 'var(--on-surface)',
-                                    }}>
-                                      {cat.toUpperCase()}: {count}
-                                    </span>
-                                  ))}
-                                </div>
-                              </td>
-                            </tr>
-                          )}
+                          {(() => {
+                            const resObj = post.reservation_json || post.category_vacancies || post.reservation
+                            if (!resObj || typeof resObj !== 'object') return null
+                            const validEntries = Object.entries(resObj).filter(([_, count]) => count !== null && count !== undefined && count !== '' && Number(count) > 0)
+                            if (validEntries.length === 0) return null
+
+                            return (
+                              <tr style={{ background: '#FFFBF5' }}>
+                                <td
+                                  colSpan={2 + (allPosts.some(p => p.pay_scale) ? 1 : 0) + (allPosts.some(p => p.qualification) ? 1 : 0) + (allPosts.some(p => p.job_type) ? 1 : 0)}
+                                  style={{ padding: '6px 12px 10px' }}
+                                >
+                                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
+                                    Category-wise Breakup:
+                                  </div>
+                                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                                    {validEntries.map(([cat, count]) => (
+                                      <span key={cat} style={{
+                                        padding: '3px 10px',
+                                        background: 'var(--surface-container-low)',
+                                        border: '1px solid var(--outline-variant)',
+                                        borderRadius: 999, fontSize: 12, fontWeight: 600, color: 'var(--on-surface)',
+                                      }}>
+                                        {cat.toUpperCase()}: {count}
+                                      </span>
+                                    ))}
+                                  </div>
+                                </td>
+                              </tr>
+                            )
+                          })()}
                         </React.Fragment>
                       ))}
                     </tbody>
@@ -1198,12 +1235,41 @@ export default async function JobDetailPage({ params }) {
               </section>
             )}
 
-            {/* ── Disclaimer ─────────────────────────────────── */}
-            <div style={{ background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 12, padding: '14px 18px', display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-              <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 20, flexShrink: 0, marginTop: 2 }}>info</span>
-              <p style={{ fontSize: 13, color: '#92400E', lineHeight: 1.6 }}>
-                Always verify information on the official government website before applying. ExamUdaan aggregates data and may not reflect last-minute changes.
+            {/* ── AI Extraction Disclaimer & Mandatory Candidate Due Diligence ── */}
+            <div style={{
+              background: '#FFFBEB',
+              border: '1.5px solid #FEF3C7',
+              borderLeft: '4px solid var(--primary, #EA580C)',
+              borderRadius: '12px',
+              padding: '18px 20px',
+              margin: '24px 0 0',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', fontWeight: 800, fontSize: '14px', color: '#92400E' }}>
+                <span className="material-symbols-outlined" style={{ color: '#EA580C', fontSize: '20px' }}>smart_toy</span>
+                <span>* Important Advisory: AI-Processed Content & Candidate Due Diligence</span>
+              </div>
+              <p style={{ fontSize: '13px', color: '#78350F', lineHeight: 1.6, margin: '0 0 10px' }}>
+                Please note the following conditions before taking any action or submitting your application for <strong>{en.title}</strong>:
               </p>
+              <ul style={{ margin: 0, paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li style={{ fontSize: '12.5px', color: '#78350F', lineHeight: 1.55 }}>
+                  <strong style={{ color: '#9A3412' }}>* Condition 1 (AI-Assisted Extraction):</strong> The key dates, age relaxations, educational qualifications, salary slabs, and category-wise vacancy breakdowns shown above are extracted and synthesized using automated AI document parsers from the official notification.
+                </li>
+                <li style={{ fontSize: '12.5px', color: '#78350F', lineHeight: 1.55 }}>
+                  <strong style={{ color: '#9A3412' }}>* Condition 2 (Mandatory Document Due Diligence):</strong> While we implement multi-layer validation, automated parsing may experience edge-case variations. Candidates are strictly required to perform their own due diligence by opening and reading the{' '}
+                  {pdfLink ? (
+                    <a href={pdfLink} target="_blank" rel="noopener noreferrer" style={{ color: '#EA580C', textDecoration: 'underline', fontWeight: 700 }}>
+                      Official Notification PDF ↗
+                    </a>
+                  ) : (
+                    <span style={{ fontWeight: 700 }}>Official Notification</span>
+                  )}{' '}
+                  and visiting the recruiting department&apos;s official website prior to registration.
+                </li>
+                <li style={{ fontSize: '12.5px', color: '#78350F', lineHeight: 1.55 }}>
+                  <strong style={{ color: '#9A3412' }}>* Condition 3 (Legal Non-Affiliation):</strong> ExamUdaan is an independent aggregator and is not affiliated with or authorized by {en.org_name || 'the recruiting authority'}. Exam fees, selection procedures, and final appointment terms are governed exclusively by official commission rules.
+                </li>
+              </ul>
             </div>
           </div>
 

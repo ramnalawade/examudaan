@@ -13,6 +13,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import JobCard from '../../../../components/JobCard'
+import { LoadMore } from '../../../../components/Pagination'
 import styles from './districtJobs.module.css'
 
 export default function DistrictJobsClient({ district }) {
@@ -162,14 +163,15 @@ export default function DistrictJobsClient({ district }) {
           </div>
         )}
 
-        {/* Load more */}
-        {hasMore && !loading && (
-          <div className={styles.loadMoreRow}>
-            <button onClick={loadMore} className="btn-outline">
-              Load More Jobs
-            </button>
-          </div>
-        )}
+        {/* Load more with progress counter & bar */}
+        <LoadMore
+          currentCount={jobs.length}
+          totalCount={total}
+          onLoadMore={loadMore}
+          loading={loading}
+          label={`Load More ${district.name} Jobs`}
+          itemLabel="vacancies"
+        />
 
         {/* ── Quick nav to other districts ─────────────────── */}
         <div className={styles.otherDistricts}>

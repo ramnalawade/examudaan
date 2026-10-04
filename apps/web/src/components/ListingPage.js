@@ -16,6 +16,7 @@ import { useState, useEffect, useCallback, useRef, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import JobCard from './JobCard'
+import { LoadMore } from './Pagination'
 import { useLanguage } from '../context/LanguageContext'
 import { formatTitle } from '../lib/formatTitle'
 
@@ -207,6 +208,7 @@ function ListingPageInner({
   const [selGovtLevel, setSelGovtLevel] = useState('')  // Central|State|PSU|Local
   const [selVacancies, setSelVacancies] = useState('')  // min_vacancies filter
   const [sort,        setSort]        = useState('latest')
+  const [statusFilter, setStatusFilter] = useState('published') // 'published' (Active) | 'closed' (On Demand) | 'all' (All)
 
   // Sync incoming search params on mount
   useEffect(() => {
@@ -222,6 +224,7 @@ function ListingPageInner({
     const vac = searchParams.get('min_vacancies')
     const sal = searchParams.get('min_salary')
     const tp = searchParams.get('type')
+    const stat = searchParams.get('status')
 
     if (st) {
       const lower = st.toLowerCase().trim()
@@ -237,6 +240,7 @@ function ListingPageInner({
     if (vac) setSelVacancies(vac)
     if (sal) setSelSalary(sal)
     if (tp && tp !== 'all') setActiveTab(tp)
+    if (stat) setStatusFilter(stat)
   }, [searchParams])
 
   // ── Data ──────────────────────────────────────────────────
@@ -256,7 +260,7 @@ function ListingPageInner({
     const currentPage = reset ? 1 : page
 
     const p = new URLSearchParams({
-      status: 'published',
+      status: statusFilter,
       sort,
       page:   String(currentPage),
       limit:  String(PAGE_SIZE),
@@ -296,7 +300,7 @@ function ListingPageInner({
     } finally {
       setLoading(false)
     }
-  }, [activeTab, search, sort, selOrgs, selState, selCity, selQual, selSalary, selGovtLevel, selVacancies, page, isMarathi])
+  }, [activeTab, search, sort, statusFilter, selOrgs, selState, selCity, selQual, selSalary, selGovtLevel, selVacancies, page, isMarathi])
 
   // Re-fetch when filters change (reset to page 1)
   const searchTimer = useRef(null)
@@ -305,7 +309,7 @@ function ListingPageInner({
     searchTimer.current = setTimeout(() => fetchItems(true), search ? 350 : 0)
     return () => clearTimeout(searchTimer.current)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeTab, sort, selOrgs, selState, selCity, selQual, selSalary, selGovtLevel, selVacancies, search])
+  }, [activeTab, sort, statusFilter, selOrgs, selState, selCity, selQual, selSalary, selGovtLevel, selVacancies, search])
 
   // Load more
   useEffect(() => {
@@ -327,9 +331,10 @@ function ListingPageInner({
     setSelGovtLevel('')
     setSelVacancies('')
     setSearch('')
+    setStatusFilter('published')
   }
 
-  const hasFilters = selOrgs.length > 0 || selQual || selState || selCity || selSalary || selGovtLevel || selVacancies || search
+  const hasFilters = selOrgs.length > 0 || selQual || selState || selCity || selSalary || selGovtLevel || selVacancies || search || statusFilter !== 'published'
   const hasMore    = items.length < total
 
   // ── Page label ────────────────────────────────────────────
@@ -441,6 +446,7 @@ function ListingPageInner({
           { label: isMarathi ? '🎓 १२वी उत्तीर्ण' : '🎓 12th Pass', type: 'qualification', value: '12th' },
           { label: isMarathi ? '🎓 पदवीधर' : '🎓 Graduate', type: 'qualification', value: 'graduate' },
           { label: isMarathi ? '⏰ अंतिम मुदत जवळ' : '⏰ Closing Soon', type: 'sort', value: 'closing' },
+          { label: isMarathi ? '📁 बंद जाहिराती (On Demand)' : '📁 Closed Jobs (On Demand)', type: 'status', value: 'closed' },
         ].map(chip => {
           let isChipActive = false
           if (chip.type === 'state') isChipActive = selState === chip.value
@@ -448,6 +454,7 @@ function ListingPageInner({
           if (chip.type === 'city') isChipActive = selCity === chip.value
           if (chip.type === 'qualification') isChipActive = selQual === chip.value
           if (chip.type === 'sort') isChipActive = sort === chip.value
+          if (chip.type === 'status') isChipActive = statusFilter === chip.value
 
           return (
             <button
@@ -459,6 +466,7 @@ function ListingPageInner({
                 if (chip.type === 'city') setSelCity(prev => prev === chip.value ? '' : chip.value)
                 if (chip.type === 'qualification') setSelQual(prev => prev === chip.value ? '' : chip.value)
                 if (chip.type === 'sort') setSort(prev => prev === chip.value ? 'latest' : chip.value)
+                if (chip.type === 'status') setStatusFilter(prev => prev === chip.value ? 'published' : chip.value)
               }}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 4,
@@ -559,14 +567,53 @@ function ListingPageInner({
 
       {/* ── Count + active filter chips ───────────────────── */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, flexWrap: 'wrap', gap: 8 }}>
-        <div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
           <span style={{ fontSize: 18, fontWeight: 700, color: 'var(--on-surface)' }}>
             {loading && items.length === 0 ? 'Loading…' : `${total.toLocaleString('en-IN')} ${tabLabel}`}
           </span>
+          {/* Active / Closed toggle pills (On Demand) */}
+          <div style={{ display: 'inline-flex', background: 'var(--surface-container-low)', padding: 3, borderRadius: 999, border: '1px solid var(--outline-variant)' }}>
+            <button
+              type="button"
+              onClick={() => setStatusFilter('published')}
+              style={{
+                border: 'none',
+                background: statusFilter === 'published' ? 'var(--surface-container-lowest)' : 'transparent',
+                color: statusFilter === 'published' ? 'var(--primary)' : 'var(--secondary)',
+                fontWeight: statusFilter === 'published' ? 700 : 500,
+                fontSize: 12, padding: '4px 12px', borderRadius: 999, cursor: 'pointer',
+                boxShadow: statusFilter === 'published' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                display: 'inline-flex', alignItems: 'center', gap: 5,
+                fontFamily: 'inherit'
+              }}
+              id="filter-status-active-btn"
+            >
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#16A34A', display: 'inline-block' }}></span>
+              {isMarathi ? 'सुरू जाहिराती (Active)' : 'Active Jobs'}
+            </button>
+            <button
+              type="button"
+              onClick={() => setStatusFilter('closed')}
+              style={{
+                border: 'none',
+                background: statusFilter === 'closed' ? 'var(--surface-container-lowest)' : 'transparent',
+                color: statusFilter === 'closed' ? '#DC2626' : 'var(--secondary)',
+                fontWeight: statusFilter === 'closed' ? 700 : 500,
+                fontSize: 12, padding: '4px 12px', borderRadius: 999, cursor: 'pointer',
+                boxShadow: statusFilter === 'closed' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                display: 'inline-flex', alignItems: 'center', gap: 5,
+                fontFamily: 'inherit'
+              }}
+              id="filter-status-closed-btn"
+            >
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#9CA3AF', display: 'inline-block' }}></span>
+              {isMarathi ? 'बंद जाहिराती (Closed)' : 'Closed / Expired'}
+            </button>
+          </div>
           {hasFilters && (
             <button
               onClick={clearAll}
-              style={{ marginLeft: 12, fontSize: 12, color: primaryColor, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600, fontFamily: 'inherit' }}
+              style={{ marginLeft: 6, fontSize: 12, color: primaryColor, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600, fontFamily: 'inherit' }}
             >
               Clear all filters
             </button>
@@ -645,6 +692,35 @@ function ListingPageInner({
               </button>
             </div>
           </div>
+
+          {/* Application Status Filter (Active vs Closed On Demand) */}
+          <FilterSection title={isMarathi ? 'अर्जाची स्थिती' : 'Application Status'} defaultOpen={true}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {[
+                { id: 'published', label: isMarathi ? 'सुरू जाहिराती (Active Deadlines First)' : 'Active Jobs (Deadlines First)' },
+                { id: 'closed',    label: isMarathi ? 'मुदत संपलेल्या जाहिराती (Closed / Archive)' : 'Closed / Past Deadlines (On Demand)' },
+                { id: 'all',       label: isMarathi ? 'सर्व जाहिराती (Active + Closed)' : 'All Jobs (Active + Closed)' },
+              ].map(st => (
+                <label
+                  key={st.id}
+                  style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: statusFilter === st.id ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                  htmlFor={`filter-status-${st.id}`}
+                >
+                  <input
+                    type="radio"
+                    id={`filter-status-${st.id}`}
+                    name="statusFilter"
+                    checked={statusFilter === st.id}
+                    onChange={() => setStatusFilter(st.id)}
+                    style={{ accentColor: primaryColor, width: 16, height: 16 }}
+                  />
+                  <span style={{ fontSize: 13, color: statusFilter === st.id ? primaryColor : 'var(--on-surface)', fontWeight: statusFilter === st.id ? 700 : 400 }}>
+                    {st.label}
+                  </span>
+                </label>
+              ))}
+            </div>
+          </FilterSection>
 
           {/* Organization filter */}
           <FilterSection title={t('listing.filter_board', 'Organization / Board')}>
@@ -894,19 +970,66 @@ function ListingPageInner({
             </div>
           )}
 
-          {/* Load more */}
-          {hasMore && !loading && (
-            <div style={{ textAlign: 'center', paddingBottom: 32 }}>
+          {/* On-Demand Closed / Expired Prompt */}
+          {statusFilter === 'published' && !loading && items.length > 0 && (
+            <div style={{
+              margin: '28px 0 20px', padding: '16px 20px', borderRadius: 12,
+              background: 'var(--surface-container-low)',
+              border: '1px dashed var(--outline-variant)',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              flexWrap: 'wrap', gap: 12,
+            }}>
+              <div>
+                <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)' }}>
+                  {isMarathi ? '📁 जुन्या किंवा मुदत संपलेल्या जाहिराती शोधत आहात?' : '📁 Looking for previously closed or expired job postings?'}
+                </div>
+                <div style={{ fontSize: 12, color: 'var(--secondary)', marginTop: 2 }}>
+                  {isMarathi ? 'अभ्यासक्रम, जुन्या जाहिरात क्रमांक व संदर्भासाठी बंद जाहिराती पहा.' : 'View archived government recruitment notices for reference, syllabus, and notification numbers.'}
+                </div>
+              </div>
               <button
+                type="button"
+                onClick={() => {
+                  setStatusFilter('closed')
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
                 className="btn-outline"
-                style={{ padding: '12px 40px', fontSize: 15 }}
-                onClick={() => setPage(p => p + 1)}
-                id="load-more-btn"
+                style={{ fontSize: 13, padding: '7px 16px', borderRadius: 8, cursor: 'pointer' }}
               >
-                {isMarathi ? `अधिक ${tabLabel} पहा` : `Load More ${tabLabel}`}
+                {isMarathi ? 'बंद जाहिराती पहा' : 'View Closed Jobs'}
               </button>
             </div>
           )}
+
+          {statusFilter === 'closed' && (
+            <div style={{
+              margin: '20px 0', padding: '12px 18px', borderRadius: 8,
+              background: '#FEF2F2', border: '1px solid #FECACA',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              flexWrap: 'wrap', gap: 8,
+            }}>
+              <span style={{ fontSize: 13, color: '#B91C1C', fontWeight: 600 }}>
+                {isMarathi ? 'ℹ️ आपण सध्या मुदत संपलेल्या जाहिराती पहात आहात (On Demand).' : 'ℹ️ Currently viewing closed & past-deadline job advertisements (On Demand).'}
+              </span>
+              <button
+                type="button"
+                onClick={() => setStatusFilter('published')}
+                style={{ fontSize: 12, color: primaryColor, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 700 }}
+              >
+                {isMarathi ? '← सुरू जाहिरातींवर परत जा' : '← Back to Active Jobs'}
+              </button>
+            </div>
+          )}
+
+          {/* Load more with progress counter & bar */}
+          <LoadMore
+            currentCount={items.length}
+            totalCount={total}
+            onLoadMore={() => setPage(p => p + 1)}
+            loading={loading}
+            label={isMarathi ? `अधिक ${tabLabel} पहा` : `Load More ${tabLabel}`}
+            itemLabel={tabLabel.toLowerCase()}
+          />
 
           {loading && items.length > 0 && (
             <div style={{ textAlign: 'center', padding: 24 }}>

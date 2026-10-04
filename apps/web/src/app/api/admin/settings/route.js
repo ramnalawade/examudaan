@@ -32,7 +32,7 @@ async function ensureTable() {
 export async function GET(request) {
   try {
     const user = getAdminUser(request)
-    if (!user || !user.is_admin) {
+    if (!user || (!user.is_admin && user.role !== 'admin')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -51,7 +51,7 @@ export async function GET(request) {
 export async function POST(request) {
   try {
     const user = getAdminUser(request)
-    if (!user || !user.is_admin) {
+    if (!user || (!user.is_admin && user.role !== 'admin')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

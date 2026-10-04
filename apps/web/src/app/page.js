@@ -56,7 +56,16 @@ async function getLatestRecruitments() {
        JOIN organizations o ON o.id = en.organization_id
        WHERE en.status = 'published'
          AND (en.notification_type = 'recruitment' OR en.notification_type IS NULL)
-       ORDER BY en.published_at DESC NULLS LAST, en.created_at DESC
+         AND (en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE)
+       ORDER BY
+         (CASE
+           WHEN (en.apply_end_date >= CURRENT_DATE AND en.apply_end_date <= CURRENT_DATE + interval '7 days') THEN 1
+           WHEN (en.apply_end_date > CURRENT_DATE + interval '7 days' OR (en.is_walk_in = TRUE AND en.exam_date >= CURRENT_DATE)) THEN 2
+           ELSE 3
+         END) ASC,
+         (CASE WHEN en.apply_end_date >= CURRENT_DATE AND en.apply_end_date <= CURRENT_DATE + interval '7 days' THEN en.apply_end_date END) ASC,
+         en.published_at DESC NULLS LAST,
+         en.created_at DESC
        LIMIT 6`
     )
     return notifications

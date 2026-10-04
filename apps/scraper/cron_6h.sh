@@ -206,6 +206,47 @@ echo "[INFO] Running notification enrichment (dates, vacancies, fees)..." | tee 
 python enrich_notifications.py --limit 100 --fetch >> "$SUMMARY_LOG" 2>&1 || true
 echo "[INFO] Enrichment step completed"                                    | tee -a "$SUMMARY_LOG"
 
+# ---- Long-horizon multi-page document parsing & unclosed posts enrichment ----
+# ---- Long-horizon multi-page document parsing & unclosed posts enrichment ----
+# Parses multi-page tables, category-wise vacancies, age relaxations & fee notes
+echo "[INFO] Running Unlimited-OCR & unclosed post deep enrichment..." | tee -a "$SUMMARY_LOG"
+python unlimited_ocr_parser.py --enrich-unclosed --limit 50 --with-gemini --db-update >> "$SUMMARY_LOG" 2>&1 || true
+echo "[INFO] Unlimited-OCR deep enrichment step completed"             | tee -a "$SUMMARY_LOG"
+
+# ---- Automatic cleanup: close past-deadline recruitments ----
+echo "[INFO] Running automated past-deadline recruitment status cleanup..." | tee -a "$SUMMARY_LOG"
+python -c "
+import psycopg2, os
+from dotenv import load_dotenv
+load_dotenv()
+try:
+    conn = psycopg2.connect(
+        host=os.getenv('DB_HOST'),
+        port=os.getenv('DB_PORT'),
+        dbname=os.getenv('DB_DATABASE'),
+        user=os.getenv('DB_USERNAME'),
+        password=os.getenv('DB_PASSWORD')
+    )
+    with conn.cursor() as cur:
+        cur.execute('''
+            UPDATE exam_notifications
+            SET status = 'closed'
+            WHERE notification_type = 'recruitment'
+              AND status = 'published'
+              AND apply_end_date < CURRENT_DATE
+        ''')
+        print(f'[INFO] Cleaned up {cur.rowcount} expired recruitments -> status: closed')
+    conn.commit()
+    conn.close()
+except Exception as e:
+    print(f'[WARN] Past-deadline cleanup error: {e}')
+" >> "$SUMMARY_LOG" 2>&1 || true
+
+# ---- Daily Current Affairs Automated Ingestion (PIB, AIR, Google News) ----
+echo "[INFO] Running daily current affairs automated fetcher..." | tee -a "$SUMMARY_LOG"
+python daily_ca_fetcher.py >> "$SUMMARY_LOG" 2>&1 || true
+echo "[INFO] Daily current affairs ingestion completed"         | tee -a "$SUMMARY_LOG"
+
 # ---- Send email summary via Brevo ----
 # Only sends if BREVO_API_KEY is set in .env
 if [[ -n "${BREVO_API_KEY:-}" && -n "${BREVO_RECIPIENT_EMAIL:-}" ]]; then

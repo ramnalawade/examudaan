@@ -7,6 +7,7 @@
 import Link from 'next/link'
 import { SYLLABUS_EXAMS } from '@/lib/syllabusData'
 import mpscLocalPapers from '@/lib/mpscLocalPapers.json'
+import mpscPairedExams from '@/lib/mpscPairedExams.json'
 
 export const metadata = {
   title: 'Official Previous Year Question Papers (PYQ) & Answer Keys — 2018 to 2024 | ExamUdaan',
@@ -253,111 +254,250 @@ export default function QuestionPapersPage() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '10px', marginBottom: '16px', borderBottom: '1px solid #FED7AA', paddingBottom: '14px' }}>
               <div>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 700, color: '#C2410C', background: '#FFF7ED', padding: '3px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '6px' }}>
-                  <span>⚡</span> इन-ब्राउझर वाचन व मोफत सराव (100% Official & Safe)
+                  <span>🏛️</span> महाराष्ट्र लोकसेवा आयोग अधिकृत संग्रह (mpsc.gov.in)
                 </span>
                 <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '22px', fontWeight: 800, color: '#111827', margin: 0 }}>
-                  एमपीएससी मूळ प्रश्नपत्रिका व ऑनलाइन प्रॅक्टिस सेट्स
+                  MPSC मूळ प्रश्नपत्रिका व अंतिम उत्तरतालिका (2024–2026)
                 </h2>
                 <p style={{ margin: '4px 0 0 0', fontSize: '14px', color: '#4B5563' }}>
-                  कोणत्याही बाह्य जाहिरातींशिवाय थेट ExamUdaan वरून मूळ PDF वाचा आणि 28+ परीक्षांचा ऑनलाइन सराव करा.
+                  थेट mpsc.gov.in कडून संकलित केलेल्या {mpscLocalPapers.length} अधिकृत PDF. ब्राउझरमध्ये वाचा किंवा थेट डाउनलोड करा.
                 </p>
               </div>
-              <span style={{ fontSize: '13px', fontWeight: 600, color: '#EA580C', background: '#FFF7ED', border: '1px solid #FFEDD5', padding: '6px 12px', borderRadius: '8px' }}>
-                {mpscLocalPapers.length} अधिकृत संच उपलब्ध
-              </span>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+                <Link
+                  href="/mpsc-pyq"
+                  style={{
+                    fontSize: '13px',
+                    fontWeight: 700,
+                    color: '#FFFFFF',
+                    background: '#EA580C',
+                    padding: '8px 14px',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}
+                >
+                  <span>🏛️</span> सर्व {mpscLocalPapers.length} MPSC पेपर्स पहा →
+                </Link>
+              </div>
             </div>
 
-            {/* Paper cards grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(310px, 1fr))', gap: '14px', marginBottom: '24px' }}>
-              {mpscLocalPapers.map((paper, idx) => {
-                const isKey = paper.type === 'answer-key'
-                const isLocal = paper.hasLocalPdf && paper.localPath
+            {/* 1-Row Exam Table */}
+            <div style={{
+              background: '#FFFFFF',
+              border: '1px solid #E5E7EB',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+              marginBottom: '20px'
+            }}>
+              {/* Desktop Table Header */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'minmax(300px, 2.2fr) minmax(210px, 1.3fr) minmax(210px, 1.3fr) 130px',
+                background: '#F8FAFC',
+                borderBottom: '1px solid #E5E7EB',
+                padding: '12px 18px',
+                fontSize: '12px',
+                fontWeight: 700,
+                color: '#475569',
+                textTransform: 'uppercase',
+                letterSpacing: '0.04em'
+              }}>
+                <div>Examination / Advertisement</div>
+                <div>Official Question Paper</div>
+                <div>Official Answer Key</div>
+                <div style={{ textAlign: 'center' }}>PDF Viewer</div>
+              </div>
+
+              {/* Exam Rows */}
+              {mpscPairedExams.slice(0, 15).map((row, idx) => {
+                const qp = row.questionPaper
+                const ak = row.answerKey
+                const isEven = idx % 2 === 0
 
                 return (
                   <div
-                    key={idx}
+                    key={`${row.id}-${idx}`}
                     style={{
-                      background: '#FFFBF5',
-                      border: isLocal ? '1.5px solid #EA580C' : '1px solid #E5E7EB',
-                      borderRadius: '10px',
-                      padding: '14px 16px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                      gap: '12px'
+                      display: 'grid',
+                      gridTemplateColumns: 'minmax(300px, 2.2fr) minmax(210px, 1.3fr) minmax(210px, 1.3fr) 130px',
+                      alignItems: 'center',
+                      padding: '14px 18px',
+                      borderBottom: idx === 14 ? 'none' : '1px solid #F1F5F9',
+                      background: isEven ? '#FFFFFF' : '#FAFAFA',
+                      gap: '14px'
                     }}
                   >
+                    {/* Exam Name */}
                     <div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                        <span style={{
-                          fontSize: '11px',
-                          fontWeight: 700,
-                          padding: '2px 8px',
-                          borderRadius: '4px',
-                          background: isLocal ? (isKey ? '#DCFCE7' : '#FFF7ED') : '#EFF6FF',
-                          color: isLocal ? (isKey ? '#166534' : '#C2410C') : '#1D4ED8'
-                        }}>
-                          {isLocal ? (isKey ? '✓ Official Final Key' : '📄 Official PDF Paper') : '💻 Interactive CBT Mock'}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px', flexWrap: 'wrap' }}>
+                        <span style={{ fontSize: '10.5px', fontWeight: 700, padding: '1px 6px', borderRadius: '4px', background: row.year === 2026 ? '#EA580C' : '#475569', color: '#FFFFFF' }}>
+                          {row.year}
                         </span>
-                        <span style={{ fontSize: '12px', fontWeight: 600, color: '#6B7280' }}>
-                          {paper.year} · {paper.sizeFormatted || 'Online'}
-                        </span>
+                        {row.advertisementNumber && (
+                          <span style={{ fontSize: '10.5px', fontWeight: 600, color: '#64748B', background: '#F1F5F9', padding: '1px 6px', borderRadius: '4px' }}>
+                            Advt {row.advertisementNumber}
+                          </span>
+                        )}
+                        {ak && (
+                          <span style={{ fontSize: '10.5px', fontWeight: 700, color: '#166534', background: '#DCFCE7', padding: '1px 6px', borderRadius: '4px' }}>
+                            ✓ Key
+                          </span>
+                        )}
                       </div>
-                      <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '15px', fontWeight: 700, color: '#1F2937', margin: '0 0 4px 0', lineHeight: 1.35 }}>
-                        {paper.title}
+                      <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '14px', fontWeight: 700, color: '#1E293B', margin: '0 0 2px 0', lineHeight: 1.35 }}>
+                        {row.title}
                       </h3>
-                      <div style={{ fontSize: '12px', color: '#6B7280' }}>
-                        {isLocal ? 'अधिकृत मूळ PDF — ExamUdaan वर थेट वाचा' : 'अधिकृत परीक्षा पॅटर्न — मोफत ऑनलाइन सराव'}
-                      </div>
+                      {row.titleMr && row.titleMr !== row.title && (
+                        <p style={{ fontSize: '11.5px', color: '#64748B', margin: 0, lineHeight: 1.3 }}>
+                          {row.titleMr}
+                        </p>
+                      )}
                     </div>
 
-                    {/* Action Button: In-Browser Viewer for Local PDFs, or CBT Practice Link */}
-                    {isLocal ? (
+                    {/* Question Paper */}
+                    <div>
+                      {qp ? (
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                          <Link
+                            href={`/mpsc-pyq?docId=${qp.id}`}
+                            style={{
+                              background: '#EA580C',
+                              color: '#FFFFFF',
+                              padding: '6px 10px',
+                              borderRadius: '6px',
+                              fontSize: '12px',
+                              fontWeight: 600,
+                              textDecoration: 'none',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '4px'
+                            }}
+                          >
+                            <span>👁️</span> Paper
+                          </Link>
+                          <a
+                            href={qp.localPath}
+                            download
+                            style={{
+                              color: '#4B5563',
+                              background: '#FFFFFF',
+                              border: '1px solid #D1D5DB',
+                              padding: '5px 7px',
+                              borderRadius: '5px',
+                              fontSize: '11px',
+                              fontWeight: 600,
+                              textDecoration: 'none',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '2px'
+                            }}
+                          >
+                            <span>⬇️</span> {qp.sizeFormatted}
+                          </a>
+                        </div>
+                      ) : (
+                        <span style={{ fontSize: '11.5px', color: '#9CA3AF' }}>—</span>
+                      )}
+                    </div>
+
+                    {/* Answer Key */}
+                    <div>
+                      {ak ? (
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                          <Link
+                            href={`/mpsc-pyq?docId=${ak.id}`}
+                            style={{
+                              background: '#059669',
+                              color: '#FFFFFF',
+                              padding: '6px 10px',
+                              borderRadius: '6px',
+                              fontSize: '12px',
+                              fontWeight: 600,
+                              textDecoration: 'none',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '4px'
+                            }}
+                          >
+                            <span>✓</span> Key
+                          </Link>
+                          <a
+                            href={ak.localPath}
+                            download
+                            style={{
+                              color: '#4B5563',
+                              background: '#FFFFFF',
+                              border: '1px solid #D1D5DB',
+                              padding: '5px 7px',
+                              borderRadius: '5px',
+                              fontSize: '11px',
+                              fontWeight: 600,
+                              textDecoration: 'none',
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '2px'
+                            }}
+                          >
+                            <span>⬇️</span> {ak.sizeFormatted}
+                          </a>
+                        </div>
+                      ) : (
+                        <span style={{ fontSize: '11px', color: '#6B7280', background: '#F3F4F6', padding: '4px 8px', borderRadius: '5px' }}>
+                          ⏳ Key Pending
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Pair Compare / Direct Viewer */}
+                    <div style={{ textAlign: 'center' }}>
                       <Link
-                        href={`/question-papers/viewer?pdf=${encodeURIComponent(paper.localPath)}&title=${encodeURIComponent(paper.title)}`}
+                        href={`/mpsc-pyq?docId=${qp ? qp.id : ak?.id}`}
                         style={{
-                          textAlign: 'center',
-                          background: isKey ? '#16A34A' : '#EA580C',
-                          color: '#FFFFFF',
-                          fontWeight: 600,
-                          fontSize: '13px',
-                          padding: '9px 12px',
+                          background: '#FFF7ED',
+                          border: '1px solid #FFEDD5',
+                          color: '#EA580C',
+                          padding: '5px 9px',
                           borderRadius: '6px',
+                          fontSize: '11.5px',
+                          fontWeight: 700,
                           textDecoration: 'none',
                           display: 'inline-flex',
                           alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '6px'
+                          gap: '3px'
                         }}
                       >
-                        <span>👁️</span> ब्राउझरमध्ये वाचा (In-Browser Viewer)
+                        <span>⚡</span> Viewer
                       </Link>
-                    ) : (
-                      <a
-                        href={paper.practiceUrl || '#'}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          textAlign: 'center',
-                          background: '#1D4ED8',
-                          color: '#FFFFFF',
-                          fontWeight: 600,
-                          fontSize: '13px',
-                          padding: '9px 12px',
-                          borderRadius: '6px',
-                          textDecoration: 'none',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '6px'
-                        }}
-                      >
-                        <span>🎯</span> सराव सुरू करा (Online Practice) ↗
-                      </a>
-                    )}
+                    </div>
                   </div>
                 )
               })}
+            </div>
+
+            {/* View All MPSC CTA Bar */}
+            <div style={{ textAlign: 'center', padding: '16px', background: '#FFF7ED', borderRadius: '10px', border: '1px dashed #FDBA74', marginBottom: '24px' }}>
+              <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#9A3412', fontWeight: 600 }}>
+                एकूण {mpscPairedExams.length} अधिकृत MPSC परीक्षा संच (209 प्रश्नपत्रिका व उत्तरतालिका) उपलब्ध आहेत.
+              </p>
+              <Link
+                href="/mpsc-pyq"
+                style={{
+                  background: '#EA580C',
+                  color: '#FFFFFF',
+                  padding: '9px 20px',
+                  borderRadius: '8px',
+                  fontWeight: 700,
+                  fontSize: '14px',
+                  textDecoration: 'none',
+                  display: 'inline-block'
+                }}
+              >
+                सर्व {mpscPairedExams.length} परीक्षा संच इन-ब्राउझर व्ह्यूअरमध्ये उघडा (Open MPSC Archive) →
+              </Link>
             </div>
 
             {/* ── Related Content Bar — keeps users on ExamUdaan ── */}

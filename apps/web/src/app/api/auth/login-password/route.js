@@ -21,7 +21,7 @@ async function handler(req) {
     // Find user by email
     const rows = await pgQuery(
       `SELECT id, email, phone, first_name, last_name, plan, plan_expiry,
-              language, password_hash, auth_provider
+              language, password_hash, auth_provider, role, is_admin
        FROM users
        WHERE email = $1
        LIMIT 1`,
@@ -45,12 +45,16 @@ async function handler(req) {
       return badRequest('Incorrect email or password')
     }
 
+    const isAdmin = Boolean(user.is_admin || user.role === 'admin')
+
     // Issue JWT tokens
     const tokenPayload = {
-      user_id: user.id,
-      email:   user.email,
-      phone:   user.phone,
-      plan:    user.plan,
+      user_id:  user.id,
+      email:    user.email,
+      phone:    user.phone,
+      plan:     user.plan,
+      role:     user.role || 'candidate',
+      is_admin: isAdmin,
     }
 
     const access_token  = createAccessToken(tokenPayload)
@@ -77,6 +81,8 @@ async function handler(req) {
         last_name:  user.last_name  || '',
         plan:       user.plan,
         language:   user.language,
+        role:       user.role || 'candidate',
+        is_admin:   isAdmin,
       },
     }, 'Login successful')
 

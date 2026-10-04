@@ -186,12 +186,25 @@ export default function ExamDetailPage({ params }) {
 
           {/* Embedded Official In-Browser PDF Document Viewer & Directory Workspace */}
           {exam.officialPdfs && exam.officialPdfs.length > 0 ? (
-            <OfficialPdfViewer
-              papers={exam.officialPdfs}
-              conductingBody={exam.conductingBody}
-              officialWebsite={exam.officialWebsite}
-              examName={exam.nameEn}
-            />
+            <>
+              <OfficialPdfViewer
+                papers={exam.officialPdfs}
+                conductingBody={exam.conductingBody}
+                officialWebsite={exam.officialWebsite}
+                examName={exam.nameEn}
+              />
+              {exam.slug.startsWith('mpsc-') && (
+                <div style={{ marginTop: '16px', padding: '14px 18px', background: '#FFF7ED', border: '1px solid #FFEDD5', borderRadius: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
+                  <div>
+                    <strong style={{ color: '#9A3412', fontSize: '14px' }}>🏛️ संपूर्ण MPSC २०२४–२०२६ अधिकृत संग्रह (209 PDFs)</strong>
+                    <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#7C2D12' }}>सर्व राज्यसेवा, संयुक्त गट ब व क, नगर रचनाकार आणि चाळणी परीक्षा प्रश्नपत्रिका व उत्तरतालिका उपलब्ध आहेत.</p>
+                  </div>
+                  <Link href="/mpsc-pyq" style={{ background: '#EA580C', color: '#fff', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', fontWeight: 600, textDecoration: 'none' }}>
+                    संपूर्ण MPSC संग्रह उघडा (209) →
+                  </Link>
+                </div>
+              )}
+            </>
           ) : (
             <div className={styles.pyqList}>
               {exam.pyqLinks.map((link, i) => (

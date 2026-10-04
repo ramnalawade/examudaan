@@ -52,10 +52,15 @@ export default async function PaperViewerPage({ searchParams }) {
             {title}
           </span>
         </div>
-        {/* Source badge */}
-        <span style={{ fontSize: '11px', background: '#374151', color: '#9CA3AF', padding: '4px 10px', borderRadius: '20px' }}>
-          📄 Official Source — mpscs.in
-        </span>
+        {/* Official Source badge */}
+        <a
+          href="https://mpsc.gov.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontSize: '11px', background: '#1E293B', color: '#94A3B8', padding: '5px 12px', borderRadius: '20px', textDecoration: 'none', border: '1px solid #334155', display: 'inline-flex', alignItems: 'center', gap: '5px' }}
+        >
+          <span>🏛️</span> Official Source: Maharashtra Public Service Commission (mpsc.gov.in) ↗
+        </a>
       </div>
 
       {/* ── Main Layout: PDF + Sidebar ── */}

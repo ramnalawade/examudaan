@@ -5,19 +5,26 @@
 
 'use client'
 
-import { useState, useMemo, useRef } from 'react'
+import { useState, useMemo, useRef, useEffect } from 'react'
 import styles from './officialPdfViewer.module.css'
 
 export default function OfficialPdfViewer({
   papers = [],
   conductingBody = "Maharashtra Public Service Commission (MPSC)",
   officialWebsite = "https://mpsc.gov.in",
-  examName = "MPSC Examination"
+  examName = "MPSC Examination",
+  initialSelectedId = null
 }) {
-  const [selectedId, setSelectedId] = useState(papers[0]?.id || null)
+  const [selectedId, setSelectedId] = useState(initialSelectedId || papers[0]?.id || null)
   const [selectedYear, setSelectedYear] = useState('ALL')
   const [selectedType, setSelectedType] = useState('ALL') // 'ALL' | 'PAPERS' | 'KEYS'
   const viewerRef = useRef(null)
+
+  useEffect(() => {
+    if (initialSelectedId) {
+      setSelectedId(initialSelectedId)
+    }
+  }, [initialSelectedId])
 
   // Find currently active document
   const activePaper = useMemo(() => {

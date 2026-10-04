@@ -381,7 +381,7 @@ class GeminiExtractionPipeline:
         - Scalar/JSONB fields: don't overwrite existing non-null values
         - ai_extracted_data: DEEP MERGE (spider may have pre-filled some keys)
         """
-        # Flat scalar/JSONB fields — only fill if currently empty
+        # Flat scalar/JSONB fields — fill or merge new subfields
         scalar_fields = [
             'total_vacancies', 'apply_start_date', 'apply_end_date', 'exam_date',
             'age_limit', 'application_fee', 'selection_process',
@@ -391,9 +391,14 @@ class GeminiExtractionPipeline:
         ]
         filled = []
         for field in scalar_fields:
-            if not item.get(field) and extracted.get(field) is not None:
-                item[field] = extracted[field]
-                filled.append(field)
+            if extracted.get(field) is not None:
+                if not item.get(field):
+                    item[field] = extracted[field]
+                    filled.append(field)
+                elif isinstance(item[field], dict) and isinstance(extracted[field], dict):
+                    # Merge new rich notes (e.g. age_relaxation_note, fee_note, salary_note)
+                    item[field] = {**item[field], **extracted[field]}
+                    filled.append(field)
 
         # NEW: Deep merge into ai_extracted_data (spider may have initialized
         # it as {} or with partial values; LLM fills the rest)
@@ -756,6 +761,7 @@ class PostgresPipeline:
                     'qualification':   p.get('qualification'),
                     'pay_scale':       p.get('pay_scale'),
                     'category':        p.get('category'),
+                    'reservation_json': p.get('reservation') or p.get('reservation_json') or p.get('category_vacancies'),
                 })
 
         if is_update:

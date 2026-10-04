@@ -29,6 +29,45 @@ const SIDEBAR_ITEMS = [
   { id: 'plan',      label: 'Plan & Billing',    icon: 'workspace_premium' },
 ]
 
+const SITE_THEMES = [
+  {
+    id: 'default',
+    name: 'ExamUdaan Classic',
+    tagline: 'Warm Saffron & Cream Canvas',
+    desc: 'The original iconic design system of ExamUdaan. Saffron primary (#EA580C) paired with warm ivory background (#FFFBF5) and rich typography.',
+    primaryColor: '#EA580C',
+    bgColor: '#FFFBF5',
+    cardBg: '#FFFFFF',
+    accentColor: '#CC4900',
+    textColor: '#1B1C1B',
+    badge: 'Default Theme',
+  },
+  {
+    id: 'electric-aurora',
+    name: 'Electric Aurora',
+    tagline: 'Midnight Slate & Neon Aurora Glow',
+    desc: 'High-tech dark command center from Stitch dashboard. Midnight surface (#090D16), slate containers (#0F172A), vibrant electric orange (#F97316) & cyan (#38BDF8).',
+    primaryColor: '#F97316',
+    bgColor: '#090D16',
+    cardBg: '#0F172A',
+    accentColor: '#38BDF8',
+    textColor: '#F8FAFC',
+    badge: 'Dark Command Mode',
+  },
+  {
+    id: 'emerald-amber',
+    name: 'Emerald & Amber',
+    tagline: 'Sage Canvas & Warm Amber Accents',
+    desc: 'Fresh botanical & authoritative civic design variant. Emerald green (#059669) headers with warm amber (#EA580C) highlights and sage borders (#E3EBE1).',
+    primaryColor: '#059669',
+    bgColor: '#FAFAF9',
+    cardBg: '#FFFFFF',
+    accentColor: '#EA580C',
+    textColor: '#0F172A',
+    badge: 'Fresh Sage Mode',
+  },
+]
+
 // ── Helper: Auth headers ──
 function authHeaders(payload = null) {
   const token   = typeof window !== 'undefined' ? localStorage.getItem('eu_access_token') || '' : ''
@@ -78,11 +117,53 @@ export default function DashboardPage() {
   const [secLoading, setSecLoading] = useState(false)
   const [secMsg,     setSecMsg]     = useState({ type: '', text: '' })
 
+  // Theme state for admin theme switcher
+  const [currentTheme, setCurrentTheme] = useState('default')
+  const [themeMsg,     setThemeMsg]     = useState(null)
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('eu_theme') || 'default'
+      setCurrentTheme(saved)
+    } catch {}
+  }, [])
+
+  async function handleSwitchTheme(themeId) {
+    setCurrentTheme(themeId)
+    try {
+      localStorage.setItem('eu_theme', themeId)
+      if (themeId === 'default') {
+        document.documentElement.removeAttribute('data-theme')
+        document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.setAttribute('data-theme', themeId)
+        if (themeId === 'electric-aurora') {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      }
+      const token = localStorage.getItem('eu_access_token') || ''
+      if (token) {
+        await fetch('/api/admin/settings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+          body: JSON.stringify({ key: 'site_theme', value: themeId }),
+        })
+      }
+      setThemeMsg({ ok: true, text: `Active theme switched to ${SITE_THEMES.find(t => t.id === themeId)?.name || themeId}` })
+      setTimeout(() => setThemeMsg(null), 3500)
+    } catch {
+      setThemeMsg({ ok: true, text: 'Theme applied locally' })
+      setTimeout(() => setThemeMsg(null), 3500)
+    }
+  }
+
   // Read URL ?s= param to deep-link to a section (from Navbar dropdown)
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     const s = params.get('s')
-    if (s && SIDEBAR_ITEMS.find(i => i.id === s)) setActiveSection(s)
+    if (s && (SIDEBAR_ITEMS.find(i => i.id === s) || s === 'admin_theme')) setActiveSection(s)
   }, [])
 
   // ── Redirect if not logged in & prefill local user state ──
@@ -465,6 +546,59 @@ export default function DashboardPage() {
             ))}
           </nav>
 
+          {/* Admin Management (ADMIN ONLY) */}
+          {Boolean(user?.is_admin || user?.role === 'admin') && (
+            <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1.5px dashed rgba(234, 88, 12, 0.4)' }}>
+              <div style={{ fontSize: 10.5, fontWeight: 800, color: '#EA580C', textTransform: 'uppercase', letterSpacing: '0.06em', padding: '0 14px 6px', display: 'flex', alignItems: 'center', gap: 5 }}>
+                <span>🛡️</span> Admin Suite
+              </div>
+              <button
+                onClick={() => setActiveSection('admin_theme')}
+                style={{
+                  width: '100%',
+                  display: 'flex', alignItems: 'center', gap: 10,
+                  padding: '10px 14px',
+                  borderRadius: '10px',
+                  background: activeSection === 'admin_theme' ? '#FFF7ED' : 'transparent',
+                  border: activeSection === 'admin_theme' ? '1.5px solid #EA580C' : 'none',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                  fontWeight: activeSection === 'admin_theme' ? 700 : 600,
+                  fontSize: 13.5,
+                  color: activeSection === 'admin_theme' ? '#EA580C' : 'var(--on-surface)',
+                  transition: 'all 0.15s ease',
+                  marginBottom: 4,
+                }}
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: 20, color: '#EA580C' }}>palette</span>
+                <span style={{ flex: 1 }}>Theme & Appearance</span>
+                <span style={{ fontSize: 9.5, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '1px 5px', borderRadius: 4 }}>
+                  ADMIN
+                </span>
+              </button>
+              <Link
+                href="/admin"
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 10,
+                  padding: '9px 14px',
+                  borderRadius: '10px',
+                  background: 'transparent',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                  fontSize: 13.5,
+                  color: 'var(--on-surface)',
+                  transition: 'background 0.15s',
+                }}
+                onMouseEnter={e => e.currentTarget.style.background = 'var(--surface-container-low)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: 20, color: '#64748B' }}>admin_panel_settings</span>
+                <span style={{ flex: 1 }}>Full Admin Panel</span>
+                <span className="material-symbols-outlined" style={{ fontSize: 16, color: '#94A3B8' }}>arrow_forward</span>
+              </Link>
+            </div>
+          )}
+
           {/* Quick study access: Question Papers & Keys */}
           <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid var(--outline-variant)' }}>
             <Link
@@ -521,6 +655,90 @@ export default function DashboardPage() {
           {/* ─── Overview ─── */}
           {activeSection === 'overview' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+              {/* Admin Theme & Appearance Quick Panel (ADMIN ONLY) */}
+              {Boolean(user?.is_admin || user?.role === 'admin') && (
+                <div style={{
+                  background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                  borderRadius: 14,
+                  padding: '20px 22px',
+                  color: '#FFF',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.15)',
+                  border: '1px solid rgba(255,255,255,0.1)'
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, flexWrap: 'wrap', gap: 10 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <span className="material-symbols-outlined" style={{ color: '#FB923C', fontSize: 24 }}>palette</span>
+                      <strong style={{ fontSize: 16 }}>Admin Theme & Appearance</strong>
+                      <span style={{ fontSize: 10, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '2px 7px', borderRadius: 4 }}>
+                        ADMIN ONLY
+                      </span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      <button
+                        onClick={() => setActiveSection('admin_theme')}
+                        style={{
+                          background: 'rgba(255,255,255,0.12)',
+                          color: '#FFF',
+                          border: 'none',
+                          padding: '6px 12px',
+                          borderRadius: 6,
+                          fontSize: 12,
+                          fontWeight: 700,
+                          cursor: 'pointer'
+                        }}
+                      >
+                        Theme Studio
+                      </button>
+                      <Link href="/admin?tab=themes" style={{ color: '#FB923C', fontSize: 12.5, fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
+                        <span>Full Admin Panel</span>
+                        <span className="material-symbols-outlined" style={{ fontSize: 15 }}>arrow_forward</span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 12 }}>
+                    {SITE_THEMES.map(th => {
+                      const isCurrent = currentTheme === th.id
+                      return (
+                        <button
+                          key={th.id}
+                          onClick={() => handleSwitchTheme(th.id)}
+                          style={{
+                            background: isCurrent ? 'rgba(234, 88, 12, 0.28)' : 'rgba(255,255,255,0.06)',
+                            border: isCurrent ? '2px solid #EA580C' : '1px solid rgba(255,255,255,0.14)',
+                            borderRadius: 10,
+                            padding: '12px 14px',
+                            textAlign: 'left',
+                            cursor: 'pointer',
+                            color: '#FFF',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 6,
+                            transition: 'all 0.15s ease'
+                          }}
+                        >
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span style={{ fontWeight: 700, fontSize: 13.5 }}>{th.name}</span>
+                            <span style={{ width: 12, height: 12, borderRadius: '50%', background: th.primaryColor, display: 'inline-block' }} />
+                          </div>
+                          <span style={{ fontSize: 11.5, color: '#CBD5E1' }}>{th.tagline}</span>
+                          {isCurrent && (
+                            <span style={{ fontSize: 10.5, fontWeight: 700, color: '#34D399', marginTop: 2 }}>
+                              ✓ Active Site Theme
+                            </span>
+                          )}
+                        </button>
+                      )
+                    })}
+                  </div>
+                  {themeMsg && (
+                    <div style={{ marginTop: 10, fontSize: 12, fontWeight: 700, color: '#34D399' }}>
+                      ✓ {themeMsg.text}
+                    </div>
+                  )}
+                </div>
+              )}
+
               {/* Stat Cards */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12 }}>
                 {[
@@ -1189,6 +1407,138 @@ export default function DashboardPage() {
             </div>
           )}
 
+          {/* ─── Admin Theme & Appearance Studio (Admin Only) ─── */}
+          {activeSection === 'admin_theme' && (
+            <div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 18, flexWrap: 'wrap', gap: 12 }}>
+                <div>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: '#FFF7ED', border: '1px solid #FFEDD5', color: '#EA580C', padding: '3px 10px', borderRadius: 99, fontSize: 11, fontWeight: 800, marginBottom: 6 }}>
+                    <span>🛡️</span> SYSTEM ADMINISTRATOR PRIVILEGE
+                  </div>
+                  <h2 style={{ fontSize: 22, fontWeight: 800, margin: 0, color: 'var(--on-surface)' }}>
+                    Site Theme & Appearance
+                  </h2>
+                  <p style={{ margin: '4px 0 0', fontSize: 13.5, color: 'var(--secondary)' }}>
+                    Select the active color theme and appearance mode for ExamUdaan. Changes take effect across the entire portal immediately.
+                  </p>
+                </div>
+
+                <Link
+                  href="/admin"
+                  style={{
+                    display: 'inline-flex', alignItems: 'center', gap: 6,
+                    padding: '8px 16px', borderRadius: 8,
+                    background: '#1E293B', color: '#FFF',
+                    fontSize: 13, fontWeight: 700, textDecoration: 'none'
+                  }}
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>admin_panel_settings</span>
+                  <span>Open Full Admin Panel →</span>
+                </Link>
+              </div>
+
+              {themeMsg && (
+                <div style={{
+                  padding: '12px 18px',
+                  borderRadius: 10,
+                  background: '#ECFDF5',
+                  border: '1.5px solid #A7F3D0',
+                  color: '#065F46',
+                  fontWeight: 700,
+                  fontSize: 13.5,
+                  marginBottom: 20,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 8
+                }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 20 }}>check_circle</span>
+                  <span>{themeMsg.text}</span>
+                </div>
+              )}
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 18, marginBottom: 24 }}>
+                {SITE_THEMES.map(th => {
+                  const isCurrent = currentTheme === th.id
+                  return (
+                    <div
+                      key={th.id}
+                      onClick={() => handleSwitchTheme(th.id)}
+                      style={{
+                        background: 'var(--surface-container-lowest)',
+                        border: isCurrent ? `2.5px solid ${th.primaryColor}` : '1.5px solid var(--outline-variant)',
+                        borderRadius: 14,
+                        padding: '22px',
+                        cursor: 'pointer',
+                        position: 'relative',
+                        boxShadow: isCurrent ? `0 8px 24px rgba(0,0,0,0.08)` : 'none',
+                        transition: 'all 0.2s ease',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        gap: 16
+                      }}
+                    >
+                      <div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
+                          <div>
+                            <span style={{ fontSize: 11, fontWeight: 800, color: th.primaryColor, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                              {th.badge}
+                            </span>
+                            <h3 style={{ fontSize: 18, fontWeight: 800, margin: '2px 0 4px', color: 'var(--on-surface)' }}>
+                              {th.name}
+                            </h3>
+                            <div style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--secondary)' }}>
+                              {th.tagline}
+                            </div>
+                          </div>
+                          <span style={{
+                            width: 24, height: 24, borderRadius: '50%',
+                            background: th.primaryColor,
+                            border: '3px solid #FFF',
+                            boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
+                            flexShrink: 0
+                          }} />
+                        </div>
+
+                        <p style={{ fontSize: 13, color: 'var(--secondary)', lineHeight: 1.5, margin: 0 }}>
+                          {th.desc}
+                        </p>
+                      </div>
+
+                      {/* Swatch palette */}
+                      <div>
+                        <div style={{ display: 'flex', gap: 6, marginBottom: 12 }}>
+                          <span title="Primary" style={{ width: 22, height: 22, borderRadius: 6, background: th.primaryColor, display: 'inline-block' }} />
+                          <span title="Background" style={{ width: 22, height: 22, borderRadius: 6, background: th.bgColor, border: '1px solid #D1D5DB', display: 'inline-block' }} />
+                          <span title="Card" style={{ width: 22, height: 22, borderRadius: 6, background: th.cardBg, border: '1px solid #D1D5DB', display: 'inline-block' }} />
+                          <span title="Accent" style={{ width: 22, height: 22, borderRadius: 6, background: th.accentColor, display: 'inline-block' }} />
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={(e) => { e.stopPropagation(); handleSwitchTheme(th.id); }}
+                          style={{
+                            width: '100%',
+                            padding: '10px 16px',
+                            borderRadius: 8,
+                            border: 'none',
+                            fontSize: 13,
+                            fontWeight: 700,
+                            cursor: 'pointer',
+                            background: isCurrent ? th.primaryColor : 'var(--surface-container-low)',
+                            color: isCurrent ? '#FFFFFF' : 'var(--on-surface)',
+                            transition: 'all 0.15s ease'
+                          }}
+                        >
+                          {isCurrent ? '✓ Active Site Theme' : 'Apply Theme'}
+                        </button>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
         </main>
       </div>
     </div>

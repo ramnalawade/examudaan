@@ -58,8 +58,8 @@ Return exactly this JSON schema (include all keys, null if not found):
   "apply_start_date": "<YYYY-MM-DD or null>",
   "apply_end_date": "<YYYY-MM-DD or null>",
   "exam_date": "<YYYY-MM-DD or null>",
-  "age_limit": {"min": <int or null>, "max": <int or null>, "obc_relax": <int or null>, "sc_st_relax": <int or null>},
-  "application_fee": {"general": <int or null>, "sc_st": <int or null>, "women": <int or null>, "ex_serviceman": <int or null>},
+  "age_limit": {"min": <int or null>, "max": <int or null>, "obc_relax": <int or null>, "sc_st_relax": <int or null>, "age_relaxation_note": "<detailed relaxation rules or null>"},
+  "application_fee": {"general": <int or null>, "sc_st": <int or null>, "women": <int or null>, "ex_serviceman": <int or null>, "fee_note": "<exemptions or fee notes or null>"},
   "selection_process": "<Written Test/Interview/Document Verification/etc. or null>",
   "employment_type": "<Permanent/Contract/Temporary/Deputation or null>",
   "duration": "<e.g. '6 months (extendable)' or null>",
@@ -67,6 +67,7 @@ Return exactly this JSON schema (include all keys, null if not found):
     "amount": <integer or null>,
     "currency": "INR",
     "period": "<per month/per annum or null>",
+    "salary_note": "<detailed pay scale and emoluments note or null>",
     "breakdown": {"base": <int or null>, "hra_percentage": <int or null>, "da_percentage": <int or null>}
   },
   "qualifications": {
@@ -164,37 +165,60 @@ def _clean_json(text: str) -> Optional[Dict]:
     return None
 
 
-def _extract_pdf_text(pdf_bytes: bytes) -> str:
-    """Extract plain text from PDF bytes using pdfplumber (or PyPDF2 fallback)."""
+def _extract_pdf_text(pdf_bytes: bytes, max_pages: int = 40) -> str:
+    """
+    Initial stage document parsing:
+    Tries Unlimited-OCR engine first if available, then pdfplumber with full table preservation.
+    Returns clean structured Markdown text with tables across up to 40 pages.
+    """
+    # 1. Try Unlimited-OCR engine if available
+    try:
+        from unlimited_ocr_parser import UnlimitedOCREngine, TORCH_AVAILABLE
+        if TORCH_AVAILABLE:
+            engine = UnlimitedOCREngine()
+            ocr_text = engine.parse_pdf(pdf_bytes, max_pages=max_pages)
+            if ocr_text and len(ocr_text.strip()) > 60:
+                return ocr_text
+    except Exception:
+        pass
+
+    # 2. Fast structured extraction with pdfplumber (with tables)
     try:
         import pdfplumber
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
             pages = []
-            for page in pdf.pages[:20]:   # max 20 pages
-                text = page.extract_text()
-                if text:
-                    pages.append(text)
-                # Also extract tables as text
+            for i, page in enumerate(pdf.pages[:max_pages]):
+                p_text = page.extract_text() or ""
                 tables = page.extract_tables()
-                for table in tables:
-                    for row in table:
-                        if row:
-                            pages.append(' | '.join(str(c) for c in row if c))
-            return '\n'.join(pages)
+                if tables:
+                    for tbl in tables:
+                        tbl_md = "\n".join([" | ".join([str(c or "").strip() for c in row if c is not None]) for row in tbl if any(row)])
+                        if tbl_md.strip():
+                            p_text += f"\n\n[TABLE]\n{tbl_md}\n[/TABLE]\n"
+                if p_text.strip():
+                    pages.append(f"--- PAGE {i+1} ---\n" + p_text)
+            if pages:
+                return "\n\n".join(pages)
     except ImportError:
         pass
+    except Exception:
+        pass
 
+    # 3. Fallback to PyPDF2
     try:
         import PyPDF2
         reader = PyPDF2.PdfReader(io.BytesIO(pdf_bytes))
         texts = []
-        for page in reader.pages[:20]:
-            texts.append(page.extract_text() or '')
-        return '\n'.join(texts)
+        for i, page in enumerate(reader.pages[:max_pages]):
+            t = page.extract_text() or ""
+            if t.strip():
+                texts.append(f"--- PAGE {i+1} ---\n" + t)
+        if texts:
+            return "\n\n".join(texts)
     except Exception:
         pass
 
-    return ''
+    return ""
 
 
 # ── Provider: Gemini ─────────────────────────────────────────────────────────
@@ -251,20 +275,35 @@ class GeminiProvider:
         from google import genai
         from google.genai import types
 
+        # Step 1: Initial local document parsing (Unlimited-OCR / Smart Table Extraction)
+        # Extracts full text & tables locally to avoid sending massive raw binary vision payloads
+        doc_text = _extract_pdf_text(pdf_bytes, max_pages=40)
+        use_text_prompt = bool(doc_text and len(doc_text.strip()) > 60)
+
         attempts = 0
         while attempts < 8:
             attempts += 1
             try:
-                response = self._client.models.generate_content(
-                    model=self._model,
-                    contents=[
-                        types.Part.from_bytes(data=pdf_bytes, mime_type='application/pdf'),
-                        EXTRACTION_PROMPT,
-                    ]
-                )
+                if use_text_prompt:
+                    # Token-saving text-only mode: >85% cheaper than raw PDF vision tokens
+                    prompt = f"{EXTRACTION_PROMPT}\n\n=== DOCUMENT TEXT & TABLES (PARSED LOCALLY) ===\n{doc_text[:60000]}"
+                    response = self._client.models.generate_content(
+                        model=self._model,
+                        contents=prompt,
+                    )
+                else:
+                    # Fallback to native binary PDF if local text extraction was empty (scanned image)
+                    response = self._client.models.generate_content(
+                        model=self._model,
+                        contents=[
+                            types.Part.from_bytes(data=pdf_bytes, mime_type='application/pdf'),
+                            EXTRACTION_PROMPT,
+                        ]
+                    )
                 result = _clean_json(response.text)
                 if result:
-                    self.log.info(f'[Gemini] Extracted successfully (score={_score_result(result)})')
+                    mode_label = "text_ocr (token-saving)" if use_text_prompt else "vision_pdf (fallback)"
+                    self.log.info(f'[Gemini] Extracted successfully (mode={mode_label}, score={_score_result(result)})')
                 return result
 
             except Exception as e:

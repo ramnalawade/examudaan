@@ -106,6 +106,24 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
         />
+        {/* Instant Theme Initializer — Zero Flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('eu_theme');
+                  if (saved && saved !== 'default') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                    if (saved === 'electric-aurora') {
+                      document.documentElement.classList.add('dark');
+                    }
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
       </head>
 
       {/* ──────────────────────────────────────────────────────

@@ -12,24 +12,23 @@ import https from 'https'
 
 // Search for locally downloaded PDF matching id
 function findLocalPdf(id) {
-  const baseDir = path.join(process.cwd(), 'public', 'downloads', 'mpsc')
+  const baseDir = path.join(/*turbopackIgnore: true*/ process.cwd(), 'public', 'downloads', 'mpsc')
   if (!fs.existsSync(baseDir)) return null
 
-  function search(dir) {
-    const entries = fs.readdirSync(dir, { withFileTypes: true })
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name)
-      if (entry.isDirectory()) {
-        const found = search(fullPath)
-        if (found) return found
-      } else if (entry.isFile() && entry.name.startsWith(`${id}_`) && entry.name.endsWith('.pdf')) {
-        return fullPath
+  const subDirs = ['', 'cached', 'question_papers', 'answer_keys']
+  for (const sub of subDirs) {
+    const targetDir = sub ? path.join(baseDir, sub) : baseDir
+    if (fs.existsSync(targetDir)) {
+      try {
+        const files = fs.readdirSync(targetDir)
+        const match = files.find(f => f.startsWith(`${id}_`) && f.endsWith('.pdf'))
+        if (match) return path.join(targetDir, match)
+      } catch {
+        // Continue searching other directories
       }
     }
-    return null
   }
-
-  return search(baseDir)
+  return null
 }
 
 // Fetch from official MPSC API with government authorization header
@@ -112,7 +111,7 @@ export async function GET(request, { params }) {
 
     // 3. Cache to disk asynchronously for ultra-fast subsequent loads
     try {
-      const cacheDir = path.join(process.cwd(), 'public', 'downloads', 'mpsc', 'cached')
+      const cacheDir = path.join(/*turbopackIgnore: true*/ process.cwd(), 'public', 'downloads', 'mpsc', 'cached')
       fs.mkdirSync(cacheDir, { recursive: true })
       fs.writeFileSync(path.join(cacheDir, `${numId}_mpsc_document.pdf`), pdfBuffer)
     } catch (saveErr) {

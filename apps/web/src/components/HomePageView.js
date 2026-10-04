@@ -54,6 +54,26 @@ const SUITE_CARDS = [
     href: '/current-affairs',
   },
   {
+    icon: 'description',
+    badge: 'MPSC 2024–2026',
+    title: 'MPSC Question Papers & Answer Keys',
+    title_mr: 'MPSC मूळ प्रश्नपत्रिका व उत्तरतालिका',
+    desc: '209 official MPSC question papers and validated final answer keys for 2024, 2025, and 2026. Read in-browser or download.',
+    cta: 'Browse 209 MPSC Papers & Keys →',
+    cta_mr: '२०९ MPSC पेपर्स व कीज् पहा →',
+    href: '/mpsc-pyq',
+  },
+  {
+    icon: 'key',
+    badge: 'Official Keys',
+    title: 'Official Answer Keys & Objections',
+    title_mr: 'अधिकृत उत्तरतालिका पोर्टल',
+    desc: 'Provisional & final answer keys, response sheet links, and objection filing deadlines for all recruitment exams.',
+    cta: 'View Official Answer Keys →',
+    cta_mr: 'उत्तरतालिका पोर्टल पहा →',
+    href: '/answer-keys',
+  },
+  {
     icon: 'explore',
     badge: 'New 2026',
     title: '10th & 12th Degree Career Compass',
@@ -128,20 +148,20 @@ const SUITE_CARDS = [
 // ── 3. Popular Commissions (6 Commissions) ───────────────────
 const COMMISSIONS = [
   { name: 'MPSC Maharashtra', name_mr: 'MPSC महाराष्ट्र', meta: 'State Civil Services • 4,124+ Posts', icon: 'account_balance', href: '/jobs?org=MPSC' },
-  { name: 'UPSC New Delhi',   name_mr: 'UPSC नवी दिल्ली',   meta: 'Civil & Defense • 1,200+ Posts',  icon: 'gavel',           href: '/jobs?org=UPSC' },
-  { name: 'Railway (RRB/RRC)',name_mr: 'रेल्वे भरती बोर्ड', meta: 'ALP, NTPC, Group D • 32K+ Posts', icon: 'train',           href: '/jobs?org=RRB' },
-  { name: 'SSC New Delhi',    name_mr: 'कर्मचारी निवड आयोग',meta: 'CGL, CHSL, GD, MTS • 25K+ Posts', icon: 'description',     href: '/jobs?org=SSC' },
-  { name: 'Banking (IBPS/SBI)',name_mr:'बँक भरती (IBPS/SBI)',meta:'PO, Clerk, SO • 18,500+ Posts',  icon: 'savings',         href: '/jobs?org=IBPS,SBI' },
-  { name: 'Maharashtra Police',name_mr:'महाराष्ट्र पोलीस', meta: 'Constable, Driver • 3,521+ Posts',icon: 'local_police',    href: '/jobs?org=MUMBAI%20POLICE,SRPF' },
+  { name: 'UPSC New Delhi', name_mr: 'UPSC नवी दिल्ली', meta: 'Civil & Defense • 1,200+ Posts', icon: 'gavel', href: '/jobs?org=UPSC' },
+  { name: 'Railway (RRB/RRC)', name_mr: 'रेल्वे भरती बोर्ड', meta: 'ALP, NTPC, Group D • 32K+ Posts', icon: 'train', href: '/jobs?org=RRB' },
+  { name: 'SSC New Delhi', name_mr: 'कर्मचारी निवड आयोग', meta: 'CGL, CHSL, GD, MTS • 25K+ Posts', icon: 'description', href: '/jobs?org=SSC' },
+  { name: 'Banking (IBPS/SBI)', name_mr: 'बँक भरती (IBPS/SBI)', meta: 'PO, Clerk, SO • 18,500+ Posts', icon: 'savings', href: '/jobs?org=IBPS,SBI' },
+  { name: 'Maharashtra Police', name_mr: 'महाराष्ट्र पोलीस', meta: 'Constable, Driver • 3,521+ Posts', icon: 'local_police', href: '/jobs?org=MUMBAI%20POLICE,SRPF' },
 ]
 
 // ── 4. Latest Verified Openings by Region / Commission ────────
 const REGION_TABS = [
   { id: 'maharashtra', label: 'Maharashtra', label_mr: 'महाराष्ट्र' },
-  { id: 'central',     label: 'Central Govt', label_mr: 'केंद्र सरकार' },
-  { id: 'northern',    label: 'Northern States (UP/DL)', label_mr: 'उत्तर भारत (UP/DL)' },
-  { id: 'western_south',label:'Western & Southern', label_mr: 'पश्चिम व दक्षिण' },
-  { id: 'railways',    label: 'Railways', label_mr: 'भारतीय रेल्वे' },
+  { id: 'central', label: 'Central Govt', label_mr: 'केंद्र सरकार' },
+  { id: 'northern', label: 'Northern States (UP/DL)', label_mr: 'उत्तर भारत (UP/DL)' },
+  { id: 'western_south', label: 'Western & Southern', label_mr: 'पश्चिम व दक्षिण' },
+  { id: 'railways', label: 'Railways', label_mr: 'भारतीय रेल्वे' },
   { id: 'engineering', label: 'Engineering & PSU', label_mr: 'इंजिनिअरिंग व PSU' },
 ]
 
@@ -453,14 +473,30 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
                   {isMarathi ? '७४०+ सक्रिय नोकऱ्या पहा →' : 'Browse 740+ Active Jobs →'}
                 </Link>
 
+                {/* Primary Broadcast Channel: Telegram */}
+                <a
+                  href="https://t.me/examudaanjobs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.ctaTelegram}
+                  title="Join Official Telegram Channel"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+                  </svg>
+                  <span>{isMarathi ? 'Telegram अलर्ट (मोफत)' : 'Join Telegram Channel (Free)'}</span>
+                </a>
+
+                {/* Secondary Channel: WhatsApp */}
                 <a
                   href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.ctaWhatsApp}
+                  className={styles.ctaWhatsAppSecondary}
+                  title="Follow WhatsApp Channel"
                 >
-                  <span className="material-symbols-outlined" style={{ fontSize: 20 }}>chat</span>
-                  {isMarathi ? 'WhatsApp अलर्ट मोफत मिळवा' : 'Join WhatsApp Channel Free'}
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chat</span>
+                  <span>{isMarathi ? 'WhatsApp' : 'WhatsApp'}</span>
                 </a>
               </div>
 
@@ -469,6 +505,31 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
                 <span className={styles.trustItem}>✓ 100% Official Sources</span>
                 <span className={styles.trustItem}>✓ Zero Fake / Expired Alerts</span>
                 <span className={styles.trustItem}>✓ Free Exam Guides</span>
+              </div>
+
+              {/* Popular Navigation Hub Pills */}
+              <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', gap: '8px', alignItems: 'center' }}>
+                <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--on-surface-variant, #64748B)' }}>
+                  {isMarathi ? 'लोकप्रिय:' : 'Popular:'}
+                </span>
+                <Link href="/mpsc-pyq" style={{ fontSize: '12px', fontWeight: 600, color: '#EA580C', background: '#FFF7ED', border: '1px solid #FFEDD5', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                  🏛️ MPSC 2024-26 Papers (209)
+                </Link>
+                <Link href="/answer-keys" style={{ fontSize: '12px', fontWeight: 600, color: '#059669', background: '#ECFDF5', border: '1px solid #A7F3D0', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                  🔑 Answer Keys
+                </Link>
+                <Link href="/current-affairs" style={{ fontSize: '12px', fontWeight: 600, color: '#2563EB', background: '#EFF6FF', border: '1px solid #BFDBFE', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                  📰 Daily CA
+                </Link>
+                <Link href="/syllabus" style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', background: '#F5F3FF', border: '1px solid #DDD6FE', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                  📚 Syllabus 2026
+                </Link>
+                <Link href="/mock-tests" style={{ fontSize: '12px', fontWeight: 600, color: '#C2410C', background: '#FFF7ED', border: '1px solid #FFEDD5', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                  ⏱️ Mock Tests
+                </Link>
+                <Link href="/pyq" style={{ fontSize: '12px', fontWeight: 600, color: '#4B5563', background: '#F3F4F6', border: '1px solid #E5E7EB', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                  🎯 15-Yr PYQs
+                </Link>
               </div>
             </div>
 
@@ -556,7 +617,40 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
 
       <div className="container">
 
-        {/* ════════ 3. EVERYTHING YOU NEED TO CLEAR GOVT EXAMS (8 Cards) ════════ */}
+        {/* ── Popular Exam Verticals Quick Hub Bar ── */}
+        <div className={styles.quickPillsBar}>
+          <span className={styles.quickPillTitle}>Popular Verticals:</span>
+          <Link href="/question-papers#mpsc" className={styles.quickPill} title="Official MPSC Question Papers & Keys">
+            <span style={{ fontSize: 16 }}>📚</span>
+            <span>MPSC Question Papers</span>
+          </Link>
+          <Link href="/answer-keys" className={styles.quickPill} title="Official Exam Answer Keys">
+            <span style={{ fontSize: 16 }}>🔑</span>
+            <span>Answer Keys Portal</span>
+          </Link>
+          <Link href="/current-affairs" className={styles.quickPill} title="Daily Current Affairs Digest">
+            <span style={{ fontSize: 16 }}>📰</span>
+            <span>Daily Current Affairs</span>
+          </Link>
+          <Link href="/syllabus" className={styles.quickPill} title="Exam Syllabus 2026">
+            <span style={{ fontSize: 16 }}>📖</span>
+            <span>Syllabus 2026</span>
+          </Link>
+          <Link href="/pyq" className={styles.quickPill} title="15-Year PYQ Practice Bank">
+            <span style={{ fontSize: 16 }}>⏱️</span>
+            <span>15-Yr PYQ Bank</span>
+          </Link>
+          <Link href="/question-papers#maharashtra-direct" className={styles.quickPill} title="Maharashtra Police Bharti Papers">
+            <span style={{ fontSize: 16 }}>👮</span>
+            <span>Police Bharti Papers</span>
+          </Link>
+          <Link href="/mock-tests" className={styles.quickPill} title="Free CBT Mock Tests">
+            <span style={{ fontSize: 16 }}>🎯</span>
+            <span>Free Mock Tests</span>
+          </Link>
+        </div>
+
+        {/* ════════ 3. EVERYTHING YOU NEED TO CLEAR GOVT EXAMS (10 Cards) ════════ */}
         <section className={styles.sectionBlock}>
           <div className={styles.sectionHeader}>
             <div>
@@ -939,42 +1033,7 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
           </div>
         </section>
 
-        {/* ════════ 8. TRUSTED BY 1.2 MILLION+ ASPIRANTS (Testimonials) ════════ */}
-        <section className={styles.sectionBlock} style={{ paddingTop: 0 }}>
-          <div className={styles.sectionHeader} style={{ justifyContent: 'center', textAlign: 'center' }}>
-            <div>
-              <div className={styles.eyebrow}>Real Aspirant Reviews</div>
-              <h2 className={styles.sectionTitle}>
-                {isMarathi ? 'भारतातील १२ लाखांहून अधिक विद्यार्थ्यांचा विश्वास' : 'Trusted by 1.2 Million+ Aspirants Across India'}
-              </h2>
-              <p className={styles.sectionSubtitle}>
-                {isMarathi
-                  ? 'ग्रामीण भागापासून राजधानीपर्यंत — गंभीर परीक्षार्थी दररोज ExamUdaan का निवडतात.'
-                  : 'From remote talukas to major state capitals, see why serious aspirants rely on ExamUdaan every single day.'}
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.reviewsGrid}>
-            {TESTIMONIALS.map((review, i) => (
-              <div key={i} className={styles.reviewCard}>
-                <div className={styles.stars}>★★★★★</div>
-                <p className={styles.reviewText}>
-                  &ldquo;{review.text}&rdquo;
-                </p>
-                <div className={styles.reviewer}>
-                  <div className={styles.reviewAvatar}>{review.initial}</div>
-                  <div>
-                    <div className={styles.reviewerName}>{review.name}</div>
-                    <div className={styles.reviewerExam}>{review.exam}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ════════ 9. PRE-FOOTER SAFFRON CTA BANNER ════════ */}
+        {/* ════════ 8. PRE-FOOTER SAFFRON CTA BANNER ════════ */}
         <section className={styles.preFooterBanner}>
           <div>
             <h2 className={styles.bannerTitle}>
@@ -988,18 +1047,35 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
           </div>
 
           <div className={styles.bannerActions}>
-            <Link href="/jobs" className={styles.bannerBtnLight}>
-              Explore Free Content
-            </Link>
+            {/* Primary Channel: Telegram */}
+            <a
+              href="https://t.me/examudaanjobs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.bannerBtnBlue}
+              title="Join Telegram Channel"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+              </svg>
+              <span>{isMarathi ? 'Telegram अलर्ट जॉइन करा' : 'Join Telegram Alerts'}</span>
+            </a>
+
+            {/* Secondary Channel: WhatsApp */}
             <a
               href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.bannerBtnGreen}
+              title="Follow WhatsApp Channel"
             >
               <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chat</span>
-              WhatsApp Community
+              <span>{isMarathi ? 'WhatsApp चॅनेल' : 'WhatsApp'}</span>
             </a>
+
+            <Link href="/jobs" className={styles.bannerBtnLight}>
+              Explore Free Content
+            </Link>
           </div>
         </section>
 

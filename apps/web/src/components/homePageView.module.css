@@ -115,6 +115,89 @@
   transform: translateY(-1px);
 }
 
+.ctaTelegram {
+  background: #0088cc;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14.5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 136, 204, 0.28);
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.ctaTelegram:hover {
+  background: #0077b5;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 136, 204, 0.38);
+}
+
+.ctaWhatsAppSecondary {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #86efac;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13.5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.ctaWhatsAppSecondary:hover {
+  background: #dcfce7;
+  color: #14532d;
+  border-color: #4ade80;
+  transform: translateY(-1px);
+}
+
+.quickPillsBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 18px 0 6px;
+}
+
+.quickPillTitle {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-variant);
+  margin-right: 4px;
+}
+
+.quickPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  color: var(--on-surface);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: all 0.15s ease;
+}
+
+.quickPill:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
 .heroTrustList {
   display: flex;
   align-items: center;
@@ -1029,6 +1112,26 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+.bannerBtnBlue {
+  background: #0088cc;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.35);
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.bannerBtnBlue:hover {
+  background: #0077b5;
+  transform: translateY(-1px);
 }
 
 .bannerBtnGreen {

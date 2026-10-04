@@ -556,6 +556,28 @@ export default async function CareerDetailPage({ params }) {
                 ))}
               </div>
             </div>
+
+            {/* ── Career Guidance Advisory & Due Diligence Box with * Conditions ── */}
+            <div className={styles.advisoryBox} aria-label="Career Guidance Advisory">
+              <div className={styles.advisoryHeader}>
+                <span className="material-symbols-outlined" style={{ color: '#ea580c', fontSize: '24px' }}>gavel</span>
+                <h3>* Career Guidance Advisory & Mandatory Due Diligence</h3>
+              </div>
+              <p className={styles.advisoryText}>
+                Before taking any irreversible admission, stream, or coaching decision for <strong>{career.title}</strong>, please note:
+              </p>
+              <ul className={styles.advisoryList}>
+                <li>
+                  <strong>* Condition 1 (AI-Synthesized Data):</strong> The syllabus details, entrance exam analysis, college cutoff benchmarks, and salary tiers for {career.title} are compiled using AI models from public university guidelines, past exam notifications, and employer surveys.
+                </li>
+                <li>
+                  <strong>* Condition 2 (Compensation Variances):</strong> The salary ladders shown above (Entry: {career.salaryLadder?.entry?.split('(')[0]?.trim()}, Peak: {career.salaryLadder?.peak?.split('(')[0]?.trim()}) are statistical industry approximations and do not constitute a guaranteed wage or placement offer.
+                </li>
+                <li>
+                  <strong>* Condition 3 (Mandatory Verification with Statutory Bodies):</strong> Academic regulations, eligibility criteria ({career.min12thStream}), entrance test formats, and college affiliation statuses are regulated exclusively by statutory authorities (UGC, AICTE, NMC, BCI) and individual institutions. Candidates must independently cross-verify all details directly from official institution prospectuses before enrolling.
+                </li>
+              </ul>
+            </div>
           </main>
 
           {/* Right Sidebar */}

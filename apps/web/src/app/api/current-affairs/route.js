@@ -1,42 +1,55 @@
-// ============================================================
-// app/api/current-affairs/route.js — Real-Time Current Affairs Aggregator
-// Fetches daily fresh government press releases & exam current affairs
-// from PIB India, Google News (Govt & Maharashtra), RBI & Economy RSS.
-// Merges with high-yield curated database from lib/currentAffairsData.js.
-// ============================================================
-
 import { NextResponse } from 'next/server'
 import { CURRENT_AFFAIRS } from '@/lib/currentAffairsData'
+import { query } from '@/lib/pgdb'
 
 // Helper to clean HTML & XML entities
 function cleanText(str) {
   if (!str) return ''
-  return str
-    .replace(/<!\[CDATA\[(.*?)\]\]>/gs, '$1')
-    .replace(/<[^>]+>/g, '')
-    .replace(/&amp;/g, '&')
+  let text = str.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+  // Decode common HTML entities FIRST so escaped tags become real tags and get stripped
+  text = text
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&lsquo;/g, "'")
+    .replace(/&rsquo;/g, "'")
+    .replace(/&ldquo;/g, '"')
+    .replace(/&rdquo;/g, '"')
+    .replace(/&amp;/g, '&')
     .replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
+  // Strip all HTML tags
+  text = text.replace(/<[^>]+>/g, '')
+  // Strip stray entities
+  text = text.replace(/&[a-zA-Z0-9#]+;/g, ' ')
+  return text.replace(/\s+/g, ' ').trim()
+}
+
+// Strip news source suffix from headline (e.g. " - PIB")
+function stripSource(title) {
+  const match = title.match(/\s*[-–—|]\s*([^–—|-]+)$/)
+  if (match && match.index >= 15) {
+    return {
+      cleanTitle: title.substring(0, match.index).trim(),
+      extractedSource: match[1].trim(),
+    }
+  }
+  return { cleanTitle: title, extractedSource: '' }
 }
 
 // Categorize based on keywords
 function categorize(text) {
   const lower = text.toLowerCase()
-  if (/maharashtra|mumbai|pune|nagpur|mantralaya|mpsc|fadnavis|ladki bahin|konkan|vidarbha/.test(lower)) {
+  if (/maharashtra|mumbai|pune|nagpur|mantralaya|mpsc|fadnavis|ladki bahin|konkan|vidarbha|police bharti/.test(lower)) {
     return 'Maharashtra'
   }
-  if (/rbi|repo rate|inflation|gdp|economy|fiscal|budget|banking|rupee|stock|trade|forex|sebi/.test(lower)) {
+  if (/rbi|repo rate|inflation|gdp|economy|fiscal|budget|banking|rupee|stock|trade|forex|sebi|sensex/.test(lower)) {
     return 'Economy'
   }
   if (/isro|drdo|satellite|space|missile|ai|quantum|technology|cyber|nasa|defence/.test(lower)) {
     return 'Science & Tech'
   }
-  if (/environment|climate|forest|wildlife|tiger|ramsar|pollution|solar|renewable|green|cop2/.test(lower)) {
+  if (/environment|climate|forest|wildlife|tiger|ramsar|pollution|solar|renewable|green|cop/.test(lower)) {
     return 'Environment'
   }
   if (/olympics|cricket|sports|medal|badminton|hockey|chess|world cup|asian games/.test(lower)) {
@@ -53,23 +66,24 @@ function getExamTags(category, text) {
   const lower = text.toLowerCase()
   const tags = new Set()
 
-  if (category === 'Maharashtra' || /maharashtra|mpsc/.test(lower)) {
+  if (category === 'Maharashtra' || /maharashtra|mpsc|police/.test(lower)) {
     tags.add('MPSC')
     tags.add('Police Bharti')
   }
-  if (category === 'Economy' || /rbi|banking|loan|sebi/.test(lower)) {
+  if (category === 'Economy' || /rbi|banking|loan|sebi|repo|inflation/.test(lower)) {
     tags.add('IBPS')
     tags.add('Banking')
     tags.add('MPSC')
     tags.add('UPSC')
   }
-  if (/upsc|ias|ips|judiciary|constitution|parliament|bill|amendment|commission/.test(lower)) {
+  if (/upsc|ias|ips|judiciary|constitution|parliament|bill|amendment|commission|treaty|summit/.test(lower)) {
     tags.add('UPSC')
     tags.add('MPSC')
     tags.add('SSC')
   }
-  if (/ssc|cgl|chsl|railway|rrb/.test(lower)) {
+  if (/ssc|cgl|chsl|railway|rrb|sports|isro/.test(lower)) {
     tags.add('SSC')
+    tags.add('MPSC')
   }
 
   if (tags.size === 0) {
@@ -95,34 +109,43 @@ function parseRss(xmlText, defaultSource = 'Govt Press Release') {
     const descMatch = rawItem.match(/<description>([\s\S]*?)<\/description>/i)
     const sourceMatch = rawItem.match(/<source[^>]*>([\s\S]*?)<\/source>/i)
 
-    const title = cleanText(titleMatch ? titleMatch[1] : '')
+    const rawTitle = cleanText(titleMatch ? titleMatch[1] : '')
     const url = (linkMatch ? linkMatch[1] : '').replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1').trim()
     const desc = cleanText(descMatch ? descMatch[1] : '')
     const srcName = cleanText(sourceMatch ? sourceMatch[1] : defaultSource)
     const pubDate = dateMatch ? new Date(dateMatch[1]).toISOString().split('T')[0] : new Date().toISOString().split('T')[0]
 
-    if (title && url) {
-      const combined = `${title} ${desc}`
+    if (rawTitle && url) {
+      const { cleanTitle, extractedSource } = stripSource(rawTitle)
+      const finalSource = extractedSource || srcName || defaultSource
+      const combined = `${cleanTitle} ${desc}`
       const category = categorize(combined)
       const examTags = getExamTags(category, combined)
-      const slug = title
+      const slug = cleanTitle
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '')
         .substring(0, 60)
 
+      let summary = desc
+      if (!desc || desc.length < 40 || desc.toLowerCase().includes(cleanTitle.toLowerCase()) || cleanTitle.toLowerCase().includes(desc.toLowerCase())) {
+        summary = `Key government development concerning ${cleanTitle}. High relevance for ${examTags.join(', ')} aspirants covering recent administrative, economic, and policy updates.`
+      } else {
+        summary = desc.substring(0, 260) + (desc.length > 260 ? '...' : '')
+      }
+
       items.push({
         id: `rss_${Buffer.from(url).toString('base64').substring(0, 16)}`,
         slug,
         date: pubDate,
-        title,
-        summary: desc ? desc.substring(0, 260) + (desc.length > 260 ? '...' : '') : title,
+        title: cleanTitle,
+        summary,
         category,
         examTags,
-        whyItMatters: `High priority for ${examTags.join(', ')} aspirants. Key target for General Studies and current affairs papers.`,
+        whyItMatters: `Frequently tested in ${examTags.join(', ')} General Studies and current affairs papers.`,
         sourceUrl: url,
-        sourceName: srcName || defaultSource,
-        youtubeQuery: `${title} UPSC MPSC analysis`,
+        sourceName: finalSource,
+        youtubeQuery: `${cleanTitle} UPSC MPSC analysis`,
         isLive: true,
       })
     }
@@ -132,66 +155,84 @@ function parseRss(xmlText, defaultSource = 'Govt Press Release') {
 }
 
 /**
- * GET /api/current-affairs?category=...&exam=...&search=...&limit=...
+ * GET /api/current-affairs?category=...&exam=...&search=...&page=...&limit=...
  */
 export async function GET(request) {
   const { searchParams } = new URL(request.url)
   const category = searchParams.get('category') || 'All'
   const exam = searchParams.get('exam') || 'All'
   const search = searchParams.get('search') || ''
-  const limit = parseInt(searchParams.get('limit') || '60', 10)
+  const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
+  const limit = Math.max(1, Math.min(100, parseInt(searchParams.get('limit') || '60', 10)))
 
+  const dbArticles = []
+
+  // 1. Fetch pre-aggregated daily summaries from PostgreSQL (fastest & persistent)
+  try {
+    const rows = await query(
+      `SELECT summary_date, digest
+       FROM daily_ca_summaries
+       ORDER BY summary_date DESC
+       LIMIT 5`
+    )
+    if (rows && rows.length > 0) {
+      for (const row of rows) {
+        const articles = row.digest?.articles || []
+        if (Array.isArray(articles)) {
+          dbArticles.push(...articles)
+        }
+      }
+    }
+  } catch (dbErr) {
+    // Non-fatal: continue with live feeds and curated data
+    console.warn('[api/current-affairs] DB fetch note:', dbErr.message)
+  }
+
+  // 2. Fetch live RSS feeds — PIB, Google News, MPSC-specific sources
   const liveItems = []
-
-  // ── Fetch live RSS feeds — PIB, Google News, MPSC-specific sources ───────────
   try {
     const feeds = [
-      // National Governance
+      // PIB India via Google News (official press releases)
       {
-        url: 'https://news.google.com/rss/search?q=government+scheme+OR+MPSC+OR+UPSC+OR+budget+when:5d&hl=en-IN&gl=IN&ceid=IN:en',
-        source: 'National Governance Feed',
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('site:pib.gov.in when:2d') + '&hl=en-IN&gl=IN&ceid=IN:en',
+        source: 'PIB India (Govt Press Releases)',
       },
       // Maharashtra Specific — MPSC, Police Bharti, State Govt
       {
-        url: 'https://news.google.com/rss/search?q=Maharashtra+government+OR+Mantralaya+OR+MPSC+when:5d&hl=en-IN&gl=IN&ceid=IN:en',
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('Maharashtra government OR Mantralaya OR MPSC when:3d') + '&hl=en-IN&gl=IN&ceid=IN:en',
         source: 'Maharashtra Governance Feed',
       },
-      // MPSC-Specific (Marathi language Google News)
+      // MPSC-Specific (Marathi language)
       {
-        url: 'https://news.google.com/rss/search?q=MPSC+2026+OR+MPSC+bharti+OR+MPSC+result+when:7d&hl=mr&gl=IN&ceid=IN:mr',
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('MPSC चालू घडामोडी OR महाराष्ट्र शासन when:3d') + '&hl=mr&gl=IN&ceid=IN:mr',
         source: 'MPSC Current Affairs',
+      },
+      // National Governance & Cabinet
+      {
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('central government scheme OR cabinet decision OR ISRO OR DRDO when:3d') + '&hl=en-IN&gl=IN&ceid=IN:en',
+        source: 'Cabinet & National Schemes',
       },
       // Economy & Banking (RBI, SEBI, Budget)
       {
-        url: 'https://news.google.com/rss/search?q=RBI+OR+repo+rate+OR+inflation+OR+GDP+India+when:5d&hl=en-IN&gl=IN&ceid=IN:en',
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('RBI OR repo rate OR inflation OR GDP India when:3d') + '&hl=en-IN&gl=IN&ceid=IN:en',
         source: 'Economic & Banking Feed',
       },
       // Police Bharti & Recruitment
       {
-        url: 'https://news.google.com/rss/search?q=Maharashtra+police+bharti+OR+police+recruitment+Maharashtra+2026&hl=en-IN&gl=IN&ceid=IN:en',
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('Maharashtra police bharti OR police recruitment when:5d') + '&hl=en-IN&gl=IN&ceid=IN:en',
         source: 'Police Bharti Feed',
       },
-      // PIB India — official government press releases
-      {
-        url: 'https://www.pib.gov.in/RssMain.aspx',
-        source: 'PIB India — Govt Press Releases',
-      },
-      // Drishti IAS — curated current affairs (great for MPSC/UPSC)
+      // Drishti IAS
       {
         url: 'https://www.drishtiias.com/rss.rss',
         source: 'Drishti IAS Current Affairs',
-      },
-      // AffairsCloud — daily current affairs digest
-      {
-        url: 'https://affairscloud.com/feed/',
-        source: 'AffairsCloud Daily Digest',
       },
     ]
 
     const responses = await Promise.allSettled(
       feeds.map(f =>
         fetch(f.url, {
-          headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ExamUdaanBot/1.0)' },
+          headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 ExamUdaanBot/1.0' },
           next: { revalidate: 1800 },
         })
           .then(async res => {
@@ -212,36 +253,50 @@ export async function GET(request) {
     console.error('Error fetching live current affairs feeds:', err)
   }
 
-  // Deduplicate live items by normalized title
+  // 3. Deduplicate by normalized title
   const seenTitles = new Set()
-  const uniqueLive = []
-  for (const item of liveItems) {
-    const key = item.title.toLowerCase().substring(0, 40)
+  const combinedAll = []
+
+  // Priority: Database daily records first, then curated seed entries, then live RSS
+  const candidatePool = [...dbArticles, ...CURRENT_AFFAIRS, ...liveItems]
+  for (const item of candidatePool) {
+    if (!item || !item.title) continue
+    const key = item.title.toLowerCase().substring(0, 42).trim()
     if (!seenTitles.has(key)) {
       seenTitles.add(key)
-      uniqueLive.push(item)
+      combinedAll.push(item)
     }
   }
 
-  // Combine curated seed entries with live items (curated entries take precedence)
-  const combined = [...CURRENT_AFFAIRS, ...uniqueLive]
-
-  // Filter
-  const filtered = combined.filter(ca => {
+  // 4. Apply Filters
+  const filtered = combinedAll.filter(ca => {
     const catMatch = category === 'All' || ca.category === category
-    const examMatch = exam === 'All' || ca.examTags.includes(exam)
+    const examMatch = exam === 'All' || (Array.isArray(ca.examTags) && ca.examTags.includes(exam))
     const searchMatch =
       !search ||
       ca.title.toLowerCase().includes(search.toLowerCase()) ||
-      ca.summary.toLowerCase().includes(search.toLowerCase())
+      (ca.summary && ca.summary.toLowerCase().includes(search.toLowerCase()))
     return catMatch && examMatch && searchMatch
   })
 
-  return NextResponse.json({
+  // 5. Pagination offset/slice
+  const offset = (page - 1) * limit
+  const paginatedItems = filtered.slice(offset, offset + limit)
+  const totalPages = Math.ceil(filtered.length / limit)
+
+  const response = NextResponse.json({
     total: filtered.length,
-    items: filtered.slice(0, limit),
+    page,
+    limit,
+    totalPages,
+    items: paginatedItems,
+    dbCount: dbArticles.length,
     curatedCount: CURRENT_AFFAIRS.length,
-    liveCount: uniqueLive.length,
+    liveCount: liveItems.length,
     timestamp: new Date().toISOString(),
   })
+
+  // Cache for 30 minutes on edge / CDN
+  response.headers.set('Cache-Control', 'public, s-maxage=1800, stale-while-revalidate=3600')
+  return response
 }

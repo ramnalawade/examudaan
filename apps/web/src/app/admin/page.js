@@ -19,6 +19,45 @@ const DEFAULT_FEATURES = [
   { key: 'maintenance_mode',   label: 'Maintenance Mode',                desc: 'Show a maintenance banner at the top of all pages for users',      icon: 'engineering' },
 ]
 
+const SITE_THEMES = [
+  {
+    id: 'default',
+    name: 'ExamUdaan Classic',
+    tagline: 'Warm Saffron & Cream Canvas',
+    desc: 'The original iconic design system of ExamUdaan. Saffron primary (#EA580C) paired with warm ivory background (#FFFBF5) and rich typography.',
+    primaryColor: '#EA580C',
+    bgColor: '#FFFBF5',
+    cardBg: '#FFFFFF',
+    accentColor: '#CC4900',
+    textColor: '#1B1C1B',
+    badge: 'Default Theme',
+  },
+  {
+    id: 'electric-aurora',
+    name: 'Electric Aurora',
+    tagline: 'Midnight Slate & Neon Aurora Glow',
+    desc: 'High-tech dark command center from Stitch dashboard. Midnight surface (#090D16), slate containers (#0F172A), vibrant electric orange (#F97316) & cyan (#38BDF8).',
+    primaryColor: '#F97316',
+    bgColor: '#090D16',
+    cardBg: '#0F172A',
+    accentColor: '#38BDF8',
+    textColor: '#F8FAFC',
+    badge: 'Dark Command Mode',
+  },
+  {
+    id: 'emerald-amber',
+    name: 'Emerald & Amber',
+    tagline: 'Sage Canvas & Warm Amber Accents',
+    desc: 'Fresh botanical & authoritative civic design variant. Emerald green (#059669) headers with warm amber (#EA580C) highlights and sage borders (#E3EBE1).',
+    primaryColor: '#059669',
+    bgColor: '#FAFAF9',
+    cardBg: '#FFFFFF',
+    accentColor: '#EA580C',
+    textColor: '#0F172A',
+    badge: 'Fresh Sage Mode',
+  },
+]
+
 export default function AdminPage() {
   const router = useRouter()
 
@@ -31,14 +70,33 @@ export default function AdminPage() {
   const [saving, setSaving]         = useState(null)   // key of feature currently being saved
   const [saveMsg, setSaveMsg]       = useState(null)
 
+  // Theme switcher state
+  const [currentTheme, setCurrentTheme] = useState('default')
+  const [themeSaving, setThemeSaving]   = useState(false)
+  const [themeMsg, setThemeMsg]         = useState(null)
+
   // Site stats
   const [stats, setStats]           = useState(null)
 
   // Enquiries inbox
   const [enquiries, setEnquiries]   = useState([])
-  const [activeTab, setActiveTab]   = useState('features') // 'features' | 'stats' | 'enquiries' | 'seo'
+  const [activeTab, setActiveTab]   = useState('features') // 'features' | 'themes' | 'stats' | 'enquiries' | 'seo'
   const [sitemapData, setSitemapData] = useState(null)
   const [sitemapLoading, setSitemapLoading] = useState(false)
+
+  // ── Sync current theme & active tab from URL on mount ──
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('eu_theme') || 'default'
+      setCurrentTheme(saved)
+
+      const params = new URLSearchParams(window.location.search)
+      const tab = params.get('tab')
+      if (tab && ['features', 'themes', 'stats', 'enquiries', 'seo'].includes(tab)) {
+        setActiveTab(tab)
+      }
+    } catch {}
+  }, [])
 
   // ── Auth check on mount ───────────────────────────────────
   useEffect(() => {
@@ -46,7 +104,7 @@ export default function AdminPage() {
       const raw = localStorage.getItem('eu_user')
       if (!raw) { router.push('/login'); return }
       const u = JSON.parse(raw)
-      if (!u?.is_admin) { router.push('/'); return }  // redirect non-admins
+      if (!u?.is_admin && u?.role !== 'admin') { router.push('/login'); return }  // redirect non-admins
       setUser(u)
     } catch {
       router.push('/login')
@@ -108,6 +166,39 @@ export default function AdminPage() {
       .catch(() => setSitemapLoading(false))
   }, [activeTab])
 
+  // ── Switch Theme & Persist ────────────────────────────────
+  const handleThemeSelect = async (themeId) => {
+    setCurrentTheme(themeId)
+    setThemeSaving(true)
+    setThemeMsg(null)
+    try {
+      localStorage.setItem('eu_theme', themeId)
+      if (themeId === 'default') {
+        document.documentElement.removeAttribute('data-theme')
+        document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.setAttribute('data-theme', themeId)
+        if (themeId === 'electric-aurora') {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      }
+
+      const token = localStorage.getItem('eu_access_token') || ''
+      await fetch('/api/admin/settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ key: 'site_theme', value: themeId }),
+      })
+      setThemeMsg({ ok: true, text: `Active theme switched to ${SITE_THEMES.find(t => t.id === themeId)?.name || themeId}` })
+    } catch {
+      setThemeMsg({ ok: true, text: 'Theme applied locally' })
+    }
+    setThemeSaving(false)
+    setTimeout(() => setThemeMsg(null), 3000)
+  }
+
   // ── Toggle a feature and save to DB ──────────────────────
   const handleToggle = async (key) => {
     const newVal = !features[key]
@@ -154,9 +245,40 @@ export default function AdminPage() {
             </div>
           </div>
           {user && (
-            <div style={{ fontSize: 13, color: '#94A3B8' }}>
-              Logged in as <strong style={{ color: '#CBD5E1' }}>{user.first_name || user.email}</strong>
-              {' · '}<span style={{ color: '#4ADE80' }}>Admin Access</span>
+            <div style={{ fontSize: 13, color: '#94A3B8', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10 }}>
+              <div>
+                Logged in as <strong style={{ color: '#CBD5E1' }}>{user.first_name || user.email}</strong>
+                {' · '}<span style={{ color: '#4ADE80' }}>Admin Access</span>
+              </div>
+
+              {/* Fast Theme Switcher in Header */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <span style={{ fontSize: 12, color: '#94A3B8' }}>Theme:</span>
+                {SITE_THEMES.map(th => (
+                  <button
+                    key={th.id}
+                    onClick={() => handleThemeSelect(th.id)}
+                    type="button"
+                    title={`Switch to ${th.name}`}
+                    style={{
+                      padding: '3px 9px',
+                      borderRadius: 6,
+                      fontSize: 11,
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      border: currentTheme === th.id ? `2px solid ${th.primaryColor}` : '1px solid #475569',
+                      background: currentTheme === th.id ? 'rgba(255,255,255,0.2)' : 'rgba(15,23,42,0.6)',
+                      color: currentTheme === th.id ? '#ffffff' : '#94a3b8',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 4,
+                    }}
+                  >
+                    <span style={{ width: 7, height: 7, borderRadius: '50%', background: th.primaryColor }} />
+                    {th.name.split(' ')[0]}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
         </div>
@@ -167,6 +289,7 @@ export default function AdminPage() {
         <div style={{ display: 'flex', gap: 4, borderBottom: '2px solid var(--outline-variant)', marginBottom: 28 }}>
           {[
             { id: 'features',  label: 'Feature Toggles',       icon: 'toggle_on' },
+            { id: 'themes',    label: 'Theme & Appearance',    icon: 'palette' },
             { id: 'stats',     label: 'Site Stats',             icon: 'bar_chart' },
             { id: 'enquiries', label: 'Academy Enquiries',      icon: 'inbox' },
             { id: 'seo',       label: 'Google SEO & Sitemap',   icon: 'travel_explore' },
@@ -277,7 +400,131 @@ export default function AdminPage() {
           </div>
         )}
 
-        {/* ── Tab 2: Site Stats ── */}
+        {/* ── Tab 2: Theme & Appearance ── */}
+        {activeTab === 'themes' && (
+          <div>
+            <div style={{ marginBottom: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
+              <div>
+                <h2 style={{ fontSize: 20, fontWeight: 800, margin: '0 0 6px', color: 'var(--on-surface)' }}>
+                  Theme & Visual Design System
+                </h2>
+                <p style={{ fontSize: 13, color: 'var(--on-surface-variant)', margin: 0 }}>
+                  Switch between 3 crafted design systems. Changes apply immediately across the entire site and persist in database.
+                </p>
+              </div>
+              {themeMsg && (
+                <div style={{
+                  padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 700,
+                  background: themeMsg.ok ? '#DCFCE7' : '#FEE2E2',
+                  color: themeMsg.ok ? '#15803D' : '#B91C1C',
+                  border: `1px solid ${themeMsg.ok ? '#86EFAC' : '#FCA5A5'}`,
+                }}>
+                  {themeMsg.text}
+                </div>
+              )}
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 20 }}>
+              {SITE_THEMES.map(th => {
+                const isActive = currentTheme === th.id
+                return (
+                  <div
+                    key={th.id}
+                    style={{
+                      background: 'var(--surface-container-lowest)',
+                      border: `2px solid ${isActive ? th.primaryColor : 'var(--outline-variant)'}`,
+                      borderRadius: 16, padding: 24,
+                      display: 'flex', flexDirection: 'column',
+                      boxShadow: isActive ? `0 8px 24px ${th.primaryColor}25` : 'none',
+                      position: 'relative',
+                      transition: 'all 0.2s ease',
+                    }}
+                  >
+                    {isActive && (
+                      <span style={{
+                        position: 'absolute', top: 16, right: 16,
+                        background: th.primaryColor, color: '#ffffff',
+                        fontSize: 11, fontWeight: 800, padding: '3px 10px',
+                        borderRadius: 999, textTransform: 'uppercase', letterSpacing: '0.04em',
+                      }}>
+                        Active Theme
+                      </span>
+                    )}
+
+                    <div style={{ fontSize: 12, fontWeight: 700, color: th.primaryColor, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 4 }}>
+                      {th.badge}
+                    </div>
+                    <h3 style={{ fontSize: 19, fontWeight: 800, margin: '0 0 6px', color: 'var(--on-surface)' }}>
+                      {th.name}
+                    </h3>
+                    <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--on-surface-variant)', marginBottom: 12 }}>
+                      {th.tagline}
+                    </div>
+                    <p style={{ fontSize: 13, color: 'var(--on-surface-variant)', lineHeight: 1.5, margin: '0 0 20px', flexGrow: 1 }}>
+                      {th.desc}
+                    </p>
+
+                    {/* Mini Color Palette Swatches */}
+                    <div style={{ marginBottom: 20 }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: 8 }}>
+                        Palette Tokens
+                      </div>
+                      <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                        <div title={`Primary: ${th.primaryColor}`} style={{ width: 32, height: 32, borderRadius: 8, background: th.primaryColor, border: '1px solid rgba(0,0,0,0.1)' }} />
+                        <div title={`Canvas: ${th.bgColor}`} style={{ width: 32, height: 32, borderRadius: 8, background: th.bgColor, border: '1px solid #cbd5e1' }} />
+                        <div title={`Card Container: ${th.cardBg}`} style={{ width: 32, height: 32, borderRadius: 8, background: th.cardBg, border: '1px solid #94a3b8' }} />
+                        <div title={`Accent / Secondary: ${th.accentColor}`} style={{ width: 32, height: 32, borderRadius: 8, background: th.accentColor, border: '1px solid rgba(0,0,0,0.1)' }} />
+                      </div>
+                    </div>
+
+                    {/* Mini Theme Mockup Preview */}
+                    <div style={{
+                      background: th.bgColor,
+                      border: '1px solid var(--outline-variant)',
+                      borderRadius: 12, padding: 14, marginBottom: 20,
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                        <span style={{ fontSize: 12, fontWeight: 800, color: th.primaryColor }}>ExamUdaan.in</span>
+                        <span style={{ fontSize: 10, padding: '2px 6px', borderRadius: 4, background: th.primaryColor, color: '#fff' }}>LIVE</span>
+                      </div>
+                      <div style={{
+                        background: th.cardBg, border: '1px solid rgba(0,0,0,0.08)',
+                        borderRadius: 8, padding: '8px 10px', fontSize: 11, color: th.textColor,
+                        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      }}>
+                        <span>MPSC Rajyaseva 2026</span>
+                        <span style={{ color: th.primaryColor, fontWeight: 700 }}>Apply ↗</span>
+                      </div>
+                    </div>
+
+                    {/* Action Button */}
+                    <button
+                      type="button"
+                      onClick={() => handleThemeSelect(th.id)}
+                      disabled={isActive || themeSaving}
+                      style={{
+                        width: '100%', padding: '12px 16px', borderRadius: 10,
+                        border: 'none', cursor: isActive ? 'default' : 'pointer',
+                        background: isActive ? '#E2E8F0' : th.primaryColor,
+                        color: isActive ? '#64748B' : '#FFFFFF',
+                        fontWeight: 700, fontSize: 14,
+                        transition: 'opacity 0.15s',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                      }}
+                    >
+                      <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
+                        {isActive ? 'check_circle' : 'palette'}
+                      </span>
+                      {isActive ? 'Current Active Theme' : `Activate ${th.name}`}
+                    </button>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* ── Tab 3: Site Stats ── */}
         {activeTab === 'stats' && (
           <div>
             <h2 style={{ fontSize: 18, fontWeight: 800, marginBottom: 20 }}>Site Statistics</h2>

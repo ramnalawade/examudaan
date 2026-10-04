@@ -43,6 +43,8 @@ const STATIC_PAGES = [
   { url: '/mock-tests',        priority: 0.92, changeFrequency: 'daily'   },
   { url: '/study-planner',     priority: 0.92, changeFrequency: 'daily'   },
   { url: '/syllabus',          priority: 0.92, changeFrequency: 'weekly'  },
+  { url: '/question-papers',   priority: 0.95, changeFrequency: 'daily'   },
+  { url: '/mpsc-pyq',          priority: 0.95, changeFrequency: 'daily'   },
   { url: '/cutoffs',           priority: 0.90, changeFrequency: 'weekly'  },
   { url: '/pyq',               priority: 0.90, changeFrequency: 'weekly'  },
   { url: '/score-calculator',  priority: 0.88, changeFrequency: 'weekly'  },
@@ -188,14 +190,14 @@ export default async function sitemap() {
   // 5f. Downloaded Authentic MPSC Question Papers & Answer Keys (In-Browser Viewer URLs)
   let mpscPaperEntries = []
   try {
-    let mpscBase = path.join(process.cwd(), 'public', 'downloads', 'mpsc')
+    let mpscBase = path.join(/*turbopackIgnore: true*/ process.cwd(), 'public', 'downloads', 'mpsc')
     if (!fs.existsSync(mpscBase)) {
-      mpscBase = path.join(process.cwd(), 'apps', 'web', 'public', 'downloads', 'mpsc')
+      mpscBase = path.join(/*turbopackIgnore: true*/ process.cwd(), 'apps', 'web', 'public', 'downloads', 'mpsc')
     }
     if (fs.existsSync(mpscBase)) {
       const publicDir = mpscBase.includes(path.join('apps', 'web', 'public'))
-        ? path.join(process.cwd(), 'apps', 'web', 'public')
-        : path.join(process.cwd(), 'public')
+        ? path.join(/*turbopackIgnore: true*/ process.cwd(), 'apps', 'web', 'public')
+        : path.join(/*turbopackIgnore: true*/ process.cwd(), 'public')
 
       function scanDir(dir) {
         let results = []

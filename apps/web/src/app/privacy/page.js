@@ -26,6 +26,7 @@ export default function PrivacyPage() {
     { id: 'rights', title: '8. Your Rights Under DPDP Act 2023' },
     { id: 'security', title: '9. Security Measures' },
     { id: 'contact', title: '10. Grievance Redressal & Contact' },
+    { id: 'ai-processing', title: '11. AI Processing & Due Diligence' },
   ]
 
   return (
@@ -216,6 +217,31 @@ export default function PrivacyPage() {
                 <p style={{ margin: '0 0 6px' }}>Email: <a href={`mailto:${SITE_CONFIG.contact.privacyEmail}`} style={{ color: 'var(--primary)', textDecoration: 'none' }}>{SITE_CONFIG.contact.privacyEmail}</a></p>
                 <p style={{ margin: '0 0 6px' }}>Office: {SITE_CONFIG.location.fullAddress}</p>
                 <p style={{ margin: 0 }}>Grievance Resolution Timeline: Within {SITE_CONFIG.grievanceOfficer.resolutionDays} calendar days</p>
+              </div>
+            </section>
+
+            <section id="ai-processing" style={{ paddingTop: 16, borderTop: '1px solid var(--outline-variant)' }}>
+              <h2 style={{ fontSize: 20, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 12 }}>
+                11. AI-Generated Content &amp; Candidate Due Diligence
+              </h2>
+              <p style={{ marginBottom: 12, lineHeight: 1.65 }}>
+                ExamUdaan utilizes artificial intelligence, automated document OCR, and summarization pipelines to process complex, multi-page government notifications into easily readable executive summaries, eligibility matrices, career roadmaps, and mock questions.
+              </p>
+              <div style={{ background: '#FFFBEB', border: '1px solid #FEF3C7', borderLeft: '4px solid var(--primary, #EA580C)', padding: '16px 20px', borderRadius: 'var(--radius-sm)' }}>
+                <p style={{ margin: '0 0 8px', fontWeight: 700, color: '#92400E' }}>
+                  * Important Candidate Due Diligence Conditions:
+                </p>
+                <ul style={{ margin: 0, paddingLeft: 18, color: '#78350F', display: 'flex', flexDirection: 'column', gap: 6, fontSize: 13.5 }}>
+                  <li>
+                    <strong>* Condition 1 (Informational Reference Only):</strong> AI-assisted summaries and roadmaps are provided solely for rapid discovery and educational orientation.
+                  </li>
+                  <li>
+                    <strong>* Condition 2 (Mandatory Independent Due Diligence):</strong> Aspirants must independently verify critical parameters (age limits, relaxations, educational degrees, fee exemptions, and cut-off dates) directly from the official notification PDF published by the recruiting board before submitting official applications.
+                  </li>
+                  <li>
+                    <strong>* Condition 3 (Privacy of Personal Data):</strong> We do NOT sell or feed candidate personal identifying data, resumes, or mobile numbers to public generative AI models for training purposes.
+                  </li>
+                </ul>
               </div>
             </section>
           </div>

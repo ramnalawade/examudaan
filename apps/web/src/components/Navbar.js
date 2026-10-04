@@ -66,14 +66,19 @@ export default function Navbar() {
 
   const PRIMARY_NAV_ITEMS = [
     { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
-    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'New',   badgeBg: '#16a34a' },
-    { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free',  badgeBg: '#9a3412' },
-    { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQs'),        icon: 'history_edu',           badge: 'Hot',   badgeBg: '#7c2d12' },
-    { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min', badgeBg: '#9a3412' },
+    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'Daily', badgeBg: '#16a34a' },
+    { href: '/question-papers',    label: t('nav.question_papers', 'Question Papers'),   icon: 'description',           badge: 'MPSC',  badgeBg: '#ea580c' },
+    { href: '/answer-keys',        label: t('nav.answer_keys',     'Answer Keys'),       icon: 'key',                   badge: 'Keys',  badgeBg: '#059669' },
     { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus'),          icon: 'menu_book' },
+    { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free',  badgeBg: '#9a3412' },
   ]
 
   const MORE_NAV_ITEMS = [
+    { href: '/mpsc-pyq',            label: t('nav.mpsc_pyq',        'MPSC Papers (2024-26)'),icon: 'description',           badge: '209 PDFs',desc: 'Official MPSC question papers & final answer keys from mpsc.gov.in' },
+    { href: '/admit-cards',        label: t('nav.admit_cards',     'Admit Cards'),          icon: 'badge',                                 desc: 'Hall tickets & exam venue notices for all exams' },
+    { href: '/results',            label: t('nav.results',         'Results & Merits'),     icon: 'workspace_premium',                     desc: 'Official merit lists, selection lists & marksheets' },
+    { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQ Bank'),       icon: 'history_edu',           badge: 'Hot',   desc: 'Interactive chapter-wise previous year question papers' },
+    { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),           icon: 'local_fire_department', badge: '5 Min', desc: '5-Minute daily speed blitz test with score badges' },
     { href: '/career',             label: t('nav.career',          'Career Guide'),         icon: 'map',                   badge: 'New',   desc: 'Career streams, pay scales, eligibility for all Govt jobs' },
     { href: '/walk-in-interviews', label: t('nav.walk_in',         'Walk-in Interviews'),   icon: 'directions_walk',       badge: 'Live',  desc: 'No online form needed — daily walk-in vacancies' },
     { href: '/study-planner',      label: t('nav.study_planner',   'AI Study Planner'),     icon: 'auto_schedule',         badge: 'AI',    desc: 'Adaptive day-by-day exam study timetable & targets' },
@@ -81,38 +86,44 @@ export default function Navbar() {
     { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'),    icon: 'calculate',             badge: '150M',  desc: 'Physical + Written composite merit cutoff calculator' },
     { href: '/cutoffs',            label: t('nav.cutoffs',         '10-Yr Cutoff Explorer'),icon: 'leaderboard',                           desc: 'Category cutoffs for MPSC, Police, Talathi & SSC' },
     { href: '/salary-calculator',  label: t('nav.salary',          'Salary Calculator'),    icon: 'payments',                              desc: '7th Pay Commission in-hand salary matrix' },
+    { href: '/alerts',             label: t('nav.alerts',          'Telegram Job Alerts'),  icon: 'send',                  badge: 'Free',  desc: 'Instant official exam alerts directly on Telegram' },
+    { href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),         icon: 'policy',                                desc: 'Scholarship, employment & training schemes' },
     { href: '/blog',               label: t('nav.blog',            'Exam Blog & Guides'),   icon: 'menu_book',             badge: 'Guides',desc: 'In-depth exam blueprints, 90-day plans & PYQ trends' },
     { href: '/youtube',            label: t('nav.youtube',         'YouTube Classes'),      icon: 'play_circle',                           desc: 'Free lectures, strategy & exam updates' },
     { href: '/ai-tools',           label: t('nav.ai_tools',        'AI Study Tools'),       icon: 'smart_toy',                             desc: '84+ curated AI study aids' },
     { href: '/ai-academy',         label: t('nav.ai_academy',      'AI Academy'),           icon: 'school',                badge: 'New',   desc: 'Master AI skills, prompts & workflows' },
     { href: '/mock-interview',     label: t('nav.mock_interview',  'Mock Interview AI'),    icon: 'mic',                   badge: 'AI',    desc: 'Real-time AI voice/chat board mock interview' },
     { href: '/ai-news',            label: t('nav.ai_news',         'AI News Feed'),         icon: 'feed',                  badge: 'Live',  desc: 'Real-time AI research & tech updates' },
-    { href: '/alerts',             label: t('nav.alerts',          'Job Alerts'),           icon: 'notifications',                         desc: 'Instant exam alerts on WhatsApp & SMS' },
   ]
 
   const MOBILE_NAV_ITEMS = [
     { href: '/',                   label: t('nav.home',            'Home'),              icon: 'home' },
-    { href: '/career',             label: t('nav.career',          'Career Guide'),      icon: 'map',                   badge: 'New' },
-    { href: '/walk-in-interviews', label: t('nav.walk_in',         'Walk-in'),           icon: 'directions_walk',       badge: 'Live' },
     { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
-    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'New' },
+    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'Daily' },
+    { href: '/question-papers',    label: t('nav.question_papers', 'Question Papers'),   icon: 'description',           badge: 'MPSC' },
+    { href: '/mpsc-pyq',           label: t('nav.mpsc_pyq',        'MPSC Papers (24-26)'),icon: 'description',          badge: '209' },
+    { href: '/answer-keys',        label: t('nav.answer_keys',     'Answer Keys'),       icon: 'key',                   badge: 'Keys' },
+    { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus'),          icon: 'menu_book' },
     { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free' },
     { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQ Bank'),    icon: 'history_edu',           badge: 'Hot' },
     { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min' },
-    { href: '/study-planner',      label: t('nav.study_planner',   'Study Planner'),     icon: 'auto_schedule',         badge: 'AI' },
-    { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus Tracker'),  icon: 'menu_book' },
+    { href: '/admit-cards',        label: t('nav.admit_cards',     'Admit Cards'),       icon: 'badge' },
+    { href: '/results',            label: t('nav.results',         'Results'),           icon: 'workspace_premium' },
+    { href: '/career',             label: t('nav.career',          'Career Guide'),      icon: 'map',                   badge: 'New' },
+    { href: '/walk-in-interviews', label: t('nav.walk_in',         'Walk-in'),           icon: 'directions_walk',       badge: 'Live' },
     { href: '/score-calculator',   label: t('nav.score_calc',      'Score Calculator'),  icon: 'score',                 badge: 'Viral' },
     { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'), icon: 'calculate',             badge: '150M' },
+    { href: '/study-planner',      label: t('nav.study_planner',   'Study Planner'),     icon: 'auto_schedule',         badge: 'AI' },
     { href: '/cutoffs',            label: t('nav.cutoffs',         '10-Yr Cutoffs'),     icon: 'leaderboard' },
     { href: '/salary-calculator',  label: t('nav.salary',          'Salary Calc'),       icon: 'payments' },
+    { href: '/alerts',             label: t('nav.alerts',          'Telegram Alerts'),   icon: 'send',                  badge: 'Free' },
+    { href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),      icon: 'policy' },
     { href: '/blog',               label: t('nav.blog',            'Exam Blog'),         icon: 'menu_book',             badge: 'Guides' },
     { href: '/youtube',            label: t('nav.youtube',         'YouTube'),           icon: 'play_circle' },
     { href: '/ai-tools',           label: t('nav.ai_tools',        'AI Tools'),          icon: 'smart_toy' },
     { href: '/ai-academy',         label: t('nav.ai_academy',      'AI Academy'),        icon: 'school',                badge: 'New' },
     { href: '/mock-interview',     label: t('nav.mock_interview',  'Mock Interview'),    icon: 'mic',                   badge: 'AI' },
     { href: '/ai-news',            label: t('nav.ai_news',         'AI News'),           icon: 'feed',                  badge: 'Live' },
-    { href: '/alerts',             label: t('nav.alerts',          'Job Alerts'),        icon: 'notifications' },
-    { href: '/pricing',            label: t('nav.alert_plans',     'Alert Plans'),       icon: 'local_offer' },
   ]
 
 
@@ -262,11 +273,13 @@ export default function Navbar() {
                   position: 'absolute',
                   top: 'calc(100% + 0px)',  /* No gap — prevents mouse leaving dead zone */
                   right: 0,
-                  width: 280,
-                  background: '#ffffff',
+                  width: 320,
+                  maxHeight: '80vh',
+                  overflowY: 'auto',
+                  background: 'var(--surface-container-lowest)',
                   border: '1px solid var(--outline-variant)',
                   borderRadius: 12,
-                  boxShadow: '0 12px 32px rgba(0,0,0,0.12)',
+                  boxShadow: '0 12px 32px rgba(0,0,0,0.18)',
                   padding: '8px',
                   zIndex: 99,
                   /* Transparent top padding bridges any sub-pixel gap between button and panel */
@@ -290,7 +303,7 @@ export default function Navbar() {
                       color: 'var(--on-surface)',
                       transition: 'background 0.15s',
                     }}
-                    onMouseEnter={e => e.currentTarget.style.background = '#f8fafc'}
+                    onMouseEnter={e => e.currentTarget.style.background = 'var(--surface-container-low)'}
                     onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                   >
                     <span className="material-symbols-outlined" style={{ fontSize: 20, color: 'var(--primary)', marginTop: 2 }}>
@@ -354,7 +367,34 @@ export default function Navbar() {
 
           {/* ── User: avatar dropdown if logged in, else Sign In button ── */}
           {navUser ? (
-            <div style={{ position: 'relative' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative' }}>
+              {/* Admin Theme & Settings Quick Pill (Admin only) */}
+              {Boolean(navUser?.is_admin || navUser?.role === 'admin') && (
+                <Link
+                  href="/admin?tab=themes"
+                  id="nav-admin-theme-pill"
+                  title="Admin Theme & Appearance Studio"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '5px',
+                    background: 'linear-gradient(135deg, #0F172A, #1E293B)',
+                    color: '#FB923C',
+                    border: '1px solid rgba(251, 146, 60, 0.4)',
+                    padding: '4px 10px',
+                    borderRadius: '20px',
+                    fontSize: '11.5px',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    boxShadow: '0 2px 6px rgba(0,0,0,0.12)',
+                    transition: 'transform 0.15s ease'
+                  }}
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: 15 }}>palette</span>
+                  <span>Theme Studio</span>
+                </Link>
+              )}
+
               {/* Avatar bubble */}
               <button
                 id="navbar-user-avatar-btn"
@@ -390,38 +430,58 @@ export default function Navbar() {
                     background: 'var(--surface-container-lowest)',
                     border: '1px solid var(--outline-variant)',
                     borderRadius: 12, boxShadow: '0 8px 32px rgba(28,25,23,0.14)',
-                    minWidth: 200, zIndex: 61, overflow: 'hidden',
+                    minWidth: 220, zIndex: 61, overflow: 'hidden',
                   }}>
                     {/* User info header */}
                     <div style={{ padding: '12px 16px', borderBottom: '1px solid var(--outline-variant)', background: 'var(--primary-fixed)' }}>
-                      <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--primary)' }}>
-                        {[navUser.first_name, navUser.last_name].filter(Boolean).join(' ') || 'My Account'}
+                      <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <span>{[navUser.first_name, navUser.last_name].filter(Boolean).join(' ') || 'My Account'}</span>
+                        {Boolean(navUser?.is_admin || navUser?.role === 'admin') && (
+                          <span style={{ fontSize: 9.5, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '1px 5px', borderRadius: 4 }}>
+                            ADMIN
+                          </span>
+                        )}
                       </div>
                       {navUser.email && <div style={{ fontSize: 12, color: 'var(--secondary)', marginTop: 2 }}>{navUser.email}</div>}
                     </div>
 
                     {/* Menu items */}
                     {[
-                      { href: '/dashboard',          icon: 'dashboard',     label: 'My Dashboard' },
-                      { href: '/dashboard?s=profile',icon: 'person',        label: 'Edit Profile' },
-                      { href: '/dashboard?s=security',icon: 'lock',         label: 'Security & Password' },
-                      { href: '/pricing',             icon: 'workspace_premium', label: 'Upgrade Plan' },
+                      { href: '/dashboard',           icon: 'dashboard',          label: 'My Dashboard' },
+                      ...(Boolean(navUser?.is_admin || navUser?.role === 'admin') ? [
+                        { href: '/admin?tab=themes',  icon: 'palette',            label: '🎨 Theme & Appearance', badge: 'ADMIN' },
+                        { href: '/admin',             icon: 'admin_panel_settings', label: '⚙️ Admin Settings',   badge: 'ADMIN' },
+                      ] : []),
+                      { href: '/dashboard?s=profile', icon: 'person',             label: 'Edit Profile' },
+                      { href: '/dashboard?s=security',icon: 'lock',               label: 'Security & Password' },
+                      { href: '/pricing',              icon: 'workspace_premium',  label: 'Upgrade Plan' },
                     ].map(item => (
                       <Link
-                        key={item.href}
+                        key={item.href + item.label}
                         href={item.href}
                         id={`nav-dd-${item.icon}`}
+                        onClick={() => setDropdownOpen(false)}
                         style={{
-                          display: 'flex', alignItems: 'center', gap: 10,
-                          padding: '10px 16px', fontSize: 14, fontWeight: 500,
-                          color: 'var(--on-surface)', textDecoration: 'none',
+                          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                          padding: '10px 16px', fontSize: 13.5, fontWeight: item.badge ? 700 : 500,
+                          color: item.badge ? '#C2410C' : 'var(--on-surface)',
+                          background: item.badge ? '#FFF7ED' : 'transparent',
+                          textDecoration: 'none',
                           transition: 'background 0.1s',
+                          borderBottom: item.badge ? '1px solid #FFEDD5' : 'none',
                         }}
-                        onMouseEnter={e => e.currentTarget.style.background = 'var(--surface-container-low)'}
-                        onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                        onMouseEnter={e => e.currentTarget.style.background = item.badge ? '#FFEDD5' : 'var(--surface-container-low)'}
+                        onMouseLeave={e => e.currentTarget.style.background = item.badge ? '#FFF7ED' : 'transparent'}
                       >
-                        <span className="material-symbols-outlined" style={{ fontSize: 18, color: 'var(--primary)' }}>{item.icon}</span>
-                        {item.label}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                          <span className="material-symbols-outlined" style={{ fontSize: 18, color: item.badge ? '#EA580C' : 'var(--primary)' }}>{item.icon}</span>
+                          <span>{item.label}</span>
+                        </div>
+                        {item.badge && (
+                          <span style={{ fontSize: 10, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '1px 6px', borderRadius: 4 }}>
+                            {item.badge}
+                          </span>
+                        )}
                       </Link>
                     ))}
 
