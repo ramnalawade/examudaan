@@ -59,7 +59,7 @@ const schema = Joi.object({
   walk_in: Joi.string().valid('true', 'false').allow(null, ''),  // filter walk-in only
   page: Joi.number().integer().min(1).default(1),
   limit: Joi.number().integer().min(1).max(50).default(PAGE_SIZE),
-  sort: Joi.string().valid('latest', 'closing', 'vacancies').default('latest'),
+  sort: Joi.string().valid('latest', 'closing', 'vacancies', 'deadline').default('latest'),
 })
 
 // ---- Qualification keyword map ----
@@ -72,40 +72,28 @@ const QUAL_MAP = {
   'iti': 'iti',
 }
 
-// ---- Deadline-first Priority Tier ----
-// Guarantees active upcoming deadlines show FIRST so candidates never miss closing dates
-const DEADLINE_TIER_SQL = `
-  (CASE
-    -- Tier 1: Urgent current deadlines closing within next 7 days (CRITICAL DEADLINES FIRST)
-    WHEN (en.apply_end_date >= CURRENT_DATE AND en.apply_end_date <= CURRENT_DATE + interval '7 days') THEN 1
-    -- Tier 2: Active upcoming deadlines beyond 7 days OR upcoming walk-in interview dates
-    WHEN (en.apply_end_date > CURRENT_DATE + interval '7 days' OR (en.is_walk_in = TRUE AND en.exam_date >= CURRENT_DATE)) THEN 2
-    -- Tier 3: Active open jobs without fixed closing date (ongoing / open)
-    WHEN (en.status = 'published' AND en.apply_end_date IS NULL) THEN 3
-    -- Tier 4: Closed / expired jobs (surfaced on demand or at bottom)
-    ELSE 4
-  END)
-`
-
 // ---- Sort → SQL ----
+// Ensures newly scraped/published jobs appear at the top so the page stays fresh daily
 const SORT_MAP = {
   latest: `
-    ${DEADLINE_TIER_SQL} ASC,
-    (CASE WHEN en.apply_end_date >= CURRENT_DATE AND en.apply_end_date <= CURRENT_DATE + interval '7 days' THEN en.apply_end_date END) ASC,
-    en.published_at DESC NULLS LAST,
-    en.created_at DESC
+    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < CURRENT_DATE) THEN 1 ELSE 0 END) ASC,
+    COALESCE(en.published_at, en.created_at) DESC NULLS LAST,
+    en.id DESC
   `,
   closing: `
-    ${DEADLINE_TIER_SQL} ASC,
-    (CASE WHEN en.apply_end_date >= CURRENT_DATE THEN en.apply_end_date END) ASC,
-    en.published_at DESC NULLS LAST
+    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < CURRENT_DATE) THEN 1 ELSE 0 END) ASC,
+    (CASE WHEN en.apply_end_date >= CURRENT_DATE THEN en.apply_end_date END) ASC NULLS LAST,
+    COALESCE(en.published_at, en.created_at) DESC NULLS LAST,
+    en.id DESC
   `,
   vacancies: `
-    ${DEADLINE_TIER_SQL} ASC,
+    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < CURRENT_DATE) THEN 1 ELSE 0 END) ASC,
     en.total_vacancies DESC NULLS LAST,
-    en.published_at DESC NULLS LAST
+    COALESCE(en.published_at, en.created_at) DESC NULLS LAST,
+    en.id DESC
   `,
 }
+SORT_MAP.deadline = SORT_MAP.closing
 
 export async function GET(req) {
   // Parse + validate query params

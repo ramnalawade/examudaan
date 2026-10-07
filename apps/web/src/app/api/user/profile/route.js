@@ -18,6 +18,34 @@ import { withAuth } from '../../../../lib/auth'
 import { withValidation, schemas } from '../../../../lib/validate'
 import { maskEmail, maskPhone } from '../../../../lib/helpers'
 
+/**
+ * Normalizes PostgreSQL date / Date object / ISO string into YYYY-MM-DD
+ * Ensures HTML5 <input type="date"> can cleanly display and bind the value.
+ */
+function formatDob(dob) {
+  if (!dob) return null
+  if (typeof dob === 'string') {
+    const match = dob.match(/^\d{4}-\d{2}-\d{2}/)
+    if (match) return match[0]
+  }
+  if (dob instanceof Date) {
+    const y = dob.getFullYear()
+    const m = String(dob.getMonth() + 1).padStart(2, '0')
+    const d = String(dob.getDate()).padStart(2, '0')
+    return `${y}-${m}-${d}`
+  }
+  try {
+    const parsed = new Date(dob)
+    if (!isNaN(parsed.getTime())) {
+      const y = parsed.getFullYear()
+      const m = String(parsed.getMonth() + 1).padStart(2, '0')
+      const d = String(parsed.getDate()).padStart(2, '0')
+      return `${y}-${m}-${d}`
+    }
+  } catch {}
+  return null
+}
+
 // ---- GET /api/user/profile ----
 export const GET = withAuth(async (req, ctx, currentUser) => {
   try {
@@ -83,7 +111,7 @@ export const GET = withAuth(async (req, ctx, currentUser) => {
       first_name:    firstName,
       last_name:     lastName,
       gender:        user?.gender || '',
-      dob:           user?.dob ? String(user.dob).slice(0, 10) : null,
+      dob:           formatDob(user?.dob),
       state:         user?.state || '',
       whatsapp:      user?.whatsapp || phone || '',
       language:      user?.language || currentUser?.language || 'en',
@@ -214,11 +242,19 @@ const updateHandler = withValidation(schemas.updateProfile, async (req, ctx) => 
         values
       )
       updatedUser = updatedRows?.[0] || null
+      if (updatedUser) {
+        updatedUser.dob = formatDob(updatedUser.dob)
+      }
     } catch (updateErr) {
       console.error('[PUT /user/profile] Update query error:', updateErr.message)
     }
 
-    return ok(updatedUser || { ...updates, id: userId }, 'Profile updated successfully')
+    const finalResponse = updatedUser || { ...updates, id: userId }
+    if (finalResponse.dob !== undefined) {
+      finalResponse.dob = formatDob(finalResponse.dob)
+    }
+
+    return ok(finalResponse, 'Profile updated successfully')
 
   } catch (err) {
     console.error('[PUT /user/profile] Error:', err)

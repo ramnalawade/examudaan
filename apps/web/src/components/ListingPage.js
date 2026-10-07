@@ -155,6 +155,8 @@ function toCard(n) {
     notification_type: n.notification_type || 'recruitment',
     salary_min:       n.salary_min,
     salary_max:       n.salary_max,
+    published_at:     n.published_at,
+    created_at:       n.created_at,
   }
 }
 
@@ -697,7 +699,7 @@ function ListingPageInner({
           <FilterSection title={isMarathi ? 'अर्जाची स्थिती' : 'Application Status'} defaultOpen={true}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {[
-                { id: 'published', label: isMarathi ? 'सुरू जाहिराती (Active Deadlines First)' : 'Active Jobs (Deadlines First)' },
+                { id: 'published', label: isMarathi ? 'सुरू जाहिराती (नवीनतम)' : 'Active Jobs (Latest First)' },
                 { id: 'closed',    label: isMarathi ? 'मुदत संपलेल्या जाहिराती (Closed / Archive)' : 'Closed / Past Deadlines (On Demand)' },
                 { id: 'all',       label: isMarathi ? 'सर्व जाहिराती (Active + Closed)' : 'All Jobs (Active + Closed)' },
               ].map(st => (

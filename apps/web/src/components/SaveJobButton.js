@@ -1,137 +1,202 @@
-// ============================================================
-// components/SaveJobButton.js — Bookmark/save job toggle
-// ExamUdaan | Shows on job cards + detail pages
-//
-// Usage: <SaveJobButton notificationId={123} trackerId={null} />
-//   - notificationId: the exam_notifications.id
-//   - trackerId: if user already saved it, pass the tracker id for removal
-//   - size: 'sm' | 'md' (default 'md')
-// ============================================================
-
 'use client'
 
+// ============================================================
+// components/SaveJobButton.js — Universal Bookmark / Save Job Button
+// ExamUdaan | Seamlessly saves jobs to user's profile/dashboard
+// ============================================================
+
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { apiFetch } from '../lib/apiClient'
 
-export default function SaveJobButton({ notificationId, trackerId = null, size = 'md' }) {
-  const [saved,     setSaved]     = useState(!!trackerId)
-  const [tid,       setTid]       = useState(trackerId)   // tracker id for deletion
-  const [loading,   setLoading]   = useState(false)
-  const [showLogin, setShowLogin] = useState(false)
+export default function SaveJobButton({
+  notificationId,
+  initialSaved = false,
+  variant = 'icon', // 'icon' | 'button'
+  size = 'md',      // 'sm' | 'md' | 'lg'
+  style = {},
+  className = '',
+  title = '',
+}) {
+  const router = useRouter()
+  const [isSaved, setIsSaved] = useState(initialSaved)
+  const [loading, setLoading] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  // Sync saved state if trackerId prop changes
+  const numId = Number(notificationId)
+
+  // Sync saved status from cache or event
   useEffect(() => {
-    setSaved(!!trackerId)
-    setTid(trackerId)
-  }, [trackerId])
+    if (typeof window === 'undefined') return
 
-  // Get JWT from localStorage
-  function getToken() {
-    try { return localStorage.getItem('eu_access_token') || '' }
-    catch { return '' }
-  }
+    const token = localStorage.getItem('eu_access_token')
+    setIsLoggedIn(Boolean(token))
+
+    if (!token) return
+
+    try {
+      const cached = JSON.parse(localStorage.getItem('eu_saved_job_ids') || '[]')
+      if (Array.isArray(cached) && cached.includes(numId)) {
+        setIsSaved(true)
+      }
+    } catch {}
+
+    function handleCacheUpdate(e) {
+      if (e?.detail?.savedIds) {
+        setIsSaved(e.detail.savedIds.includes(numId))
+      }
+    }
+
+    window.addEventListener('eu_saved_jobs_changed', handleCacheUpdate)
+    return () => window.removeEventListener('eu_saved_jobs_changed', handleCacheUpdate)
+  }, [numId])
 
   async function handleToggle(e) {
-    e.preventDefault()   // don't navigate if inside a Link
+    e.preventDefault()
     e.stopPropagation()
 
-    const token = getToken()
+    if (loading) return
+
+    const token = typeof window !== 'undefined' ? localStorage.getItem('eu_access_token') : null
     if (!token) {
-      setShowLogin(true)
-      setTimeout(() => setShowLogin(false), 3000)
+      // Prompt user to login with return redirect
+      const currentUrl = typeof window !== 'undefined' ? window.location.pathname : '/jobs'
+      router.push(`/login?redirect=${encodeURIComponent(currentUrl)}`)
       return
     }
 
+    const nextState = !isSaved
+    setIsSaved(nextState)
     setLoading(true)
+
+    // Optimistically update localStorage cache
     try {
-      if (saved && tid) {
-        // Remove from saved
-        const res = await apiFetch(`/api/user/saved-jobs?id=${tid}`, {
-          method:  'DELETE',
-          headers: { Authorization: `Bearer ${token}` },
+      let cached = JSON.parse(localStorage.getItem('eu_saved_job_ids') || '[]')
+      if (!Array.isArray(cached)) cached = []
+      if (nextState) {
+        if (!cached.includes(numId)) cached.push(numId)
+      } else {
+        cached = cached.filter(id => id !== numId)
+      }
+      localStorage.setItem('eu_saved_job_ids', JSON.stringify(cached))
+      window.dispatchEvent(new CustomEvent('eu_saved_jobs_changed', { detail: { savedIds: cached, id: numId, saved: nextState } }))
+    } catch {}
+
+    try {
+      const refresh = localStorage.getItem('eu_refresh_token') || ''
+      const headers = {
+        Authorization: `Bearer ${token}`,
+        'x-refresh-token': refresh,
+        'Content-Type': 'application/json',
+      }
+
+      if (nextState) {
+        // Save
+        const res = await apiFetch('/api/user/saved-jobs', {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({ notification_id: numId }),
         })
-        if (res.ok) {
-          setSaved(false)
-          setTid(null)
+        if (!res.ok) {
+          // Revert on failure
+          setIsSaved(false)
         }
       } else {
-        // Save the job
-        const res = await apiFetch('/api/user/saved-jobs', {
-          method:  'POST',
-          headers: {
-            Authorization:  `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ notification_id: notificationId }),
+        // Unsave
+        const res = await apiFetch(`/api/user/saved-jobs?notification_id=${numId}`, {
+          method: 'DELETE',
+          headers,
         })
-        if (res.ok) {
-          const data = await res.json()
-          setSaved(true)
-          setTid(data.data?.tracker_id || null)
+        if (!res.ok) {
+          // Revert on failure
+          setIsSaved(true)
         }
       }
     } catch (err) {
-      console.error('[SaveJobButton] Error:', err)
+      console.error('[SaveJobButton] Error saving job:', err)
+      // Revert state
+      setIsSaved(!nextState)
     } finally {
       setLoading(false)
     }
   }
 
-  const iconSize = size === 'sm' ? 18 : 22
-
-  return (
-    <div style={{ position: 'relative', display: 'inline-block' }}>
-      {/* Login nudge tooltip */}
-      {showLogin && (
-        <div style={{
-          position: 'absolute',
-          bottom: '110%',
-          right: 0,
-          background: 'var(--on-surface)',
-          color: '#fff',
-          fontSize: 12,
-          fontWeight: 500,
-          padding: '6px 10px',
-          borderRadius: 6,
-          whiteSpace: 'nowrap',
-          zIndex: 100,
-        }}>
-          <Link href="/login" style={{ color: '#fdba74', fontWeight: 700 }}>Sign in</Link>
-          {' '}to save jobs
-        </div>
-      )}
-
+  // ── Variant: Icon Only (for JobCard.js) ──
+  if (variant === 'icon') {
+    return (
       <button
+        type="button"
         onClick={handleToggle}
-        disabled={loading}
-        title={saved ? 'Remove from saved' : 'Save this job'}
-        aria-label={saved ? 'Remove from saved jobs' : 'Save this job'}
+        aria-label={isSaved ? 'Remove from Saved Jobs' : 'Save Job to Profile'}
+        title={isSaved ? 'Saved to your profile (click to remove)' : 'Save job to your profile'}
         style={{
-          background: saved ? 'var(--primary-fixed)' : 'transparent',
-          border:     `1.5px solid ${saved ? 'var(--primary)' : 'var(--outline-variant)'}`,
-          borderRadius: '8px',
-          padding: size === 'sm' ? '4px 8px' : '6px 10px',
-          cursor: loading ? 'wait' : 'pointer',
-          display: 'flex',
+          background: isSaved ? '#FFF7ED' : 'rgba(255, 255, 255, 0.9)',
+          border: isSaved ? '1.5px solid #EA580C' : '1px solid #E5E7EB',
+          borderRadius: '50%',
+          width: size === 'sm' ? '30px' : '34px',
+          height: size === 'sm' ? '30px' : '34px',
+          display: 'inline-flex',
           alignItems: 'center',
-          gap: 4,
-          transition: 'all 0.15s',
-          color: saved ? 'var(--primary)' : 'var(--secondary)',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          color: isSaved ? '#EA580C' : '#6B7280',
+          transition: 'all 0.15s ease',
+          boxShadow: isSaved ? '0 2px 6px rgba(234, 88, 12, 0.2)' : '0 1px 3px rgba(0,0,0,0.06)',
+          zIndex: 2,
+          padding: 0,
+          ...style,
         }}
+        className={className}
       >
         <span
-          className={`material-symbols-outlined${saved ? ' fill' : ''}`}
-          style={{ fontSize: iconSize, transition: 'all 0.15s' }}
+          className="material-symbols-outlined"
+          style={{
+            fontSize: size === 'sm' ? 16 : 18,
+            fontVariationSettings: isSaved ? "'FILL' 1" : "'FILL' 0",
+            color: isSaved ? '#EA580C' : 'inherit',
+          }}
         >
-          bookmark
+          {isSaved ? 'bookmark' : 'bookmark_border'}
         </span>
-        {size !== 'sm' && (
-          <span style={{ fontSize: 12, fontWeight: 600 }}>
-            {loading ? '...' : saved ? 'Saved' : 'Save'}
-          </span>
-        )}
       </button>
-    </div>
+    )
+  }
+
+  // ── Variant: Full Action Button (for detail page / headers) ──
+  return (
+    <button
+      type="button"
+      onClick={handleToggle}
+      aria-label={isSaved ? 'Saved in My Profile' : 'Save Job to Profile'}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '6px',
+        padding: size === 'sm' ? '6px 12px' : '9px 18px',
+        borderRadius: '999px',
+        fontSize: size === 'sm' ? '12.5px' : '13.5px',
+        fontWeight: 700,
+        cursor: 'pointer',
+        border: isSaved ? '1.5px solid #EA580C' : '1.5px solid #D1D5DB',
+        background: isSaved ? '#FFF7ED' : '#FFFFFF',
+        color: isSaved ? '#EA580C' : '#374151',
+        boxShadow: isSaved ? '0 2px 8px rgba(234, 88, 12, 0.15)' : '0 1px 3px rgba(0,0,0,0.05)',
+        transition: 'all 0.15s ease',
+        ...style,
+      }}
+      className={className}
+    >
+      <span
+        className="material-symbols-outlined"
+        style={{
+          fontSize: 18,
+          fontVariationSettings: isSaved ? "'FILL' 1" : "'FILL' 0",
+          color: isSaved ? '#EA580C' : '#6B7280',
+        }}
+      >
+        {isSaved ? 'bookmark' : 'bookmark_border'}
+      </span>
+      <span>{isSaved ? 'Saved to Profile' : 'Save Job'}</span>
+    </button>
   )
 }

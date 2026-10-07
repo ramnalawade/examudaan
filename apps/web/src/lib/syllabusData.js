@@ -389,6 +389,74 @@ export const SYLLABUS_EXAMS = [
         ]
       }
     ],
+    officialPdfs: [
+      {
+        id: "mpsc-psi-2026-pre-qp",
+        year: 2026,
+        label: "2026 गट-ब संयुक्त पूर्व परीक्षा पेपर",
+        title: "महाराष्ट्र दुय्यम सेवा अराजपत्रित गट-ब (PSI/STI/ASO) संयुक्त पूर्व परीक्षा २०२६ अधिकृत प्रश्नपत्रिका",
+        size: "1.78 MB",
+        url: "/downloads/mpsc/question_papers/2026/13763_011-2026 Group-B Pre 2026 - Question Paper.pdf",
+        badge: "LATEST 2026",
+        isAnswerKey: false,
+        pairId: "mpsc-psi-2026-pre-ak"
+      },
+      {
+        id: "mpsc-psi-2026-pre-ak",
+        year: 2026,
+        label: "2026 गट-ब पूर्व अंतिम उत्तरतालिका",
+        title: "महाराष्ट्र दुय्यम सेवा अराजपत्रित गट-ब संयुक्त पूर्व परीक्षा २०२६ — अधिकृत अंतिम उत्तरतालिका (Final Answer Key)",
+        size: "445 KB",
+        url: "/downloads/mpsc/answer_keys/2026/13877_011-2026 Gr-B Pre 2026 - Final Answer Key.pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true,
+        pairId: "mpsc-psi-2026-pre-qp"
+      },
+      {
+        id: "mpsc-psi-2025-mains-p1-qp",
+        year: 2025,
+        label: "2025 गट-ब मुख्य पेपर १ (भाषा)",
+        title: "महाराष्ट्र गट-ब मुख्य परीक्षा २०२५ — पेपर क्रमांक १ भाषा (मराठी व इंग्रजी) अधिकृत प्रश्नपत्रिका",
+        size: "1.95 MB",
+        url: "/downloads/mpsc/question_papers/2026/13548_GROUP B MAIN 2025_PAPER_1.pdf",
+        badge: "2025 MAINS",
+        isAnswerKey: false,
+        pairId: "mpsc-psi-2025-mains-p1-ak"
+      },
+      {
+        id: "mpsc-psi-2025-mains-p1-ak",
+        year: 2025,
+        label: "2025 गट-ब मुख्य पेपर १ उत्तरतालिका",
+        title: "महाराष्ट्र गट-ब मुख्य परीक्षा २०२५ — पेपर क्रमांक १ अंतिम उत्तरतालिका",
+        size: "460 KB",
+        url: "/downloads/mpsc/answer_keys/2026/13799_Final Answer key of Maharashtra Group B Non Gazetted Main Exam 2025 Paper 1 (1).pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true,
+        pairId: "mpsc-psi-2025-mains-p1-qp"
+      },
+      {
+        id: "mpsc-psi-2025-mains-p2-qp",
+        year: 2025,
+        label: "2025 गट-ब मुख्य पेपर २ (सामान्य अध्ययन)",
+        title: "महाराष्ट्र गट-ब मुख्य परीक्षा २०२५ — पेपर क्रमांक २ सामान्य अध्ययन व बुद्धिमत्ता चाचणी अधिकृत प्रश्नपत्रिका",
+        size: "2.10 MB",
+        url: "/downloads/mpsc/question_papers/2026/13547_GROUP B MAIN 2025_PAPER_2.pdf",
+        badge: "2025 MAINS",
+        isAnswerKey: false,
+        pairId: "mpsc-psi-2025-mains-p2-ak"
+      },
+      {
+        id: "mpsc-psi-2025-mains-p2-ak",
+        year: 2025,
+        label: "2025 गट-ब मुख्य पेपर २ उत्तरतालिका",
+        title: "महाराष्ट्र गट-ब मुख्य परीक्षा २०२५ — पेपर क्रमांक २ अंतिम उत्तरतालिका",
+        size: "450 KB",
+        url: "/downloads/mpsc/answer_keys/2026/13800_Final Answer key of Maharashtra Group B Non Gazetted Main Exam 2025 Paper 2 (1).pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true,
+        pairId: "mpsc-psi-2025-mains-p2-qp"
+      }
+    ],
     pyqLinks: [
       { year: 2024, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2024 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
       { year: 2023, exam: "PSI/STI Mains Paper II", label: "MPSC PSI/STI 2023 Mains Paper & Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
@@ -417,44 +485,200 @@ export const SYLLABUS_EXAMS = [
     logo: "shield",
     color: "#DC2626",
     examLevel: "State",
-    targetPosts: ["Police Constable (शिपाई)", "Police Driver Constable (चालक)", "SRPF Armed Police Constable", "Bandsman"],
-    totalVacancies: "17,471+ (Recent Mega Recruitment)",
+    targetPosts: ["Police Constable (पोलीस शिपाई)", "Police Driver Constable (चालक)", "SRPF Armed Police Constable", "Bandsman"],
+    totalVacancies: "17,471+ (Annual State Cycles)",
     applicationFee: { general: "₹450", reserved: "₹350" },
     ageLimit: { min: 18, max: 28, scStRelax: 5, obcRelax: 5 },
-    eligibility: "12th Standard (HSC) passed from recognized Maharashtra State Board or equivalent.",
-    stages: ["Physical Endurance Test (50 Marks)", "Written Examination (100 Marks / 90 mins)", "Document Verification & Medical"],
+    eligibility: "12th Standard (HSC) passed from recognized Maharashtra State Board or equivalent. Driver post requires valid Driving License (LMV/TR).",
+    stages: ["Physical Efficiency Test (PET - 50 Marks)", "Written Examination (100 Marks / 90 mins)", "Driver Skill Test (50 Marks - Driver Only)", "Document Verification & Medical"],
     officialWebsite: "https://mahapolice.gov.in/citizen/recruitment.htm",
     notificationUrl: "https://policerecruitment2024.mahait.org",
     papers: [
       {
-        stage: "Physical Efficiency Test (PET - 50 Marks)",
+        stage: "Stage 1: Physical Efficiency Test (PET - 50 Marks)",
         papers: [
           {
-            name: "Physical Fitness Standards",
+            name: "पुरुष उमेदवार शारीरिक चाचणी (Male Candidates - 50 Marks)",
             marks: 50,
-            duration: "On ground",
-            type: "Physical Events",
+            duration: "On ground events",
+            type: "Physical Events (Qualifying: 50% / 25 Marks to enter Written Test)",
             topics: [
-              { name: "Male Candidates (50 Marks)", subtopics: ["1600m Running (20 Marks)", "100m Sprint (15 Marks)", "Shot Put 7.26 kg (15 Marks)", "Min Height: 165 cm, Chest: 79 cm (unexpanded) / 84 cm (expanded)"] },
-              { name: "Female Candidates (50 Marks)", subtopics: ["800m Running (20 Marks)", "100m Sprint (15 Marks)", "Shot Put 4 kg (15 Marks)", "Min Height: 158 cm"] },
+              {
+                name: "१६०० मीटर धावणे (1600m Running - 20 Marks)",
+                subtopics: [
+                  "५ मिनिटे १० सेकंद किंवा त्यापेक्षा कमी: २० पैकी २० गुण (Full Marks)",
+                  "५ मि. १० से. ते ५ मि. ३० सेकंद: १८ गुण",
+                  "५ मि. ३० से. ते ५ मि. ५० सेकंद: १५ गुण",
+                  "५ मि. ५० से. ते ६ मि. १० सेकंद: १० गुण",
+                  "६ मि. १० से. पेक्षा जास्त वेळ: ० गुण (Disqualified from event)"
+                ]
+              },
+              {
+                name: "१०० मीटर धावणे (100m Sprint - 15 Marks)",
+                subtopics: [
+                  "११.५० सेकंद किंवा त्यापेक्षा कमी: १५ पैकी १५ गुण",
+                  "११.५० ते १२.५० सेकंद: १२ गुण",
+                  "१२.५० ते १३.५० सेकंद: १० गुण",
+                  "१३.५० ते १४.५० सेकंद: ८ गुण",
+                  "१४.५० सेकंदांपेक्षा जास्त: ० गुण"
+                ]
+              },
+              {
+                name: "गोळाफेक (Shot Put 7.260 kg - 15 Marks)",
+                subtopics: [
+                  "८.५० मीटर किंवा त्यापेक्षा जास्त लांब: १५ पैकी १५ गुण",
+                  "७.९० ते ८.५० मीटर: १२ गुण",
+                  "७.३० ते ७.९० मीटर: १० गुण",
+                  "६.७० ते ७.३० मीटर: ८ गुण",
+                  "३.१० मीटरपेक्षा कमी: ० गुण"
+                ]
+              },
+              {
+                name: "शारीरिक पात्रता निकष (Physical Eligibility Standards)",
+                subtopics: [
+                  "किमान उंची: १६५ सेमी (पुरुष उमेदवार)",
+                  "छाती: न फुगवता किमान ७९ सेमी आणि फुगवून किमान ५ सेमी जास्त (किमान ८४ सेमी)"
+                ]
+              }
+            ]
+          },
+          {
+            name: "महिला उमेदवार शारीरिक चाचणी (Female Candidates - 50 Marks)",
+            marks: 50,
+            duration: "On ground events",
+            type: "Physical Events (Qualifying: 50% / 25 Marks to enter Written Test)",
+            topics: [
+              {
+                name: "८०० मीटर धावणे (800m Running - 20 Marks)",
+                subtopics: [
+                  "२ मिनिटे ५० सेकंद किंवा त्यापेक्षा कमी: २० पैकी २० गुण",
+                  "२ मि. ५० से. ते ३ मि. ०० सेकंद: १८ गुण",
+                  "३ मि. ०० से. ते ३ मि. १० सेकंद: १५ गुण",
+                  "३ मि. १० से. ते ३ मि. २० सेकंद: १० गुण",
+                  "३ मि. २० सेकंदांपेक्षा जास्त: ० गुण"
+                ]
+              },
+              {
+                name: "१०० मीटर धावणे (100m Sprint - 15 Marks)",
+                subtopics: [
+                  "१४.०० सेकंद किंवा त्यापेक्षा कमी: १५ पैकी १५ गुण",
+                  "१४.०० ते १५.०० सेकंद: १२ गुण",
+                  "१५.०० ते १६.०० सेकंद: १० गुण",
+                  "१६.०० ते १७.०० सेकंद: ८ गुण",
+                  "१७.०० सेकंदांपेक्षा जास्त: ० गुण"
+                ]
+              },
+              {
+                name: "गोळाफेक (Shot Put 4.0 kg - 15 Marks)",
+                subtopics: [
+                  "६.०० मीटर किंवा त्यापेक्षा जास्त: १५ पैकी १५ गुण",
+                  "५.५० ते ६.०० मीटर: १२ गुण",
+                  "५.०० ते ५.५० मीटर: १० गुण",
+                  "४.५० ते ५.०० मीटर: ८ गुण",
+                  "४.०० मीटरपेक्षा कमी: ० गुण"
+                ]
+              },
+              {
+                name: "शारीरिक पात्रता निकष (Female Physical Standards)",
+                subtopics: [
+                  "किमान उंची: १५८ सेमी (महिला उमेदवार)"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        stage: "Written Examination (100 Marks)",
+        stage: "Stage 2: Written Examination (100 Marks / 90 Mins)",
         papers: [
           {
-            name: "Written Test (OMR / CBT)",
+            name: "पोलीस भरती लेखी परीक्षा (Written Test — 100 Qs / 100 Marks)",
             marks: 100,
             questions: 100,
-            duration: "90 minutes",
-            type: "MCQ (Marathi Medium)",
+            duration: "90 minutes (1.5 hours)",
+            type: "Objective MCQ (OMR / CBT) — Negative Marking: None",
             topics: [
-              { name: "Mathematics & Arithmetic (अंकगणित)", subtopics: ["लसावि-मसावि (LCM/HCF)", "काळ, काम, वेग", "शेकडेवारी व नफा-तोटा", "दशांश अपूर्णांक", "सरळव्याज व चक्रवाढ व्याज"] },
-              { name: "General Knowledge & Current Affairs (सामान्य ज्ञान)", subtopics: ["महाराष्ट्राचा इतिहास व समाजसुधारक", "जिल्हा विशेष माहिती (District GK)", "महाराष्ट्र भूगोल व नद्या", "पोलीस प्रशासन व पदरचना", "चालू घडामोडी (क्रीडा, पुरस्कार)"] },
-              { name: "Mental Ability & Reasoning (बुद्धिमत्ता चाचणी)", subtopics: ["संख्या मालिका व अक्षर मालिका", "दिशाज्ञान व घड्याळ", "नातेसंबंध", "वेन आकृत्या व कूट प्रश्न"] },
-              { name: "Marathi Grammar (मराठी व्याकरण)", subtopics: ["समानार्थी व विरुद्धार्थी शब्द", "लिंग, वचन व विभक्ती", "काळ व त्याचे प्रकार", "वाक्यप्रचार व म्हणी", "शुद्धलेखन नियम"] },
+              {
+                name: "१. अंकगणित (Mathematics & Arithmetic — 25 Marks / 25 Qs)",
+                subtopics: [
+                  "संख्याज्ञान, संख्यांचे प्रकार, दर्शनी व स्थानिक किंमत",
+                  "लसावि व मसावि (LCM & HCF) व शाब्दिक उदाहरणे",
+                  "दशांश अपूर्णांक, व्यवहारी अपूर्णांक व आवर्ती दशांश",
+                  "शेकडेवारी (Percentage) व व्यवहारातील उपयोग",
+                  "नफा, तोटा, सूट व कमिशन (Profit, Loss & Discount)",
+                  "सरळव्याज व चक्रवाढ व्याज (Simple & Compound Interest)",
+                  "गुणोत्तर व प्रमाण (Ratio & Proportion) व भागीदारी",
+                  "सरासरी (Average) व वयावर आधारित गणिते (Age Problems)",
+                  "काळ, काम आणि वेग (Time, Work & Wages) व नळ-टाकी",
+                  "अंतर, वेग व आगगाडीवरील उदाहरणे (Speed, Distance & Trains)"
+                ]
+              },
+              {
+                name: "२. बुद्धिमत्ता चाचणी (Mental Ability & Reasoning — 25 Marks / 25 Qs)",
+                subtopics: [
+                  "संख्यामालिका व अक्षरमालिका (Number & Alphabet Series)",
+                  "वेन आकृत्या व बहुपर्यायी आकृत्या संबंध (Venn Diagrams)",
+                  "दिशाज्ञान चाचणी व अंतर मोजणे (Direction & Distance Test)",
+                  "नातेसंबंध व कौटुंबिक रचना (Blood Relations)",
+                  "घड्याळ व कॅलेंडर (Clocks & Calendar Problems)",
+                  "सांकेतिक भाषा व कोडिंग-डिकोडिंग (Coding-Decoding)",
+                  "विसंगत घटक ओळखणे (Odd One Out — शब्द, संख्या, आकृत्या)",
+                  "बैठक व्यवस्था व क्रमवारी (Seating Arrangement & Ranking)",
+                  "तार्किक विचार व विधाने-अनुमान (Logical Deductions & Syllogism)",
+                  "आकृत्यांची संख्या मोजणे व जल/आरसा प्रतिमा (Mirror & Water Images)"
+                ]
+              },
+              {
+                name: "३. मराठी व्याकरण (Marathi Grammar — 25 Marks / 25 Qs)",
+                subtopics: [
+                  "मराठी वर्णमाला, स्वर, स्वरादी, व्यंजने व उच्चारस्थाने",
+                  "संधी व संधींचे प्रकार (स्वरसंधी, व्यंजनसंधी, विसर्गसंधी)",
+                  "शब्दांच्या जाती: नाम, सर्वनाम, विशेषण व क्रियापद",
+                  "लिंग विचार, वचन विचार व विभक्ती आणि कारकार्थ",
+                  "काळ व काळांचे प्रकार (वर्तमानकाळ, भूतकाळ, भविष्यकाळ)",
+                  "प्रयोग विचार: कर्तरी, कर्मणी व भावे प्रयोग ओळखणे",
+                  "समास व प्रकार: अव्ययीभाव, तत्पुरुष, द्वंद्व, बहुव्रीही",
+                  "समानार्थी शब्द, विरुद्धार्थी शब्द व शब्दसमूहाबद्दल एक शब्द",
+                  "मराठी म्हणी व वाक्प्रचार (अर्थ, वाक्यात उपयोग व अर्थछटा)",
+                  "शुद्धलेखनाचे नियम, विरामचिन्हे व अलंकार ओळखणे"
+                ]
+              },
+              {
+                name: "४. सामान्य ज्ञान व चालू घडामोडी (General Knowledge & Current Affairs — 25 Marks / 25 Qs)",
+                subtopics: [
+                  "महाराष्ट्राचा इतिहास: छ. शिवाजी महाराज, पेशवेकाळ व १८५७ चा उठाव",
+                  "महाराष्ट्रातील समाजसुधारक: म. फुले, डॉ. बाबासाहेब आंबेडकर, शाहू महाराज, लोकमान्य टिळक, महर्षी कर्वे",
+                  "महाराष्ट्राचा भूगोल: ३६ जिल्हे, प्रशासकीय विभाग, सह्याद्री पर्वत, घाट व नद्या (गोदावरी, भीमा, कृष्णा)",
+                  "महाराष्ट्र जिल्हानिहाय विशेष माहिती: किल्ले, अभयारण्ये, पिके, उद्योग व स्थानिक पोलीस आयुक्तालय",
+                  "भारतीय राज्यघटना व शासन: मूलभूत हक्क, मार्गदर्शक तत्त्वे, राष्ट्रपती, राज्यपाल व विधानसभा",
+                  "महाराष्ट्र पोलीस प्रशासन रचना: DGP कार्यालय, पोलीस आयुक्त (CP), SP, ACP, PI, PSI पदानुक्रम",
+                  "पोलीस शिपाई अधिकार, कर्तव्ये व मुंबई पोलीस कायदा तरतुदी",
+                  "सामान्य विज्ञान व आरोग्यशास्त्र: भौतिक, रसायन, जीवशास्त्र, मानवी शरीर, रोग व लसीकरण",
+                  "पर्यावरण व प्रदूषण: महाराष्ट्र राष्ट्रीय उद्याने (ताडोबा, पेंच, संजय गांधी) व व्याघ्र प्रकल्प",
+                  "चालू घडामोडी २०२४–२०२६: महाराष्ट्र राज्य योजना, क्रीडा स्पर्धा, पुरस्कार, नियुक्त्या व देश-विदेश"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        stage: "Stage 3: पोलीस चालक कौशल्य चाचणी (Driver Skill Test — 50 Marks)",
+        papers: [
+          {
+            name: "पोलीस चालक चाचणी (फक्त चालक पदासाठी)",
+            marks: 50,
+            duration: "Practical driving track",
+            type: "Practical Driving (Qualifying — Min 50% Marks Required)",
+            topics: [
+              {
+                name: "हलके मोटार वाहन ड्रायव्हिंग चाचणी (LMV Driving Test — 25 Marks)",
+                subtopics: ["Light Motor Vehicle (LMV) ट्रॅक ड्रायव्हिंग, 'H' व '8' आकाराचा ट्रॅक, रिव्हर्स पार्किंग व चढण नियंत्रण"]
+              },
+              {
+                name: "जीप / अवजड वाहन ड्रayव्हिंग चाचणी (Heavy/Jeep Test — 25 Marks)",
+                subtopics: ["Jeep प्रकारातील वाहन चालवणे, ट्रॅफिक सिग्नल नियम, रस्ता सुरक्षा नियम व प्राथमिक यांत्रिक दोष निवारण"]
+              }
             ]
           }
         ]
@@ -471,7 +695,7 @@ export const SYLLABUS_EXAMS = [
       { title: "पोलीस भरती संपूर्ण मार्गदर्शक — नोबल पब्लिकेशन / युनिक अकॅडमी", useFor: "Full written test syllabus coverage" },
       { title: "मराठी व्याकरण — मो. रा. वाळंबे", useFor: "25 Marks Marathi Grammar section" },
       { title: "स्मार्ट पोलीस भरती अंकगणित व बुद्धिमत्ता — पंढरीनाथ राणे", useFor: "50 Marks Maths and Reasoning section" },
-      { title: "जिल्हा विशेष सामान्य ज्ञान पुस्तिका", useFor: "District police specific general knowledge" },
+      { title: "जिल्हा विशेष सामान्य ज्ञान पुस्तिका — तात्यांचा ठोकळा", useFor: "District police specific general knowledge" },
     ],
     youtubeQuery: "Maharashtra police bharti written test question paper and ground test preparation",
     relatedExams: ["mpsc-combined", "mpsc-psi-sti", "maharashtra-forest"],
@@ -689,7 +913,7 @@ export const SYLLABUS_EXAMS = [
     applicationFee: { general: "₹524", reserved: "₹324" },
     ageLimit: { min: 19, max: 38, scStRelax: 5, obcRelax: 3 },
     eligibility: "Bachelor's Degree in Science (Botany, Chemistry, Forestry, Geology, Mathematics, Physics, Statistics, Zoology) or Engineering or Agriculture.",
-    stages: ["MPSC Gazetted Combined Prelims", "Vanseva Mains Exam (400 Marks)", "Walking Physical Test (25 km / 16 km)", "Interview (50 Marks)"],
+    stages: ["Gazetted Prelims", "Vanseva Mains (400M)", "Walking Test (25km/16km)", "Interview (50M)"],
     officialWebsite: "https://mpsc.gov.in",
     notificationUrl: "https://mpsconline.gov.in/candidate",
     papers: [
@@ -719,6 +943,50 @@ export const SYLLABUS_EXAMS = [
             ]
           }
         ]
+      }
+    ],
+    officialPdfs: [
+      {
+        id: "mpsc-vanseva-2024-p1-qp",
+        year: 2024,
+        label: "2024 वनसेवा मुख्य वनशास्त्र पेपर",
+        title: "महाराष्ट्र वनसेवा मुख्य परीक्षा २०२४ — वनशास्त्र (Forestry) अधिकृत प्रश्नपत्रिका",
+        size: "1.92 MB",
+        url: "/downloads/mpsc/question_papers/2026/13489_FORESTRY.pdf",
+        badge: "2024 MAINS",
+        isAnswerKey: false
+      },
+      {
+        id: "mpsc-vanseva-2024-p2-qp",
+        year: 2024,
+        label: "2024 वनसेवा कृषी (Agriculture) पेपर",
+        title: "महाराष्ट्र वनसेवा मुख्य परीक्षा २०२४ — कृषी शास्त्र (Agriculture) अधिकृत प्रश्नपत्रिका",
+        size: "2.05 MB",
+        url: "/downloads/mpsc/question_papers/2026/13497_AGRICULTURE.pdf",
+        badge: "2024 MAINS",
+        isAnswerKey: false
+      },
+      {
+        id: "mpsc-vanseva-2023-pre-qp",
+        year: 2023,
+        label: "2023 वनसेवा पूर्व परीक्षा पेपर",
+        title: "महाराष्ट्र नागरी सेवा राजपत्रित संयुक्त पूर्व परीक्षा २०२३ — वनसेवा घटक पेपर १",
+        size: "1.80 MB",
+        url: "/downloads/mpsc/question_papers/2025/12078_012-2025 PRE 2025 P1.pdf",
+        badge: "PRELIMS",
+        isAnswerKey: false,
+        pairId: "mpsc-vanseva-2023-pre-ak"
+      },
+      {
+        id: "mpsc-vanseva-2023-pre-ak",
+        year: 2023,
+        label: "2023 वनसेवा पूर्व उत्तरतालिका",
+        title: "महाराष्ट्र नागरी सेवा राजपत्रित संयुक्त पूर्व परीक्षा २०२३ — पेपर १ प्रथम उत्तरतालिका",
+        size: "410 KB",
+        url: "/downloads/mpsc/answer_keys/2025/12098_Maharashtra Civil Services Gazetted Combined Pre Exam 2025 Paper I First Anwer key Advt 012-2025.pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true,
+        pairId: "mpsc-vanseva-2023-pre-qp"
       }
     ],
     pyqLinks: [
@@ -1431,9 +1699,20 @@ export const SYLLABUS_EXAMS = [
   },
 ]
 
-// Helper: get exam by slug
+// Helper: get exam by slug with verified downloadable officialPdfs only
 export function getExamBySlug(slug) {
-  return SYLLABUS_EXAMS.find(e => e.slug === slug) || null
+  const exam = SYLLABUS_EXAMS.find(e => e.slug === slug)
+  if (!exam) return null
+
+  // Only keep papers that actually exist in local /downloads/ or /question-papers/
+  const verifiedPdfs = (exam.officialPdfs || []).filter(p =>
+    p.url && (p.url.startsWith('/downloads/') || p.url.startsWith('/question-papers/mpsc/') || p.url.startsWith('/api/mpsc-pdf/'))
+  )
+
+  return {
+    ...exam,
+    officialPdfs: verifiedPdfs
+  }
 }
 
 // All exam slugs for static generation

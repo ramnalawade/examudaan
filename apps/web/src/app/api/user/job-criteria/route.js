@@ -23,7 +23,7 @@ export const GET = withAuth(async (req, ctx, currentUser) => {
     // Use user_id::text = $1::text to support both UUID and INTEGER user_id types
     const rows = await pgQuery(
       `SELECT * FROM user_job_criteria
-       WHERE user_id::text = $1::text AND is_active = true
+       WHERE user_id::text = $1::text
        ORDER BY created_at DESC`,
       [userId]
     )
@@ -93,6 +93,19 @@ export const POST = withAuth(async (req, ctx, currentUser) => {
       ]
     )
 
+    // Sync with alert_subscriptions if user wants email or whatsapp alerts
+    if (alert_email || alert_whatsapp || alert_sms) {
+      try {
+        await pgQuery(
+          `INSERT INTO alert_subscriptions (user_id, qualification, states, via_email, via_whatsapp, via_sms, is_active)
+           VALUES ($1, $2, $3, $4, $5, $6, true)`,
+          [userIdValue, qualifications, states, alert_email, alert_whatsapp, alert_sms]
+        ).catch(() => {})
+      } catch (alertSyncErr) {
+        console.warn('[POST /user/job-criteria] Alert sync warning:', alertSyncErr.message)
+      }
+    }
+
     return ok(rows?.[0] || null, 'Job criteria saved successfully')
   } catch (err) {
     console.error('[POST /user/job-criteria] Error:', err)
@@ -116,6 +129,7 @@ export const PUT = withAuth(async (req, ctx, currentUser) => {
       'name', 'qualifications', 'categories', 'govt_level',
       'states', 'cities', 'reservation_category', 'max_age',
       'min_vacancies', 'keywords', 'alert_email', 'alert_whatsapp', 'alert_sms',
+      'is_active',
     ]
 
     const setClauses = []
@@ -150,7 +164,7 @@ export const PUT = withAuth(async (req, ctx, currentUser) => {
   }
 })
 
-// ── DELETE: soft-delete (mark inactive) ──
+// ── DELETE: remove criteria set ──
 export const DELETE = withAuth(async (req, ctx, currentUser) => {
   try {
     const userId = currentUser?.user_id ?? currentUser?.id ?? null
@@ -162,8 +176,7 @@ export const DELETE = withAuth(async (req, ctx, currentUser) => {
     }
 
     const rows = await pgQuery(
-      `UPDATE user_job_criteria
-       SET is_active = false, updated_at = NOW()
+      `DELETE FROM user_job_criteria
        WHERE id = $1 AND user_id::text = $2::text
        RETURNING id`,
       [criteriaId, userId]

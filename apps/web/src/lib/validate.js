@@ -62,7 +62,7 @@ export function withValidation(schema, handler) {
 
       if (error) {
         const errors = error.details.map(d => ({
-          field:   d.path.join('.'),
+          field: d.path.join('.'),
           message: d.message.replace(/['"]/g, ''),
         }))
         return unprocessable('Validation failed', errors)
@@ -94,48 +94,54 @@ export const schemas = {
   // Auth: Verify OTP
   verifyOtp: Joi.object({
     identifier: Joi.string().trim().required(),
-    code:       Joi.string().length(4).pattern(/^\d+$/).required()
-      .messages({ 'string.pattern.base': 'OTP must be a 4-digit number' }),
+    code:       Joi.string().pattern(/^\d{4,6}$/),
+    otp:        Joi.string().pattern(/^\d{4,6}$/),
     channel:    Joi.string().valid('email', 'sms', 'whatsapp').default('email'),
-  }),
+    name:       Joi.string().trim().allow('', null).optional(),
+    register:   Joi.boolean().optional(),
+  }).or('code', 'otp')
+    .messages({
+      'object.missing': 'OTP code is required',
+      'string.pattern.base': 'OTP must be a 4 to 6 digit number'
+    }),
 
   // Alert subscription
   subscribeAlerts: Joi.object({
-    email:        Joi.string().email().trim().lowercase().allow(null),
-    phone:        Joi.string().pattern(/^[6-9]\d{9}$/).allow(null)
+    email: Joi.string().email().trim().lowercase().allow(null),
+    phone: Joi.string().pattern(/^[6-9]\d{9}$/).allow(null)
       .messages({ 'string.pattern.base': 'Enter a valid 10-digit Indian mobile number' }),
-    name:         Joi.string().trim().max(100).allow(null),
-    boards:       Joi.array().items(Joi.string()).allow(null).default(null),
-    post_types:   Joi.array().items(Joi.string().valid('job','result','admit-card','answer-key')).allow(null).default(null),
-    states:       Joi.array().items(Joi.string()).allow(null).default(null),
-    via_email:    Joi.boolean().default(true),
+    name: Joi.string().trim().max(100).allow(null),
+    boards: Joi.array().items(Joi.string()).allow(null).default(null),
+    post_types: Joi.array().items(Joi.string().valid('job', 'result', 'admit-card', 'answer-key')).allow(null).default(null),
+    states: Joi.array().items(Joi.string()).allow(null).default(null),
+    via_email: Joi.boolean().default(true),
     via_whatsapp: Joi.boolean().default(false),
-    via_sms:      Joi.boolean().default(false),
+    via_sms: Joi.boolean().default(false),
   }).or('email', 'phone'),  // at least one of email/phone required
 
   // Posts list / search
   getPosts: Joi.object({
-    type:   Joi.string().valid('job','result','admit-card','answer-key','syllabus').allow(null),
-    board:  Joi.string().alphanum().lowercase().max(20).allow(null),
-    status: Joi.string().valid('active','closed').default('active'),
-    page:   Joi.number().integer().min(1).default(1),
-    q:      Joi.string().trim().max(200).allow(null, ''),
+    type: Joi.string().valid('job', 'result', 'admit-card', 'answer-key', 'syllabus').allow(null),
+    board: Joi.string().alphanum().lowercase().max(20).allow(null),
+    status: Joi.string().valid('active', 'closed').default('active'),
+    page: Joi.number().integer().min(1).default(1),
+    q: Joi.string().trim().max(200).allow(null, ''),
   }),
 
   // User profile update — accepts all editable fields
   updateProfile: Joi.object({
     first_name: Joi.string().trim().min(1).max(60).allow(null, ''),
-    last_name:  Joi.string().trim().min(1).max(60).allow(null, ''),
-    gender:     Joi.string().valid('Male', 'Female', 'Other', 'Prefer not to say').allow(null, ''),
-    dob:        Joi.string().isoDate().allow(null, ''),           // YYYY-MM-DD
-    state:      Joi.string().trim().max(60).allow(null, ''),
-    whatsapp:   Joi.string().pattern(/^[6-9]\d{9}$/).allow(null, ''),
-    language:   Joi.string().valid('en', 'hi', 'mr').default('en'),
+    last_name: Joi.string().trim().min(1).max(60).allow(null, ''),
+    gender: Joi.string().valid('Male', 'Female', 'Other', 'Prefer not to say').allow(null, ''),
+    dob: Joi.string().isoDate().allow(null, ''),           // YYYY-MM-DD
+    state: Joi.string().trim().max(60).allow(null, ''),
+    whatsapp: Joi.string().pattern(/^[6-9]\d{9}$/).allow(null, ''),
+    language: Joi.string().valid('en', 'hi', 'mr').default('en'),
   }).min(1),  // at least one field required
 
   // Set password for the first time (OTP/Google users)
   setPassword: Joi.object({
-    password:         Joi.string().min(8).max(128).required()
+    password: Joi.string().min(8).max(128).required()
       .messages({ 'string.min': 'Password must be at least 8 characters' }),
     confirm_password: Joi.string().valid(Joi.ref('password')).required()
       .messages({ 'any.only': 'Passwords do not match' }),
@@ -145,7 +151,7 @@ export const schemas = {
   changePassword: Joi.object({
     current_password: Joi.string().required()
       .messages({ 'string.empty': 'Current password is required' }),
-    new_password:     Joi.string().min(8).max(128).required()
+    new_password: Joi.string().min(8).max(128).required()
       .messages({ 'string.min': 'New password must be at least 8 characters' }),
     confirm_password: Joi.string().valid(Joi.ref('new_password')).required()
       .messages({ 'any.only': 'Passwords do not match' }),
@@ -153,16 +159,16 @@ export const schemas = {
 
   // Login with email + password
   loginWithPassword: Joi.object({
-    email:    Joi.string().email().trim().lowercase().required(),
+    email: Joi.string().email().trim().lowercase().required(),
     password: Joi.string().required(),
   }),
 
   // Razorpay payment verification
   verifyPayment: Joi.object({
-    razorpay_order_id:   Joi.string().required(),
+    razorpay_order_id: Joi.string().required(),
     razorpay_payment_id: Joi.string().required(),
-    razorpay_signature:  Joi.string().required(),
-    plan:                Joi.string().valid('basic','smart','pro').required(),
+    razorpay_signature: Joi.string().required(),
+    plan: Joi.string().valid('basic', 'smart', 'pro').required(),
   }),
 
 }

@@ -10,6 +10,7 @@ import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import DetailHowToApply from '../../../components/DetailHowToApply'
+import SaveJobButton from '../../../components/SaveJobButton'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 
@@ -46,6 +47,72 @@ function formatSalary(salary, posts) {
   }
   const scales = (posts || []).map(p => p.pay_scale).filter(Boolean)
   return scales.length > 0 ? scales.join(' / ') : null
+}
+
+// ── Utility: map education levels to Schema.org / Google JobPosting valid enum ──
+// Google Search Console strictly requires credentialCategory to be one of:
+// 'high school' | 'associate degree' | 'bachelor degree' | 'postgraduate degree' | 'professional certificate'
+function getValidEducationRequirements(educationLevels) {
+  if (!educationLevels || !Array.isArray(educationLevels) || educationLevels.length === 0) {
+    return null
+  }
+
+  const matchedCategories = new Set()
+
+  for (const item of educationLevels) {
+    if (typeof item !== 'string') continue
+    const val = item.toLowerCase().trim()
+
+    // Postgraduate / Doctorate
+    if (
+      /\b(postgraduate|post\s*graduate|pg|master|masters|phd|ph\.d|doctorate|m\.?tech|m\.?sc|m\.?com|m\.?a|m\.?e|m\.?ed|mca|mba|m\.?pharm|md|ms|llm)\b/i.test(val)
+    ) {
+      matchedCategories.add('postgraduate degree')
+    }
+    // Bachelor / Graduate
+    else if (
+      /\b(graduate|graduation|degree|bachelor|bachelors|undergraduate|b\.?tech|b\.?sc|b\.?com|b\.?a|b\.?e|b\.?ed|bca|bba|b\.?pharm|mbbs|bds|bams|bhms|llb)\b/i.test(val)
+    ) {
+      matchedCategories.add('bachelor degree')
+    }
+    // Associate Degree / Diploma
+    else if (
+      /\b(diploma|polytechnic|associate)\b/i.test(val)
+    ) {
+      matchedCategories.add('associate degree')
+    }
+    // High School / Secondary / 10th / 12th
+    else if (
+      /\b(10th|12th|ssc|hsc|matric|matriculation|intermediate|secondary|higher\s*secondary|10\+2)\b/i.test(val)
+    ) {
+      matchedCategories.add('high school')
+    }
+    // Professional Certificate / Trade / ITI / Nursing cert
+    else if (
+      /\b(certificate|certification|iti|trade|gnm|anm|nursing|ca|cs|icwa|cma)\b/i.test(val)
+    ) {
+      matchedCategories.add('professional certificate')
+    }
+  }
+
+  const categories = Array.from(matchedCategories)
+
+  if (categories.length === 1) {
+    return {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: categories[0],
+    }
+  } else if (categories.length > 1) {
+    return categories.map((cat) => ({
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: cat,
+    }))
+  }
+
+  // Fallback: If no recognized enum matched, provide plain text string without credentialCategory
+  // (Schema.org allows Text for educationRequirements, preventing Google's invalid enum error)
+  const textSummary = educationLevels.filter(Boolean).join(', ').trim()
+  return textSummary.length > 0 ? textSummary : null
 }
 
 // ──────────────────────────────────────────────────────────────
@@ -233,19 +300,48 @@ export async function generateMetadata({ params }) {
 // ──────────────────────────────────────────────────────────────
 export default async function JobDetailPage({ params }) {
   const resolvedParams = await params
+
+  // ── Graceful Redirects for high-volume legacy search queries from Google Search ──
+  if (
+    resolvedParams.slug === 'current-notifications' ||
+    resolvedParams.slug === 'sarkari-job-facebook' ||
+    resolvedParams.slug === 'notifications'
+  ) {
+    permanentRedirect('/jobs')
+  }
+
   const data = await getJobData(resolvedParams.slug)
 
-  // No data found → 404-style message
+  // No data found → high-converting recovery card for organic traffic
   if (!data) {
     return (
       <div className="container" style={{ paddingTop: 40, paddingBottom: 80 }}>
-        <h1 style={{ color: 'var(--on-surface)' }}>Job Not Found</h1>
-        <p style={{ color: 'var(--secondary)', marginTop: 8 }}>
-          This job page does not exist or may have been removed.
-        </p>
-        <Link href="/jobs" className="btn-primary" style={{ marginTop: 16, display: 'inline-flex' }}>
-          Browse All Jobs
-        </Link>
+        <div style={{
+          maxWidth: 620,
+          margin: '0 auto',
+          background: '#FFFFFF',
+          padding: '40px 28px',
+          borderRadius: 16,
+          border: '1px solid #E5E7EB',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+          textAlign: 'center'
+        }}>
+          <span style={{ fontSize: 44 }}>📋</span>
+          <h1 style={{ color: 'var(--on-surface, #0F172A)', fontSize: 22, fontWeight: 800, marginTop: 12 }}>
+            Notification Updated or Relocated
+          </h1>
+          <p style={{ color: 'var(--secondary, #64748B)', marginTop: 8, fontSize: 14, lineHeight: 1.6 }}>
+            ही जाहिरात मुदत संपल्यामुळे किंवा नवीन माहिती प्रसिद्ध झाल्यामुळे अद्ययावत केली गेली आहे. खालील लिंकवरून सध्या सुरू असलेल्या अधिकृत भरती जाहिराती पहा.
+          </p>
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginTop: 24, flexWrap: 'wrap' }}>
+            <Link href="/jobs" className="btn-primary" style={{ padding: '10px 20px', borderRadius: 8, textDecoration: 'none' }}>
+              View All Active Jobs →
+            </Link>
+            <Link href="/mpsc-pyq" className="btn-outline" style={{ padding: '10px 18px', borderRadius: 8, textDecoration: 'none' }}>
+              🏛️ MPSC Question Papers & Keys
+            </Link>
+          </div>
+        </div>
       </div>
     )
   }
@@ -480,11 +576,8 @@ export default async function JobDetailPage({ params }) {
         },
       },
     } : {}),
-    ...(en.ai_extracted_data?.education_levels?.length ? {
-      educationRequirements: {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: en.ai_extracted_data.education_levels.join(', '),
-      },
+    ...(getValidEducationRequirements(en.ai_extracted_data?.education_levels) ? {
+      educationRequirements: getValidEducationRequirements(en.ai_extracted_data?.education_levels),
     } : {}),
     directApply: true,
   }
@@ -691,6 +784,13 @@ export default async function JobDetailPage({ params }) {
                 <span className="material-symbols-outlined" style={{ fontSize: 18 }}>picture_as_pdf</span>
                 <T k="card.official_pdf" fallback="Official Notification PDF" />
               </a>
+            )}
+            {en.id && (
+              <SaveJobButton
+                notificationId={en.id}
+                variant="button"
+                title={en.title}
+              />
             )}
           </div>
         </div>

@@ -61,17 +61,18 @@ export const GET = withAuth(async (req, ctx, currentUser) => {
          o.name              AS org_name,
          o.acronym           AS org_acronym
        FROM user_job_tracker ujt
-       JOIN exam_notifications en ON en.id = ujt.${idCol}
+       JOIN exam_notifications en ON en.id = COALESCE(ujt.notification_id, ujt.post_id)
        LEFT JOIN organizations o ON o.id = en.organization_id
        WHERE ujt.user_id::text = $1::text
        ORDER BY ujt.id DESC`,
       [userId]
     )
 
-    return ok({ saved_jobs: rows || [], count: rows?.length || 0 })
+    const savedIds = (rows || []).map(r => r.notification_id).filter(Boolean)
+    return ok({ saved_jobs: rows || [], count: rows?.length || 0, saved_ids: savedIds })
   } catch (err) {
     console.warn('[GET /user/saved-jobs] Handled warning:', err.message)
-    return ok({ saved_jobs: [], count: 0 })
+    return ok({ saved_jobs: [], count: 0, saved_ids: [] })
   }
 })
 
@@ -127,37 +128,57 @@ export const POST = withAuth(async (req, ctx, currentUser) => {
       params
     )
 
-    const trackerId = rows?.[0]?.id || Date.now()
-    return ok({ tracker_id: trackerId }, 'Job saved successfully')
+    let trackerId = rows?.[0]?.id
+    if (!trackerId) {
+      // Already saved — find existing tracker ID
+      const existing = await pgQuery(
+        `SELECT id FROM user_job_tracker WHERE user_id::text = $1::text AND ${idCol} = $2 LIMIT 1`,
+        [userId, notificationId]
+      )
+      trackerId = existing?.[0]?.id || Date.now()
+    }
+
+    return ok({ tracker_id: trackerId, is_saved: true }, 'Job saved successfully')
   } catch (err) {
     console.error('[POST /user/saved-jobs] Error:', err)
     return serverError('Failed to save job')
   }
 })
 
-// ── DELETE: remove a saved job by tracker id ──
+// ── DELETE: remove a saved job by tracker id OR notification_id ──
 export const DELETE = withAuth(async (req, ctx, currentUser) => {
   try {
     const userId = currentUser?.user_id ?? currentUser?.id ?? null
     const { searchParams } = new URL(req.url)
     const trackerId        = parseInt(searchParams.get('id'), 10)
+    const notificationId   = parseInt(searchParams.get('notification_id'), 10)
 
-    if (!trackerId || isNaN(trackerId)) {
-      return badRequest('?id=<tracker_id> is required')
+    if ((!trackerId || isNaN(trackerId)) && (!notificationId || isNaN(notificationId))) {
+      return badRequest('?id=<tracker_id> or ?notification_id=<notification_id> is required')
     }
 
-    const rows = await pgQuery(
-      `DELETE FROM user_job_tracker
-       WHERE id = $1 AND user_id::text = $2::text
-       RETURNING id`,
-      [trackerId, userId]
-    )
+    let rows
+    if (trackerId && !isNaN(trackerId)) {
+      rows = await pgQuery(
+        `DELETE FROM user_job_tracker
+         WHERE id = $1 AND user_id::text = $2::text
+         RETURNING id`,
+        [trackerId, userId]
+      )
+    } else {
+      rows = await pgQuery(
+        `DELETE FROM user_job_tracker
+         WHERE (notification_id = $1 OR post_id = $1) AND user_id::text = $2::text
+         RETURNING id`,
+        [notificationId, userId]
+      )
+    }
 
     if (!rows || rows.length === 0) {
       return notFound('Saved job not found or already removed')
     }
 
-    return ok(null, 'Job removed from saved list')
+    return ok({ is_saved: false }, 'Job removed from saved list')
   } catch (err) {
     console.error('[DELETE /user/saved-jobs] Error:', err)
     return serverError('Failed to remove saved job')

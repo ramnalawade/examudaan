@@ -168,90 +168,45 @@ export default function ExamDetailPage({ params }) {
         </div>
       </section>
 
-      {/* ── PYQ Links ── */}
-      <section className={styles.pyqSection}>
-        <div className="container">
-          <div className={styles.pyqHeaderRow}>
-            <div>
-              <h2 className={styles.sectionTitle}>
-                <span className="material-symbols-outlined">history_edu</span>
-                Previous Year Question Papers & Official Answer Keys (5+ Years)
-              </h2>
-              <p className={styles.pyqSubtitle}>
-                Read and download authentic question papers and official answer keys directly from {exam.conductingBody}.
-              </p>
+      {/* ── Official Downloaded Question Papers & Answer Keys (Only rendered if files exist in downloads) ── */}
+      {exam.officialPdfs && exam.officialPdfs.length > 0 && (
+        <section className={styles.pyqSection} id="pyq">
+          <div className="container">
+            <div className={styles.pyqHeaderRow}>
+              <div>
+                <h2 className={styles.sectionTitle}>
+                  <span className="material-symbols-outlined">history_edu</span>
+                  Previous Year Question Papers & Official Answer Keys ({exam.officialPdfs.length} Verified Files)
+                </h2>
+                <p className={styles.pyqSubtitle}>
+                  Read and download authentic question papers and official answer keys directly from {exam.conductingBody}.
+                </p>
+              </div>
+              <span className={styles.pyqCountBadge}>{exam.officialPdfs.length} Files Available</span>
             </div>
-            <span className={styles.pyqCountBadge}>{exam.pyqLinks.length} Sets Available</span>
-          </div>
 
-          {/* Embedded Official In-Browser PDF Document Viewer & Directory Workspace */}
-          {exam.officialPdfs && exam.officialPdfs.length > 0 ? (
-            <>
-              <OfficialPdfViewer
-                papers={exam.officialPdfs}
-                conductingBody={exam.conductingBody}
-                officialWebsite={exam.officialWebsite}
-                examName={exam.nameEn}
-              />
-              {exam.slug.startsWith('mpsc-') && (
-                <div style={{ marginTop: '16px', padding: '14px 18px', background: '#FFF7ED', border: '1px solid #FFEDD5', borderRadius: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
-                  <div>
-                    <strong style={{ color: '#9A3412', fontSize: '14px' }}>🏛️ संपूर्ण MPSC २०२४–२०२६ अधिकृत संग्रह (209 PDFs)</strong>
-                    <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#7C2D12' }}>सर्व राज्यसेवा, संयुक्त गट ब व क, नगर रचनाकार आणि चाळणी परीक्षा प्रश्नपत्रिका व उत्तरतालिका उपलब्ध आहेत.</p>
-                  </div>
-                  <Link href="/mpsc-pyq" style={{ background: '#EA580C', color: '#fff', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', fontWeight: 600, textDecoration: 'none' }}>
-                    संपूर्ण MPSC संग्रह उघडा (209) →
-                  </Link>
+            {/* Embedded Official In-Browser PDF Document Viewer & Directory Workspace */}
+            <OfficialPdfViewer
+              papers={exam.officialPdfs}
+              conductingBody={exam.conductingBody}
+              officialWebsite={exam.officialWebsite}
+              examName={exam.nameEn}
+            />
+
+            {exam.slug.startsWith('mpsc-') && (
+              <div style={{ marginTop: '16px', padding: '14px 18px', background: '#FFF7ED', border: '1px solid #FFEDD5', borderRadius: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
+                <div>
+                  <strong style={{ color: '#9A3412', fontSize: '14px' }}>🏛️ संपूर्ण MPSC २०२४–२०२६ अधिकृत संग्रह (209 PDFs)</strong>
+                  <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#7C2D12' }}>सर्व राज्यसेवा, संयुक्त गट ब व क, नगर रचनाकार आणि चाळणी परीक्षा प्रश्नपत्रिका व उत्तरतालिका उपलब्ध आहेत.</p>
                 </div>
-              )}
-            </>
-          ) : (
-            <div className={styles.pyqList}>
-              {exam.pyqLinks.map((link, i) => (
-                <div key={i} className={styles.pyqCardItem}>
-                  <div className={styles.pyqYearCol} style={{ backgroundColor: `${exam.color}15`, color: exam.color }}>
-                    <span className={styles.pyqYearText}>{link.year}</span>
-                    <span className={styles.pyqYearBadge}>Q & A</span>
-                  </div>
-                  <div className={styles.pyqInfoCol}>
-                    <h3 className={styles.pyqPaperTitle}>{link.label}</h3>
-                    <p className={styles.pyqExamMeta}>
-                      <span className="material-symbols-outlined">fact_check</span>
-                      {link.exam} • Official {exam.conductingBody}
-                    </p>
-                  </div>
-                  <div className={styles.pyqActions}>
-                    <a
-                      href={link.paperUrl || link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.pyqPaperBtn}
-                      title="Download / View Question Paper"
-                    >
-                      <span className="material-symbols-outlined">description</span>
-                      Question Paper
-                      <span className="material-symbols-outlined">open_in_new</span>
-                    </a>
-                    {link.answerKeyUrl && (
-                      <a
-                        href={link.answerKeyUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.pyqAnswerBtn}
-                        title="Download / View Official Answer Key"
-                      >
-                        <span className="material-symbols-outlined">task_alt</span>
-                        Answer Key / Answers
-                        <span className="material-symbols-outlined">open_in_new</span>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+                <Link href="/mpsc-pyq" style={{ background: '#EA580C', color: '#fff', padding: '8px 16px', borderRadius: '6px', fontSize: '13px', fontWeight: 600, textDecoration: 'none' }}>
+                  संपूर्ण MPSC संग्रह उघडा (209) →
+                </Link>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* ── Books ── */}
       <section className={styles.booksSection}>

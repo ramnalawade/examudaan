@@ -5,7 +5,7 @@
 // ============================================================
 'use client'
 
-import { useState, useEffect, useRef, useCallback, Suspense } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import styles from './pyq.module.css'
@@ -21,6 +21,18 @@ const SUBJECT_FILTERS = [
   'Reasoning',
   'Law'
 ]
+
+const SUBJECT_ICONS = {
+  All: '🌟',
+  Polity: '🏛️',
+  Geography: '🗺️',
+  History: '📜',
+  Economy: '📈',
+  Science: '🔬',
+  Marathi: '📖',
+  Reasoning: '🧩',
+  Law: '⚖️'
+}
 
 const TRENDING_TOPICS = [
   '73rd Amendment',
@@ -139,6 +151,39 @@ function PyqSearchInner() {
     setRevealedSolutions((prev) => ({ ...prev, [pyqId]: !prev[pyqId] }))
   }
 
+  // Score statistics computed dynamically as user solves MCQs
+  const scoreStats = useMemo(() => {
+    let attempted = 0
+    let correct = 0
+    let wrong = 0
+    Object.entries(selectedAnswers).forEach(([pyqId, optKey]) => {
+      const q = questions.find((item) => String(item.id) === String(pyqId))
+      if (q) {
+        attempted++
+        if (optKey === q.correct) correct++
+        else wrong++
+      }
+    })
+    const accuracy = attempted > 0 ? Math.round((correct / attempted) * 100) : 0
+    return { attempted, correct, wrong, accuracy }
+  }, [selectedAnswers, questions])
+
+  const handleResetScore = () => {
+    setSelectedAnswers({})
+    setRevealedSolutions({})
+  }
+
+  const handleToggleAllSolutions = () => {
+    const hasAnyRevealed = Object.values(revealedSolutions).some(Boolean)
+    if (hasAnyRevealed) {
+      setRevealedSolutions({})
+    } else {
+      const allTrue = {}
+      questions.forEach((q) => { allTrue[q.id] = true })
+      setRevealedSolutions(allTrue)
+    }
+  }
+
   return (
     <main className={styles.page}>
       <div className={styles.container}>
@@ -200,6 +245,51 @@ function PyqSearchInner() {
                 ))}
               </div>
             </div>
+
+            {/* Live Interactive Score Tracker Strip */}
+            {scoreStats.attempted > 0 && (
+              <div className={styles.scoreTrackerStrip}>
+                <div className={styles.scoreStatsRow}>
+                  <span>🎯 चाचणी स्कोअर:</span>
+                  <span className={`${styles.scorePill} ${styles.scorePillAttempted}`}>
+                    सोडवले: {scoreStats.attempted}
+                  </span>
+                  <span className={`${styles.scorePill} ${styles.scorePillCorrect}`}>
+                    ✓ बरोबर: {scoreStats.correct}
+                  </span>
+                  <span className={`${styles.scorePill} ${styles.scorePillWrong}`}>
+                    ✕ चूक: {scoreStats.wrong}
+                  </span>
+                  <span className={`${styles.scorePill} ${styles.scorePillAccuracy}`}>
+                    अचूकता: {scoreStats.accuracy}%
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleResetScore}
+                  className={styles.scoreResetBtn}
+                  title="Reset score"
+                >
+                  🔄 स्कोअर रीसेट करा
+                </button>
+              </div>
+            )}
+
+            {/* Direct Official MPSC PDF Repository Banner */}
+            <div className={styles.mpscBanner}>
+              <div className={styles.mpscBannerLeft}>
+                <span className={styles.mpscBadge}>🏛️ 100% Official MPSC PDFs</span>
+                <h3 className={styles.mpscBannerTitle}>
+                  संपूर्ण MPSC प्रश्नपत्रिका व अंतिम उत्तरतालिका हव्या आहेत का?
+                </h3>
+                <p className={styles.mpscBannerDesc}>
+                  राज्यसेवा, संयुक्त गट ब व क (PSI/STI/ASO), वनसेवा आणि नगर रचनाकार परीक्षांचे सर्व १३८ अधिकृत पेपर एकाच ओळीत वाचण्यासाठी आमचे नवीन स्टडी वर्कस्पेस वापरा.
+                </p>
+              </div>
+              <Link href="/mpsc-pyq" className={styles.mpscBannerBtn}>
+                MPSC प्रश्नपत्रिका व की उघडा (138) →
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -215,6 +305,7 @@ function PyqSearchInner() {
                   className={`${styles.subjectTab} ${activeSubject === sub ? styles.subjectTabActive : ''}`}
                   onClick={() => setActiveSubject(sub)}
                 >
+                  <span>{SUBJECT_ICONS[sub] || '📚'}</span>
                   <span>{sub === 'All' ? 'सर्व विषय' : sub}</span>
                   {count !== undefined && count !== null && (
                     <span className={styles.tabBadge}>{count}</span>
@@ -267,18 +358,43 @@ function PyqSearchInner() {
                 ({loading && questions.length === 0 ? 'शोधत आहे...' : `${totalCount} प्रश्न उपलब्ध`})
               </span>
             </h2>
-            {searchQuery && (
-              <button
-                type="button"
-                onClick={() => {
-                  setSearchQuery('')
-                  setActiveSubject('All')
-                }}
-                className={styles.resetSearchBtn}
-              >
-                सर्व प्रश्न पुन्हा पहा
-              </button>
-            )}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+              {questions.length > 0 && (
+                <button
+                  type="button"
+                  onClick={handleToggleAllSolutions}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #CBD5E1',
+                    color: '#334155',
+                    padding: '6px 12px',
+                    borderRadius: '8px',
+                    fontSize: '12.5px',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '4px'
+                  }}
+                  title="Toggle all explanations"
+                >
+                  <span>💡</span>
+                  <span>{Object.values(revealedSolutions).some(Boolean) ? 'स्पष्टीकरणे लपवा' : 'सर्व उत्तरे दाखवा'}</span>
+                </button>
+              )}
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSearchQuery('')
+                    setActiveSubject('All')
+                  }}
+                  className={styles.resetSearchBtn}
+                >
+                  सर्व प्रश्न पुन्हा पहा
+                </button>
+              )}
+            </div>
           </div>
 
           {/* Loading Indicator */}

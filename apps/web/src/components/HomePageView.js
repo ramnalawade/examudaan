@@ -406,7 +406,23 @@ const TESTIMONIALS = [
   },
 ]
 
-export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} }) {
+function getUrgentDaysLeft(dateStr) {
+  if (!dateStr) return null
+  const d = new Date(dateStr)
+  if (isNaN(d.getTime())) return null
+  const now = new Date()
+  const dDay = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())
+  const nowDay = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
+  return Math.ceil((dDay - nowDay) / (1000 * 60 * 60 * 24))
+}
+
+export default function HomePageView({
+  jobs = [],
+  quickUpdates = [],
+  stats = {},
+  urgentOpenings = [],
+  urgentCount = 0,
+}) {
   const { t, isMarathi } = useLanguage()
   const [activeRegion, setActiveRegion] = useState('maharashtra')
 
@@ -427,6 +443,42 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
       avg: '116.5',
     })
   }
+
+  // Dynamic Real Urgent Openings from Database with fallback
+  const displayUrgent = (urgentOpenings && urgentOpenings.length > 0)
+    ? urgentOpenings.map(item => {
+        const effectiveDeadline = item.is_walk_in && item.exam_date ? item.exam_date : item.apply_end_date
+        const daysLeft = getUrgentDaysLeft(effectiveDeadline)
+        let closingText = ''
+        if (daysLeft === 0) {
+          closingText = isMarathi ? 'आज शेवटचा दिवस' : 'Closes Today'
+        } else if (daysLeft === 1) {
+          closingText = isMarathi ? 'उद्या शेवटचा दिवस' : 'Closes Tomorrow'
+        } else if (daysLeft !== null && daysLeft <= 14) {
+          closingText = isMarathi ? `${daysLeft} दिवस शिल्लक` : `Closes in ${daysLeft} Days`
+        } else if (effectiveDeadline) {
+          const dateObj = new Date(effectiveDeadline)
+          closingText = dateObj.toLocaleDateString(isMarathi ? 'mr-IN' : 'en-IN', { day: '2-digit', month: 'short' })
+        } else {
+          closingText = isMarathi ? 'मुदत संपत आहे' : 'Closing Soon'
+        }
+
+        const org = (isMarathi && item.org_name_mr) ? item.org_name_mr : (item.org_name || item.org_acronym || 'Government Department')
+        const vac = item.total_vacancies
+          ? (isMarathi ? `${Number(item.total_vacancies).toLocaleString('mr-IN')} जागा` : `${Number(item.total_vacancies).toLocaleString('en-IN')} Posts`)
+          : (isMarathi ? 'विविध पदे' : 'Various Posts')
+
+        return {
+          id: item.id,
+          slug: item.slug || item.id,
+          title: item.title,
+          title_mr: item.title_mr,
+          dept: org,
+          vacancies: vac,
+          closingText,
+        }
+      })
+    : URGENT_OPENINGS
 
   // Choose jobs for the active region tab
   const displayOpenings = REGION_JOBS[activeRegion] || REGION_JOBS.maharashtra
@@ -470,7 +522,7 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
               <div className={styles.heroCtas}>
                 <Link href="/jobs" className={styles.ctaPrimary}>
                   <span className="material-symbols-outlined" style={{ fontSize: 20 }}>search</span>
-                  {isMarathi ? '७४०+ सक्रिय नोकऱ्या पहा →' : 'Browse 740+ Active Jobs →'}
+                  {isMarathi ? `${stats.total_jobs || '575'}+ सक्रिय नोकऱ्या पहा →` : `Browse ${stats.total_jobs || '575'}+ Active Jobs →`}
                 </Link>
 
                 {/* Primary Broadcast Channel: Telegram */}
@@ -513,7 +565,7 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
                   {isMarathi ? 'लोकप्रिय:' : 'Popular:'}
                 </span>
                 <Link href="/mpsc-pyq" style={{ fontSize: '12px', fontWeight: 600, color: '#EA580C', background: '#FFF7ED', border: '1px solid #FFEDD5', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
-                  🏛️ MPSC 2024-26 Papers (209)
+                  🏛️ MPSC 2024-26 Papers ({stats.total_pyq_papers || 209})
                 </Link>
                 <Link href="/answer-keys" style={{ fontSize: '12px', fontWeight: 600, color: '#059669', background: '#ECFDF5', border: '1px solid #A7F3D0', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
                   🔑 Answer Keys
@@ -539,17 +591,21 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
                 <div className={styles.urgentHeader}>
                   <div className={styles.urgentTitle}>
                     <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#DC2626' }}>alarm</span>
-                    <span>Urgent Exam Openings</span>
+                    <span>{isMarathi ? 'अंतिम मुदतीच्या परीक्षा जाहिराती' : 'Urgent Exam Openings'}</span>
                   </div>
-                  <span className={styles.urgentBadge}>4 Closing</span>
+                  <span className={styles.urgentBadge}>
+                    {urgentCount > 0
+                      ? (isMarathi ? `${urgentCount} अंतिम मुदत` : `${urgentCount} Closing Soon`)
+                      : (isMarathi ? `${displayUrgent.length} अंतिम मुदत` : `${displayUrgent.length} Closing Soon`)}
+                  </span>
                 </div>
 
                 <div>
-                  {URGENT_OPENINGS.map(item => (
+                  {displayUrgent.map(item => (
                     <div key={item.id} className={styles.urgentItem}>
                       <div className={styles.urgentItemTop}>
                         <Link href={`/jobs/${item.slug}`} className={styles.urgentItemTitle}>
-                          {isMarathi ? item.title_mr : item.title}
+                          {isMarathi && item.title_mr ? item.title_mr : item.title}
                         </Link>
                         <span className={styles.closingTag}>{item.closingText}</span>
                       </div>
@@ -559,7 +615,7 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
                         <strong>{item.vacancies}</strong>
                         <span style={{ marginLeft: 'auto' }}>
                           <Link href={`/jobs/${item.slug}`} className={styles.applyLink}>
-                            Apply Direct ↗
+                            {isMarathi ? 'तपशील पहा ↗' : 'Apply Direct ↗'}
                           </Link>
                         </span>
                       </div>
@@ -569,7 +625,9 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
 
                 <div className={styles.urgentFooter}>
                   <Link href="/jobs?sort=closing">
-                    View All 18 Urgent Notifications →
+                    {isMarathi
+                      ? `सर्व ${urgentCount || displayUrgent.length || 10}+ अंतिम मुदतीच्या जाहिराती पहा →`
+                      : `View All ${urgentCount || displayUrgent.length || 10} Urgent Notifications →`}
                   </Link>
                 </div>
               </div>
@@ -579,38 +637,81 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
         </div>
       </section>
 
-      {/* ════════ 2. STATS BAR (4 Columns) ════════ */}
-      <section className={styles.statsBar}>
+      {/* ════════ 2. STATS BAR (Interactive Data Points Dashboard) ════════ */}
+      <section className={styles.statsBar} aria-label="Platform Statistics">
         <div className="container">
           <div className={styles.statsGrid}>
-            <div className={styles.statBox}>
+            {/* 1. Active Exam Openings */}
+            <Link href="/jobs" className={styles.statBox} title="View all active government jobs">
               <span className={`material-symbols-outlined ${styles.statIcon}`}>work</span>
               <div>
-                <div className={styles.statValue}>{stats.total_jobs || '740'}</div>
+                <div className={styles.statValue}>{stats.total_jobs || '575'}</div>
                 <div className={styles.statLabel}>{isMarathi ? 'सक्रिय परीक्षा जाहिराती' : 'Active Exam Openings'}</div>
               </div>
-            </div>
-            <div className={styles.statBox}>
+            </Link>
+
+            {/* 2. Total Govt Vacancies */}
+            <Link href="/jobs?sort=vacancies" className={styles.statBox} title="View jobs sorted by vacancies">
               <span className={`material-symbols-outlined ${styles.statIcon}`}>trending_up</span>
               <div>
-                <div className={styles.statValue}>{stats.total_vacancies || '5,24,000+'}</div>
+                <div className={styles.statValue}>{stats.total_vacancies || '90,791'}</div>
                 <div className={styles.statLabel}>{isMarathi ? 'एकूण सरकारी जागा' : 'Total Govt Vacancies'}</div>
               </div>
-            </div>
-            <div className={styles.statBox}>
+            </Link>
+
+            {/* 3. Official Answer Keys */}
+            <Link href="/answer-keys" className={styles.statBox} title="View official answer keys and response sheets">
+              <span className={`material-symbols-outlined ${styles.statIcon}`}>key</span>
+              <div>
+                <div className={styles.statValue}>{stats.total_answer_keys || '140+'}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'अधिकृत उत्तरतालिका' : 'Official Answer Keys'}</div>
+              </div>
+            </Link>
+
+            {/* 4. Declared Exam Results */}
+            <Link href="/results" className={styles.statBox} title="Check declared exam results and merit lists">
+              <span className={`material-symbols-outlined ${styles.statIcon}`}>emoji_events</span>
+              <div>
+                <div className={styles.statValue}>{stats.total_results || '140+'}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'जाहीर परीक्षा निकाल' : 'Exam Results Declared'}</div>
+              </div>
+            </Link>
+
+            {/* 5. MPSC Question Papers */}
+            <Link href="/mpsc-pyq" className={styles.statBox} title="Official MPSC Question Papers 2024-2026">
+              <span className={`material-symbols-outlined ${styles.statIcon}`}>description</span>
+              <div>
+                <div className={styles.statValue}>{stats.total_pyq_papers || 209}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'MPSC मूळ प्रश्नपत्रिका' : 'MPSC Question Papers'}</div>
+              </div>
+            </Link>
+
+            {/* 6. 15-Yr PYQ Practice Bank */}
+            <Link href="/pyq" className={styles.statBox} title="15-Year Solved PYQ Question Bank">
+              <span className={`material-symbols-outlined ${styles.statIcon}`}>quiz</span>
+              <div>
+                <div className={styles.statValue}>{stats.total_questions || '1,100+'}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'सोडवलेले PYQ प्रश्न' : 'Solved PYQ Bank'}</div>
+              </div>
+            </Link>
+
+            {/* 7. Exam Syllabus Blueprints */}
+            <Link href="/syllabus" className={styles.statBox} title="Complete Syllabus Blueprints for 2026 Exams">
               <span className={`material-symbols-outlined ${styles.statIcon}`}>menu_book</span>
               <div>
-                <div className={styles.statValue}>280+</div>
-                <div className={styles.statLabel}>{isMarathi ? 'मोफत परीक्षा मार्गदर्शक' : 'Exam Preparation Guides'}</div>
+                <div className={styles.statValue}>{stats.total_syllabi ? `${stats.total_syllabi}+` : '280+'}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'सविस्तर अभ्यासक्रम' : 'Exam Syllabi 2026'}</div>
               </div>
-            </div>
-            <div className={styles.statBox}>
+            </Link>
+
+            {/* 8. AI-Powered Prep Tools */}
+            <Link href="/ai-tools" className={styles.statBox} title="Free AI Tools for Exam Preparation">
               <span className={`material-symbols-outlined ${styles.statIcon}`}>smart_toy</span>
               <div>
                 <div className={styles.statValue}>{stats.total_ai_tools ? `${stats.total_ai_tools}+` : '84+'}</div>
-                <div className={styles.statLabel}>{isMarathi ? 'AI अभ्यास साधने' : 'AI-Powered Study Tools'}</div>
+                <div className={styles.statLabel}>{isMarathi ? 'AI अभ्यास साधने' : 'AI Prep Study Tools'}</div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -727,7 +828,9 @@ export default function HomePageView({ jobs = [], quickUpdates = [], stats = {} 
               </h2>
             </div>
             <Link href="/jobs" className={styles.headerLink}>
-              View All 740+ Active Notifications →
+              {isMarathi
+                ? `सर्व ${stats.total_jobs || '575'}+ सक्रिय जाहिराती पहा →`
+                : `View All ${stats.total_jobs || '575'}+ Active Notifications →`}
             </Link>
           </div>
 

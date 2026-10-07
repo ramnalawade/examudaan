@@ -58,14 +58,8 @@ async function getLatestRecruitments() {
          AND (en.notification_type = 'recruitment' OR en.notification_type IS NULL)
          AND (en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE)
        ORDER BY
-         (CASE
-           WHEN (en.apply_end_date >= CURRENT_DATE AND en.apply_end_date <= CURRENT_DATE + interval '7 days') THEN 1
-           WHEN (en.apply_end_date > CURRENT_DATE + interval '7 days' OR (en.is_walk_in = TRUE AND en.exam_date >= CURRENT_DATE)) THEN 2
-           ELSE 3
-         END) ASC,
-         (CASE WHEN en.apply_end_date >= CURRENT_DATE AND en.apply_end_date <= CURRENT_DATE + interval '7 days' THEN en.apply_end_date END) ASC,
-         en.published_at DESC NULLS LAST,
-         en.created_at DESC
+         COALESCE(en.published_at, en.created_at) DESC NULLS LAST,
+         en.id DESC
        LIMIT 6`
     )
     return notifications
@@ -146,6 +140,64 @@ async function getSiteStats() {
   return await getPlatformStats()
 }
 
+// ---- Fetch real live urgent recruitment openings closing soon ----
+async function getUrgentOpenings() {
+  try {
+    const openings = await query(
+      `SELECT
+         en.id,
+         en.title,
+         en.title_mr,
+         en.slug,
+         en.notification_type,
+         en.apply_start_date,
+         en.apply_end_date,
+         en.exam_date,
+         en.total_vacancies,
+         en.is_walk_in,
+         o.name AS org_name,
+         o.name_mr AS org_name_mr,
+         o.acronym AS org_acronym
+       FROM exam_notifications en
+       JOIN organizations o ON o.id = en.organization_id
+       WHERE en.status = 'published'
+         AND (en.notification_type = 'recruitment' OR en.notification_type IS NULL)
+         AND (
+           (en.apply_end_date IS NOT NULL AND en.apply_end_date >= CURRENT_DATE)
+           OR (en.is_walk_in = TRUE AND en.exam_date >= CURRENT_DATE)
+         )
+       ORDER BY
+         COALESCE(en.apply_end_date, en.exam_date) ASC,
+         en.id DESC
+       LIMIT 4`
+    )
+    return openings || []
+  } catch (err) {
+    console.error('[homepage] DB error fetching urgent openings:', err.message)
+    return []
+  }
+}
+
+// ---- Count total recruitment openings closing in next 14 days ----
+async function getUrgentCount() {
+  try {
+    const rows = await query(
+      `SELECT COUNT(*) AS total
+       FROM exam_notifications
+       WHERE status = 'published'
+         AND (notification_type = 'recruitment' OR notification_type IS NULL)
+         AND (
+           (apply_end_date IS NOT NULL AND apply_end_date >= CURRENT_DATE AND apply_end_date <= CURRENT_DATE + interval '14 days')
+           OR (is_walk_in = TRUE AND exam_date >= CURRENT_DATE AND exam_date <= CURRENT_DATE + interval '14 days')
+         )`
+    )
+    return parseInt(rows[0]?.total || '0', 10)
+  } catch (err) {
+    console.error('[homepage] DB error fetching urgent count:', err.message)
+    return 0
+  }
+}
+
 // ---- Helper to map notification row to JobCard props ----
 function toJobCardShape(n) {
   return {
@@ -177,14 +229,18 @@ function toJobCardShape(n) {
     ai_extracted_data: n.ai_extracted_data,
     status: n.status,
     notification_type: n.notification_type || 'recruitment',
+    published_at: n.published_at,
+    created_at: n.created_at,
   }
 }
 
 export default async function HomePage() {
-  const [recruitments, quickUpdates, stats] = await Promise.all([
+  const [recruitments, quickUpdates, stats, urgentOpenings, urgentCount] = await Promise.all([
     getLatestRecruitments(),
     getQuickUpdates(),
     getSiteStats(),
+    getUrgentOpenings(),
+    getUrgentCount(),
   ])
 
   const jobs = recruitments.map(toJobCardShape)
@@ -194,6 +250,8 @@ export default async function HomePage() {
       jobs={jobs}
       quickUpdates={quickUpdates}
       stats={stats}
+      urgentOpenings={urgentOpenings}
+      urgentCount={urgentCount}
     />
   )
 }

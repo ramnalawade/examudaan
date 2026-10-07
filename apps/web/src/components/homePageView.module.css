@@ -325,61 +325,86 @@
   text-decoration: none;
 }
 
-/* ── Stats Bar ───────────────────────────────── */
+/* ── Stats Bar (Interactive Data Points Dashboard) ──────── */
 .statsBar {
   background: #ffffff;
   border-bottom: 1px solid var(--outline-variant, #E7E5E4);
+  padding: 16px 0;
 }
 
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  padding: 14px 0;
+  gap: 12px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 14px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 }
 
 .statBox {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 8px 18px;
-  border-right: 1px solid var(--outline-variant, #E7E5E4);
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface-container-lowest, #ffffff);
+  border: 1px solid var(--outline-variant, #E7E5E4);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+  cursor: pointer;
 }
 
-.statBox:last-child {
-  border-right: none;
+.statBox:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary, #EA580C);
+  background: var(--surface-container-low, #FFF7ED);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.08);
 }
 
-@media (max-width: 768px) {
-  .statBox:nth-child(2) {
-    border-right: none;
-  }
+.statBox:hover .statIcon {
+  transform: scale(1.1);
+  color: var(--primary, #EA580C);
+}
+
+.statBox:hover .statValue {
+  color: var(--primary, #EA580C);
 }
 
 .statIcon {
   font-size: 26px;
   color: var(--primary, #EA580C);
+  flex-shrink: 0;
+  transition: transform 0.18s ease, color 0.18s ease;
 }
 
 .statValue {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
   color: var(--on-surface, #1C1917);
   line-height: 1.1;
   font-family: var(--font-outfit, 'Outfit', sans-serif);
+  transition: color 0.18s ease;
 }
 
 .statLabel {
   font-size: 12px;
   color: var(--secondary, #44403C);
-  margin-top: 2px;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ── Section Titles ──────────────────────────── */

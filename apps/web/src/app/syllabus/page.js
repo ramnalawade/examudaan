@@ -5,6 +5,7 @@
 
 import { SYLLABUS_EXAMS } from '@/lib/syllabusData'
 import Link from 'next/link'
+import SyllabusListingClient from './SyllabusListingClient'
 import styles from './syllabus.module.css'
 
 export const metadata = {
@@ -16,45 +17,45 @@ export const metadata = {
   },
 }
 
-// Exam level filter groups
-const LEVEL_FILTERS = ['All', 'State', 'Central']
-
 export default function SyllabusPage() {
+  const totalPYQs = SYLLABUS_EXAMS.reduce((a, e) => {
+    const pdfsCount = e.officialPdfs?.length || 0
+    return a + (pdfsCount > 0 ? pdfsCount : (e.pyqLinks?.length || 0))
+  }, 0)
+
   return (
     <main className={styles.syllabusPage}>
       {/* ── Hero ── */}
       <section className={styles.hero}>
         <div className="container">
           <div className={styles.heroContent}>
-            <span className={styles.heroLabel}>📚 Free Resource</span>
+            <span className={styles.heroLabel}>📚 Free Exam Resource</span>
             <h1>Exam Syllabus & Previous Year Papers</h1>
-            <p>Complete topic-wise syllabus, paper structure, and official PYQ links for every major government exam. No coaching fees — free forever.</p>
+            <p>
+              Complete topic-wise syllabus, paper structure, and official in-browser PYQ reader for every major Maharashtra & Central government exam. 100% authentic, free forever.
+            </p>
             <div className={styles.heroStats}>
               <div className={styles.stat}>
                 <strong>{SYLLABUS_EXAMS.length}</strong>
                 <span>Exams Covered</span>
               </div>
               <div className={styles.stat}>
-                <strong>{SYLLABUS_EXAMS.reduce((a, e) => a + e.pyqLinks.length, 0)}+</strong>
-                <span>PYQ Links</span>
+                <strong>{totalPYQs}+</strong>
+                <span>Official Question Papers</span>
               </div>
               <div className={styles.stat}>
                 <strong>2026</strong>
-                <span>Updated For</span>
+                <span>Latest Syllabus Updated</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Exam Cards ── */}
+      {/* ── Interactive Exam Cards Catalog ── */}
       <section className={styles.examSection}>
         <div className="container">
-          <div className={styles.examGrid}>
-            {SYLLABUS_EXAMS.map(exam => (
-              <ExamCard key={exam.slug} exam={exam} />
-            ))}
-          </div>
+          <SyllabusListingClient exams={SYLLABUS_EXAMS} />
         </div>
       </section>
 
@@ -157,83 +158,5 @@ export default function SyllabusPage() {
         </div>
       </section>
     </main>
-  )
-}
-
-// ── Exam Card Component ──────────────────────────────────────
-function ExamCard({ exam }) {
-  const totalPapers = exam.papers.reduce((a, s) => a + s.papers.length, 0)
-  return (
-    <div className={styles.examCard} style={{ display: 'flex', flexDirection: 'column' }}>
-      {/* Color accent bar */}
-      <div className={styles.examCardBar} style={{ background: exam.color }} />
-
-      {/* Header */}
-      <div className={styles.examCardHeader}>
-        <span className={`material-symbols-outlined ${styles.examIcon}`} style={{ color: exam.color }}>
-          {exam.logo}
-        </span>
-        <div>
-          <h3 className={styles.examName}>{exam.nameEn}</h3>
-          <p className={styles.examBody}>{exam.conductingBody}</p>
-        </div>
-        <span className={styles.examLevel}
-          data-level={exam.examLevel}>
-          {exam.examLevel}
-        </span>
-      </div>
-
-      {/* Posts */}
-      <div className={styles.examPosts}>
-        {exam.targetPosts.slice(0, 3).map(p => (
-          <span key={p} className={styles.postPill}>{p}</span>
-        ))}
-        {exam.targetPosts.length > 3 && (
-          <span className={styles.postPillMore}>+{exam.targetPosts.length - 3} more</span>
-        )}
-      </div>
-
-      {/* Meta row */}
-      <div className={styles.examMeta}>
-        <div className={styles.metaItem}>
-          <span className={styles.metaLabel}>Eligibility</span>
-          <span className={styles.metaVal}>{exam.eligibility.length > 40 ? exam.eligibility.slice(0, 40) + '…' : exam.eligibility}</span>
-        </div>
-        <div className={styles.metaItem}>
-          <span className={styles.metaLabel}>Age</span>
-          <span className={styles.metaVal}>{exam.ageLimit.min}–{exam.ageLimit.max} yrs</span>
-        </div>
-        <div className={styles.metaItem}>
-          <span className={styles.metaLabel}>Stages</span>
-          <span className={styles.metaVal}>{exam.stages.join(' → ')}</span>
-        </div>
-      </div>
-
-      {/* Quick Direct Links to Papers & Keys */}
-      <div className={styles.examQuickLinks}>
-        <Link
-          href={exam.slug.startsWith('mpsc-') ? '/mpsc-pyq' : '/question-papers'}
-          className={styles.examQuickLink}
-          title="View official previous year question papers"
-        >
-          <span className="material-symbols-outlined" style={{ fontSize: 14 }}>description</span>
-          <span>{exam.slug.startsWith('mpsc-') ? 'MPSC Papers (209)' : 'Papers'}</span>
-        </Link>
-        <Link href={`/answer-keys`} className={styles.examQuickLink} title="View official answer keys">
-          <span className="material-symbols-outlined" style={{ fontSize: 14 }}>key</span>
-          <span>Keys</span>
-        </Link>
-        <Link href={`/syllabus/${exam.slug}`} className={styles.examQuickLink} style={{ marginLeft: 'auto', background: 'var(--primary)', color: '#fff', borderColor: 'var(--primary)' }}>
-          <span>Full Syllabus →</span>
-        </Link>
-      </div>
-
-      {/* Footer */}
-      <div className={styles.examCardFooter}>
-        <span>{totalPapers} papers</span>
-        <span>{exam.pyqLinks.length} PYQ resources</span>
-        <Link href={`/syllabus/${exam.slug}`} className={styles.viewBtn}>View Syllabus →</Link>
-      </div>
-    </div>
   )
 }
