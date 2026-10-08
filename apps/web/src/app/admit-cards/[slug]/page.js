@@ -4,6 +4,7 @@
 // documents checklist, all application_links, org info.
 // ============================================================
 
+import { cache } from 'react'
 import Link from 'next/link'
 import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
@@ -12,6 +13,9 @@ import { AdmitCardDownloadSteps, AdmitCardDocsToCarry } from '../../../component
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 
+// ISR cache — revalidate every 5 minutes for instant edge delivery
+export const revalidate = 300
+
 function formatDate(d) {
   if (!d) return 'TBA'
   try {
@@ -19,7 +23,8 @@ function formatDate(d) {
   } catch { return 'TBA' }
 }
 
-async function getAdmitCardData(slugParam) {
+const getAdmitCardData = cache(async function getAdmitCardData(slugParam) {
+  if (!slugParam || typeof slugParam !== 'string') return null
   // 1. Exact match on slug column
   let en = await queryOne(
     `SELECT en.*, o.name AS org_name, o.name_mr AS org_name_mr, o.acronym AS org_acronym,
@@ -79,7 +84,7 @@ async function getAdmitCardData(slugParam) {
     [en.id]
   )
   return { en, related }
-}
+})
 
 const TYPE_TO_PATH = {
   recruitment: '/jobs',
@@ -92,18 +97,26 @@ const TYPE_TO_PATH = {
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const data = await getAdmitCardData(resolvedParams.slug)
-  if (!data) return { title: 'Admit Card | ExamUdaan' }
+  if (!data) return { title: { absolute: 'Admit Card | ExamUdaan' } }
   const { en } = data
+
+  let rawTitle = en.seo_metadata?.meta_title || `${en.title} Admit Card`
+  let cleanBase = rawTitle.replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '').trim()
+  if (cleanBase.length > 44) {
+    cleanBase = cleanBase.slice(0, 41).trim() + '...'
+  }
+  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Admit Card | ExamUdaan'
+
   const rawUrl2 = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
   const siteUrl2 = (rawUrl2 && !rawUrl2.includes('localhost')) ? rawUrl2 : 'https://examudaan.in'
   const targetSection = TYPE_TO_PATH[en.notification_type] || '/admit-cards'
   const canonicalSlug = en.slug || resolvedParams.slug
   const canonicalUrl = `${siteUrl2}${targetSection}/${canonicalSlug}`
   return {
-    title: `${en.title} Admit Card — Download Hall Ticket | ExamUdaan`,
+    title: { absolute: metaTitle },
     description: `Download ${en.title} admit card / hall ticket from ${en.org_name}. Exam date: ${formatDate(en.exam_date)}. Check exam centers and download steps.`.slice(0, 160),
     alternates: { canonical: canonicalUrl },
-    openGraph: { title: `${en.title} Admit Card`, url: canonicalUrl, type: 'article', siteName: 'ExamUdaan.in' },
+    openGraph: { title: metaTitle, url: canonicalUrl, type: 'article', siteName: 'ExamUdaan.in' },
   }
 }
 

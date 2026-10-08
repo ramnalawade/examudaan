@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
   if (!tool) return { title: 'AI Tools | ExamUdaan' }
   const canonicalUrl = `https://examudaan.in/ai-tools/${tool.slug}`
   return {
-    title: `${tool.name} — How to Use for Exam Prep & Research | ExamUdaan AI Tools`,
+    title: `${tool.name} — AI Guide & Prompts`,
     description: tool.tagline,
     alternates: {
       canonical: canonicalUrl,

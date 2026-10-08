@@ -10,17 +10,29 @@ import mpscLocalPapers from '@/lib/mpscLocalPapers.json'
 import mpscPairedExams from '@/lib/mpscPairedExams.json'
 
 export const metadata = {
-  title: 'Official Previous Year Question Papers (PYQ) & Answer Keys — 2018 to 2024 | ExamUdaan',
-  description: 'View official Maharashtra & Central Government previous year question papers with answer keys for MPSC, Police Bharti, Talathi, ZP, UPSC, SSC, and RRB. Read in-browser — 100% direct official sources.',
+  title: 'Previous Year Question Papers & Answer Keys',
+  description: 'Official MPSC question papers 2021-2026, Police Bharti, Talathi, ZP, UPSC, SSC & RRB previous year papers with answer keys. Read free in browser from official sources.',
+  keywords: [
+    'MPSC question papers', 'Maharashtra government exam papers',
+    'police bharti question paper', 'talathi question paper',
+    'previous year question papers', 'answer keys PDF',
+    'SSC CGL question paper', 'RRB NTPC question paper',
+    'UPSC question paper', 'ZP bharti paper'
+  ],
   alternates: {
     canonical: 'https://examudaan.in/question-papers',
   },
   openGraph: {
-    title: 'Official Previous Year Question Papers (PYQ) with Answer Keys | ExamUdaan',
-    description: 'View official question papers and answer keys for MPSC, Police Bharti, Talathi, and Central exams — right in your browser.',
+    title: 'Previous Year Question Papers & Answer Keys | ExamUdaan',
+    description: 'Official MPSC, Police Bharti, Talathi, SSC, RRB previous year papers with answer keys — read free in browser from official sources.',
     url: 'https://examudaan.in/question-papers',
     siteName: 'ExamUdaan.in',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Previous Year Question Papers & Answer Keys | ExamUdaan',
+    description: 'Official MPSC, Police Bharti, SSC, RRB question papers with answer keys — free in browser.',
   },
 }
 
@@ -257,7 +269,7 @@ export default function QuestionPapersPage() {
                   <span>🏛️</span> महाराष्ट्र लोकसेवा आयोग अधिकृत संग्रह (mpsc.gov.in)
                 </span>
                 <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '22px', fontWeight: 800, color: '#111827', margin: 0 }}>
-                  MPSC मूळ प्रश्नपत्रिका व अंतिम उत्तरतालिका (2024–2026)
+                  MPSC मूळ प्रश्नपत्रिका व अंतिम उत्तरतालिका (2021–2026)
                 </h2>
                 <p style={{ margin: '4px 0 0 0', fontSize: '14px', color: '#4B5563' }}>
                   थेट mpsc.gov.in कडून संकलित केलेल्या {mpscLocalPapers.length} अधिकृत PDF. ब्राउझरमध्ये वाचा किंवा थेट डाउनलोड करा.
@@ -293,10 +305,16 @@ export default function QuestionPapersPage() {
               boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
               marginBottom: '20px'
             }}>
-              {/* Desktop Table Header */}
               <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'minmax(300px, 2.2fr) minmax(210px, 1.3fr) minmax(210px, 1.3fr) 130px',
+                overflowX: 'auto',
+                WebkitOverflowScrolling: 'touch',
+                width: '100%'
+              }}>
+                <div style={{ minWidth: '780px' }}>
+                  {/* Desktop Table Header */}
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'minmax(300px, 2.2fr) minmax(210px, 1.3fr) minmax(210px, 1.3fr) 130px',
                 background: '#F8FAFC',
                 borderBottom: '1px solid #E5E7EB',
                 padding: '12px 18px',
@@ -348,9 +366,14 @@ export default function QuestionPapersPage() {
                           </span>
                         )}
                       </div>
-                      <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '14px', fontWeight: 700, color: '#1E293B', margin: '0 0 2px 0', lineHeight: 1.35 }}>
-                        {row.title}
-                      </h3>
+                      <Link
+                        href={`/mpsc-pyq?docId=${qp ? qp.id : ak?.id}`}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '14px', fontWeight: 700, color: '#1E293B', margin: '0 0 2px 0', lineHeight: 1.35, cursor: 'pointer' }}>
+                          {row.title}
+                        </h3>
+                      </Link>
                       {row.titleMr && row.titleMr !== row.title && (
                         <p style={{ fontSize: '11.5px', color: '#64748B', margin: 0, lineHeight: 1.3 }}>
                           {row.titleMr}
@@ -377,7 +400,7 @@ export default function QuestionPapersPage() {
                               gap: '4px'
                             }}
                           >
-                            <span>👁️</span> Paper
+                            <span>📄</span> View Paper
                           </Link>
                           <a
                             href={qp.localPath}
@@ -423,7 +446,7 @@ export default function QuestionPapersPage() {
                               gap: '4px'
                             }}
                           >
-                            <span>✓</span> Key
+                            <span>✓</span> View Key
                           </Link>
                           <a
                             href={ak.localPath}
@@ -476,6 +499,8 @@ export default function QuestionPapersPage() {
                   </div>
                 )
               })}
+                </div>
+              </div>
             </div>
 
             {/* View All MPSC CTA Bar */}

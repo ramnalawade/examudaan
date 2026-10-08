@@ -4,6 +4,7 @@
 // selection context, all application_links, org info.
 // ============================================================
 
+import { cache } from 'react'
 import Link from 'next/link'
 import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
@@ -12,6 +13,9 @@ import { ResultCheckSteps } from '../../../components/DetailActionSteps'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 
+// ISR cache — revalidate every 5 minutes for instant edge delivery
+export const revalidate = 300
+
 function formatDate(d) {
   if (!d) return 'TBA'
   try {
@@ -19,7 +23,8 @@ function formatDate(d) {
   } catch { return 'TBA' }
 }
 
-async function getResultData(slugParam) {
+const getResultData = cache(async function getResultData(slugParam) {
+  if (!slugParam || typeof slugParam !== 'string') return null
   // 1. Exact match on slug column
   let en = await queryOne(
     `SELECT en.*, o.name AS org_name, o.name_mr AS org_name_mr, o.acronym AS org_acronym,
@@ -79,7 +84,7 @@ async function getResultData(slugParam) {
     [en.id]
   )
   return { en, related }
-}
+})
 
 const TYPE_TO_PATH = {
   recruitment: '/jobs',
@@ -91,12 +96,24 @@ const TYPE_TO_PATH = {
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
+  if (
+    resolvedParams.slug === 'view-details' ||
+    resolvedParams.slug === 'results' ||
+    resolvedParams.slug === 'all-results'
+  ) {
+    return { title: { absolute: 'Latest Exam Results 2026 | ExamUdaan' } }
+  }
   const data = await getResultData(resolvedParams.slug)
-  if (!data) return { title: 'Result | ExamUdaan' }
+  if (!data) return { title: { absolute: 'Exam Result | ExamUdaan' } }
   const { en } = data
-  const metaTitle =
-    en.seo_metadata?.meta_title ||
-    `${en.title} Result — Check Scorecard | ExamUdaan`
+
+  let rawTitle = en.seo_metadata?.meta_title || `${en.title} Result`
+  let cleanBase = rawTitle.replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '').trim()
+  if (cleanBase.length > 44) {
+    cleanBase = cleanBase.slice(0, 41).trim() + '...'
+  }
+  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Exam Result | ExamUdaan'
+
   const metaDesc =
     en.seo_metadata?.meta_description ||
     `${en.title} result declared by ${en.org_name}. Download scorecard, check merit list, and find out next steps.`
@@ -106,7 +123,7 @@ export async function generateMetadata({ params }) {
   const canonicalSlug = en.slug || resolvedParams.slug
   const canonicalUrl = `${siteUrl}${targetSection}/${canonicalSlug}`
   return {
-    title: metaTitle,
+    title: { absolute: metaTitle },
     description: metaDesc.slice(0, 160),
     alternates: { canonical: canonicalUrl },
     openGraph: { title: metaTitle, description: metaDesc.slice(0, 160), url: canonicalUrl, type: 'article', siteName: 'ExamUdaan.in' },
@@ -115,6 +132,13 @@ export async function generateMetadata({ params }) {
 
 export default async function ResultDetailPage({ params }) {
   const resolvedParams = await params
+  if (
+    resolvedParams.slug === 'view-details' ||
+    resolvedParams.slug === 'results' ||
+    resolvedParams.slug === 'all-results'
+  ) {
+    permanentRedirect('/results')
+  }
   const data = await getResultData(resolvedParams.slug)
 
   if (!data) {

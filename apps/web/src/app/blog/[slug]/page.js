@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
   const canonicalUrl = `https://examudaan.in/blog/${post.slug}`
 
   return {
-    title: `${post.title} — ExamUdaan`,
+    title: post.title,
     description: post.excerpt,
     keywords: [post.primaryKeyword, ...(post.secondaryKeywords || [])],
     alternates: {

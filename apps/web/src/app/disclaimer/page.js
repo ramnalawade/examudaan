@@ -7,12 +7,22 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '../../lib/constants'
 
 export const metadata = {
-  title: 'Disclaimer & Non-Affiliation Policy — ExamUdaan.in',
+  title: 'Disclaimer \u2014 Non-Affiliation Policy | ExamUdaan',
   description: 'ExamUdaan.in is an independent recruitment aggregation platform and is NOT affiliated with any central or state government organization or recruiting commission.',
+  keywords: ['ExamUdaan disclaimer', 'non-affiliation', 'independent exam portal', 'not government website'],
   alternates: {
     canonical: 'https://examudaan.in/disclaimer',
   },
+  openGraph: {
+    title: 'Disclaimer \u2014 Non-Affiliation Policy | ExamUdaan',
+    description: 'ExamUdaan.in is independent and NOT affiliated with any government organization.',
+    url: 'https://examudaan.in/disclaimer',
+    siteName: 'ExamUdaan.in',
+    type: 'website',
+  },
+  twitter: { card: 'summary', title: 'Disclaimer | ExamUdaan' },
 }
+
 
 export default function DisclaimerPage() {
   const points = [

@@ -36,24 +36,54 @@ const TYPE_BADGE = {
   other:       { label: 'Notice',      color: '#6B7280', bg: '#F3F4F6' },
 }
 
+function parseDateParts(dateVal) {
+  if (!dateVal) return null
+  if (typeof dateVal === 'string') {
+    const match = dateVal.match(/^(\d{4})-(\d{2})-(\d{2})/)
+    if (match) {
+      return {
+        year: parseInt(match[1], 10),
+        month: parseInt(match[2], 10) - 1,
+        day: parseInt(match[3], 10),
+      }
+    }
+  }
+  const d = new Date(dateVal)
+  if (isNaN(d.getTime())) return null
+  return { year: d.getFullYear(), month: d.getMonth(), day: d.getDate() }
+}
+
+function getTodayISTParts() {
+  try {
+    const formatter = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Kolkata',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    })
+    const parts = formatter.format(new Date()).split('-').map(Number)
+    return { year: parts[0], month: parts[1] - 1, day: parts[2] }
+  } catch {
+    const now = new Date()
+    return { year: now.getFullYear(), month: now.getMonth(), day: now.getDate() }
+  }
+}
+
 function getDaysLeft(dateStr) {
-  if (!dateStr) return null
-  const end = new Date(dateStr)
-  if (isNaN(end.getTime())) return null
-  const now = new Date()
-  // Compare dates at start of day to avoid timezone drift near midnight
-  const endDay = Date.UTC(end.getFullYear(), end.getMonth(), end.getDate())
-  const nowDay = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
-  return Math.ceil((endDay - nowDay) / (1000 * 60 * 60 * 24))
+  const target = parseDateParts(dateStr)
+  if (!target) return null
+  const today = getTodayISTParts()
+  const endDay = Date.UTC(target.year, target.month, target.day)
+  const nowDay = Date.UTC(today.year, today.month, today.day)
+  return Math.round((endDay - nowDay) / (1000 * 60 * 60 * 24))
 }
 
 function getDaysSince(dateStr) {
-  if (!dateStr) return null
-  const d = new Date(dateStr)
-  if (isNaN(d.getTime())) return null
-  const now = new Date()
-  const dDay = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())
-  const nowDay = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
+  const target = parseDateParts(dateStr)
+  if (!target) return null
+  const today = getTodayISTParts()
+  const dDay = Date.UTC(target.year, target.month, target.day)
+  const nowDay = Date.UTC(today.year, today.month, today.day)
   const diff = Math.floor((nowDay - dDay) / (1000 * 60 * 60 * 24))
   return diff >= 0 ? diff : 0
 }
@@ -102,7 +132,7 @@ export default function JobCard({ job }) {
 
   // ---- Badge priority: CLOSED > URGENT (CLOSING SOON) > FRESH (NEW TODAY) > WALK-IN ----
   const isClosed = status === 'closed' || (daysLeft !== null && daysLeft < 0)
-  const isUrgent = !isClosed && daysLeft !== null && daysLeft <= 3
+  const isUrgent = !isClosed && daysLeft !== null && daysLeft >= 0 && daysLeft <= 3
   const isFresh = !isClosed && !isUrgent && daysAgo !== null && daysAgo <= 3
 
   let urgencyLabel = null
@@ -121,7 +151,7 @@ export default function JobCard({ job }) {
     } else if (daysLeft === 1) {
       urgencyLabel = isMr ? 'उद्या शेवटचा दिवस' : 'ENDS TOMORROW'
       urgencyStyle = { background: '#FEF3C7', color: '#B45309', border: '1px solid #FDE68A' }
-    } else {
+    } else if (daysLeft > 1) {
       urgencyLabel = isMr ? `${daysLeft} दिवस शिल्लक` : `${daysLeft} DAYS LEFT`
       urgencyStyle = { background: '#FEF3C7', color: '#B45309', border: '1px solid #FDE68A' }
     }

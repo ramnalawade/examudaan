@@ -580,7 +580,12 @@ export default function PyqSearchPage() {
     <Suspense
       fallback={
         <div style={{ padding: '60px 20px', textAlign: 'center', background: '#fffbf5', minHeight: '100vh' }}>
-          लोड होत आहे...
+          <h1 style={{ fontSize: '24px', fontWeight: 800, color: '#1F2937', marginBottom: '12px' }}>
+            MPSC, TCS तलाठी व पोलीस भरती PYQ बँक
+          </h1>
+          <p style={{ fontSize: '14px', color: '#6B7280', margin: '0 auto 20px' }}>
+            १५ वर्षांचा विषयवार प्रश्नसंच लोड होत आहे...
+          </p>
         </div>
       }
     >

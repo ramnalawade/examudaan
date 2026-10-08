@@ -6,7 +6,7 @@
 import CareerExplorerClient from './CareerExplorerClient'
 
 export const metadata = {
-  title: 'Career Options After 10th & 12th — Science, Commerce, Arts Career Guide 2026 | ExamUdaan',
+  title: 'Career Options After 10th & 12th Guide 2026',
   description:
     'Comprehensive career guide for students in Maharashtra & India. Explore Science (Engineering, MBBS, BDS, BAMS, BHMS, ISRO), Commerce (CA, Investment Banking, MBA), Arts (IAS, Law, Psychology), and Polytechnic with salary, required subjects, entrance exams & top colleges.',
   alternates: { canonical: 'https://examudaan.in/career' },
@@ -23,7 +23,7 @@ export const metadata = {
     'highest paying careers in india'
   ],
   openGraph: {
-    title: 'Career Compass 2026: Stream & Career Options After 10th & 12th | ExamUdaan',
+    title: 'Career Options After 10th & 12th Guide 2026 | ExamUdaan',
     description:
       'In-depth guide for Science, Commerce, Arts & Polytechnic. Realistic salaries, entrance exams, subjects to score in, future AI scope, and top colleges.',
     url: 'https://examudaan.in/career',

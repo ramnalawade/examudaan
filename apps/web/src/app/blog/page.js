@@ -7,7 +7,7 @@ import BlogClientView from './BlogClientView'
 import { getAllBlogPosts } from '../../lib/blogData'
 
 export const metadata = {
-  title: 'Exam Preparation Blog & Study Guides | MPSC, Police Bharti, Talathi — ExamUdaan',
+  title: 'Exam Prep Blog \u2014 MPSC, Police Bharti & Talathi Guides',
   description: 'In-depth preparation blueprints, 90-day micro-study plans, 10-year PYQ trend analysis, and career guidance for Maharashtra government competitive examinations.',
   keywords: [
     'how to crack mpsc in 6 months',
@@ -21,12 +21,19 @@ export const metadata = {
     canonical: 'https://examudaan.in/blog',
   },
   openGraph: {
-    title: 'Exam Preparation Blog & Guides — ExamUdaan.in',
-    description: 'In-depth preparation blueprints, 90-day study plans, and 10-year PYQ trend analysis for MPSC, Police Bharti, Talathi, and SSC CGL.',
+    title: 'Exam Prep Blog \u2014 MPSC, Police Bharti & Talathi Guides',
+    description: 'Prep blueprints, 90-day study plans, and PYQ analysis for MPSC, Police Bharti & Talathi.',
     url: 'https://examudaan.in/blog',
+    siteName: 'ExamUdaan.in',
     type: 'website',
   },
+  twitter: {
+    card: 'summary',
+    title: 'Exam Prep Blog | ExamUdaan',
+    description: 'MPSC, Police Bharti & Talathi preparation guides.',
+  },
 }
+
 
 export const revalidate = 86400 // Daily ISR refresh
 

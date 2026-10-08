@@ -6,10 +6,26 @@
 import ListingPage from '../../components/ListingPage'
 
 export const metadata = {
-  title: 'Government Jobs 2026 — Apply Online | ExamUdaan',
-  description: 'Browse latest government jobs. Filter by organization, education, state. MPSC, UPSC, SSC, Railway, Banking & more.',
+  title: 'Government Jobs 2026 — Apply Online',
+  description: 'Browse 270+ latest Maharashtra & India government jobs 2026. MPSC, Police Bharti, SSC, RRB, Banking, ZP, BMC — filter by qualification, state & salary.',
+  keywords: [
+    'government jobs 2026', 'sarkari naukri', 'MPSC recruitment', 'Maharashtra govt jobs',
+    'SSC jobs', 'Railway jobs', 'Banking jobs', 'police bharti', 'ZP bharti', 'BMC recruitment'
+  ],
   alternates: {
     canonical: 'https://examudaan.in/jobs',
+  },
+  openGraph: {
+    title: 'Government Jobs 2026 — Apply Online | ExamUdaan',
+    description: 'Browse 270+ latest Maharashtra & India government job notifications. MPSC, Police Bharti, SSC, RRB, Banking & more.',
+    url: 'https://examudaan.in/jobs',
+    siteName: 'ExamUdaan.in',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Government Jobs 2026 | ExamUdaan',
+    description: '270+ latest Maharashtra & India govt job notifications — MPSC, SSC, RRB, Banking, Police Bharti.',
   },
 }
 

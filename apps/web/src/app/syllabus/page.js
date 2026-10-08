@@ -9,13 +9,30 @@ import SyllabusListingClient from './SyllabusListingClient'
 import styles from './syllabus.module.css'
 
 export const metadata = {
-  title: 'Exam Syllabus 2026 — MPSC, UPSC, IBPS, SSC, Police Bharti | ExamUdaan',
-  description: 'Download complete syllabus and previous year question papers (PYQ) for MPSC State Services, UPSC CSE, IBPS PO, SSC CGL, and Maharashtra Police Bharti 2026.',
-  keywords: 'MPSC syllabus 2026, UPSC syllabus, IBPS PO syllabus, SSC CGL syllabus, police bharti syllabus, exam syllabus download, PYQ papers',
+  title: 'Exam Syllabus 2026 \u2014 Topic-wise Study Guide',
+  description: 'Download complete syllabus for MPSC State Services, UPSC CSE, IBPS PO, SSC CGL & Maharashtra Police Bharti 2026. Topic-wise breakdown with previous year papers.',
+  keywords: [
+    'MPSC syllabus 2026', 'UPSC syllabus', 'IBPS PO syllabus', 'SSC CGL syllabus',
+    'police bharti syllabus', 'exam syllabus download', 'MPSC PYQ papers',
+    'Maharashtra exam syllabus', 'talathi syllabus'
+  ],
   alternates: {
     canonical: 'https://examudaan.in/syllabus',
   },
+  openGraph: {
+    title: 'Exam Syllabus 2026 \u2014 Topic-wise Study Guide | ExamUdaan',
+    description: 'MPSC, UPSC, SSC, Police Bharti syllabus with topic-wise breakdown & previous year papers.',
+    url: 'https://examudaan.in/syllabus',
+    siteName: 'ExamUdaan.in',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Exam Syllabus 2026 | ExamUdaan',
+    description: 'MPSC, UPSC, SSC & Police Bharti syllabus with topic-wise breakdown & PYQs.',
+  },
 }
+
 
 export default function SyllabusPage() {
   const totalPYQs = SYLLABUS_EXAMS.reduce((a, e) => {
@@ -74,7 +91,7 @@ export default function SyllabusPage() {
                 </div>
                 <span className={styles.hubBadge} style={{ background: '#FFEDD5', color: '#C2410C' }}>209 Official PDFs</span>
               </div>
-              <h3 className={styles.hubCardTitle}>MPSC Papers & Keys (2024–2026)</h3>
+              <h3 className={styles.hubCardTitle}>MPSC Papers & Keys (2021–2026)</h3>
               <p className={styles.hubCardDesc}>
                 Official MPSC State Services, Group B & C Combined, and screening test question papers with final answer keys from mpsc.gov.in.
               </p>

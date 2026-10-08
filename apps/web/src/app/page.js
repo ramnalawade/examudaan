@@ -56,7 +56,7 @@ async function getLatestRecruitments() {
        JOIN organizations o ON o.id = en.organization_id
        WHERE en.status = 'published'
          AND (en.notification_type = 'recruitment' OR en.notification_type IS NULL)
-         AND (en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE)
+         AND (en.apply_end_date IS NULL OR en.apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date)
        ORDER BY
          COALESCE(en.published_at, en.created_at) DESC NULLS LAST,
          en.id DESC
@@ -163,8 +163,8 @@ async function getUrgentOpenings() {
        WHERE en.status = 'published'
          AND (en.notification_type = 'recruitment' OR en.notification_type IS NULL)
          AND (
-           (en.apply_end_date IS NOT NULL AND en.apply_end_date >= CURRENT_DATE)
-           OR (en.is_walk_in = TRUE AND en.exam_date >= CURRENT_DATE)
+           (en.apply_end_date IS NOT NULL AND en.apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date)
+           OR (en.is_walk_in = TRUE AND en.exam_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date)
          )
        ORDER BY
          COALESCE(en.apply_end_date, en.exam_date) ASC,
@@ -187,8 +187,8 @@ async function getUrgentCount() {
        WHERE status = 'published'
          AND (notification_type = 'recruitment' OR notification_type IS NULL)
          AND (
-           (apply_end_date IS NOT NULL AND apply_end_date >= CURRENT_DATE AND apply_end_date <= CURRENT_DATE + interval '14 days')
-           OR (is_walk_in = TRUE AND exam_date >= CURRENT_DATE AND exam_date <= CURRENT_DATE + interval '14 days')
+           (apply_end_date IS NOT NULL AND apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date AND apply_end_date <= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date + interval '14 days')
+           OR (is_walk_in = TRUE AND exam_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date AND exam_date <= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date + interval '14 days')
          )`
     )
     return parseInt(rows[0]?.total || '0', 10)
@@ -235,23 +235,52 @@ function toJobCardShape(n) {
 }
 
 export default async function HomePage() {
-  const [recruitments, quickUpdates, stats, urgentOpenings, urgentCount] = await Promise.all([
-    getLatestRecruitments(),
-    getQuickUpdates(),
-    getSiteStats(),
-    getUrgentOpenings(),
-    getUrgentCount(),
-  ])
+  try {
+    const [recruitments, quickUpdates, stats, urgentOpenings, urgentCount] = await Promise.all([
+      getLatestRecruitments().catch(err => {
+        console.error('[homepage] getLatestRecruitments failed:', err.message)
+        return []
+      }),
+      getQuickUpdates().catch(err => {
+        console.error('[homepage] getQuickUpdates failed:', err.message)
+        return []
+      }),
+      getSiteStats().catch(err => {
+        console.error('[homepage] getSiteStats failed:', err.message)
+        return {}
+      }),
+      getUrgentOpenings().catch(err => {
+        console.error('[homepage] getUrgentOpenings failed:', err.message)
+        return []
+      }),
+      getUrgentCount().catch(err => {
+        console.error('[homepage] getUrgentCount failed:', err.message)
+        return 0
+      }),
+    ])
 
-  const jobs = recruitments.map(toJobCardShape)
+    const safeRecruitments = Array.isArray(recruitments) ? recruitments : []
+    const jobs = safeRecruitments.map(toJobCardShape)
 
-  return (
-    <HomePageView
-      jobs={jobs}
-      quickUpdates={quickUpdates}
-      stats={stats}
-      urgentOpenings={urgentOpenings}
-      urgentCount={urgentCount}
-    />
-  )
+    return (
+      <HomePageView
+        jobs={jobs}
+        quickUpdates={Array.isArray(quickUpdates) ? quickUpdates : []}
+        stats={stats || {}}
+        urgentOpenings={Array.isArray(urgentOpenings) ? urgentOpenings : []}
+        urgentCount={Number(urgentCount) || 0}
+      />
+    )
+  } catch (err) {
+    console.error('[homepage] Fatal render error:', err)
+    return (
+      <HomePageView
+        jobs={[]}
+        quickUpdates={[]}
+        stats={{}}
+        urgentOpenings={[]}
+        urgentCount={0}
+      />
+    )
+  }
 }

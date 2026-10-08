@@ -15,7 +15,7 @@ const DICTIONARY = {
     'nav.jobs': 'Jobs',
     'nav.current_affairs': 'Current Affairs',
     'nav.question_papers': 'Question Papers',
-    'nav.mpsc_pyq': 'MPSC Papers & Keys (2024-26)',
+    'nav.mpsc_pyq': 'MPSC Papers & Keys (2021-26)',
     'nav.answer_keys': 'Answer Keys',
     'nav.mock_tests': 'Mock Tests',
     'nav.pyq': '15-Yr PYQs',
@@ -435,7 +435,7 @@ const DICTIONARY = {
 
 const LanguageContext = createContext({
   lang: 'en',
-  setLang: () => {},
+  setLang: () => { },
   t: (key, fallback) => fallback || key,
   isMarathi: false,
 })
@@ -457,7 +457,7 @@ export function LanguageProvider({ children }) {
       if (match && (match[1] === 'mr' || match[1] === 'en')) {
         setLangState(match[1])
       }
-    } catch {}
+    } catch { }
   }, [])
 
   const setLang = (newLang) => {
@@ -467,7 +467,7 @@ export function LanguageProvider({ children }) {
       localStorage.setItem('examudaan_lang', val)
       document.cookie = `examudaan_lang=${val}; path=/; max-age=31536000; SameSite=Lax`
       window.dispatchEvent(new CustomEvent('langChange', { detail: val }))
-    } catch {}
+    } catch { }
   }
 
   const t = (key, fallback = '') => {

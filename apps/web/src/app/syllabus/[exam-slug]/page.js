@@ -15,6 +15,9 @@ export async function generateStaticParams() {
   return ALL_EXAM_SLUGS.map(slug => ({ 'exam-slug': slug }))
 }
 
+// ISR cache for fast page delivery
+export const revalidate = 86400
+
 // Dynamic metadata per exam — must await params in Next.js 15+
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
@@ -22,7 +25,7 @@ export async function generateMetadata({ params }) {
   if (!exam) return {}
   const canonicalUrl = `https://examudaan.in/syllabus/${exam.slug}`
   return {
-    title: `${exam.nameEn} Syllabus 2026 — Complete Topic-wise Guide | ExamUdaan`,
+    title: `${exam.shortName || exam.nameEn} Syllabus 2026`,
     description: `Full ${exam.nameEn} syllabus 2026 with paper-wise topics, previous year question papers, recommended books, and exam pattern. Free for all aspirants.`,
     keywords: `${exam.nameEn} syllabus 2026, ${exam.shortName} exam pattern, ${exam.shortName} PYQ papers`,
     alternates: {

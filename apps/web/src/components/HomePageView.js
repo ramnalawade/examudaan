@@ -408,12 +408,46 @@ const TESTIMONIALS = [
 
 function getUrgentDaysLeft(dateStr) {
   if (!dateStr) return null
-  const d = new Date(dateStr)
-  if (isNaN(d.getTime())) return null
-  const now = new Date()
-  const dDay = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())
-  const nowDay = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
-  return Math.ceil((dDay - nowDay) / (1000 * 60 * 60 * 24))
+  let targetYear, targetMonth, targetDay
+  if (typeof dateStr === 'string') {
+    const match = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/)
+    if (match) {
+      targetYear = parseInt(match[1], 10)
+      targetMonth = parseInt(match[2], 10) - 1
+      targetDay = parseInt(match[3], 10)
+    }
+  }
+  if (targetYear === undefined) {
+    const d = new Date(dateStr)
+    if (isNaN(d.getTime())) return null
+    targetYear = d.getFullYear()
+    targetMonth = d.getMonth()
+    targetDay = d.getDate()
+  }
+
+  // Get today's calendar date in India Standard Time (Asia/Kolkata)
+  let nowYear, nowMonth, nowDay
+  try {
+    const formatter = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Kolkata',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    })
+    const parts = formatter.format(new Date()).split('-').map(Number)
+    nowYear = parts[0]
+    nowMonth = parts[1] - 1
+    nowDay = parts[2]
+  } catch {
+    const now = new Date()
+    nowYear = now.getFullYear()
+    nowMonth = now.getMonth()
+    nowDay = now.getDate()
+  }
+
+  const targetUTC = Date.UTC(targetYear, targetMonth, targetDay)
+  const nowUTC = Date.UTC(nowYear, nowMonth, nowDay)
+  return Math.round((targetUTC - nowUTC) / (1000 * 60 * 60 * 24))
 }
 
 export default function HomePageView({
@@ -445,40 +479,47 @@ export default function HomePageView({
   }
 
   // Dynamic Real Urgent Openings from Database with fallback
-  const displayUrgent = (urgentOpenings && urgentOpenings.length > 0)
-    ? urgentOpenings.map(item => {
-        const effectiveDeadline = item.is_walk_in && item.exam_date ? item.exam_date : item.apply_end_date
-        const daysLeft = getUrgentDaysLeft(effectiveDeadline)
-        let closingText = ''
-        if (daysLeft === 0) {
-          closingText = isMarathi ? 'आज शेवटचा दिवस' : 'Closes Today'
-        } else if (daysLeft === 1) {
-          closingText = isMarathi ? 'उद्या शेवटचा दिवस' : 'Closes Tomorrow'
-        } else if (daysLeft !== null && daysLeft <= 14) {
-          closingText = isMarathi ? `${daysLeft} दिवस शिल्लक` : `Closes in ${daysLeft} Days`
-        } else if (effectiveDeadline) {
-          const dateObj = new Date(effectiveDeadline)
-          closingText = dateObj.toLocaleDateString(isMarathi ? 'mr-IN' : 'en-IN', { day: '2-digit', month: 'short' })
-        } else {
-          closingText = isMarathi ? 'मुदत संपत आहे' : 'Closing Soon'
-        }
+  const mappedUrgent = (urgentOpenings && urgentOpenings.length > 0)
+    ? urgentOpenings
+        .map(item => {
+          const effectiveDeadline = item.is_walk_in && item.exam_date ? item.exam_date : item.apply_end_date
+          const daysLeft = getUrgentDaysLeft(effectiveDeadline)
+          let closingText = ''
+          if (daysLeft !== null && daysLeft < 0) {
+            closingText = isMarathi ? 'मुदत संपली' : 'Closed'
+          } else if (daysLeft === 0) {
+            closingText = isMarathi ? 'आज शेवटचा दिवस' : 'Closes Today'
+          } else if (daysLeft === 1) {
+            closingText = isMarathi ? 'उद्या शेवटचा दिवस' : 'Closes Tomorrow'
+          } else if (daysLeft !== null && daysLeft > 1 && daysLeft <= 14) {
+            closingText = isMarathi ? `${daysLeft} दिवस शिल्लक` : `Closes in ${daysLeft} Days`
+          } else if (effectiveDeadline) {
+            const dateObj = new Date(effectiveDeadline)
+            closingText = dateObj.toLocaleDateString(isMarathi ? 'mr-IN' : 'en-IN', { day: '2-digit', month: 'short' })
+          } else {
+            closingText = isMarathi ? 'मुदत संपत आहे' : 'Closing Soon'
+          }
 
-        const org = (isMarathi && item.org_name_mr) ? item.org_name_mr : (item.org_name || item.org_acronym || 'Government Department')
-        const vac = item.total_vacancies
-          ? (isMarathi ? `${Number(item.total_vacancies).toLocaleString('mr-IN')} जागा` : `${Number(item.total_vacancies).toLocaleString('en-IN')} Posts`)
-          : (isMarathi ? 'विविध पदे' : 'Various Posts')
+          const org = (isMarathi && item.org_name_mr) ? item.org_name_mr : (item.org_name || item.org_acronym || 'Government Department')
+          const vac = item.total_vacancies
+            ? (isMarathi ? `${Number(item.total_vacancies).toLocaleString('mr-IN')} जागा` : `${Number(item.total_vacancies).toLocaleString('en-IN')} Posts`)
+            : (isMarathi ? 'विविध पदे' : 'Various Posts')
 
-        return {
-          id: item.id,
-          slug: item.slug || item.id,
-          title: item.title,
-          title_mr: item.title_mr,
-          dept: org,
-          vacancies: vac,
-          closingText,
-        }
-      })
-    : URGENT_OPENINGS
+          return {
+            id: item.id,
+            slug: item.slug || item.id,
+            title: item.title,
+            title_mr: item.title_mr,
+            dept: org,
+            vacancies: vac,
+            closingText,
+            daysLeft,
+          }
+        })
+        .filter(item => item.daysLeft === null || item.daysLeft >= 0)
+    : []
+
+  const displayUrgent = mappedUrgent.length > 0 ? mappedUrgent : URGENT_OPENINGS
 
   // Choose jobs for the active region tab
   const displayOpenings = REGION_JOBS[activeRegion] || REGION_JOBS.maharashtra
@@ -888,7 +929,7 @@ export default function HomePageView({
 
           <div style={{ textAlign: 'center', marginTop: 24 }}>
             <Link href="/jobs" className={styles.ctaPrimary} style={{ padding: '10px 24px', fontSize: 14 }}>
-              View All 740+ Active Notifications →
+              View All Jobs, Results & More →
             </Link>
           </div>
         </section>

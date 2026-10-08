@@ -7,11 +7,20 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '../../lib/constants'
 
 export const metadata = {
-  title: 'Terms of Service — ExamUdaan.in',
+  title: 'Terms of Service — ExamUdaan',
   description: 'Terms and conditions governing the use of ExamUdaan.in, including free exam aggregation services and paid WhatsApp alert subscriptions.',
+  keywords: ['ExamUdaan terms', 'terms of service', 'govt job portal terms', 'WhatsApp alerts terms'],
   alternates: {
     canonical: 'https://examudaan.in/terms',
   },
+  openGraph: {
+    title: 'Terms of Service | ExamUdaan',
+    description: 'Terms and conditions for using ExamUdaan.in services and WhatsApp alert subscriptions.',
+    url: 'https://examudaan.in/terms',
+    siteName: 'ExamUdaan.in',
+    type: 'website',
+  },
+  twitter: { card: 'summary', title: 'Terms of Service | ExamUdaan' },
 }
 
 export default function TermsPage() {

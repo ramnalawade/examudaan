@@ -6,12 +6,29 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'About Us — ExamUdaan.in',
-  description: 'Learn about ExamUdaan.in, Maharashtra\'s premier AI-powered government exam and job alerts platform. Monitored across 37+ official state and central portals.',
+  title: 'About ExamUdaan \u2014 Maharashtra Govt Exam Portal',
+  description: 'ExamUdaan.in is Maharashtra\'s premier AI-powered government exam and job alerts platform, monitoring 37+ official state and central portals in real-time.',
+  keywords: [
+    'about ExamUdaan', 'Maharashtra exam portal', 'govt job alerts India',
+    'MPSC news portal', 'sarkari naukri aggregator', 'AI exam notifications'
+  ],
   alternates: {
     canonical: 'https://examudaan.in/about',
   },
+  openGraph: {
+    title: 'About ExamUdaan \u2014 Maharashtra Govt Exam Portal',
+    description: 'Maharashtra\'s AI-powered govt exam and job alerts platform monitoring 37+ official portals.',
+    url: 'https://examudaan.in/about',
+    siteName: 'ExamUdaan.in',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'About ExamUdaan | Maharashtra Govt Exam Portal',
+    description: 'AI-powered Maharashtra govt exam & job alerts \u2014 37+ official portals monitored.',
+  },
 }
+
 
 export default function AboutPage() {
   const stats = [

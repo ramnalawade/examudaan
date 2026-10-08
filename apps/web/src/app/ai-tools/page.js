@@ -100,7 +100,18 @@ const CAT_COLORS = {
 
 export default function AiToolsPage() {
   return (
-    <Suspense fallback={<div style={{ padding: 40, textAlign: 'center', color: 'var(--secondary)' }}>Loading AI Tools...</div>}>
+    <Suspense
+      fallback={
+        <div style={{ padding: '60px 20px', textAlign: 'center', minHeight: '60vh' }}>
+          <h1 style={{ fontSize: 'clamp(22px, 3.5vw, 30px)', fontWeight: 800, color: 'var(--on-surface)', marginBottom: 10 }}>
+            Top AI Tools for Students &amp; Aspirants 2026
+          </h1>
+          <p style={{ fontSize: 14, color: 'var(--secondary)' }}>
+            Loading curated AI tools directory...
+          </p>
+        </div>
+      }
+    >
       <AiToolsContent />
     </Suspense>
   )

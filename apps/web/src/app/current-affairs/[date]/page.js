@@ -53,7 +53,7 @@ export async function generateMetadata({ params }) {
   })
 
   return {
-    title: `Current Affairs ${dateDisplay} — Chalu Ghadamodi | ExamUdaan MPSC`,
+    title: `Current Affairs ${dateDisplay}`,
     description: `Daily current affairs digest for ${dateDisplay} — essential for MPSC, UPSC, Police Bharti, SSC, and Banking exams. Bilingual English + Marathi summary with exam angles.`,
     alternates: {
       canonical: `https://examudaan.in/current-affairs/${slug}`,

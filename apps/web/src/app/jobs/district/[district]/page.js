@@ -139,7 +139,7 @@ export async function generateMetadata({ params }) {
   const district = DISTRICT_MAP[resolvedParams.district]
   if (!district) return {}
 
-  const title = `${district.name} Government Jobs 2026 — ${district.nameMr} सरकारी नोकरी | ExamUdaan`
+  const title = `${district.name} Govt Jobs 2026`
   const description = `Latest government job vacancies in ${district.name} district (${district.region}). ${district.popular.join(', ')} and more — direct official links, no clickbait.`
 
   return {
@@ -149,7 +149,7 @@ export async function generateMetadata({ params }) {
       canonical: `https://examudaan.in/jobs/district/${district.slug}`,
     },
     openGraph: {
-      title,
+      title: `${title} | ExamUdaan`,
       description,
       url: `https://examudaan.in/jobs/district/${district.slug}`,
       siteName: 'ExamUdaan.in',

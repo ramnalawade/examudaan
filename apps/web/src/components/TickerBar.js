@@ -153,8 +153,30 @@ export default function TickerBar() {
       }
     }
 
-    fetchLatest()
-    return () => { cancelled = true }
+    // Defer network request to browser idle time to ensure 0% contention with LCP
+    let idleTimer = null
+    if (typeof window !== 'undefined') {
+      if ('requestIdleCallback' in window) {
+        idleTimer = window.requestIdleCallback(() => {
+          fetchLatest()
+        }, { timeout: 4000 })
+      } else {
+        idleTimer = setTimeout(() => {
+          fetchLatest()
+        }, 3500)
+      }
+    }
+
+    return () => {
+      cancelled = true
+      if (idleTimer) {
+        if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && typeof idleTimer === 'number') {
+          window.cancelIdleCallback(idleTimer)
+        } else {
+          clearTimeout(idleTimer)
+        }
+      }
+    }
   }, [])
 
   // Choose items: live data > fallback list

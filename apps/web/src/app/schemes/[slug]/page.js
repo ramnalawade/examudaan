@@ -6,12 +6,16 @@
 // official PDF + links, related syllabi, JSON-LD Course schema.
 // ============================================================
 
+import { cache } from 'react'
 import Link from 'next/link'
 import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
+
+// ISR cache — revalidate every 5 minutes for instant edge delivery
+export const revalidate = 300
 
 // ── Helpers ───────────────────────────────────────────────────
 function formatDate(d) {
@@ -22,7 +26,8 @@ function formatDate(d) {
 }
 
 // ── DB fetch ──────────────────────────────────────────────────
-async function getSyllabusData(slugParam) {
+const getSyllabusData = cache(async function getSyllabusData(slugParam) {
+  if (!slugParam || typeof slugParam !== 'string') return null
   // 1. Exact match on slug column
   let en = await queryOne(
     `SELECT en.*, o.name AS org_name, o.name_mr AS org_name_mr, o.acronym AS org_acronym,
@@ -82,7 +87,7 @@ async function getSyllabusData(slugParam) {
     [en.id]
   )
   return { en, related }
-}
+})
 
 const TYPE_TO_PATH = {
   recruitment: '/jobs',
@@ -96,11 +101,16 @@ const TYPE_TO_PATH = {
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const data = await getSyllabusData(resolvedParams.slug)
-  if (!data) return { title: 'Syllabus | ExamUdaan' }
+  if (!data) return { title: { absolute: 'Syllabus | ExamUdaan' } }
   const { en } = data
-  const metaTitle =
-    en.seo_metadata?.meta_title ||
-    `${en.title} Syllabus and Exam Pattern | ExamUdaan`
+
+  let rawTitle = en.seo_metadata?.meta_title || `${en.title} Syllabus`
+  let cleanBase = rawTitle.replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '').trim()
+  if (cleanBase.length > 44) {
+    cleanBase = cleanBase.slice(0, 41).trim() + '...'
+  }
+  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Syllabus | ExamUdaan'
+
   const metaDesc = (
     en.seo_metadata?.meta_description ||
     `Download ${en.title} official syllabus from ${en.org_name}. Check topics, marking scheme, paper pattern, and selection process.`
@@ -111,7 +121,7 @@ export async function generateMetadata({ params }) {
   const canonicalSlug = en.slug || resolvedParams.slug
   const canonicalUrl = `${siteUrl}${targetSection}/${canonicalSlug}`
   return {
-    title: metaTitle,
+    title: { absolute: metaTitle },
     description: metaDesc,
     alternates: { canonical: canonicalUrl },
     openGraph: { title: metaTitle, description: metaDesc, url: canonicalUrl, type: 'article', siteName: 'ExamUdaan.in' },

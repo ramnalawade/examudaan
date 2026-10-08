@@ -3,7 +3,7 @@
 // ============================================================
 
 export const metadata = {
-  title: '7th Pay Commission Salary Calculator 2026 — In-Hand & Gross Pay | ExamUdaan',
+  title: '7th Pay Commission Salary Calculator 2026',
   description: 'Calculate in-hand and gross salary for Maharashtra & Central government employees under 7th CPC. Includes DA (50%), HRA, TA, and NPS deductions.',
   alternates: {
     canonical: 'https://examudaan.in/salary-calculator',

@@ -4,7 +4,7 @@
 // posts table, org details, description, selection process, fees.
 // ============================================================
 
-import React from 'react'
+import React, { cache } from 'react'
 import Link from 'next/link'
 import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
@@ -13,6 +13,9 @@ import DetailHowToApply from '../../../components/DetailHowToApply'
 import SaveJobButton from '../../../components/SaveJobButton'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
+
+// ISR cache — revalidate every 5 minutes for instant edge delivery
+export const revalidate = 300
 
 // ── Utility: format a date string to "DD Mon YYYY" ──────────
 function formatDate(d) {
@@ -26,14 +29,48 @@ function formatDate(d) {
   }
 }
 
-// ── Utility: days remaining from today ──────────────────────
-function getDaysLeft(dateStr) {
-  if (!dateStr) return null
-  try {
-    return Math.ceil((new Date(dateStr) - new Date()) / (1000 * 60 * 60 * 24))
-  } catch {
-    return null
+function parseDateParts(dateVal) {
+  if (!dateVal) return null
+  if (typeof dateVal === 'string') {
+    const match = dateVal.match(/^(\d{4})-(\d{2})-(\d{2})/)
+    if (match) {
+      return {
+        year: parseInt(match[1], 10),
+        month: parseInt(match[2], 10) - 1,
+        day: parseInt(match[3], 10),
+      }
+    }
   }
+  const d = new Date(dateVal)
+  if (isNaN(d.getTime())) return null
+  return { year: d.getFullYear(), month: d.getMonth(), day: d.getDate() }
+}
+
+// ── Utility: days remaining from today (IST calendar day difference) ──
+function getDaysLeft(dateStr) {
+  const target = parseDateParts(dateStr)
+  if (!target) return null
+  let nowYear, nowMonth, nowDay
+  try {
+    const formatter = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Kolkata',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    })
+    const parts = formatter.format(new Date()).split('-').map(Number)
+    nowYear = parts[0]
+    nowMonth = parts[1] - 1
+    nowDay = parts[2]
+  } catch {
+    const now = new Date()
+    nowYear = now.getFullYear()
+    nowMonth = now.getMonth()
+    nowDay = now.getDate()
+  }
+  const targetUTC = Date.UTC(target.year, target.month, target.day)
+  const nowUTC = Date.UTC(nowYear, nowMonth, nowDay)
+  return Math.round((targetUTC - nowUTC) / (1000 * 60 * 60 * 24))
 }
 
 // ── Utility: format salary from JSONB ───────────────────────
@@ -116,8 +153,10 @@ function getValidEducationRequirements(educationLevels) {
 }
 
 // ──────────────────────────────────────────────────────────────
-// Database fetch helper
-async function getJobData(slugParam) {
+// Database fetch helper — memoized per request lifecycle via React cache()
+const getJobData = cache(async function getJobData(slugParam) {
+  if (!slugParam || typeof slugParam !== 'string') return null
+
   // 1. First: exact match by full slug column
   let en = await queryOne(
     `SELECT en.*,
@@ -209,7 +248,7 @@ async function getJobData(slugParam) {
   )
 
   return { en, posts, related }
-}
+})
 
 // ──────────────────────────────────────────────────────────────
 // SEO Metadata
@@ -224,49 +263,50 @@ const TYPE_TO_PATH = {
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
+  if (
+    resolvedParams.slug === 'current-notifications' ||
+    resolvedParams.slug === 'sarkari-job-facebook' ||
+    resolvedParams.slug === 'sarkari-job-instagram' ||
+    resolvedParams.slug === 'sarkari-job' ||
+    resolvedParams.slug === 'notifications'
+  ) {
+    return { title: { absolute: 'Latest Govt Jobs 2026 | ExamUdaan' } }
+  }
   const data = await getJobData(resolvedParams.slug)
   if (!data) {
-    return { title: 'Government Job | ExamUdaan' }
+    return { title: { absolute: 'Government Job | ExamUdaan' } }
   }
   const { en } = data
 
-  // ── Title Tag: keep under ~60 chars for SERP display ─────────
-  // Pattern: {Post Name} — {Org} {Year} ({Vacancies} Posts) | ExamUdaan
-  // If seo_metadata.meta_title is set by admin, use that directly.
-  let metaTitle = en.seo_metadata?.meta_title
+  // ── Absolute Title: strictly under 60 chars for SERP & Bingbot (no truncation) ──
+  let rawTitle = en.seo_metadata?.meta_title
 
-  if (!metaTitle) {
-    // Use English title field if available; fall back to main title
+  if (!rawTitle) {
     const postTitle = en.title_en || en.title || ''
-
-    // Strip pure Marathi (Devanagari-only) tokens from the title
     const englishTitle = postTitle
       .split(/\s+/)
-      .filter(w => !/^[\u0900-\u097F]+$/.test(w))  // drop Devanagari words
+      .filter(w => !/^[\u0900-\u097F]+$/.test(w))
       .join(' ')
       .replace(/\s+/g, ' ')
       .trim()
 
-    const displayTitle = englishTitle || postTitle  // fallback to full title if all tokens were Marathi
-
+    const displayTitle = englishTitle || postTitle
     const orgName = en.org_acronym || en.org_name || ''
     const year = en.apply_end_date
       ? new Date(en.apply_end_date).getFullYear()
       : (en.published_at ? new Date(en.published_at).getFullYear() : new Date().getFullYear())
-    const vacancies = en.total_vacancies ? ` (${en.total_vacancies.toLocaleString('en-IN')} Posts)` : ''
 
-    // Build compact title
-    // e.g. "Police Constable — Mumbai Police 2026 (3,521 Posts) | ExamUdaan"
-    const compact = `${displayTitle} — ${orgName} ${year}${vacancies} | ExamUdaan`
-
-    // Trim to 60 chars if still too long (remove vacancies first, then year)
-    if (compact.length <= 60) {
-      metaTitle = compact
-    } else {
-      const noVacancies = `${displayTitle} — ${orgName} ${year} | ExamUdaan`
-      metaTitle = noVacancies.length <= 60 ? noVacancies : `${displayTitle.slice(0, 35)} | ExamUdaan`
-    }
+    rawTitle = orgName ? `${displayTitle} — ${orgName} ${year}` : `${displayTitle} ${year}`
   }
+
+  // Strip duplicate branding & trim base to max 44 chars so with ' | ExamUdaan' it is <= 56 chars
+  let cleanBase = (rawTitle || '')
+    .replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '')
+    .trim()
+  if (cleanBase.length > 44) {
+    cleanBase = cleanBase.slice(0, 41).trim() + '...'
+  }
+  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Govt Job 2026 | ExamUdaan'
 
   const metaDesc =
     en.seo_metadata?.meta_description ||
@@ -279,7 +319,7 @@ export async function generateMetadata({ params }) {
   const canonicalUrl = `${siteUrl}${targetSection}/${canonicalSlug}`
 
   return {
-    title: metaTitle,
+    title: { absolute: metaTitle },
     description: metaDesc.slice(0, 160),
     alternates: {
       canonical: canonicalUrl,
@@ -305,6 +345,8 @@ export default async function JobDetailPage({ params }) {
   if (
     resolvedParams.slug === 'current-notifications' ||
     resolvedParams.slug === 'sarkari-job-facebook' ||
+    resolvedParams.slug === 'sarkari-job-instagram' ||
+    resolvedParams.slug === 'sarkari-job' ||
     resolvedParams.slug === 'notifications'
   ) {
     permanentRedirect('/jobs')
@@ -626,7 +668,7 @@ export default async function JobDetailPage({ params }) {
           {/* Status badges */}
           {isUrgent && !isClosed && (
             <div className="urgency-badge" style={{ background: 'var(--error-container)', color: 'var(--on-error-container)' }}>
-              LAST {daysLeft === 0 ? 'DAY' : `${daysLeft} DAYS`}
+              {daysLeft === 0 ? 'CLOSING TODAY' : daysLeft === 1 ? 'ENDS TOMORROW' : `LAST ${daysLeft} DAYS`}
             </div>
           )}
           {isClosed && (

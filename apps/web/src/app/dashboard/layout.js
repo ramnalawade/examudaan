@@ -4,7 +4,7 @@
 
 export const metadata = {
   title: {
-    absolute: 'Candidate Dashboard | ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
+    absolute: 'Candidate Dashboard | ExamUdaan',
   },
   description: 'Manage your saved jobs, track application statuses, and customize personalized exam alerts.',
   robots: {

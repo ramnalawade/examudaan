@@ -8,7 +8,7 @@ export async function generateMetadata({ params }) {
   const canonicalUrl = `https://examudaan.in/mock-tests/${test.slug}`
   const totalMarks = test.totalMarks || ((test.totalQuestions || 100) * (test.marksPerQuestion || 1))
   return {
-    title: `${test.title} — Online CBT Mock Test | ExamUdaan`,
+    title: `${test.title} Mock Test`,
     description: test.description || `Attempt free online mock test for ${test.examType || 'Competitive Exams'}. ${totalMarks} marks, ${test.durationMinutes} mins with instant scorecard and rank prediction.`,
     alternates: {
       canonical: canonicalUrl,

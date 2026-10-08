@@ -3,13 +3,13 @@
 // ============================================================
 
 export const metadata = {
-  title: 'Ask AI Exam Assistant — Instant Doubt Clearance & Eligibility | ExamUdaan',
+  title: 'Ask AI Exam Assistant 2026',
   description: 'Ask any question regarding Maharashtra and Central government exam eligibility, syllabus, age relaxation, and application procedures.',
   alternates: {
     canonical: 'https://examudaan.in/ask',
   },
   openGraph: {
-    title: 'Ask AI Exam Assistant | ExamUdaan',
+    title: 'Ask AI Exam Assistant 2026 | ExamUdaan',
     description: 'Instant doubt clearance and exam eligibility answers.',
     url: 'https://examudaan.in/ask',
     siteName: 'ExamUdaan.in',

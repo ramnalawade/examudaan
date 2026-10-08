@@ -59,6 +59,7 @@ export default function OfficialPdfViewer({
   const [selectedYear, setSelectedYear] = useState('ALL')
   const [selectedType, setSelectedType] = useState('ALL') // 'ALL' | 'PAPERS' | 'KEYS'
   const [searchQuery, setSearchQuery] = useState('')
+  const [showMoreInfo, setShowMoreInfo] = useState(false)
   const viewerRef = useRef(null)
 
   // Sync selectedId when parent passes a new initialSelectedId or documents list changes
@@ -93,12 +94,28 @@ export default function OfficialPdfViewer({
 
   // Direct explicit lookup of Question Paper and Answer Key in allDocuments
   const questionPaperDoc = useMemo(() => {
-    return allDocuments.find(p => !p.isAnswerKey) || null
-  }, [allDocuments])
+    if (!activePaper) return null
+    if (!activePaper.isAnswerKey) return activePaper
+    if (activePaper.pairId) {
+      return allDocuments.find(p => p.id === activePaper.pairId && !p.isAnswerKey) || null
+    }
+    if (allDocuments.length <= 2) {
+      return allDocuments.find(p => !p.isAnswerKey) || null
+    }
+    return allDocuments.find(p => !p.isAnswerKey && p.year === activePaper.year) || null
+  }, [allDocuments, activePaper])
 
   const answerKeyDoc = useMemo(() => {
-    return allDocuments.find(p => p.isAnswerKey) || null
-  }, [allDocuments])
+    if (!activePaper) return null
+    if (activePaper.isAnswerKey) return activePaper
+    if (activePaper.pairId) {
+      return allDocuments.find(p => p.id === activePaper.pairId && p.isAnswerKey) || null
+    }
+    if (allDocuments.length <= 2) {
+      return allDocuments.find(p => p.isAnswerKey) || null
+    }
+    return allDocuments.find(p => p.isAnswerKey && p.year === activePaper.year && p.pairId === activePaper.id) || null
+  }, [allDocuments, activePaper])
 
   // Look for corresponding pair (Question Paper <-> Answer Key)
   const pairedPaper = useMemo(() => {
@@ -282,8 +299,8 @@ export default function OfficialPdfViewer({
             </div>
 
             <div className={styles.toolbarActions}>
-              {/* Question / Answer Segmented Switch */}
-              {(questionPaperDoc || answerKeyDoc) && (
+              {/* Question / Answer Segmented Switch — Hide Answer Key if not available */}
+              {answerKeyDoc ? (
                 <div className={styles.qaSegmentedSwitch} role="group" aria-label="Toggle Question Paper and Answer Key">
                   {questionPaperDoc && (
                     <button
@@ -296,22 +313,27 @@ export default function OfficialPdfViewer({
                       <span>Question Paper</span>
                     </button>
                   )}
-                  {answerKeyDoc ? (
-                    <button
-                      type="button"
-                      className={activePaper.isAnswerKey ? styles.qaSwitchActiveKey : styles.qaSwitchInactive}
-                      onClick={() => handleSelectDoc(answerKeyDoc.id, false)}
-                      title="View Official Answer Key"
-                    >
-                      <span className="material-symbols-outlined" style={{ fontSize: 16 }}>task_alt</span>
-                      <span>Answer Key</span>
-                    </button>
-                  ) : (
-                    <span className={styles.qaSwitchPending} title="Answer Key not yet released by Commission">
-                      <span className="material-symbols-outlined" style={{ fontSize: 14 }}>schedule</span>
-                      <span>Key Pending</span>
-                    </span>
-                  )}
+                  <button
+                    type="button"
+                    className={activePaper.isAnswerKey ? styles.qaSwitchActiveKey : styles.qaSwitchInactive}
+                    onClick={() => handleSelectDoc(answerKeyDoc.id, false)}
+                    title="View Official Answer Key"
+                  >
+                    <span className="material-symbols-outlined" style={{ fontSize: 16 }}>task_alt</span>
+                    <span>Answer Key</span>
+                  </button>
+                </div>
+              ) : questionPaperDoc && (
+                <div className={styles.qaSegmentedSwitch} role="group" aria-label="Question Paper">
+                  <button
+                    type="button"
+                    className={styles.qaSwitchActivePaper}
+                    onClick={() => handleSelectDoc(questionPaperDoc.id, false)}
+                    title="Official Question Paper"
+                  >
+                    <span className="material-symbols-outlined" style={{ fontSize: 16 }}>description</span>
+                    <span>Question Paper</span>
+                  </button>
                 </div>
               )}
 
@@ -346,15 +368,48 @@ export default function OfficialPdfViewer({
             </div>
           </div>
 
-          {/* Conditional Display: Embed Iframe for Real PDFs; Rich Document Study Studio for Portal Links */}
-          {isEmbeddablePdf ? (
+          {/* Direct Embedded PDF Viewer — Opens by default without requiring interstitial click */}
+          {isEmbeddablePdf && (
             <div className={styles.iframeBox}>
+              {/* Direct Mobile Quick Action Banner — Opens PDF with 1 tap */}
+              <div className={styles.mobileDirectBanner}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>smartphone</span>
+                  <span>Direct Mobile PDF View</span>
+                </div>
+                <a
+                  href={activePaper.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.mobileDirectLink}
+                  title="Open full PDF directly in mobile browser"
+                >
+                  <span>📱 Open Full PDF ↗</span>
+                </a>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 16px', background: '#0F172A', color: '#E2E8F0', borderBottom: '1px solid #334155' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px' }}>
+                  <span className="material-symbols-outlined" style={{ fontSize: 16, color: '#38BDF8' }}>menu_book</span>
+                  <span>Official Viewer: <strong>{activePaper.title || activePaper.label}</strong></span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <a
+                    href={activePaper.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: '#38BDF8', fontSize: '12px', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}
+                  >
+                    <span className="material-symbols-outlined" style={{ fontSize: 14 }}>open_in_new</span>
+                    Fullscreen ↗
+                  </a>
+                </div>
+              </div>
               <iframe
                 key={activePaper.url}
                 src={activePaper.url.includes('#') ? activePaper.url : `${activePaper.url}#view=FitH&toolbar=1`}
                 className={styles.pdfIframe}
                 title={activePaper.title || activePaper.label}
-                loading="lazy"
               />
               <div className={styles.iframeFooter}>
                 <div className={styles.iframeFooterLeft}>
@@ -366,8 +421,143 @@ export default function OfficialPdfViewer({
                 </a>
               </div>
             </div>
-          ) : (
-            <div className={styles.docOverviewBox}>
+          )}
+
+          {/* Exam Details & Blueprint Matrix (Collapsible with More Info toggle) */}
+          <div className={styles.docOverviewBox}>
+            {isEmbeddablePdf ? (
+              <>
+                <div className={styles.docOverviewToggleBar}>
+                  <div className={styles.docOverviewToggleLeft}>
+                    <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#EA580C' }}>assignment</span>
+                    <span className={styles.docOverviewToggleHeading}>Exam Details & Question Blueprint</span>
+                    <span className={styles.docOverviewToggleSummary}>
+                      100 Questions • 100 Marks • 90 Mins • Bilingual (Marathi & English)
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    className={styles.moreInfoBtn}
+                    onClick={() => setShowMoreInfo(prev => !prev)}
+                    aria-expanded={showMoreInfo}
+                    title={showMoreInfo ? "Hide detailed examination specifications" : "View complete exam specifications, download options, and CBT practice"}
+                  >
+                    <span className="material-symbols-outlined" style={{ fontSize: 17 }}>
+                      {showMoreInfo ? 'expand_less' : 'info'}
+                    </span>
+                    <span>{showMoreInfo ? 'Less Info ▴' : 'More Info ▾'}</span>
+                  </button>
+                </div>
+
+                {showMoreInfo && (
+                  <div className={styles.docOverviewCollapsibleContent}>
+                    <div className={styles.docOverviewCard}>
+                      <div className={styles.docOverviewBadgeRow}>
+                        <span className={styles.verifiedGovBadge}>
+                          <span className="material-symbols-outlined" style={{ fontSize: 16 }}>verified</span>
+                          100% Official {conductingBody} Examination Record
+                        </span>
+                        <span className={activePaper.isAnswerKey ? styles.typeTagKey : styles.typeTagPaper}>
+                          {activePaper.isAnswerKey ? 'Official Final Answer Key' : 'Official Question Paper'}
+                        </span>
+                        <span className={styles.docYearTag}>{activePaper.year || 'Official'}</span>
+                        {activePaper.badge && (
+                          <span className={activePaper.isAnswerKey ? styles.keyBadge : styles.chipBadge}>
+                            {activePaper.badge}
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 className={styles.docOverviewHeading}>{activePaper.title || activePaper.label}</h3>
+
+                      <p className={styles.docOverviewDescription}>
+                        Official PDF document archive from {conductingBody}. Sourced directly for authentic examination preparation.
+                      </p>
+
+                      {/* Paper Pattern & Exam Blueprint Matrix */}
+                      <div className={styles.blueprintGrid}>
+                        <div className={styles.blueprintItem}>
+                          <span className="material-symbols-outlined" style={{ color: '#EA580C', fontSize: 22 }}>format_list_numbered</span>
+                          <div>
+                            <div className={styles.bpVal}>100 Questions</div>
+                            <div className={styles.bpLbl}>Objective MCQs Pattern</div>
+                          </div>
+                        </div>
+                        <div className={styles.blueprintItem}>
+                          <span className="material-symbols-outlined" style={{ color: '#16A34A', fontSize: 22 }}>military_tech</span>
+                          <div>
+                            <div className={styles.bpVal}>100 Marks</div>
+                            <div className={styles.bpLbl}>1 Mark Per Question</div>
+                          </div>
+                        </div>
+                        <div className={styles.blueprintItem}>
+                          <span className="material-symbols-outlined" style={{ color: '#2563EB', fontSize: 22 }}>timer</span>
+                          <div>
+                            <div className={styles.bpVal}>90 Minutes</div>
+                            <div className={styles.bpLbl}>Allotted Examination Time</div>
+                          </div>
+                        </div>
+                        <div className={styles.blueprintItem}>
+                          <span className="material-symbols-outlined" style={{ color: '#7C3AED', fontSize: 22 }}>translate</span>
+                          <div>
+                            <div className={styles.bpVal}>Marathi & English</div>
+                            <div className={styles.bpLbl}>Bilingual Exam Medium</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Direct Action Buttons */}
+                      <div className={styles.overviewCtaRow}>
+                        <a
+                          href={activePaper.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.primaryGovBtn}
+                        >
+                          <span className="material-symbols-outlined" style={{ fontSize: 18 }}>open_in_new</span>
+                          <span>Fullscreen / New Tab ↗</span>
+                        </a>
+
+                        <a
+                          href={activePaper.url}
+                          download
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.secondaryActionBtn}
+                        >
+                          <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#16A34A' }}>download</span>
+                          <span>Download PDF</span>
+                        </a>
+
+                        <Link href="/pyq" className={styles.secondaryActionBtn}>
+                          <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#EA580C' }}>quiz</span>
+                          <span>Practice 1,100+ Real PYQs</span>
+                        </Link>
+
+                        <Link href="/mock-tests" className={styles.secondaryActionBtn}>
+                          <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#2563EB' }}>timer</span>
+                          <span>Attempt Full CBT Mock Test</span>
+                        </Link>
+
+                        {(examName.toLowerCase().includes('police') || conductingBody.toLowerCase().includes('police')) && (
+                          <Link href="/police-calculator" className={styles.secondaryActionBtn}>
+                            <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#16A34A' }}>calculate</span>
+                            <span>Police Physical & Written Marks Calculator</span>
+                          </Link>
+                        )}
+                      </div>
+
+                      <div className={styles.overviewNote}>
+                        <span className="material-symbols-outlined" style={{ fontSize: 17, color: '#D97706', flexShrink: 0 }}>info</span>
+                        <span>
+                          Official government objection tracking, master answer keys, and district recruitment circulars are served directly under government cybersecurity guidelines. Use the direct official link above for objection submission.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
               <div className={styles.docOverviewCard}>
                 <div className={styles.docOverviewBadgeRow}>
                   <span className={styles.verifiedGovBadge}>
@@ -388,7 +578,7 @@ export default function OfficialPdfViewer({
                 <h3 className={styles.docOverviewHeading}>{activePaper.title || activePaper.label}</h3>
 
                 <p className={styles.docOverviewDescription}>
-                  This official document record is published and maintained on the official <strong>{conductingBody}</strong> portal ({domainName || 'Gov Portal'}). You can launch the official government document in a new tab or practice questions with verified explanations directly inside ExamUdaan.
+                  This official document record is published and maintained on the official {conductingBody} portal ({domainName || 'Gov Portal'}). You can launch the official government document in a new tab or practice questions with verified explanations directly inside ExamUdaan.
                 </p>
 
                 {/* Paper Pattern & Exam Blueprint Matrix */}
@@ -431,8 +621,8 @@ export default function OfficialPdfViewer({
                     rel="noopener noreferrer"
                     className={styles.primaryGovBtn}
                   >
-                    <span className="material-symbols-outlined" style={{ fontSize: 18 }}>launch</span>
-                    <span>Open Official Document on {domainName || 'Govt Portal'} ↗</span>
+                    <span className="material-symbols-outlined" style={{ fontSize: 18 }}>open_in_new</span>
+                    <span>Fullscreen / New Tab ↗</span>
                   </a>
 
                   <Link href="/pyq" className={styles.secondaryActionBtn}>
@@ -460,8 +650,8 @@ export default function OfficialPdfViewer({
                   </span>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
 
@@ -474,7 +664,7 @@ export default function OfficialPdfViewer({
               {title || `Complete Question Papers & Answer Keys Directory (${allDocuments.length} Documents)`}
             </h4>
             <span className={styles.directorySubtitle}>
-              {subtitle || 'Click "Read in Viewer" to instantly preview any paper in the study canvas above or download for offline revision.'}
+              {subtitle || 'Click any paper to instantly preview in the study canvas above or download for offline revision.'}
             </span>
           </div>
 
@@ -536,7 +726,7 @@ export default function OfficialPdfViewer({
                       <span className="material-symbols-outlined" style={{ fontSize: 16 }}>
                         {isCurrentlyReading ? 'visibility' : 'menu_book'}
                       </span>
-                      <span>{isCurrentlyReading ? 'Reading Now' : 'Read in Viewer'}</span>
+                      <span>{isCurrentlyReading ? 'Viewing Now' : 'View Document'}</span>
                     </button>
 
                     <a

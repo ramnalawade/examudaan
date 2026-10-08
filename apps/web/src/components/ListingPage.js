@@ -391,6 +391,34 @@ function ListingPageInner({
   return (
     <div className="container" style={{ paddingTop: 20, paddingBottom: 80 }}>
 
+      {/* ── Page Header / H1 ──────────────────────────────── */}
+      <div style={{ marginBottom: 18 }}>
+        <h1
+          style={{
+            fontSize: 'clamp(22px, 3.2vw, 30px)',
+            fontWeight: 800,
+            color: 'var(--on-surface)',
+            margin: '0 0 6px 0',
+            letterSpacing: '-0.02em',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+          }}
+        >
+          {headerIcon && (
+            <span className="material-symbols-outlined" style={{ fontSize: 28, color: primaryColor }}>
+              {headerIcon}
+            </span>
+          )}
+          {title || tabLabel}
+        </h1>
+        {subtitle && (
+          <p style={{ margin: 0, fontSize: 14, color: 'var(--secondary)', lineHeight: 1.5 }}>
+            {subtitle}
+          </p>
+        )}
+      </div>
+
       {/* ── Category Tab Nav ──────────────────────────────── */}
       <div
         id="listing-category-tabs"
@@ -1045,9 +1073,18 @@ function ListingPageInner({
 }
 
 export default function ListingPage(props) {
+  const fallbackTitle = props.title || 'Government Jobs & Exam Alerts'
   return (
     <Suspense fallback={
-      <div className="container" style={{ padding: '60px 0', textAlign: 'center' }}>
+      <div className="container" style={{ padding: '40px 0 80px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: 'clamp(22px, 3vw, 28px)', fontWeight: 800, color: 'var(--on-surface)', marginBottom: 12 }}>
+          {fallbackTitle}
+        </h1>
+        {props.subtitle && (
+          <p style={{ fontSize: 14, color: 'var(--secondary)', marginBottom: 24 }}>
+            {props.subtitle}
+          </p>
+        )}
         <span className="spinner" style={{ width: 36, height: 36, display: 'inline-block' }} />
       </div>
     }>

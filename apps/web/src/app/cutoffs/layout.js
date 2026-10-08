@@ -3,17 +3,27 @@
 // ============================================================
 
 export const metadata = {
-  title: 'Government Exam Cut-Off Marks 2026 — Category-wise Trends | ExamUdaan',
-  description: 'Check official previous years and expected cut-off marks for MPSC, Police Bharti, Talathi, SSC, and Banking exams by category (Open, OBC, SC, ST, EWS).',
+  title: 'Govt Exam Cut-Off Marks 2026 — Category-wise',
+  description: 'Check official previous year and expected cut-off marks for MPSC, Police Bharti, Talathi, SSC & Banking exams by category (Open, OBC, SC, ST, EWS).',
+  keywords: [
+    'MPSC cut off 2026', 'police bharti cutoff', 'SSC CGL cutoff',
+    'talathi cut off', 'category-wise cutoff', 'OBC cutoff', 'merit cutoff',
+    'expected cutoff 2026', 'exam selection cutoff'
+  ],
   alternates: {
     canonical: 'https://examudaan.in/cutoffs',
   },
   openGraph: {
-    title: 'Government Exam Cut-Off Marks 2026 | ExamUdaan',
-    description: 'Category-wise cut-off marks and merit trends.',
+    title: 'Govt Exam Cut-Off Marks 2026 | ExamUdaan',
+    description: 'Category-wise cut-off marks for MPSC, Police Bharti, Talathi, SSC & Banking exams.',
     url: 'https://examudaan.in/cutoffs',
     siteName: 'ExamUdaan.in',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Exam Cut-Off Marks 2026 | ExamUdaan',
+    description: 'MPSC, Police Bharti, SSC & Talathi category-wise cut-off marks.',
   },
 }
 

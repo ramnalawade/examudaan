@@ -18,6 +18,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { apiFetch, createVerifyHash } from '../../lib/apiClient'
+import s from './dashboard.module.css'
 
 const SIDEBAR_ITEMS = [
   { id: 'overview',  label: 'Overview',         icon: 'dashboard' },
@@ -149,11 +150,48 @@ function toggleChip(list, setList, item) {
   }
 }
 
+function parseDateParts(dateVal) {
+  if (!dateVal) return null
+  if (typeof dateVal === 'string') {
+    const match = dateVal.match(/^(\d{4})-(\d{2})-(\d{2})/)
+    if (match) {
+      return {
+        year: parseInt(match[1], 10),
+        month: parseInt(match[2], 10) - 1,
+        day: parseInt(match[3], 10),
+      }
+    }
+  }
+  const d = new Date(dateVal)
+  if (isNaN(d.getTime())) return null
+  return { year: d.getFullYear(), month: d.getMonth(), day: d.getDate() }
+}
+
 function getDeadlineBadge(endDateStr) {
-  if (!endDateStr) return null
-  const end = new Date(endDateStr)
-  const now = new Date()
-  const diffDays = Math.ceil((end - now) / (1000 * 60 * 60 * 24))
+  const target = parseDateParts(endDateStr)
+  if (!target) return null
+  let nowYear, nowMonth, nowDay
+  try {
+    const formatter = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Kolkata',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    })
+    const parts = formatter.format(new Date()).split('-').map(Number)
+    nowYear = parts[0]
+    nowMonth = parts[1] - 1
+    nowDay = parts[2]
+  } catch {
+    const now = new Date()
+    nowYear = now.getFullYear()
+    nowMonth = now.getMonth()
+    nowDay = now.getDate()
+  }
+  const targetUTC = Date.UTC(target.year, target.month, target.day)
+  const nowUTC = Date.UTC(nowYear, nowMonth, nowDay)
+  const diffDays = Math.round((targetUTC - nowUTC) / (1000 * 60 * 60 * 24))
+
   if (diffDays < 0) {
     return { text: 'Expired', color: '#6B7280', bg: '#F3F4F6' }
   }
@@ -181,8 +219,8 @@ function getMatchingJobsUrl(c) {
     else if (q.includes('iti')) params.set('qualification', 'iti')
   }
   if (Array.isArray(c.states) && c.states.length > 0) {
-    const s = c.states[0].toLowerCase()
-    if (s.includes('maha')) params.set('state', 'maharashtra')
+    const st = c.states[0].toLowerCase()
+    if (st.includes('maha')) params.set('state', 'maharashtra')
   }
   if (c.govt_level && c.govt_level !== 'All Levels') {
     params.set('govt_level', c.govt_level)
@@ -270,8 +308,8 @@ export default function DashboardPage() {
   // Read URL ?s= param to deep-link to a section (from Navbar dropdown)
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
-    const s = params.get('s')
-    if (s && (SIDEBAR_ITEMS.find(i => i.id === s) || s === 'admin_theme')) setActiveSection(s)
+    const secParam = params.get('s')
+    if (secParam && (SIDEBAR_ITEMS.find(i => i.id === secParam) || secParam === 'admin_theme')) setActiveSection(secParam)
   }, [])
 
   // ── Redirect if not logged in & prefill local user state ──
@@ -604,18 +642,10 @@ export default function DashboardPage() {
   // ── Loading state ──
   if (loading) {
     return (
-      <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{
-            width: 40, height: 40,
-            border: '4px solid var(--outline-variant)',
-            borderTopColor: 'var(--primary)',
-            borderRadius: '50%',
-            animation: 'spin 0.8s linear infinite',
-            margin: '0 auto 12px',
-          }} />
-          <p style={{ color: 'var(--secondary)', fontSize: 14 }}>Loading your dashboard...</p>
-          <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+      <div className={s.loadingWrap}>
+        <div className={s.loadingInner}>
+          <div className={s.loadingSpinner} />
+          <p className={s.loadingText}>Loading your dashboard...</p>
         </div>
       </div>
     )
@@ -632,199 +662,96 @@ export default function DashboardPage() {
   const userPhone = user?.phone || _storedUser?.phone || profileForm.whatsapp || ''
 
   return (
-    <div className="container" style={{ paddingTop: '24px', paddingBottom: '48px' }}>
+    <div className={`container ${s.pageWrap}`}>
 
       {/* ── Page title ── */}
-      <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+      <div className={s.pageHeader}>
         <div>
-          <h1 style={{ fontSize: 22, fontWeight: 700, color: 'var(--on-surface)', margin: 0 }}>My Dashboard</h1>
-          <p style={{ fontSize: 14, color: 'var(--secondary)', marginTop: 4 }}>
+          <h1 className={s.pageTitle}>My Dashboard</h1>
+          <p className={s.pageSubtitle}>
             Welcome back, <strong>{userName}</strong>! Here&apos;s your job search summary.
           </p>
         </div>
-        <button
-          onClick={handleLogout}
-          style={{ background: 'none', border: '1px solid var(--outline-variant)', borderRadius: 8, padding: '7px 14px', cursor: 'pointer', fontSize: 13, color: 'var(--secondary)', display: 'flex', alignItems: 'center', gap: 6 }}
-        >
-          <span className="material-symbols-outlined" style={{ fontSize: 16 }}>logout</span>
+        <button onClick={handleLogout} className={s.logoutBtn}>
+          <span className={`material-symbols-outlined ${s.logoutIcon}`}>logout</span>
           Sign out
         </button>
       </div>
 
-      {error && (
-        <div style={{ background: '#fef2f2', border: '1px solid #fca5a5', borderRadius: 8, padding: '10px 14px', marginBottom: 16, color: '#dc2626', fontSize: 14 }}>
-          {error}
-        </div>
-      )}
+      {error && <div className={s.errorBanner}>{error}</div>}
 
       <div className="dashboard-layout">
 
         {/* ── Sidebar ── */}
         <aside className="dashboard-sidebar" aria-label="Dashboard navigation">
           {/* Profile card */}
-          <div style={{
-            background: 'var(--surface-container-lowest)',
-            border: '1px solid var(--outline-variant)',
-            borderRadius: '12px',
-            padding: '16px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            marginBottom: '8px',
-          }}>
-            <div style={{
-              width: 44, height: 44,
-              borderRadius: '50%',
-              background: 'var(--primary-fixed)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              flexShrink: 0,
-              overflow: 'hidden',
-            }}>
+          <div className={s.sidebarProfileCard}>
+            <div className={s.sidebarAvatar}>
               {user?.avatar_url ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={user.avatar_url} alt={userName} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={user.avatar_url} alt={userName} className={s.sidebarAvatarImg} />
               ) : (
-                <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 26 }}>person</span>
+                <span className={`material-symbols-outlined ${s.sidebarAvatarIcon}`}>person</span>
               )}
             </div>
-            <div style={{ minWidth: 0 }}>
-              <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--on-surface)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                {userName}
-              </div>
-              <div style={{ fontSize: 12, color: 'var(--secondary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                {userEmail}
-              </div>
-              <div style={{ fontSize: 11, marginTop: 2, background: 'var(--primary-fixed)', color: 'var(--primary)', padding: '1px 6px', borderRadius: 99, display: 'inline-block', fontWeight: 700 }}>
-                {user?.plan || 'Free'} Plan
-              </div>
+            <div className={s.sidebarUserInfo}>
+              <div className={s.sidebarUserName}>{userName}</div>
+              <div className={s.sidebarUserEmail}>{userEmail}</div>
+              <div className={s.sidebarPlanBadge}>{user?.plan || 'Free'} Plan</div>
             </div>
           </div>
 
           {/* Nav items */}
-          <nav style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {SIDEBAR_ITEMS.map(item => (
-              <button
-                key={item.id}
-                onClick={() => setActiveSection(item.id)}
-                style={{
-                  display: 'flex', alignItems: 'center', gap: 10,
-                  padding: '10px 14px',
-                  borderRadius: '10px',
-                  background: activeSection === item.id ? 'var(--primary-fixed)' : 'transparent',
-                  border: 'none',
-                  cursor: 'pointer',
-                  textAlign: 'left',
-                  fontWeight: activeSection === item.id ? 700 : 500,
-                  fontSize: 14,
-                  color: activeSection === item.id ? 'var(--primary)' : 'var(--on-surface)',
-                  transition: 'background 0.15s',
-                }}
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: 20 }}>{item.icon}</span>
-                {item.label}
-              </button>
-            ))}
-          </nav>
+          <div className="dashboard-nav-container">
+            <nav className={s.sidebarNavList}>
+              {SIDEBAR_ITEMS.map(item => (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveSection(item.id)}
+                  className={`dashboard-nav-btn ${s.sidebarNavBtn} ${activeSection === item.id ? s.sidebarNavBtnActive : ''}`}
+                >
+                  <span className={`material-symbols-outlined ${s.sidebarNavIcon}`}>{item.icon}</span>
+                  <span>{item.label}</span>
+                </button>
+              ))}
+            </nav>
+          </div>
 
           {/* Admin Management (ADMIN ONLY) */}
           {Boolean(user?.is_admin || user?.role === 'admin') && (
-            <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1.5px dashed rgba(234, 88, 12, 0.4)' }}>
-              <div style={{ fontSize: 10.5, fontWeight: 800, color: '#EA580C', textTransform: 'uppercase', letterSpacing: '0.06em', padding: '0 14px 6px', display: 'flex', alignItems: 'center', gap: 5 }}>
-                <span>🛡️</span> Admin Suite
-              </div>
+            <div className={s.adminSection}>
+              <div className={s.adminLabel}><span>🛡️</span> Admin Suite</div>
               <button
                 onClick={() => setActiveSection('admin_theme')}
-                style={{
-                  width: '100%',
-                  display: 'flex', alignItems: 'center', gap: 10,
-                  padding: '10px 14px',
-                  borderRadius: '10px',
-                  background: activeSection === 'admin_theme' ? '#FFF7ED' : 'transparent',
-                  border: activeSection === 'admin_theme' ? '1.5px solid #EA580C' : 'none',
-                  cursor: 'pointer',
-                  textAlign: 'left',
-                  fontWeight: activeSection === 'admin_theme' ? 700 : 600,
-                  fontSize: 13.5,
-                  color: activeSection === 'admin_theme' ? '#EA580C' : 'var(--on-surface)',
-                  transition: 'all 0.15s ease',
-                  marginBottom: 4,
-                }}
+                className={`${s.adminThemeNavBtn} ${activeSection === 'admin_theme' ? s.adminThemeNavBtnActive : ''}`}
               >
                 <span className="material-symbols-outlined" style={{ fontSize: 20, color: '#EA580C' }}>palette</span>
-                <span style={{ flex: 1 }}>Theme & Appearance</span>
-                <span style={{ fontSize: 9.5, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '1px 5px', borderRadius: 4 }}>
-                  ADMIN
-                </span>
+                <span className={s.flex1}>Theme & Appearance</span>
+                <span className={s.adminBadge}>ADMIN</span>
               </button>
-              <Link
-                href="/admin"
-                style={{
-                  display: 'flex', alignItems: 'center', gap: 10,
-                  padding: '9px 14px',
-                  borderRadius: '10px',
-                  background: 'transparent',
-                  textDecoration: 'none',
-                  fontWeight: 600,
-                  fontSize: 13.5,
-                  color: 'var(--on-surface)',
-                  transition: 'background 0.15s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.background = 'var(--surface-container-low)'}
-                onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
-              >
+              <Link href="/admin" className={s.adminPanelLink}>
                 <span className="material-symbols-outlined" style={{ fontSize: 20, color: '#64748B' }}>admin_panel_settings</span>
-                <span style={{ flex: 1 }}>Full Admin Panel</span>
+                <span className={s.flex1}>Full Admin Panel</span>
                 <span className="material-symbols-outlined" style={{ fontSize: 16, color: '#94A3B8' }}>arrow_forward</span>
               </Link>
             </div>
           )}
 
           {/* Quick study access: Question Papers & Keys */}
-          <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid var(--outline-variant)' }}>
-            <Link
-              href="/question-papers"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 10,
-                padding: '10px 14px',
-                borderRadius: '10px',
-                fontSize: 13,
-                fontWeight: 600,
-                color: '#EA580C',
-                background: '#FFF7ED',
-                textDecoration: 'none',
-                border: '1px solid #FFEDD5',
-                transition: 'all 0.15s ease'
-              }}
-            >
+          <div className={s.quickAccessSection}>
+            <Link href="/question-papers" className={s.quickAccessLink}>
               <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#EA580C' }}>description</span>
-              <span style={{ flex: 1 }}>Question Papers & Keys</span>
-              <span style={{ fontSize: 10, fontWeight: 700, background: '#EA580C', color: '#FFF', padding: '1px 6px', borderRadius: 99 }}>
-                214+
-              </span>
+              <span className={s.flex1}>Question Papers & Keys</span>
+              <span className={s.quickAccessBadge}>214+</span>
             </Link>
           </div>
 
           {/* Upgrade banner */}
           {user?.plan === 'free' && (
-            <div style={{
-              marginTop: 16,
-              background: 'linear-gradient(135deg, #a33900, #EA580C)',
-              borderRadius: 12,
-              padding: '14px 16px',
-              color: '#fff',
-            }}>
-              <div style={{ fontWeight: 700, fontSize: 13 }}>Upgrade to Pro</div>
-              <div style={{ fontSize: 12, opacity: 0.85, margin: '4px 0 10px' }}>
-                WhatsApp + Email alerts for ₹49/mo
-              </div>
-              <Link
-                href="/pricing"
-                style={{ background: '#fff', color: '#a33900', padding: '6px 14px', borderRadius: 6, fontSize: 12, fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}
-              >
-                View Plans →
-              </Link>
+            <div className={s.upgradeBanner}>
+              <div className={s.upgradeBannerTitle}>Upgrade to Pro</div>
+              <div className={s.upgradeBannerDesc}>WhatsApp + Email alerts for ₹49/mo</div>
+              <Link href="/pricing" className={s.upgradeBannerLink}>View Plans →</Link>
             </div>
           )}
         </aside>
@@ -834,265 +761,137 @@ export default function DashboardPage() {
 
           {/* ─── Overview ─── */}
           {activeSection === 'overview' && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            <div className={s.colFlex}>
               {/* Admin Theme & Appearance Quick Panel (ADMIN ONLY) */}
               {Boolean(user?.is_admin || user?.role === 'admin') && (
-                <div style={{
-                  background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
-                  borderRadius: 14,
-                  padding: '20px 22px',
-                  color: '#FFF',
-                  boxShadow: '0 4px 15px rgba(0,0,0,0.15)',
-                  border: '1px solid rgba(255,255,255,0.1)'
-                }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, flexWrap: 'wrap', gap: 10 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <div className={s.adminThemePanel}>
+                  <div className={s.adminThemePanelHeader}>
+                    <div className={s.adminThemePanelLeft}>
                       <span className="material-symbols-outlined" style={{ color: '#FB923C', fontSize: 24 }}>palette</span>
                       <strong style={{ fontSize: 16 }}>Admin Theme & Appearance</strong>
-                      <span style={{ fontSize: 10, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '2px 7px', borderRadius: 4 }}>
-                        ADMIN ONLY
-                      </span>
+                      <span className={s.adminOnlyTag}>ADMIN ONLY</span>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                      <button
-                        onClick={() => setActiveSection('admin_theme')}
-                        style={{
-                          background: 'rgba(255,255,255,0.12)',
-                          color: '#FFF',
-                          border: 'none',
-                          padding: '6px 12px',
-                          borderRadius: 6,
-                          fontSize: 12,
-                          fontWeight: 700,
-                          cursor: 'pointer'
-                        }}
-                      >
+                    <div className={s.adminThemePanelRight}>
+                      <button onClick={() => setActiveSection('admin_theme')} className={s.adminThemeStudioBtn}>
                         Theme Studio
                       </button>
-                      <Link href="/admin?tab=themes" style={{ color: '#FB923C', fontSize: 12.5, fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
+                      <Link href="/admin?tab=themes" className={s.adminPanelSmallLink}>
                         <span>Full Admin Panel</span>
                         <span className="material-symbols-outlined" style={{ fontSize: 15 }}>arrow_forward</span>
                       </Link>
                     </div>
                   </div>
-
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 12 }}>
+                  <div className={s.themeGridSmall}>
                     {SITE_THEMES.map(th => {
                       const isCurrent = currentTheme === th.id
                       return (
                         <button
                           key={th.id}
                           onClick={() => handleSwitchTheme(th.id)}
-                          style={{
-                            background: isCurrent ? 'rgba(234, 88, 12, 0.28)' : 'rgba(255,255,255,0.06)',
-                            border: isCurrent ? '2px solid #EA580C' : '1px solid rgba(255,255,255,0.14)',
-                            borderRadius: 10,
-                            padding: '12px 14px',
-                            textAlign: 'left',
-                            cursor: 'pointer',
-                            color: '#FFF',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 6,
-                            transition: 'all 0.15s ease'
-                          }}
+                          className={`${s.themeCardSmall} ${isCurrent ? s.themeCardSmallActive : ''}`}
                         >
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <span style={{ fontWeight: 700, fontSize: 13.5 }}>{th.name}</span>
-                            <span style={{ width: 12, height: 12, borderRadius: '50%', background: th.primaryColor, display: 'inline-block' }} />
+                          <div className={s.themeCardSmallRow}>
+                            <span className={s.themeCardSmallName}>{th.name}</span>
+                            <span className={s.themeColorDotSmall} style={{ background: th.primaryColor }} />
                           </div>
-                          <span style={{ fontSize: 11.5, color: '#CBD5E1' }}>{th.tagline}</span>
-                          {isCurrent && (
-                            <span style={{ fontSize: 10.5, fontWeight: 700, color: '#34D399', marginTop: 2 }}>
-                              ✓ Active Site Theme
-                            </span>
-                          )}
+                          <span className={s.themeCardSmallTagline}>{th.tagline}</span>
+                          {isCurrent && <span className={s.themeCardActiveText}>✓ Active Site Theme</span>}
                         </button>
                       )
                     })}
                   </div>
-                  {themeMsg && (
-                    <div style={{ marginTop: 10, fontSize: 12, fontWeight: 700, color: '#34D399' }}>
-                      ✓ {themeMsg.text}
-                    </div>
-                  )}
+                  {themeMsg && <div className={s.themePanelMsg}>✓ {themeMsg.text}</div>}
                 </div>
               )}
 
               {/* Stat Cards */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12 }}>
+              <div className={s.statCardsGrid}>
                 {[
                   { id: 'saved',    icon: 'bookmark',           label: 'Saved Jobs',      value: savedJobs.length,       color: 'var(--primary)' },
                   { id: 'alerts',   icon: 'notifications',       label: 'Active Alerts',   value: user?.alert_count || 0, color: 'var(--primary)' },
                   { id: 'criteria', icon: 'tune',                label: 'My Criteria',     value: criteria.length,        color: '#0284c7' },
                   { id: 'plan',     icon: 'workspace_premium',   label: 'Plan',            value: user?.plan || 'Free',   color: '#d97706' },
                 ].map(stat => (
-                  <button
-                    key={stat.label}
-                    onClick={() => setActiveSection(stat.id)}
-                    style={{
-                      background: 'var(--surface-container-lowest)',
-                      border: '1px solid var(--outline-variant)',
-                      borderRadius: 12,
-                      padding: '16px',
-                      display: 'flex', flexDirection: 'column', gap: 8,
-                      textAlign: 'left',
-                      cursor: 'pointer',
-                      transition: 'transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease',
-                    }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.transform = 'translateY(-2px)'
-                      e.currentTarget.style.borderColor = stat.color
-                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.06)'
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.transform = 'none'
-                      e.currentTarget.style.borderColor = 'var(--outline-variant)'
-                      e.currentTarget.style.boxShadow = 'none'
-                    }}
-                  >
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <button key={stat.label} onClick={() => setActiveSection(stat.id)} className={s.statCard}>
+                    <div className={s.statCardTop}>
                       <span className="material-symbols-outlined" style={{ color: stat.color, fontSize: 24 }}>{stat.icon}</span>
-                      <span className="material-symbols-outlined" style={{ fontSize: 16, color: 'var(--secondary)' }}>arrow_forward</span>
+                      <span className={`material-symbols-outlined ${s.statCardArrow}`}>arrow_forward</span>
                     </div>
-                    <div style={{ fontSize: 24, fontWeight: 800, color: 'var(--on-surface)' }}>{stat.value}</div>
-                    <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--secondary)' }}>{stat.label}</div>
+                    <div className={s.statCardValue}>{stat.value}</div>
+                    <div className={s.statCardLabel}>{stat.label}</div>
                   </button>
                 ))}
               </div>
 
               {/* Platform Pulse & Daily Study Launchpad */}
-              <div style={{
-                background: 'linear-gradient(135deg, rgba(234,88,12,0.06) 0%, rgba(37,99,235,0.04) 100%)',
-                border: '1.5px solid var(--outline-variant)',
-                borderRadius: 14,
-                padding: '18px 20px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 14,
-              }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 10 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div className={s.prepPulse}>
+                <div className={s.prepPulseHeader}>
+                  <div className={s.prepPulseLeft}>
                     <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 22 }}>bolt</span>
                     <strong style={{ fontSize: 15, color: 'var(--on-surface)' }}>ExamUdaan Prep Pulse</strong>
-                    <span style={{ fontSize: 11, background: '#DCFCE7', color: '#166534', padding: '2px 8px', borderRadius: 999, fontWeight: 700 }}>Live Platform Stats</span>
+                    <span className={s.prepPulseLiveTag}>Live Platform Stats</span>
                   </div>
-                  <Link href="/daily-quiz" style={{ fontSize: 12, fontWeight: 700, color: 'var(--primary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
+                  <Link href="/daily-quiz" className={s.prepPulseLink}>
                     <span>🔥 Start Today&apos;s 5-Min Quiz</span>
                     <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
                   </Link>
                 </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10 }}>
-                  <Link href="/jobs" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Active Govt Jobs</span>
-                    <strong style={{ fontSize: 18, color: 'var(--on-surface)' }}>{siteStats?.total_jobs || '740+'}</strong>
-                    <span style={{ fontSize: 11, color: 'var(--primary)', fontWeight: 600 }}>Browse alerts →</span>
+                <div className={s.prepPulseGrid}>
+                  <Link href="/jobs" className={s.pulseCard}>
+                    <span className={s.pulseCardLabel}>Active Govt Jobs</span>
+                    <strong className={s.pulseCardValue} style={{ color: 'var(--on-surface)' }}>{siteStats?.total_jobs || '575'}</strong>
+                    <span className={s.pulseCardCta} style={{ color: 'var(--primary)' }}>Browse alerts →</span>
                   </Link>
-                  <Link href="/career" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Career Compass</span>
-                    <strong style={{ fontSize: 18, color: '#ea580c' }}>{siteStats?.total_careers ? `${siteStats.total_careers}+ Paths` : '40+ Paths'}</strong>
-                    <span style={{ fontSize: 11, color: '#ea580c', fontWeight: 600 }}>Science / Comm / Arts →</span>
+                  <Link href="/career" className={s.pulseCard}>
+                    <span className={s.pulseCardLabel}>Career Compass</span>
+                    <strong className={s.pulseCardValue} style={{ color: '#ea580c' }}>{siteStats?.total_careers ? `${siteStats.total_careers}+ Paths` : '40+ Paths'}</strong>
+                    <span className={s.pulseCardCta} style={{ color: '#ea580c' }}>Careers guide →</span>
                   </Link>
-                  <Link href="/ai-tools" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>AI Study Tools</span>
-                    <strong style={{ fontSize: 18, color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : '84 Tools'}</strong>
-                    <span style={{ fontSize: 11, color: '#2563eb', fontWeight: 600 }}>Explore tools →</span>
+                  <Link href="/ai-tools" className={s.pulseCard}>
+                    <span className={s.pulseCardLabel}>AI Study Tools</span>
+                    <strong className={s.pulseCardValue} style={{ color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : '84 Tools'}</strong>
+                    <span className={s.pulseCardCta} style={{ color: '#2563eb' }}>Explore tools →</span>
                   </Link>
-                  <Link href="/pyq" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Solved PYQ Bank</span>
-                    <strong style={{ fontSize: 18, color: '#16a34a' }}>{siteStats?.total_questions ? `${siteStats.total_questions}+ MCQs` : '1,100+ MCQs'}</strong>
-                    <span style={{ fontSize: 11, color: '#16a34a', fontWeight: 600 }}>15-Yr papers →</span>
+                  <Link href="/pyq" className={s.pulseCard}>
+                    <span className={s.pulseCardLabel}>Solved PYQ Bank</span>
+                    <strong className={s.pulseCardValue} style={{ color: '#16a34a' }}>{siteStats?.total_questions ? `${siteStats.total_questions}+ MCQs` : '1,100+ MCQs'}</strong>
+                    <span className={s.pulseCardCta} style={{ color: '#16a34a' }}>15-Yr papers →</span>
                   </Link>
-                  <Link href="/mock-tests" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <span style={{ fontSize: 11, color: 'var(--secondary)' }}>CBT Mock Tests</span>
-                    <strong style={{ fontSize: 18, color: '#7c3aed' }}>{siteStats?.total_mock_tests ? `${siteStats.total_mock_tests} Tests` : '12 Tests'}</strong>
-                    <span style={{ fontSize: 11, color: '#7c3aed', fontWeight: 600 }}>TCS/MPSC exams →</span>
+                  <Link href="/mock-tests" className={s.pulseCard}>
+                    <span className={s.pulseCardLabel}>CBT Mock Tests</span>
+                    <strong className={s.pulseCardValue} style={{ color: '#7c3aed' }}>{siteStats?.total_mock_tests ? `${siteStats.total_mock_tests} Tests` : '12 Tests'}</strong>
+                    <span className={s.pulseCardCta} style={{ color: '#7c3aed' }}>TCS/MPSC tests →</span>
                   </Link>
-                  <Link href="/question-papers" style={{ textDecoration: 'none', background: 'var(--surface-container-lowest)', border: '1.5px solid #EA580C', borderRadius: 10, padding: '12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <span style={{ fontSize: 11, color: '#C2410C', fontWeight: 700 }}>Official Question Papers</span>
-                    <strong style={{ fontSize: 18, color: '#EA580C' }}>214+ PDFs</strong>
-                    <span style={{ fontSize: 11, color: '#EA580C', fontWeight: 600 }}>MPSC Papers & Keys →</span>
+                  <Link href="/question-papers" className={`${s.pulseCard} ${s.pulseCardHighlight}`}>
+                    <span className={s.pulseCardHighlightLabel}>Question Papers</span>
+                    <strong className={s.pulseCardValue} style={{ color: '#EA580C' }}>214+ PDFs</strong>
+                    <span className={s.pulseCardCta} style={{ color: '#EA580C' }}>Papers & Keys →</span>
                   </Link>
                 </div>
               </div>
 
               {/* ── Official MPSC Question Papers & Answer Keys Study Hub Banner ── */}
-              <div style={{
-                background: 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)',
-                border: '1.5px solid #FED7AA',
-                borderRadius: 14,
-                padding: '20px 22px',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                gap: 16,
-                boxShadow: '0 2px 8px rgba(234, 88, 12, 0.06)'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                  <div style={{
-                    width: 46,
-                    height: 46,
-                    borderRadius: 12,
-                    background: '#EA580C',
-                    color: '#FFFFFF',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0
-                  }}>
+              <div className={s.featureBanner}>
+                <div className={s.featureBannerLeft}>
+                  <div className={s.featureBannerIcon}>
                     <span className="material-symbols-outlined" style={{ fontSize: 26 }}>description</span>
                   </div>
-                  <div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 3 }}>
-                      <span style={{ fontSize: 10, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '2px 8px', borderRadius: 4, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                        NEW FEATURE
-                      </span>
-                      <strong style={{ fontSize: 15, color: '#1F2937' }}>
-                        Official Previous Year Question Papers & Answer Keys
-                      </strong>
+                  <div className={s.featureBannerBody}>
+                    <div className={s.featureBannerTagRow}>
+                      <span className={s.featureBannerNewTag}>NEW FEATURE</span>
+                      <strong className={s.featureBannerTitle}>Official Previous Year Question Papers & Answer Keys</strong>
                     </div>
-                    <p style={{ margin: 0, fontSize: 13, color: '#4B5563', lineHeight: 1.45 }}>
+                    <p className={s.featureBannerDesc}>
                       214+ authentic original question papers & official final answer keys (2024–2026). Read directly in-browser with zero ads.
                     </p>
                   </div>
                 </div>
-                <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                  <Link
-                    href="/question-papers"
-                    style={{
-                      background: '#EA580C',
-                      color: '#FFFFFF',
-                      fontWeight: 700,
-                      fontSize: 13,
-                      padding: '9px 16px',
-                      borderRadius: 8,
-                      textDecoration: 'none',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 6
-                    }}
-                  >
+                <div className={s.featureBannerActions}>
+                  <Link href="/question-papers" className={s.featureBannerBtnPrimary}>
                     <span>Browse Question Papers</span>
                     <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
                   </Link>
-                  <Link
-                    href="/syllabus/mpsc-combined"
-                    style={{
-                      background: '#FFFFFF',
-                      color: '#374151',
-                      border: '1px solid #D1D5DB',
-                      fontWeight: 600,
-                      fontSize: 13,
-                      padding: '9px 14px',
-                      borderRadius: 8,
-                      textDecoration: 'none',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 6
-                    }}
-                  >
+                  <Link href="/syllabus/mpsc-combined" className={s.featureBannerBtnSecondary}>
                     <span>MPSC Combined Prelims</span>
                   </Link>
                 </div>
@@ -1100,71 +899,38 @@ export default function DashboardPage() {
 
               {/* Recent Saved Jobs */}
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                  <h3 style={{ fontSize: 16, fontWeight: 700, margin: 0, color: 'var(--on-surface)' }}>
-                    Recently Saved Jobs ({savedJobs.length})
-                  </h3>
+                <div className={s.sectionHeaderRow}>
+                  <h3 className={s.sectionTitle}>Recently Saved Jobs ({savedJobs.length})</h3>
                   {savedJobs.length > 0 && (
-                    <button
-                      onClick={() => setActiveSection('saved')}
-                      style={{ background: 'none', border: 'none', color: 'var(--primary)', fontSize: 13, fontWeight: 600, cursor: 'pointer' }}
-                    >
+                    <button onClick={() => setActiveSection('saved')} className={s.linkBtn}>
                       View all {savedJobs.length} saved jobs →
                     </button>
                   )}
                 </div>
                 {savedJobs.length === 0 ? (
-                  <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: '24px', textAlign: 'center' }}>
+                  <div className={s.emptyState}>
                     <span className="material-symbols-outlined" style={{ fontSize: 36, color: 'var(--outline-variant)' }}>bookmark_border</span>
                     <p style={{ color: 'var(--secondary)', marginTop: 8, fontSize: 14 }}>No saved jobs yet.</p>
-                    <p style={{ color: 'var(--secondary)', fontSize: 12, margin: '4px 0 12px' }}>
-                      Click the bookmark icon on any job card or notification page to save it for later.
-                    </p>
-                    <Link href="/jobs" className="btn-primary" style={{ display: 'inline-flex', padding: '8px 20px', textDecoration: 'none' }}>
-                      Browse Active Jobs
-                    </Link>
+                    <p className={s.emptyStateDescSm}>Click the bookmark icon on any job card or notification page to save it for later.</p>
+                    <Link href="/jobs" className="btn-primary" style={{ display: 'inline-flex', padding: '8px 20px', textDecoration: 'none' }}>Browse Active Jobs</Link>
                   </div>
                 ) : (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  <div className={s.colFlexSm}>
                     {savedJobs.slice(0, 4).map(job => {
                       const deadline = getDeadlineBadge(job.apply_end_date)
                       return (
-                        <div key={job.tracker_id} style={{
-                          background: 'var(--surface-container-lowest)',
-                          border: '1px solid var(--outline-variant)',
-                          borderRadius: 10,
-                          padding: '12px 14px',
-                          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
-                        }}>
-                          <div style={{ flex: 1, minWidth: 0 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4, flexWrap: 'wrap' }}>
-                              <span style={{ fontSize: 10, fontWeight: 800, background: '#FFF7ED', color: 'var(--primary)', padding: '1px 6px', borderRadius: 4 }}>
-                                {job.org_acronym || 'GOVT'}
-                              </span>
-                              {job.total_vacancies > 0 && (
-                                <span style={{ fontSize: 11, fontWeight: 700, color: '#16a34a', background: '#F0FDF4', padding: '1px 6px', borderRadius: 4 }}>
-                                  {job.total_vacancies.toLocaleString()} Posts
-                                </span>
-                              )}
-                              {deadline && (
-                                <span style={{ fontSize: 11, fontWeight: 700, color: deadline.color, background: deadline.bg, padding: '1px 6px', borderRadius: 4 }}>
-                                  {deadline.text}
-                                </span>
-                              )}
+                        <div key={job.tracker_id} className={s.savedJobCardMini}>
+                          <div className={s.savedJobCardBody}>
+                            <div className={s.savedJobCardMeta}>
+                              <span className={s.orgBadge}>{job.org_acronym || 'GOVT'}</span>
+                              {job.total_vacancies > 0 && <span className={s.vacancyBadge}>{job.total_vacancies.toLocaleString()} Posts</span>}
+                              {deadline && <span className={s.deadlineBadgeSm} style={{ color: deadline.color, background: deadline.bg }}>{deadline.text}</span>}
                             </div>
-                            <Link href={`/jobs/${job.slug}`} style={{ fontWeight: 600, fontSize: 13.5, color: 'var(--on-surface)', textDecoration: 'none', display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                              {job.title}
-                            </Link>
+                            <Link href={`/jobs/${job.slug}`} className={s.savedJobTitleSm}>{job.title}</Link>
                           </div>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                            <Link href={`/jobs/${job.slug}`} className="btn-outline" style={{ fontSize: 12, padding: '4px 10px', textDecoration: 'none' }}>
-                              View
-                            </Link>
-                            <button
-                              onClick={() => removeSavedJob(job.tracker_id, job.notification_id)}
-                              title="Remove from saved"
-                              style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--secondary)', padding: 4 }}
-                            >
+                          <div className={s.savedJobCardActions}>
+                            <Link href={`/jobs/${job.slug}`} className="btn-outline" style={{ fontSize: 12, padding: '4px 10px', textDecoration: 'none' }}>View</Link>
+                            <button onClick={() => removeSavedJob(job.tracker_id, job.notification_id)} title="Remove from saved" className={s.removeBtn}>
                               <span className="material-symbols-outlined" style={{ fontSize: 18 }}>close</span>
                             </button>
                           </div>
@@ -1177,78 +943,37 @@ export default function DashboardPage() {
 
               {/* My Job Criteria Quick Preview */}
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                  <h3 style={{ fontSize: 16, fontWeight: 700, margin: 0, color: 'var(--on-surface)' }}>
-                    My Job Criteria ({criteria.length})
-                  </h3>
-                  <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-                    <button
-                      onClick={() => { setActiveSection('criteria'); setShowCriteriaForm(true) }}
-                      className="btn-primary"
-                      style={{ fontSize: 12, padding: '5px 12px' }}
-                    >
-                      + New Criteria
-                    </button>
-                    {criteria.length > 0 && (
-                      <button
-                        onClick={() => setActiveSection('criteria')}
-                        style={{ background: 'none', border: 'none', color: 'var(--primary)', fontSize: 13, fontWeight: 600, cursor: 'pointer' }}
-                      >
-                        Manage →
-                      </button>
-                    )}
+                <div className={s.sectionHeaderRow}>
+                  <h3 className={s.sectionTitle}>My Job Criteria ({criteria.length})</h3>
+                  <div className={s.rowGap10}>
+                    <button onClick={() => { setActiveSection('criteria'); setShowCriteriaForm(true) }} className="btn-primary" style={{ fontSize: 12, padding: '5px 12px' }}>+ New Criteria</button>
+                    {criteria.length > 0 && <button onClick={() => setActiveSection('criteria')} className={s.linkBtn}>Manage →</button>}
                   </div>
                 </div>
                 {criteria.length === 0 ? (
-                  <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: '20px', textAlign: 'center' }}>
+                  <div className={s.emptyState}>
                     <span className="material-symbols-outlined" style={{ fontSize: 32, color: 'var(--outline-variant)' }}>tune</span>
                     <p style={{ color: 'var(--secondary)', marginTop: 6, fontSize: 13 }}>No criteria set up yet.</p>
-                    <p style={{ color: 'var(--secondary)', fontSize: 12, margin: '2px 0 10px' }}>
-                      Configure your qualifications and preferred sectors to get alerts.
-                    </p>
-                    <button
-                      onClick={() => { setActiveSection('criteria'); setShowCriteriaForm(true) }}
-                      className="btn-outline"
-                      style={{ fontSize: 12, padding: '6px 14px' }}
-                    >
-                      Set Up Criteria
-                    </button>
+                    <p className={s.emptyStateDescSm}>Configure your qualifications and preferred sectors to get alerts.</p>
+                    <button onClick={() => { setActiveSection('criteria'); setShowCriteriaForm(true) }} className="btn-outline" style={{ fontSize: 12, padding: '6px 14px' }}>Set Up Criteria</button>
                   </div>
                 ) : (
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 10 }}>
+                  <div className={s.criteriaPreviewGrid}>
                     {criteria.slice(0, 2).map(c => (
-                      <div key={c.id} style={{
-                        background: 'var(--surface-container-lowest)',
-                        border: '1px solid var(--outline-variant)',
-                        borderRadius: 10,
-                        padding: '12px 14px',
-                        display: 'flex', flexDirection: 'column', gap: 6,
-                      }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div key={c.id} className={s.criteriaPreviewCard}>
+                        <div className={s.rowBetween}>
                           <strong style={{ fontSize: 14, color: 'var(--on-surface)' }}>{c.name}</strong>
-                          <span style={{ fontSize: 10, fontWeight: 700, padding: '1px 6px', borderRadius: 99, background: c.is_active !== false ? '#DCFCE7' : '#F3F4F6', color: c.is_active !== false ? '#166534' : '#6B7280' }}>
+                          <span className={`${s.criteriaStatusBadge} ${c.is_active !== false ? s.criteriaStatusActive : s.criteriaStatusPaused}`}>
                             {c.is_active !== false ? 'Active' : 'Paused'}
                           </span>
                         </div>
-                        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                          {(c.qualifications || []).slice(0, 2).map((q, idx) => (
-                            <span key={idx} style={{ fontSize: 11, background: '#FFF7ED', color: '#C2410C', padding: '1px 6px', borderRadius: 4 }}>
-                              🎓 {q}
-                            </span>
-                          ))}
-                          {(c.categories || []).slice(0, 2).map((cat, idx) => (
-                            <span key={idx} style={{ fontSize: 11, background: '#EFF6FF', color: '#1D4ED8', padding: '1px 6px', borderRadius: 4 }}>
-                              🏛️ {cat}
-                            </span>
-                          ))}
+                        <div className={s.criteriaPreviewChips}>
+                          {(c.qualifications || []).slice(0, 2).map((q, idx) => <span key={idx} className={s.criteriaSmallChipQual}>🎓 {q}</span>)}
+                          {(c.categories || []).slice(0, 2).map((cat, idx) => <span key={idx} className={s.criteriaSmallChipCat}>🏛️ {cat}</span>)}
                         </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 4, paddingTop: 6, borderTop: '1px solid var(--outline-variant)' }}>
-                          <div style={{ fontSize: 11, color: 'var(--secondary)' }}>
-                            {c.alert_email && '📧 Email'} {c.alert_whatsapp && '💬 WhatsApp'}
-                          </div>
-                          <Link href={getMatchingJobsUrl(c)} style={{ fontSize: 12, fontWeight: 700, color: 'var(--primary)', textDecoration: 'none' }}>
-                            Find Jobs →
-                          </Link>
+                        <div className={s.criteriaPreviewFooter}>
+                          <div style={{ fontSize: 11, color: 'var(--secondary)' }}>{c.alert_email && '📧 Email'} {c.alert_whatsapp && '💬 WhatsApp'}</div>
+                          <Link href={getMatchingJobsUrl(c)} style={{ fontSize: 12, fontWeight: 700, color: 'var(--primary)', textDecoration: 'none' }}>Find Jobs →</Link>
                         </div>
                       </div>
                     ))}
@@ -1261,157 +986,55 @@ export default function DashboardPage() {
           {/* ─── Saved Jobs ─── */}
           {activeSection === 'saved' && (
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16, flexWrap: 'wrap', gap: 10 }}>
+              <div className={`${s.savedJobsHeader} ${s.rowBetweenWrap}`}>
                 <div>
-                  <h2 style={{ fontSize: 18, fontWeight: 700, margin: 0, color: 'var(--on-surface)' }}>
-                    Saved Jobs ({savedJobs.length})
-                  </h2>
-                  <p style={{ margin: '3px 0 0', fontSize: 13, color: 'var(--secondary)' }}>
-                    Keep track of government vacancies you want to review and apply for before the deadline.
-                  </p>
+                  <h2 className={s.sectionTitle2}>Saved Jobs ({savedJobs.length})</h2>
+                  <p className={s.sectionDesc}>Keep track of government vacancies you want to review and apply for before the deadline.</p>
                 </div>
-                <Link href="/jobs" className="btn-primary" style={{ fontSize: 13, padding: '7px 16px', textDecoration: 'none' }}>
-                  + Browse More Jobs
-                </Link>
+                <Link href="/jobs" className="btn-primary" style={{ fontSize: 13, padding: '7px 16px', textDecoration: 'none' }}>+ Browse More Jobs</Link>
               </div>
 
               {savedJobs.length === 0 ? (
-                <div style={{
-                  background: 'var(--surface-container-lowest)',
-                  border: '1.5px dashed var(--outline-variant)',
-                  borderRadius: 14,
-                  padding: '48px 24px',
-                  textAlign: 'center',
-                }}>
-                  <div style={{
-                    width: 56,
-                    height: 56,
-                    borderRadius: '50%',
-                    background: '#FFF7ED',
-                    color: '#EA580C',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 14px'
-                  }}>
+                <div className={s.emptyStateDashed}>
+                  <div className={`${s.emptyStateIconWrap} ${s.emptyStateIconWrapOrange}`}>
                     <span className="material-symbols-outlined" style={{ fontSize: 30 }}>bookmark_border</span>
                   </div>
-                  <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--on-surface)', margin: '0 0 6px' }}>
-                    No Saved Jobs Yet
-                  </h3>
-                  <p style={{ color: 'var(--secondary)', fontSize: 13, maxWidth: 440, margin: '0 auto 18px', lineHeight: 1.5 }}>
-                    When browsing notifications on ExamUdaan, click the bookmark icon on any card to save it here for fast access.
-                  </p>
-                  <Link href="/jobs" className="btn-primary" style={{ textDecoration: 'none', padding: '10px 22px', fontSize: 13 }}>
-                    Explore Active Govt Jobs
-                  </Link>
+                  <h3 className={s.emptyStateTitle}>No Saved Jobs Yet</h3>
+                  <p className={s.emptyStateDesc}>When browsing notifications on ExamUdaan, click the bookmark icon on any card to save it here for fast access.</p>
+                  <Link href="/jobs" className="btn-primary" style={{ textDecoration: 'none', padding: '10px 22px', fontSize: 13 }}>Explore Active Govt Jobs</Link>
                 </div>
               ) : (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                <div className={s.savedJobsList}>
                   {savedJobs.map(job => {
                     const deadline = getDeadlineBadge(job.apply_end_date)
                     return (
-                      <div key={job.tracker_id} style={{
-                        background: 'var(--surface-container-lowest)',
-                        border: '1px solid var(--outline-variant)',
-                        borderRadius: 14,
-                        padding: '16px 18px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: 10,
-                        transition: 'box-shadow 0.15s ease',
-                      }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 14, flexWrap: 'wrap' }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                            <span style={{
-                              fontSize: 11, fontWeight: 800, textTransform: 'uppercase',
-                              padding: '2px 8px', borderRadius: 6,
-                              background: '#FFF7ED', color: 'var(--primary)',
-                              border: '1px solid #FFEDD5',
-                            }}>
-                              {job.org_acronym || 'GOVT'}
-                            </span>
-                            <span style={{ fontSize: 12, color: 'var(--secondary)', fontWeight: 600 }}>
-                              {job.org_name}
-                            </span>
+                      <div key={job.tracker_id} className={s.savedJobCard}>
+                        <div className={s.rowBetweenWrap}>
+                          <div className={s.rowStartWrap}>
+                            <span className={s.orgBadgeFull}>{job.org_acronym || 'GOVT'}</span>
+                            <span className={s.orgNameText}>{job.org_name}</span>
                             {job.total_vacancies > 0 && (
-                              <span style={{
-                                fontSize: 11, fontWeight: 700,
-                                padding: '2px 8px', borderRadius: 6,
-                                background: '#F0FDF4', color: '#166534',
-                              }}>
-                                👥 {job.total_vacancies.toLocaleString()} Vacancies
-                              </span>
+                              <span className={s.vacancyBadgeFull}>👥 {job.total_vacancies.toLocaleString()} Vacancies</span>
                             )}
-                            {job.is_walk_in && (
-                              <span style={{
-                                fontSize: 11, fontWeight: 700,
-                                padding: '2px 8px', borderRadius: 6,
-                                background: '#FEF3C7', color: '#B45309',
-                              }}>
-                                🚶 Walk-in Interview
-                              </span>
-                            )}
+                            {job.is_walk_in && <span className={s.walkInBadge}>🚶 Walk-in Interview</span>}
                           </div>
                           {deadline && (
-                            <span style={{
-                              fontSize: 11.5, fontWeight: 700,
-                              padding: '3px 10px', borderRadius: 999,
-                              background: deadline.bg, color: deadline.color,
-                            }}>
-                              ⏳ {deadline.text}
-                            </span>
+                            <span className={s.deadlineBadge} style={{ background: deadline.bg, color: deadline.color }}>⏳ {deadline.text}</span>
                           )}
                         </div>
 
                         <div>
-                          <Link href={`/jobs/${job.slug}`} style={{
-                            fontWeight: 700,
-                            fontSize: 15,
-                            color: 'var(--on-surface)',
-                            textDecoration: 'none',
-                            lineHeight: 1.4,
-                            display: 'inline-block'
-                          }}>
-                            {job.title}
-                          </Link>
+                          <Link href={`/jobs/${job.slug}`} className={s.savedJobTitle}>{job.title}</Link>
                         </div>
 
-                        <div style={{
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          alignItems: 'center',
-                          paddingTop: 10,
-                          borderTop: '1px solid var(--outline-variant)',
-                          flexWrap: 'wrap',
-                          gap: 10,
-                        }}>
-                          <div style={{ fontSize: 12, color: 'var(--secondary)', display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                        <div className={s.savedJobFooter}>
+                          <div className={s.savedJobDateRow}>
                             {job.apply_end_date && <span>📅 Last Date: <strong>{fmtDate(job.apply_end_date)}</strong></span>}
                             <span>🔖 Saved on {fmtDate(job.saved_at)}</span>
                           </div>
-
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                            <Link href={`/jobs/${job.slug}`} className="btn-primary" style={{ fontSize: 12, padding: '6px 14px', textDecoration: 'none' }}>
-                              View & Apply →
-                            </Link>
-                            <button
-                              onClick={() => removeSavedJob(job.tracker_id, job.notification_id)}
-                              title="Remove job from saved list"
-                              style={{
-                                background: 'transparent',
-                                border: '1px solid var(--outline-variant)',
-                                borderRadius: 8,
-                                padding: '6px 12px',
-                                cursor: 'pointer',
-                                color: '#DC2626',
-                                fontSize: 12,
-                                fontWeight: 600,
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: 4,
-                              }}
-                            >
+                          <div className={s.savedJobActionRow}>
+                            <Link href={`/jobs/${job.slug}`} className="btn-primary" style={{ fontSize: 12, padding: '6px 14px', textDecoration: 'none' }}>View &amp; Apply →</Link>
+                            <button onClick={() => removeSavedJob(job.tracker_id, job.notification_id)} title="Remove job from saved list" className={s.removeBtn2}>
                               <span className="material-symbols-outlined" style={{ fontSize: 16 }}>delete</span>
                               <span>Remove</span>
                             </button>
@@ -1578,10 +1201,8 @@ export default function DashboardPage() {
 
                   {/* Preferred Location / States Multi-Select Chips */}
                   <div>
-                    <label style={{ display: 'block', fontWeight: 700, fontSize: 13, marginBottom: 8, color: 'var(--on-surface)' }}>
-                      Location / State
-                    </label>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                    <label className={s.chipLabel}>Location / State</label>
+                    <div className={s.chipGroup}>
                       {CRITERIA_STATES.map(st => {
                         const isSelected = criteriaStates.includes(st.id)
                         return (
@@ -1589,20 +1210,7 @@ export default function DashboardPage() {
                             key={st.id}
                             type="button"
                             onClick={() => toggleChip(criteriaStates, setCriteriaStates, st.id)}
-                            style={{
-                              padding: '6px 14px',
-                              borderRadius: 999,
-                              fontSize: 12.5,
-                              fontWeight: isSelected ? 700 : 500,
-                              cursor: 'pointer',
-                              background: isSelected ? '#16a34a' : 'var(--surface-container-lowest)',
-                              color: isSelected ? '#FFFFFF' : 'var(--on-surface)',
-                              border: isSelected ? '1.5px solid #16a34a' : '1px solid var(--outline-variant)',
-                              transition: 'all 0.15s ease',
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              gap: 6
-                            }}
+                            className={`${s.chip} ${s.chipGreen} ${isSelected ? s.chipActive : ''}`}
                           >
                             <span>{isSelected ? '✓' : '+'}</span>
                             <span>{st.label}</span>
@@ -1614,26 +1222,14 @@ export default function DashboardPage() {
 
                   {/* Govt Level Selector */}
                   <div>
-                    <label style={{ display: 'block', fontWeight: 700, fontSize: 13, marginBottom: 8, color: 'var(--on-surface)' }}>
-                      Govt Level
-                    </label>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                    <label className={s.chipLabel}>Govt Level</label>
+                    <div className={s.chipGroup}>
                       {CRITERIA_GOVT_LEVELS.map(lvl => (
                         <button
                           key={lvl}
                           type="button"
                           onClick={() => setCriteriaGovtLevel(lvl)}
-                          style={{
-                            padding: '5px 12px',
-                            borderRadius: 6,
-                            fontSize: 12,
-                            fontWeight: criteriaGovtLevel === lvl ? 700 : 500,
-                            cursor: 'pointer',
-                            background: criteriaGovtLevel === lvl ? 'var(--on-surface)' : 'var(--surface-container-lowest)',
-                            color: criteriaGovtLevel === lvl ? 'var(--surface-container-lowest)' : 'var(--on-surface)',
-                            border: '1px solid var(--outline-variant)',
-                            transition: 'all 0.15s ease'
-                          }}
+                          className={`${s.govtLevelChip} ${criteriaGovtLevel === lvl ? s.govtLevelChipActive : ''}`}
                         >
                           {lvl}
                         </button>
@@ -1753,73 +1349,28 @@ export default function DashboardPage() {
                   </button>
                 </div>
               ) : (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                <div className={s.colFlexLg}>
                   {criteria.map(c => {
                     const isActive = c.is_active !== false
                     return (
-                      <div key={c.id} style={{
-                        background: 'var(--surface-container-lowest)',
-                        border: '1px solid var(--outline-variant)',
-                        borderRadius: 14,
-                        padding: '18px 20px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: 12,
-                        transition: 'all 0.15s ease',
-                      }}>
+                    <div key={c.id} className={s.criteriaCard}>
                         {/* Criteria Header */}
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
+                        <div className={s.criteriaCardHeader}>
                           <div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-                              <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: 'var(--on-surface)' }}>
-                                {c.name}
-                              </h3>
-                              <span style={{
-                                fontSize: 10.5, fontWeight: 800,
-                                padding: '2px 8px', borderRadius: 999,
-                                background: isActive ? '#DCFCE7' : '#F3F4F6',
-                                color: isActive ? '#166534' : '#6B7280',
-                              }}>
+                            <div className={s.criteriaCardTitleRow}>
+                              <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: 'var(--on-surface)' }}>{c.name}</h3>
+                              <span className={`${s.criteriaStatusBadge} ${isActive ? s.criteriaStatusActive : s.criteriaStatusPaused}`}>
                                 {isActive ? '● Active Alerts' : '○ Paused'}
                               </span>
                             </div>
-                            <span style={{ fontSize: 11.5, color: 'var(--secondary)' }}>
-                              Created on {fmtDate(c.created_at)}
-                            </span>
+                            <span className={s.criteriaCardDate}>Created on {fmtDate(c.created_at)}</span>
                           </div>
 
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                            <button
-                              onClick={() => toggleCriteriaActive(c.id, isActive)}
-                              style={{
-                                background: 'transparent',
-                                border: '1px solid var(--outline-variant)',
-                                borderRadius: 8,
-                                padding: '5px 10px',
-                                fontSize: 12,
-                                fontWeight: 600,
-                                cursor: 'pointer',
-                                color: isActive ? '#D97706' : '#059669',
-                              }}
-                            >
+                          <div className={s.criteriaCardActions}>
+                            <button onClick={() => toggleCriteriaActive(c.id, isActive)} className={s.criteriaActionBtn} style={{ color: isActive ? '#D97706' : '#059669' }}>
                               {isActive ? 'Pause Alerts' : 'Resume Alerts'}
                             </button>
-                            <button
-                              onClick={() => deleteCriteria(c.id)}
-                              title="Delete criteria"
-                              style={{
-                                background: 'transparent',
-                                border: '1px solid var(--outline-variant)',
-                                borderRadius: 8,
-                                padding: '5px 10px',
-                                cursor: 'pointer',
-                                color: '#DC2626',
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: 4,
-                                fontSize: 12,
-                              }}
-                            >
+                            <button onClick={() => deleteCriteria(c.id)} title="Delete criteria" className={s.criteriaDeleteBtn}>
                               <span className="material-symbols-outlined" style={{ fontSize: 16 }}>delete</span>
                               <span>Delete</span>
                             </button>
@@ -1827,113 +1378,37 @@ export default function DashboardPage() {
                         </div>
 
                         {/* Criteria Chips */}
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                        <div className={s.criteriaChips}>
                           {(c.qualifications || []).map((q, idx) => (
-                            <span key={idx} style={{
-                              fontSize: 12,
-                              fontWeight: 600,
-                              background: '#FFF7ED',
-                              color: '#C2410C',
-                              padding: '2px 10px',
-                              borderRadius: 6,
-                              border: '1px solid #FFEDD5',
-                            }}>
-                              🎓 {q}
-                            </span>
+                            <span key={idx} className={s.criteriaChipQual}>🎓 {q}</span>
                           ))}
-
                           {(c.categories || []).map((cat, idx) => (
-                            <span key={idx} style={{
-                              fontSize: 12,
-                              fontWeight: 600,
-                              background: '#EFF6FF',
-                              color: '#1D4ED8',
-                              padding: '2px 10px',
-                              borderRadius: 6,
-                              border: '1px solid #DBEAFE',
-                            }}>
-                              🏛️ {cat}
-                            </span>
+                            <span key={idx} className={s.criteriaChipCat}>🏛️ {cat}</span>
                           ))}
-
                           {(c.states || []).map((st, idx) => (
-                            <span key={idx} style={{
-                              fontSize: 12,
-                              fontWeight: 600,
-                              background: '#F0FDF4',
-                              color: '#15803D',
-                              padding: '2px 10px',
-                              borderRadius: 6,
-                              border: '1px solid #DCFCE7',
-                            }}>
-                              📍 {st}
-                            </span>
+                            <span key={idx} className={s.criteriaChipState}>📍 {st}</span>
                           ))}
-
                           {c.govt_level && (
-                            <span style={{
-                              fontSize: 12,
-                              fontWeight: 600,
-                              background: '#F5F3FF',
-                              color: '#6D28D9',
-                              padding: '2px 10px',
-                              borderRadius: 6,
-                              border: '1px solid #EDE9FE',
-                            }}>
-                              🏛️ {c.govt_level}
-                            </span>
+                            <span className={s.criteriaChipGovt}>🏛️ {c.govt_level}</span>
                           )}
-
                           {c.keywords && (
-                            <span style={{
-                              fontSize: 12,
-                              color: 'var(--secondary)',
-                              background: 'var(--surface-container-low)',
-                              padding: '2px 10px',
-                              borderRadius: 6,
-                            }}>
-                              🔍 Keywords: <em>{c.keywords}</em>
-                            </span>
+                            <span className={s.criteriaChipKeyword}>🔍 Keywords: <em>{c.keywords}</em></span>
                           )}
                         </div>
 
                         {/* Criteria Footer Row */}
-                        <div style={{
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          alignItems: 'center',
-                          paddingTop: 10,
-                          borderTop: '1px solid var(--outline-variant)',
-                          flexWrap: 'wrap',
-                          gap: 10,
-                        }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 12, color: 'var(--secondary)' }}>
-                            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                              <span className="material-symbols-outlined" style={{ fontSize: 15, color: c.alert_email ? '#2563EB' : 'var(--outline-variant)' }}>
-                                {c.alert_email ? 'check_circle' : 'cancel'}
-                              </span>
+                        <div className={s.criteriaFooter}>
+                          <div className={s.criteriaFooterMeta}>
+                            <span className={s.criteriaAlertStatus}>
+                              <span className="material-symbols-outlined" style={{ fontSize: 15, color: c.alert_email ? '#2563EB' : 'var(--outline-variant)' }}>{c.alert_email ? 'check_circle' : 'cancel'}</span>
                               <span>Email Alerts: {c.alert_email ? 'On' : 'Off'}</span>
                             </span>
-                            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                              <span className="material-symbols-outlined" style={{ fontSize: 15, color: c.alert_whatsapp ? '#16A34A' : 'var(--outline-variant)' }}>
-                                {c.alert_whatsapp ? 'check_circle' : 'cancel'}
-                              </span>
+                            <span className={s.criteriaAlertStatus}>
+                              <span className="material-symbols-outlined" style={{ fontSize: 15, color: c.alert_whatsapp ? '#16A34A' : 'var(--outline-variant)' }}>{c.alert_whatsapp ? 'check_circle' : 'cancel'}</span>
                               <span>WhatsApp Alerts: {c.alert_whatsapp ? 'On' : 'Off'}</span>
                             </span>
                           </div>
-
-                          <Link
-                            href={getMatchingJobsUrl(c)}
-                            className="btn-primary"
-                            style={{
-                              fontSize: 12.5,
-                              padding: '6px 14px',
-                              textDecoration: 'none',
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              gap: 6
-                            }}
-                          >
+                          <Link href={getMatchingJobsUrl(c)} className="btn-primary" style={{ fontSize: 12.5, padding: '6px 14px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                             <span>Find Matching Jobs</span>
                             <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
                           </Link>
@@ -1949,36 +1424,27 @@ export default function DashboardPage() {
           {/* ─── Alert Settings ─── */}
           {activeSection === 'alerts' && (
             <div>
-              <h2 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 16px', color: 'var(--on-surface)' }}>Alert Settings</h2>
-              <div style={{
-                background: 'var(--surface-container-lowest)',
-                border: '1px solid var(--outline-variant)',
-                borderRadius: 12,
-                padding: '20px',
-              }}>
-                <p style={{ color: 'var(--secondary)', fontSize: 14, marginBottom: 16 }}>
-                  Configure how and when you receive job alerts. Upgrade to Pro for WhatsApp + SMS alerts.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <h2 className={s.sectionTitle2} style={{ marginBottom: 16 }}>Alert Settings</h2>
+              <div className={s.alertSettingsCard}>
+                <p style={{ color: 'var(--secondary)', fontSize: 14, marginBottom: 16 }}>Configure how and when you receive job alerts. Upgrade to Pro for WhatsApp + SMS alerts.</p>
+                <div className={s.colFlexLg}>
                   {[
-                    { icon: 'mail',      label: 'Email Alerts',     desc: 'Daily digest of matching jobs', free: true },
-                    { icon: 'chat',      label: 'WhatsApp Alerts',  desc: 'Instant alerts on WhatsApp',    free: false },
-                    { icon: 'sms',       label: 'SMS Alerts',       desc: 'Text alerts for urgent jobs',   free: false },
+                    { icon: 'mail',  label: 'Email Alerts',    desc: 'Daily digest of matching jobs', free: true },
+                    { icon: 'chat',  label: 'WhatsApp Alerts', desc: 'Instant alerts on WhatsApp',    free: false },
+                    { icon: 'sms',   label: 'SMS Alerts',      desc: 'Text alerts for urgent jobs',   free: false },
                   ].map(ch => (
-                    <div key={ch.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid var(--outline-variant)' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                    <div key={ch.label} className={s.alertChannelRow}>
+                      <div className={s.alertChannelRowLeft}>
                         <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 22 }}>{ch.icon}</span>
                         <div>
-                          <div style={{ fontWeight: 600, fontSize: 14, color: 'var(--on-surface)' }}>{ch.label}</div>
-                          <div style={{ fontSize: 12, color: 'var(--secondary)' }}>{ch.desc}</div>
+                          <div className={s.alertChannelName}>{ch.label}</div>
+                          <div className={s.alertChannelDesc}>{ch.desc}</div>
                         </div>
                       </div>
                       {ch.free ? (
-                        <span style={{ background: '#f0fdf4', color: '#16a34a', padding: '3px 10px', borderRadius: 99, fontSize: 12, fontWeight: 700 }}>Active</span>
+                        <span className={s.alertActiveBadge}>Active</span>
                       ) : (
-                        <Link href="/pricing" style={{ background: '#FFF7ED', color: 'var(--primary)', padding: '3px 10px', borderRadius: 99, fontSize: 12, fontWeight: 700, textDecoration: 'none' }}>
-                          Upgrade →
-                        </Link>
+                        <Link href="/pricing" className={s.alertUpgradeLink}>Upgrade →</Link>
                       )}
                     </div>
                   ))}
@@ -1990,18 +1456,13 @@ export default function DashboardPage() {
           {/* ──── Edit Profile ──── */}
           {activeSection === 'profile' && (
             <div>
-              <h2 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 4px', color: 'var(--on-surface)' }}>Edit Profile</h2>
-              <p style={{ fontSize: 13, color: 'var(--secondary)', marginBottom: 20 }}>Keep your profile up to date for personalised job alerts.</p>
+              <h2 className={s.sectionTitle2} style={{ marginBottom: 4 }}>Edit Profile</h2>
+              <p className={s.sectionDesc} style={{ marginBottom: 20 }}>Keep your profile up to date for personalised job alerts.</p>
               {profileMsg.text && (
-                <div style={{ padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14,
-                  background: profileMsg.type === 'success' ? '#f0fdf4' : '#fef2f2',
-                  border: profileMsg.type === 'success' ? '1px solid #86efac' : '1px solid #fca5a5',
-                  color:  profileMsg.type === 'success' ? '#16a34a' : '#dc2626' }}>
-                  {profileMsg.text}
-                </div>
+                <div className={`${s.msgBannerProfile} ${profileMsg.type === 'success' ? s.msgBannerProfileSuccess : s.msgBannerProfileError}`}>{profileMsg.text}</div>
               )}
-              <form onSubmit={handleProfileSave} style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+              <form onSubmit={handleProfileSave} className={s.profileForm}>
+                <div className={s.formGrid2}>
                   <div className="input-group">
                     <label className="input-label" htmlFor="pf-first">First Name</label>
                     <input id="pf-first" className="form-input" type="text" placeholder="Rahul"
@@ -2013,7 +1474,7 @@ export default function DashboardPage() {
                       value={profileForm.last_name} onChange={e => setProfileForm(f => ({ ...f, last_name: e.target.value }))} />
                   </div>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+                <div className={s.formGrid2}>
                   <div className="input-group">
                     <label className="input-label" htmlFor="pf-gender">Gender</label>
                     <select id="pf-gender" className="form-input" value={profileForm.gender} onChange={e => setProfileForm(f => ({ ...f, gender: e.target.value }))}>
@@ -2033,8 +1494,8 @@ export default function DashboardPage() {
                   <label className="input-label" htmlFor="pf-state">State / UT</label>
                   <select id="pf-state" className="form-input" value={profileForm.state} onChange={e => setProfileForm(f => ({ ...f, state: e.target.value }))}>
                     <option value="">Select state...</option>
-                    {['Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh','Uttarakhand','West Bengal','Andaman and Nicobar Islands','Chandigarh','Dadra and Nagar Haveli and Daman and Diu','Delhi','Jammu and Kashmir','Ladakh','Lakshadweep','Puducherry'].map(s => (
-                      <option key={s} value={s}>{s}</option>
+                    {['Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh','Uttarakhand','West Bengal','Andaman and Nicobar Islands','Chandigarh','Dadra and Nagar Haveli and Daman and Diu','Delhi','Jammu and Kashmir','Ladakh','Lakshadweep','Puducherry'].map(st => (
+                      <option key={st} value={st}>{st}</option>
                     ))}
                   </select>
                 </div>
@@ -2054,26 +1515,14 @@ export default function DashboardPage() {
                     <option value="mr">Marathi</option>
                   </select>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+                <div className={s.formGrid2}>
                   <div className="input-group">
                     <label className="input-label">Email (read-only)</label>
-                    <input
-                      className="form-input"
-                      type="text"
-                      value={userEmail || '—'}
-                      disabled
-                      style={{ opacity: 0.75, background: 'var(--surface-container-low, #f8fafc)', cursor: 'not-allowed', fontWeight: 500 }}
-                    />
+                    <input className={`form-input ${s.inputDisabled}`} type="text" value={userEmail || '—'} disabled />
                   </div>
                   <div className="input-group">
                     <label className="input-label">Phone (read-only)</label>
-                    <input
-                      className="form-input"
-                      type="text"
-                      value={userPhone || 'Not linked'}
-                      disabled
-                      style={{ opacity: 0.75, background: 'var(--surface-container-low, #f8fafc)', cursor: 'not-allowed', fontWeight: 500 }}
-                    />
+                    <input className={`form-input ${s.inputDisabled}`} type="text" value={userPhone || 'Not linked'} disabled />
                   </div>
                 </div>
                 <button type="submit" className="btn-primary" style={{ alignSelf: 'flex-start', padding: '10px 28px', opacity: profileLoading ? 0.7 : 1 }} disabled={profileLoading}>
@@ -2086,33 +1535,26 @@ export default function DashboardPage() {
           {/* ──── Security & Password ──── */}
           {activeSection === 'security' && (
             <div>
-              <h2 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 4px', color: 'var(--on-surface)' }}>Security &amp; Password</h2>
-              <p style={{ fontSize: 13, color: 'var(--secondary)', marginBottom: 20 }}>
+              <h2 className={s.sectionTitle2} style={{ marginBottom: 4 }}>Security &amp; Password</h2>
+              <p className={s.sectionDesc} style={{ marginBottom: 20 }}>
                 {user?.has_password ? 'Change your password below.' : 'Set a password to log in with your email and password.'}
               </p>
               {secMsg.text && (
-                <div style={{ padding: '10px 14px', borderRadius: 8, marginBottom: 16, fontSize: 14,
-                  background: secMsg.type === 'success' ? '#f0fdf4' : '#fef2f2',
-                  border: secMsg.type === 'success' ? '1px solid #86efac' : '1px solid #fca5a5',
-                  color:  secMsg.type === 'success' ? '#16a34a' : '#dc2626' }}>
-                  {secMsg.text}
-                </div>
+                <div className={`${s.msgBannerProfile} ${secMsg.type === 'success' ? s.msgBannerProfileSuccess : s.msgBannerProfileError}`}>{secMsg.text}</div>
               )}
-              <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 10, padding: '12px 16px', marginBottom: 20, display: 'flex', alignItems: 'center', gap: 10 }}>
+              <div className={s.securityMethodCard}>
                 <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 20 }}>
                   {user?.auth_provider === 'google' ? 'account_circle' : 'mail'}
                 </span>
                 <div>
-                  <div style={{ fontWeight: 600, fontSize: 14 }}>{user?.auth_provider === 'google' ? 'Signed in with Google' : 'Signed in with OTP'}</div>
-                  <div style={{ fontSize: 12, color: 'var(--secondary)' }}>
-                    {user?.has_password ? 'Password is set — you can also log in with email + password.' : 'No password set yet.'}
-                  </div>
+                  <div className={s.securityMethodTitle}>{user?.auth_provider === 'google' ? 'Signed in with Google' : 'Signed in with OTP'}</div>
+                  <div className={s.securityMethodDesc}>{user?.has_password ? 'Password is set — you can also log in with email + password.' : 'No password set yet.'}</div>
                 </div>
               </div>
               {!user?.has_password && (
-                <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: '20px', marginBottom: 20 }}>
+                <div className={s.securityFormCard}>
                   <h3 style={{ fontSize: 15, fontWeight: 700, marginBottom: 14 }}>Set a Password</h3>
-                  <form onSubmit={handleSetPassword} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                  <form onSubmit={handleSetPassword} className={s.colFlexLg}>
                     <div className="input-group">
                       <label className="input-label" htmlFor="sec-np">New Password (min 8 characters)</label>
                       <input id="sec-np" className="form-input" type="password" placeholder="Enter new password"
@@ -2130,9 +1572,9 @@ export default function DashboardPage() {
                 </div>
               )}
               {user?.has_password && (
-                <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: '20px' }}>
+                <div className={s.securityFormCard}>
                   <h3 style={{ fontSize: 15, fontWeight: 700, marginBottom: 14 }}>Change Password</h3>
-                  <form onSubmit={handleChangePassword} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                  <form onSubmit={handleChangePassword} className={s.colFlexLg}>
                     <div className="input-group">
                       <label className="input-label" htmlFor="sec-curp">Current Password</label>
                       <input id="sec-curp" className="form-input" type="password" placeholder="Your current password"
@@ -2160,36 +1602,34 @@ export default function DashboardPage() {
           {/* ──── Plan & Billing ──── */}
           {activeSection === 'plan' && (
             <div>
-              <h2 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 4px', color: 'var(--on-surface)' }}>Plan &amp; Billing</h2>
-              <p style={{ fontSize: 13, color: 'var(--secondary)', marginBottom: 20 }}>Your current plan and upgrade options.</p>
-              <div style={{ background: user?.plan === 'free' ? 'var(--surface-container-lowest)' : 'linear-gradient(135deg, #fef3c7, #fde68a)', border: '1px solid var(--outline-variant)', borderRadius: 14, padding: '20px 24px', marginBottom: 20, display: 'flex', alignItems: 'center', gap: 16 }}>
+              <h2 className={s.sectionTitle2} style={{ marginBottom: 4 }}>Plan &amp; Billing</h2>
+              <p className={s.sectionDesc} style={{ marginBottom: 20 }}>Your current plan and upgrade options.</p>
+              <div className={`${s.planCard} ${user?.plan !== 'free' ? s.planCardPremium : ''}`}>
                 <span className="material-symbols-outlined" style={{ fontSize: 36, color: user?.plan === 'free' ? 'var(--secondary)' : '#d97706' }}>workspace_premium</span>
                 <div>
-                  <div style={{ fontSize: 22, fontWeight: 800, textTransform: 'capitalize', color: user?.plan === 'free' ? 'var(--on-surface)' : '#92400e' }}>{user?.plan || 'Free'} Plan</div>
-                  {user?.plan_expiry && <div style={{ fontSize: 13, color: 'var(--secondary)', marginTop: 2 }}>Valid until: {fmtDate(user.plan_expiry)}</div>}
-                  {user?.plan === 'free' && <div style={{ fontSize: 13, color: 'var(--secondary)', marginTop: 2 }}>Free plan — email alerts only</div>}
+                  <div className={`${s.planName} ${user?.plan !== 'free' ? s.planNamePremium : ''}`}>{user?.plan || 'Free'} Plan</div>
+                  {user?.plan_expiry && <div className={s.planExpiry}>Valid until: {fmtDate(user.plan_expiry)}</div>}
+                  {user?.plan === 'free' && <div className={s.planExpiry}>Free plan — email alerts only</div>}
                 </div>
               </div>
               {user?.plan === 'free' && (
-                <div style={{ background: 'linear-gradient(135deg, #a33900, #EA580C)', borderRadius: 14, padding: '24px', color: '#fff', marginBottom: 20 }}>
-                  <div style={{ fontWeight: 800, fontSize: 18, marginBottom: 6 }}>Upgrade for More Alerts</div>
-                  <div style={{ fontSize: 14, opacity: 0.9, marginBottom: 16 }}>Get WhatsApp + SMS alerts, unlimited criteria, and priority notifications.</div>
-                  <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 16 }}>
+                <div className={s.upgradePanel}>
+                  <div className={s.upgradePanelTitle}>Upgrade for More Alerts</div>
+                  <div className={s.upgradePanelDesc}>Get WhatsApp + SMS alerts, unlimited criteria, and priority notifications.</div>
+                  <div className={s.upgradePlanGrid}>
                     {[{ plan: 'Basic', price: '₹29/mo', desc: 'Email + WhatsApp' }, { plan: 'Smart', price: '₹49/mo', desc: '+ SMS alerts' }, { plan: 'Pro', price: '₹99/mo', desc: 'Everything + Priority' }].map(p => (
-                      <Link key={p.plan} href="/pricing" style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.3)', borderRadius: 10, padding: '10px 16px', textDecoration: 'none', color: '#fff' }}>
-                        <div style={{ fontWeight: 700, fontSize: 15 }}>{p.plan}</div>
-                        <div style={{ fontSize: 13 }}>{p.price}</div>
-                        <div style={{ fontSize: 11, opacity: 0.8 }}>{p.desc}</div>
+                      <Link key={p.plan} href="/pricing" className={s.upgradePlanCard}>
+                        <div className={s.upgradePlanName}>{p.plan}</div>
+                        <div className={s.upgradePlanPrice}>{p.price}</div>
+                        <div className={s.upgradePlanDesc}>{p.desc}</div>
                       </Link>
                     ))}
                   </div>
-                  <Link href="/pricing" style={{ display: 'inline-flex', background: '#fff', color: 'var(--primary)', textDecoration: 'none', padding: '10px 24px', borderRadius: 8, fontWeight: 700, fontSize: 14 }}>
-                    View All Plans →
-                  </Link>
+                  <Link href="/pricing" className={s.upgradePlanViewAll}>View All Plans →</Link>
                 </div>
               )}
-              <div style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 12, padding: '16px 20px' }}>
-                <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 12 }}>Your Plan Includes:</div>
+              <div className={s.planIncludesCard}>
+                <div className={s.planIncludesTitle}>Your Plan Includes:</div>
                 {[
                   { icon: 'check_circle', text: 'Access to all job listings', active: true },
                   { icon: 'check_circle', text: 'Email job alerts', active: true },
@@ -2198,7 +1638,7 @@ export default function DashboardPage() {
                   { icon: ['smart','pro'].includes(user?.plan) ? 'check_circle' : 'cancel', text: 'SMS alerts', active: ['smart','pro'].includes(user?.plan) },
                   { icon: user?.plan === 'pro' ? 'check_circle' : 'cancel', text: 'Priority notifications', active: user?.plan === 'pro' },
                 ].map(b => (
-                  <div key={b.text} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '7px 0', borderBottom: '1px solid var(--outline-variant)', fontSize: 14 }}>
+                  <div key={b.text} className={s.planBenefitRow}>
                     <span className="material-symbols-outlined" style={{ fontSize: 18, color: b.active ? '#16a34a' : '#d1d5db' }}>{b.icon}</span>
                     <span style={{ color: b.active ? 'var(--on-surface)' : 'var(--secondary)' }}>{b.text}</span>
                   </div>
@@ -2207,171 +1647,71 @@ export default function DashboardPage() {
             </div>
           )}
 
-          
-
-          {/* Alerts Section */}
-          {activeSection === 'alerts' && (
-            <div>
-              <h2 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 16px', color: 'var(--on-surface)' }}>Alert Settings</h2>
-              <div style={{
-                background: 'var(--surface-container-lowest)',
-                border: '1px solid var(--outline-variant)',
-                borderRadius: 12,
-                padding: '20px',
-              }}>
-                <p style={{ color: 'var(--secondary)', fontSize: 14, marginBottom: 16 }}>
-                  Configure how and when you receive job alerts. Upgrade to Pro for WhatsApp + SMS alerts.
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                  {[
-                    { icon: 'mail',      label: 'Email Alerts',     desc: 'Daily digest of matching jobs', free: true },
-                    { icon: 'chat',      label: 'WhatsApp Alerts',  desc: 'Instant alerts on WhatsApp',    free: false },
-                    { icon: 'sms',       label: 'SMS Alerts',       desc: 'Text alerts for urgent jobs',   free: false },
-                  ].map(ch => (
-                    <div key={ch.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid var(--outline-variant)' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                        <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 22 }}>{ch.icon}</span>
-                        <div>
-                          <div style={{ fontWeight: 600, fontSize: 14, color: 'var(--on-surface)' }}>{ch.label}</div>
-                          <div style={{ fontSize: 12, color: 'var(--secondary)' }}>{ch.desc}</div>
-                        </div>
-                      </div>
-                      {ch.free ? (
-                        <span style={{ background: '#f0fdf4', color: '#16a34a', padding: '3px 10px', borderRadius: 99, fontSize: 12, fontWeight: 700 }}>Active</span>
-                      ) : (
-                        <Link href="/pricing" style={{ background: '#FFF7ED', color: 'var(--primary)', padding: '3px 10px', borderRadius: 99, fontSize: 12, fontWeight: 700, textDecoration: 'none' }}>
-                          Upgrade ?
-                        </Link>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
 
           {/* ─── Admin Theme & Appearance Studio (Admin Only) ─── */}
           {activeSection === 'admin_theme' && (
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 18, flexWrap: 'wrap', gap: 12 }}>
+              <div className={s.adminThemeStudioHeader}>
                 <div>
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: '#FFF7ED', border: '1px solid #FFEDD5', color: '#EA580C', padding: '3px 10px', borderRadius: 99, fontSize: 11, fontWeight: 800, marginBottom: 6 }}>
+                  <div className={s.adminPrivilegeBadge}>
                     <span>🛡️</span> SYSTEM ADMINISTRATOR PRIVILEGE
                   </div>
                   <h2 style={{ fontSize: 22, fontWeight: 800, margin: 0, color: 'var(--on-surface)' }}>
-                    Site Theme & Appearance
+                    Site Theme &amp; Appearance
                   </h2>
                   <p style={{ margin: '4px 0 0', fontSize: 13.5, color: 'var(--secondary)' }}>
                     Select the active color theme and appearance mode for ExamUdaan. Changes take effect across the entire portal immediately.
                   </p>
                 </div>
 
-                <Link
-                  href="/admin"
-                  style={{
-                    display: 'inline-flex', alignItems: 'center', gap: 6,
-                    padding: '8px 16px', borderRadius: 8,
-                    background: '#1E293B', color: '#FFF',
-                    fontSize: 13, fontWeight: 700, textDecoration: 'none'
-                  }}
-                >
+                <Link href="/admin" className={s.adminPanelBtn}>
                   <span className="material-symbols-outlined" style={{ fontSize: 18 }}>admin_panel_settings</span>
                   <span>Open Full Admin Panel →</span>
                 </Link>
               </div>
 
               {themeMsg && (
-                <div style={{
-                  padding: '12px 18px',
-                  borderRadius: 10,
-                  background: '#ECFDF5',
-                  border: '1.5px solid #A7F3D0',
-                  color: '#065F46',
-                  fontWeight: 700,
-                  fontSize: 13.5,
-                  marginBottom: 20,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 8
-                }}>
+                <div className={s.themeSuccessMsg}>
                   <span className="material-symbols-outlined" style={{ fontSize: 20 }}>check_circle</span>
                   <span>{themeMsg.text}</span>
                 </div>
               )}
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 18, marginBottom: 24 }}>
+              <div className={s.themeGrid}>
                 {SITE_THEMES.map(th => {
                   const isCurrent = currentTheme === th.id
                   return (
                     <div
                       key={th.id}
                       onClick={() => handleSwitchTheme(th.id)}
-                      style={{
-                        background: 'var(--surface-container-lowest)',
-                        border: isCurrent ? `2.5px solid ${th.primaryColor}` : '1.5px solid var(--outline-variant)',
-                        borderRadius: 14,
-                        padding: '22px',
-                        cursor: 'pointer',
-                        position: 'relative',
-                        boxShadow: isCurrent ? `0 8px 24px rgba(0,0,0,0.08)` : 'none',
-                        transition: 'all 0.2s ease',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between',
-                        gap: 16
-                      }}
+                      className={`${s.themeCard} ${isCurrent ? s.themeCardActive : ''}`}
+                      style={isCurrent ? { borderColor: th.primaryColor, boxShadow: `0 8px 24px rgba(0,0,0,0.08)` } : {}}
                     >
                       <div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
+                        <div className={s.themeCardHeader}>
                           <div>
-                            <span style={{ fontSize: 11, fontWeight: 800, color: th.primaryColor, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                              {th.badge}
-                            </span>
-                            <h3 style={{ fontSize: 18, fontWeight: 800, margin: '2px 0 4px', color: 'var(--on-surface)' }}>
-                              {th.name}
-                            </h3>
-                            <div style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--secondary)' }}>
-                              {th.tagline}
-                            </div>
+                            <span className={s.themeCardBadge} style={{ color: th.primaryColor }}>{th.badge}</span>
+                            <h3 className={s.themeCardName}>{th.name}</h3>
+                            <div className={s.themeCardTagline}>{th.tagline}</div>
                           </div>
-                          <span style={{
-                            width: 24, height: 24, borderRadius: '50%',
-                            background: th.primaryColor,
-                            border: '3px solid #FFF',
-                            boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
-                            flexShrink: 0
-                          }} />
+                          <span className={s.themeColorDot} style={{ background: th.primaryColor }} />
                         </div>
-
-                        <p style={{ fontSize: 13, color: 'var(--secondary)', lineHeight: 1.5, margin: 0 }}>
-                          {th.desc}
-                        </p>
+                        <p className={s.themeCardDesc}>{th.desc}</p>
                       </div>
 
                       {/* Swatch palette */}
                       <div>
-                        <div style={{ display: 'flex', gap: 6, marginBottom: 12 }}>
-                          <span title="Primary" style={{ width: 22, height: 22, borderRadius: 6, background: th.primaryColor, display: 'inline-block' }} />
-                          <span title="Background" style={{ width: 22, height: 22, borderRadius: 6, background: th.bgColor, border: '1px solid #D1D5DB', display: 'inline-block' }} />
-                          <span title="Card" style={{ width: 22, height: 22, borderRadius: 6, background: th.cardBg, border: '1px solid #D1D5DB', display: 'inline-block' }} />
-                          <span title="Accent" style={{ width: 22, height: 22, borderRadius: 6, background: th.accentColor, display: 'inline-block' }} />
+                        <div className={s.themeSwatches}>
+                          <span title="Primary" className={s.themeSwatch} style={{ background: th.primaryColor }} />
+                          <span title="Background" className={s.themeSwatch} style={{ background: th.bgColor, border: '1px solid #D1D5DB' }} />
+                          <span title="Card" className={s.themeSwatch} style={{ background: th.cardBg, border: '1px solid #D1D5DB' }} />
+                          <span title="Accent" className={s.themeSwatch} style={{ background: th.accentColor }} />
                         </div>
-
                         <button
                           type="button"
-                          onClick={(e) => { e.stopPropagation(); handleSwitchTheme(th.id); }}
-                          style={{
-                            width: '100%',
-                            padding: '10px 16px',
-                            borderRadius: 8,
-                            border: 'none',
-                            fontSize: 13,
-                            fontWeight: 700,
-                            cursor: 'pointer',
-                            background: isCurrent ? th.primaryColor : 'var(--surface-container-low)',
-                            color: isCurrent ? '#FFFFFF' : 'var(--on-surface)',
-                            transition: 'all 0.15s ease'
-                          }}
+                          onClick={e => { e.stopPropagation(); handleSwitchTheme(th.id); }}
+                          className={s.themeApplyBtn}
+                          style={{ background: isCurrent ? th.primaryColor : 'var(--surface-container-low)', color: isCurrent ? '#FFFFFF' : 'var(--on-surface)' }}
                         >
                           {isCurrent ? '✓ Active Site Theme' : 'Apply Theme'}
                         </button>

@@ -43,8 +43,8 @@ const SITE_URL   = (rawSiteUrl && !rawSiteUrl.includes('localhost')) ? rawSiteUr
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
-    template: '%s | ExamUdaan.in',
+    default: 'ExamUdaan — Maharashtra Govt Job Alerts 2026',
+    template: '%s | ExamUdaan',
   },
   description:
     'Get instant Maharashtra government job notifications for MPSC, Police Bharti, BMC, ZP, Talathi and more. Free WhatsApp alerts, exam dates, results, admit cards.',
@@ -54,7 +54,7 @@ export const metadata = {
     'exam udaan', 'maharashtra recruitment',
   ],
   openGraph: {
-    title: 'ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
+    title: 'ExamUdaan — Maharashtra Govt Job Alerts 2026',
     description:
       'Get instant Maharashtra government job notifications for MPSC, Police Bharti, BMC, ZP, Talathi and more. Free WhatsApp alerts, exam dates, results, admit cards.',
     siteName: 'ExamUdaan.in',
@@ -101,10 +101,42 @@ export default function RootLayout({ children }) {
         {/* Preconnect to fonts origins for high-speed handshake */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Material Symbols — variable font with display=swap to avoid render-blocking */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        {/* Material Symbols — asynchronous non-blocking stylesheet to eliminate render-blocking delay */}
         <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+          as="style"
+        />
+        <link
+          id="material-symbols-stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
+          media="print"
+        />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
+        {/* Activate Material Symbols stylesheet on main thread without blocking initial paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var l = document.getElementById('material-symbols-stylesheet');
+                if (l) {
+                  if (window.requestAnimationFrame) {
+                    window.requestAnimationFrame(function() { l.media = 'all'; });
+                  } else {
+                    l.media = 'all';
+                  }
+                }
+              })();
+            `,
+          }}
         />
         {/* Instant Theme Initializer — Zero Flash */}
         <script

@@ -11,7 +11,41 @@ export default function robots() {
   return {
     rules: [
       {
-        // Allow legitimate search engine crawlers (Googlebot, Bingbot, etc.)
+        // Explicitly allow Bingbot, msnbot, BingPreview
+        userAgent: ['Bingbot', 'msnbot', 'BingPreview'],
+        allow: [
+          '/',
+          '/_next/static/',
+          '/_next/image/',
+        ],
+        disallow: [
+          '/admin',
+          '/admin/',
+          '/dashboard',
+          '/dashboard/',
+          '/api/',
+          '/auth-success',
+        ],
+      },
+      {
+        // Explicitly allow Googlebot
+        userAgent: ['Googlebot', 'Googlebot-Image'],
+        allow: [
+          '/',
+          '/_next/static/',
+          '/_next/image/',
+        ],
+        disallow: [
+          '/admin',
+          '/admin/',
+          '/dashboard',
+          '/dashboard/',
+          '/api/',
+          '/auth-success',
+        ],
+      },
+      {
+        // Allow legitimate search engine crawlers (general)
         userAgent: '*',
         allow: [
           '/',

@@ -7,11 +7,20 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '../../lib/constants'
 
 export const metadata = {
-  title: 'Privacy Policy — ExamUdaan.in',
+  title: 'Privacy Policy — ExamUdaan',
   description: 'Learn how ExamUdaan.in collects, protects, and handles your personal information, mobile numbers, and WhatsApp alert preferences.',
+  keywords: ['ExamUdaan privacy', 'privacy policy', 'data protection', 'DPDP Act', 'personal data'],
   alternates: {
     canonical: 'https://examudaan.in/privacy',
   },
+  openGraph: {
+    title: 'Privacy Policy | ExamUdaan',
+    description: 'How ExamUdaan.in handles your personal data and WhatsApp alert preferences.',
+    url: 'https://examudaan.in/privacy',
+    siteName: 'ExamUdaan.in',
+    type: 'website',
+  },
+  twitter: { card: 'summary', title: 'Privacy Policy | ExamUdaan' },
 }
 
 export default function PrivacyPage() {

@@ -76,18 +76,18 @@ const QUAL_MAP = {
 // Ensures newly scraped/published jobs appear at the top so the page stays fresh daily
 const SORT_MAP = {
   latest: `
-    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < CURRENT_DATE) THEN 1 ELSE 0 END) ASC,
+    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date) THEN 1 ELSE 0 END) ASC,
     COALESCE(en.published_at, en.created_at) DESC NULLS LAST,
     en.id DESC
   `,
   closing: `
-    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < CURRENT_DATE) THEN 1 ELSE 0 END) ASC,
-    (CASE WHEN en.apply_end_date >= CURRENT_DATE THEN en.apply_end_date END) ASC NULLS LAST,
+    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date) THEN 1 ELSE 0 END) ASC,
+    (CASE WHEN en.apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date THEN en.apply_end_date END) ASC NULLS LAST,
     COALESCE(en.published_at, en.created_at) DESC NULLS LAST,
     en.id DESC
   `,
   vacancies: `
-    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < CURRENT_DATE) THEN 1 ELSE 0 END) ASC,
+    (CASE WHEN en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date) THEN 1 ELSE 0 END) ASC,
     en.total_vacancies DESC NULLS LAST,
     COALESCE(en.published_at, en.created_at) DESC NULLS LAST,
     en.id DESC
@@ -129,18 +129,18 @@ export async function GET(req) {
     // Show all — DEADLINE_TIER_SQL ensures active dates appear first
   } else if (status === 'closed') {
     conditions.push(
-      `(en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < CURRENT_DATE))`
+      `(en.status = 'closed' OR (en.notification_type = 'recruitment' AND en.apply_end_date IS NOT NULL AND en.apply_end_date < (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date))`
     )
   } else {
     conditions.push(
-      `(en.status = 'published' AND (en.notification_type != 'recruitment' OR en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE))`
+      `(en.status = 'published' AND (en.notification_type != 'recruitment' OR en.apply_end_date IS NULL OR en.apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date))`
     )
   }
 
   // Active only filter (omits closed recruitments and past deadlines)
   if (active_only === 'true') {
     conditions.push(
-      `(en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE) AND en.status != 'closed'`
+      `(en.apply_end_date IS NULL OR en.apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date) AND en.status != 'closed'`
     )
   }
 
@@ -251,7 +251,7 @@ export async function GET(req) {
   // Minimum days remaining before deadline (e.g. at least 3 days for longer-duration ticker items)
   if (min_days_left !== undefined && min_days_left !== null && min_days_left !== '') {
     conditions.push(
-      `(en.apply_end_date IS NULL OR en.apply_end_date >= CURRENT_DATE + ($${values.length + 1} * interval '1 day'))`
+      `(en.apply_end_date IS NULL OR en.apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date + ($${values.length + 1} * interval '1 day'))`
     )
     values.push(min_days_left)
   }

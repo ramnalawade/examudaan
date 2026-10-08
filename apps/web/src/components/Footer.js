@@ -24,7 +24,7 @@ export default function Footer() {
   ]
 
   const QUESTION_PAPERS_KEYS = [
-    { label: isMarathi ? 'MPSC मूळ प्रश्नपत्रिका व कीज् (२०२४-२०२६)' : 'MPSC Papers & Keys (2024-2026)', href: '/mpsc-pyq' },
+    { label: isMarathi ? 'MPSC मूळ प्रश्नपत्रिका व कीज् (२०२१-२०२६)' : 'MPSC Papers & Keys (2021-2026)', href: '/mpsc-pyq' },
     { label: isMarathi ? 'सर्व अधिकृत प्रश्नपत्रिका (All PYQs)' : 'All Official Question Papers', href: '/question-papers' },
     { label: isMarathi ? 'अधिकृत उत्तरतालिका पोर्टल (Keys)' : 'Official Answer Keys Portal', href: '/answer-keys' },
     { label: isMarathi ? 'महाराष्ट्र पोलीस भरती प्रश्नपत्रिका' : 'Maharashtra Police Bharti Papers', href: '/question-papers#maharashtra-direct' },

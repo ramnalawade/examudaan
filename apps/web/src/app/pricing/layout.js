@@ -3,17 +3,26 @@
 // ============================================================
 
 export const metadata = {
-  title: 'Pricing & Plans — Unlimited Govt Exam Alerts | ExamUdaan',
-  description: 'Choose affordable monthly and annual plans for personalized WhatsApp, SMS, and Email job alerts, custom criteria matching, and priority support.',
+  title: 'Pricing & Subscription Plans — WhatsApp Alerts',
+  description: 'Choose affordable monthly plans (from ₹29/month) for personalized WhatsApp, SMS, and Email job alerts with custom eligibility matching for MPSC, Police, SSC & more.',
+  keywords: [
+    'ExamUdaan pricing', 'WhatsApp job alerts subscription', 'govt job alert plans',
+    'MPSC alert subscription', 'sarkari naukri alert price', 'monthly job alert'
+  ],
   alternates: {
     canonical: 'https://examudaan.in/pricing',
   },
   openGraph: {
-    title: 'Pricing & Plans — ExamUdaan.in',
-    description: 'Affordable monthly and annual plans for personalized exam alerts.',
+    title: 'Pricing & Subscription Plans | ExamUdaan',
+    description: 'Affordable monthly plans from ₹29/month for personalized WhatsApp & Email job alerts.',
     url: 'https://examudaan.in/pricing',
     siteName: 'ExamUdaan.in',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Pricing Plans | ExamUdaan',
+    description: 'WhatsApp & Email govt job alerts from ₹29/month.',
   },
 }
 

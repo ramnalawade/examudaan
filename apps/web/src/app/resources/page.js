@@ -7,12 +7,30 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Resources & Study Materials — ExamUdaan',
-  description: 'Free study resources for MPSC, UPSC, Banking, SSC, Railways — syllabus PDFs, official links, YouTube channels, and AI study tools.',
+  title: 'Free Study Resources \u2014 Syllabus, YouTube & AI Tools',
+  description: 'Free study resources for MPSC, UPSC, Banking, SSC, Railways \u2014 syllabus PDFs, official links, YouTube channels, and AI study tools for government exam aspirants.',
+  keywords: [
+    'MPSC study resources', 'free exam study material', 'government exam syllabus PDF',
+    'MPSC YouTube channels', 'AI tools for exam', 'free study material India',
+    'SSC study resources', 'banking exam material'
+  ],
   alternates: {
     canonical: 'https://examudaan.in/resources',
   },
+  openGraph: {
+    title: 'Free Study Resources \u2014 Syllabus, YouTube & AI Tools | ExamUdaan',
+    description: 'Syllabus PDFs, YouTube channels and AI tools for MPSC, UPSC, SSC & Banking exam preparation.',
+    url: 'https://examudaan.in/resources',
+    siteName: 'ExamUdaan.in',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Free Study Resources | ExamUdaan',
+    description: 'Syllabus PDFs, YouTube & AI tools for MPSC, UPSC, SSC & Banking.',
+  },
 }
+
 
 // ── Verified Syllabus & Guide Links (No 404s) ────────────────
 const SYLLABUS_LINKS = [

@@ -94,7 +94,7 @@ export async function generateMetadata({ params }) {
   const info = SUBJECT_METADATA[resolvedParams.subject]
   if (!info) return {}
 
-  const title = `${info.name} PYQ Question Bank with Solutions | ExamUdaan`
+  const title = `${info.name} PYQ Questions`
   const canonicalUrl = `https://examudaan.in/pyq/${info.slug}`
 
   return {

@@ -439,18 +439,99 @@
   background: #1E293B;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .pdfIframe {
   width: 100%;
-  height: 760px;
+  height: 850px;
+  min-height: 85vh;
   border: none;
-  background: #334155;
+  background: #1E293B;
+  display: block;
+}
+
+.mobileDirectBanner {
+  display: none;
+  background: linear-gradient(90deg, #0284C7 0%, #0369A1 100%);
+  color: #FFFFFF;
+  padding: 9px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mobileDirectLink {
+  background: #FFFFFF;
+  color: #0369A1;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+.mobileDirectLink:hover {
+  background: #F0F9FF;
 }
 
 @media (max-width: 768px) {
+  .mobileDirectBanner {
+    display: flex;
+  }
+
+  .viewerToolbar {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .docInfo {
+    width: 100%;
+  }
+
+  .toolbarActions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .qaSegmentedSwitch {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .qaSegmentedSwitch button {
+    flex: 1;
+    justify-content: center;
+    padding: 7px 10px;
+  }
+
+  .actionBtnOutline,
+  .actionBtnPrimary {
+    flex: 1;
+    justify-content: center;
+    padding: 8px 10px;
+  }
+
   .pdfIframe {
-    height: 520px;
+    width: 100%;
+    height: 680px;
+    min-height: 75vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdfIframe {
+    height: 580px;
+    min-height: 70vh;
   }
 }
 
@@ -480,11 +561,101 @@
   text-decoration: underline;
 }
 
-/* ── Interactive Document Overview Card (When document is not a raw PDF) ── */
+/* ── Interactive Document Overview Card (Collapsible) ── */
 .docOverviewBox {
   background: linear-gradient(180deg, #FFFBF5 0%, #FFFFFF 100%);
   border-top: 1px solid #FED7AA;
-  padding: 32px 28px;
+  padding: 14px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.docOverviewToggleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.docOverviewToggleLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.docOverviewToggleHeading {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.docOverviewToggleSummary {
+  font-size: 12px;
+  color: #475569;
+  background: #F1F5F9;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid #E2E8F0;
+}
+
+.moreInfoBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFF7ED;
+  color: var(--primary, #EA580C);
+  border: 1.5px solid #FDBA74;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 3px rgba(234, 88, 12, 0.08);
+}
+
+.moreInfoBtn:hover {
+  background: #EA580C;
+  color: #FFFFFF;
+  border-color: #EA580C;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(234, 88, 12, 0.2);
+}
+
+.docOverviewCollapsibleContent {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px dashed #FED7AA;
+  animation: fadeInDetails 0.25s ease-out;
+}
+
+@keyframes fadeInDetails {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .docOverviewBox {
+    padding: 12px 14px;
+  }
+  .docOverviewToggleBar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .moreInfoBtn {
+    justify-content: center;
+    width: 100%;
+    padding: 8px 12px;
+  }
 }
 
 .docOverviewCard {

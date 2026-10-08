@@ -111,7 +111,7 @@ export async function generateMetadata(props) {
     desc: `Browse latest government job vacancies in ${cityStr}, ${stateStr}.`,
   }
 
-  const title = `${district.name} Government Jobs 2026 — ${district.nameMr} सरकारी नोकरी | ExamUdaan`
+  const title = `${district.name} Govt Jobs 2026`
   const description = `Apply online for latest government jobs in ${district.name} (${district.nameMr}). Official notification PDFs, vacancies, eligibility, and direct apply links.`
 
   return {
@@ -121,7 +121,7 @@ export async function generateMetadata(props) {
       canonical: `https://examudaan.in/${stateStr}/${cityKey}`,
     },
     openGraph: {
-      title,
+      title: `${title} | ExamUdaan`,
       description,
       url: `https://examudaan.in/${stateStr}/${cityKey}`,
       type: 'website',

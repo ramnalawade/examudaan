@@ -274,7 +274,7 @@ export default function AiNewsPage() {
 
         {/* News feed */}
         {!loading && (
-          <div className="ai-news-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: 14 }}>
+          <div className="ai-news-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: 14 }}>
             {displayedItems.map(item => {
               const catStyle = CATEGORY_COLORS[item.category] || { bg: '#F9FAFB', color: '#374151' }
               return (

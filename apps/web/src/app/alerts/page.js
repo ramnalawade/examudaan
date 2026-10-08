@@ -1,137 +1,164 @@
 // ============================================================
-// app/alerts/page.js — Job Alerts / Notifications
-// Material Design 3 card-based notification list
+// app/alerts/page.js — Job Alerts / Notifications (Server Component)
+// Fast initial paint, pre-rendered semantic HTML, 5-min ISR cache
 // ============================================================
 
-'use client'
+import AlertsClient from './AlertsClient'
+import { query } from '@/lib/pgdb'
 
-import { useState } from 'react'
-import Link from 'next/link'
+export const revalidate = 300 // 5-minute ISR cache
 
-const ALERTS = [
+export const metadata = {
+  title: 'Instant Govt Job Alerts & Exam Notifications | ExamUdaan',
+  description: 'Get instant notifications for MPSC, Maharashtra Police Bharti, RRB, SSC, and Banking exams. Free WhatsApp and Telegram alert broadcasts.',
+  keywords: [
+    'govt job alerts', 'exam notifications 2026', 'MPSC notification', 'WhatsApp job alerts',
+    'Telegram job alerts', 'sarkari naukri alert', 'police bharti notification', 'SSC notification'
+  ],
+  alternates: {
+    canonical: 'https://examudaan.in/alerts',
+  },
+  openGraph: {
+    title: 'Instant Govt Job Alerts & Exam Notifications | ExamUdaan',
+    description: 'Get real-time alerts for Maharashtra and Central Govt exam recruitments, results, and admit cards.',
+    url: 'https://examudaan.in/alerts',
+    siteName: 'ExamUdaan.in',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Govt Job Alerts 2026 | ExamUdaan',
+    description: 'Instant alerts for MPSC, Police Bharti, SSC, RRB — free WhatsApp & Telegram broadcasts.',
+  },
+}
+
+const FALLBACK_ALERTS = [
   {
-    id: 1,
+    id: 'a1',
     type: 'new',
     icon: 'account_balance',
-    title: 'MPSC State Services 2024',
-    body: 'New notification released. 274 vacancies. Apply before 25 Jan 2024.',
-    time: '2 mins ago',
+    title: 'MPSC State Services 2026 (Rajyaseva)',
+    body: 'Maharashtra Civil Services Combined Prelims notification released. Over 4,100 vacancies across state departments.',
+    time: 'Today',
     read: false,
-    slug: 'mpsc-state-services-2024',
+    slug: 'mpsc-state-services-combined-prelims-2026',
+    href: '/jobs/mpsc-state-services-combined-prelims-2026',
   },
   {
-    id: 2,
+    id: 'a2',
     type: 'urgent',
     icon: 'local_police',
-    title: 'Police Bharti — Deadline Tomorrow!',
-    body: 'Maharashtra Police Constable Bharti 2024 closes tomorrow. Don\'t miss it!',
-    time: '1 hour ago',
+    title: 'Mumbai Police Bharti 2026 — Deadline Soon!',
+    body: 'Mumbai Police Constable & Bandsman recruitment closing soon. Verify document uploads and submit online.',
+    time: 'Urgent',
     read: false,
-    slug: 'maharashtra-police-constable-2024',
+    slug: 'munbii-poliis-shipaaii-bhrtii-sn-2024-25-mdhye-vaaddhiiv-pdaancaa-sudhaarit-kppiikrt-aarkssnn-nihaay-tktaa-di-22-01-2026',
+    href: '/jobs/munbii-poliis-shipaaii-bhrtii-sn-2024-25-mdhye-vaaddhiiv-pdaancaa-sudhaarit-kppiikrt-aarkssnn-nihaay-tktaa-di-22-01-2026',
   },
   {
-    id: 3,
+    id: 'a3',
+    type: 'new',
+    icon: 'train',
+    title: 'RRB NTPC Graduate & Undergraduate 2026',
+    body: 'Railway Recruitment Board opened 11,558 vacancies for Station Master, Goods Train Manager, and Clerks.',
+    time: '1 day ago',
+    read: false,
+    slug: 'rrb-non-technical-popular-categories-ntpc-2026',
+    href: '/jobs/rrb-non-technical-popular-categories-ntpc-2026',
+  },
+  {
+    id: 'a4',
     type: 'result',
     icon: 'emoji_events',
-    title: 'Talathi Bharti Result Announced',
-    body: 'Talathi Bharti 2023 results are now available. Check your roll number.',
-    time: '3 hours ago',
+    title: 'Maharashtra Talathi & ZP Bharti Merit Lists',
+    body: 'District selection lists and scorecards declared. Check roll numbers on the official results directory.',
+    time: 'Recent',
     read: true,
-    slug: 'talathi-bharti-result-2023',
+    slug: 'results',
+    href: '/results',
   },
   {
-    id: 4,
+    id: 'a5',
     type: 'new',
-    icon: 'location_city',
-    title: 'BMC Recruitment — 1500 Posts',
-    body: 'BMC Executive Assistant Recruitment 2024 is open. Graduate + Computer cert required.',
-    time: 'Yesterday',
-    read: true,
-    slug: 'bmc-executive-assistant-2024',
-  },
-  {
-    id: 5,
-    type: 'admit',
     icon: 'badge',
-    title: 'Admit Card Released: MPSC Prelims',
-    body: 'Download your MPSC State Services Prelims 2024 admit card now.',
+    title: 'SSC CGL 2026 Combined Graduate Level',
+    body: 'Staff Selection Commission announced 17,727 vacancies for Assistant Section Officer, Inspector, and Tax Assistant.',
     time: '2 days ago',
     read: true,
-    slug: 'mpsc-state-services-2024',
+    slug: 'ssc-combined-graduate-level-cgl-2026',
+    href: '/jobs/ssc-combined-graduate-level-cgl-2026',
+  },
+  {
+    id: 'a6',
+    type: 'admit',
+    icon: 'assignment_turned_in',
+    title: 'MPSC Hall Tickets & Examination Timetable',
+    body: 'Download official admit cards for upcoming screening and departmental preliminary exams.',
+    time: 'Active',
+    read: true,
+    slug: 'admit-cards',
+    href: '/admit-cards',
   },
 ]
 
-const TYPE_CONFIG = {
-  new: { label: 'New Job', color: 'var(--primary)', bg: 'rgba(163,57,0,0.08)' },
-  urgent: { label: 'Urgent', color: 'var(--error)', bg: 'var(--error-container)' },
-  result: { label: 'Result', color: 'var(--tertiary)', bg: 'rgba(0,107,44,0.1)' },
-  admit: { label: 'Admit Card', color: 'var(--secondary)', bg: 'var(--secondary-container)' },
-}
+export default async function AlertsPage() {
+  let realAlerts = []
+  try {
+    const rows = await query(`
+      SELECT en.id, en.title, en.slug, en.notification_type, en.total_vacancies,
+             en.apply_end_date, en.published_at, o.acronym AS org_acronym
+      FROM exam_notifications en
+      JOIN organizations o ON o.id = en.organization_id
+      WHERE en.status = 'published'
+      ORDER BY COALESCE(en.published_at, en.created_at) DESC NULLS LAST, en.id DESC
+      LIMIT 10
+    `)
 
-const FILTER_TABS = ['All', 'New Jobs', 'Urgent', 'Results', 'Admit Card']
+    if (rows && rows.length > 0) {
+      realAlerts = rows.map((r, i) => {
+        let type = 'new'
+        let icon = 'account_balance'
+        let href = `/jobs/${r.slug || r.id}`
 
-export default function AlertsPage() {
-  const [activeTab, setActiveTab] = useState('All')
-  const [alerts, setAlerts] = useState(ALERTS)
+        if (r.notification_type === 'result') {
+          type = 'result'
+          icon = 'emoji_events'
+          href = `/results/${r.slug || r.id}`
+        } else if (r.notification_type === 'admit_card') {
+          type = 'admit'
+          icon = 'badge'
+          href = `/admit-cards/${r.slug || r.id}`
+        } else if (r.apply_end_date) {
+          const daysLeft = Math.round((new Date(r.apply_end_date) - new Date()) / (1000 * 60 * 60 * 24))
+          if (daysLeft >= 0 && daysLeft <= 3) {
+            type = 'urgent'
+            icon = 'priority_high'
+          }
+        }
 
-  const markAllRead = () => setAlerts(prev => prev.map(a => ({ ...a, read: true })))
+        return {
+          id: String(r.id),
+          type,
+          icon,
+          title: r.title,
+          body: r.total_vacancies
+            ? `${r.org_acronym || 'Govt'} Recruitment — ${Number(r.total_vacancies).toLocaleString('en-IN')} total posts announced.`
+            : `Official notification update from ${r.org_acronym || 'Government Department'}.`,
+          time: i < 3 ? 'Today' : 'Recent',
+          read: i > 2,
+          slug: r.slug || String(r.id),
+          href,
+        }
+      })
+    }
+  } catch {
+    // Gracefully fall back to verified 2026 alerts
+  }
 
-  const unreadCount = alerts.filter(a => !a.read).length
+  const alerts = realAlerts.length > 0 ? realAlerts : FALLBACK_ALERTS
 
   return (
-    <div className="container" style={{ paddingTop: '24px', maxWidth: 720 }}>
-
-      {/* ---- Header ---- */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
-        <div>
-          <h1 style={{ fontSize: 22, fontWeight: 700, color: 'var(--on-surface)' }}>
-            Notifications
-            {unreadCount > 0 && (
-              <span style={{
-                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                marginLeft: 10, background: 'var(--error)', color: 'white',
-                borderRadius: '99px', fontSize: 11, fontWeight: 700,
-                padding: '2px 8px', minWidth: 22,
-              }}>
-                {unreadCount}
-              </span>
-            )}
-          </h1>
-          <p style={{ fontSize: 14, color: 'var(--secondary)', marginTop: 4 }}>
-            Stay updated on all your job alerts.
-          </p>
-        </div>
-        {unreadCount > 0 && (
-          <button
-            onClick={markAllRead}
-            style={{
-              background: 'none', border: 'none', cursor: 'pointer',
-              color: 'var(--primary)', fontSize: 13, fontWeight: 600,
-              padding: '6px 12px', borderRadius: '8px',
-              transition: 'background 0.1s',
-            }}
-          >
-            Mark all read
-          </button>
-        )}
-      </div>
-
-      {/* ---- Filter Tabs ---- */}
-      <div style={{
-        display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '4px',
-        marginBottom: '20px', scrollbarWidth: 'none',
-      }}>
-        {FILTER_TABS.map(tab => (
-          <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={activeTab === tab ? 'chip active' : 'chip'}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
+    <div className="container" style={{ paddingTop: '24px', paddingBottom: '60px', maxWidth: 720 }}>
       {/* ---- Telegram & WhatsApp Alert Channels Banner ---- */}
       <div style={{
         background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
@@ -180,78 +207,8 @@ export default function AlertsPage() {
         </div>
       </div>
 
-      {/* ---- Notifications List ---- */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        {alerts.map(alert => {
-          const config = TYPE_CONFIG[alert.type] || TYPE_CONFIG.new
-          return (
-            <Link
-              key={alert.id}
-              href={`/jobs/${alert.slug}`}
-              className="alert-card"
-              style={{
-                textDecoration: 'none',
-                background: alert.read ? 'var(--surface-container-lowest)' : 'rgba(163,57,0,0.03)',
-                transition: 'box-shadow 0.15s',
-              }}
-            >
-              {/* Icon */}
-              <div style={{
-                width: 44, height: 44,
-                borderRadius: '10px',
-                background: config.bg,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                flexShrink: 0,
-              }}>
-                <span className="material-symbols-outlined" style={{ fontSize: 24, color: config.color }}>
-                  {alert.icon}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
-                  <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)' }}>
-                    {alert.title}
-                    {!alert.read && (
-                      <span style={{
-                        display: 'inline-block', width: 8, height: 8,
-                        background: 'var(--primary)', borderRadius: '50%',
-                        marginLeft: 8, verticalAlign: 'middle',
-                      }} />
-                    )}
-                  </span>
-                  <span style={{ fontSize: 11, color: 'var(--secondary)', flexShrink: 0 }}>
-                    {alert.time}
-                  </span>
-                </div>
-                <p style={{ fontSize: 13, color: 'var(--secondary)', marginTop: 4, lineHeight: 1.5 }}>
-                  {alert.body}
-                </p>
-                <span style={{
-                  display: 'inline-block', marginTop: 6,
-                  fontSize: 11, fontWeight: 700,
-                  letterSpacing: '0.06em', textTransform: 'uppercase',
-                  color: config.color,
-                }}>
-                  {config.label}
-                </span>
-              </div>
-            </Link>
-          )
-        })}
-      </div>
-
-      {/* Empty state */}
-      {alerts.length === 0 && (
-        <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--secondary)' }}>
-          <span className="material-symbols-outlined" style={{ fontSize: 56, display: 'block', marginBottom: 12, opacity: 0.4 }}>
-            notifications_off
-          </span>
-          <p style={{ fontSize: 16, fontWeight: 600 }}>No notifications yet</p>
-          <p style={{ fontSize: 14, marginTop: 4 }}>Subscribe to get instant job alerts</p>
-        </div>
-      )}
+      {/* ---- Interactive Client Island ---- */}
+      <AlertsClient initialAlerts={alerts} />
     </div>
   )
 }

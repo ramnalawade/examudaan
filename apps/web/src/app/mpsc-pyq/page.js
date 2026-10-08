@@ -9,17 +9,31 @@ import mpscPairedExams from '@/lib/mpscPairedExams.json'
 import MpscPyqClient from './MpscPyqClient'
 
 export const metadata = {
-  title: 'MPSC Question Papers & Answer Keys 2026, 2025, 2024 (Official PDFs) | ExamUdaan',
-  description: 'Download and read official MPSC question papers and answer keys for 2024, 2025, and 2026 in one row. State Services, Combined Group B & C, PSI, Town Planner, and screening tests sourced directly from mpsc.gov.in.',
+  title: {
+    absolute: 'MPSC Question Papers & Answer Keys 2021-2026 | ExamUdaan'
+  },
+  description: 'Download 841 official MPSC question papers and answer keys (2021-2026) — Rajyaseva, Group B, Group C, PSI, STI, Vanseva. Read free in browser, sourced 100% from mpsc.gov.in.',
+  keywords: [
+    'MPSC question papers', 'MPSC answer key', 'MPSC previous year papers',
+    'MPSC PYQ 2024', 'MPSC PYQ 2025', 'MPSC PYQ 2026',
+    'MPSC Rajyaseva question paper', 'MPSC Group B question paper',
+    'MPSC Group C question paper', 'MPSC PSI STI question paper',
+    'Maharashtra PSC papers', 'mpsc.gov.in PDF'
+  ],
   alternates: {
     canonical: 'https://examudaan.in/mpsc-pyq',
   },
   openGraph: {
-    title: 'MPSC Question Papers & Answer Keys 2024–2026 (209 Official PDFs) | ExamUdaan',
-    description: '100% authentic MPSC question papers & final answer keys in one row downloaded from Maharashtra Public Service Commission (mpsc.gov.in). Read in-browser directly.',
+    title: 'MPSC Question Papers & Answer Keys 2021-2026 | ExamUdaan',
+    description: '841 official MPSC question papers and answer keys (2021–2026) from mpsc.gov.in. Rajyaseva, Group B, C, PSI, STI, Vanseva — free in-browser PDF reader.',
     url: 'https://examudaan.in/mpsc-pyq',
     siteName: 'ExamUdaan.in',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'MPSC Question Papers & Answer Keys 2021-2026 | ExamUdaan',
+    description: '841 official MPSC papers & answer keys from 2021-2026. Read free in browser from mpsc.gov.in.',
   },
 }
 
@@ -31,8 +45,8 @@ export default async function MpscPyqPage({ searchParams }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'MPSC Question Papers & Answer Keys 2024-2026',
-    description: 'Official repository of 136 MPSC exams (209 question papers and final answer keys in one row) for Maharashtra Government examinations.',
+    name: 'MPSC Question Papers & Answer Keys 2021-2026',
+    description: 'Official repository of 429 MPSC exams (841 question papers and final answer keys in one row) from 2021 to 2026 for Maharashtra Government examinations.',
     url: 'https://examudaan.in/mpsc-pyq',
     publisher: {
       '@type': 'Organization',
@@ -50,7 +64,7 @@ export default async function MpscPyqPage({ searchParams }) {
         name: 'Are these MPSC question papers and answer keys official?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. All 209 question papers and answer keys across 136 exam sets for 2024, 2025, and 2026 are sourced directly from the official Maharashtra Public Service Commission portal (mpsc.gov.in) and verified against official gazettes.',
+          text: 'Yes. All 841 question papers and answer keys across 429 exam sets from 2021 to 2026 are sourced directly from the official Maharashtra Public Service Commission portal (mpsc.gov.in) and verified against official gazettes.',
         },
       },
       {

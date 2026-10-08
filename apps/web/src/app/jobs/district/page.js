@@ -9,7 +9,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Maharashtra District-wise Government Jobs 2026 | ExamUdaan',
+  title: 'District-wise Maharashtra Govt Jobs 2026',
   description: 'Browse government jobs by Maharashtra district. Pune, Nagpur, Nashik, Mumbai, Thane, Kolhapur, Solapur, Amravati — hyperlocal listings updated daily.',
   alternates: {
     canonical: 'https://examudaan.in/jobs/district',

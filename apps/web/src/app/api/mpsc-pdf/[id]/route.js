@@ -10,21 +10,31 @@ import fs from 'fs'
 import path from 'path'
 import https from 'https'
 
-// Search for locally downloaded PDF matching id
+// Search for locally downloaded PDF matching id (including year subfolders)
 function findLocalPdf(id) {
   const baseDir = path.join(/*turbopackIgnore: true*/ process.cwd(), 'public', 'downloads', 'mpsc')
   if (!fs.existsSync(baseDir)) return null
 
-  const subDirs = ['', 'cached', 'question_papers', 'answer_keys']
-  for (const sub of subDirs) {
-    const targetDir = sub ? path.join(baseDir, sub) : baseDir
-    if (fs.existsSync(targetDir)) {
-      try {
-        const files = fs.readdirSync(targetDir)
-        const match = files.find(f => f.startsWith(`${id}_`) && f.endsWith('.pdf'))
-        if (match) return path.join(targetDir, match)
-      } catch {
-        // Continue searching other directories
+  try {
+    const files = fs.readdirSync(baseDir, { recursive: true })
+    const match = files.find(f => {
+      const baseName = path.basename(String(f))
+      return baseName.startsWith(`${id}_`) && baseName.endsWith('.pdf')
+    })
+    if (match) return path.join(baseDir, String(match))
+  } catch (err) {
+    // Fallback simple search if recursive option fails
+    const subDirs = ['', 'cached', 'question_papers', 'answer_keys']
+    for (const sub of subDirs) {
+      const targetDir = sub ? path.join(baseDir, sub) : baseDir
+      if (fs.existsSync(targetDir)) {
+        try {
+          const files = fs.readdirSync(targetDir)
+          const match = files.find(f => f.startsWith(`${id}_`) && f.endsWith('.pdf'))
+          if (match) return path.join(targetDir, match)
+        } catch {
+          // Continue
+        }
       }
     }
   }

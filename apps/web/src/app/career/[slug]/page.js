@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
   const examNames = career.entranceExams.map(e => e.name).join(', ')
 
   return {
-    title: `${career.title} — Career Roadmap, Syllabus, Exam Dates, Salary & Colleges 2026 | ExamUdaan`,
+    title: `${career.title} Career Guide 2026`,
     description: `Complete career guide for ${career.title} after 10th & 12th ${streamMeta?.shortName || ''}. Eligibility: ${career.min12thStream}. Key entrance exams: ${examNames}. Syllabus portion, realistic salary ladder, top colleges in Maharashtra & India.`,
     keywords: [
       career.title,

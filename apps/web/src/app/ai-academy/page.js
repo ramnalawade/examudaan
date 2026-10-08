@@ -307,7 +307,7 @@ export default function AiAcademyPage() {
             : 'Select the program tailored to your current education level and career aspirations.'}
         </p>
 
-        <div className="ai-academy-tracks-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24, marginBottom: 56 }}>
+        <div className="ai-academy-tracks-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 24, marginBottom: 56 }}>
           {COURSES.map(course => (
             <div
               key={course.id}

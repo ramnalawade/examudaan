@@ -928,8 +928,13 @@ function VideoCard({ video, isActive, onPlay, isMarathi }) {
 export default function YouTubePage() {
   return (
     <Suspense fallback={
-      <div style={{ padding: '80px 20px', textAlign: 'center', background: '#0a0a0a', color: '#fff', minHeight: '60vh' }}>
-        <p style={{ fontSize: 16, color: '#94a3b8' }}>Loading YouTube Learning Hub...</p>
+      <div style={{ padding: '80px 20px', textAlign: 'center', background: 'var(--surface)', color: 'var(--on-surface)', minHeight: '60vh' }}>
+        <h1 style={{ fontSize: 'clamp(22px, 3.5vw, 30px)', fontWeight: 800, marginBottom: 12 }}>
+          📺 YouTube Learning Hub
+        </h1>
+        <p style={{ fontSize: 14, color: 'var(--secondary)' }}>
+          Loading curated exam preparation lectures &amp; videos...
+        </p>
       </div>
     }>
       <YouTubeContent />

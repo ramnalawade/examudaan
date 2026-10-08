@@ -43,13 +43,13 @@ export async function getPlatformStats() {
   try {
     const rows = await pgQuery(`
       SELECT
-        COUNT(*) FILTER (WHERE status = 'published' AND (notification_type = 'recruitment' OR notification_type IS NULL) AND (apply_end_date IS NULL OR apply_end_date >= CURRENT_DATE)) AS active_jobs,
+        COUNT(*) FILTER (WHERE status = 'published' AND (notification_type = 'recruitment' OR notification_type IS NULL) AND (apply_end_date IS NULL OR apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date)) AS active_jobs,
         COUNT(*) FILTER (WHERE status = 'published')                                  AS total_jobs,
         COUNT(*) FILTER (WHERE status = 'published' AND notification_type = 'result') AS total_results,
         COUNT(*) FILTER (WHERE status = 'published' AND notification_type = 'answer_key') AS total_answer_keys,
         COUNT(*) FILTER (WHERE status = 'published' AND notification_type = 'admit_card') AS total_admit_cards,
         COUNT(DISTINCT organization_id)                                               AS total_boards,
-        COALESCE(SUM(total_vacancies) FILTER (WHERE status = 'published' AND (apply_end_date IS NULL OR apply_end_date >= CURRENT_DATE)), 0) AS total_vacancies
+        COALESCE(SUM(total_vacancies) FILTER (WHERE status = 'published' AND (apply_end_date IS NULL OR apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date)), 0) AS total_vacancies
       FROM exam_notifications
     `)
 

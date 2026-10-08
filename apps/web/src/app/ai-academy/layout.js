@@ -3,7 +3,7 @@
 // ============================================================
 
 export const metadata = {
-  title: 'AI Academy for Students & Professionals — Live Courses | ExamUdaan',
+  title: 'AI Academy for Students & Professionals',
   description: 'Master practical AI tools, LLM workflows, Prompt Engineering, and Automation for government exam preparation and modern careers.',
   alternates: {
     canonical: 'https://examudaan.in/ai-academy',
