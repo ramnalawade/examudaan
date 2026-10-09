@@ -9,6 +9,8 @@ import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import https from 'https'
+import { deobfuscateDocId } from '../../../../lib/docObfuscate.js'
+import { pdfLimiter, getClientIp } from '../../../../lib/rateLimit.js'
 
 // Search for locally downloaded PDF matching id (including year subfolders)
 function findLocalPdf(id) {
@@ -91,15 +93,38 @@ function fetchFromMpsc(id) {
 
 export async function GET(request, { params }) {
   const resolvedParams = await Promise.resolve(params)
-  const id = resolvedParams?.id
-  const numId = parseInt(id, 10)
+  const idParam = resolvedParams?.id || ''
 
-  if (isNaN(numId) || numId <= 0) {
-    return NextResponse.json({ error: 'Invalid document ID' }, { status: 400 })
+  // 1. Route-level defense-in-depth rate check
+  const clientIp = getClientIp(request)
+  const rateCheck = pdfLimiter.check(clientIp)
+  if (!rateCheck.allowed) {
+    return pdfLimiter.create429Response(rateCheck, 'Document download rate limit exceeded. Please wait a moment before accessing more papers.')
+  }
+
+  // 2. Deobfuscate ID (accepts doc_<token>_<sig> and safe legacy numeric with referer)
+  const isObfuscated = typeof idParam === 'string' && idParam.startsWith('doc_')
+  const numId = isObfuscated ? deobfuscateDocId(idParam) : parseInt(idParam, 10)
+
+  if (!numId || isNaN(numId) || numId <= 0) {
+    return NextResponse.json({ error: 'Invalid or expired document token' }, { status: 400 })
+  }
+
+  // 3. Anti-crawler check: If someone is hitting sequential raw numbers without obfuscated token and without internal referer, reject
+  if (!isObfuscated) {
+    const referer = request.headers.get('referer') || ''
+    const hasInternalReferer = referer.includes('examudaan.in') || referer.includes('localhost')
+    const hasVerify = Boolean(request.headers.get('x-verify') || request.headers.get('X-Verify'))
+    if (!hasInternalReferer && !hasVerify) {
+      return NextResponse.json(
+        { error: 'Direct numeric crawling is disabled. Please access documents through the ExamUdaan study viewer.' },
+        { status: 403 }
+      )
+    }
   }
 
   try {
-    // 1. Check if cached on disk
+    // 4. Check if cached on disk
     const localFile = findLocalPdf(numId)
     if (localFile && fs.existsSync(localFile)) {
       const fileBuffer = fs.readFileSync(localFile)
@@ -109,17 +134,19 @@ export async function GET(request, { params }) {
           'Content-Type': 'application/pdf',
           'Content-Disposition': `inline; filename="mpsc_${numId}.pdf"`,
           'Cache-Control': 'public, max-age=31536000, immutable',
+          'X-Content-Type-Options': 'nosniff',
+          'X-Robots-Tag': 'noindex, noarchive',
         }
       })
     }
 
-    // 2. Fetch live from MPSC API
+    // 5. Fetch live from MPSC API
     const pdfBuffer = await fetchFromMpsc(numId)
     if (!pdfBuffer || pdfBuffer.length < 100) {
       return NextResponse.json({ error: 'PDF not available on official MPSC portal' }, { status: 404 })
     }
 
-    // 3. Cache to disk asynchronously for ultra-fast subsequent loads
+    // 6. Cache to disk asynchronously for ultra-fast subsequent loads
     try {
       const cacheDir = path.join(/*turbopackIgnore: true*/ process.cwd(), 'public', 'downloads', 'mpsc', 'cached')
       fs.mkdirSync(cacheDir, { recursive: true })
@@ -134,10 +161,12 @@ export async function GET(request, { params }) {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `inline; filename="mpsc_${numId}.pdf"`,
         'Cache-Control': 'public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400',
+        'X-Content-Type-Options': 'nosniff',
+        'X-Robots-Tag': 'noindex, noarchive',
       }
     })
   } catch (error) {
-    console.error(`Error serving MPSC PDF ${id}:`, error)
+    console.error(`Error serving MPSC PDF ${idParam}:`, error)
     return NextResponse.json({ error: 'Failed to retrieve document from official portal' }, { status: 502 })
   }
 }

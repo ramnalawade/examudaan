@@ -98,6 +98,20 @@ export default function SyllabusPage() {
               <span className={styles.hubCardCta} style={{ color: '#EA580C' }}>Open MPSC Archive (209) →</span>
             </Link>
 
+            <Link href="/mpsc-pyq" className={styles.hubCard} style={{ border: '1.5px solid #fed7aa', background: '#fff' }}>
+              <div className={styles.hubCardHeader}>
+                <div className={styles.hubCardIcon} style={{ background: '#fff7ed', color: '#ea580c' }}>
+                  <span className="material-symbols-outlined">menu_book</span>
+                </div>
+                <span className={styles.hubBadge} style={{ background: '#fff7ed', color: '#ea580c' }}>841 MPSC Papers</span>
+              </div>
+              <h3 className={styles.hubCardTitle}>MPSC Question Papers & Keys</h3>
+              <p className={styles.hubCardDesc}>
+                Official 2021–2026 Rajyaseva, Group B, Group C papers paired side-by-side with final answer keys in browser.
+              </p>
+              <span className={styles.hubCardCta} style={{ color: '#ea580c' }}>Read MPSC Papers (PDF) →</span>
+            </Link>
+
             <Link href="/question-papers" className={styles.hubCard}>
               <div className={styles.hubCardHeader}>
                 <div className={styles.hubCardIcon}>

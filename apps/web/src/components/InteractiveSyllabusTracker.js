@@ -273,8 +273,23 @@ export default function InteractiveSyllabusTracker({ exam }) {
                         {paper.type && <span className={styles.paperType}>{paper.type}</span>}
                       </div>
                     </div>
-                    <div className={styles.paperProgressMini}>
-                      {paperDone} / {paperTotal} Done ({paperTotal > 0 ? Math.round((paperDone / paperTotal) * 100) : 0}%)
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                      {exam?.officialPdfs?.[0]?.url && (
+                        <a
+                          href={exam.officialPdfs[0].url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.pyqQuickLink}
+                          style={{ fontSize: '11.5px', background: 'rgba(22, 163, 74, 0.1)', color: '#16a34a', borderColor: '#bbf7d0', padding: '3px 8px' }}
+                          title={`Open ${paper.name} Question Paper in PDF format`}
+                        >
+                          <span className="material-symbols-outlined" style={{ fontSize: 13 }}>picture_as_pdf</span>
+                          Paper (PDF) ↗
+                        </a>
+                      )}
+                      <div className={styles.paperProgressMini}>
+                        {paperDone} / {paperTotal} Done ({paperTotal > 0 ? Math.round((paperDone / paperTotal) * 100) : 0}%)
+                      </div>
                     </div>
                   </div>
 
@@ -323,41 +338,45 @@ export default function InteractiveSyllabusTracker({ exam }) {
                                 return (
                                   <div key={sub} className={styles.subtopicItem} data-checked={isChecked}>
                                     <div className={styles.subtopicRow}>
-                                      <label className={styles.checkboxLabel}>
-                                        <input
-                                          type="checkbox"
-                                          className={styles.customCheckbox}
-                                          checked={isChecked}
-                                          onChange={() => toggleSubtopic(key)}
-                                        />
+                                      {/* "Mark as Studied" toggle button — clearly labeled, replaces old hidden checkbox */}
+                                      <button
+                                        type="button"
+                                        className={`${styles.studiedBtn} ${isChecked ? styles.studiedBtnDone : ''}`}
+                                        onClick={() => toggleSubtopic(key)}
+                                        title={isChecked ? 'Studied ✓ — Click to unmark' : 'Click to mark as studied'}
+                                        aria-pressed={isChecked}
+                                      >
+                                        <span className="material-symbols-outlined" style={{ fontSize: 16, flexShrink: 0 }}>
+                                          {isChecked ? 'task_alt' : 'radio_button_unchecked'}
+                                        </span>
                                         <span className={styles.subtopicText}>{sub}</span>
-                                      </label>
+                                      </button>
 
                                       <div className={styles.subtopicActions}>
-                                        {/* In-Place Collapsible PYQ Drawer Toggle */}
+                                        {/* Practice PYQs inline toggle */}
                                         <button
                                           type="button"
                                           className={styles.pyqToggleBtn}
                                           data-active={isPyqDrawerOpen}
                                           onClick={() => togglePyqDrawer(key, cleanKeyword)}
-                                          title="View authentic questions & answers right here"
+                                          title="Practice past exam questions for this topic"
                                         >
-                                          <span className="material-symbols-outlined" style={{ fontSize: 14 }}>
-                                            {isPyqDrawerOpen ? 'keyboard_arrow_up' : 'lightbulb'}
+                                          <span className="material-symbols-outlined" style={{ fontSize: 13 }}>
+                                            {isPyqDrawerOpen ? 'keyboard_arrow_up' : 'quiz'}
                                           </span>
-                                          {isPyqDrawerOpen ? 'प्रश्न लपवा' : 'सराव प्रश्न (PYQs)'}
+                                          <span>{isPyqDrawerOpen ? 'Hide PYQs' : 'Practice PYQs'}</span>
                                         </button>
 
-                                        {/* Direct clean keyword link to 15-Yr Bank */}
+                                        {/* 15-Year PYQ Bank link — always visible, underlined, clickable */}
                                         <Link
                                           href={`/pyq?q=${encodeURIComponent(cleanKeyword)}`}
                                           className={styles.pyqQuickLink}
-                                          title={`15 वर्षांच्या PYQ बँकेत '${cleanKeyword}' शोधा`}
+                                          title={`Open '${cleanKeyword}' in 15-Year PYQ Bank`}
                                         >
-                                          <span className="material-symbols-outlined" style={{ fontSize: 13 }}>
+                                          <span className="material-symbols-outlined" style={{ fontSize: 12 }}>
                                             open_in_new
                                           </span>
-                                          PYQ बँक
+                                          15-Yr PYQ Bank
                                         </Link>
                                       </div>
                                     </div>
@@ -367,14 +386,14 @@ export default function InteractiveSyllabusTracker({ exam }) {
                                       <div className={styles.inlinePyqDrawer}>
                                         <div className={styles.inlinePyqHeader}>
                                           <div className={styles.inlinePyqMeta}>
-                                            <span className={styles.inlineExamBadge}>अधिकृत PYQ सराव</span>
-                                            <span className={styles.inlineYearBadge}>घटक: {cleanKeyword}</span>
+                                            <span className={styles.inlineExamBadge}>PYQ Practice</span>
+                                            <span className={styles.inlineYearBadge}>Topic: {cleanKeyword}</span>
                                           </div>
                                           <button
                                             type="button"
                                             className={styles.inlineCloseBtn}
                                             onClick={() => togglePyqDrawer(key, cleanKeyword)}
-                                            title="बंद करा"
+                                            title="Close"
                                           >
                                             <span className="material-symbols-outlined" style={{ fontSize: 18 }}>
                                               close
@@ -384,7 +403,7 @@ export default function InteractiveSyllabusTracker({ exam }) {
 
                                         {isPyqLoading ? (
                                           <div style={{ padding: '16px', textAlign: 'center', color: '#64748b', fontSize: '13px' }}>
-                                            डेटाबेसमधून सराव प्रश्न लोड होत आहेत...
+                                            Loading questions from database…
                                           </div>
                                         ) : matchedPyqs.length > 0 ? (
                                           matchedPyqs.map((q, qIndex) => {
@@ -392,9 +411,9 @@ export default function InteractiveSyllabusTracker({ exam }) {
                                             const isAnswered = !!selected
 
                                             return (
-                                              <div key={q.id} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                                              <div key={q.id} className={styles.questionBlock}>
                                                 <h5 className={styles.inlineQuestionTitle}>
-                                                  प्र. {qIndex + 1} ({q.exam} {q.year}): {q.question}
+                                                  Q{qIndex + 1}. ({q.exam} {q.year}): {q.question}
                                                 </h5>
 
                                                 {/* Interactive Clickable Options */}
@@ -413,7 +432,7 @@ export default function InteractiveSyllabusTracker({ exam }) {
                                                         onClick={() => handleInlineSelect(q.id, optKey)}
                                                       >
                                                         <span className={styles.inlineOptLetter}>{optKey}</span>
-                                                        <span>{optVal}</span>
+                                                        <span className={styles.inlineOptText}>{optVal}</span>
                                                       </button>
                                                     )
                                                   })}
@@ -423,7 +442,7 @@ export default function InteractiveSyllabusTracker({ exam }) {
                                                 {isAnswered && (
                                                   <div className={styles.inlineExplanationBox}>
                                                     <strong>
-                                                      💡 अचूक पर्याय: ({q.correct}) — अधिकृत स्पष्टीकरण:
+                                                      ✓ Correct: ({q.correct}) — Explanation:
                                                     </strong>
                                                     <p style={{ margin: 0 }}>{q.explanation}</p>
                                                   </div>

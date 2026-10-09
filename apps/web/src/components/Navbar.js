@@ -19,10 +19,10 @@ export default function Navbar() {
   const pathname = usePathname()
   const router = useRouter()
   const { lang, setLang, t } = useLanguage()
-  const [menuOpen,      setMenuOpen]      = useState(false)
-  const [navUser,       setNavUser]       = useState(null)   // { first_name, last_name, avatar_url }
-  const [dropdownOpen,      setDropdownOpen]      = useState(false)
-  const [moreDropdownOpen,  setMoreDropdownOpen]  = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [navUser, setNavUser] = useState(null)   // { first_name, last_name, avatar_url }
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [moreDropdownOpen, setMoreDropdownOpen] = useState(false)
 
   // Ref for delayed close timer — prevents dropdown from closing when mouse
   // briefly passes through the gap between the More button and the dropdown panel
@@ -48,7 +48,7 @@ export default function Navbar() {
     function syncUser() {
       try {
         const token = localStorage.getItem('eu_access_token')
-        const raw   = localStorage.getItem('eu_user')
+        const raw = localStorage.getItem('eu_user')
         if (token && raw) {
           setNavUser(JSON.parse(raw))
         } else {
@@ -65,65 +65,65 @@ export default function Navbar() {
   }, [])
 
   const PRIMARY_NAV_ITEMS = [
-    { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
-    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'Daily', badgeBg: '#16a34a' },
-    { href: '/question-papers',    label: t('nav.question_papers', 'Question Papers'),   icon: 'description',           badge: 'MPSC',  badgeBg: '#ea580c' },
-    { href: '/answer-keys',        label: t('nav.answer_keys',     'Answer Keys'),       icon: 'key',                   badge: 'Keys',  badgeBg: '#059669' },
-    { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus'),          icon: 'menu_book' },
-    { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free',  badgeBg: '#9a3412' },
+    { href: '/jobs', label: t('nav.jobs', 'Jobs'), icon: 'work' },
+    { href: '/current-affairs', label: t('nav.current_affairs', 'Current Affairs'), icon: 'newspaper', badge: 'Daily', badgeBg: '#16a34a' },
+    { href: '/question-papers', label: t('nav.question_papers', 'Question Papers'), icon: 'description', badge: 'MPSC', badgeBg: '#ea580c' },
+    { href: '/answer-keys', label: t('nav.answer_keys', 'Answer Keys'), icon: 'key', badge: 'Keys', badgeBg: '#059669' },
+    { href: '/syllabus', label: t('nav.syllabus', 'Syllabus'), icon: 'menu_book' },
+    { href: '/mock-tests', label: t('nav.mock_tests', 'Mock Tests'), icon: 'quiz', badge: 'Free', badgeBg: '#9a3412' },
   ]
 
   const MORE_NAV_ITEMS = [
-    { href: '/mpsc-pyq',            label: t('nav.mpsc_pyq',        'MPSC Papers (2024-26)'),icon: 'description',           badge: '209 PDFs',desc: 'Official MPSC question papers & final answer keys from mpsc.gov.in' },
-    { href: '/admit-cards',        label: t('nav.admit_cards',     'Admit Cards'),          icon: 'badge',                                 desc: 'Hall tickets & exam venue notices for all exams' },
-    { href: '/results',            label: t('nav.results',         'Results & Merits'),     icon: 'workspace_premium',                     desc: 'Official merit lists, selection lists & marksheets' },
-    { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQ Bank'),       icon: 'history_edu',           badge: 'Hot',   desc: 'Interactive chapter-wise previous year question papers' },
-    { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),           icon: 'local_fire_department', badge: '5 Min', desc: '5-Minute daily speed blitz test with score badges' },
-    { href: '/career',             label: t('nav.career',          'Career Guide'),         icon: 'map',                   badge: 'New',   desc: 'Career streams, pay scales, eligibility for all Govt jobs' },
-    { href: '/walk-in-interviews', label: t('nav.walk_in',         'Walk-in Interviews'),   icon: 'directions_walk',       badge: 'Live',  desc: 'No online form needed — daily walk-in vacancies' },
-    { href: '/study-planner',      label: t('nav.study_planner',   'AI Study Planner'),     icon: 'auto_schedule',         badge: 'AI',    desc: 'Adaptive day-by-day exam study timetable & targets' },
-    { href: '/score-calculator',   label: t('nav.score_calc',      'Key Score Calculator'), icon: 'score',                 badge: 'Viral', desc: 'TCS iON, MPSC & Police Response Sheet Calculator' },
-    { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'),    icon: 'calculate',             badge: '150M',  desc: 'Physical + Written composite merit cutoff calculator' },
-    { href: '/cutoffs',            label: t('nav.cutoffs',         '10-Yr Cutoff Explorer'),icon: 'leaderboard',                           desc: 'Category cutoffs for MPSC, Police, Talathi & SSC' },
-    { href: '/salary-calculator',  label: t('nav.salary',          'Salary Calculator'),    icon: 'payments',                              desc: '7th Pay Commission in-hand salary matrix' },
-    { href: '/alerts',             label: t('nav.alerts',          'Telegram Job Alerts'),  icon: 'send',                  badge: 'Free',  desc: 'Instant official exam alerts directly on Telegram' },
-    { href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),         icon: 'policy',                                desc: 'Scholarship, employment & training schemes' },
-    { href: '/blog',               label: t('nav.blog',            'Exam Blog & Guides'),   icon: 'menu_book',             badge: 'Guides',desc: 'In-depth exam blueprints, 90-day plans & PYQ trends' },
-    { href: '/youtube',            label: t('nav.youtube',         'YouTube Classes'),      icon: 'play_circle',                           desc: 'Free lectures, strategy & exam updates' },
-    { href: '/ai-tools',           label: t('nav.ai_tools',        'AI Study Tools'),       icon: 'smart_toy',                             desc: '84+ curated AI study aids' },
-    { href: '/ai-academy',         label: t('nav.ai_academy',      'AI Academy'),           icon: 'school',                badge: 'New',   desc: 'Master AI skills, prompts & workflows' },
-    { href: '/mock-interview',     label: t('nav.mock_interview',  'Mock Interview AI'),    icon: 'mic',                   badge: 'AI',    desc: 'Real-time AI voice/chat board mock interview' },
-    { href: '/ai-news',            label: t('nav.ai_news',         'AI News Feed'),         icon: 'feed',                  badge: 'Live',  desc: 'Real-time AI research & tech updates' },
+    { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', 'MPSC Papers (2024-26)'), icon: 'description', badge: '429 PDFs', desc: 'Official MPSC question papers & final answer keys from mpsc.gov.in' },
+    { href: '/admit-cards', label: t('nav.admit_cards', 'Admit Cards'), icon: 'badge', desc: 'Hall tickets & exam venue notices for all exams' },
+    { href: '/results', label: t('nav.results', 'Results & Merits'), icon: 'workspace_premium', desc: 'Official merit lists, selection lists & marksheets' },
+    { href: '/pyq', label: t('nav.pyq', '15-Yr PYQ Bank'), icon: 'history_edu', badge: 'Hot', desc: 'Interactive chapter-wise previous year question papers' },
+    { href: '/daily-quiz', label: t('nav.daily_quiz', 'Daily Quiz'), icon: 'local_fire_department', badge: '5 Min', desc: '5-Minute daily speed blitz test with score badges' },
+    { href: '/career', label: t('nav.career', 'Career Guide'), icon: 'map', badge: 'New', desc: 'Career streams, pay scales, eligibility for all Govt jobs' },
+    { href: '/walk-in-interviews', label: t('nav.walk_in', 'Walk-in Interviews'), icon: 'directions_walk', badge: 'Live', desc: 'No online form needed — daily walk-in vacancies' },
+    { href: '/study-planner', label: t('nav.study_planner', 'AI Study Planner'), icon: 'auto_schedule', badge: 'AI', desc: 'Adaptive day-by-day exam study timetable & targets' },
+    { href: '/score-calculator', label: t('nav.score_calc', 'Key Score Calculator'), icon: 'score', badge: 'Viral', desc: 'TCS iON, MPSC & Police Response Sheet Calculator' },
+    { href: '/police-calculator', label: t('nav.police_calc', 'Police Merit Calc'), icon: 'calculate', badge: '150M', desc: 'Physical + Written composite merit cutoff calculator' },
+    { href: '/cutoffs', label: t('nav.cutoffs', '10-Yr Cutoff Explorer'), icon: 'leaderboard', desc: 'Category cutoffs for MPSC, Police, Talathi & SSC' },
+    { href: '/salary-calculator', label: t('nav.salary', 'Salary Calculator'), icon: 'payments', desc: '7th Pay Commission in-hand salary matrix' },
+    { href: '/alerts', label: t('nav.alerts', 'Telegram Job Alerts'), icon: 'send', badge: 'Free', desc: 'Instant official exam alerts directly on Telegram' },
+    //{ href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),         icon: 'policy',                                desc: 'Scholarship, employment & training schemes' },
+    { href: '/blog', label: t('nav.blog', 'Exam Blog & Guides'), icon: 'menu_book', badge: 'Guides', desc: 'In-depth exam blueprints, 90-day plans & PYQ trends' },
+    { href: '/youtube', label: t('nav.youtube', 'YouTube Classes'), icon: 'play_circle', desc: 'Free lectures, strategy & exam updates' },
+    { href: '/ai-tools', label: t('nav.ai_tools', 'AI Study Tools'), icon: 'smart_toy', desc: '84+ curated AI study aids' },
+    { href: '/ai-academy', label: t('nav.ai_academy', 'AI Academy'), icon: 'school', badge: 'New', desc: 'Master AI skills, prompts & workflows' },
+    { href: '/mock-interview', label: t('nav.mock_interview', 'Mock Interview AI'), icon: 'mic', badge: 'AI', desc: 'Real-time AI voice/chat board mock interview' },
+    { href: '/ai-news', label: t('nav.ai_news', 'AI News Feed'), icon: 'feed', badge: 'Live', desc: 'Real-time AI research & tech updates' },
   ]
 
   const MOBILE_NAV_ITEMS = [
-    { href: '/',                   label: t('nav.home',            'Home'),              icon: 'home' },
-    { href: '/jobs',               label: t('nav.jobs',            'Jobs'),              icon: 'work' },
-    { href: '/current-affairs',    label: t('nav.current_affairs', 'Current Affairs'),   icon: 'newspaper',             badge: 'Daily' },
-    { href: '/question-papers',    label: t('nav.question_papers', 'Question Papers'),   icon: 'description',           badge: 'MPSC' },
-    { href: '/mpsc-pyq',           label: t('nav.mpsc_pyq',        'MPSC Papers (24-26)'),icon: 'description',          badge: '209' },
-    { href: '/answer-keys',        label: t('nav.answer_keys',     'Answer Keys'),       icon: 'key',                   badge: 'Keys' },
-    { href: '/syllabus',           label: t('nav.syllabus',        'Syllabus'),          icon: 'menu_book' },
-    { href: '/mock-tests',         label: t('nav.mock_tests',      'Mock Tests'),        icon: 'quiz',                  badge: 'Free' },
-    { href: '/pyq',                label: t('nav.pyq',             '15-Yr PYQ Bank'),    icon: 'history_edu',           badge: 'Hot' },
-    { href: '/daily-quiz',         label: t('nav.daily_quiz',      'Daily Quiz'),        icon: 'local_fire_department', badge: '5 Min' },
-    { href: '/admit-cards',        label: t('nav.admit_cards',     'Admit Cards'),       icon: 'badge' },
-    { href: '/results',            label: t('nav.results',         'Results'),           icon: 'workspace_premium' },
-    { href: '/career',             label: t('nav.career',          'Career Guide'),      icon: 'map',                   badge: 'New' },
-    { href: '/walk-in-interviews', label: t('nav.walk_in',         'Walk-in'),           icon: 'directions_walk',       badge: 'Live' },
-    { href: '/score-calculator',   label: t('nav.score_calc',      'Score Calculator'),  icon: 'score',                 badge: 'Viral' },
-    { href: '/police-calculator',  label: t('nav.police_calc',     'Police Merit Calc'), icon: 'calculate',             badge: '150M' },
-    { href: '/study-planner',      label: t('nav.study_planner',   'Study Planner'),     icon: 'auto_schedule',         badge: 'AI' },
-    { href: '/cutoffs',            label: t('nav.cutoffs',         '10-Yr Cutoffs'),     icon: 'leaderboard' },
-    { href: '/salary-calculator',  label: t('nav.salary',          'Salary Calc'),       icon: 'payments' },
-    { href: '/alerts',             label: t('nav.alerts',          'Telegram Alerts'),   icon: 'send',                  badge: 'Free' },
-    { href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),      icon: 'policy' },
-    { href: '/blog',               label: t('nav.blog',            'Exam Blog'),         icon: 'menu_book',             badge: 'Guides' },
-    { href: '/youtube',            label: t('nav.youtube',         'YouTube'),           icon: 'play_circle' },
-    { href: '/ai-tools',           label: t('nav.ai_tools',        'AI Tools'),          icon: 'smart_toy' },
-    { href: '/ai-academy',         label: t('nav.ai_academy',      'AI Academy'),        icon: 'school',                badge: 'New' },
-    { href: '/mock-interview',     label: t('nav.mock_interview',  'Mock Interview'),    icon: 'mic',                   badge: 'AI' },
-    { href: '/ai-news',            label: t('nav.ai_news',         'AI News'),           icon: 'feed',                  badge: 'Live' },
+    { href: '/', label: t('nav.home', 'Home'), icon: 'home' },
+    { href: '/jobs', label: t('nav.jobs', 'Jobs'), icon: 'work' },
+    { href: '/current-affairs', label: t('nav.current_affairs', 'Current Affairs'), icon: 'newspaper', badge: 'Daily' },
+    { href: '/question-papers', label: t('nav.question_papers', 'Question Papers'), icon: 'description', badge: 'MPSC' },
+    { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', 'MPSC Papers (24-26)'), icon: 'description', badge: '209' },
+    { href: '/answer-keys', label: t('nav.answer_keys', 'Answer Keys'), icon: 'key', badge: 'Keys' },
+    { href: '/syllabus', label: t('nav.syllabus', 'Syllabus'), icon: 'menu_book' },
+    { href: '/mock-tests', label: t('nav.mock_tests', 'Mock Tests'), icon: 'quiz', badge: 'Free' },
+    { href: '/pyq', label: t('nav.pyq', '15-Yr PYQ Bank'), icon: 'history_edu', badge: 'Hot' },
+    { href: '/daily-quiz', label: t('nav.daily_quiz', 'Daily Quiz'), icon: 'local_fire_department', badge: '5 Min' },
+    { href: '/admit-cards', label: t('nav.admit_cards', 'Admit Cards'), icon: 'badge' },
+    { href: '/results', label: t('nav.results', 'Results'), icon: 'workspace_premium' },
+    { href: '/career', label: t('nav.career', 'Career Guide'), icon: 'map', badge: 'New' },
+    { href: '/walk-in-interviews', label: t('nav.walk_in', 'Walk-in'), icon: 'directions_walk', badge: 'Live' },
+    { href: '/score-calculator', label: t('nav.score_calc', 'Score Calculator'), icon: 'score', badge: 'Viral' },
+    { href: '/police-calculator', label: t('nav.police_calc', 'Police Merit Calc'), icon: 'calculate', badge: '150M' },
+    { href: '/study-planner', label: t('nav.study_planner', 'Study Planner'), icon: 'auto_schedule', badge: 'AI' },
+    { href: '/cutoffs', label: t('nav.cutoffs', '10-Yr Cutoffs'), icon: 'leaderboard' },
+    { href: '/salary-calculator', label: t('nav.salary', 'Salary Calc'), icon: 'payments' },
+    { href: '/alerts', label: t('nav.alerts', 'Telegram Alerts'), icon: 'send', badge: 'Free' },
+    //{ href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),      icon: 'policy' },
+    { href: '/blog', label: t('nav.blog', 'Exam Blog'), icon: 'menu_book', badge: 'Guides' },
+    { href: '/youtube', label: t('nav.youtube', 'YouTube'), icon: 'play_circle' },
+    { href: '/ai-tools', label: t('nav.ai_tools', 'AI Tools'), icon: 'smart_toy' },
+    { href: '/ai-academy', label: t('nav.ai_academy', 'AI Academy'), icon: 'school', badge: 'New' },
+    { href: '/mock-interview', label: t('nav.mock_interview', 'Mock Interview'), icon: 'mic', badge: 'AI' },
+    { href: '/ai-news', label: t('nav.ai_news', 'AI News'), icon: 'feed', badge: 'Live' },
   ]
 
 
@@ -137,12 +137,12 @@ export default function Navbar() {
   // ── Sign out: call API + clear localStorage ──
   async function handleSignOut() {
     try {
-      const token   = localStorage.getItem('eu_access_token')   || ''
-      const refresh = localStorage.getItem('eu_refresh_token')  || ''
+      const token = localStorage.getItem('eu_access_token') || ''
+      const refresh = localStorage.getItem('eu_refresh_token') || ''
       await apiFetch('/api/auth/logout', {
-        method:  'POST',
+        method: 'POST',
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ refresh_token: refresh }),
+        body: JSON.stringify({ refresh_token: refresh }),
       })
     } catch { /* ignore network errors — we still clear local state */ }
     localStorage.removeItem('eu_access_token')
@@ -157,9 +157,9 @@ export default function Navbar() {
   function getInitials(u) {
     if (!u) return '?'
     const f = (u.first_name || '').trim()
-    const l = (u.last_name  || '').trim()
+    const l = (u.last_name || '').trim()
     if (f && l) return (f[0] + l[0]).toUpperCase()
-    if (f)      return f.slice(0, 2).toUpperCase()
+    if (f) return f.slice(0, 2).toUpperCase()
     if (u.email) return u.email[0].toUpperCase()
     return 'U'
   }
@@ -447,14 +447,14 @@ export default function Navbar() {
 
                     {/* Menu items */}
                     {[
-                      { href: '/dashboard',           icon: 'dashboard',          label: 'My Dashboard' },
+                      { href: '/dashboard', icon: 'dashboard', label: 'My Dashboard' },
                       ...(Boolean(navUser?.is_admin || navUser?.role === 'admin') ? [
-                        { href: '/admin?tab=themes',  icon: 'palette',            label: '🎨 Theme & Appearance', badge: 'ADMIN' },
-                        { href: '/admin',             icon: 'admin_panel_settings', label: '⚙️ Admin Settings',   badge: 'ADMIN' },
+                        { href: '/admin?tab=themes', icon: 'palette', label: '🎨 Theme & Appearance', badge: 'ADMIN' },
+                        { href: '/admin', icon: 'admin_panel_settings', label: '⚙️ Admin Settings', badge: 'ADMIN' },
                       ] : []),
-                      { href: '/dashboard?s=profile', icon: 'person',             label: 'Edit Profile' },
-                      { href: '/dashboard?s=security',icon: 'lock',               label: 'Security & Password' },
-                      { href: '/pricing',              icon: 'workspace_premium',  label: 'Upgrade Plan' },
+                      { href: '/dashboard?s=profile', icon: 'person', label: 'Edit Profile' },
+                      { href: '/dashboard?s=security', icon: 'lock', label: 'Security & Password' },
+                      { href: '/pricing', icon: 'workspace_premium', label: 'Upgrade Plan' },
                     ].map(item => (
                       <Link
                         key={item.href + item.label}

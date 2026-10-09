@@ -437,6 +437,19 @@
   gap: 4px;
   font-weight: 600;
   color: #334155;
+  text-decoration: none;
+}
+
+.statChipClickable {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.statChipClickable:hover {
+  color: var(--primary, #ea580c);
+  opacity: 0.9;
 }
 
 .statDot {

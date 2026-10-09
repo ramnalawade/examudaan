@@ -6,6 +6,7 @@
 // ============================================================
 
 import Link from 'next/link'
+import { toSecureDocUrl } from '../../../lib/docObfuscate.js'
 
 export const metadata = {
   title: 'View Question Paper | ExamUdaan',
@@ -16,7 +17,8 @@ export const metadata = {
 // Next.js 14 App Router: searchParams is passed as a prop to the page.
 export default async function PaperViewerPage({ searchParams }) {
   const resolvedParams = await Promise.resolve(searchParams)
-  const pdfPath = resolvedParams?.pdf || ''
+  const rawPdfPath = resolvedParams?.pdf || ''
+  const pdfPath = toSecureDocUrl(rawPdfPath)
   const title   = resolvedParams?.title || 'Official Question Paper'
 
   // Security: allow PDFs from our own /question-papers/ or /downloads/mpsc/ folder or /api/mpsc-pdf/

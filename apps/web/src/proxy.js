@@ -59,8 +59,12 @@ const BLOCKED_BOT_PATTERNS = [
   /imagesiftbot/i,
 ]
 
+// In-memory sliding-window rate limiters
+import { apiLimiter, pdfLimiter, authLimiter, getClientIp } from './lib/rateLimit.js'
+
 export function proxy(request) {
   const url = request.nextUrl.clone()
+  const pathname = url.pathname
   const host = request.headers.get('host') || ''
   const proto = request.headers.get('x-forwarded-proto') || 'https'
 
@@ -105,10 +109,44 @@ export function proxy(request) {
     })
   }
 
-  // 4. Pass normal requests with standard security headers
+  // 4. Rate Limiting on API and Document Stream Endpoints
+  let rateCheck = null
+  if (pathname.startsWith('/api/')) {
+    const clientIp = getClientIp(request)
+
+    // A. PDF & Question Paper Streamer: Strict 15 docs/minute
+    if (pathname.startsWith('/api/mpsc-pdf')) {
+      rateCheck = pdfLimiter.check(clientIp)
+      if (!rateCheck.allowed) {
+        return pdfLimiter.create429Response(rateCheck, 'Document download rate limit exceeded. Please wait a moment before accessing more papers.')
+      }
+    }
+    // B. Auth Endpoints: 10 attempts/minute
+    else if (pathname.startsWith('/api/auth')) {
+      rateCheck = authLimiter.check(clientIp)
+      if (!rateCheck.allowed) {
+        return authLimiter.create429Response(rateCheck, 'Too many login or verification attempts. Please wait a minute.')
+      }
+    }
+    // C. General API endpoints: 120 req/minute
+    else {
+      rateCheck = apiLimiter.check(clientIp)
+      if (!rateCheck.allowed) {
+        return apiLimiter.create429Response(rateCheck, 'API request limit exceeded. Please wait a moment before trying again.')
+      }
+    }
+  }
+
+  // 5. Pass normal requests with standard security and rate limit headers
   const response = NextResponse.next()
   response.headers.set('X-Content-Type-Options', 'nosniff')
   response.headers.set('X-Frame-Options', 'SAMEORIGIN')
+
+  if (rateCheck) {
+    response.headers.set('X-RateLimit-Limit', String(rateCheck.limit))
+    response.headers.set('X-RateLimit-Remaining', String(rateCheck.remaining))
+  }
+
   return response
 }
 

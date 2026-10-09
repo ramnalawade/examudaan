@@ -233,37 +233,69 @@ function ExamCard({ exam }) {
             {totalPapers > 0 ? `${totalPapers} Papers` : 'Syllabus'}
           </span>
           <span className={styles.statDot}>•</span>
-          <span className={styles.statChip}>
-            <span className="material-symbols-outlined" style={{ fontSize: 13, color: hasDownloadedPapers ? '#16A34A' : '#2563EB' }}>
-              {hasDownloadedPapers ? 'history_edu' : 'checklist'}
-            </span>
-            {hasDownloadedPapers ? `${downloadedPdfsCount} Official PDFs` : 'Topic Tracker'}
-          </span>
+          {hasDownloadedPapers ? (
+            <a
+              href={exam.officialPdfs?.[0]?.url || `/syllabus/${exam.slug}#pyq`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.statChip} ${styles.statChipClickable}`}
+              title={`Open ${exam.shortName || exam.nameEn} Question Paper in PDF format`}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: 13, color: '#16A34A' }}>
+                picture_as_pdf
+              </span>
+              <span>{downloadedPdfsCount} Official PDFs ↗</span>
+            </a>
+          ) : (
+            <Link
+              href={`/syllabus/${exam.slug}#pyq`}
+              className={`${styles.statChip} ${styles.statChipClickable}`}
+              title={`View ${exam.pyqLinks?.length || 0} previous year papers for ${exam.shortName || exam.nameEn}`}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: 13, color: '#2563EB' }}>
+                history_edu
+              </span>
+              <span>{exam.pyqLinks?.length ? `${exam.pyqLinks.length} PYQ Papers` : 'Topic Tracker'}</span>
+            </Link>
+          )}
           <span className={styles.cycleBadge}>2026 Cycle</span>
         </div>
 
         {/* Action Row — Clean & Single Primary CTA */}
         <div className={styles.actionsRow}>
-          {hasDownloadedPapers && (
-            <div className={styles.quickAccessPills}>
+          <div className={styles.quickAccessPills}>
+            {hasDownloadedPapers ? (
+              <>
+                <a
+                  href={exam.officialPdfs?.[0]?.url || `/syllabus/${exam.slug}#pyq`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.quickPill}
+                  title="Open official question paper PDF directly in new tab"
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: 14 }}>picture_as_pdf</span>
+                  <span>Papers (PDF)</span>
+                </a>
+                <Link
+                  href={`/syllabus/${exam.slug}#official-pdf-workspace`}
+                  className={styles.quickPill}
+                  title="Jump directly to official answer keys"
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: 14 }}>task_alt</span>
+                  <span>Keys</span>
+                </Link>
+              </>
+            ) : exam.pyqLinks?.length > 0 ? (
               <Link
-                href={`/syllabus/${exam.slug}#official-pdf-workspace`}
+                href={`/syllabus/${exam.slug}#pyq`}
                 className={styles.quickPill}
-                title="Jump directly to official question papers"
+                title="View previous year question papers"
               >
-                <span className="material-symbols-outlined" style={{ fontSize: 14 }}>description</span>
-                <span>Papers</span>
+                <span className="material-symbols-outlined" style={{ fontSize: 14 }}>picture_as_pdf</span>
+                <span>{exam.pyqLinks.length} PYQs</span>
               </Link>
-              <Link
-                href={`/syllabus/${exam.slug}#official-pdf-workspace`}
-                className={styles.quickPill}
-                title="Jump directly to official answer keys"
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: 14 }}>task_alt</span>
-                <span>Keys</span>
-              </Link>
-            </div>
-          )}
+            ) : null}
+          </div>
 
           <Link
             href={`/syllabus/${exam.slug}`}

@@ -9,6 +9,7 @@
 import { useState, useMemo, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './officialPdfViewer.module.css'
+import { toSecureDocUrl } from '../lib/docObfuscate.js'
 
 // Bulletproof security & embed check: ONLY embed verified PDFs
 // NEVER embed internal site routes or external web portals into iframes
@@ -52,7 +53,12 @@ export default function OfficialPdfViewer({
   // Only accept verified real downloaded papers in /downloads/ or /question-papers/
   const allDocuments = useMemo(() => {
     if (!papers || papers.length === 0) return []
-    return papers.filter(p => checkIsPdf(p?.url))
+    return papers
+      .filter(p => checkIsPdf(p?.url))
+      .map(p => {
+        const secureUrl = toSecureDocUrl(p?.url)
+        return secureUrl !== p?.url ? { ...p, url: secureUrl } : p
+      })
   }, [papers])
 
   const [selectedId, setSelectedId] = useState(initialSelectedId || allDocuments[0]?.id || null)

@@ -198,6 +198,162 @@ export default function CutoffsPage() {
             })
           )}
         </div>
+
+        {/* ── Related Prep & Practice Hub ── */}
+        <div style={{
+          marginTop: '40px',
+          background: '#ffffff',
+          border: '1px solid var(--outline-variant)',
+          borderRadius: '16px',
+          padding: '28px 24px',
+          boxShadow: '0 2px 10px rgba(0,0,0,0.03)'
+        }}>
+          <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 20px' }}>
+            <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              Cutoff Benchmark Next Steps
+            </span>
+            <h2 style={{ fontFamily: 'var(--font-outfit)', fontSize: '22px', fontWeight: 800, color: 'var(--on-surface)', margin: '4px 0 6px' }}>
+              Hit Your Target Cutoff with Authentic Practice
+            </h2>
+            <p style={{ fontSize: '13.5px', color: 'var(--secondary)', margin: 0 }}>
+              Use our official papers, mock tests, and topic question bank to reach the safe cutoff marks shown above.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '14px' }}>
+            <Link
+              href="/mpsc-pyq"
+              style={{
+                background: '#fff',
+                border: '1.5px solid #fed7aa',
+                borderRadius: '12px',
+                padding: '16px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 6px rgba(234,88,12,0.05)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '22px' }}>📄</span>
+                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#fff7ed', color: '#ea580c', border: '1px solid #fed7aa', padding: '2px 7px', borderRadius: '999px' }}>
+                    841 Papers
+                  </span>
+                </div>
+                <strong style={{ fontSize: '15px', color: '#0f172a', fontFamily: 'var(--font-outfit)', display: 'block', marginBottom: '4px' }}>
+                  Official MPSC Papers & Keys
+                </strong>
+                <p style={{ fontSize: '12.5px', color: '#64748b', margin: 0, lineHeight: 1.4 }}>
+                  Read official question papers & final keys from mpsc.gov.in in-browser.
+                </p>
+              </div>
+              <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#ea580c' }}>
+                Open MPSC Papers →
+              </span>
+            </Link>
+
+            <Link
+              href="/mock-tests"
+              style={{
+                background: '#fff',
+                border: '1px solid var(--outline-variant)',
+                borderRadius: '12px',
+                padding: '16px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '22px' }}>⏱️</span>
+                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#ecfdf5', color: '#047857', border: '1px solid #a7f3d0', padding: '2px 7px', borderRadius: '999px' }}>
+                    100% Free
+                  </span>
+                </div>
+                <strong style={{ fontSize: '15px', color: '#0f172a', fontFamily: 'var(--font-outfit)', display: 'block', marginBottom: '4px' }}>
+                  Free Online CBT Mock Tests
+                </strong>
+                <p style={{ fontSize: '12.5px', color: '#64748b', margin: 0, lineHeight: 1.4 }}>
+                  Take authentic 100-Q timed mocks with state rank to test your cutoff readiness.
+                </p>
+              </div>
+              <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#047857' }}>
+                Start Free Test →
+              </span>
+            </Link>
+
+            <Link
+              href="/pyq"
+              style={{
+                background: '#fff',
+                border: '1px solid var(--outline-variant)',
+                borderRadius: '12px',
+                padding: '16px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '22px' }}>🎯</span>
+                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#f5f3ff', color: '#6d28d9', border: '1px solid #ddd6fe', padding: '2px 7px', borderRadius: '999px' }}>
+                    9,000+ MCQs
+                  </span>
+                </div>
+                <strong style={{ fontSize: '15px', color: '#0f172a', fontFamily: 'var(--font-outfit)', display: 'block', marginBottom: '4px' }}>
+                  15-Year Topic PYQ Bank
+                </strong>
+                <p style={{ fontSize: '12.5px', color: '#64748b', margin: 0, lineHeight: 1.4 }}>
+                  Subject-wise practice across Polity, Geography, History, Economy & Science.
+                </p>
+              </div>
+              <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#6d28d9' }}>
+                Practice by Topic →
+              </span>
+            </Link>
+
+            <Link
+              href="/score-calculator"
+              style={{
+                background: '#fff',
+                border: '1px solid var(--outline-variant)',
+                borderRadius: '12px',
+                padding: '16px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '22px' }}>🧮</span>
+                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#eff6ff', color: '#1d4ed8', border: '1px solid #bfdbfe', padding: '2px 7px', borderRadius: '999px' }}>
+                    Instant
+                  </span>
+                </div>
+                <strong style={{ fontSize: '15px', color: '#0f172a', fontFamily: 'var(--font-outfit)', display: 'block', marginBottom: '4px' }}>
+                  Score & Negative Marks Calc
+                </strong>
+                <p style={{ fontSize: '12.5px', color: '#64748b', margin: 0, lineHeight: 1.4 }}>
+                  Check response sheet score after deducting official 1/4th negative marks.
+                </p>
+              </div>
+              <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#1d4ed8' }}>
+                Calculate Score →
+              </span>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )

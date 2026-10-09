@@ -63,24 +63,42 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: '2024',
+      year: '2026',
       title: 'The Inception',
-      desc: 'Founded by competitive exam aspirants frustrated by fragmented government portals, spammy job aggregators, and missed application deadlines.',
+      desc: 'Founded in 2026 by competitive exam aspirants frustrated by fragmented government portals, spammy job aggregators, and missed application deadlines.',
     },
     {
-      year: '2025',
+      year: '2026',
       title: 'AI Pipeline & Scraper Engine',
       desc: 'Launched automated crawlers across 37+ Maharashtra and Central recruitment boards with automatic AI-driven classification and qualification tagging.',
     },
     {
-      year: '2026',
+      year: '2026 & Beyond',
       title: 'WhatsApp Alert Network',
       desc: 'Rolled out low-latency WhatsApp notification channels, daily digest updates, and walk-in interview tracking to empower thousands of rural and urban aspirants.',
     },
   ]
 
+  const orgSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'ExamUdaan',
+    url: 'https://examudaan.in',
+    logo: 'https://examudaan.in/logo-light.png',
+    foundingDate: '2026',
+    description: "Maharashtra's AI-powered government exam notifications and Sarkari job alerts platform.",
+    sameAs: [
+      'https://t.me/examudaanjobs',
+      'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v',
+    ],
+  }
+
   return (
     <div style={{ background: 'var(--surface)', minHeight: '100vh', paddingBottom: 64 }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
       {/* Breadcrumb Header */}
       <div style={{ borderBottom: '1px solid var(--outline-variant)', background: 'var(--surface-container-lowest)', padding: '16px 0' }}>
         <div className="container" style={{ maxWidth: 1100, margin: '0 auto', padding: '0 20px' }}>

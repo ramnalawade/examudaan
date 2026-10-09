@@ -195,10 +195,6 @@ export default async function sitemap() {
       mpscBase = path.join(/*turbopackIgnore: true*/ process.cwd(), 'apps', 'web', 'public', 'downloads', 'mpsc')
     }
     if (fs.existsSync(mpscBase)) {
-      const publicDir = mpscBase.includes(path.join('apps', 'web', 'public'))
-        ? path.join(/*turbopackIgnore: true*/ process.cwd(), 'apps', 'web', 'public')
-        : path.join(/*turbopackIgnore: true*/ process.cwd(), 'public')
-
       function scanDir(dir) {
         let results = []
         const entries = fs.readdirSync(dir, { withFileTypes: true })
@@ -207,21 +203,27 @@ export default async function sitemap() {
           if (entry.isDirectory()) {
             results = results.concat(scanDir(full))
           } else if (entry.name.endsWith('.pdf')) {
-            const rel = path.relative(publicDir, full).replace(/\\/g, '/')
+            const relFromMpsc = path.relative(mpscBase, full).replace(/\\/g, '/').replace(/^\/+/, '')
+            const webPath = `/downloads/mpsc/${relFromMpsc}`
             const stats = fs.statSync(full)
-            results.push({ rel, mtime: stats.mtime.toISOString() })
+            results.push({ webPath, mtime: stats.mtime.toISOString() })
           }
         }
         return results
       }
 
       const files = scanDir(mpscBase)
-      mpscPaperEntries = files.map(f => ({
-        url:             `${BASE_URL}/question-papers/viewer?pdf=/${encodeURI(f.rel)}`,
-        lastModified:    f.mtime || now,
-        changeFrequency: 'monthly',
-        priority:        0.88,
-      }))
+      mpscPaperEntries = files.map(f => {
+        // Encode each segment of path to handle spaces & special characters, especially '&'
+        // In query strings and XML sitemaps, '&' MUST be encoded as '%26' to prevent XML parseEntity errors
+        const cleanPath = encodeURI(f.webPath).replace(/&/g, '%26')
+        return {
+          url:             `${BASE_URL}/question-papers/viewer?pdf=${cleanPath}`,
+          lastModified:    f.mtime || now,
+          changeFrequency: 'monthly',
+          priority:        0.88,
+        }
+      })
     }
   } catch (mpscErr) {
     console.error('Sitemap MPSC files scan error:', mpscErr)
@@ -252,7 +254,7 @@ export default async function sitemap() {
     console.error('Sitemap DB query error:', err)
   }
 
-  return [
+  const allEntries = [
     ...staticEntries,
     ...careerEntries,
     ...currentAffairsEntries,
@@ -265,6 +267,21 @@ export default async function sitemap() {
     ...mpscPaperEntries,
     ...postEntries,
   ]
+
+  // Crucial: Next.js injects raw url into <loc>${item.url}</loc> without XML entity escaping.
+  // Standard XML requires '&', '<', '>', '"', and '\'' to be entity-escaped.
+  return allEntries.map(entry => {
+    if (!entry?.url) return entry
+    return {
+      ...entry,
+      url: entry.url
+        .replace(/&(?!(?:amp|lt|gt|quot|apos);)/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;'),
+    }
+  })
 }
 
 /** Returns true if deadline is in the future or within the last 7 days */

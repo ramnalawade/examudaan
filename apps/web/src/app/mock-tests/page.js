@@ -196,17 +196,152 @@ export default function MockTestsPage() {
         </div>
       </section>
 
-      {/* ── CTA to Syllabus ── */}
-      <section className={styles.ctaSection}>
+      {/* ── Related Official Prep Hubs ── */}
+      <section className={styles.ctaSection} style={{ padding: '36px 0', background: 'var(--surface-container-lowest)' }}>
         <div className="container">
-          <div className={styles.ctaBox}>
-            <span style={{ fontSize: '36px' }}>📚</span>
-            <div>
-              <h2>Need the Official Syllabus & Previous Question Papers First?</h2>
-              <p>Review the comprehensive 17 state and central exam syllabi and direct question paper portals before attempting tests.</p>
-            </div>
-            <Link href="/syllabus" className="btn-outline" style={{ background: '#fff', color: 'var(--on-surface)', borderColor: 'var(--outline-variant)' }}>
-              View Full Syllabus →
+          <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 24px' }}>
+            <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              Complete Preparation Ecosystem
+            </span>
+            <h2 style={{ fontFamily: 'var(--font-outfit)', fontSize: '24px', fontWeight: 800, color: 'var(--on-surface)', margin: '6px 0 8px' }}>
+              Master Real Exams with Official Past Papers & Cutoffs
+            </h2>
+            <p style={{ fontSize: '14px', color: 'var(--secondary)', margin: 0 }}>
+              Before and after taking mock tests, study the authentic question papers, analyze historical category benchmarks, and practice topic-wise MCQs.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+            <Link
+              href="/mpsc-pyq"
+              style={{
+                background: '#fff',
+                border: '1.5px solid #fed7aa',
+                borderRadius: '12px',
+                padding: '18px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 8px rgba(234,88,12,0.06)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '24px' }}>📄</span>
+                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#fff7ed', color: '#ea580c', border: '1px solid #fed7aa', padding: '2px 8px', borderRadius: '999px' }}>
+                    841 Official Papers
+                  </span>
+                </div>
+                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-outfit)' }}>
+                  MPSC Question Papers & Keys
+                </h3>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.45 }}>
+                  Download & read official 2021–2026 MPSC question papers and answer keys directly in browser.
+                </p>
+              </div>
+              <span style={{ marginTop: '12px', fontSize: '12.5px', fontWeight: 700, color: '#ea580c', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                Open Official Papers →
+              </span>
+            </Link>
+
+            <Link
+              href="/pyq"
+              style={{
+                background: '#fff',
+                border: '1px solid var(--outline-variant)',
+                borderRadius: '12px',
+                padding: '18px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '24px' }}>🎯</span>
+                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#ecfdf5', color: '#047857', border: '1px solid #a7f3d0', padding: '2px 8px', borderRadius: '999px' }}>
+                    9,000+ MCQs
+                  </span>
+                </div>
+                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-outfit)' }}>
+                  15-Year Topic PYQ Bank
+                </h3>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.45 }}>
+                  Practice topic-wise previous year questions across Polity, Geography, History, Science, and Marathi.
+                </p>
+              </div>
+              <span style={{ marginTop: '12px', fontSize: '12.5px', fontWeight: 700, color: '#047857', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                Practice Topic-wise →
+              </span>
+            </Link>
+
+            <Link
+              href="/cutoffs"
+              style={{
+                background: '#fff',
+                border: '1px solid var(--outline-variant)',
+                borderRadius: '12px',
+                padding: '18px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '24px' }}>📊</span>
+                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#f5f3ff', color: '#6d28d9', border: '1px solid #ddd6fe', padding: '2px 8px', borderRadius: '999px' }}>
+                    10-Yr Benchmark
+                  </span>
+                </div>
+                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-outfit)' }}>
+                  Historical Cutoff Marks
+                </h3>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.45 }}>
+                  Compare your mock test scores against Open, OBC, EWS, SC, and ST official cutoffs.
+                </p>
+              </div>
+              <span style={{ marginTop: '12px', fontSize: '12.5px', fontWeight: 700, color: '#6d28d9', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                View Cutoff Marks →
+              </span>
+            </Link>
+
+            <Link
+              href="/syllabus"
+              style={{
+                background: '#fff',
+                border: '1px solid var(--outline-variant)',
+                borderRadius: '12px',
+                padding: '18px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+              }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '24px' }}>📚</span>
+                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#eff6ff', color: '#1d4ed8', border: '1px solid #bfdbfe', padding: '2px 8px', borderRadius: '999px' }}>
+                    17 Exams
+                  </span>
+                </div>
+                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-outfit)' }}>
+                  Detailed Syllabus & Schemes
+                </h3>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.45 }}>
+                  Subject weightage, marking scheme, and sectional breakdowns for Maharashtra and Central exams.
+                </p>
+              </div>
+              <span style={{ marginTop: '12px', fontSize: '12.5px', fontWeight: 700, color: '#1d4ed8', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                View Full Syllabus →
+              </span>
             </Link>
           </div>
         </div>

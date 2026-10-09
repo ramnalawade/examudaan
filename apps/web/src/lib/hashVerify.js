@@ -80,6 +80,21 @@ export function GenerateHash(req, payload = null) {
       return { success: false, reason: 'missing_header' }
     }
 
+    // Replay attack defense: verify x-timestamp is within 5 minutes
+    const timestampVal = (
+      req?.headers?.get?.('x-timestamp') ||
+      req?.headers?.['x-timestamp'] ||
+      req?.headers?.['X-Timestamp'] ||
+      ''
+    ).trim()
+
+    if (timestampVal) {
+      const ts = parseInt(timestampVal, 10)
+      if (!isNaN(ts) && Math.abs(Date.now() - ts) > 5 * 60 * 1000) {
+        return { success: false, reason: 'timestamp_expired' }
+      }
+    }
+
     if (headerVal.toLowerCase() === expectedHash.toLowerCase()) {
       return { success: true, hash: expectedHash }
     }

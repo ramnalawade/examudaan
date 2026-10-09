@@ -73,6 +73,10 @@ export async function apiFetch(url, options = {}) {
     }
   }
 
+  // Timestamp for replay protection & freshness
+  const timestamp = Date.now().toString()
+  headers['x-timestamp'] = timestamp
+
   // Extract query parameters from URL to include in hash
   try {
     const fullUrl = url.startsWith('http') ? new URL(url) : new URL(url, 'http://localhost')
@@ -80,11 +84,8 @@ export async function apiFetch(url, options = {}) {
     payload = { ...payload, ...queryParams }
   } catch {}
 
-  // Attach x-verify header if payload exists or method is mutating
-  const hasPayload = Object.keys(payload).length > 0
-  if (hasPayload || ['POST', 'PUT', 'PATCH', 'DELETE'].includes(method)) {
-    headers['x-verify'] = createVerifyHash(payload)
-  }
+  // Strategy D: Always sign all requests (including GET) with x-verify
+  headers['x-verify'] = createVerifyHash(payload)
 
   // Default content-type for mutations with body
   if (options.body && !headers['Content-Type'] && !headers['content-type']) {

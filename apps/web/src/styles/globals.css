@@ -2070,20 +2070,52 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 9px 14px;
-  border-radius: 10px;
+  padding: 7px 16px;
+  border-radius: 9999px;
   font-size: 13px;
+  font-weight: 600;
   white-space: nowrap;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
   user-select: none;
   font-family: inherit;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
 }
 .mpsc-category-btn:hover {
-  transform: translateY(-1px);
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+.mpsc-category-btn.active {
+  background: #ea580c !important;
+  color: #ffffff !important;
+  border-color: #ea580c !important;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.25);
+}
+.mpsc-category-btn.active:hover {
+  background: #d94e08 !important;
+  color: #ffffff !important;
+  border-color: #d94e08 !important;
 }
 .mpsc-category-btn:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
+}
+
+.mpsc-category-badge {
+  background: rgba(0, 0, 0, 0.08);
+  color: #475569;
+  padding: 1px 7px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mpsc-category-btn.active .mpsc-category-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
 }
 
 /* ── Mobile-first responsive overrides for MPSC PYQ page ── */
@@ -2125,5 +2157,15 @@ body {
     width: 100% !important;
     justify-content: center !important;
   }
+}
+
+/* ── MPSC Prep Hub Cards Interactive Hover Effects ── */
+.mpsc-hub-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.mpsc-hub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.1) !important;
+  border-color: #FDBA74 !important;
 }
 

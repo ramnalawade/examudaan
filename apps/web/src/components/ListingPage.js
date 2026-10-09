@@ -22,106 +22,106 @@ import { formatTitle } from '../lib/formatTitle'
 
 // ── Category tabs shown at top of every listing page ──────────
 const CATEGORY_TABS = [
-  { id: 'all',         label: 'All',          icon: 'grid_view',           href: '/jobs' },
-  { id: 'recruitment', label: 'Jobs',          icon: 'work',               href: '/jobs' },
-  { id: 'result',      label: 'Results',       icon: 'emoji_events',       href: '/results' },
-  { id: 'admit_card',  label: 'Admit Cards',   icon: 'badge',              href: '/admit-cards' },
-  { id: 'answer_key',  label: 'Answer Keys',   icon: 'fact_check',         href: '/answer-keys' },
-  { id: 'syllabus',    label: 'Syllabus',      icon: 'menu_book',          href: '/schemes' },
-  { id: 'career',      label: 'Career Guide',  icon: 'explore',            href: '/career' },
+  { id: 'all', label: 'All', icon: 'grid_view', href: '/jobs' },
+  { id: 'recruitment', label: 'Jobs', icon: 'work', href: '/jobs' },
+  { id: 'result', label: 'Results', icon: 'emoji_events', href: '/results' },
+  { id: 'admit_card', label: 'Admit Cards', icon: 'badge', href: '/admit-cards' },
+  { id: 'answer_key', label: 'Answer Keys', icon: 'fact_check', href: '/answer-keys' },
+  { id: 'syllabus', label: 'Syllabus', icon: 'menu_book', href: '/schemes' },
+  { id: 'career', label: 'Career Guide', icon: 'explore', href: '/career' },
 ]
 
 // ── Static filter options ─────────────────────────────────────
 const ORGS = [
   // Use EXACT acronyms from the organizations DB table
-  { id: 'IISER PUNE',          label: 'IISER Pune' },
-  { id: 'SRPF',                label: 'SRPF' },
-  { id: 'MUMBAI POLICE',       label: 'Mumbai Police' },
-  { id: 'ACTREC',              label: 'ACTREC' },
-  { id: 'ICAR-CIRCOT',         label: 'ICAR-CIRCOT' },
-  { id: 'BMC',                 label: 'BMC' },
-  { id: 'THANE POLICE',        label: 'Thane Police' },
-  { id: 'KRCL',                label: 'KRCL' },
-  { id: 'CSIR-NEERI',          label: 'CSIR-NEERI' },
-  { id: 'MECL',                label: 'MECL' },
-  { id: 'PDKV AKOLA',          label: 'PDKV Akola' },
-  { id: 'ICAR-NBSS&LUP',       label: 'ICAR-NBSS' },
-  { id: 'AIIMS NAGPUR',        label: 'AIIMS Nagpur' },
-  { id: 'UPSC',                label: 'UPSC' },
-  { id: 'SSC',                 label: 'SSC' },
-  { id: 'RRB',                 label: 'Railway (RRB)' },
-  { id: 'MPSC',                label: 'MPSC' },
-  { id: 'IBPS',                label: 'IBPS' },
-  { id: 'SBI',                 label: 'SBI' },
+  { id: 'ACTREC', label: 'ACTREC' },
+  { id: 'AIIMS NAGPUR', label: 'AIIMS Nagpur' },
+  { id: 'BMC', label: 'BMC' },
+  { id: 'CSIR-NEERI', label: 'CSIR-NEERI' },
+  { id: 'IBPS', label: 'IBPS' },
+  { id: 'ICAR-CIRCOT', label: 'ICAR-CIRCOT' },
+  { id: 'ICAR-NBSS&LUP', label: 'ICAR-NBSS' },
+  { id: 'IISER PUNE', label: 'IISER Pune' },
+  { id: 'KRCL', label: 'KRCL' },
+  { id: 'MECL', label: 'MECL' },
+  { id: 'MPSC', label: 'MPSC' },
+  { id: 'MUMBAI POLICE', label: 'Mumbai Police' },
+  { id: 'PDKV AKOLA', label: 'PDKV Akola' },
+  { id: 'RRB', label: 'Railway (RRB)' },
+  { id: 'SBI', label: 'SBI' },
+  { id: 'SRPF', label: 'SRPF' },
+  { id: 'SSC', label: 'SSC' },
+  { id: 'THANE POLICE', label: 'Thane Police' },
+  { id: 'UPSC', label: 'UPSC' },
 ]
 
 const QUALIFICATIONS = [
-  { id: '10th',         label: '10th Pass' },
-  { id: '12th',         label: '12th Pass' },
-  { id: 'graduate',     label: 'Graduate' },
-  { id: 'post_graduate',label: 'Post Graduate' },
-  { id: 'diploma',      label: 'Diploma / ITI' },
+  { id: '10th', label: '10th Pass' },
+  { id: '12th', label: '12th Pass' },
+  { id: 'graduate', label: 'Graduate' },
+  { id: 'post_graduate', label: 'Post Graduate' },
+  { id: 'diploma', label: 'Diploma / ITI' },
 ]
 
 const STATES = [
-  { id: 'all-india',    label: 'All India' },
-  { id: 'maharashtra',  label: 'Maharashtra' },
-  { id: 'uttar-pradesh',label: 'Uttar Pradesh' },
-  { id: 'bihar',        label: 'Bihar' },
-  { id: 'rajasthan',    label: 'Rajasthan' },
-  { id: 'gujarat',      label: 'Gujarat' },
-  { id: 'punjab',       label: 'Punjab' },
-  { id: 'haryana',      label: 'Haryana' },
-  { id: 'delhi',        label: 'Delhi' },
-  { id: 'madhya-pradesh', label: 'Madhya Pradesh' },
-  { id: 'tamil-nadu',   label: 'Tamil Nadu' },
-  { id: 'telangana',    label: 'Telangana' },
+  { id: 'all-india', label: 'All India' }, // kept first as the default/special option
   { id: 'andhra-pradesh', label: 'Andhra Pradesh' },
-  { id: 'karnataka',    label: 'Karnataka' },
-  { id: 'kerala',       label: 'Kerala' },
-  { id: 'west-bengal',  label: 'West Bengal' },
-  { id: 'odisha',       label: 'Odisha' },
-  { id: 'jharkhand',    label: 'Jharkhand' },
+  { id: 'bihar', label: 'Bihar' },
   { id: 'chhattisgarh', label: 'Chhattisgarh' },
-  { id: 'uttarakhand',  label: 'Uttarakhand' },
+  { id: 'delhi', label: 'Delhi' },
+  { id: 'goa', label: 'Goa' },
+  { id: 'gujarat', label: 'Gujarat' },
+  { id: 'haryana', label: 'Haryana' },
   { id: 'himachal-pradesh', label: 'Himachal Pradesh' },
-  { id: 'goa',          label: 'Goa' },
+  { id: 'jharkhand', label: 'Jharkhand' },
+  { id: 'karnataka', label: 'Karnataka' },
+  { id: 'kerala', label: 'Kerala' },
+  { id: 'madhya-pradesh', label: 'Madhya Pradesh' },
+  { id: 'maharashtra', label: 'Maharashtra' },
+  { id: 'odisha', label: 'Odisha' },
+  { id: 'punjab', label: 'Punjab' },
+  { id: 'rajasthan', label: 'Rajasthan' },
+  { id: 'tamil-nadu', label: 'Tamil Nadu' },
+  { id: 'telangana', label: 'Telangana' },
+  { id: 'uttar-pradesh', label: 'Uttar Pradesh' },
+  { id: 'uttarakhand', label: 'Uttarakhand' },
+  { id: 'west-bengal', label: 'West Bengal' },
 ]
 
 const MAHARASHTRA_DISTRICTS = [
-  { id: 'Nagpur',      label: 'Nagpur',                    label_mr: 'नागपूर' },
-  { id: 'Mumbai',      label: 'Mumbai',                    label_mr: 'मुंबई' },
-  { id: 'Pune',        label: 'Pune',                      label_mr: 'पुणे' },
-  { id: 'Nashik',      label: 'Nashik',                    label_mr: 'नाशिक' },
-  { id: 'Thane',       label: 'Thane',                     label_mr: 'ठाणे' },
-  { id: 'Aurangabad',  label: 'Chh. Sambhajinagar',        label_mr: 'छत्रपती संभाजीनगर' },
-  { id: 'Kolhapur',    label: 'Kolhapur',                  label_mr: 'कोल्हापूर' },
-  { id: 'Solapur',     label: 'Solapur',                   label_mr: 'सोलापूर' },
-  { id: 'Amravati',    label: 'Amravati',                  label_mr: 'अमरावती' },
-  { id: 'Nanded',      label: 'Nanded',                    label_mr: 'नांदेड' },
-  { id: 'Jalgaon',     label: 'Jalgaon',                   label_mr: 'जळगाव' },
-  { id: 'Satara',      label: 'Satara',                    label_mr: 'सातारा' },
-  { id: 'Sangli',      label: 'Sangli',                    label_mr: 'सांगली' },
-  { id: 'Akola',       label: 'Akola',                     label_mr: 'अकोला' },
-  { id: 'Latur',       label: 'Latur',                     label_mr: 'लातूर' },
-  { id: 'Dhule',       label: 'Dhule',                     label_mr: 'धुळे' },
-  { id: 'Ahmednagar',  label: 'Ahilyanagar',               label_mr: 'अहिल्यानगर' },
-  { id: 'Chandrapur',  label: 'Chandrapur',                label_mr: 'चंद्रपूर' },
-  { id: 'Ratnagiri',   label: 'Ratnagiri',                 label_mr: 'रत्नागिरी' },
+  { id: 'Ahmednagar', label: 'Ahilyanagar', label_mr: 'अहिल्यानगर' },
+  { id: 'Akola', label: 'Akola', label_mr: 'अकोला' },
+  { id: 'Amravati', label: 'Amravati', label_mr: 'अमरावती' },
+  { id: 'Aurangabad', label: 'Chh. Sambhajinagar', label_mr: 'छत्रपती संभाजीनगर' },
+  { id: 'Chandrapur', label: 'Chandrapur', label_mr: 'चंद्रपूर' },
+  { id: 'Dhule', label: 'Dhule', label_mr: 'धुळे' },
+  { id: 'Jalgaon', label: 'Jalgaon', label_mr: 'जळगाव' },
+  { id: 'Kolhapur', label: 'Kolhapur', label_mr: 'कोल्हापूर' },
+  { id: 'Latur', label: 'Latur', label_mr: 'लातूर' },
+  { id: 'Mumbai', label: 'Mumbai', label_mr: 'मुंबई' },
+  { id: 'Nagpur', label: 'Nagpur', label_mr: 'नागपूर' },
+  { id: 'Nanded', label: 'Nanded', label_mr: 'नांदेड' },
+  { id: 'Nashik', label: 'Nashik', label_mr: 'नाशिक' },
+  { id: 'Pune', label: 'Pune', label_mr: 'पुणे' },
+  { id: 'Ratnagiri', label: 'Ratnagiri', label_mr: 'रत्नागिरी' },
+  { id: 'Sangli', label: 'Sangli', label_mr: 'सांगली' },
+  { id: 'Satara', label: 'Satara', label_mr: 'सातारा' },
+  { id: 'Solapur', label: 'Solapur', label_mr: 'सोलापूर' },
+  { id: 'Thane', label: 'Thane', label_mr: 'ठाणे' },
 ]
 
 const SALARY_RANGES = [
-  { id: '10000',  label: '₹10,000+' },
-  { id: '25000',  label: '₹25,000+' },
-  { id: '50000',  label: '₹50,000+' },
+  { id: '10000', label: '₹10,000+' },
+  { id: '25000', label: '₹25,000+' },
+  { id: '50000', label: '₹50,000+' },
   { id: '100000', label: '₹1 Lakh+' },
 ]
 
 const VACANCY_RANGES = [
-  { id: '10',   label: '10+ Posts',    label_mr: '१०+ जागा' },
-  { id: '50',   label: '50+ Posts',    label_mr: '५०+ जागा' },
-  { id: '100',  label: '100+ Posts',   label_mr: '१००+ जागा' },
-  { id: '500',  label: '500+ Posts',   label_mr: '५००+ जागा' },
+  { id: '10', label: '10+ Posts', label_mr: '१०+ जागा' },
+  { id: '50', label: '50+ Posts', label_mr: '५०+ जागा' },
+  { id: '100', label: '100+ Posts', label_mr: '१००+ जागा' },
+  { id: '500', label: '500+ Posts', label_mr: '५००+ जागा' },
   { id: '1000', label: '1,000+ Posts', label_mr: '१,०००+ जागा' },
 ]
 
@@ -135,28 +135,28 @@ function toCard(n) {
   return {
     id,
     slug,
-    title:            formatTitle(n.title),
-    title_mr:         n.title_mr,
-    summary_mr:       n.summary_mr,
-    org_name_mr:      n.org_name_mr,
-    department:       formatTitle(n.org_name),
-    organization:     orgAcronym,
-    vacancies:        n.total_vacancies || n.vacancies || null,
-    apply_start:      n.apply_start_date || n.application_start,
-    apply_end:        n.apply_end_date   || n.application_end,
-    exam_date:        n.exam_date,
-    is_walk_in:       n.is_walk_in,
-    employment_type:  n.employment_type,
-    location:         Array.isArray(n.exam_cities) ? n.exam_cities.join(', ') : (n.exam_cities || ''),
+    title: formatTitle(n.title),
+    title_mr: n.title_mr,
+    summary_mr: n.summary_mr,
+    org_name_mr: n.org_name_mr,
+    department: formatTitle(n.org_name),
+    organization: orgAcronym,
+    vacancies: n.total_vacancies || n.vacancies || null,
+    apply_start: n.apply_start_date || n.application_start,
+    apply_end: n.apply_end_date || n.application_end,
+    exam_date: n.exam_date,
+    is_walk_in: n.is_walk_in,
+    employment_type: n.employment_type,
+    location: Array.isArray(n.exam_cities) ? n.exam_cities.join(', ') : (n.exam_cities || ''),
     notification_pdf: n.notification_pdf || n.notification_pdf_url,
-    source_url:       n.source_url,
-    application_fee:  n.application_fee,
-    status:           n.status,
+    source_url: n.source_url,
+    application_fee: n.application_fee,
+    status: n.status,
     notification_type: n.notification_type || 'recruitment',
-    salary_min:       n.salary_min,
-    salary_max:       n.salary_max,
-    published_at:     n.published_at,
-    created_at:       n.created_at,
+    salary_min: n.salary_min,
+    salary_max: n.salary_max,
+    published_at: n.published_at,
+    created_at: n.created_at,
   }
 }
 
@@ -201,15 +201,15 @@ function ListingPageInner({
   const [activeTab, setActiveTab] = useState(defaultType || 'all')
 
   // ── Filters ───────────────────────────────────────────────
-  const [search,      setSearch]      = useState('')
-  const [selOrgs,     setSelOrgs]     = useState([])  // multi-select org
-  const [selQual,     setSelQual]     = useState('')
-  const [selState,    setSelState]    = useState('')
-  const [selCity,     setSelCity]     = useState('')
-  const [selSalary,   setSelSalary]   = useState('')
+  const [search, setSearch] = useState('')
+  const [selOrgs, setSelOrgs] = useState([])  // multi-select org
+  const [selQual, setSelQual] = useState('')
+  const [selState, setSelState] = useState('')
+  const [selCity, setSelCity] = useState('')
+  const [selSalary, setSelSalary] = useState('')
   const [selGovtLevel, setSelGovtLevel] = useState('')  // Central|State|PSU|Local
   const [selVacancies, setSelVacancies] = useState('')  // min_vacancies filter
-  const [sort,        setSort]        = useState('latest')
+  const [sort, setSort] = useState('latest')
   const [statusFilter, setStatusFilter] = useState('published') // 'published' (Active) | 'closed' (On Demand) | 'all' (All)
 
   // Sync incoming search params on mount
@@ -246,11 +246,11 @@ function ListingPageInner({
   }, [searchParams])
 
   // ── Data ──────────────────────────────────────────────────
-  const [items,   setItems]   = useState([])
-  const [total,   setTotal]   = useState(0)
-  const [page,    setPage]    = useState(1)
+  const [items, setItems] = useState([])
+  const [total, setTotal] = useState(0)
+  const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(true)
-  const [error,   setError]   = useState(null)
+  const [error, setError] = useState(null)
 
   // ── Mobile sidebar toggle ──────────────────────────────────
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -264,28 +264,28 @@ function ListingPageInner({
     const p = new URLSearchParams({
       status: statusFilter,
       sort,
-      page:   String(currentPage),
-      limit:  String(PAGE_SIZE),
+      page: String(currentPage),
+      limit: String(PAGE_SIZE),
     })
 
     // Use activeTab as the notification_type filter
     const typeToSend = activeTab !== 'all' ? activeTab : null
-    if (typeToSend)       p.set('type', typeToSend)
-    if (search.trim())    p.set('q', search.trim())
+    if (typeToSend) p.set('type', typeToSend)
+    if (search.trim()) p.set('q', search.trim())
     // Send all selected orgs as comma-separated string
     if (selOrgs.length > 0) p.set('org', selOrgs.join(','))
-    if (selState)         p.set('state', selState)
-    if (selCity)          p.set('city', selCity)
-    if (selQual)          p.set('qualification', selQual)
-    if (selSalary)        p.set('min_salary', selSalary)
-    if (selGovtLevel)     p.set('govt_level', selGovtLevel)
-    if (selVacancies)     p.set('min_vacancies', selVacancies)
+    if (selState) p.set('state', selState)
+    if (selCity) p.set('city', selCity)
+    if (selQual) p.set('qualification', selQual)
+    if (selSalary) p.set('min_salary', selSalary)
+    if (selGovtLevel) p.set('govt_level', selGovtLevel)
+    if (selVacancies) p.set('min_vacancies', selVacancies)
 
     try {
       const res = await fetch(`/api/notifications?${p}`)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       const json = await res.json()
-      const rows  = json?.data?.notifications || []
+      const rows = json?.data?.notifications || []
       const count = json?.data?.total || 0
 
       const mapped = rows.map(toCard)
@@ -337,55 +337,55 @@ function ListingPageInner({
   }
 
   const hasFilters = selOrgs.length > 0 || selQual || selState || selCity || selSalary || selGovtLevel || selVacancies || search || statusFilter !== 'published'
-  const hasMore    = items.length < total
+  const hasMore = items.length < total
 
   // ── Page label ────────────────────────────────────────────
   const tabLabel = isMarathi
     ? ({
-        all: 'सर्व जाहिराती', recruitment: 'नोकऱ्या', result: 'निकाल',
-        admit_card: 'प्रवेशपत्र', answer_key: 'उत्तरतालिका', syllabus: 'अभ्यासक्रम',
-      }[activeTab] || 'जाहिराती')
+      all: 'सर्व जाहिराती', recruitment: 'नोकऱ्या', result: 'निकाल',
+      admit_card: 'प्रवेशपत्र', answer_key: 'उत्तरतालिका', syllabus: 'अभ्यासक्रम',
+    }[activeTab] || 'जाहिराती')
     : ({
-        all: 'Notifications', recruitment: 'Jobs', result: 'Results',
-        admit_card: 'Admit Cards', answer_key: 'Answer Keys', syllabus: 'Syllabi',
-      }[activeTab] || 'Notifications')
+      all: 'Notifications', recruitment: 'Jobs', result: 'Results',
+      admit_card: 'Admit Cards', answer_key: 'Answer Keys', syllabus: 'Syllabi',
+    }[activeTab] || 'Notifications')
 
   const primaryColor = accentColor || 'var(--primary)'
 
   const categoryTabs = [
-    { id: 'all',         label: t('listing.all', 'All'),                 icon: 'grid_view',     href: '/jobs' },
-    { id: 'recruitment', label: t('listing.jobs', 'Jobs'),               icon: 'work',          href: '/jobs' },
-    { id: 'result',      label: t('listing.results', 'Results'),         icon: 'emoji_events',  href: '/results' },
-    { id: 'admit_card',  label: t('listing.admit_cards', 'Admit Cards'), icon: 'badge',         href: '/admit-cards' },
-    { id: 'answer_key',  label: t('listing.answer_keys', 'Answer Keys'), icon: 'fact_check',    href: '/answer-keys' },
-    { id: 'syllabus',    label: t('listing.syllabus', 'Syllabus'),       icon: 'menu_book',     href: '/schemes' },
-    { id: 'career',      label: t('nav.career', 'Career Guide'),         icon: 'explore',       href: '/career' },
+    { id: 'all', label: t('listing.all', 'All'), icon: 'grid_view', href: '/jobs' },
+    { id: 'recruitment', label: t('listing.jobs', 'Jobs'), icon: 'work', href: '/jobs' },
+    { id: 'result', label: t('listing.results', 'Results'), icon: 'emoji_events', href: '/results' },
+    { id: 'admit_card', label: t('listing.admit_cards', 'Admit Cards'), icon: 'badge', href: '/admit-cards' },
+    { id: 'answer_key', label: t('listing.answer_keys', 'Answer Keys'), icon: 'fact_check', href: '/answer-keys' },
+    { id: 'syllabus', label: t('listing.syllabus', 'Syllabus'), icon: 'menu_book', href: '/schemes' },
+    { id: 'career', label: t('nav.career', 'Career Guide'), icon: 'explore', href: '/career' },
   ]
 
   const qualList = isMarathi ? [
-    { id: '10th',          label: '१०वी उत्तीर्ण' },
-    { id: '12th',          label: '१२वी उत्तीर्ण' },
-    { id: 'graduate',      label: 'पदवीधर (Graduate)' },
+    { id: '10th', label: '१०वी उत्तीर्ण' },
+    { id: '12th', label: '१२वी उत्तीर्ण' },
+    { id: 'graduate', label: 'पदवीधर (Graduate)' },
     { id: 'post_graduate', label: 'पदव्युत्तर (Post Graduate)' },
-    { id: 'diploma',       label: 'डिप्लोमा / ITI' },
+    { id: 'diploma', label: 'डिप्लोमा / ITI' },
   ] : QUALIFICATIONS
 
   const salaryList = isMarathi ? [
-    { id: '10000',  label: '₹१०,०००+' },
-    { id: '25000',  label: '₹२५,०००+' },
-    { id: '50000',  label: '₹५०,०००+' },
+    { id: '10000', label: '₹१०,०००+' },
+    { id: '25000', label: '₹२५,०००+' },
+    { id: '50000', label: '₹५०,०००+' },
     { id: '100000', label: '₹१ लाख+' },
   ] : SALARY_RANGES
 
   const statesList = isMarathi ? [
     { id: 'maharashtra', label: 'महाराष्ट्र' },
-    { id: 'up',          label: 'उत्तर प्रदेश' },
-    { id: 'bihar',       label: 'बिहार' },
-    { id: 'rajasthan',   label: 'राजस्थान' },
-    { id: 'gujarat',     label: 'गुजरात' },
-    { id: 'delhi',       label: 'दिल्ली' },
-    { id: 'karnataka',   label: 'कर्नाटक' },
-    { id: 'mp',          label: 'मध्य प्रदेश' },
+    { id: 'up', label: 'उत्तर प्रदेश' },
+    { id: 'karnataka', label: 'कर्नाटक' },
+    { id: 'gujarat', label: 'गुजरात' },
+    { id: 'delhi', label: 'दिल्ली' },
+    { id: 'bihar', label: 'बिहार' },
+    { id: 'mp', label: 'मध्य प्रदेश' },
+    { id: 'rajasthan', label: 'राजस्थान' },
   ] : STATES
 
   return (
@@ -476,7 +476,7 @@ function ListingPageInner({
           { label: isMarathi ? '🎓 १२वी उत्तीर्ण' : '🎓 12th Pass', type: 'qualification', value: '12th' },
           { label: isMarathi ? '🎓 पदवीधर' : '🎓 Graduate', type: 'qualification', value: 'graduate' },
           { label: isMarathi ? '⏰ अंतिम मुदत जवळ' : '⏰ Closing Soon', type: 'sort', value: 'closing' },
-          { label: isMarathi ? '📁 बंद जाहिराती (On Demand)' : '📁 Closed Jobs (On Demand)', type: 'status', value: 'closed' },
+          { label: isMarathi ? '📁 बंद जाहिराती' : '📁 Closed Jobs', type: 'status', value: 'closed' },
         ].map(chip => {
           let isChipActive = false
           if (chip.type === 'state') isChipActive = selState === chip.value
@@ -555,7 +555,7 @@ function ListingPageInner({
           aria-label="Open filters"
         >
           <span className="material-symbols-outlined">tune</span>
-          {hasFilters ? `${t('listing.filter_title', 'Filters')} (${selOrgs.length + (selQual?1:0) + (selState?1:0) + (selCity?1:0) + (selSalary?1:0) + (selGovtLevel?1:0) + (selVacancies?1:0)})` : t('listing.filter_title', 'Filters')}
+          {hasFilters ? `${t('listing.filter_title', 'Filters')} (${selOrgs.length + (selQual ? 1 : 0) + (selState ? 1 : 0) + (selCity ? 1 : 0) + (selSalary ? 1 : 0) + (selGovtLevel ? 1 : 0) + (selVacancies ? 1 : 0)})` : t('listing.filter_title', 'Filters')}
         </button>
 
         {/* Sort - Compact */}
@@ -728,8 +728,8 @@ function ListingPageInner({
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {[
                 { id: 'published', label: isMarathi ? 'सुरू जाहिराती (नवीनतम)' : 'Active Jobs (Latest First)' },
-                { id: 'closed',    label: isMarathi ? 'मुदत संपलेल्या जाहिराती (Closed / Archive)' : 'Closed / Past Deadlines (On Demand)' },
-                { id: 'all',       label: isMarathi ? 'सर्व जाहिराती (Active + Closed)' : 'All Jobs (Active + Closed)' },
+                { id: 'closed', label: isMarathi ? 'मुदत संपलेल्या जाहिराती (Closed / Archive)' : 'Closed / Past Deadlines' },
+                { id: 'all', label: isMarathi ? 'सर्व जाहिराती (Active + Closed)' : 'All Jobs (Active + Closed)' },
               ].map(st => (
                 <label
                   key={st.id}
@@ -856,9 +856,9 @@ function ListingPageInner({
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {[
                 { id: 'Central', label: '🏛️ Central Govt', desc: 'UPSC, SSC, Railways, Banks' },
-                { id: 'State',   label: '🏢 State Govt',   desc: 'MPSC, Police, ZP, BMC' },
-                { id: 'PSU',     label: '🏭 PSU / Corp',   desc: 'ONGC, BHEL, NTPC, etc.' },
-                { id: 'Local',   label: '🏘️ Local Bodies',  desc: 'Municipal, Panchayat' },
+                { id: 'State', label: '🏢 State Govt', desc: 'MPSC, Police, ZP, BMC' },
+                { id: 'PSU', label: '🏭 PSU / Corp', desc: 'ONGC, BHEL, NTPC, etc.' },
+                { id: 'Local', label: '🏘️ Local Bodies', desc: 'Municipal, Panchayat' },
               ].map(gl => (
                 <label
                   key={gl.id}

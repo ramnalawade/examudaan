@@ -287,7 +287,7 @@ function PyqSearchInner() {
                 </p>
               </div>
               <Link href="/mpsc-pyq" className={styles.mpscBannerBtn}>
-                MPSC प्रश्नपत्रिका व की उघडा (138) →
+                MPSC प्रश्नपत्रिका व की उघडा (429) →
               </Link>
             </div>
           </div>
@@ -340,10 +340,16 @@ function PyqSearchInner() {
                 </Link>
               ))}
               <Link
-                href="/question-papers"
-                style={{ color: '#2563EB', fontWeight: 600, textDecoration: 'none', background: '#EFF6FF', padding: '3px 8px', borderRadius: '4px' }}
+                href="/mpsc-pyq"
+                style={{ color: '#EA580C', fontWeight: 700, textDecoration: 'none', background: '#FFF7ED', border: '1px solid #FED7AA', padding: '3px 10px', borderRadius: '4px' }}
               >
-                📄 अधिकृत प्रश्नपत्रिका PDF ↗
+                📄 841 MPSC मूळ पेपर्स व की ➔
+              </Link>
+              <Link
+                href="/mock-tests"
+                style={{ color: '#047857', fontWeight: 700, textDecoration: 'none', background: '#ECFDF5', border: '1px solid #A7F3D0', padding: '3px 10px', borderRadius: '4px' }}
+              >
+                ⏱️ मोफत ऑनलाईन मॉक टेस्ट्स ➔
               </Link>
             </div>
           </div>
@@ -569,6 +575,162 @@ function PyqSearchInner() {
               </button>
             </div>
           )}
+
+          {/* ── Related Prep Ecosystem Cards ── */}
+          <div style={{
+            marginTop: '44px',
+            background: '#FFFFFF',
+            border: '1px solid var(--outline-variant, #E2E8F0)',
+            borderRadius: '16px',
+            padding: '28px 24px',
+            boxShadow: '0 2px 10px rgba(0,0,0,0.03)'
+          }}>
+            <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 22px' }}>
+              <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--primary, #EA580C)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                Complete Exam Preparation
+              </span>
+              <h2 style={{ fontFamily: 'var(--font-outfit, Outfit)', fontSize: '22px', fontWeight: 800, color: '#0F172A', margin: '4px 0 6px' }}>
+                मूळ प्रश्नपत्रिका, मॉक टेस्ट्स व कट-ऑफ विश्लेषण
+              </h2>
+              <p style={{ fontSize: '13.5px', color: '#64748B', margin: 0 }}>
+                विषयवार सराव केल्यानंतर मूळ पूर्ण पेपर्स वाचा आणि १०० प्रश्नांची मॉक टेस्ट देऊन तुमची रँक तपासा.
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '14px' }}>
+              <Link
+                href="/mpsc-pyq"
+                style={{
+                  background: '#FFFFFF',
+                  border: '1.5px solid #FED7AA',
+                  borderRadius: '12px',
+                  padding: '16px',
+                  textDecoration: 'none',
+                  boxShadow: '0 2px 6px rgba(234,88,12,0.05)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                    <span style={{ fontSize: '22px' }}>📄</span>
+                    <span style={{ fontSize: '11px', fontWeight: 700, background: '#FFF7ED', color: '#EA580C', border: '1px solid #FED7AA', padding: '2px 7px', borderRadius: '999px' }}>
+                      841 पेपर्स
+                    </span>
+                  </div>
+                  <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit, Outfit)', display: 'block', marginBottom: '4px' }}>
+                    MPSC मूळ प्रश्नपत्रिका व की
+                  </strong>
+                  <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                    २०२१ ते २०२६ चे सर्व ४२९ परीक्षा संच थेट ब्राऊझरमध्ये वाचा व डाऊनलोड करा.
+                  </p>
+                </div>
+                <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#EA580C' }}>
+                  प्रश्नपत्रिका उघडा →
+                </span>
+              </Link>
+
+              <Link
+                href="/mock-tests"
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: '12px',
+                  padding: '16px',
+                  textDecoration: 'none',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                    <span style={{ fontSize: '22px' }}>⏱️</span>
+                    <span style={{ fontSize: '11px', fontWeight: 700, background: '#ECFDF5', color: '#047857', border: '1px solid #A7F3D0', padding: '2px 7px', borderRadius: '999px' }}>
+                      100% Free
+                    </span>
+                  </div>
+                  <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit, Outfit)', display: 'block', marginBottom: '4px' }}>
+                    मोफत ऑनलाईन मॉक टेस्ट्स
+                  </strong>
+                  <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                    MPSC संयुक्त १०० प्रश्नांचा संपूर्ण मॉक व विषयवार स्पीड ड्रिल्स सोडवा.
+                  </p>
+                </div>
+                <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#047857' }}>
+                  मॉक टेस्ट द्या →
+                </span>
+              </Link>
+
+              <Link
+                href="/cutoffs"
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: '12px',
+                  padding: '16px',
+                  textDecoration: 'none',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                    <span style={{ fontSize: '22px' }}>📊</span>
+                    <span style={{ fontSize: '11px', fontWeight: 700, background: '#F5F3FF', color: '#6D28D9', border: '1px solid #DDD6FE', padding: '2px 7px', borderRadius: '999px' }}>
+                      10-Yr Cutoffs
+                    </span>
+                  </div>
+                  <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit, Outfit)', display: 'block', marginBottom: '4px' }}>
+                    मागील १० वर्षांचे कट-ऑफ
+                  </strong>
+                  <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                    Open, OBC, EWS, SC, ST प्रवर्गांचे अधिकृत बेंचमार्क मार्क्स तपासा.
+                  </p>
+                </div>
+                <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#6D28D9' }}>
+                  कट-ऑफ पहा →
+                </span>
+              </Link>
+
+              <Link
+                href="/syllabus"
+                style={{
+                  background: '#FFFFFF',
+                  border: '1px solid #E2E8F0',
+                  borderRadius: '12px',
+                  padding: '16px',
+                  textDecoration: 'none',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                    <span style={{ fontSize: '22px' }}>📚</span>
+                    <span style={{ fontSize: '11px', fontWeight: 700, background: '#EFF6FF', color: '#1D4ED8', border: '1px solid #BFDBFE', padding: '2px 7px', borderRadius: '999px' }}>
+                      17 Exams
+                    </span>
+                  </div>
+                  <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit, Outfit)', display: 'block', marginBottom: '4px' }}>
+                    अधिकृत अभ्यासक्रम व पॅटर्न
+                  </strong>
+                  <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                    परीक्षा पद्धती, विषयनिहाय गुणविभागणी आणि नकारात्मक गुण पद्धती.
+                  </p>
+                </div>
+                <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#1D4ED8' }}>
+                  अभ्यासक्रम पहा →
+                </span>
+              </Link>
+            </div>
+          </div>
         </section>
       </div>
     </main>

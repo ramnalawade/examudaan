@@ -335,54 +335,42 @@
   border-color: #bbf7d0;
 }
 
-.checkboxLabel {
-  display: flex;
+/* "Mark as Studied" toggle button — replaces the old hidden checkbox */
+.studiedBtn {
+  display: inline-flex;
   align-items: flex-start;
   gap: 10px;
+  background: none;
+  border: none;
+  padding: 4px 6px 4px 0;
   cursor: pointer;
   font-size: 13px;
   line-height: 1.45;
   color: #334155;
+  text-align: left;
   flex: 1;
+  border-radius: 6px;
+  transition: color 0.15s;
 }
 
-.customCheckbox {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #94a3b8;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
+.studiedBtn:hover {
+  color: #ea580c;
+}
+
+.studiedBtn .material-symbols-outlined {
+  color: #94a3b8; /* unchecked: grey ring */
   margin-top: 1px;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.15s ease;
-  position: relative;
-  background: #fff;
+  transition: color 0.15s;
 }
 
-.customCheckbox:checked {
-  background: #10b981;
-  border-color: #10b981;
+/* Done state — green check icon, strikethrough text */
+.studiedBtnDone {
+  color: #64748b;
 }
 
-.customCheckbox:checked::after {
-  content: '✓';
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 900;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.subtopicText {
-  transition: all 0.15s;
+.studiedBtnDone .material-symbols-outlined {
+  color: #10b981; /* green check circle */
 }
 
 .subtopicItem[data-checked="true"] .subtopicText {
@@ -395,9 +383,10 @@
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ea580c;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   padding: 2px 8px;
   border-radius: 4px;
   background: rgba(234, 88, 12, 0.08);
@@ -588,20 +577,75 @@
 }
 
 .inlineExplanationBox {
-  background: #fdf4ff;
-  border: 1px solid #f5d0fe;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
   border-radius: 8px;
   padding: 10px 14px;
   font-size: 13px;
-  color: #701a75;
+  color: #166534;
   line-height: 1.5;
 }
 
 .inlineExplanationBox strong {
-  color: #86198f;
+  color: #15803d;
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
+}
+
+/* Question block wrapper (replaces inline style) */
+.questionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Option text wrapper — allows wrapping on narrow screens */
+.inlineOptText {
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Empty state inside PYQ drawer */
+.drawerNoResults {
+  padding: 12px 14px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #475569;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drawerNoResults p {
+  margin: 0;
+}
+
+/* Loading state */
+.drawerLoading {
+  padding: 16px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Hide button in drawer footer */
+.drawerHideBtn {
+  font-size: 12px;
+  color: #64748b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.drawerHideBtn:hover {
+  background: #f1f5f9;
+  color: #334155;
 }
 
 .inlineDrawerFooter {
@@ -621,7 +665,8 @@
   font-size: 12px;
   font-weight: 700;
   color: #ea580c;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .inlineBankLink:hover {
@@ -643,13 +688,31 @@
   .subtopicList {
     margin-left: 8px;
   }
+  /* Stack the subtopic row vertically on mobile */
   .subtopicRow {
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
   }
+  /* Action buttons sit below the topic name on mobile */
   .subtopicActions {
-    margin-left: 28px;
-    margin-top: 4px;
+    margin-left: 26px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  /* Options in PYQ drawer: always 1 column, full width */
+  .inlineOptionsGrid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Drawer footer: stack link and hide button */
+  .inlineDrawerFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  /* PYQ quick link: show full text on mobile */
+  .pyqQuickLink {
+    font-size: 12px;
   }
 }
 
