@@ -8,6 +8,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
+import { trackCtaClick, trackSocialCommunity } from '../lib/analytics'
 import styles from './homePageView.module.css'
 
 // ── 1. Hero Urgent Exam Openings (Live countdown cards) ───────
@@ -147,12 +148,12 @@ const SUITE_CARDS = [
 
 // ── 3. Popular Commissions (6 Commissions) ───────────────────
 const COMMISSIONS = [
-  { name: 'MPSC Maharashtra', name_mr: 'MPSC महाराष्ट्र', meta: 'State Civil Services • 4,124+ Posts', icon: 'account_balance', href: '/jobs?org=MPSC' },
-  { name: 'UPSC New Delhi', name_mr: 'UPSC नवी दिल्ली', meta: 'Civil & Defense • 1,200+ Posts', icon: 'gavel', href: '/jobs?org=UPSC' },
-  { name: 'Railway (RRB/RRC)', name_mr: 'रेल्वे भरती बोर्ड', meta: 'ALP, NTPC, Group D • 32K+ Posts', icon: 'train', href: '/jobs?org=RRB' },
-  { name: 'SSC New Delhi', name_mr: 'कर्मचारी निवड आयोग', meta: 'CGL, CHSL, GD, MTS • 25K+ Posts', icon: 'description', href: '/jobs?org=SSC' },
-  { name: 'Banking (IBPS/SBI)', name_mr: 'बँक भरती (IBPS/SBI)', meta: 'PO, Clerk, SO • 18,500+ Posts', icon: 'savings', href: '/jobs?org=IBPS,SBI' },
-  { name: 'Maharashtra Police', name_mr: 'महाराष्ट्र पोलीस', meta: 'Constable, Driver • 3,521+ Posts', icon: 'local_police', href: '/jobs?org=MUMBAI%20POLICE,SRPF' },
+  { name: 'MPSC Maharashtra', name_mr: 'MPSC महाराष्ट्र', meta: 'State Civil Services • 4,124+ Posts', icon: 'account_balance', href: '/jobs/org/mpsc' },
+  { name: 'UPSC New Delhi', name_mr: 'UPSC नवी दिल्ली', meta: 'Civil & Defense • 1,200+ Posts', icon: 'gavel', href: '/jobs/org/upsc' },
+  { name: 'Railway (RRB/RRC)', name_mr: 'रेल्वे भरती बोर्ड', meta: 'ALP, NTPC, Group D • 32K+ Posts', icon: 'train', href: '/jobs/org/rrb' },
+  { name: 'SSC New Delhi', name_mr: 'कर्मचारी निवड आयोग', meta: 'CGL, CHSL, GD, MTS • 25K+ Posts', icon: 'description', href: '/jobs/org/ssc' },
+  { name: 'Banking (IBPS/SBI)', name_mr: 'बँक भरती (IBPS/SBI)', meta: 'PO, Clerk, SO • 18,500+ Posts', icon: 'savings', href: '/jobs/org/banking' },
+  { name: 'Maharashtra Police', name_mr: 'महाराष्ट्र पोलीस', meta: 'Constable, Driver • 3,521+ Posts', icon: 'local_police', href: '/jobs/org/police' },
 ]
 
 // ── 4. Latest Verified Openings by Region / Commission ────────
@@ -535,7 +536,7 @@ export default function HomePageView({
             {/* Left Hero Column */}
             <div>
               <div className={styles.heroTag}>
-                <span className="material-symbols-outlined" style={{ fontSize: 14 }}>verified</span>
+                <span className={`material-symbols-outlined ${styles.icon14}`}>verified</span>
                 {isMarathi ? 'अखिल भारतीय व महाराष्ट्र सरकारी परीक्षा पोर्टल' : 'All India & Maharashtra Govt Exam Portal'}
               </div>
 
@@ -560,37 +561,46 @@ export default function HomePageView({
               </p>
 
               {/* Action Buttons */}
+              {/* Action Buttons */}
               <div className={styles.heroCtas}>
-                <Link href="/jobs" className={styles.ctaPrimary}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 20 }}>search</span>
+                <Link
+                  href="/jobs"
+                  className={styles.ctaPrimary}
+                  onClick={() => trackCtaClick('Browse Active Jobs', '/jobs', 'homepage_hero')}
+                >
+                  <span className={`material-symbols-outlined ${styles.icon20}`}>search</span>
                   {isMarathi ? `${stats.total_jobs || '575'}+ सक्रिय नोकऱ्या पहा →` : `Browse ${stats.total_jobs || '575'}+ Active Jobs →`}
                 </Link>
 
-                {/* Primary Broadcast Channel: Telegram */}
-                <a
-                  href="https://t.me/examudaanjobs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.ctaTelegram}
-                  title="Join Official Telegram Channel"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
-                  </svg>
-                  <span>{isMarathi ? 'Telegram अलर्ट (मोफत)' : 'Join Telegram Channel (Free)'}</span>
-                </a>
+                <div className={styles.heroChannelRow}>
+                  {/* Primary Broadcast Channel: Telegram */}
+                  <a
+                    href="https://t.me/examudaanjobs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.ctaTelegram}
+                    title="Join Official Telegram Channel"
+                    onClick={() => trackSocialCommunity('telegram', 'https://t.me/examudaanjobs', 'homepage_hero')}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+                    </svg>
+                    <span>{isMarathi ? 'Telegram अलर्ट' : 'Join Telegram'}</span>
+                  </a>
 
-                {/* Secondary Channel: WhatsApp */}
-                <a
-                  href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.ctaWhatsAppSecondary}
-                  title="Follow WhatsApp Channel"
-                >
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chat</span>
-                  <span>{isMarathi ? 'WhatsApp' : 'WhatsApp'}</span>
-                </a>
+                  {/* Secondary Channel: WhatsApp */}
+                  <a
+                    href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.ctaWhatsAppSecondary}
+                    title="Follow WhatsApp Channel"
+                    onClick={() => trackSocialCommunity('whatsapp', 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v', 'homepage_hero')}
+                  >
+                    <span className={`material-symbols-outlined ${styles.icon18}`}>chat</span>
+                    <span>{isMarathi ? 'WhatsApp' : 'WhatsApp'}</span>
+                  </a>
+                </div>
               </div>
 
               {/* Trust Checkmarks */}
@@ -600,27 +610,59 @@ export default function HomePageView({
                 <span className={styles.trustItem}>✓ Free Exam Guides</span>
               </div>
 
+              {/* 4 Core Pillars - Instant Clarity on Mobile & Desktop */}
+              <div className={styles.portalCorePillars}>
+                <Link href="/jobs" className={styles.pillarCard}>
+                  <span className={styles.pillarIcon}>💼</span>
+                  <div>
+                    <strong>{isMarathi ? '२७५+ सरकारी नोकऱ्या' : '275+ Live Govt Jobs'}</strong>
+                    <span>{isMarathi ? 'MPSC, UPSC, पोलीस, SSC भरती' : 'MPSC, UPSC, Police, SSC & Bank'}</span>
+                  </div>
+                </Link>
+                <Link href="/answer-keys" className={styles.pillarCard}>
+                  <span className={styles.pillarIcon}>🔑</span>
+                  <div>
+                    <strong>{isMarathi ? 'उत्तरतालिका व कटऑफ्स' : 'Answer Keys & Cutoffs'}</strong>
+                    <span>{isMarathi ? 'अधिकृत रेस्पॉन्स शीट व नॉर्मलायझेशन' : 'Official TCS/MPSC response sheets'}</span>
+                  </div>
+                </Link>
+                <Link href="/mpsc-pyq" className={styles.pillarCard}>
+                  <span className={styles.pillarIcon}>📚</span>
+                  <div>
+                    <strong>{isMarathi ? '१५-वर्षीय PYQ पेपर्स' : '15-Yr Solved PYQ Bank'}</strong>
+                    <span>{isMarathi ? '२०९+ MPSC प्रश्नपत्रिका उत्तरे' : '209+ MPSC papers & mock tests'}</span>
+                  </div>
+                </Link>
+                <Link href="/study-planner" className={styles.pillarCard}>
+                  <span className={styles.pillarIcon}>🤖</span>
+                  <div>
+                    <strong>{isMarathi ? 'AI स्टडी प्लॅनर' : 'AI Study Planner & Tools'}</strong>
+                    <span>{isMarathi ? '११४+ मोफत अभ्यास साधने' : '114+ Free prep tools & timetable'}</span>
+                  </div>
+                </Link>
+              </div>
+
               {/* Popular Navigation Hub Pills */}
-              <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', gap: '8px', alignItems: 'center' }}>
-                <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--on-surface-variant, #64748B)' }}>
+              <div className={styles.popularHubRow}>
+                <span className={styles.popularHubLabel}>
                   {isMarathi ? 'लोकप्रिय:' : 'Popular:'}
                 </span>
-                <Link href="/mpsc-pyq" style={{ fontSize: '12px', fontWeight: 600, color: '#EA580C', background: '#FFF7ED', border: '1px solid #FFEDD5', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                <Link href="/mpsc-pyq" className={styles.popularPillOrange}>
                   🏛️ MPSC 2024-26 Papers ({stats.total_pyq_papers || 209})
                 </Link>
-                <Link href="/answer-keys" style={{ fontSize: '12px', fontWeight: 600, color: '#059669', background: '#ECFDF5', border: '1px solid #A7F3D0', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                <Link href="/answer-keys" className={styles.popularPillGreen}>
                   🔑 Answer Keys
                 </Link>
-                <Link href="/current-affairs" style={{ fontSize: '12px', fontWeight: 600, color: '#2563EB', background: '#EFF6FF', border: '1px solid #BFDBFE', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                <Link href="/current-affairs" className={styles.popularPillBlue}>
                   📰 Daily CA
                 </Link>
-                <Link href="/syllabus" style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', background: '#F5F3FF', border: '1px solid #DDD6FE', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                <Link href="/syllabus" className={styles.popularPillPurple}>
                   📚 Syllabus 2026
                 </Link>
-                <Link href="/mock-tests" style={{ fontSize: '12px', fontWeight: 600, color: '#C2410C', background: '#FFF7ED', border: '1px solid #FFEDD5', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                <Link href="/mock-tests" className={styles.popularPillRust}>
                   ⏱️ Mock Tests
                 </Link>
-                <Link href="/pyq" style={{ fontSize: '12px', fontWeight: 600, color: '#4B5563', background: '#F3F4F6', border: '1px solid #E5E7EB', padding: '4px 10px', borderRadius: '6px', textDecoration: 'none' }}>
+                <Link href="/pyq" className={styles.popularPillGray}>
                   🎯 15-Yr PYQs
                 </Link>
               </div>
@@ -631,7 +673,7 @@ export default function HomePageView({
               <div className={styles.urgentCard}>
                 <div className={styles.urgentHeader}>
                   <div className={styles.urgentTitle}>
-                    <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#DC2626' }}>alarm</span>
+                    <span className={`material-symbols-outlined ${styles.iconAlarmRed}`}>alarm</span>
                     <span>{isMarathi ? 'अंतिम मुदतीच्या परीक्षा जाहिराती' : 'Urgent Exam Openings'}</span>
                   </div>
                   <span className={styles.urgentBadge}>
@@ -654,8 +696,12 @@ export default function HomePageView({
                         <span>{item.dept}</span>
                         <span>•</span>
                         <strong>{item.vacancies}</strong>
-                        <span style={{ marginLeft: 'auto' }}>
-                          <Link href={`/jobs/${item.slug}`} className={styles.applyLink}>
+                        <span className={styles.urgentCardSpacer}>
+                          <Link
+                            href={`/jobs/${item.slug}`}
+                            className={styles.applyLink}
+                            aria-label={isMarathi ? `${item.title_mr || item.title} तपशील पहा` : `Apply for ${item.title}`}
+                          >
                             {isMarathi ? 'तपशील पहा ↗' : 'Apply Direct ↗'}
                           </Link>
                         </span>
@@ -665,7 +711,7 @@ export default function HomePageView({
                 </div>
 
                 <div className={styles.urgentFooter}>
-                  <Link href="/jobs?sort=closing">
+                  <Link href="/jobs/closing-soon">
                     {isMarathi
                       ? `सर्व ${urgentCount || displayUrgent.length || 10}+ अंतिम मुदतीच्या जाहिराती पहा →`
                       : `View All ${urgentCount || displayUrgent.length || 10} Urgent Notifications →`}
@@ -692,7 +738,7 @@ export default function HomePageView({
             </Link>
 
             {/* 2. Total Govt Vacancies */}
-            <Link href="/jobs?sort=vacancies" className={styles.statBox} title="View jobs sorted by vacancies">
+            <Link href="/jobs" className={styles.statBox} title="View all active government job vacancies">
               <span className={`material-symbols-outlined ${styles.statIcon}`}>trending_up</span>
               <div>
                 <div className={styles.statValue}>{stats.total_vacancies || '90,791'}</div>
@@ -749,7 +795,7 @@ export default function HomePageView({
             <Link href="/ai-tools" className={styles.statBox} title="Free AI Tools for Exam Preparation">
               <span className={`material-symbols-outlined ${styles.statIcon}`}>smart_toy</span>
               <div>
-                <div className={styles.statValue}>{stats.total_ai_tools ? `${stats.total_ai_tools}+` : '84+'}</div>
+                <div className={styles.statValue}>{stats.total_ai_tools ? `${stats.total_ai_tools}+` : '114+'}</div>
                 <div className={styles.statLabel}>{isMarathi ? 'AI अभ्यास साधने' : 'AI Prep Study Tools'}</div>
               </div>
             </Link>
@@ -763,31 +809,31 @@ export default function HomePageView({
         <div className={styles.quickPillsBar}>
           <span className={styles.quickPillTitle}>Popular Verticals:</span>
           <Link href="/question-papers#mpsc" className={styles.quickPill} title="Official MPSC Question Papers & Keys">
-            <span style={{ fontSize: 16 }}>📚</span>
+            <span className={styles.badgeText16}>📚</span>
             <span>MPSC Question Papers</span>
           </Link>
           <Link href="/answer-keys" className={styles.quickPill} title="Official Exam Answer Keys">
-            <span style={{ fontSize: 16 }}>🔑</span>
+            <span className={styles.badgeText16}>🔑</span>
             <span>Answer Keys Portal</span>
           </Link>
           <Link href="/current-affairs" className={styles.quickPill} title="Daily Current Affairs Digest">
-            <span style={{ fontSize: 16 }}>📰</span>
+            <span className={styles.badgeText16}>📰</span>
             <span>Daily Current Affairs</span>
           </Link>
           <Link href="/syllabus" className={styles.quickPill} title="Exam Syllabus 2026">
-            <span style={{ fontSize: 16 }}>📖</span>
+            <span className={styles.badgeText16}>📖</span>
             <span>Syllabus 2026</span>
           </Link>
           <Link href="/pyq" className={styles.quickPill} title="15-Year PYQ Practice Bank">
-            <span style={{ fontSize: 16 }}>⏱️</span>
+            <span className={styles.badgeText16}>⏱️</span>
             <span>15-Yr PYQ Bank</span>
           </Link>
           <Link href="/question-papers#maharashtra-direct" className={styles.quickPill} title="Maharashtra Police Bharti Papers">
-            <span style={{ fontSize: 16 }}>👮</span>
+            <span className={styles.badgeText16}>👮</span>
             <span>Police Bharti Papers</span>
           </Link>
           <Link href="/mock-tests" className={styles.quickPill} title="Free CBT Mock Tests">
-            <span style={{ fontSize: 16 }}>🎯</span>
+            <span className={styles.badgeText16}>🎯</span>
             <span>Free Mock Tests</span>
           </Link>
         </div>
@@ -807,7 +853,7 @@ export default function HomePageView({
               </p>
             </div>
             <Link href="/ai-tools" className={styles.headerLink}>
-              View all tools ({stats.total_ai_tools || 84} AI Tools) →
+              View all tools ({stats.total_ai_tools || 114} AI Tools) →
             </Link>
           </div>
 
@@ -816,7 +862,7 @@ export default function HomePageView({
               <Link key={i} href={card.href} className={styles.suiteCard}>
                 <div className={styles.suiteCardTop}>
                   <div className={styles.suiteIconBox}>
-                    <span className="material-symbols-outlined" style={{ fontSize: 22 }}>{card.icon}</span>
+                    <span className={`material-symbols-outlined ${styles.icon22}`}>{card.icon}</span>
                   </div>
                   <span className={styles.suiteBadge}>{card.badge}</span>
                 </div>
@@ -833,7 +879,7 @@ export default function HomePageView({
         </section>
 
         {/* ════════ 4. BROWSE RECRUITMENTS BY COMMISSION ════════ */}
-        <section className={styles.sectionBlock} style={{ paddingTop: 0 }}>
+        <section className={`${styles.sectionBlock} ${styles.sectionBlockNoPaddingTop}`}>
           <div className={styles.sectionHeader}>
             <div>
               <div className={styles.eyebrow}>Popular Commissions</div>
@@ -860,7 +906,7 @@ export default function HomePageView({
         </section>
 
         {/* ════════ 5. LATEST VERIFIED EXAM OPENINGS (Tabs) ════════ */}
-        <section className={styles.sectionBlock} style={{ paddingTop: 0 }}>
+        <section className={`${styles.sectionBlock} ${styles.sectionBlockNoPaddingTop}`}>
           <div className={styles.sectionHeader}>
             <div>
               <div className={styles.eyebrow}>Daily Live Recruitment Feed • Updated Today</div>
@@ -908,18 +954,22 @@ export default function HomePageView({
 
                 <div className={styles.jobDetailsRow}>
                   <span className={styles.jobPill}>
-                    <span className="material-symbols-outlined" style={{ fontSize: 13 }}>groups</span>
+                    <span className={`material-symbols-outlined ${styles.icon13}`}>groups</span>
                     {job.vacancies}
                   </span>
                   <span className={styles.jobPill}>
-                    <span className="material-symbols-outlined" style={{ fontSize: 13 }}>school</span>
+                    <span className={`material-symbols-outlined ${styles.icon13}`}>school</span>
                     {job.qualification}
                   </span>
                 </div>
 
                 <div className={styles.jobBottomRow}>
-                  <span className={styles.jobDeadline}>Last Date: {job.deadline}</span>
-                  <Link href={`/jobs/${job.slug}`} className={styles.applyDirectBtn}>
+                  <span className={styles.jobDeadline}>Last Date: <time>{job.deadline}</time></span>
+                  <Link
+                    href={`/jobs/${job.slug}`}
+                    className={styles.applyDirectBtn}
+                    aria-label={`Apply direct for ${job.title}`}
+                  >
                     Apply Direct ↗
                   </Link>
                 </div>
@@ -927,8 +977,8 @@ export default function HomePageView({
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: 24 }}>
-            <Link href="/jobs" className={styles.ctaPrimary} style={{ padding: '10px 24px', fontSize: 14 }}>
+          <div className={styles.centerCtaWrap}>
+            <Link href="/jobs" className={`${styles.ctaPrimary} ${styles.ctaPrimaryCompact}`}>
               View All Jobs, Results & More →
             </Link>
           </div>
@@ -941,12 +991,12 @@ export default function HomePageView({
             {/* Left Column: Description & Feature Bullets */}
             <div>
               <div className={styles.eyebrow}>AI Rank & Score Suite • 2026 Edition</div>
-              <h2 className={styles.sectionTitle} style={{ fontSize: 24, marginBottom: 12 }}>
+              <h2 className={`${styles.sectionTitle} ${styles.sectionTitleLarge}`}>
                 {isMarathi
                   ? 'अंदाजावर विसंबून राहू नका. अचूक विश्लेषणासह निकाल तपासा.'
                   : 'Stop Guessing Your Rank. Prepare with Algorithmic Precision.'}
               </h2>
-              <p className={styles.sectionSubtitle} style={{ marginBottom: 20, lineHeight: 1.6 }}>
+              <p className={`${styles.sectionSubtitle} ${styles.sectionSubtitleSpaced}`}>
                 {isMarathi
                   ? 'TCS व MPSC च्या मागील १० वर्षांच्या नॉर्मलायझेशन अल्गोरिदमच्या आधारे तुमचा अधिकृत निकालापूर्वीचा अचूक पर्सेन्टाइल, शिफ्ट रँक आणि प्रवर्गनिहाय मेरिट गुण मिळवा.'
                   : 'ExamUdaan ingests machine learning models trained on 10 years of normalization patterns across TCS-administered government exams to reveal your exact percentile, rank, and merit raw score before official results.'}
@@ -954,7 +1004,7 @@ export default function HomePageView({
 
               <div className={styles.rankFeatureItem}>
                 <div className={styles.rankFeatureIcon}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>timeline</span>
+                  <span className={`material-symbols-outlined ${styles.icon18}`}>timeline</span>
                 </div>
                 <div className={styles.rankFeatureText}>
                   <strong>Dynamic Shift Normalization Engine</strong>
@@ -964,7 +1014,7 @@ export default function HomePageView({
 
               <div className={styles.rankFeatureItem}>
                 <div className={styles.rankFeatureIcon}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>tune</span>
+                  <span className={`material-symbols-outlined ${styles.icon18}`}>tune</span>
                 </div>
                 <div className={styles.rankFeatureText}>
                   <strong>Mean-Typical Shift Timetable</strong>
@@ -974,7 +1024,7 @@ export default function HomePageView({
 
               <div className={styles.rankFeatureItem}>
                 <div className={styles.rankFeatureIcon}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>local_police</span>
+                  <span className={`material-symbols-outlined ${styles.icon18}`}>local_police</span>
                 </div>
                 <div className={styles.rankFeatureText}>
                   <strong>Composite Police Merit Forecaster</strong>
@@ -982,7 +1032,7 @@ export default function HomePageView({
                 </div>
               </div>
 
-              <div style={{ marginTop: 22 }}>
+              <div className={styles.toolsMarginTop}>
                 <Link href="/score-calculator" className={styles.ctaPrimary}>
                   Launch Answer Key Rank Calc ↗
                 </Link>
@@ -993,9 +1043,9 @@ export default function HomePageView({
             <div>
               <div className={styles.analyzerWidget}>
                 <div className={styles.widgetHeader}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <span className="material-symbols-outlined" style={{ color: 'var(--primary)', fontSize: 18 }}>calculate</span>
-                    <strong style={{ fontSize: 14 }}>TCS / MPSC Response Key Analyzer</strong>
+                  <div className={styles.scoreHeaderRow}>
+                    <span className={`material-symbols-outlined ${styles.iconPrimary18}`}>calculate</span>
+                    <strong className={styles.scoreTitleText}>TCS / MPSC Response Key Analyzer</strong>
                   </div>
                   <span className={styles.widgetBadge}>Live Calculator</span>
                 </div>
@@ -1032,18 +1082,18 @@ export default function HomePageView({
 
                 <div className={styles.scoreResultCard}>
                   <div className={styles.scoreResultTop}>
-                    <span style={{ fontSize: 12, color: 'var(--secondary)', fontWeight: 600 }}>Overall Predicted Score:</span>
+                    <span className={styles.scorePercentileLabel}>Overall Predicted Score:</span>
                     <span className={styles.scoreValue}>{calculatedScore.score}</span>
                   </div>
 
                   {/* Progress bar */}
-                  <div style={{ height: 6, background: '#E2E8F0', borderRadius: 999, margin: '10px 0 8px', overflow: 'hidden' }}>
-                    <div style={{ width: '92%', height: '100%', background: 'linear-gradient(90deg, #16A34A 0%, #22C55E 100%)' }} />
+                  <div className={styles.scoreProgressBarTrack}>
+                    <div className={styles.scoreProgressBarFill} />
                   </div>
 
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: 'var(--secondary)' }}>
-                    <span>Overall Percentile: <strong style={{ color: '#16A34A' }}>{calculatedScore.percentile}</strong></span>
-                    <span>Shift Rank: <strong style={{ color: 'var(--primary)' }}>{calculatedScore.rank}</strong></span>
+                  <div className={styles.scoreStatsRow}>
+                    <span>Overall Percentile: <strong className={styles.scoreHighlightGreen}>{calculatedScore.percentile}</strong></span>
+                    <span>Shift Rank: <strong className={styles.scoreHighlightPrimary}>{calculatedScore.rank}</strong></span>
                   </div>
                 </div>
 
@@ -1083,20 +1133,20 @@ export default function HomePageView({
             {/* Card 1: 5-Min MCQ Drill */}
             <div className={styles.boosterCard}>
               <div className={styles.boosterCardTop}>
-                <span className={styles.suiteBadge} style={{ background: '#FFF7ED', color: '#EA580C', borderColor: '#FED7AA' }}>
+                <span className={`${styles.suiteBadge} ${styles.suiteBadgeOrange}`}>
                   Daily 5-Min Drill
                 </span>
-                <span style={{ fontSize: 11, color: 'var(--secondary)' }}>10 Questions • 5 Mins</span>
+                <span className={styles.suiteMetaText}>10 Questions • 5 Mins</span>
               </div>
               <h3 className={styles.boosterTitle}>
                 10 Questions on MPSC & Police Bharti Current Events
               </h3>
-              <p style={{ fontSize: 12, color: 'var(--secondary)', lineHeight: 1.45, marginBottom: 16 }}>
+              <p className={styles.suiteDescText}>
                 <strong>Sample Question:</strong> Which state government department notified the revised quota and physical merit structure for 2026?
               </p>
               <div className={styles.boosterActionRow}>
                 <Link href="/daily-quiz" className={styles.boosterBtn}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>play_arrow</span>
+                  <span className={`material-symbols-outlined ${styles.icon16}`}>play_arrow</span>
                   Start 5-Minute Quiz Now
                 </Link>
               </div>
@@ -1105,10 +1155,10 @@ export default function HomePageView({
             {/* Card 2: Daily Current Affairs Bullet Points */}
             <div className={styles.boosterCard}>
               <div className={styles.boosterCardTop}>
-                <span className={styles.suiteBadge} style={{ background: '#ECFDF5', color: '#065F46', borderColor: '#A7F3D0' }}>
+                <span className={`${styles.suiteBadge} ${styles.suiteBadgeGreen}`}>
                   Daily 02 Oct 2026
                 </span>
-                <span style={{ fontSize: 11, color: 'var(--secondary)' }}>5 Min Read • PDF Ready</span>
+                <span className={styles.suiteMetaText}>5 Min Read • PDF Ready</span>
               </div>
               <h3 className={styles.boosterTitle}>
                 Daily Current Affairs Bullet Points
@@ -1128,11 +1178,11 @@ export default function HomePageView({
                 </li>
               </ul>
               <div className={styles.boosterActionRow}>
-                <Link href="/current-affairs" className={styles.boosterBtn} style={{ flex: 1.4 }}>
+                <Link href="/current-affairs" className={`${styles.boosterBtn} ${styles.boosterBtnFlex}`}>
                   Read More →
                 </Link>
                 <Link href="/current-affairs" className={styles.boosterBtnOutline}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>download</span>
+                  <span className={`material-symbols-outlined ${styles.icon16}`}>download</span>
                   PDF
                 </Link>
               </div>
@@ -1141,35 +1191,25 @@ export default function HomePageView({
             {/* Card 3: Video Masterclass */}
             <div className={styles.boosterCard}>
               <div className={styles.boosterCardTop}>
-                <span className={styles.suiteBadge} style={{ background: '#FEF2F2', color: '#DC2626', borderColor: '#FECACA' }}>
+                <span className={`${styles.suiteBadge} ${styles.suiteBadgeRed}`}>
                   Video Masterclass
                 </span>
-                <span style={{ fontSize: 11, color: 'var(--secondary)' }}>Free YouTube Lecture</span>
+                <span className={styles.suiteMetaText}>Free YouTube Lecture</span>
               </div>
               <h3 className={styles.boosterTitle}>
                 MPSC & Police Bharti Reasoning Marathon
               </h3>
-              <div style={{
-                position: 'relative',
-                borderRadius: 8,
-                overflow: 'hidden',
-                background: '#1C1917',
-                height: 110,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: 14,
-              }}>
-                <span className="material-symbols-outlined" style={{ fontSize: 44, color: '#EA580C', opacity: 0.9 }}>
+              <div className={styles.youtubePreviewBox}>
+                <span className={`material-symbols-outlined ${styles.iconYoutubeLarge}`}>
                   play_circle
                 </span>
-                <span style={{ position: 'absolute', bottom: 6, left: 8, fontSize: 10, color: '#ffffff', background: 'rgba(0,0,0,0.6)', padding: '1px 5px', borderRadius: 4 }}>
+                <span className={styles.youtubeVideoBadge}>
                   1 hr 45 min • High-Yield
                 </span>
               </div>
               <div className={styles.boosterActionRow}>
-                <Link href="/youtube" className={styles.boosterBtn} style={{ background: '#DC2626' }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>play_circle</span>
+                <Link href="/youtube" className={`${styles.boosterBtn} ${styles.boosterBtnYoutube}`}>
+                  <span className={`material-symbols-outlined ${styles.icon16}`}>play_circle</span>
                   Watch Free Session
                 </Link>
               </div>
@@ -1198,6 +1238,7 @@ export default function HomePageView({
               rel="noopener noreferrer"
               className={styles.bannerBtnBlue}
               title="Join Telegram Channel"
+              onClick={() => trackSocialCommunity('telegram', 'https://t.me/examudaanjobs', 'homepage_prefooter')}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
@@ -1212,12 +1253,17 @@ export default function HomePageView({
               rel="noopener noreferrer"
               className={styles.bannerBtnGreen}
               title="Follow WhatsApp Channel"
+              onClick={() => trackSocialCommunity('whatsapp', 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v', 'homepage_prefooter')}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chat</span>
+              <span className={`material-symbols-outlined ${styles.icon18}`}>chat</span>
               <span>{isMarathi ? 'WhatsApp चॅनेल' : 'WhatsApp'}</span>
             </a>
 
-            <Link href="/jobs" className={styles.bannerBtnLight}>
+            <Link
+              href="/jobs"
+              className={styles.bannerBtnLight}
+              onClick={() => trackCtaClick('Explore Free Content', '/jobs', 'homepage_prefooter')}
+            >
               Explore Free Content
             </Link>
           </div>

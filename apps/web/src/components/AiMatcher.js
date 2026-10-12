@@ -8,6 +8,7 @@
 import { useState, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLanguage } from '../context/LanguageContext'
+import { trackCtaClick } from '../lib/analytics'
 
 const QUALIFICATIONS = [
   { value: 'Graduate', label: 'Graduate (B.A, B.Sc, B.Com, etc.)', count: 52 },
@@ -132,8 +133,11 @@ export default function AiMatcher() {
     if (qual) params.set('qualification', qual)
     if (district && district !== 'All Maharashtra') params.set('state', district)
     
+    const targetUrl = `/jobs?${params.toString()}`
+    trackCtaClick(`AI Matcher: Find Eligible Jobs (${qual || 'All'}, Age ${age}, ${cat})`, targetUrl, 'homepage_ai_matcher')
+
     // Push to /jobs with active filters
-    router.push(`/jobs?${params.toString()}`)
+    router.push(targetUrl)
   }
 
   const handleAiPromptSubmit = (e) => {

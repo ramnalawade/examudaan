@@ -6,6 +6,7 @@
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
 import { formatTitle } from '../lib/formatTitle'
+import { trackCtaClick } from '../lib/analytics'
 import SaveJobButton from './SaveJobButton'
 
 const ICON_MAP = {
@@ -136,36 +137,33 @@ export default function JobCard({ job }) {
   const isFresh = !isClosed && !isUrgent && daysAgo !== null && daysAgo <= 3
 
   let urgencyLabel = null
-  let urgencyStyle = undefined
+  let urgencyClass = ''
 
   if (isClosed) {
     urgencyLabel = isMr ? 'अर्ज बंद' : 'CLOSED'
-    urgencyStyle = {
-      background: 'var(--surface-container-high)',
-      color: 'var(--secondary)',
-    }
+    urgencyClass = 'urgency-badge-closed'
   } else if (isUrgent) {
     if (daysLeft === 0) {
       urgencyLabel = isMr ? 'आज शेवटचा दिवस' : 'CLOSING TODAY'
-      urgencyStyle = { background: '#FEE2E2', color: '#DC2626', border: '1px solid #FECACA' }
+      urgencyClass = 'urgency-badge-urgent-0'
     } else if (daysLeft === 1) {
       urgencyLabel = isMr ? 'उद्या शेवटचा दिवस' : 'ENDS TOMORROW'
-      urgencyStyle = { background: '#FEF3C7', color: '#B45309', border: '1px solid #FDE68A' }
+      urgencyClass = 'urgency-badge-urgent'
     } else if (daysLeft > 1) {
       urgencyLabel = isMr ? `${daysLeft} दिवस शिल्लक` : `${daysLeft} DAYS LEFT`
-      urgencyStyle = { background: '#FEF3C7', color: '#B45309', border: '1px solid #FDE68A' }
+      urgencyClass = 'urgency-badge-urgent'
     }
   } else if (isFresh) {
     if (daysAgo === 0) {
       urgencyLabel = isMr ? 'नवीन (आज)' : 'NEW TODAY'
-      urgencyStyle = { background: '#ECFDF5', color: '#047857', border: '1px solid #A7F3D0' }
+      urgencyClass = 'urgency-badge-fresh-today'
     } else {
       urgencyLabel = isMr ? 'नवीन' : 'NEW'
-      urgencyStyle = { background: '#FFF7ED', color: '#EA580C', border: '1px solid #FED7AA' }
+      urgencyClass = 'urgency-badge-fresh'
     }
   } else if (isWalkIn) {
     urgencyLabel = isMr ? 'थेट मुलाखत' : 'WALK-IN'
-    urgencyStyle = { background: '#F5F3FF', color: '#7C3AED', border: '1px solid #DDD6FE' }
+    urgencyClass = 'urgency-badge-walkin'
   }
 
   const MR_TYPE_LABEL = {
@@ -224,44 +222,22 @@ export default function JobCard({ job }) {
     <Link
       href={detailUrl}
       className="job-card group"
-      style={{ display: 'flex', flexDirection: 'column', gap: '12px', height: '100%' }}
+      onClick={() => trackCtaClick(`View Job Card: ${title}`, detailUrl, 'job_card')}
     >
       {/* Card Header: Icon + Title + Dept */}
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+      <div className="job-card-header">
         <div className="job-card-icon">
           <span className="material-symbols-outlined">{icon}</span>
         </div>
-        <div style={{ flex: 1, minWidth: 0 }}>
+        <div className="job-card-content">
           {/* Metadata Row: Badges (Type + Urgency) on left, Bookmark Save Button on right */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px', gap: '8px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
-              <span style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '4px',
-                padding: '2.5px 8px',
-                borderRadius: '999px',
-                fontSize: 11,
-                fontWeight: 700,
-                letterSpacing: '0.03em',
-                background: typeBadge.bg,
-                color: typeBadge.color,
-                textTransform: 'uppercase',
-              }}>
+          <div className="job-card-meta-row">
+            <div className="job-card-badges">
+              <span className={`job-card-type-badge badge-type-${notification_type || 'other'}`}>
                 {badgeText}
               </span>
               {urgencyLabel && (
-                <span style={{
-                  ...urgencyStyle,
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  padding: '2.5px 8px',
-                  borderRadius: '999px',
-                  fontSize: 10.5,
-                  fontWeight: 700,
-                  letterSpacing: '0.04em',
-                  textTransform: 'uppercase',
-                }}>
+                <span className={`job-card-urgency-badge ${urgencyClass}`}>
                   {urgencyLabel}
                 </span>
               )}
@@ -272,7 +248,7 @@ export default function JobCard({ job }) {
                   e.preventDefault()
                   e.stopPropagation()
                 }}
-                style={{ flexShrink: 0 }}
+                className="job-card-save-wrap"
               >
                 <SaveJobButton
                   notificationId={id}
@@ -285,7 +261,7 @@ export default function JobCard({ job }) {
           </div>
           <h3 className="job-card-title">{displayTitle}</h3>
           {secondaryTitle && (
-            <p style={{ fontSize: 13, color: isMr ? 'var(--secondary)' : 'var(--primary)', fontWeight: isMr ? 400 : 600, marginTop: '2px', lineHeight: 1.3 }}>
+            <p className={`job-card-secondary-title ${isMr ? 'mr-secondary' : 'en-secondary'}`}>
               {secondaryTitle}
             </p>
           )}
@@ -296,7 +272,7 @@ export default function JobCard({ job }) {
       </div>
 
       {/* Meta Details */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', flex: 1 }}>
+      <div className="job-card-details">
         {location && (
           <div className="job-card-meta">
             <span className="material-symbols-outlined">location_on</span>
@@ -322,8 +298,8 @@ export default function JobCard({ job }) {
           </div>
         )}
         {formatPostedDate() && (
-          <div className="job-card-meta" style={{ color: daysAgo === 0 ? '#059669' : 'var(--on-surface-variant)', fontWeight: daysAgo === 0 ? 600 : 400 }}>
-            <span className="material-symbols-outlined" style={{ fontSize: 15, color: daysAgo === 0 ? '#059669' : 'var(--secondary)' }}>schedule</span>
+          <div className={`job-card-meta job-card-meta-posted${daysAgo === 0 ? ' posted-today' : ''}`}>
+            <span className="material-symbols-outlined">schedule</span>
             <span>{formatPostedDate()}</span>
           </div>
         )}
@@ -339,8 +315,7 @@ export default function JobCard({ job }) {
              notification_type === 'answer_key'  ? (isMr ? 'उत्तरतालिका प्रसिद्ध' : 'Released') :
              (isMr ? 'अंतिम दिनांक' : 'Deadline')}
           </div>
-          <div className={`deadline-value${isUrgent ? '' : ' safe'}`}
-               style={isClosed ? { color: 'var(--secondary)' } : undefined}>
+          <div className={`deadline-value${isClosed ? ' closed' : isUrgent ? '' : ' safe'}`}>
             {isClosed
               ? (isMr ? 'मुदत संपली' : 'Closed')
               : effectiveDeadline
@@ -349,8 +324,7 @@ export default function JobCard({ job }) {
           </div>
         </div>
         <button
-          className="btn-outline"
-          style={{ fontSize: 13, padding: '6px 14px' }}
+          className="btn-outline job-card-cta"
           tabIndex={-1}
           aria-hidden="true"
         >

@@ -4,7 +4,8 @@
 // Pure client component — no DB, no API needed.
 // ============================================================
 'use client'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { trackCalculatorUse } from '../../lib/analytics'
 import styles from './salary.module.css'
 
 // ── Salary Data ──────────────────────────────────────────────
@@ -72,6 +73,22 @@ export default function SalaryCalculatorPage() {
     setCityClass(cls)
     setCity(CITY_CLASSES[cls][0])
   }
+
+  // Track salary calculator usage on interaction
+  const userInteracted = useRef(false)
+  useEffect(() => {
+    if (!userInteracted.current) {
+      userInteracted.current = true
+      return
+    }
+    const timer = setTimeout(() => {
+      trackCalculatorUse({
+        calculator_type: 'govt_salary',
+        exam_name: selectedPost?.label || 'Govt Salary Post',
+      })
+    }, 800)
+    return () => clearTimeout(timer)
+  }, [selectedPost, cityClass, city])
 
   return (
     <main className={styles.calculatorPage}>

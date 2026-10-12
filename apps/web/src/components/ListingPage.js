@@ -18,6 +18,7 @@ import Link from 'next/link'
 import JobCard from './JobCard'
 import { LoadMore } from './Pagination'
 import { useLanguage } from '../context/LanguageContext'
+import { trackJobFilterApply, trackJobSearch } from '../lib/analytics'
 import { formatTitle } from '../lib/formatTitle'
 
 // ── Category tabs shown at top of every listing page ──────────
@@ -192,6 +193,9 @@ function ListingPageInner({
   subtitle,
   headerIcon = 'work',
   accentColor,
+  initialOrgs = [],
+  initialSort = '',
+  initialGovtLevel = '',
 }) {
   const { lang, t, isMarathi } = useLanguage()
   const searchParams = useSearchParams()
@@ -202,14 +206,14 @@ function ListingPageInner({
 
   // ── Filters ───────────────────────────────────────────────
   const [search, setSearch] = useState('')
-  const [selOrgs, setSelOrgs] = useState([])  // multi-select org
+  const [selOrgs, setSelOrgs] = useState(initialOrgs)  // multi-select org
   const [selQual, setSelQual] = useState('')
   const [selState, setSelState] = useState('')
   const [selCity, setSelCity] = useState('')
   const [selSalary, setSelSalary] = useState('')
-  const [selGovtLevel, setSelGovtLevel] = useState('')  // Central|State|PSU|Local
+  const [selGovtLevel, setSelGovtLevel] = useState(initialGovtLevel)  // Central|State|PSU|Local
   const [selVacancies, setSelVacancies] = useState('')  // min_vacancies filter
-  const [sort, setSort] = useState('latest')
+  const [sort, setSort] = useState(initialSort || 'latest')
   const [statusFilter, setStatusFilter] = useState('published') // 'published' (Active) | 'closed' (On Demand) | 'all' (All)
 
   // Sync incoming search params on mount
@@ -306,8 +310,14 @@ function ListingPageInner({
 
   // Re-fetch when filters change (reset to page 1)
   const searchTimer = useRef(null)
+  const isInitialListingSearch = useRef(true)
   useEffect(() => {
     clearTimeout(searchTimer.current)
+    if (!isInitialListingSearch.current && search.trim()) {
+      trackJobSearch({ search_term: search })
+    } else {
+      isInitialListingSearch.current = false
+    }
     searchTimer.current = setTimeout(() => fetchItems(true), search ? 350 : 0)
     return () => clearTimeout(searchTimer.current)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -491,6 +501,7 @@ function ListingPageInner({
               key={chip.label}
               type="button"
               onClick={() => {
+                trackJobFilterApply({ filter_type: chip.type, filter_value: chip.value })
                 if (chip.type === 'state') setSelState(prev => prev === chip.value ? '' : chip.value)
                 if (chip.type === 'govt_level') setSelGovtLevel(prev => prev === chip.value ? '' : chip.value)
                 if (chip.type === 'city') setSelCity(prev => prev === chip.value ? '' : chip.value)

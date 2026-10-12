@@ -1,4 +1,4 @@
-﻿# ============================================================
+# ============================================================
 # spiders/state_psc_base.py — Shared base class for State PSC spiders
 # ExamUdaan | Inherit this to create a new state PSC spider in ~20 lines
 #
@@ -64,7 +64,11 @@ class StatePSCSpider(DuplicateStopMixin, scrapy.Spider):
 
             # Direct PDF — yield immediately without following
             if url.lower().endswith(".pdf"):
-                item = self._make_item(title, url)
+                dedup_hash = hashlib.sha256(f"{self.org_acronym}_{url}".encode()).hexdigest()
+                if self.track_duplicate(dedup_hash, label=title, urls=[url]):
+                    continue
+                item = self._make_item(title, url, dedup_hash=dedup_hash)
+                item["notification_pdf"] = url
                 item["notification_pdf_url"] = url
                 yield item
                 continue
@@ -100,7 +104,9 @@ class StatePSCSpider(DuplicateStopMixin, scrapy.Spider):
         # Grab first PDF link on page
         pdf = response.css("a[href$='.pdf']::attr(href)").get()
         if pdf:
-            item["notification_pdf_url"] = response.urljoin(pdf)
+            pdf_url = response.urljoin(pdf)
+            item["notification_pdf"] = pdf_url
+            item["notification_pdf_url"] = pdf_url
 
         # Try to extract vacancy count and closing date from page text
         page_text = " ".join(response.css("*::text").getall())

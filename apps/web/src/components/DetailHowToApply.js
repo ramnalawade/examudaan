@@ -66,22 +66,22 @@ export default function DetailHowToApply({
 
   return (
     <div>
-      <ol style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10, margin: 0 }}>
+      <ol className="how-to-apply-list">
         {steps.map((step, i) => (
-          <li key={i} style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.6 }}>
+          <li key={i} className="how-to-apply-item">
             {step}
           </li>
         ))}
       </ol>
 
       {requiredDocs && requiredDocs.length > 0 && (
-        <div style={{ marginTop: 16 }}>
-          <h3 style={{ fontSize: 14, fontWeight: 600, color: 'var(--on-surface)', marginBottom: 8 }}>
+        <div className="how-to-apply-docs">
+          <h3 className="how-to-apply-docs-title">
             {isMarathi ? 'आवश्यक कागदपत्रे:' : 'Required Documents:'}
           </h3>
-          <ul style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <ul className="how-to-apply-docs-list">
             {requiredDocs.map((doc, i) => (
-              <li key={i} style={{ fontSize: 13, color: 'var(--secondary)', lineHeight: 1.5 }}>
+              <li key={i} className="how-to-apply-doc-item">
                 {doc}
               </li>
             ))}

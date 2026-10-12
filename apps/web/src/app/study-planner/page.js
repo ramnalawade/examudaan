@@ -5,8 +5,13 @@
 // ============================================================
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import Link from 'next/link'
+import {
+  trackStudyPlannerGenerate,
+  trackPlannerDayComplete,
+  trackPlannerTaskClick,
+} from '@/lib/analytics'
 import styles from './studyPlanner.module.css'
 
 // Comprehensive real syllabus modules for Maharashtra & National Exams
@@ -324,10 +329,48 @@ export default function StudyPlannerPage() {
     }
   }, [selectedExamId, durationDays])
 
-  // Save progress
+  // Lock body scroll and allow ESC key when Practice Modal is active
+  useEffect(() => {
+    if (!practiceModalOpen) return
+    const origOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setPracticeModalOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = origOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [practiceModalOpen])
+
+  // Track plan generation / recalibration
+  const isFirstPlanLoad = useRef(true)
+  useEffect(() => {
+    if (isFirstPlanLoad.current) {
+      isFirstPlanLoad.current = false
+      return
+    }
+    trackStudyPlannerGenerate({
+      target_exam: selectedExam?.name || selectedExamId,
+      plan_duration_days: durationDays,
+      study_hours_per_day: dailyHours,
+    })
+  }, [selectedExamId, durationDays, dailyHours, selectedExam?.name])
+
+  // Save progress & track day completion
   const toggleDayComplete = (dayNum) => {
     setCompletedDays((prev) => {
-      const next = { ...prev, [dayNum]: !prev[dayNum] }
+      const willBeDone = !prev[dayNum]
+      if (willBeDone) {
+        trackPlannerDayComplete({
+          plan_id: selectedExamId,
+          day_number: dayNum,
+        })
+      }
+      const next = { ...prev, [dayNum]: willBeDone }
       if (!next[dayNum]) delete next[dayNum]
       if (typeof window !== 'undefined') {
         try {
@@ -403,6 +446,7 @@ export default function StudyPlannerPage() {
 
   // Open In-Page Interactive Practice Drawer
   const handleOpenPracticeModal = async (dayNum, pyqQuery, topicTitle) => {
+    trackPlannerTaskClick({ plan_id: selectedExamId, task_type: 'PYQ_Practice' })
     setPracticeDayNum(dayNum)
     setPracticeTopic(topicTitle || pyqQuery)
     setPracticeModalOpen(true)
@@ -797,6 +841,7 @@ export default function StudyPlannerPage() {
                                 <Link
                                   href={`/syllabus/${selectedExam.id}`}
                                   className={styles.slotLink}
+                                  onClick={() => trackPlannerTaskClick({ plan_id: selectedExamId, task_type: 'Checklist' })}
                                 >
                                   Checklist →
                                 </Link>
@@ -833,6 +878,7 @@ export default function StudyPlannerPage() {
                                 <Link
                                   href={`/pyq?q=${encodeURIComponent(item.pyqQuery || item.topic)}`}
                                   className={styles.slotLink}
+                                  onClick={() => trackPlannerTaskClick({ plan_id: selectedExamId, task_type: 'PYQ_Search' })}
                                 >
                                   Search All →
                                 </Link>
@@ -976,7 +1022,7 @@ export default function StudyPlannerPage() {
                   )
                 })}
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12 }}>
+                <div className={styles.modalFooterActions}>
                   <button
                     type="button"
                     className="btn-primary"
@@ -986,6 +1032,14 @@ export default function StudyPlannerPage() {
                     }}
                   >
                     ✓ हे लक्ष्य पूर्ण म्हणून मार्क करा
+                  </button>
+
+                  <button
+                    type="button"
+                    className="btn-outline"
+                    onClick={() => setPracticeModalOpen(false)}
+                  >
+                    बंद करा (Close)
                   </button>
 
                   <Link

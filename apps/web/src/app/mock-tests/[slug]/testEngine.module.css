@@ -756,6 +756,127 @@
   border-top: 1px solid var(--outline-variant);
 }
 
+/* ── Result & Breakdown Classes (Zero Inline Styles) ────────── */
+.rankMetaGroup {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.stateRankText {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.cutoffVerifiedIcon {
+  color: #0284c7;
+}
+
+.cutoffStatusIcon {
+  font-size: 13px;
+}
+
+.sectionBreakdownCard {
+  margin: 0 36px 24px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  overflow-x: auto;
+}
+
+.sectionBreakdownTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.secName {
+  font-weight: 600;
+}
+
+.secCorrect {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.secWrong {
+  color: #dc2626;
+}
+
+.secEarned {
+  font-weight: 700;
+}
+
+.secAccuracyBadge {
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.secAccuracyHigh {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.secAccuracyMid {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.secAccuracyLow {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.sectionHeaderMeta {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.marksPill {
+  font-size: 12px;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.cbtNavGroup {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.cbtNavBtn {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.sidebarHeaderFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sidebarHeaderTitle {
+  margin: 0;
+}
+
+.sectionFilterSelect {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
 /* ── Mobile ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .testLayout { grid-template-columns: 1fr; }
@@ -769,4 +890,6 @@
   .topBar { padding: 10px 16px; }
   .topTitle { display: none; }
   .resultCard { margin: 16px; border-radius: 16px; }
+  .sectionBreakdownCard { margin: 0 16px 20px; padding: 14px 12px; }
 }
+

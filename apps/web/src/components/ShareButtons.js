@@ -1,6 +1,7 @@
 'use client'
 
 import { SITE_CONFIG } from '../lib/constants'
+import { trackSocialCommunity } from '../lib/analytics'
 
 export default function ShareButtons({ title, boardName, vacancies, applicationEnd, slug }) {
   const jobUrl = `https://examudaan.in/jobs/${slug}`;
@@ -31,6 +32,7 @@ export default function ShareButtons({ title, boardName, vacancies, applicationE
           className="jobdet-shareBtn jobdet-shareBtnWa"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackSocialCommunity('whatsapp_job_share', jobUrl, 'job_detail_share_widget')}
           id="job-detail-whatsapp-share"
           aria-label="Share on WhatsApp"
         >
@@ -41,6 +43,7 @@ export default function ShareButtons({ title, boardName, vacancies, applicationE
           className="jobdet-shareBtn"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackSocialCommunity('telegram_job_share', jobUrl, 'job_detail_share_widget')}
           id="job-detail-telegram-share"
           aria-label="Share on Telegram"
           style={{
@@ -88,6 +91,7 @@ export default function ShareButtons({ title, boardName, vacancies, applicationE
           href={channelUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackSocialCommunity('whatsapp_channel_follow', channelUrl, 'job_detail_share_widget')}
           style={{
             background: '#22c55e',
             color: '#fff',

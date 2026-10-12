@@ -39,20 +39,19 @@ AUTOTHROTTLE_MAX_DELAY = 30          # max 30s delay if server is overloaded
 AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
 AUTOTHROTTLE_DEBUG = False
 
-# ---- Safety limits — prevent spiders crawling 3+ years of history ----
-# Each spider stops after 10 listing/detail pages (not PDFs — those are downloads).
-# Combined with the 3-week date cutoff in pipelines.py, this keeps runs fast.
+# ---- Safety limits — prevent spiders hanging or crawling ancient history ----
 CLOSESPIDER_PAGECOUNT = 10      # stop after 10 pages per spider
 CLOSESPIDER_ITEMCOUNT = 50      # also stop after 50 items saved per spider run
+CLOSESPIDER_TIMEOUT = 180       # max 3 minutes total execution per spider (prevents 11-min hangs)
 
 # ---- Retry on 403/429/5xx (NOT via proxy — just wait and retry) ----
 RETRY_ENABLED = True
-RETRY_TIMES = 4
+RETRY_TIMES = 2                 # max 2 retries (prevents 5x multiplier on dead portals)
 RETRY_HTTP_CODES = [403, 429, 500, 502, 503, 504, 408]
 RETRY_PRIORITY_ADJUST = -1           # retry requests have lower priority
 
 # ---- Download timeout ----
-DOWNLOAD_TIMEOUT = 45                # longer for gov sites (they're slow)
+DOWNLOAD_TIMEOUT = 15                # 15s timeout: if gov server doesn't respond in 15s, move on (was 45s)
 
 # ---- Middlewares: UA rotation + browser headers only ----
 # Proxy rotation REMOVED — it was too slow and unreliable for gov sites
@@ -107,6 +106,10 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 # ---- Logging ----
 LOG_LEVEL = "INFO"
+import logging
+logging.getLogger("pdfminer").setLevel(logging.WARNING)
+logging.getLogger("pdfplumber").setLevel(logging.WARNING)
+
 
 # ============================================================
 # Brevo (Sendinblue) transactional email — crawl summary

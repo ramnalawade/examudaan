@@ -1,0 +1,72 @@
+/* saveJobButton.module.css — Universal Save / Bookmark Button */
+.iconBtn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #E5E7EB;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6B7280;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  z-index: 2;
+  padding: 0;
+}
+
+.iconBtnSm {
+  width: 30px;
+  height: 30px;
+}
+
+.iconBtnSaved {
+  background: #FFF7ED;
+  border-color: #EA580C;
+  color: #EA580C;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.2);
+}
+
+.icon {
+  font-size: 18px;
+  font-variation-settings: 'FILL' 0;
+  color: inherit;
+}
+
+.iconSm {
+  font-size: 16px;
+}
+
+.iconSaved {
+  font-variation-settings: 'FILL' 1;
+  color: #EA580C;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid #D1D5DB;
+  background: #FFFFFF;
+  color: #374151;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+}
+
+.actionBtnSm {
+  padding: 6px 12px;
+  font-size: 12.5px;
+}
+
+.actionBtnSaved {
+  border-color: #EA580C;
+  background: #FFF7ED;
+  color: #EA580C;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.15);
+}

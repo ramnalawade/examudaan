@@ -533,11 +533,13 @@
   inset: 0;
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(4px);
-  z-index: 9999;
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .practiceDrawerCard {
@@ -552,14 +554,20 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .practiceDrawerHeader {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #f1f5f9;
-  padding-bottom: 12px;
+  padding: 4px 0 12px;
+  margin-top: -6px;
 }
 
 .practiceDrawerTitle {
@@ -570,19 +578,63 @@
 }
 
 .practiceCloseBtn {
-  background: transparent;
-  border: none;
-  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 4px;
+  justify-content: center;
+  min-width: 38px;
+  min-height: 38px;
   border-radius: 50%;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
 }
 
 .practiceCloseBtn:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.modalFooterActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .practiceDrawerOverlay {
+    padding: 10px;
+    align-items: flex-end;
+  }
+  .practiceDrawerCard {
+    border-radius: 20px 20px 0 0;
+    max-height: 86vh;
+    padding: 16px 14px 20px;
+    gap: 14px;
+  }
+  .practiceDrawerTitle {
+    font-size: 15.5px;
+  }
+  .modalFooterActions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .modalFooterActions button, .modalFooterActions a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .wizardCard {
+    position: static !important;
+    top: auto !important;
+  }
 }
 
 .modalQuestionCard {

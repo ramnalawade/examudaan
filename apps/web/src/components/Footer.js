@@ -8,19 +8,20 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '../context/LanguageContext'
+import { trackSocialCommunity } from '../lib/analytics'
 import styles from './footer.module.css'
 
 export default function Footer() {
   const { t, isMarathi } = useLanguage()
 
   const TOP_RECRUITMENTS = [
-    { label: isMarathi ? 'MPSC राज्यसेवा २०२६' : 'MPSC State Services 2026', href: '/jobs?org=MPSC' },
-    { label: isMarathi ? 'महाराष्ट्र पोलीस भरती' : 'Maharashtra Police Bharti', href: '/jobs?org=MUMBAI%20POLICE' },
-    { label: isMarathi ? 'रेल्वे भरती (RRB NTPC)' : 'Railway RRB NTPC & Group D', href: '/jobs?org=RRB' },
-    { label: isMarathi ? 'कर्मचारी निवड (SSC CGL & CHSL)' : 'SSC CGL & CHSL Combined', href: '/jobs?org=SSC' },
-    { label: isMarathi ? 'बँक ऑफ बडोदा SO व IBPS' : 'Bank of Baroda SO Specialist', href: '/jobs?org=IBPS,SBI' },
+    { label: isMarathi ? 'MPSC राज्यसेवा २०२६' : 'MPSC State Services 2026', href: '/jobs/org/mpsc' },
+    { label: isMarathi ? 'महाराष्ट्र पोलीस भरती' : 'Maharashtra Police Bharti', href: '/jobs/org/police' },
+    { label: isMarathi ? 'रेल्वे भरती (RRB NTPC)' : 'Railway RRB NTPC & Group D', href: '/jobs/org/rrb' },
+    { label: isMarathi ? 'कर्मचारी निवड (SSC CGL & CHSL)' : 'SSC CGL & CHSL Combined', href: '/jobs/org/ssc' },
+    { label: isMarathi ? 'बँक ऑफ बडोदा SO व IBPS' : 'Bank of Baroda SO Specialist', href: '/jobs/org/banking' },
     { label: isMarathi ? 'थेट मुलाखत भरती (Walk-in)' : 'Walk-in Interview Openings', href: '/walk-in-interviews' },
-    { label: isMarathi ? 'केंद्र सरकार (UPSC, SSC, संरक्षण)' : 'Central (UPSC, SSC, Defence)', href: '/jobs?govt_level=Central' },
+    { label: isMarathi ? 'केंद्र सरकार (UPSC, SSC, संरक्षण)' : 'Central (UPSC, SSC, Defence)', href: '/jobs/central-govt' },
   ]
 
   const QUESTION_PAPERS_KEYS = [
@@ -50,7 +51,7 @@ export default function Footer() {
     { label: isMarathi ? 'वारंवार विचारले जाणारे प्रश्न (FAQ)' : 'Frequently Asked Questions', href: '/faq' },
     { label: isMarathi ? 'टेलिग्राम जॉब अलर्ट नेटवर्क' : 'Telegram Job Alerts Network', href: '/alerts' },
     { label: isMarathi ? '७ वे वेतन आयोग पगार कॅल्क्युलेटर' : '7th CPC Salary Calculator', href: '/salary-calculator' },
-    { label: isMarathi ? 'AI अभ्यास साधने (८४+ टूल्स)' : 'AI Study Tools Directory', href: '/ai-tools' },
+    { label: isMarathi ? 'AI अभ्यास साधने (११४+ टूल्स)' : 'AI Study Tools Directory (114+ Tools)', href: '/ai-tools' },
   ]
 
   return (
@@ -68,7 +69,7 @@ export default function Footer() {
                 alt="ExamUdaan.in"
                 width={150}
                 height={38}
-                style={{ height: 38, width: 'auto', display: 'block' }}
+                className={styles.brandLogo}
               />
             </Link>
             <p className={styles.brandDesc}>
@@ -85,6 +86,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className={styles.tgBtn}
                 title="Join ExamUdaan Telegram Channel"
+                onClick={() => trackSocialCommunity('telegram', 'https://t.me/examudaanjobs', 'footer')}
               >
                 {/* Official Telegram Paper Plane SVG */}
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -100,6 +102,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className={styles.waSecondaryBtn}
                 title="Follow ExamUdaan on WhatsApp"
+                onClick={() => trackSocialCommunity('whatsapp', 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v', 'footer')}
               >
                 {/* WhatsApp SVG */}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -112,9 +115,9 @@ export default function Footer() {
 
           {/* Column 2: Top Recruitments */}
           <div>
-            <h4 className={styles.colTitle}>
+            <h3 className={styles.colTitle}>
               {isMarathi ? 'प्रमुख भरती जाहिराती' : 'TOP RECRUITMENTS'}
-            </h4>
+            </h3>
             <ul className={styles.linkList}>
               {TOP_RECRUITMENTS.map((item, idx) => (
                 <li key={idx}>
@@ -128,9 +131,9 @@ export default function Footer() {
 
           {/* Column 3: Question Papers & Answer Keys */}
           <div>
-            <h4 className={styles.colTitle}>
+            <h3 className={styles.colTitle}>
               {isMarathi ? 'प्रश्नपत्रिका व उत्तरतालिका' : 'PAPERS & ANSWER KEYS'}
-            </h4>
+            </h3>
             <ul className={styles.linkList}>
               {QUESTION_PAPERS_KEYS.map((item, idx) => (
                 <li key={idx}>
@@ -144,9 +147,9 @@ export default function Footer() {
 
           {/* Column 4: Preparation & Current Affairs */}
           <div>
-            <h4 className={styles.colTitle}>
+            <h3 className={styles.colTitle}>
               {isMarathi ? 'तयारी व चालू घडामोडी' : 'PREPARATION & CA'}
-            </h4>
+            </h3>
             <ul className={styles.linkList}>
               {PREP_STUDY.map((item, idx) => (
                 <li key={idx}>
@@ -160,9 +163,9 @@ export default function Footer() {
 
           {/* Column 5: Portal & Helpdesk */}
           <div>
-            <h4 className={styles.colTitle}>
+            <h3 className={styles.colTitle}>
               {isMarathi ? 'पोर्टल व मदत केंद्र' : 'PORTAL & HELPDESK'}
-            </h4>
+            </h3>
             <ul className={styles.linkList}>
               {PORTAL_HELPDESK.map((item, idx) => (
                 <li key={idx}>

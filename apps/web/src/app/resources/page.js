@@ -78,10 +78,10 @@ const QUICK_LINKS = [
   {
     icon: 'smart_toy',
     title: 'AI Tools for Study',
-    desc: '84+ curated AI tools — NotebookLM, Claude, Gamma, Perplexity — each with a step-by-step how-to guide.',
+    desc: '114+ curated AI tools — NotebookLM, Claude, Gamma, Perplexity, Knowt — each with a step-by-step how-to guide.',
     href: '/ai-tools',
-    cta: 'Explore 84 AI Tools',
-    badge: '84 Free & Pro Tools',
+    cta: 'Explore 114 AI Tools',
+    badge: '114 Free & Pro Tools',
     bg: 'var(--primary)',
   },
   {

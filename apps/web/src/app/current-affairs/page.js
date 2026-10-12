@@ -48,29 +48,37 @@ function cleanDisplay(str) {
 export default function CurrentAffairsPage() {
   const [items, setItems] = useState(CURRENT_AFFAIRS)
   const [isLiveConnected, setIsLiveConnected] = useState(false)
+  const [isRefreshing, setIsRefreshing] = useState(false)
+  const [lastUpdated, setLastUpdated] = useState(null)
   const [activeCategory, setActiveCategory] = useState('All')
   const [activeExam, setActiveExam] = useState('All')
   const [search, setSearch] = useState('')
 
-  // ── Ingest live Govt & PIB feeds asynchronously on mount ────
-  useEffect(() => {
-    let active = true
-    async function fetchLiveUpdates() {
-      try {
-        const res = await fetch('/api/current-affairs?limit=100')
-        if (res.ok) {
-          const data = await res.json()
-          if (active && data.items && data.items.length > 0) {
-            setItems(data.items)
-            setIsLiveConnected(true)
-          }
+  async function loadFeeds(forceFresh = false) {
+    try {
+      if (forceFresh) setIsRefreshing(true)
+      const url = forceFresh
+        ? `/api/current-affairs?limit=100&fresh=true&_t=${Date.now()}`
+        : '/api/current-affairs?limit=100'
+      const res = await fetch(url)
+      if (res.ok) {
+        const data = await res.json()
+        if (data.items && data.items.length > 0) {
+          setItems(data.items)
+          setIsLiveConnected(true)
+          setLastUpdated(new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }))
         }
-      } catch (err) {
-        // Fallback to initial CURRENT_AFFAIRS gracefully
       }
+    } catch (err) {
+      // Fallback to initial CURRENT_AFFAIRS gracefully
+    } finally {
+      setIsRefreshing(false)
     }
-    fetchLiveUpdates()
-    return () => { active = false }
+  }
+
+  // ── Ingest live Govt, Media & PIB feeds asynchronously on mount ────
+  useEffect(() => {
+    loadFeeds(false)
   }, [])
 
   const PAGE_SIZE = 12
@@ -173,14 +181,28 @@ export default function CurrentAffairsPage() {
       <section className={styles.hero}>
         <div className="container">
           <div className={styles.heroContent}>
-            <div style={{ display: 'flex', gap: 8, justifyContent: 'center', alignItems: 'center', marginBottom: 16 }}>
+            <div className={styles.heroHeaderRow}>
               <span className={styles.heroLabel}>📰 Daily Updates</span>
               {isLiveConnected && (
                 <span className={styles.liveBadge}>
-                  <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', display: 'inline-block' }} />
-                  Live Govt RSS Active
+                  <span className={styles.liveDot} />
+                  Live Feeds Active{lastUpdated ? ` (${lastUpdated})` : ''}
                 </span>
               )}
+              <button
+                type="button"
+                onClick={() => loadFeeds(true)}
+                disabled={isRefreshing}
+                className={`${styles.refreshFeedBtn} ${isRefreshing ? styles.refreshFeedBtnWait : ''}`}
+                title="Fetch latest breaking current affairs right now"
+              >
+                <span
+                  className={`material-symbols-outlined ${styles.refreshIcon} ${isRefreshing ? styles.refreshIconSpinning : ''}`}
+                >
+                  refresh
+                </span>
+                {isRefreshing ? 'Refreshing...' : 'Refresh Feed'}
+              </button>
             </div>
             <h1>Current Affairs — MPSC, UPSC, IBPS, SSC</h1>
             <p>Curated daily current affairs with exam relevance explained. Know exactly <em>why</em> each news item matters for your exam — not just <em>what</em> happened.</p>
@@ -223,7 +245,6 @@ export default function CurrentAffairsPage() {
                     key={cat}
                     className={`${styles.pill} ${isSelected ? styles.pillActive : ''}`}
                     onClick={() => handleCategoryClick(cat)}
-                    style={isSelected ? { borderColor: CAT_COLORS[cat] || '#ea580c', color: CAT_COLORS[cat] || '#ea580c', background: (CAT_COLORS[cat] || '#ea580c') + '15' } : {}}
                     title={isSelected ? `Click to deselect ${cat}` : `Filter by ${cat}`}
                   >
                     {cat !== 'All' && <span className="material-symbols-outlined">{CAT_ICONS[cat]}</span>}
@@ -298,16 +319,16 @@ export default function CurrentAffairsPage() {
               <h3>No matching updates found</h3>
               <p>We couldn&apos;t find any current affairs matching your current filter selection.</p>
               <div className={styles.emptyActions}>
-                <button onClick={resetAllFilters} className="btn-primary" style={{ cursor: 'pointer' }}>
+                <button onClick={resetAllFilters} className="btn-primary">
                   Clear All Filters
                 </button>
                 {activeExam !== 'All' && (
-                  <button onClick={() => { setActiveCategory('All'); setSearch('') }} className="btn-outline" style={{ cursor: 'pointer' }}>
+                  <button onClick={() => { setActiveCategory('All'); setSearch('') }} className="btn-outline">
                     Show All {activeExam} News ({examCounts[activeExam] || 0})
                   </button>
                 )}
                 {activeCategory !== 'All' && (
-                  <button onClick={() => { setActiveExam('All'); setSearch('') }} className="btn-outline" style={{ cursor: 'pointer' }}>
+                  <button onClick={() => { setActiveExam('All'); setSearch('') }} className="btn-outline">
                     Show All {activeCategory} News ({categoryCounts[activeCategory] || 0})
                   </button>
                 )}
@@ -333,28 +354,20 @@ export default function CurrentAffairsPage() {
           )}
 
           {/* ── AI Digest Due Diligence Notice (* Conditions) ── */}
-          <div style={{
-            marginTop: '36px',
-            background: '#FFFBEB',
-            border: '1px solid #FEF3C7',
-            borderLeft: '4px solid var(--primary, #EA580C)',
-            borderRadius: '12px',
-            padding: '16px 20px',
-            color: '#78350F'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 800, fontSize: '13.5px', color: '#92400E', marginBottom: '6px' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: '18px', color: '#EA580C' }}>smart_toy</span>
+          <div className={styles.aiNoticeBox}>
+            <div className={styles.aiNoticeHeader}>
+              <span className={`material-symbols-outlined ${styles.aiNoticeIcon}`}>smart_toy</span>
               <span>* AI Current Affairs Digest &amp; Candidate Due Diligence Notice</span>
             </div>
-            <p style={{ margin: '0 0 6px', fontSize: '12.5px', lineHeight: 1.55 }}>
+            <p className={styles.aiNoticeDesc}>
               Daily headlines, exam syllabus mappings, and &ldquo;Exam Angle&rdquo; analytical notes on this page are generated with AI-assisted aggregation from official PIB and news wires:
             </p>
-            <ul style={{ margin: 0, paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <li style={{ fontSize: '12px', lineHeight: 1.5 }}>
-                <strong style={{ color: '#9A3412' }}>* Condition 1 (Academic Reference Only):</strong> Content is compiled strictly for competitive exam preparation and general studies awareness.
+            <ul className={styles.aiNoticeList}>
+              <li className={styles.aiNoticeItem}>
+                <strong className={styles.aiNoticeConditionStrong}>* Condition 1 (Academic Reference Only):</strong> Content is compiled strictly for competitive exam preparation and general studies awareness.
               </li>
-              <li style={{ fontSize: '12px', lineHeight: 1.5 }}>
-                <strong style={{ color: '#9A3412' }}>* Condition 2 (Mandatory Verification with Official Releases):</strong> Aspirants must independently verify statistical figures, cabinet decisions, and policy details with official Gazette publications (PIB, Maharashtra Government) for descriptive/mains examination answers.
+              <li className={styles.aiNoticeItem}>
+                <strong className={styles.aiNoticeConditionStrong}>* Condition 2 (Mandatory Verification with Official Releases):</strong> Aspirants must independently verify statistical figures, cabinet decisions, and policy details with official Gazette publications (PIB, Maharashtra Government) for descriptive/mains examination answers.
               </li>
             </ul>
           </div>
@@ -404,6 +417,8 @@ function CACard({ ca }) {
   }
 
   // Format date nicely
+  const todayIso = new Date().toISOString().split('T')[0]
+  const isToday = ca.date === todayIso
   const dateObj = new Date(ca.date)
   const formattedDate = isNaN(dateObj.getTime())
     ? ca.date
@@ -411,24 +426,35 @@ function CACard({ ca }) {
 
   const ytQuery = ca.youtubeQuery || `${title} exam analysis`
 
+  const catClass = styles[`cat${ca.category}`] || styles.catDefault
+
   return (
-    <article className={styles.caCard}>
+    <article className={`${styles.caCard} ${catClass}`}>
       {/* Category accent bar */}
-      <div className={styles.cardBar} style={{ background: color }} />
+      <div className={`${styles.cardBar} ${styles.cardBarThemed}`} />
 
       {/* Category + Date */}
       <div className={styles.cardMeta}>
-        <span className={styles.cardCat} style={{ color, background: color + '15' }}>
+        <span className={`${styles.cardCat} ${styles.cardCatThemed}`}>
           <span className="material-symbols-outlined">{icon}</span>
           {ca.category}
         </span>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-          {ca.isLive && (
-            <span style={{ fontSize: '10px', fontWeight: 800, background: '#ecfdf5', color: '#047857', padding: '2px 7px', borderRadius: 4, letterSpacing: '.4px' }}>
+        <div className={styles.cardDateRow}>
+          {isToday ? (
+            <span className={styles.badgeToday}>
+              ⚡ TODAY
+            </span>
+          ) : ca.isLive ? (
+            <span className={styles.badgeLiveFeed}>
               ● LIVE
             </span>
-          )}
+          ) : null}
           <span className={styles.cardDate}>{formattedDate}</span>
+          {ca.sourceName && (
+            <span className={styles.cardSourceTag}>
+              · {ca.sourceName}
+            </span>
+          )}
         </div>
       </div>
 
@@ -439,12 +465,13 @@ function CACard({ ca }) {
       <p className={styles.cardSummary}>{summary}</p>
 
       {/* Why it matters */}
-      {whyItMatters && (
+      {/* I don't think we required this information it is eating space RAM:12-oct-26 */}
+      {/* {whyItMatters && (
         <div className={styles.whyBox}>
           <span className={styles.whyIcon}>💡</span>
           <p><strong>Exam Angle:</strong> {whyItMatters}</p>
         </div>
-      )}
+      )} */}
 
       {/* Exam tags + Action Buttons */}
       <div className={styles.cardFooter}>

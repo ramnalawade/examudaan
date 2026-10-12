@@ -61,6 +61,8 @@ class ArmyAgniveerSpider(DuplicateStopMixin, scrapy.Spider):
                     continue
                 if href.endswith((".jpg", ".png", ".gif", ".ico", ".js", ".css")):
                     continue
+                if self.should_skip_link(title, url):
+                    continue
 
                 seen.add(url)
 
@@ -96,7 +98,9 @@ class ArmyAgniveerSpider(DuplicateStopMixin, scrapy.Spider):
 
         pdf = response.css("a[href$='.pdf']::attr(href)").get()
         if pdf:
-            item["notification_pdf_url"] = response.urljoin(pdf)
+            pdf_url = response.urljoin(pdf)
+            item["notification_pdf"] = pdf_url
+            item["notification_pdf_url"] = pdf_url
 
         yield item
 

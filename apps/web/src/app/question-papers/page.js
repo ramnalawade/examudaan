@@ -543,7 +543,7 @@ export default function QuestionPapersPage() {
                   ⏱️ Full CBT Mock Tests
                 </Link>
                 <Link href="/ai-tools" style={{ background: '#7C3AED', color: '#FFF', padding: '8px 14px', borderRadius: '8px', fontWeight: 600, fontSize: '13px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                  🤖 84 Free AI Study Tools
+                  🤖 114 Free AI Study Tools
                 </Link>
                 <Link href="/study-planner" style={{ background: '#0D9488', color: '#FFF', padding: '8px 14px', borderRadius: '8px', fontWeight: 600, fontSize: '13px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                   📅 AI Study Planner

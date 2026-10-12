@@ -5,8 +5,9 @@
 
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { trackPricingPageView } from '@/lib/analytics'
 
 // Note: metadata is defined in layout.js template for all pages
 const PLANS = [
@@ -126,6 +127,10 @@ function FAQItem({ q, a }) {
 }
 
 export default function PricingPage() {
+  useEffect(() => {
+    trackPricingPageView()
+  }, [])
+
   return (
     <div className="container" style={{ paddingTop: '40px', paddingBottom: '48px' }}>
 

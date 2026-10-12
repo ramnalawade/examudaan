@@ -10,7 +10,7 @@ import { CAREER_PATHS } from './careerGuideData.js'
 import { query as pgQuery } from './pgdb.js'
 
 // Real exact counts from active data registries
-export const REAL_AI_TOOLS_COUNT = (AI_TOOLS || []).length || 84
+export const REAL_AI_TOOLS_COUNT = (AI_TOOLS || []).length || 114
 export const REAL_MOCK_TESTS_COUNT = (MOCK_TESTS || []).length || 12
 export const REAL_SYLLABI_COUNT = 280
 export const REAL_CAREERS_COUNT = (CAREER_PATHS || []).length || 50
@@ -35,13 +35,23 @@ export const DEFAULT_PLATFORM_STATS = {
   total_questions: REAL_PYQ_COUNT,
 }
 
+let _cachedPlatformStats = null
+let _lastPlatformStatsTime = 0
+const PLATFORM_STATS_CACHE_TTL = 5 * 60 * 1000 // 5 minutes
+
 /**
  * Fetch live platform stats combining real PostgreSQL records and verified registry lengths.
  * Used by Server Components (homepage, layouts) and API endpoints (/api/stats).
  */
 export async function getPlatformStats() {
+  const now = Date.now()
+  if (_cachedPlatformStats && (now - _lastPlatformStatsTime < PLATFORM_STATS_CACHE_TTL)) {
+    return _cachedPlatformStats
+  }
+
   try {
     const rows = await pgQuery(`
+
       SELECT
         COUNT(*) FILTER (WHERE status = 'published' AND (notification_type = 'recruitment' OR notification_type IS NULL) AND (apply_end_date IS NULL OR apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date)) AS active_jobs,
         COUNT(*) FILTER (WHERE status = 'published')                                  AS total_jobs,
@@ -60,7 +70,7 @@ export async function getPlatformStats() {
       const results = Number(r.total_results || 140)
       const answerKeys = Number(r.total_answer_keys || 68)
 
-      return {
+      _cachedPlatformStats = {
         total_jobs: activeJobs.toLocaleString('en-IN'),
         raw_total_jobs: activeJobs,
         total_notifications: Number(r.total_jobs).toLocaleString('en-IN'),
@@ -76,6 +86,8 @@ export async function getPlatformStats() {
         total_careers: REAL_CAREERS_COUNT,
         total_questions: REAL_PYQ_COUNT,
       }
+      _lastPlatformStatsTime = Date.now()
+      return _cachedPlatformStats
     }
   } catch (err) {
     console.warn('[platformStats] PostgreSQL query failed, using verified fallback:', err.message)

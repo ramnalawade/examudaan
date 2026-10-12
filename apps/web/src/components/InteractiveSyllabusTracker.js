@@ -2,6 +2,10 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
+import {
+  trackSyllabusChecklistItemCheck,
+  trackSyllabusScroll75,
+} from '@/lib/analytics'
 import styles from './InteractiveSyllabusTracker.module.css'
 
 // Helper: extract clean first keyword from subtopic for search
@@ -66,8 +70,36 @@ export default function InteractiveSyllabusTracker({ exam }) {
     }
   }, [exam?.slug])
 
-  // Save to localStorage whenever checkedKeys change
+  // Track syllabus page scroll depth > 75%
+  useEffect(() => {
+    let fired = false
+    const handleScroll = () => {
+      if (fired) return
+      const scrollY = window.scrollY || window.pageYOffset
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+      if (docHeight > 0 && scrollY / docHeight >= 0.75) {
+        fired = true
+        trackSyllabusScroll75({
+          syllabus_name: exam?.shortName || exam?.nameEn || exam?.slug || '',
+        })
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [exam?.shortName, exam?.nameEn, exam?.slug])
+
+  // Save to localStorage whenever checkedKeys change & track item check
   const toggleSubtopic = (key) => {
+    const willBeChecked = !checkedKeys[key]
+    if (willBeChecked) {
+      const item = allSubtopics.find(s => s.key === key)
+      trackSyllabusChecklistItemCheck({
+        syllabus_name: exam?.shortName || exam?.nameEn || exam?.slug || '',
+        item_text: item?.subtopic || key,
+        stage: item?.stageName || '',
+      })
+    }
+
     setCheckedKeys((prev) => {
       const next = { ...prev, [key]: !prev[key] }
       if (!next[key]) delete next[key]

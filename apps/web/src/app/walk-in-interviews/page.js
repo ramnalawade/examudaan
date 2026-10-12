@@ -13,14 +13,14 @@ import styles from './walkIn.module.css'
 function DaysLeftBadge({ dateStr }) {
   if (!dateStr) return null
   const target = new Date(dateStr)
-  const today  = new Date()
+  const today = new Date()
   today.setHours(0, 0, 0, 0)
   const diff = Math.ceil((target - today) / (1000 * 60 * 60 * 24))
 
-  if (diff < 0)  return <span className={`${styles.badge} ${styles.badgeClosed}`}>Closed</span>
+  if (diff < 0) return <span className={`${styles.badge} ${styles.badgeClosed}`}>Closed</span>
   if (diff === 0) return <span className={`${styles.badge} ${styles.badgeToday}`}>📍 Today!</span>
-  if (diff <= 3)  return <span className={`${styles.badge} ${styles.badgeUrgent}`}>⚡ {diff} Days Left</span>
-  if (diff <= 7)  return <span className={`${styles.badge} ${styles.badgeSoon}`}>🕐 This Week</span>
+  if (diff <= 3) return <span className={`${styles.badge} ${styles.badgeUrgent}`}>⚡ {diff} Days Left</span>
+  if (diff <= 7) return <span className={`${styles.badge} ${styles.badgeSoon}`}>🕐 This Week</span>
   return <span className={`${styles.badge} ${styles.badgeUpcoming}`}>{diff} Days Left</span>
 }
 
@@ -148,13 +148,13 @@ const DATE_FILTERS = [
 
 // ── Main Page ─────────────────────────────────────────────────
 export default function WalkInInterviewsPage() {
-  const [items, setItems]       = useState([])
-  const [loading, setLoading]   = useState(true)
-  const [dept, setDept]         = useState('All')
+  const [items, setItems] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [dept, setDept] = useState('All')
   const [dateFilter, setDateFilter] = useState('all')
-  const [search, setSearch]     = useState('')
-  const [page, setPage]         = useState(1)
-  const [total, setTotal]       = useState(0)
+  const [search, setSearch] = useState('')
+  const [page, setPage] = useState(1)
+  const [total, setTotal] = useState(0)
 
   const PER_PAGE = 20
 
@@ -339,7 +339,7 @@ export default function WalkInInterviewsPage() {
                     <h3>No walk-in interviews found</h3>
                     <p>
                       {search
-                        ? `No results for "${search}". Try broader keywords.`
+                        ? `No jobs found for "${search}". Try broader keywords.`
                         : 'No walk-in interviews currently listed. Check back tomorrow!'}
                     </p>
                     <Link href="/jobs" className="btn-primary">Browse All Jobs</Link>

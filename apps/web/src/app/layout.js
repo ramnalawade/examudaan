@@ -23,12 +23,14 @@ const inter = Inter({
 })
 
 const mukta = Mukta({
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600', '700'],
   subsets: ['latin', 'devanagari'],
   display: 'swap',
   variable: '--font-mukta',
   fallback: ['sans-serif'],
+  preload: false,
 })
+
 
 // ── Analytics IDs (set in .env) ──
 // GTM_ID:            GTM-NH9V94Q9 (set in NEXT_PUBLIC_GTM_ID)
@@ -43,31 +45,31 @@ const SITE_URL   = (rawSiteUrl && !rawSiteUrl.includes('localhost')) ? rawSiteUr
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'ExamUdaan — Maharashtra Govt Job Alerts 2026',
+    default: "ExamUdaan - Maharashtra's Premier Govt Job Alerts & Exam Prep Platform",
     template: '%s | ExamUdaan',
   },
   description:
-    'Get instant Maharashtra government job notifications for MPSC, Police Bharti, BMC, ZP, Talathi and more. Free WhatsApp alerts, exam dates, results, admit cards.',
+    "ExamUdaan is Maharashtra's #1 competitive exam portal for MPSC, Police Bharti, BMC, ZP & Talathi. Offering real-time job alerts, free CBT mock tests, authentic previous year question papers & AI study tools.",
   keywords: [
-    'MPSC', 'Maharashtra govt jobs', 'police bharti', 'BMC recruitment',
-    'ZP bharti', 'talathi bharti', 'sarkari naukri', 'government jobs',
-    'exam udaan', 'maharashtra recruitment',
+    'ExamUdaan', 'Exam Udaan', 'MPSC', 'Maharashtra govt jobs', 'police bharti', 'BMC recruitment',
+    'ZP bharti', 'talathi bharti', 'sarkari naukri', 'government jobs', 'mock tests', 'previous year question papers',
+    'examudaan', 'maharashtra recruitment'
   ],
   openGraph: {
-    title: 'ExamUdaan — Maharashtra Govt Job Alerts 2026',
+    title: "ExamUdaan - Maharashtra's Premier Govt Job Alerts & Exam Prep Platform",
     description:
-      'Get instant Maharashtra government job notifications for MPSC, Police Bharti, BMC, ZP, Talathi and more. Free WhatsApp alerts, exam dates, results, admit cards.',
-    siteName: 'ExamUdaan.in',
+      "ExamUdaan is Maharashtra's #1 competitive exam portal for MPSC, Police Bharti, BMC, ZP & Talathi. Real-time job alerts, free CBT mock tests, authentic previous year question papers & AI study tools.",
+    siteName: 'ExamUdaan',
     type: 'website',
     locale: 'en_IN',
     url: SITE_URL,
-    images: [{ url: `${SITE_URL}/logo-light.png`, width: 512, height: 512, alt: 'ExamUdaan.in' }],
+    images: [{ url: `${SITE_URL}/logo-light.png`, width: 512, height: 512, alt: 'ExamUdaan' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
+    title: "ExamUdaan - Maharashtra's Premier Govt Job Alerts & Exam Prep Platform",
     description:
-      'Get instant Maharashtra government job notifications for MPSC, Police Bharti, BMC, ZP, Talathi and more. Free WhatsApp alerts, exam dates, results, admit cards.',
+      "ExamUdaan is Maharashtra's #1 competitive exam portal for MPSC, Police Bharti, BMC, ZP & Talathi. Real-time job alerts, CBT mock tests & PYQ papers.",
     images: [`${SITE_URL}/logo-light.png`],
   },
   // Google Search Console verification — set GOOGLE_SITE_VERIFICATION in .env
@@ -76,15 +78,11 @@ export const metadata = {
   }),
   icons: {
     icon: [
-      { url: '/favicon-16x16.png',  sizes: '16x16',  type: 'image/png' },
       { url: '/favicon-32x32.png',  sizes: '32x32',  type: 'image/png' },
-      { url: '/favicon-64x64.png',  sizes: '64x64',  type: 'image/png' },
-      { url: '/favicon-128x128.png',sizes: '128x128',type: 'image/png' },
-      { url: '/favicon-512x512.png',sizes: '512x512',type: 'image/png' },
+      { url: '/favicon-16x16.png',  sizes: '16x16',  type: 'image/png' },
       { url: '/favicon.svg',                         type: 'image/svg+xml' },
     ],
     apple: '/favicon-192x192.png',
-    shortcut: '/favicon-32x32.png',
   },
   manifest: '/site.webmanifest',
 }
@@ -104,12 +102,12 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="preconnect" href="https://c.clarity.ms" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link rel="dns-prefetch" href="https://c.clarity.ms" />
         {/* Material Symbols — asynchronous non-blocking stylesheet to eliminate render-blocking delay */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-          as="style"
-        />
+
         <link
           id="material-symbols-stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
@@ -159,71 +157,89 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      {/* ──────────────────────────────────────────────────────
-          Google tag (gtag.js) — Google Analytics 4 (GA4)
-          Measurement ID: G-PG16F0L21G
-          Loads after hydration (afterInteractive)
-      ────────────────────────────────────────────────────── */}
-      {GA_MEASUREMENT_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}');
-            `}
-          </Script>
-        </>
-      )}
-
-      {/* ──────────────────────────────────────────────────────
-          Google Tag Manager — manages additional marketing tags
-          Strategy: afterInteractive = loads after hydration, non-blocking.
-          GTM ID: GTM-NH9V94Q9
-      ────────────────────────────────────────────────────── */}
-      {GTM_ID && (
-        <Script id="gtm-head" strategy="afterInteractive">{`
-          (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),
-                dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','${GTM_ID}');
-        `}</Script>
-      )}
-
-      {/* ──────────────────────────────────────────────────────
-          Microsoft Clarity — session recordings + heatmaps.
-          Strategy: lazyOnload = loads during idle time to prevent TBT
-          Clarity ID: yh913yaes0
-      ────────────────────────────────────────────────────── */}
-      {CLARITY_ID && (
-        <Script id="clarity" strategy="lazyOnload">{`
-          (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;
-            t.src='https://www.clarity.ms/tag/'+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window,document,'clarity','script','${CLARITY_ID}');
-        `}</Script>
-      )}
-
       <body>
+        {/* ──────────────────────────────────────────────────────
+            Google tag (gtag.js) — Google Analytics 4 (GA4)
+            Measurement ID: G-PG16F0L21G
+            Loads after hydration (afterInteractive)
+        ────────────────────────────────────────────────────── */}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
+
+        {/* ──────────────────────────────────────────────────────
+            Google Tag Manager — manages additional marketing tags
+            Strategy: afterInteractive for reliable loading post hydration
+            GTM ID: GTM-NH9V94Q9
+        ────────────────────────────────────────────────────── */}
+        {GTM_ID && (
+          <Script
+            id="gtm-head"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){
+                  w[l]=w[l]||[];
+                  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                  var f=d.getElementsByTagName(s)[0],
+                      j=d.createElement(s),
+                      dl=l!='dataLayer'?'&l='+l:'';
+                  j.async=true;
+                  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                  f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${GTM_ID}');
+              `,
+            }}
+          />
+        )}
+
+        {/* ──────────────────────────────────────────────────────
+            Microsoft Clarity — session recordings + heatmaps.
+            Strategy: afterInteractive — required for recording sessions from early arrival.
+            lazyOnload was preventing recordings from being captured before bounce/navigation.
+            Clarity ID: yh913yaes0
+        ────────────────────────────────────────────────────── */}
+        {CLARITY_ID && (
+          <Script
+            id="microsoft-clarity"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;
+                  t.src='https://www.clarity.ms/tag/'+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window,document,'clarity','script','${CLARITY_ID}');
+              `,
+            }}
+          />
+        )}
+
         {/* GTM noscript fallback — required by GTM for non-JS environments */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0" width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            height="0"
+            width="0"
+            className="gtm-noscript-frame"
           />
         </noscript>
 

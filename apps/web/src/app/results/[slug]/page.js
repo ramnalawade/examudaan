@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
+import ResultActionButtons from '../../../components/ResultActionButtons'
 import { ResultCheckSteps } from '../../../components/DetailActionSteps'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
@@ -327,34 +328,12 @@ export default async function ResultDetailPage({ params }) {
           </div>
 
           {/* CTA buttons */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-            {resultLink && (
-              <a
-                href={resultLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary btn-primary-lg"
-                id="check-result-btn"
-                style={{ background: 'linear-gradient(135deg,#16A34A,#15803D)' }}
-              >
-                <span className="material-symbols-outlined fill" style={{ fontSize: 18 }}>open_in_new</span>
-                <T k="card.check_result" fallback="Check Result / Download Scorecard" />
-              </a>
-            )}
-            {pdfLink && pdfLink !== resultLink && (
-              <a
-                href={pdfLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline"
-                style={{ padding: '10px 20px' }}
-                id="result-pdf-btn"
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>picture_as_pdf</span>
-                <T k="detail.view_pdf" fallback="Official Notification PDF" />
-              </a>
-            )}
-          </div>
+          <ResultActionButtons
+            resultLink={resultLink}
+            pdfLink={pdfLink}
+            title={en.title}
+            orgName={en.org_name || en.org_acronym || ''}
+          />
         </div>
 
         {/* Two-column layout (Responsive) */}

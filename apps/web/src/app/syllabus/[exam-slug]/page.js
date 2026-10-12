@@ -222,6 +222,153 @@ export default function ExamDetailPage({ params }) {
         </div>
       </section>
 
+      {/* ── Revised Pattern Blueprint (if available) ── */}
+      {exam.revisedPatternNotes && (
+        <section style={{ padding: '28px 0', background: '#FFFBF5', borderTop: '1px solid var(--outline-variant)' }}>
+          <div className="container">
+            <div style={{ background: '#FFFFFF', border: '1.5px solid #FED7AA', borderRadius: '14px', padding: '24px', boxShadow: '0 2px 10px rgba(234,88,12,0.06)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+                <span className="material-symbols-outlined" style={{ color: '#EA580C', fontSize: '26px' }}>verified</span>
+                <div>
+                  <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 800, color: '#0F172A', fontFamily: 'var(--font-outfit)' }}>
+                    सुधारित परीक्षा पद्धती (Revised 9-Paper Descriptive Blueprint)
+                  </h3>
+                  <p style={{ margin: '2px 0 0', fontSize: '13px', color: '#64748B' }}>
+                    {exam.revisedPatternNotes.patternType}
+                  </p>
+                </div>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px', marginBottom: '16px' }}>
+                <div style={{ background: '#FFF7ED', padding: '12px 16px', borderRadius: '10px', border: '1px solid #FFEDD5' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#C2410C', textTransform: 'uppercase' }}>एकूण मुख्य पेपर</span>
+                  <div style={{ fontSize: '20px', fontWeight: 800, color: '#9A3412', marginTop: '2px' }}>{exam.revisedPatternNotes.totalPapers} Papers</div>
+                </div>
+                <div style={{ background: '#FFF7ED', padding: '12px 16px', borderRadius: '10px', border: '1px solid #FFEDD5' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#C2410C', textTransform: 'uppercase' }}>मुख्य परीक्षा गुण</span>
+                  <div style={{ fontSize: '20px', fontWeight: 800, color: '#9A3412', marginTop: '2px' }}>{exam.revisedPatternNotes.mainsMarks} Marks</div>
+                </div>
+                <div style={{ background: '#FFF7ED', padding: '12px 16px', borderRadius: '10px', border: '1px solid #FFEDD5' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#C2410C', textTransform: 'uppercase' }}>मुलाखत गुण</span>
+                  <div style={{ fontSize: '20px', fontWeight: 800, color: '#9A3412', marginTop: '2px' }}>{exam.revisedPatternNotes.interviewMarks} Marks</div>
+                </div>
+                <div style={{ background: '#FEF2F2', padding: '12px 16px', borderRadius: '10px', border: '1px solid #FEE2E2' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#B91C1C', textTransform: 'uppercase' }}>अंतिम मेरिट गुण</span>
+                  <div style={{ fontSize: '20px', fontWeight: 800, color: '#991B1B', marginTop: '2px' }}>{exam.revisedPatternNotes.grandTotalMarks} Marks</div>
+                </div>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px', color: '#334155' }}>
+                <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#EA580C', fontWeight: 'bold' }}>•</span>
+                  <span><strong>पात्रता पेपर्स:</strong> {exam.revisedPatternNotes.qualifyingPapers}</span>
+                </div>
+                <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#EA580C', fontWeight: 'bold' }}>•</span>
+                  <span><strong>गुणवत्तेचे पेपर्स:</strong> {exam.revisedPatternNotes.meritPapers}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Optional Subjects Section (if available) ── */}
+      {exam.optionalSubjects?.length > 0 && (
+        <section style={{ padding: '32px 0', background: '#FFFFFF', borderTop: '1px solid var(--outline-variant)' }}>
+          <div className="container">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '18px' }}>
+              <div>
+                <h2 style={{ fontFamily: 'var(--font-outfit)', fontSize: '22px', fontWeight: 800, color: '#0F172A', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span className="material-symbols-outlined" style={{ color: '#EA580C' }}>library_books</span>
+                  ऐच्छिक विषयांची यादी — Optional Subjects ({exam.optionalSubjects.length} Disciplines)
+                </h2>
+                <p style={{ fontSize: '13.5px', color: '#64748B', margin: '4px 0 0' }}>
+                  मुख्य परीक्षेसाठी उमेदवाराने खालीलपैकी एका ऐच्छिक विषयाची निवड करणे आवश्यक आहे (पेपर ८ व पेपर ९, प्रत्येकी २५० गुण).
+                </p>
+              </div>
+              <span style={{ fontSize: '12px', fontWeight: 700, background: '#FFF7ED', color: '#EA580C', border: '1px solid #FED7AA', padding: '4px 10px', borderRadius: '999px' }}>
+                Choose Any 1 Subject
+              </span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '10px' }}>
+              {exam.optionalSubjects.map((subj, sIdx) => (
+                <div
+                  key={sIdx}
+                  style={{
+                    background: '#FAFAFA',
+                    border: '1px solid #E2E8F0',
+                    borderRadius: '8px',
+                    padding: '10px 14px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    transition: 'border-color 0.15s, transform 0.15s'
+                  }}
+                >
+                  <span style={{ width: '22px', height: '22px', borderRadius: '50%', background: '#F1F5F9', color: '#64748B', fontSize: '11px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {sIdx + 1}
+                  </span>
+                  <div>
+                    <strong style={{ fontSize: '13px', color: '#0F172A', display: 'block' }}>{subj.name}</strong>
+                    {subj.nameMr && <span style={{ fontSize: '12px', color: '#64748B' }}>{subj.nameMr}</span>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Interview & Personality Test Section (if available) ── */}
+      {exam.interviewDetails && (
+        <section style={{ padding: '32px 0', background: '#F8FAFC', borderTop: '1px solid var(--outline-variant)' }}>
+          <div className="container">
+            <div style={{ background: '#FFFFFF', border: '1px solid var(--outline-variant)', borderRadius: '14px', padding: '24px', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span className="material-symbols-outlined" style={{ color: '#2563EB', fontSize: '28px' }}>record_voice_over</span>
+                  <div>
+                    <h2 style={{ fontFamily: 'var(--font-outfit)', fontSize: '20px', fontWeight: 800, color: '#0F172A', margin: 0 }}>
+                      मुलाखत व व्यक्तिमत्त्व चाचणी — Interview Process ({exam.interviewDetails.marks} Marks)
+                    </h2>
+                    <p style={{ fontSize: '13px', color: '#64748B', margin: '2px 0 0' }}>
+                      कालावधी: {exam.interviewDetails.duration} • मंडळ: {exam.interviewDetails.panel}
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href="/mock-interview"
+                  style={{ background: '#2563EB', color: '#FFFFFF', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>psychology</span>
+                  AI मॉक मुलाखत सुरू करा →
+                </Link>
+              </div>
+
+              {exam.interviewDetails.purpose && (
+                <p style={{ fontSize: '13.5px', color: '#334155', background: '#EFF6FF', borderLeft: '4px solid #3B82F6', padding: '10px 14px', borderRadius: '0 8px 8px 0', margin: '0 0 16px' }}>
+                  <strong>उद्दिष्ट (Objective):</strong> {exam.interviewDetails.purpose}
+                </p>
+              )}
+
+              <div>
+                <strong style={{ fontSize: '13.5px', color: '#0F172A', display: 'block', marginBottom: '8px' }}>
+                  मुलाखतीतील मुख्य तपासणी घटक (Core Assessment Focus Areas):
+                </strong>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '8px' }}>
+                  {exam.interviewDetails.focusAreas.map((area, aIdx) => (
+                    <div key={aIdx} style={{ display: 'flex', gap: '8px', alignItems: 'flex-start', fontSize: '13px', color: '#475569' }}>
+                      <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#16A34A', marginTop: '2px' }}>check_circle</span>
+                      <span>{area}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── Official Question Papers & Official Answer Keys ── */}
       {(hasOfficialPdfs || hasPyqLinks) && (
         <section className={styles.pyqSection} id="pyq">

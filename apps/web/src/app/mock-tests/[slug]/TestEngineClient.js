@@ -6,6 +6,13 @@
 'use client'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
+import {
+  trackMockTestStart,
+  trackMockTestComplete,
+  trackMockTestView,
+  trackMockTestSectionStart,
+  trackMockTestAnswerReview,
+} from '@/lib/analytics'
 import styles from './testEngine.module.css'
 
 export default function TestEngineClient({ test }) {
@@ -15,8 +22,15 @@ export default function TestEngineClient({ test }) {
   const [visited, setVisited] = useState({ 1: true }) // { [questionId]: true }
   const [current, setCurrent] = useState(0) // question index 0..N-1
   const [timeLeft, setTimeLeft] = useState((test?.durationMinutes || 60) * 60)
-  const [result, setResult] = useState(null)
   const [paletteFilter, setPaletteFilter] = useState('all') // 'all' | section.id
+  const [result, setResult] = useState(null) // evaluation result metrics
+
+  // Track mock test page view on mount
+  useEffect(() => {
+    if (test?.title) {
+      trackMockTestView({ exam_name: test.title, test_id: test.slug })
+    }
+  }, [test?.title, test?.slug])
 
   // Mark current question as visited
   useEffect(() => {
@@ -158,6 +172,14 @@ export default function TestEngineClient({ test }) {
       stateRank
     })
     setPhase('submitted')
+
+    trackMockTestComplete({
+      exam_name: test.title,
+      test_id: test.slug,
+      score: parseFloat(marksEarned.toFixed(2)),
+      percentage: percent,
+      rank: stateRank ? `#${stateRank}` : '',
+    })
   }, [phase, answers, test])
 
   if (!test) return null
@@ -240,6 +262,7 @@ export default function TestEngineClient({ test }) {
             <button
               className={styles.startBtn}
               onClick={() => {
+                trackMockTestStart({ exam_name: test?.title, test_id: test?.slug })
                 setPhase('running')
                 if (test?.questions?.[0]) {
                   setVisited({ [test.questions[0].id]: true })
@@ -306,9 +329,9 @@ export default function TestEngineClient({ test }) {
                 <h4>🏆 Simulated Maharashtra State Rank & Percentile</h4>
                 <p>Benchmarked across 50,000+ aspirants on official bell-curve scoring.</p>
               </div>
-              <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+              <div className={styles.rankMetaGroup}>
                 <span className={styles.rankBadge}>Top {result.percentile}%</span>
-                <span style={{ fontSize: '14px', fontWeight: 700, color: '#e2e8f0' }}>State Rank #{result.stateRank}</span>
+                <span className={styles.stateRankText}>State Rank #{result.stateRank}</span>
               </div>
             </div>
 
@@ -316,7 +339,7 @@ export default function TestEngineClient({ test }) {
             {test.cutoffs && (
               <div className={styles.cutoffCard}>
                 <h3 className={styles.cutoffCardTitle}>
-                  <span className="material-symbols-outlined" style={{ color: '#0284c7' }}>verified</span>
+                  <span className={`material-symbols-outlined ${styles.cutoffVerifiedIcon}`}>verified</span>
                   Official Category Cutoff Analysis (Your Score: {result.marksEarned})
                 </h3>
                 <div className={styles.cutoffGrid}>
@@ -329,12 +352,12 @@ export default function TestEngineClient({ test }) {
                         <span className={styles.cutoffScore}>{cutoff}</span>
                         {isPass ? (
                           <span className={styles.cutoffStatusPass}>
-                            <span className="material-symbols-outlined" style={{ fontSize: '13px' }}>check_circle</span>
+                            <span className={`material-symbols-outlined ${styles.cutoffStatusIcon}`}>check_circle</span>
                             Cleared (+{diff})
                           </span>
                         ) : (
                           <span className={styles.cutoffStatusFail}>
-                            <span className="material-symbols-outlined" style={{ fontSize: '13px' }}>cancel</span>
+                            <span className={`material-symbols-outlined ${styles.cutoffStatusIcon}`}>cancel</span>
                             Missed by {diff}
                           </span>
                         )}
@@ -347,8 +370,8 @@ export default function TestEngineClient({ test }) {
 
             {/* Section-wise Performance Breakdown */}
             {result.sectionStats && result.sectionStats.length > 0 && (
-              <div style={{ margin: '0 36px 24px', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '18px 20px', overflowX: 'auto' }}>
-                <h3 style={{ fontSize: '15px', fontWeight: 700, margin: '0 0 8px', color: '#1e293b' }}>
+              <div className={styles.sectionBreakdownCard}>
+                <h3 className={styles.sectionBreakdownTitle}>
                   📊 Section-wise Score & Accuracy Breakdown
                 </h3>
                 <table className={styles.sectionScoreTable}>
@@ -366,14 +389,14 @@ export default function TestEngineClient({ test }) {
                   <tbody>
                     {result.sectionStats.map((s, idx) => (
                       <tr key={idx}>
-                        <td style={{ fontWeight: 600 }}>{s.name}</td>
+                        <td className={styles.secName}>{s.name}</td>
                         <td>{s.total}</td>
                         <td>{s.attempted}</td>
-                        <td style={{ color: '#16a34a', fontWeight: 700 }}>{s.correct}</td>
-                        <td style={{ color: '#dc2626' }}>{s.wrong}</td>
-                        <td style={{ fontWeight: 700 }}>{s.earned}/{s.maxMarks}</td>
+                        <td className={styles.secCorrect}>{s.correct}</td>
+                        <td className={styles.secWrong}>{s.wrong}</td>
+                        <td className={styles.secEarned}>{s.earned}/{s.maxMarks}</td>
                         <td>
-                          <span style={{ padding: '2px 8px', borderRadius: '100px', fontSize: '11px', fontWeight: 700, background: s.accuracy >= 70 ? '#dcfce7' : s.accuracy >= 45 ? '#fef3c7' : '#fee2e2', color: s.accuracy >= 70 ? '#15803d' : s.accuracy >= 45 ? '#b45309' : '#b91c1c' }}>
+                          <span className={`${styles.secAccuracyBadge} ${s.accuracy >= 70 ? styles.secAccuracyHigh : s.accuracy >= 45 ? styles.secAccuracyMid : styles.secAccuracyLow}`}>
                             {s.accuracy}%
                           </span>
                         </td>
@@ -411,6 +434,7 @@ export default function TestEngineClient({ test }) {
                 return (
                   <div
                     key={qItem.id}
+                    onClick={() => trackMockTestAnswerReview({ exam_name: test.title, question_id: qItem.id })}
                     className={`${styles.reviewItem} ${isCorrect ? styles.reviewCorrect : isSkipped ? styles.reviewSkipped : styles.reviewWrong}`}
                   >
                     <div className={styles.reviewHeader}>
@@ -518,6 +542,7 @@ export default function TestEngineClient({ test }) {
                 key={sec.id || idx}
                 className={`${styles.sectionTab} ${isActive ? styles.sectionTabActive : ''}`}
                 onClick={() => {
+                  trackMockTestSectionStart({ exam_name: test?.title, section_name: sec.name })
                   setCurrent(sec.qStart - 1)
                   setPaletteFilter(sec.id)
                 }}
@@ -543,12 +568,12 @@ export default function TestEngineClient({ test }) {
                   Question {current + 1} of {test.totalQuestions}
                 </span>
                 {currentSection && (
-                  <span style={{ marginLeft: '10px', fontSize: '12px', fontWeight: 600, color: '#64748b' }}>
+                  <span className={styles.sectionHeaderMeta}>
                     • {currentSection.name}
                   </span>
                 )}
               </div>
-              <span style={{ fontSize: '12px', fontWeight: 700, color: '#059669', background: '#ecfdf5', padding: '3px 10px', borderRadius: '6px' }}>
+              <span className={styles.marksPill}>
                 +{test.marksPerQuestion} / -{test.negativeMark}
               </span>
             </div>
@@ -590,20 +615,18 @@ export default function TestEngineClient({ test }) {
                   Clear Response
                 </button>
               )}
-              <div style={{ marginLeft: 'auto', display: 'flex', gap: '8px' }}>
+              <div className={styles.cbtNavGroup}>
                 <button
-                  className="btn-outline"
+                  className={`btn-outline ${styles.cbtNavBtn}`}
                   disabled={current === 0}
                   onClick={() => setCurrent(c => c - 1)}
-                  style={{ padding: '8px 16px', fontSize: '13px' }}
                 >
                   ← Prev
                 </button>
                 <button
-                  className="btn-outline"
+                  className={`btn-outline ${styles.cbtNavBtn}`}
                   disabled={current === test.questions.length - 1}
                   onClick={() => setCurrent(c => c + 1)}
-                  style={{ padding: '8px 16px', fontSize: '13px' }}
                 >
                   Next →
                 </button>
@@ -615,13 +638,13 @@ export default function TestEngineClient({ test }) {
         {/* ── Right: 5-State Question Palette ── */}
         <div className={styles.sidebar}>
           <div className={styles.sidebarCard}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-              <h3 className={styles.sidebarTitle} style={{ margin: 0 }}>Question Palette</h3>
+            <div className={styles.sidebarHeaderFlex}>
+              <h3 className={`${styles.sidebarTitle} ${styles.sidebarHeaderTitle}`}>Question Palette</h3>
               {test.sections && (
                 <select
                   value={paletteFilter}
                   onChange={(e) => setPaletteFilter(e.target.value)}
-                  style={{ fontSize: '11px', padding: '4px 8px', borderRadius: '6px', border: '1px solid #cbd5e1' }}
+                  className={styles.sectionFilterSelect}
                 >
                   <option value="all">All ({test.totalQuestions})</option>
                   {test.sections.map((s, i) => (

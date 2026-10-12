@@ -9,11 +9,39 @@ import { query } from '../lib/pgdb'
 import { getPlatformStats } from '../lib/platformStats'
 
 export const metadata = {
-  title: 'ExamUdaan.in — Maharashtra Govt Job Alerts | MPSC, Police Bharti, BMC',
+  title: "ExamUdaan — Govt Jobs, MPSC Question Papers, Police Bharti & Answer Keys 2026",
   description:
-    'Instant Maharashtra government job alerts for MPSC, Police Bharti, BMC, ZP, Talathi, and Central exams. AI-powered eligibility matching & real-time WhatsApp alerts.',
+    "India & Maharashtra's #1 exam portal for MPSC Question Papers, Police Bharti 2026, Govt Job alerts, official Answer Keys, free CBT Mock Tests & daily Current Affairs.",
+  keywords: [
+    'govt jobs 2026',
+    'MPSC question papers',
+    'police bharti',
+    'official answer keys',
+    'sarkari naukri',
+    'MPSC recruitment',
+    'Maharashtra police bharti',
+    'CBT mock tests',
+    'current affairs',
+    'ExamUdaan'
+  ],
   alternates: {
     canonical: 'https://examudaan.in',
+  },
+  openGraph: {
+    title: "ExamUdaan — Govt Jobs, MPSC Question Papers, Police Bharti & Answer Keys 2026",
+    description:
+      "India & Maharashtra's #1 exam portal for MPSC Question Papers, Police Bharti 2026, Govt Job alerts, official Answer Keys, free CBT Mock Tests & daily Current Affairs.",
+    siteName: 'ExamUdaan',
+    type: 'website',
+    url: 'https://examudaan.in',
+    images: [{ url: 'https://examudaan.in/logo-light.png', width: 512, height: 512, alt: 'ExamUdaan.in Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "ExamUdaan — Govt Jobs, MPSC Question Papers, Police Bharti & Answer Keys 2026",
+    description:
+      "MPSC Question Papers, Maharashtra Police Bharti 2026, official Answer Keys, Govt Job Alerts & CBT Mock Tests on ExamUdaan.in.",
+    images: ['https://examudaan.in/logo-light.png'],
   },
 }
 
@@ -262,14 +290,143 @@ export default async function HomePage() {
     const safeRecruitments = Array.isArray(recruitments) ? recruitments : []
     const jobs = safeRecruitments.map(toJobCardShape)
 
+    const websiteSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': 'https://examudaan.in/#website',
+      url: 'https://examudaan.in',
+      name: 'ExamUdaan',
+      alternateName: ['ExamUdaan.in', 'Exam Udaan', 'एक्झामउडान'],
+      description: "Maharashtra's #1 AI-Powered Sarkari Job Alerts, PYQ Question Papers, Exam Syllabus & Authentic Mock Test Platform",
+      inLanguage: ['en-IN', 'mr-IN'],
+      publisher: {
+        '@id': 'https://examudaan.in/#organization',
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://examudaan.in/jobs?q={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    }
+
+    const organizationSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': 'https://examudaan.in/#organization',
+      name: 'ExamUdaan',
+      alternateName: ['ExamUdaan.in', 'Exam Udaan'],
+      url: 'https://examudaan.in',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://examudaan.in/logo-light.png',
+        width: 512,
+        height: 512,
+        caption: "ExamUdaan — India's & Maharashtra's Premier Exam Portal",
+      },
+      image: 'https://examudaan.in/logo-light.png',
+      sameAs: [
+        'https://t.me/examudaan',
+        'https://whatsapp.com/channel/0029Vb33ZTU9MF8t5n9Rao0i',
+        'https://www.youtube.com/@ExamUdaan',
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Aspirant Support & Queries',
+        url: 'https://examudaan.in/contact',
+        availableLanguage: ['English', 'Marathi', 'Hindi'],
+      },
+    }
+
+    const siteNavigationSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'ExamUdaan Primary Sitelinks Navigation',
+      description: 'Key portals and examination services available on ExamUdaan',
+      itemListElement: [
+        {
+          '@type': 'SiteNavigationElement',
+          position: 1,
+          name: 'Mock Tests',
+          description: 'Free CBT mock tests with timer, negative marking, instant scorecard & state rank for MPSC, Police Bharti & Talathi.',
+          url: 'https://examudaan.in/mock-tests',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 2,
+          name: 'Previous Year Question Papers',
+          description: 'Official MPSC, Police Bharti, Talathi, ZP, SSC & RRB previous year question papers with verified answer keys.',
+          url: 'https://examudaan.in/question-papers',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 3,
+          name: 'Government Jobs',
+          description: 'Real-time Maharashtra government job alerts for MPSC, Police Bharti, BMC, ZP, Talathi and Central vacancies.',
+          url: 'https://examudaan.in/jobs',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 4,
+          name: 'Exam Syllabus',
+          description: 'Paper-wise syllabus, exam patterns, marks weightage and interactive topic preparation checklists.',
+          url: 'https://examudaan.in/syllabus',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 5,
+          name: 'Exam Results',
+          description: 'Check latest government exam results, official merit lists, selection announcements and cut-off marks.',
+          url: 'https://examudaan.in/results',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 6,
+          name: 'Admit Cards',
+          description: 'Direct download links and exam schedule notices for Maharashtra and Central exam hall tickets.',
+          url: 'https://examudaan.in/admit-cards',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 7,
+          name: 'Daily Current Affairs',
+          description: 'Bilingual daily current affairs, Maharashtra state updates and speed drills for competitive exams.',
+          url: 'https://examudaan.in/current-affairs',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 8,
+          name: 'MPSC Papers (2021-2026)',
+          description: 'Complete archive of 429+ authentic MPSC question papers and final answer keys with in-browser PDF reader.',
+          url: 'https://examudaan.in/mpsc-pyq',
+        },
+      ],
+    }
+
     return (
-      <HomePageView
-        jobs={jobs}
-        quickUpdates={Array.isArray(quickUpdates) ? quickUpdates : []}
-        stats={stats || {}}
-        urgentOpenings={Array.isArray(urgentOpenings) ? urgentOpenings : []}
-        urgentCount={Number(urgentCount) || 0}
-      />
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }}
+        />
+        <HomePageView
+          jobs={jobs}
+          quickUpdates={Array.isArray(quickUpdates) ? quickUpdates : []}
+          stats={stats || {}}
+          urgentOpenings={Array.isArray(urgentOpenings) ? urgentOpenings : []}
+          urgentCount={Number(urgentCount) || 0}
+        />
+      </>
     )
   } catch (err) {
     console.error('[homepage] Fatal render error:', err)

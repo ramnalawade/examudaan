@@ -8,6 +8,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { apiFetch } from '../lib/apiClient'
+import styles from './saveJobButton.module.css'
 
 export default function SaveJobButton({
   notificationId,
@@ -123,39 +124,29 @@ export default function SaveJobButton({
 
   // ── Variant: Icon Only (for JobCard.js) ──
   if (variant === 'icon') {
+    const iconBtnClass = [
+      styles.iconBtn,
+      size === 'sm' ? styles.iconBtnSm : '',
+      isSaved ? styles.iconBtnSaved : '',
+      className,
+    ].filter(Boolean).join(' ')
+
+    const iconClass = [
+      'material-symbols-outlined',
+      styles.icon,
+      size === 'sm' ? styles.iconSm : '',
+      isSaved ? styles.iconSaved : '',
+    ].filter(Boolean).join(' ')
+
     return (
       <button
         type="button"
         onClick={handleToggle}
         aria-label={isSaved ? 'Remove from Saved Jobs' : 'Save Job to Profile'}
         title={isSaved ? 'Saved to your profile (click to remove)' : 'Save job to your profile'}
-        style={{
-          background: isSaved ? '#FFF7ED' : 'rgba(255, 255, 255, 0.9)',
-          border: isSaved ? '1.5px solid #EA580C' : '1px solid #E5E7EB',
-          borderRadius: '50%',
-          width: size === 'sm' ? '30px' : '34px',
-          height: size === 'sm' ? '30px' : '34px',
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          color: isSaved ? '#EA580C' : '#6B7280',
-          transition: 'all 0.15s ease',
-          boxShadow: isSaved ? '0 2px 6px rgba(234, 88, 12, 0.2)' : '0 1px 3px rgba(0,0,0,0.06)',
-          zIndex: 2,
-          padding: 0,
-          ...style,
-        }}
-        className={className}
+        className={iconBtnClass}
       >
-        <span
-          className="material-symbols-outlined"
-          style={{
-            fontSize: size === 'sm' ? 16 : 18,
-            fontVariationSettings: isSaved ? "'FILL' 1" : "'FILL' 0",
-            color: isSaved ? '#EA580C' : 'inherit',
-          }}
-        >
+        <span className={iconClass} aria-hidden="true">
           {isSaved ? 'bookmark' : 'bookmark_border'}
         </span>
       </button>
@@ -163,37 +154,27 @@ export default function SaveJobButton({
   }
 
   // ── Variant: Full Action Button (for detail page / headers) ──
+  const actionBtnClass = [
+    styles.actionBtn,
+    size === 'sm' ? styles.actionBtnSm : '',
+    isSaved ? styles.actionBtnSaved : '',
+    className,
+  ].filter(Boolean).join(' ')
+
+  const actionIconClass = [
+    'material-symbols-outlined',
+    styles.icon,
+    isSaved ? styles.iconSaved : '',
+  ].filter(Boolean).join(' ')
+
   return (
     <button
       type="button"
       onClick={handleToggle}
       aria-label={isSaved ? 'Saved in My Profile' : 'Save Job to Profile'}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: '6px',
-        padding: size === 'sm' ? '6px 12px' : '9px 18px',
-        borderRadius: '999px',
-        fontSize: size === 'sm' ? '12.5px' : '13.5px',
-        fontWeight: 700,
-        cursor: 'pointer',
-        border: isSaved ? '1.5px solid #EA580C' : '1.5px solid #D1D5DB',
-        background: isSaved ? '#FFF7ED' : '#FFFFFF',
-        color: isSaved ? '#EA580C' : '#374151',
-        boxShadow: isSaved ? '0 2px 8px rgba(234, 88, 12, 0.15)' : '0 1px 3px rgba(0,0,0,0.05)',
-        transition: 'all 0.15s ease',
-        ...style,
-      }}
-      className={className}
+      className={actionBtnClass}
     >
-      <span
-        className="material-symbols-outlined"
-        style={{
-          fontSize: 18,
-          fontVariationSettings: isSaved ? "'FILL' 1" : "'FILL' 0",
-          color: isSaved ? '#EA580C' : '#6B7280',
-        }}
-      >
+      <span className={actionIconClass}>
         {isSaved ? 'bookmark' : 'bookmark_border'}
       </span>
       <span>{isSaved ? 'Saved to Profile' : 'Save Job'}</span>

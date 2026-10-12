@@ -1,4 +1,4 @@
-﻿# ============================================================
+# ============================================================
 # spiders/thane_scrapling.py - Thane Police (Scrapling standalone)
 #
 # WHY Scrapling instead of Scrapy:
@@ -16,7 +16,10 @@ from datetime import datetime
 from dateutil import parser as date_parser
 from dotenv import load_dotenv
 
-from scrapling.fetchers import StealthyFetcher
+try:
+    from scrapling.fetchers import StealthyFetcher
+except Exception as _e:
+    StealthyFetcher = None
 import psycopg2, psycopg2.extras
 
 load_dotenv()

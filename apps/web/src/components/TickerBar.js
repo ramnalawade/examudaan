@@ -194,11 +194,10 @@ export default function TickerBar() {
       <div
         className="ticker-content"
         aria-live="off"
-        style={{ animationDuration: `${durationSec}s` }}
       >
         {/* LIVE badge */}
-        <span style={{ marginRight: '24px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-          <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', backgroundColor: '#ef4444', animation: 'pulse 1.5s infinite' }} />
+        <span className="ticker-live-badge">
+          <span className="ticker-live-dot" />
           {t('ticker.live', 'LIVE UPDATES:')}
         </span>
 
@@ -210,7 +209,7 @@ export default function TickerBar() {
           const jobHref = `/jobs/${item.slug || item.id}`
 
           return (
-            <span key={item.id || item.slug || i} style={{ display: 'inline-flex', alignItems: 'center' }}>
+            <span key={item.id || item.slug || i} className="ticker-item-wrap">
               <Link
                 href={jobHref}
                 className="ticker-item-link"
@@ -225,7 +224,7 @@ export default function TickerBar() {
               </Link>
 
               {i < items.length - 1 && (
-                <span style={{ margin: '0 20px', opacity: 0.5, userSelect: 'none' }}>•</span>
+                <span className="ticker-separator">•</span>
               )}
             </span>
           )

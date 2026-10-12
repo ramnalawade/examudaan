@@ -11,6 +11,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { apiFetch } from '../../lib/apiClient'
+import { trackSignUp } from '../../lib/analytics'
 
 export default function RegisterPage() {
   const router = useRouter()
@@ -82,6 +83,7 @@ export default function RegisterPage() {
         localStorage.setItem('eu_user',          JSON.stringify(data.data.user || {}))
       }
 
+      trackSignUp({ method: channel })
       setSuccess('Account created! Redirecting to your dashboard...')
       setTimeout(() => router.push('/dashboard'), 1200)
     } catch {

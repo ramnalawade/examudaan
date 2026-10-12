@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 // components/CookieConsent.js — DPDP Act 2023 Compliance
 // Shows a consent banner on first visit.
 // Stores choice in localStorage ('examudaan_cookie_consent' = 'yes'|'no').
@@ -48,49 +48,24 @@ export default function CookieConsent() {
       id="cookie-consent-banner"
       role="dialog"
       aria-label="Cookie consent"
-      style={{
-        position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        zIndex: 9999,
-        background: '#1C1917',
-        color: '#F5F5F4',
-        padding: '14px 20px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: '16px',
-        flexWrap: 'wrap',
-        boxShadow: '0 -4px 24px rgba(0,0,0,0.25)',
-        borderTop: '1px solid #292524',
-        fontSize: '14px',
-      }}
+      className="cookie-consent-banner"
     >
-      <p style={{ margin: 0, lineHeight: 1.5, color: '#D6D3D1', flex: 1, minWidth: '240px' }}>
+      <p className="cookie-consent-text">
         🍪 We use cookies and analytics to improve your experience.{' '}
-        <Link href="/privacy" style={{ color: '#FB923C', textDecoration: 'underline' }}>Privacy Policy</Link>
+        <Link href="/privacy" className="cookie-consent-link">Privacy Policy</Link>
         {' · '}
-        <Link href="/terms" style={{ color: '#FB923C', textDecoration: 'underline' }}>Terms</Link>
+        <Link href="/terms" className="cookie-consent-link">Terms</Link>
       </p>
-      <div style={{ display: 'flex', gap: '10px', flexShrink: 0 }}>
+      <div className="cookie-consent-actions">
         <button
           id="cookie-decline-btn"
           onClick={decline}
-          style={{
-            padding: '8px 18px', borderRadius: '8px',
-            border: '1px solid #57534E', background: 'transparent',
-            color: '#A8A29E', fontSize: '13px', fontWeight: 500, cursor: 'pointer',
-          }}
+          className="cookie-decline-button"
         >Decline</button>
         <button
           id="cookie-accept-btn"
           onClick={accept}
-          style={{
-            padding: '8px 20px', borderRadius: '8px',
-            border: 'none', background: '#EA580C',
-            color: '#fff', fontSize: '13px', fontWeight: 600, cursor: 'pointer',
-          }}
+          className="cookie-accept-button"
         >Accept</button>
       </div>
     </div>

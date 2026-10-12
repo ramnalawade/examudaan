@@ -200,7 +200,10 @@ def setup_logging(run_ts: str):
         level=logging.INFO,
         handlers=[file_handler, stdout_handler],
     )
+    logging.getLogger("pdfminer").setLevel(logging.WARNING)
+    logging.getLogger("pdfplumber").setLevel(logging.WARNING)
     return logging.getLogger("run_scraper"), log_file
+
 
 
 def run_spider(spider_name: str, logger: logging.Logger, dry_run: bool = False) -> tuple[str, bool, str]:
@@ -226,8 +229,8 @@ def run_spider(spider_name: str, logger: logging.Logger, dry_run: bool = False) 
             cmd,
             cwd=str(SCRAPER_DIR),
             capture_output=False,   # output goes to this process's stdout
-            timeout=1800,           # 30-minute safety timeout per spider (was 2h)
-                                    # With 10-page limit each spider should finish in <5 min
+            timeout=300,            # 5-minute safety watchdog timeout per spider (was 30m)
+                                    # With CLOSESPIDER_TIMEOUT=180, each spider finishes in <= 3 min
         )
         elapsed = datetime.now() - start
         duration_str = str(elapsed).split('.')[0]
@@ -238,8 +241,8 @@ def run_spider(spider_name: str, logger: logging.Logger, dry_run: bool = False) 
             logger.error(f"[FAIL] Spider '{spider_name}' exited with code {result.returncode} after {duration_str}")
             return spider_name, False, duration_str
     except subprocess.TimeoutExpired:
-        logger.error(f"[TIMEOUT] Spider '{spider_name}' timed out after 30 minutes!")
-        return spider_name, False, "30m (timeout)"
+        logger.error(f"[TIMEOUT] Spider '{spider_name}' timed out after 5 minutes!")
+        return spider_name, False, "5m (timeout)"
     except Exception as exc:
         logger.error(f"[ERROR] Spider '{spider_name}' crashed: {exc}")
         return spider_name, False, "crashed"

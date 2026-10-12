@@ -135,7 +135,12 @@
 
 .pill:hover { border-color: var(--primary); color: var(--primary); }
 
-.pillActive { font-weight: 700; }
+.pillActive {
+  font-weight: 700;
+  border-color: var(--primary, #ea580c);
+  color: var(--primary, #ea580c);
+  background: #fff7ed;
+}
 
 .pillSmall { font-size: 12px; padding: 4px 12px; }
 
@@ -484,3 +489,272 @@
   .cardFooter { flex-direction: column; align-items: flex-start; }
   .cardActions { margin-left: 0; width: 100%; justify-content: flex-end; }
 }
+
+/* ── Zero Inline Styles Utilities ── */
+.heroHeaderRow {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+}
+
+.refreshFeedBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(234, 88, 12, 0.25);
+  color: var(--primary, #ea580c);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.refreshFeedBtnWait {
+  cursor: wait !important;
+}
+
+.refreshIcon {
+  font-size: 15px;
+  transition: transform 0.4s ease;
+}
+
+.refreshIconSpinning {
+  transform: rotate(180deg);
+}
+
+.aiNoticeBox {
+  margin-top: 36px;
+  background: #FFFBEB;
+  border: 1px solid #FEF3C7;
+  border-left: 4px solid var(--primary, #EA580C);
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: #78350F;
+}
+
+.aiNoticeHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 13.5px;
+  color: #92400E;
+  margin-bottom: 6px;
+}
+
+.aiNoticeIcon {
+  font-size: 18px;
+  color: #EA580C;
+}
+
+.aiNoticeDesc {
+  margin: 0 0 6px;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.aiNoticeList {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aiNoticeItem {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.aiNoticeConditionStrong {
+  color: #9A3412;
+}
+
+.cardDateRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badgeToday {
+  font-size: 10px;
+  font-weight: 800;
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: .4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.badgeLiveFeed {
+  font-size: 10px;
+  font-weight: 800;
+  background: #ecfdf5;
+  color: #047857;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: .4px;
+}
+
+.cardSourceTag {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ── Category Color Variables & Classes ── */
+.catNational { --cat-color: #2563EB; }
+.catMaharashtra { --cat-color: #EA580C; }
+.catEconomy { --cat-color: #059669; }
+.catDefence { --cat-color: #7C3AED; }
+.catScience { --cat-color: #0891B2; }
+.catSports { --cat-color: #DC2626; }
+.catAwards { --cat-color: #D97706; }
+.catPolity { --cat-color: #4338CA; }
+.catEnvironment { --cat-color: #15803D; }
+.catSchemes { --cat-color: #B45309; }
+.catDefault { --cat-color: #64748B; }
+
+.cardBarThemed {
+  background: var(--cat-color, #EA580C);
+}
+
+.cardCatThemed {
+  color: var(--cat-color, #EA580C);
+  background: rgba(234, 88, 12, 0.08);
+}
+.catNational .cardCatThemed { background: rgba(37, 99, 235, 0.1); }
+.catMaharashtra .cardCatThemed { background: rgba(234, 88, 12, 0.1); }
+.catEconomy .cardCatThemed { background: rgba(5, 150, 105, 0.1); }
+.catDefence .cardCatThemed { background: rgba(124, 58, 237, 0.1); }
+.catScience .cardCatThemed { background: rgba(8, 145, 178, 0.1); }
+.catSports .cardCatThemed { background: rgba(220, 38, 38, 0.1); }
+.catAwards .cardCatThemed { background: rgba(217, 119, 6, 0.1); }
+.catPolity .cardCatThemed { background: rgba(67, 56, 202, 0.1); }
+.catEnvironment .cardCatThemed { background: rgba(21, 128, 61, 0.1); }
+.catSchemes .cardCatThemed { background: rgba(180, 83, 9, 0.1); }
+
+/* ── Responsive Mobile & Tablet Rules ──────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    padding: 36px 0 28px;
+  }
+  .hero h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .hero p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .heroStats {
+    gap: 20px;
+  }
+  .stat strong {
+    font-size: 22px;
+  }
+  .stat span {
+    font-size: 11.5px;
+  }
+  .filterBar {
+    padding: 16px 0 14px;
+  }
+  .searchBox {
+    max-width: 100%;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+  }
+  .pills {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .pills::-webkit-scrollbar {
+    display: none;
+  }
+  .pill {
+    padding: 4px 10px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .filterGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .filterLabel {
+    font-size: 11px;
+  }
+  .cardsSection {
+    padding: 20px 0 40px;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cardMeta {
+    padding: 12px 14px 6px;
+  }
+  .cardTitle {
+    font-size: 15.5px;
+    padding: 0 14px;
+    margin: 4px 0 8px;
+  }
+  .cardSummary {
+    font-size: 13px;
+    padding: 0 14px;
+    margin-bottom: 10px;
+    -webkit-line-clamp: 3;
+  }
+  .whyBox {
+    padding: 10px 14px;
+  }
+  .cardFooter {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .examTags {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroStats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .stat strong {
+    font-size: 19px;
+  }
+}
+
+

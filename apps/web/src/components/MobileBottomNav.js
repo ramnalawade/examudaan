@@ -36,14 +36,7 @@ export default function MobileBottomNav() {
             aria-label={label}
             aria-current={isActive ? 'page' : undefined}
           >
-            <span
-              className="material-symbols-outlined"
-              style={{
-                fontVariationSettings: isActive
-                  ? "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24"
-                  : "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24",
-              }}
-            >
+            <span className="material-symbols-outlined">
               {icon}
             </span>
             <span className="mobile-nav-label">{label}</span>

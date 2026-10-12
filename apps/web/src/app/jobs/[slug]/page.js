@@ -10,6 +10,7 @@ import { permanentRedirect } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import DetailHowToApply from '../../../components/DetailHowToApply'
+import DetailActionButtons from '../../../components/DetailActionButtons'
 import SaveJobButton from '../../../components/SaveJobButton'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
@@ -780,60 +781,16 @@ export default async function JobDetailPage({ params }) {
 
           {/* CTA buttons — stacks vertically on small mobile */}
           <div className="detail-cta-row">
-            {/* Walk-in badge */}
-            {isWalkIn && (
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '8px 14px', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 8, fontSize: 13, color: '#1D4ED8', fontWeight: 600 }}>
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>how_to_reg</span>
-                Walk-in Interview — No online application required
-              </span>
-            )}
-            {/* Only render apply button if we have a real link and NOT a walk-in */}
-            {!isClosed && !isWalkIn && applyLink && (
-              <a
-                href={applyLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary btn-primary-lg"
-                id="apply-online-btn"
-              >
-                <span className="material-symbols-outlined fill" style={{ fontSize: 18 }}>open_in_new</span>
-                <T k="card.apply_online" fallback="Apply Online" />
-              </a>
-            )}
-            {/* Walk-in: show detail page link as primary CTA */}
-            {isWalkIn && detailPageLink && (
-              <a
-                href={detailPageLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary btn-primary-lg"
-                id="view-details-btn"
-                style={{ background: '#1D4ED8' }}
-              >
-                <span className="material-symbols-outlined fill" style={{ fontSize: 18 }}>open_in_new</span>
-                <T k="card.view_details" fallback="View Official Details" />
-              </a>
-            )}
-            {pdfLink && (
-              <a
-                href={pdfLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline"
-                style={{ padding: '10px 20px' }}
-                id="notification-pdf-btn"
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>picture_as_pdf</span>
-                <T k="card.official_pdf" fallback="Official Notification PDF" />
-              </a>
-            )}
-            {en.id && (
-              <SaveJobButton
-                notificationId={en.id}
-                variant="button"
-                title={en.title}
-              />
-            )}
+            <DetailActionButtons
+              applyLink={applyLink}
+              detailPageLink={detailPageLink}
+              pdfLink={pdfLink}
+              isClosed={isClosed}
+              isWalkIn={isWalkIn}
+              notificationId={en.id}
+              title={en.title}
+              organization={en.org_name || en.org_acronym || ''}
+            />
           </div>
         </div>
 

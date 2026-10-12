@@ -10,6 +10,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import OfficialPdfViewer from '@/components/OfficialPdfViewer'
 import { Pagination } from '@/components/Pagination'
+import { trackCtaClick } from '@/lib/analytics'
 
 const SUBJECT_PYQ_CARDS = [
   {
@@ -433,6 +434,8 @@ export default function MpscPyqClient({
     setActiveDocType(docType)
     const exam = pairedExams.find(e => e.id === examId)
     if (exam) {
+      const docLabel = docType === 'ak' ? 'Answer Key' : 'Question Paper'
+      trackCtaClick(`View ${docLabel}: ${exam.paperName || exam.title} (${exam.year})`, `/mpsc-pyq?docId=${examId}&docType=${docType}`, 'mpsc_pyq_table')
       setFeedbackNotice(`📖 Loaded: ${exam.paperName} (${exam.year}) — ${docType === 'ak' ? 'Official Answer Key' : 'Official Question Paper'}`)
       setFeedbackKey(k => k + 1)
     }
@@ -906,6 +909,7 @@ export default function MpscPyqClient({
               <Link
                 key={chip.href}
                 href={chip.href}
+                onClick={() => trackCtaClick(`Jump Strip: ${chip.label}`, chip.href, 'mpsc_pyq_conversion_strip')}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',

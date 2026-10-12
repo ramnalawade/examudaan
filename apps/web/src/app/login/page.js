@@ -15,6 +15,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { apiFetch } from '../../lib/apiClient'
+import { trackLogin } from '../../lib/analytics'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -92,6 +93,7 @@ export default function LoginPage() {
         localStorage.setItem('eu_user',          JSON.stringify(data.data.user || {}))
       }
 
+      trackLogin({ method: channel })
       setSuccess('Logged in! Redirecting...')
       setTimeout(() => router.push('/dashboard'), 800)
     } catch {
@@ -124,6 +126,7 @@ export default function LoginPage() {
         localStorage.setItem('eu_user',          JSON.stringify(data.data.user || {}))
         window.dispatchEvent(new Event('storage'))
       }
+      trackLogin({ method: 'password' })
       setSuccess('Logged in! Redirecting...')
       setTimeout(() => router.push('/dashboard'), 800)
     } catch {
@@ -345,18 +348,19 @@ export default function LoginPage() {
               style={{ width: '100%', justifyContent: 'center', opacity: loading ? 0.7 : 1 }}
               disabled={loading}
               id="login-submit-btn"
+              aria-label={otpSent ? 'Verify & Login' : 'Send OTP'}
             >
               {loading ? (
                 <>Loading...</>
               ) : otpSent ? (
                 <>
-                  Verify & Login
-                  <span className="material-symbols-outlined">lock_open</span>
+                  <span>Verify & Login</span>
+                  <span className="material-symbols-outlined" aria-hidden="true">lock_open</span>
                 </>
               ) : (
                 <>
-                  Send OTP
-                  <span className="material-symbols-outlined">arrow_forward</span>
+                  <span>Send OTP</span>
+                  <span className="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
                 </>
               )}
             </button>

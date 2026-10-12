@@ -1,13 +1,15 @@
+'use client'
+
 // ============================================================
 // app/police-calculator/page.js
 // ExamUdaan.in — Maharashtra Police Bharti Composite Merit Calculator
 // Calculates Physical (50) + Written (100) = 150 Marks with district cutoffs
 // Fully bilingual in Marathi & English using useLanguage()
 // ============================================================
-'use client'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '../../context/LanguageContext'
+import { trackCalculatorUse } from '../../lib/analytics'
 import styles from './policeCalculator.module.css'
 
 // ── Official Physical Test Marking Slates (महाराष्ट्र पोलीस शिपाई नियम) ──
@@ -96,9 +98,24 @@ export default function PoliceCalculatorPage() {
 
   const activeSlates = gender === 'male' ? MALE_SLATES : FEMALE_SLATES
 
-  // Calculate Totals
   const physicalTotal = runMarks + sprintMarks + shotMarks
   const compositeTotal = physicalTotal + writtenMarks
+
+  // Track calculator usage when user interacts
+  const userInteracted = useRef(false)
+  useEffect(() => {
+    if (!userInteracted.current) {
+      userInteracted.current = true
+      return
+    }
+    const timer = setTimeout(() => {
+      trackCalculatorUse({
+        calculator_type: 'police_merit',
+        exam_name: 'Maharashtra Police Bharti',
+      })
+    }, 800)
+    return () => clearTimeout(timer)
+  }, [gender, runMarks, sprintMarks, shotMarks, writtenMarks, districtId, category, parallelQuota])
 
   // Calculate Cutoff Target
   const selectedDistrict = useMemo(() => {

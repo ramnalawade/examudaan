@@ -30,9 +30,9 @@ export function ResultCheckSteps({ website, title }) {
   const steps = isMarathi ? stepsMr : stepsEn
 
   return (
-    <ol style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10, margin: 0 }}>
+    <ol className="how-to-apply-list">
       {steps.map((step, i) => (
-        <li key={i} style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.6 }}>
+        <li key={i} className="how-to-apply-item">
           {step}
         </li>
       ))}
@@ -62,9 +62,9 @@ export function AdmitCardDownloadSteps({ website, examName }) {
   const steps = isMarathi ? stepsMr : stepsEn
 
   return (
-    <ol style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10, margin: 0 }}>
+    <ol className="how-to-apply-list">
       {steps.map((step, i) => (
-        <li key={i} style={{ fontSize: 14, color: 'var(--secondary)', lineHeight: 1.6 }}>
+        <li key={i} className="how-to-apply-item">
           {step}
         </li>
       ))}
@@ -96,9 +96,9 @@ export function AdmitCardDocsToCarry({ customDocs = [] }) {
     : (isMarathi ? defaultMr : defaultEn)
 
   return (
-    <ul style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 8, margin: 0 }}>
+    <ul className="admit-card-docs-list">
       {docs.map((doc, i) => (
-        <li key={i} style={{ fontSize: 14, color: '#1D4ED8', lineHeight: 1.6 }}>
+        <li key={i} className="admit-card-doc-item">
           {doc}
         </li>
       ))}

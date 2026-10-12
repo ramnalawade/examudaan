@@ -145,7 +145,7 @@ export default async function PaperViewerPage({ searchParams }) {
             border="#DDD6FE"
             iconBg="#7C3AED"
             icon="🤖"
-            title="84 Free AI Study Tools"
+            title="114 Free AI Study Tools"
             desc="Summarize, explain, translate any concept instantly with AI"
             badge="Free"
             badgeColor="#7C3AED"

@@ -1,0 +1,4887 @@
+[
+  {
+    "slug": "mpsc-rajyaseva",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/mpsc-rajyaseva",
+    "title": "Maharashtra State Services Examination (MPSC)",
+    "paragraphs_count": 84,
+    "tables_count": 2,
+    "optional_subjects_count": 26,
+    "interview_points_count": 7,
+    "tables": [
+      {
+        "caption": "Prelims Exam Pattern",
+        "headers": [
+          "Paper No.",
+          "No. of Questions",
+          "Total Marks",
+          "Subject",
+          "Medium",
+          "Duration",
+          "Nature of Paper"
+        ],
+        "rows": [
+          {
+            "Paper No.": "Paper I",
+            "No. of Questions": "100",
+            "Total Marks": "200",
+            "Subject": "General Studies",
+            "Medium": "English & Marathi",
+            "Duration": "2 hours",
+            "Nature of Paper": "Objective"
+          },
+          {
+            "Paper No.": "Paper II",
+            "No. of Questions": "80",
+            "Total Marks": "200",
+            "Subject": "CSAT",
+            "Medium": "English & Marathi",
+            "Duration": "2 hours",
+            "Nature of Paper": "Objective"
+          }
+        ]
+      },
+      {
+        "caption": "Mains Exam Pattern",
+        "headers": [
+          "Subject",
+          "Marks",
+          "Duration",
+          "Medium",
+          "Nature"
+        ],
+        "rows": [
+          {
+            "Subject": "Paper 1 – Marathi",
+            "Marks": "300",
+            "Duration": "3 Hours",
+            "Medium": "Marathi",
+            "Nature": "Qualifying (25% marks required)"
+          },
+          {
+            "Subject": "Paper 2 – English",
+            "Marks": "300",
+            "Duration": "3 Hours",
+            "Medium": "English",
+            "Nature": "Qualifying (25% marks required)"
+          },
+          {
+            "Subject": "Paper 3 – Essay",
+            "Marks": "250",
+            "Duration": "3 Hours",
+            "Medium": "Marathi/English",
+            "Nature": "Counted for Merit"
+          },
+          {
+            "Subject": "Paper 4 – General Studies 1",
+            "Marks": "250",
+            "Duration": "3 Hours",
+            "Medium": "Marathi/English",
+            "Nature": "Counted for Merit"
+          },
+          {
+            "Subject": "Paper 5 – General Studies 2",
+            "Marks": "250",
+            "Duration": "3 Hours",
+            "Medium": "Marathi/English",
+            "Nature": "Counted for Merit"
+          },
+          {
+            "Subject": "Paper 6 – General Studies 3",
+            "Marks": "250",
+            "Duration": "3 Hours",
+            "Medium": "Marathi/English",
+            "Nature": "Counted for Merit"
+          },
+          {
+            "Subject": "Paper 7 – General Studies 4",
+            "Marks": "250",
+            "Duration": "3 Hours",
+            "Medium": "Marathi/English",
+            "Nature": "Counted for Merit"
+          },
+          {
+            "Subject": "Paper 8 – Optional Subject Paper 1",
+            "Marks": "250",
+            "Duration": "3 Hours",
+            "Medium": "Marathi/English",
+            "Nature": "Counted for Merit"
+          },
+          {
+            "Subject": "Paper 9 – Optional Subject Paper 2",
+            "Marks": "250",
+            "Duration": "3 Hours",
+            "Medium": "Marathi/English",
+            "Nature": "Counted for Merit"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [
+      "Agriculture",
+      "Animal Husbandry & Veterinary Science",
+      "Anthropology",
+      "Botany",
+      "Chemistry",
+      "Civil Engineering",
+      "Commerce & Accountancy",
+      "Economics",
+      "Electrical Engineering",
+      "Geography",
+      "Geology",
+      "History",
+      "Law",
+      "Management",
+      "Marathi Literature",
+      "Mathematics",
+      "Mechanical Engineering",
+      "Medical Science",
+      "Philosophy",
+      "Physics",
+      "Political Science & International Relations",
+      "Psychology",
+      "Public Administration",
+      "Sociology",
+      "Statistics",
+      "Zoology"
+    ],
+    "interview_details": [
+      "Duration: 20-30 minutes.",
+      "Panel: 3-5 members (including experts from different fields).",
+      "Purpose: To assess personality, general knowledge, decision-making ability, and communication skills.",
+      "Focus Areas:",
+      "Administrative and social awareness.",
+      "Current events (state, national, international).",
+      "Thought process and analytical skills."
+    ],
+    "overview": [
+      "MPSC Mains Exam",
+      "The Maharashtra Public Service Commission (MPSC) has revised theMPSC Mains Examsyllabus, making it more descriptive and similar to the UPSC exam pattern. The key changes include:",
+      "Increase in the number of papers fromsix to nine.",
+      "Total marks for Mains increased from800 to 1,750.",
+      "Two language papers are nowqualifying in natureand will not count toward merit."
+    ]
+  },
+  {
+    "slug": "mpsc-group-bc",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/mpsc-group-bc",
+    "title": "MPSC Group B and C",
+    "paragraphs_count": 53,
+    "tables_count": 5,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "MPSC Group B Prelims Exam Pattern",
+        "headers": [
+          "Subject",
+          "Questions",
+          "Marks",
+          "Medium",
+          "Difficulty level",
+          "Duration"
+        ],
+        "rows": [
+          {
+            "Subject": "Current AffairsPolityHistoryGeographyEconomicsGeneral ScienceIQ & Arithmetic",
+            "Questions": "100",
+            "Marks": "100",
+            "Medium": "Marathi & English",
+            "Difficulty level": "Graduation",
+            "Duration": "1 hour"
+          }
+        ]
+      },
+      {
+        "caption": "Mains Exam Pattern",
+        "headers": [
+          "Paper",
+          "Subjects",
+          "Marks",
+          "Questions",
+          "Duration"
+        ],
+        "rows": [
+          {
+            "Paper": "Paper 1",
+            "Subjects": "MarathiEnglishGeneral Knowledge",
+            "Marks": "1006040",
+            "Questions": "503020",
+            "Duration": "1 hour"
+          },
+          {
+            "Paper": "Paper 2",
+            "Subjects": "General Ability Test & Subject Specific Knowledge",
+            "Marks": "200",
+            "Questions": "100",
+            "Duration": "1 hour"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Exam Pattern",
+          "Prelims Exam",
+          "Mains Exam"
+        ],
+        "rows": [
+          {
+            "Exam Pattern": "Questions",
+            "Prelims Exam": "100",
+            "Mains Exam": "200"
+          },
+          {
+            "Exam Pattern": "Total Marks",
+            "Prelims Exam": "100",
+            "Mains Exam": "400"
+          },
+          {
+            "Exam Pattern": "Questions Type",
+            "Prelims Exam": "Objective Type",
+            "Mains Exam": "Objective Type"
+          },
+          {
+            "Exam Pattern": "Duration",
+            "Prelims Exam": "1 hour",
+            "Mains Exam": "2 hours"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "General Knowledge",
+          "Marathi Language",
+          "English Language"
+        ],
+        "rows": [
+          {
+            "General Knowledge": "History of Maharashtra and IndiaGeography (both Maharashtra and India)Indian EconomyIndian Polity and ConstitutionImportant National and International EventsEnvironmental StudiesScience and Technology",
+            "Marathi Language": "GrammarVocabularySentence StructureProverbs and PhrasesComprehension",
+            "English Language": "GrammarSentence CorrectionVocabularySynonyms and AntonymsComprehension"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Paper 1 ( Common for All Posts )",
+          "Paper 2 ( Post-Specific )"
+        ],
+        "rows": [
+          {
+            "Paper 1 ( Common for All Posts )": "Marathi:Grammar, Usage of Words, Idioms, ProverbsSentence ImprovementComprehensionEssay WritingEnglish:Grammar, Sentence StructureIdioms and PhrasesVocabularyComprehensionGeneral Knowledge:Current Affairs (National & International)Sports, Science, and TechnologyEnvironment and EcologyImportant Personalities in News",
+            "Paper 2 ( Post-Specific )": "For Clerk-Typist:Typing Knowledge (Marathi and English)Office Administration and FilingBasic Computer KnowledgeFor Tax Assistant:Accounts and CommerceIndian Taxation SystemArithmetic and StatisticsFor Other Posts:Specific topics related to the job roleGeneral Administrative Knowledge"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "TheMPSC Group B Syllabus 2024 Overviewprovides a picture of the entire examination process. The MPSC Group B exam is conducted for various administrative positions such as Assistant Section Officer, Sub-Inspector, and State Tax Inspector. TheMPSC Group B Syllabus 2024covers a wide range of topics which includescurrent affairs,history,geography,Indian polity,economy, andquantitative aptitude. The exam is divided into two stages:PreliminaryandMains, each having specific subjects. Candidates must focus on bothgeneralandsubject-specific knowledgeto clear the exam.",
+      "MPSC Group C Syllabus 2024:The MPSC Group C Syllabus 2024 is a key component for candidates who are preparing for the Maharashtra Public Service Commission (MPSC) Group C exams.This exam is conducted to recruit candidates for various posts such asTax Assistant,Clerk-Typist, and others in Maharashtra government offices. Understanding the syllabus and exam pattern is necessary for every candidate to get success. In this guidepost, we’ll break down theMPSC Group C Syllabus 2024for both prelims and mains, provide an overview, and share information on how to download the syllabus in PDF format.",
+      "Subject",
+      "Questions",
+      "Medium"
+    ]
+  },
+  {
+    "slug": "policeBharti",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/policeBharti",
+    "title": "Constable Written Exam Pattern",
+    "paragraphs_count": 46,
+    "tables_count": 4,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "Subject",
+          "Total Questions",
+          "Total Marks",
+          "Duration"
+        ],
+        "rows": [
+          {
+            "Subject": "Mathematics",
+            "Total Questions": "25 Questions",
+            "Total Marks": "25 Marks",
+            "Duration": ""
+          },
+          {
+            "Subject": "Intelligence Test",
+            "Total Questions": "25 Questions",
+            "Total Marks": "25 Marks",
+            "Duration": ""
+          },
+          {
+            "Subject": "Marathi Grammar",
+            "Total Questions": "25 Questions",
+            "Total Marks": "25 Marks",
+            "Duration": "90 Minutes"
+          },
+          {
+            "Subject": "General Knowledge and Current Affairs",
+            "Total Questions": "25 Questions",
+            "Total Marks": "25 Marks",
+            "Duration": ""
+          },
+          {
+            "Subject": "Total",
+            "Total Questions": "100 Questions",
+            "Total Marks": "100 Marks",
+            "Duration": "90 Minutes"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Subject",
+          "Important Topics"
+        ],
+        "rows": [
+          {
+            "Subject": "Mathematics",
+            "Important Topics": "Number Systems, LCM & HCF, Decimals, Profit-Loss, Averages, Percentages, Geometry"
+          },
+          {
+            "Subject": "Intelligence Test",
+            "Important Topics": "Number Series, Venn Diagrams, Directions and Distances, Figure Reflections, Logical Statements"
+          },
+          {
+            "Subject": "Marathi Grammar",
+            "Important Topics": "Sentence Structure, Compounds, Synonyms, Antonyms, Idioms and Phrases"
+          },
+          {
+            "Subject": "General Knowledge and Current Affairs",
+            "Important Topics": "History, Geography, Indian Constitution, General Science, Computer Knowledge"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "",
+          "Male Candidates",
+          "Female Candidates"
+        ],
+        "rows": [
+          {
+            "": "Height",
+            "Male Candidates": "Minimum 165 cm",
+            "Female Candidates": "Minimum 155 cm"
+          },
+          {
+            "": "Chest",
+            "Male Candidates": "79 cm (unexpanded) to 84 cm (expanded)",
+            "Female Candidates": "----------"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Male Candidates:",
+          "Female Candidates:"
+        ],
+        "rows": [
+          {
+            "Male Candidates:": "1600 meters Running:20 marks100 meters Running:15 marksShot Put (7.260 kg):15 marks",
+            "Female Candidates:": "800 meters Running:20 marks100 meters Running:15 marksShot Put (4 kg):15 mark"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "Subject",
+      "Total Questions",
+      "Total Marks",
+      "Duration",
+      "Mathematics"
+    ]
+  },
+  {
+    "slug": "upsc",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/upsc",
+    "title": "Union Public Service Commission",
+    "paragraphs_count": 103,
+    "tables_count": 2,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "Paper",
+          "Type",
+          "No. of questions",
+          "UPSC Total Marks",
+          "Duration",
+          "Negative marks"
+        ],
+        "rows": [
+          {
+            "Paper": "General Studies I",
+            "Type": "Objective",
+            "No. of questions": "100",
+            "UPSC Total Marks": "200",
+            "Duration": "2 hours",
+            "Negative marks": "Yes"
+          },
+          {
+            "Paper": "General Studies II (CSAT)",
+            "Type": "Objective",
+            "No. of questions": "80",
+            "UPSC Total Marks": "200",
+            "Duration": "2 hours",
+            "Negative marks": "Yes"
+          },
+          [
+            "Total UPSC marks for Prelims",
+            "400 (where GS Paper II is qualifying in nature with minimum qualifying marks fixed at 33%)",
+            "",
+            ""
+          ]
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Paper",
+          "Subject",
+          "Nature of Paper",
+          "Time Allotted",
+          "Total Marks"
+        ],
+        "rows": [
+          {
+            "Paper": "Paper A",
+            "Subject": "Compulsory Indian language",
+            "Nature of Paper": "Qualifying (75 Marks required. ie. 25%)",
+            "Time Allotted": "3 hours",
+            "Total Marks": "300"
+          },
+          {
+            "Paper": "Paper B",
+            "Subject": "English",
+            "Nature of Paper": "-----//-----",
+            "Time Allotted": "3 hours",
+            "Total Marks": "300"
+          },
+          {
+            "Paper": "Paper I",
+            "Subject": "Essay",
+            "Nature of Paper": "Final Merit (Marks will be counted in the final merit list)",
+            "Time Allotted": "3 hours",
+            "Total Marks": "250"
+          },
+          {
+            "Paper": "Paper II",
+            "Subject": "General Studies I",
+            "Nature of Paper": "-----//-----",
+            "Time Allotted": "3 hours",
+            "Total Marks": "250"
+          },
+          {
+            "Paper": "Paper III",
+            "Subject": "General Studies II",
+            "Nature of Paper": "-----//-----",
+            "Time Allotted": "3 hours",
+            "Total Marks": "250"
+          },
+          {
+            "Paper": "Paper IV",
+            "Subject": "General Studies III",
+            "Nature of Paper": "-----//-----",
+            "Time Allotted": "3 hours",
+            "Total Marks": "250"
+          },
+          {
+            "Paper": "Paper V",
+            "Subject": "General Studies IV",
+            "Nature of Paper": "-----//-----",
+            "Time Allotted": "3 hours",
+            "Total Marks": "250"
+          },
+          {
+            "Paper": "Paper VI",
+            "Subject": "Optional I",
+            "Nature of Paper": "-----//-----",
+            "Time Allotted": "3 hours",
+            "Total Marks": "250"
+          },
+          {
+            "Paper": "Paper VII",
+            "Subject": "Optional II",
+            "Nature of Paper": "-----//-----",
+            "Time Allotted": "3 hours",
+            "Total Marks": "250"
+          },
+          {
+            "Paper": "",
+            "Subject": "",
+            "Nature of Paper": "Total Marks",
+            "Time Allotted": "",
+            "Total Marks": "1750"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "The UPSC exam pattern for the Preliminary stage consists of two papers, conducted on one day. Both the papers comprise objective type questions with multiple choice of answers. The prelims examination is a qualifying stage to filter candidates for the mains exam. The marks secured at this stage are not counted towards the final merit list, though candidates have to prepare well for this exam as cut-offs are unpredictable and depend on the average score every year. The details of UPSC prelims pattern is given below:",
+      "No. of questions",
+      "UPSC Total Marks",
+      "Duration",
+      "Negative marks"
+    ]
+  },
+  {
+    "slug": "ssc-cgl",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/ssc-cgl",
+    "title": "SSC CGL",
+    "paragraphs_count": 137,
+    "tables_count": 10,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "Tier",
+          "Type",
+          "Mode"
+        ],
+        "rows": [
+          {
+            "Tier": "Tier – I",
+            "Type": "Objective Multiple Choice",
+            "Mode": "Computer-Based (online)"
+          },
+          {
+            "Tier": "Tier – II(Paper I, II, III)",
+            "Type": "Paper I - (Compulsory for all posts),Paper II - for candidates who apply for the posts ofJunior Statistical Officer(JSO) in the Ministry of Statistics and Programme Implementation andPaper III - for candidates who apply for the posts ofAssistant Audit Officer/ Assistant Accounts Officer.Objective Type, Multiple choice questions, except for Module-II of Section-III of Paper-I",
+            "Mode": "Computer-Based (online)"
+          }
+        ]
+      },
+      {
+        "caption": "Tier 1 Paper Pattern",
+        "headers": [
+          "S No.",
+          "Sections",
+          "No. of Questions",
+          "Total Marks",
+          "Time Allotted"
+        ],
+        "rows": [
+          [
+            "1",
+            "General Intelligence and Reasoning",
+            "25",
+            "50"
+          ],
+          {
+            "S No.": "2",
+            "Sections": "General Awareness",
+            "No. of Questions": "25",
+            "Total Marks": "50",
+            "Time Allotted": "A cumulative time of 60 minutes(1 hour)"
+          },
+          {
+            "S No.": "3",
+            "Sections": "Quantitative Aptitude",
+            "No. of Questions": "25",
+            "Total Marks": "50",
+            "Time Allotted": ""
+          },
+          {
+            "S No.": "4",
+            "Sections": "English Comprehension",
+            "No. of Questions": "25",
+            "Total Marks": "50",
+            "Time Allotted": ""
+          },
+          {
+            "S No.": "",
+            "Sections": "Total",
+            "No. of Questions": "100",
+            "Total Marks": "200",
+            "Time Allotted": ""
+          }
+        ]
+      },
+      {
+        "caption": "Tier 2 / Paper - 1 Exam Pattern",
+        "headers": [
+          "Sections",
+          "Module",
+          "Subject",
+          "No. of Questions",
+          "Marks",
+          "Weightage"
+        ],
+        "rows": [
+          {
+            "Sections": "Section I",
+            "Module": "Module-I",
+            "Subject": "Mathematical Abilities",
+            "No. of Questions": "30",
+            "Marks": "60*3 = 180",
+            "Weightage": "23%"
+          },
+          {
+            "Sections": "",
+            "Module": "Module-II",
+            "Subject": "Reasoning and General Intelligence",
+            "No. of Questions": "30",
+            "Marks": "",
+            "Weightage": "23%"
+          },
+          {
+            "Sections": "Section II",
+            "Module": "Module-I",
+            "Subject": "English Language and Comprehension",
+            "No. of Questions": "45",
+            "Marks": "70*3 = 210",
+            "Weightage": "35%"
+          },
+          {
+            "Sections": "Section III",
+            "Module": "Module-I",
+            "Subject": "Computer Knowledge Test",
+            "No. of Questions": "20",
+            "Marks": "20*3 = 60",
+            "Weightage": "Qualifying"
+          },
+          {
+            "Sections": "",
+            "Module": "Module-II",
+            "Subject": "Data Entry Speed Test",
+            "No. of Questions": "One Data Entry Task",
+            "Marks": "",
+            "Weightage": "Qualifying"
+          }
+        ]
+      },
+      {
+        "caption": "Tier 2 /  Paper - 2 & 3 Exam Pattern",
+        "headers": [
+          "Paper",
+          "Section",
+          "No. of question",
+          "Maximum Marks",
+          "Duration"
+        ],
+        "rows": [
+          {
+            "Paper": "Paper II",
+            "Section": "Statistics",
+            "No. of question": "100",
+            "Maximum Marks": "200",
+            "Duration": "2 hours"
+          },
+          {
+            "Paper": "Paper III",
+            "Section": "General Studies (Finance and Economics)",
+            "No. of question": "100",
+            "Maximum Marks": "200",
+            "Duration": "2 hours"
+          }
+        ]
+      },
+      {
+        "caption": "Quantitative Aptitude Books",
+        "headers": [],
+        "rows": [
+          [
+            "Quantitative Aptitude for Competitive Examinations",
+            "R.S. Aggarwal"
+          ],
+          [
+            "Fast Track Objective Arithmetic",
+            "Rajesh Verma"
+          ],
+          [
+            "Quantitative Abilities Arithmetic Ability",
+            "Kiran Prakashan"
+          ],
+          [
+            "Quantitative Aptitude for CAT",
+            "Arun Sharma"
+          ],
+          [
+            "Quicker Maths",
+            "M Tyra"
+          ],
+          [
+            "Arithmetic for General Competition Vol 1& 2",
+            "Neetu Singh"
+          ]
+        ]
+      },
+      {
+        "caption": "English Language Books",
+        "headers": [
+          "Name of the book",
+          "Author"
+        ],
+        "rows": [
+          {
+            "Name of the book": "Objective General English",
+            "Author": "SP Bakshi"
+          },
+          {
+            "Name of the book": "Quick Learning Objective General English",
+            "Author": "RS Aggarwal & Vikas Aggarwal"
+          },
+          {
+            "Name of the book": "Objective English for Competitive Examinations",
+            "Author": "H.M. Prasad"
+          },
+          {
+            "Name of the book": "How to Prepare for Verbal Ability and Reading Comprehension",
+            "Author": "Arun Sharma"
+          },
+          {
+            "Name of the book": "High School English Grammar and Composition",
+            "Author": "Wren & Martin"
+          },
+          {
+            "Name of the book": "Perfect Competitive English",
+            "Author": "V.K. Sinha"
+          },
+          {
+            "Name of the book": "Word Power Made Easy",
+            "Author": "Norman Lewis"
+          },
+          {
+            "Name of the book": "The King’s Grammar",
+            "Author": "S. K. Sinha"
+          }
+        ]
+      },
+      {
+        "caption": "Reasoning Books",
+        "headers": [
+          "Name of the book",
+          "Author"
+        ],
+        "rows": [
+          {
+            "Name of the book": "Analytical Reasoning",
+            "Author": "M K Pandey"
+          },
+          {
+            "Name of the book": "Verbal and Nonverbal Reasoning",
+            "Author": "R S Aggarwal"
+          },
+          {
+            "Name of the book": "Modern Approach to Verbal & Non-Verbal Reasoning",
+            "Author": "R S Aggarwal"
+          },
+          {
+            "Name of the book": "Logical Reasoning and Data Interpretation for CAT",
+            "Author": "Nishit K. Sinha"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Concept building is very important for general awareness section of this examination. Scoring in General Awareness gives an extra edge over others in the examination. The following books are recommended for this exam.NCERT from 6th to 12th standardsManorama Year bookIndia Year bookLucent’s General Knowledge"
+        ],
+        "rows": []
+      },
+      {
+        "caption": "Table",
+        "headers": [],
+        "rows": [
+          [
+            "Junior Statistical Officer (JSO)",
+            "Bachelor’s Degree in any subject from a recognized University or Institute with at least 60% Marks in Mathematics at 12th standard level(or)Bachelor’s Degree in any subject with Statistics as one of the subjects at degree level."
+          ],
+          [
+            "Assistant Audit Officer/ Assistant Accounts Officer (AAO)",
+            "Desirable Qualification:Any one of theseChartered AccountantCost & Management AccountantCompany SecretaryMasters in CommerceMasters in Business StudiesMasters in Business Administration (Finance)Masters in Business Economics.Essential Qualifications:Bachelor’s Degree in any subject from a"
+          ],
+          [
+            "Statistical Investigator Grade-II",
+            "Bachelor’s Degree in any subject with Statistics as one of the subjects from a recognized University or Institute. The candidates must have studied Statistics as a subject in all 3 years of the graduation course."
+          ],
+          [
+            "Assistant in National Company Law Appellate Tribunal (NCLAT)",
+            "Essential Qualifications:Bachelor’s Degree from a recognized University or InstituteDesirable Qualifications:Degree in law from a recognized university."
+          ],
+          [
+            "Research Assistant in National Human Rights Commission (NHRC)",
+            "Essential Qualifications:Bachelor’s Degree from a recognized University or InstituteDesirable Qualifications:Minimum one-year research experience in any recognized university (or) recognizedResearch Institution Degree in Law or Human Rights from a recognized university."
+          ],
+          [
+            "Other Post",
+            "Bachelor’s Degree in any discipline from a recognized University or equivalent"
+          ]
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Criteria",
+          "Male Candidates",
+          "Female Candidates"
+        ],
+        "rows": [
+          {
+            "Criteria": "Height",
+            "Male Candidates": "157.5 cms.",
+            "Female Candidates": "152 cms."
+          },
+          {
+            "Criteria": "Height",
+            "Male Candidates": "81 cms (fully expanded with a minimum expansion of 5 cm.)",
+            "Female Candidates": "--------"
+          },
+          {
+            "Criteria": "Weight",
+            "Male Candidates": "-------",
+            "Female Candidates": "48 Kgs"
+          },
+          {
+            "Criteria": "Exemptions",
+            "Male Candidates": "Height relaxable by 5 cms in the case of Garwalis, Assamese, Gorkhas and members of Scheduled Tribes.",
+            "Female Candidates": "Height relax able by 2.5 cms. Weight relax able by 2 Kg. for Gorkhas, Garhwali's,Assamese and members of Scheduled Tribes"
+          },
+          {
+            "Criteria": "",
+            "Male Candidates": "Physical Test",
+            "Female Candidates": ""
+          },
+          {
+            "Criteria": "Walking",
+            "Male Candidates": "1600 metres in 15 minutes",
+            "Female Candidates": "1 Km. in 20 minutes"
+          },
+          {
+            "Criteria": "Cycling",
+            "Male Candidates": "8 Kms. in 30 minutes",
+            "Female Candidates": "3 Kms. in 25 minutes."
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "The Staff Selection Commission conducts the SSC CGL exam to recruit candidates into various organizations, departments, offices under the Government of India. It is a national level exam and recruitment to Group B and Group C posts in government departments is done through this exam.",
+      "Candidate needs to be a citizen of India or a subject of Nepal or Bhutan",
+      "·         Candidate can also be a Tibetan refugee who arrived in India before January 1, 1962",
+      "·         Minimum age should be 18 years and maximum should be 32 years (age criteria depends on the post)",
+      "·         Educational Qualifications:"
+    ]
+  },
+  {
+    "slug": "ssc",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/ssc",
+    "title": "SSC CHSL (Combined Higher Secondary Level)",
+    "paragraphs_count": 148,
+    "tables_count": 4,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Tier 1 Exam Pattern",
+        "headers": [
+          "Section",
+          "Subject",
+          "No of Questions",
+          "Max Marks",
+          "Exam Duration"
+        ],
+        "rows": [
+          {
+            "Section": "Section 1",
+            "Subject": "General Intelligence",
+            "No of Questions": "25",
+            "Max Marks": "50",
+            "Exam Duration": "60 minutes (80 minutes for PWD)"
+          },
+          {
+            "Section": "Section 2",
+            "Subject": "General Awareness",
+            "No of Questions": "25",
+            "Max Marks": "50",
+            "Exam Duration": "-"
+          },
+          {
+            "Section": "Section 3",
+            "Subject": "Quantitative Aptitude",
+            "No of Questions": "25",
+            "Max Marks": "50",
+            "Exam Duration": "-"
+          },
+          {
+            "Section": "Section 4",
+            "Subject": "English Language",
+            "No of Questions": "25",
+            "Max Marks": "50",
+            "Exam Duration": "-"
+          },
+          {
+            "Section": "Total",
+            "Subject": "",
+            "No of Questions": "100",
+            "Max Marks": "200",
+            "Exam Duration": ""
+          }
+        ]
+      },
+      {
+        "caption": "Tier 1 Syllabus",
+        "headers": [
+          "General Intelligence",
+          "Quantitative Aptitude (Basic Arithmetic Skills)",
+          "English Language (Basic Knowledge)",
+          "General Awareness"
+        ],
+        "rows": [
+          {
+            "General Intelligence": "SimplificationLogical ReasoningAlphanumeric SeriesRanking/Direction/Alphabet TestSeating ArrangementPuzzleData Sufficiency",
+            "Quantitative Aptitude (Basic Arithmetic Skills)": "Profit and LossTime and DistanceSimple Interest & Compound InterestRatio and ProportionPercentageMensurationTime & WorkData Interpretation",
+            "English Language (Basic Knowledge)": "Reading ComprehensionCloze Test, Para jumblesActive and Passive VoiceError SpottingSynonyms/AntonymsSentence CorrectionIdioms/Phrases",
+            "General Awareness": "HistoryCultureGeographyEconomic SceneBooks and AuthorsAwards and HonorsScientific ResearchIndian PolityEconomy"
+          }
+        ]
+      },
+      {
+        "caption": "Tier 2 Exam Pattern",
+        "headers": [
+          "Session",
+          "Modules",
+          "Subject",
+          "Marks",
+          "Time"
+        ],
+        "rows": [
+          {
+            "Session": "Session I",
+            "Modules": "Module IModule II",
+            "Subject": "Mathematical AbilitiesReasoning and General Intelligence",
+            "Marks": "60*3 = 18030",
+            "Time": "1 hour"
+          },
+          {
+            "Session": "Session II",
+            "Modules": "Module IModule II",
+            "Subject": "English Language and ComprehensionGeneral Awareness",
+            "Marks": "40*3 = 12020",
+            "Time": "1 hour"
+          },
+          {
+            "Session": "Session III",
+            "Modules": "Module I",
+            "Subject": "Computer Knowledge Test",
+            "Marks": "15*3 = 45",
+            "Time": "15 minutes"
+          },
+          {
+            "Session": "Session IV",
+            "Modules": "Skill Test/Typing Test",
+            "Subject": "Part A – Skill Test for DEOs (Data Entry Operators)Part B – Typing Test for LDC/JSA",
+            "Marks": "-",
+            "Time": "15 minutes10 minutes"
+          }
+        ]
+      },
+      {
+        "caption": "Tier 2 Syllabus",
+        "headers": [
+          "Session IMathematical Abilities",
+          "Session IReasoning and General Intelligence",
+          "Session IIEnglish Language and Comprehension",
+          "Session IIGeneral Awareness",
+          "Session IIIComputer Knowledge Test"
+        ],
+        "rows": [
+          {
+            "Session IMathematical Abilities": "Number SystemsAverages, PercentagesRatio and ProportionSimple Interest & Compound InterestProfit and LossMixture and AlligationTime and DistanceTime and WorkMensurationTrigonometryStatistics and Probability.",
+            "Session IReasoning and General Intelligence": "Verbal and Non-Verbal ReasoningAnalytical ReasoningNumber SeriesLogical DeductionsSymbolic OperationsVenn DiagramsSpace OrientationSemantic ClassificationCritical Thinking, and Problem Solving.",
+            "Session IIEnglish Language and Comprehension": "VocabularyGrammar, Sentence StructureSynonyms/AntonymsSentence ImprovementCloze PassageSpot the ErrorFill in the BlanksActive/Passive VoiceIdioms/Phrases, etc.",
+            "Session IIGeneral Awareness": "Current AffairsIndian HistoryGeographyEconomyPolityScientific ResearchAwards and HonorsBooks and AuthorsGeneral Knowledge on India and its Neighboring Countries.",
+            "Session IIIComputer Knowledge Test": "Basic Computer KnowledgeInput/Output DevicesComputer MemoryOperating SystemsMS OfficeWeb Browsing, E-mailCybersecurityInternet SafetyNetworkingetc."
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "The SSC CHSL exam is conducted by the Staff Selection Commission to recruit candidates for various posts like Data Entry Operator (DEO), Lower Division Clerk (LDC), and Junior Secretariat Assistant (JSA). It is a great opportunity for candidates who have completed their 10+2 education and are looking for government jobs.",
+      "Section",
+      "Subject",
+      "No of Questions",
+      "Max Marks"
+    ]
+  },
+  {
+    "slug": "ibps",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/ibps",
+    "title": "IBPS Syllabus & Exam Pattern",
+    "paragraphs_count": 173,
+    "tables_count": 4,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Prelims Exam Pattern",
+        "headers": [
+          "S.No.",
+          "Name of Tests(Objective)",
+          "No. of Questions",
+          "Maximum Marks",
+          "Duration"
+        ],
+        "rows": [
+          {
+            "S.No.": "1",
+            "Name of Tests(Objective)": "English Language",
+            "No. of Questions": "30",
+            "Maximum Marks": "30",
+            "Duration": "20 minutes"
+          },
+          {
+            "S.No.": "2",
+            "Name of Tests(Objective)": "Numerical Ability",
+            "No. of Questions": "35",
+            "Maximum Marks": "35",
+            "Duration": "20 Minutes"
+          },
+          {
+            "S.No.": "3",
+            "Name of Tests(Objective)": "Reasoning Ability",
+            "No. of Questions": "35",
+            "Maximum Marks": "35",
+            "Duration": "20 minutes"
+          },
+          {
+            "S.No.": "",
+            "Name of Tests(Objective)": "Total",
+            "No. of Questions": "100",
+            "Maximum Marks": "100",
+            "Duration": "60 minutes"
+          }
+        ]
+      },
+      {
+        "caption": "Prelims Syllabus",
+        "headers": [
+          "Quantitative Ability Syllabus",
+          "Reasoning Syllabus",
+          "English Language Syllabus"
+        ],
+        "rows": [
+          {
+            "Quantitative Ability Syllabus": "Sequence & Series",
+            "Reasoning Syllabus": "Input-Output",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Ability Syllabus": "Time & Distance",
+            "Reasoning Syllabus": "Seating Arrangement",
+            "English Language Syllabus": "Error Detection, Error Sitting"
+          },
+          {
+            "Quantitative Ability Syllabus": "Mixtures & Allegations",
+            "Reasoning Syllabus": "Ranking/Direction/Alphabet Test",
+            "English Language Syllabus": "Para jumbles"
+          },
+          {
+            "Quantitative Ability Syllabus": "Mensuration  – Cylinder, Cone, Sphere",
+            "Reasoning Syllabus": "Puzzle",
+            "English Language Syllabus": "Paragraph Completion"
+          },
+          {
+            "Quantitative Ability Syllabus": "Permutation, Combination &Probability",
+            "Reasoning Syllabus": "Coding-Decoding",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Ability Syllabus": "Simple Interest & Com  und Interest & Surds & Indices",
+            "Reasoning Syllabus": "Data Sufficiency",
+            "English Language Syllabus": "Word Usage , Word-Swap"
+          },
+          {
+            "Quantitative Ability Syllabus": "Ratio & Portion, Percentage",
+            "Reasoning Syllabus": "Syllogism",
+            "English Language Syllabus": "Miscellaneous"
+          },
+          {
+            "Quantitative Ability Syllabus": "Work & Time",
+            "Reasoning Syllabus": "Inequalities",
+            "English Language Syllabus": "Fill in the blanks"
+          },
+          {
+            "Quantitative Ability Syllabus": "Data Interpretation",
+            "Reasoning Syllabus": "Tabulation",
+            "English Language Syllabus": "One word Substitution"
+          },
+          {
+            "Quantitative Ability Syllabus": "Number Systems",
+            "Reasoning Syllabus": "Blood Relations",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Ability Syllabus": "Simplification",
+            "Reasoning Syllabus": "Logical Reasoning",
+            "English Language Syllabus": "Reading Comprehension"
+          },
+          {
+            "Quantitative Ability Syllabus": "Profit & Loss",
+            "Reasoning Syllabus": "Alphanumeric Series",
+            "English Language Syllabus": "Cloze Test"
+          }
+        ]
+      },
+      {
+        "caption": "Mains Exam Pattern",
+        "headers": [
+          "S. No.",
+          "Name of test",
+          "No. of Questions",
+          "Max. Marks",
+          "Medium of Examination",
+          "Time Allotted"
+        ],
+        "rows": [
+          {
+            "S. No.": "1",
+            "Name of test": "Reasoning & Computer Aptitude(Section A and Section B)",
+            "No. of Questions": "40",
+            "Max. Marks": "60",
+            "Medium of Examination": "English & Hindi",
+            "Time Allotted": "60 minutes"
+          },
+          {
+            "S. No.": "2",
+            "Name of test": "English Language(Section A and Section B)",
+            "No. of Questions": "35",
+            "Max. Marks": "40",
+            "Medium of Examination": "English only",
+            "Time Allotted": "40 minutes"
+          },
+          {
+            "S. No.": "3",
+            "Name of test": "Data Analysis and Interpretation(Section A and Section B)",
+            "No. of Questions": "35",
+            "Max. Marks": "60",
+            "Medium of Examination": "English & Hindi",
+            "Time Allotted": "45 minutes"
+          },
+          {
+            "S. No.": "4",
+            "Name of test": "General, Economy/Banking Awareness",
+            "No. of Questions": "40",
+            "Max. Marks": "40",
+            "Medium of Examination": "English & Hindi",
+            "Time Allotted": "35 minutes"
+          },
+          {
+            "S. No.": "",
+            "Name of test": "Total",
+            "No. of Questions": "155",
+            "Max. Marks": "200",
+            "Medium of Examination": "180 minutes",
+            "Time Allotted": "60 minutes"
+          },
+          {
+            "S. No.": "",
+            "Name of test": "English Language (Letter Writing & Essay)",
+            "No. of Questions": "02",
+            "Max. Marks": "25",
+            "Medium of Examination": "English",
+            "Time Allotted": "30 minutes"
+          },
+          [
+            "",
+            "Total",
+            "157",
+            "225",
+            ""
+          ]
+        ]
+      },
+      {
+        "caption": "Mains Exam Syllabus",
+        "headers": [
+          "Quantitative Aptitude Syllabus",
+          "General Awareness Syllabus",
+          "Reasoning Syllabus",
+          "Computer Aptitude Syllabus",
+          "English Language Syllabus"
+        ],
+        "rows": [
+          {
+            "Quantitative Aptitude Syllabus": "Simplification",
+            "General Awareness Syllabus": "Financial Awareness",
+            "Reasoning Syllabus": "Verbal Reasoning",
+            "Computer Aptitude Syllabus": "Internet",
+            "English Language Syllabus": "Reading Comprehension"
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Average",
+            "General Awareness Syllabus": "Current Affairs",
+            "Reasoning Syllabus": "Syllogism",
+            "Computer Aptitude Syllabus": "Memory",
+            "English Language Syllabus": "Vocabulary"
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Percentage",
+            "General Awareness Syllabus": "General Knowledge",
+            "Reasoning Syllabus": "Circular Seating Arrangement",
+            "Computer Aptitude Syllabus": "Keyboard Shortcuts",
+            "English Language Syllabus": "Grammar"
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Mixture and Allegations",
+            "General Awareness Syllabus": "Static Awareness",
+            "Reasoning Syllabus": "Code Inequalities",
+            "Computer Aptitude Syllabus": "Computer Abbreviation",
+            "English Language Syllabus": "One word Substitution"
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Ratio and Percentage",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "Linear Seating Arrangement",
+            "Computer Aptitude Syllabus": "Microsoft Office",
+            "English Language Syllabus": "Verbal Ability"
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Data Interpretation",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "Double Lineup",
+            "Computer Aptitude Syllabus": "Computer Hardware",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Mensuration and Geometry",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "Scheduling",
+            "Computer Aptitude Syllabus": "Computer Software",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Problems of Ages",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "Directions and Distances",
+            "Computer Aptitude Syllabus": "Computer Fundamentals /Terminologies",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Profit and Loss",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "Ordering and Ranking",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Number Series",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "Data Sufficiency",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Data Sufficiency",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "Coding and Decoding",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Time and Work",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Number System",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Number System",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Linear Equation",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Permutation and Combination",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          },
+          {
+            "Quantitative Aptitude Syllabus": "Probability",
+            "General Awareness Syllabus": "",
+            "Reasoning Syllabus": "",
+            "Computer Aptitude Syllabus": "",
+            "English Language Syllabus": ""
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "IBPS 2024 official notification has been released by IBPS for the recruitment of 3955 Probationary Officers on 1st August 2024. IBPS Recruitment is conducted in three stages- Prelims, Mains, and Interview. The candidate have to qualify in each stage to get shortlisted for the vacancies. To ace IBPS    Exam, it is necessary to know the Exam pattern and detailed syllabus of this exam. This will help you to prepare judiciously for IBPS    Exam. Let’s understand theIBPS    Syllabus and Exam Pattern 2024one by one.",
+      "Candidates who are going to appear for IBPS 2024 must know the exam pattern to prepare in the right direction. We have discussed below the IBPS Exam Pattern 2024.",
+      "IBPS Preliminary Exam Pattern 2024",
+      "TheIBPS preliminary examination will beconducted online and candidates are allocated a total duration of1 hourto complete the preliminary exam. It consists of3 sections with a total of 100 questionsand a maximum score of100 marks. There is negative marking in IBPS    preliminary exam and0.25 marks are deducted for each wrong answerattempted by a candidate. It is necessary to clear the cut-off in all 3 sections to qualify for the IBPS    Main exam.",
+      "Name of Tests(Objective)"
+    ]
+  },
+  {
+    "slug": "sbi",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/sbi",
+    "title": "SBI PO",
+    "paragraphs_count": 35,
+    "tables_count": 3,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "S.No.",
+          "Name of Subjects",
+          "No. of Questions",
+          "Maximum Marks"
+        ],
+        "rows": [
+          {
+            "S.No.": "123",
+            "Name of Subjects": "English LanguageQuantitative AptitudeReasoning Ability",
+            "No. of Questions": "403030",
+            "Maximum Marks": "403030"
+          },
+          {
+            "S.No.": "",
+            "Name of Subjects": "Total",
+            "No. of Questions": "100",
+            "Maximum Marks": "100"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "SL. No.",
+          "Name of Test",
+          "No. of Questions",
+          "Max. Marks",
+          "Duration"
+        ],
+        "rows": [
+          {
+            "SL. No.": "I",
+            "Name of Test": "Reasoning & Computer Aptitude",
+            "No. of Questions": "40",
+            "Max. Marks": "60",
+            "Duration": "50 minutes"
+          },
+          {
+            "SL. No.": "II",
+            "Name of Test": "Data Analysis & Interpretation",
+            "No. of Questions": "30",
+            "Max. Marks": "60",
+            "Duration": "45 minutes"
+          },
+          {
+            "SL. No.": "III",
+            "Name of Test": "General Awareness / Economy / Banking Knowledge",
+            "No. of Questions": "60",
+            "Max. Marks": "60",
+            "Duration": "45 minutes"
+          },
+          {
+            "SL. No.": "IV",
+            "Name of Test": "English Language",
+            "No. of Questions": "40",
+            "Max. Marks": "20",
+            "Duration": "40 minutes"
+          },
+          {
+            "SL. No.": "",
+            "Name of Test": "Total",
+            "No. of Questions": "170",
+            "Max. Marks": "200",
+            "Duration": "3 Hours"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Prelims Syllabus",
+          "Mains Syllabus"
+        ],
+        "rows": [
+          {
+            "Prelims Syllabus": "Quantitative Aptitude:Simplification & ApproximationProfit & LossMixtures & Allegations'Permutation, Combination & ProbabilityWork & TimeData Interpretation (Pie Charts, Bar Graphs, etc.)Simple Interest & Compound InterestMensuration (Cylinder, Cone, Sphere)Reasoning Ability:Logical ReasoningAlphanumeric SeriesDirections & DistancesSyllogismBlood RelationsSeating Arrangements (Linear & Circular)Coding-DecodingData SufficiencyEnglish Language:Reading ComprehensionCloze TestPara JumblesSentence CorrectionVocabulary (Synonyms, Antonyms",
+            "Mains Syllabus": "Data Analysis & Interpretation:Tabular GraphLine GraphsBar GraphsPie ChartsCaseletsProbability & Permutation/CombinationReasoning & Computer Aptitude:Verbal ReasoningSyllogismCircular & Linear Seating ArrangementBlood RelationsInput-OutputComputer AbbreviationsInternet, Networking, Operating SystemsGeneral/Economy/Banking Awareness:Current Affairs (National & International)Banking TerminologiesFinancial AwarenessStatic GK (Geography, History, Polity)English Language:Reading ComprehensionGrammar & Sentence ImprovementError SpottingCloze TestPara JumblesDescriptive Test:Letter WritingEssay Writing"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "Name of Subjects",
+      "No. of Questions",
+      "Maximum Marks",
+      "English Language",
+      "Quantitative Aptitude"
+    ]
+  },
+  {
+    "slug": "mes",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/mes",
+    "title": "MES",
+    "paragraphs_count": 342,
+    "tables_count": 7,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "Paper No.",
+          "No. of Question",
+          "Total Marks",
+          "Subject",
+          "Duration",
+          "Medium",
+          "Nature of Paper"
+        ],
+        "rows": [
+          {
+            "Paper No.": "Paper I",
+            "No. of Question": "100",
+            "Total Marks": "200",
+            "Subject": "General Studies",
+            "Duration": "Two Hours",
+            "Medium": "Marathi  & English",
+            "Nature of Paper": "Objective Type"
+          },
+          {
+            "Paper No.": "Paper II",
+            "No. of Question": "80",
+            "Total Marks": "200",
+            "Subject": "C - Sat",
+            "Duration": "Two Hours",
+            "Medium": "Marathi  & English",
+            "Nature of Paper": "Objective Type"
+          }
+        ]
+      },
+      {
+        "caption": "Civil Engineering Mains",
+        "headers": [
+          "Subject",
+          "Mark",
+          "Standard",
+          "Medium",
+          "Time Duration",
+          "Question Pattern"
+        ],
+        "rows": [
+          {
+            "Subject": "Civil Engineering Paper No-1",
+            "Mark": "200",
+            "Standard": "BE (Civil)",
+            "Medium": "English",
+            "Time Duration": "3 Hours",
+            "Question Pattern": "Descriptive/ Traditional"
+          },
+          {
+            "Subject": "Civil Engineering Paper No- 2",
+            "Mark": "200",
+            "Standard": "BE (Civil)",
+            "Medium": "English",
+            "Time Duration": "3 Hours",
+            "Question Pattern": "Descriptive/ Traditional"
+          }
+        ]
+      },
+      {
+        "caption": "Electrical Engineering Mains",
+        "headers": [
+          "Subject",
+          "Mark",
+          "Standard",
+          "Medium",
+          "Time Duration",
+          "Question Pattern"
+        ],
+        "rows": [
+          {
+            "Subject": "Electrical Engineering Paper No-1",
+            "Mark": "200",
+            "Standard": "BE (Electrical)",
+            "Medium": "English",
+            "Time Duration": "3 Hours",
+            "Question Pattern": "Descriptive/ Traditional"
+          },
+          {
+            "Subject": "Electrical Engineering Paper No- 2",
+            "Mark": "200",
+            "Standard": "BE (Electrical)",
+            "Medium": "English",
+            "Time Duration": "3 Hours",
+            "Question Pattern": "Descriptive/ Traditional"
+          }
+        ]
+      },
+      {
+        "caption": "Mechanical Engineering Mains",
+        "headers": [
+          "Subject",
+          "Mark",
+          "Standard",
+          "Medium",
+          "Time Duration",
+          "Question Pattern"
+        ],
+        "rows": [
+          {
+            "Subject": "Mechanical Engineering Paper No-1",
+            "Mark": "200",
+            "Standard": "BE (Mechanical)",
+            "Medium": "English",
+            "Time Duration": "3 Hours",
+            "Question Pattern": "Descriptive/ Traditional"
+          },
+          {
+            "Subject": "Mechanical Engineering Paper No-2",
+            "Mark": "200",
+            "Standard": "BE (Mechanical)",
+            "Medium": "English",
+            "Time Duration": "3 Hours",
+            "Question Pattern": "Descriptive/ Traditional"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Name of Books",
+          "Author"
+        ],
+        "rows": [
+          {
+            "Name of Books": "Numerical Method",
+            "Author": "B.S. Grewal"
+          },
+          {
+            "Name of Books": "Strength of material",
+            "Author": "R.S. Ramamurtham, RK Bansal"
+          },
+          {
+            "Name of Books": "Theory Of structure",
+            "Author": "R.S. Ramamurtham"
+          },
+          {
+            "Name of Books": "Structural Analysis",
+            "Author": "B.S. Grewal"
+          },
+          {
+            "Name of Books": "Steel Structure",
+            "Author": "B.C. Punmia"
+          },
+          {
+            "Name of Books": "Cri Cal Path Method",
+            "Author": "Seetharaman"
+          },
+          {
+            "Name of Books": "Design Of RCC 1",
+            "Author": "SS Bhavika, Shah And gore"
+          },
+          {
+            "Name of Books": "Design Of RCC 2",
+            "Author": "Pillai And Menon"
+          },
+          {
+            "Name of Books": "Bridge Engineering",
+            "Author": "Rangwala, SP Bindra"
+          },
+          {
+            "Name of Books": "Building Material",
+            "Author": "S.K Duggal, Rangwala"
+          },
+          {
+            "Name of Books": "Building Planning and construcon",
+            "Author": "S.K Duggal, Ringwald"
+          },
+          {
+            "Name of Books": "Concrete Tech",
+            "Author": "MS Shetty"
+          },
+          {
+            "Name of Books": "Prestressed Concrete",
+            "Author": "Krishna Raju"
+          },
+          {
+            "Name of Books": "Geotech",
+            "Author": "Arora"
+          },
+          {
+            "Name of Books": "Surveying",
+            "Author": "BC punmia"
+          },
+          {
+            "Name of Books": "Fluid Mechanics",
+            "Author": "Bansal, PN Modi"
+          },
+          {
+            "Name of Books": "Iringa on Engineering",
+            "Author": "SK Garg"
+          },
+          {
+            "Name of Books": "Highway",
+            "Author": "Justo and khanna"
+          },
+          {
+            "Name of Books": "Tunnel Engineering",
+            "Author": "SC Saxena, Srinivasan"
+          },
+          {
+            "Name of Books": "Es ma on Cos ng",
+            "Author": "BN datta, Rangwala"
+          },
+          {
+            "Name of Books": "Hydrology",
+            "Author": "SK garg"
+          },
+          {
+            "Name of Books": "Environmental Engineering",
+            "Author": "SK garg"
+          },
+          {
+            "Name of Books": "Constructor Management & Accounts",
+            "Author": "Vazrani & Chandola"
+          },
+          {
+            "Name of Books": "Construcon Management & Accounts",
+            "Author": "H. Singh- (TMH)"
+          },
+          {
+            "Name of Books": "Es' ma ng Cos ng & Speciﬁca on in Civil Engineering",
+            "Author": "M.Chakrabor"
+          },
+          {
+            "Name of Books": "Es' ma ng Cos ng & Speciﬁca on in Civil Engineering",
+            "Author": "S. Dutta"
+          },
+          {
+            "Name of Books": "Construcon Equipment",
+            "Author": "Dr. Mahesh Varma."
+          },
+          {
+            "Name of Books": "Construcon Planning & Equipment",
+            "Author": "Purity Me. Graw Hill"
+          },
+          {
+            "Name of Books": "Construcon Planning & Equipment",
+            "Author": "Satya Narayanın &Sushma Saxena"
+          },
+          {
+            "Name of Books": "Construction Management & Equipment",
+            "Author": "Subhash Sharma & Khanna."
+          },
+          {
+            "Name of Books": "10. PERT & CPM",
+            "Author": "Dr. P.N. Modi."
+          },
+          {
+            "Name of Books": "11. Construction Management, equipment & Accounts(Hindi)",
+            "Author": "M.R. Choudhary"
+          },
+          {
+            "Name of Books": "Surveying Vol. I & II",
+            "Author": "B.C. Purnima T.P. Kanetkar"
+          },
+          {
+            "Name of Books": "Surveying",
+            "Author": "Devid Clark"
+          },
+          {
+            "Name of Books": "Limit State Design of Steel Structure",
+            "Author": "Dr.V.L. Shah & Prof. Veena Gore, Subramanian"
+          },
+          {
+            "Name of Books": "Water Supply Engineering",
+            "Author": "S.K. Garg"
+          },
+          {
+            "Name of Books": "Water Supply & Sanitary Engineering",
+            "Author": "Ringwald"
+          },
+          {
+            "Name of Books": "Water Supply Engineering",
+            "Author": "B.C. Punmia"
+          },
+          {
+            "Name of Books": "Sanitary Engineering",
+            "Author": "S.K. Garg"
+          },
+          {
+            "Name of Books": "Sanitary Engineering",
+            "Author": "Ringwald B.C. Purnima"
+          },
+          {
+            "Name of Books": "Water Supply & Sanitary Engineering",
+            "Author": "G.S. Birde & J.S.Birde"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Name of Books",
+          "Author"
+        ],
+        "rows": [
+          {
+            "Name of Books": "Electrical Engineering",
+            "Author": "J.B. Gupta"
+          },
+          {
+            "Name of Books": "Power System Engineering",
+            "Author": "N. V. N. K. Sarma"
+          },
+          {
+            "Name of Books": "Control Systems",
+            "Author": "Ogata"
+          },
+          {
+            "Name of Books": "Electrical Circuits",
+            "Author": "Charles K. Alexanderand Ma hew N. O."
+          },
+          {
+            "Name of Books": "Signals and Systems",
+            "Author": "AlanV. Oppenheim"
+          },
+          {
+            "Name of Books": "Electromagnet Fields",
+            "Author": "William Hayt"
+          },
+          {
+            "Name of Books": "Power Electronics",
+            "Author": "Mohan, Undeland, and Robbins"
+          },
+          {
+            "Name of Books": "Digital Electronics",
+            "Author": "M. Morris Mano"
+          },
+          {
+            "Name of Books": "Engineering Mathemacs",
+            "Author": "B.S. Grewal"
+          },
+          {
+            "Name of Books": "Machine Design",
+            "Author": "Sharma and Agarwal"
+          },
+          {
+            "Name of Books": "Power System Protecꢁon",
+            "Author": "K. R. Padiyar"
+          },
+          {
+            "Name of Books": "Renewable Energy",
+            "Author": "Godfrey Boyle"
+          },
+          {
+            "Name of Books": "Analog and Digital Communicaon",
+            "Author": "Sam Shanmugam"
+          },
+          {
+            "Name of Books": "Modern Control Engineering",
+            "Author": "Ogata"
+          },
+          {
+            "Name of Books": "Electrical Engineering: Conceptsand Applicaons",
+            "Author": "John G. Hayes"
+          },
+          {
+            "Name of Books": "Advanced Control Theory",
+            "Author": "A. K. Gupta"
+          },
+          {
+            "Name of Books": "High Voltage Engineering",
+            "Author": "M. S. Naidu and V."
+          },
+          {
+            "Name of Books": "Electrical Power Systems",
+            "Author": "C.L. Wadhwa"
+          },
+          {
+            "Name of Books": "Microprocessors and",
+            "Author": "A.P. Malvinoand."
+          },
+          {
+            "Name of Books": "Microcontrollers",
+            "Author": "J. Leach"
+          },
+          {
+            "Name of Books": "High Voltage Engineering",
+            "Author": "M. S. Naidu and V."
+          },
+          {
+            "Name of Books": "Electrical Engineering Objective",
+            "Author": "R.K. Rajput"
+          },
+          {
+            "Name of Books": "Objective Electrical Technology",
+            "Author": "V.K. Mehta and RohitMehta"
+          },
+          {
+            "Name of Books": "Practice Book on ElectricalEngineering for Competitive Exams",
+            "Author": "P. Kumar"
+          },
+          {
+            "Name of Books": "Competitive Exam Electrical Engineering",
+            "Author": "S.K. Bha acharya"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Name of Books",
+          "Author"
+        ],
+        "rows": [
+          {
+            "Name of Books": "Engineering Mechanics",
+            "Author": "S. Timoshenko and D.H. Young"
+          },
+          {
+            "Name of Books": "Strength of Materials",
+            "Author": "S. Ramamrutham"
+          },
+          {
+            "Name of Books": "Thermodynamics",
+            "Author": "P.K. Nag"
+          },
+          {
+            "Name of Books": "Fluid Mechanics",
+            "Author": "Frank M. White"
+          },
+          {
+            "Name of Books": "Machine Design",
+            "Author": "Sharma and Agarwal"
+          },
+          {
+            "Name of Books": "Manufacturing Technology",
+            "Author": "P.N. Rao"
+          },
+          {
+            "Name of Books": "Heat Transfer",
+            "Author": "S.P. Sukhatme"
+          },
+          {
+            "Name of Books": "Theory of Machines",
+            "Author": "J. Lal"
+          },
+          {
+            "Name of Books": "MechanicalVibra ons",
+            "Author": "S. S. Rao"
+          },
+          {
+            "Name of Books": "Produc on Engineering",
+            "Author": "R.K. Jain"
+          },
+          {
+            "Name of Books": "Mechanical Engineering Objective Type Question",
+            "Author": "R.K. Rajput"
+          },
+          {
+            "Name of Books": "A Textbook of Thermal Engineering",
+            "Author": "R.S. Khurmi"
+          },
+          {
+            "Name of Books": "Refrigeration And Air Conditioning",
+            "Author": "C.P. Arora"
+          },
+          {
+            "Name of Books": "Engineering Mechanics",
+            "Author": "S. Timoshenko and D.H. Young"
+          },
+          {
+            "Name of Books": "Engineering Materials",
+            "Author": "Raghavan"
+          },
+          {
+            "Name of Books": "Automobile Engineering",
+            "Author": "S. Balbir Singh"
+          },
+          {
+            "Name of Books": "Mechanical Engineering for MPSC",
+            "Author": "M.P. Nair"
+          },
+          {
+            "Name of Books": "Objective Mechanical Engineering",
+            "Author": "S.K. Gupta"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "Candidates having a Graduation Degree in (1) BE /B.Tech. Automobile Engineering / BE/B.Tech. Power / BE/B.Tech. Production/BE/B.Tech. Metallurgy and Material / BE/B.Tech. Textile / BE Information",
+      "Technology / BE Instrumentation /B.Sc. Biotechnology / B. Pharmacy /B.Tech. Food Science from any recognized University in India will be eligible for this post.",
+      "Candidates having Graduation Degree in B.SC (Agricultural Biotechnology) / B.SC (Agribusiness management) / B.SC (Home Science) / B.Tech (Food System) / B.F.S / B.S.C (Horticulture) from any recognized University in India will be eligible for this post.",
+      "Candidates having Graduation Degree inB.SC(Agricultural Biotechnology) /B.SC(Agribusiness management) /B.SC(Home Science) / B.Tech (Food System) / B.F.S / B.S.C (Horticulture) from any recognized University in India will be eligible for this post.",
+      "Candidates having Graduation Degree inB.SC(Agricultural Biotechnology) /B.SC(Agribusiness management) /B.SC(Home Science) / B.Tech (Food System) / B.F.S / B.S.C (Horticulture) from any recognized University in India will be eligible for this post."
+    ]
+  },
+  {
+    "slug": "Ca",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/Ca",
+    "title": "CA Exam",
+    "paragraphs_count": 121,
+    "tables_count": 10,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "CA Exam Features",
+          "Details"
+        ],
+        "rows": [
+          {
+            "CA Exam Features": "Exam Name",
+            "Details": "Chartered Accountancy (CA) exam"
+          },
+          {
+            "CA Exam Features": "Exam Conducting Body",
+            "Details": "ICAI"
+          },
+          {
+            "CA Exam Features": "Exam Level",
+            "Details": "CA FoundationCA IntermediateCA Final"
+          },
+          {
+            "CA Exam Features": "Mode of Exams",
+            "Details": "Computer test mode based"
+          },
+          {
+            "CA Exam Features": "Exam Frequency",
+            "Details": "CA Foundation: Thrice a YearCA Intermediate: Thrice a YearCA Final: Twice a Year"
+          },
+          {
+            "CA Exam Features": "Total Marks per Paper",
+            "Details": "100"
+          },
+          {
+            "CA Exam Features": "Level of Difficulty",
+            "Details": "Tough"
+          },
+          {
+            "CA Exam Features": "Number of Attempts",
+            "Details": "Multiple"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Sr. No",
+          "Paper Name",
+          "Marks",
+          "Type of Questions"
+        ],
+        "rows": [
+          {
+            "Sr. No": "1",
+            "Paper Name": "Accounting",
+            "Marks": "100",
+            "Type of Questions": "Subjective"
+          },
+          {
+            "Sr. No": "1",
+            "Paper Name": "Business Laws",
+            "Marks": "100",
+            "Type of Questions": "Subjective"
+          },
+          {
+            "Sr. No": "1",
+            "Paper Name": "Quantitative Aptitude:Part A: Business MathematicsPart B: Logical ReasoningPart C: Statistics",
+            "Marks": "100",
+            "Type of Questions": "Objective – 40 MarksObjective – 20 MarksObjective – 40 Marks"
+          },
+          {
+            "Sr. No": "1",
+            "Paper Name": "Business Economics",
+            "Marks": "100",
+            "Type of Questions": "Objective"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Paper",
+          "Subject",
+          "Marks Distribution"
+        ],
+        "rows": [
+          {
+            "Paper": "Paper 1",
+            "Subject": "Advanced Accounting",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 2",
+            "Subject": "Corporate Laws",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 3",
+            "Subject": "Cost and Management Accounting",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 4",
+            "Subject": "Taxation",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 5",
+            "Subject": "Auditing and Code of Ethics",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 6",
+            "Subject": "Financial Management",
+            "Marks Distribution": "35 Marks (Subjective)15 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 7",
+            "Subject": "Strategic Management",
+            "Marks Distribution": "35 Marks (Subjective)15 Marks (Objective)"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Paper",
+          "Subject",
+          "Marks Distribution"
+        ],
+        "rows": [
+          {
+            "Paper": "Paper 1",
+            "Subject": "Financial Reporting",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 2",
+            "Subject": "Advanced Financial Management (AFM)",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 3",
+            "Subject": "Advanced Auditing and Professional Ethics",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 4",
+            "Subject": "Multi-disciplinary case study with Strategic Management",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 5",
+            "Subject": "Direct Tax Laws and International Taxation",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 6",
+            "Subject": "Indirect Tax Laws",
+            "Marks Distribution": "70 Marks (Subjective)30 Marks (Objective)"
+          },
+          {
+            "Paper": "Paper 7",
+            "Subject": "Strategic Management",
+            "Marks Distribution": "35 Marks (Subjective)15 Marks (Objective)"
+          }
+        ]
+      },
+      {
+        "caption": "Paper 1",
+        "headers": [
+          "Module-1",
+          "Module-2"
+        ],
+        "rows": [
+          {
+            "Module-1": "Chapter 1: Theoretical FrameworkChapter 2: Accounting ProcessChapter 3: Bank Reconciliation StatementChapter 4: InventoriesChapter 5: Concept and Accounting of DepreciationChapter 6: Accounting for Special Transactions",
+            "Module-2": "Chapter 7: Preparation of Final Accounts of Sole ProprietorsChapter 8: Partnership AccountsChapter 9: Financial Statements of Not-for-Profit OrganizationsChapter 10: Company Accounts"
+          }
+        ]
+      },
+      {
+        "caption": "Paper 2",
+        "headers": [
+          "Paper 1 Sec A: Business Laws",
+          "Paper 2 Sec B: Business Correspondence and Reporting"
+        ],
+        "rows": [
+          {
+            "Paper 1 Sec A: Business Laws": "Chapter 1: The Indian Contract Act, 1872Chapter 2: The Sale of Goods Act, 1930Chapter 3: The Indian Partnership Act, 1932Chapter 4: The Limited Liability Partnership Act, 2008Chapter 5: The Companies Act, 2013",
+            "Paper 2 Sec B: Business Correspondence and Reporting": "Chapter 1: CommunicationChapter 2: Sentence Types and Direct-Indirect, Active-Passive SpeechChapter 3: VocabularyChapter 4: Comprehension PassagesChapter 5: Note MakingChapter 6: Introduction to Basics of WritingChapter 7: Precis WritingChapter 8: Article WritingChapter 9: Report WritingChapter 10: Writing Formal Letters and Official CommunicationChapter 11: Writing Formal MailsChapter 12: Resume WritingChapter 13: Meetings"
+          }
+        ]
+      },
+      {
+        "caption": "Paper 3",
+        "headers": [
+          "Business Mathematics",
+          "Logical Reasoning",
+          "Statistics"
+        ],
+        "rows": [
+          {
+            "Business Mathematics": "Chapter 1: Ratio and Proportion, Indices, LogarithmsChapter 2: Equations and MatricesChapter 3: Linear InequalitiesChapter 4: Time Value of MoneyChapter 5: Basic Concepts of Permutations and CombinationsChapter 6: Sequence and Series – Arithmetic and Geometric ProgressionsChapter 7: Sets, Functions and RelationsChapter 8: Basic Concepts of Differential and Integral Calculus",
+            "Logical Reasoning": "Chapter 9: Number Series, Coding and Decoding and Odd Man OutChapter 10: Direction TestsChapter 11: Seating ArrangementsChapter 12: Blood RelationsChapter 13: Syllogism",
+            "Statistics": "Chapter 14: Statistical Description of DataChapter 15: Measures of Central Tendency and DispersionChapter 16 : ProbabilityChapter 17: Theoretical DistributionsChapter 18: Correlation And RegressionChapter 19: Index Number and Time Series"
+          }
+        ]
+      },
+      {
+        "caption": "Paper 4",
+        "headers": [],
+        "rows": [
+          [
+            "Chapter 1: Nature & Scope of Business EconomicsChapter 2: Theory of Demand and SupplyChapter 3: Theory of Production and CostChapter 4: Meaning and Types of MarketsChapter 5: Business Cycles",
+            "Chapter 1: Business and Commercial Knowledge – An IntroductionChapter 2: Business EnvironmentChapter 3: Business OrganizationsChapter 4: Government Policies for Business GrowthChapter 5: Organizations Facilitating BusinessChapter 6: Common Business Terminologies"
+          ]
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Group I",
+          "Group II"
+        ],
+        "rows": [
+          {
+            "Group I": "Paper – 1: Advanced AccountingPaper – 2: Corporate and Other LawsPaper – 3: Taxation",
+            "Group II": "Paper – 4: Cost and Management AccountingPaper – 5: Auditing and EthicsPaper – 6: Financial Management and Strategic Management"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Paper",
+          "Paper Name"
+        ],
+        "rows": [
+          {
+            "Paper": "Paper 1",
+            "Paper Name": "Financial Reporting"
+          },
+          {
+            "Paper": "Paper 2",
+            "Paper Name": "Advanced Financial Management"
+          },
+          {
+            "Paper": "Paper 3",
+            "Paper Name": "Advanced Auditing, Assurance And Professional Ethics"
+          },
+          {
+            "Paper": "Paper 3",
+            "Paper Name": "Direct Tax Laws & InternationalTaxation"
+          },
+          {
+            "Paper": "Paper 5",
+            "Paper Name": "Indirect Tax LawsPart I: Goods and Services TaxPart II: Costumes & FTPTaxation"
+          },
+          {
+            "Paper": "Paper 6",
+            "Paper Name": "Integrated Business Solutions(Multi-Disciplinary Case Study With Strategic Management)"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "The ICAI CA Exam Pattern is meticulously crafted by the Institute of Chartered Accountants of India (ICAI) to equip students with skills in accounting, taxation calculations, and legal paperwork. The course spans three levels: CA Foundation, CA Intermediate, and CA Final, each requiring sequential completion for Chartered Accountant certification.",
+      "These levels feature distinct exam patterns and varying difficulty levels. Given the challenging nature of CA papers, the pass rates are notably low, prompting candidates to attempt multiple times to clear each level.",
+      "ICAICA examsfor Foundation and Intermediate are held thrice a year, in May-June, September, and January, and Final exams are held twice a year in May and November. It is conducted in a computer-based format over four days, with one paper per day. This article delves into the specifics of the ICAI CA exam pattern 2025.",
+      "The ICAI has changed the CA Exam Pattern in its latest scheme, bringing about a significant transformation. For bothCA IntermediateandCA Final, the number of exams has been streamlined, decreasing from 8 to 6. Additionally, multiple-choice questions (MCQs) have been incorporated into all subjects at the CA Intermediate and CA Final levels.",
+      "CA Exam Features"
+    ]
+  },
+  {
+    "slug": "gnm",
+    "lang": "en",
+    "url": "https://www.sambodhiacademy.com/en/exams/gnm",
+    "title": "Sambodhi School of Nursing (GNM/ANM)",
+    "paragraphs_count": 162,
+    "tables_count": 10,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "First Year",
+        "headers": [
+          "Paper",
+          "Subjects",
+          "Total Marks",
+          "Internal Assessment",
+          "Council/Board Examination",
+          "Weightage",
+          "Duration of Examination (Hrs.)"
+        ],
+        "rows": [
+          {
+            "Paper": "1",
+            "Subjects": "Bio SciencesAnatomy & PhysiologyMicrobiology",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Weightage": "65%35%",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "2",
+            "Subjects": "Behavioral SciencesPsychologySociology",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Weightage": "65%35%",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "3",
+            "Subjects": "Foundation of NursingFundamentals of NursingFirst Aid",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Weightage": "",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "4",
+            "Subjects": "Community Health NursingCHN-IEnvironmental HygieneHealth Education & Communication SkillsNutrition",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Weightage": "",
+            "Duration of Examination (Hrs.)": ""
+          },
+          {
+            "Paper": "Practical-I",
+            "Subjects": "Fundamental of Nursing",
+            "Total Marks": "100",
+            "Internal Assessment": "50",
+            "Council/Board Examination": "50",
+            "Weightage": "",
+            "Duration of Examination (Hrs.)": ""
+          }
+        ]
+      },
+      {
+        "caption": "Second Year",
+        "headers": [
+          "Paper",
+          "Subjects",
+          "Total Marks",
+          "Internal Assessment",
+          "Council/Board Examination",
+          "Duration of Examination (Hrs.)"
+        ],
+        "rows": [
+          {
+            "Paper": "1",
+            "Subjects": "Medical-Surgical Nursing-I",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "2",
+            "Subjects": "Medical-Surgical Nursing-II",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "3",
+            "Subjects": "Mental Health Nursing",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "4",
+            "Subjects": "Child Health Nursing",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "Practical-I",
+            "Subjects": "Medical-Surgical Nursing",
+            "Total Marks": "100",
+            "Internal Assessment": "50",
+            "Council/Board Examination": "50",
+            "Duration of Examination (Hrs.)": ""
+          },
+          {
+            "Paper": "Practical-II",
+            "Subjects": "Child Health Nursing",
+            "Total Marks": "100",
+            "Internal Assessment": "50",
+            "Council/Board Examination": "50",
+            "Duration of Examination (Hrs.)": ""
+          },
+          {
+            "Paper": "Practical-III*",
+            "Subjects": "Mental Health Nursing",
+            "Total Marks": "100",
+            "Internal Assessment": "50",
+            "Council/Board Examination": "50",
+            "Duration of Examination (Hrs.)": ""
+          }
+        ]
+      },
+      {
+        "caption": "Third Year Part-I",
+        "headers": [
+          "Paper",
+          "Subjects",
+          "Total Marks",
+          "Internal Assessment",
+          "Council/Board Examination",
+          "Duration of Examination (Hrs.)"
+        ],
+        "rows": [
+          {
+            "Paper": "1",
+            "Subjects": "Midwifery & Gynecological Nursing",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "2",
+            "Subjects": "Community Health Nursing-II",
+            "Total Marks": "100",
+            "Internal Assessment": "25",
+            "Council/Board Examination": "75",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "",
+            "Subjects": "Midwifery",
+            "Total Marks": "100",
+            "Internal Assessment": "50",
+            "Council/Board Examination": "50",
+            "Duration of Examination (Hrs.)": ""
+          },
+          {
+            "Paper": "Practical-II",
+            "Subjects": "Community Health Nursing",
+            "Total Marks": "100",
+            "Internal Assessment": "50",
+            "Council/Board Examination": "50",
+            "Duration of Examination (Hrs.)": ""
+          }
+        ]
+      },
+      {
+        "caption": "Third Year Part-II (School Examination)",
+        "headers": [
+          "Paper",
+          "Subjects",
+          "Total Marks",
+          "Term Assessment",
+          "School Exam",
+          "Duration of Examination (Hrs.)"
+        ],
+        "rows": [
+          {
+            "Paper": "1",
+            "Subjects": "Nursing Education and Introduction to Research and Statistics",
+            "Total Marks": "100",
+            "Term Assessment": "50",
+            "School Exam": "50",
+            "Duration of Examination (Hrs.)": "3"
+          },
+          {
+            "Paper": "2",
+            "Subjects": "Professional Trends & Adjustment, Nursing Administration, and Ward Management",
+            "Total Marks": "100",
+            "Term Assessment": "50",
+            "School Exam": "50",
+            "Duration of Examination (Hrs.)": "3"
+          }
+        ]
+      },
+      {
+        "caption": "First Year",
+        "headers": [
+          "Sr. No.",
+          "Course Title and Description",
+          "Classroom HoursTheory",
+          "ExperienceDemonstration",
+          "Total Hours"
+        ],
+        "rows": [
+          {
+            "Sr. No.": "I",
+            "Course Title and Description": "Community Health Nursing",
+            "Classroom HoursTheory": "120",
+            "ExperienceDemonstration": "50",
+            "Total Hours": "70"
+          },
+          {
+            "Sr. No.": "II",
+            "Course Title and Description": "Health PromotionA. NutritionB. Human Body and HygieneC. Environmental SanitationD. Mental Health",
+            "Classroom HoursTheory": "12035352030",
+            "ExperienceDemonstration": "7530201510",
+            "Total Hours": "19565553540"
+          },
+          {
+            "Sr. No.": "III",
+            "Course Title and Description": "Primary Health Care Nursing - IA. Infection and ImmunizationB. Communicable DiseaseC. Community Health ProblemsD. Primary Medical CareE. First Aid and Referral",
+            "Classroom HoursTheory": "13025403020",
+            "ExperienceDemonstration": "1502025502035",
+            "Total Hours": "2804565804060"
+          },
+          {
+            "Sr. No.": "VI",
+            "Course Title and Description": "Child Health Nursing",
+            "Classroom HoursTheory": "75",
+            "ExperienceDemonstration": "110",
+            "Total Hours": "185"
+          }
+        ]
+      },
+      {
+        "caption": "First Year - Total Marks (First Year) / External Assessment: 500 / Internal Assessment: 300 / Grand Total for First Year: 800 Marks",
+        "headers": [
+          "Paper",
+          "Course",
+          "External Assessment",
+          "Internal Assessment",
+          "Duration"
+        ],
+        "rows": [
+          {
+            "Paper": "Theory Paper-I",
+            "Course": "Community Health Nursing",
+            "External Assessment": "75",
+            "Internal Assessment": "25",
+            "Duration": "3 hrs."
+          },
+          {
+            "Paper": "Theory Paper-II",
+            "Course": "Health Promotion",
+            "External Assessment": "75",
+            "Internal Assessment": "25",
+            "Duration": "3 hrs."
+          },
+          {
+            "Paper": "Theory Paper-III",
+            "Course": "Primary Health Care Nursing",
+            "External Assessment": "75",
+            "Internal Assessment": "25",
+            "Duration": "3 hrs."
+          },
+          {
+            "Paper": "Theory Paper-IV",
+            "Course": "Child Health Nursing",
+            "External Assessment": "75",
+            "Internal Assessment": "25",
+            "Duration": "3 hrs."
+          },
+          {
+            "Paper": "Practical I",
+            "Course": "Community Health Nursing and Health Promotion",
+            "External Assessment": "100",
+            "Internal Assessment": "100",
+            "Duration": "-"
+          },
+          {
+            "Paper": "Practical II",
+            "Course": "Child Health Nursing",
+            "External Assessment": "100",
+            "Internal Assessment": "100",
+            "Duration": "-"
+          }
+        ]
+      },
+      {
+        "caption": "Second Year (First Six Months) Total = 880 hours",
+        "headers": [
+          "Sr. No.",
+          "Course Title and Description",
+          "Theory",
+          "Demonstration",
+          "Total",
+          "Hospital",
+          "Community",
+          "Total"
+        ],
+        "rows": [
+          {
+            "Sr. No.": "V",
+            "Course Title and Description": "Midwifery",
+            "Theory": "200",
+            "Demonstration": "160",
+            "Total": "380",
+            "Hospital": "220",
+            "Community": "160"
+          },
+          {
+            "Sr. No.": "VI",
+            "Course Title and Description": "Health Centre Management",
+            "Theory": "40",
+            "Demonstration": "40",
+            "Total": "60",
+            "Hospital": "-",
+            "Community": "60"
+          },
+          {
+            "Sr. No.": "",
+            "Course Title and Description": "Total Hours",
+            "Theory": "240",
+            "Demonstration": "200",
+            "Total": "440",
+            "Hospital": "220",
+            "Community": "220"
+          }
+        ]
+      },
+      {
+        "caption": "Second Year (Internship - six months)",
+        "headers": [
+          "Sr. No.",
+          "Nursing CoursesCourse title and description",
+          "ExperienceHospital"
+        ],
+        "rows": [
+          {
+            "Sr. No.": "I",
+            "Nursing CoursesCourse title and description": "MidwiferyAntenatal WardIntranatal/Labour RoomPostnatal WardNeonatal Care Unit",
+            "ExperienceHospital": "240401204040"
+          },
+          {
+            "Sr. No.": "II",
+            "Nursing CoursesCourse title and description": "Child Health",
+            "ExperienceHospital": "80"
+          },
+          {
+            "Sr. No.": "III",
+            "Nursing CoursesCourse title and description": "Community Health and Health CenterManagement",
+            "ExperienceHospital": "160"
+          },
+          {
+            "Sr. No.": "",
+            "Nursing CoursesCourse title and description": "Total hours",
+            "ExperienceHospital": "160"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "First Year",
+          "Second Year",
+          "Third Year"
+        ],
+        "rows": [
+          {
+            "First Year": "Biosciences: Anatomy, Physiology, Microbiology.Behavioral Sciences: Sociology, Psychology.Fundamentals of Nursing: Patient assessment, communication, first aid.Community Health Nursing-I: Environmental hygiene, health education, nutrition.English.Computer Education.",
+            "Second Year": "Medical-Surgical Nursing-I and II.Mental Health Nursing.Child Health Nursing.",
+            "Third Year": "Midwifery and Gynecological Nursing.Community Health Nursing-II.Nursing Education and Introduction to Research: Professional trends, ward management."
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "Paper",
+          "Course",
+          "External Assessment",
+          "Internal Assessment",
+          "Duration"
+        ],
+        "rows": [
+          {
+            "Paper": "Theory Paper-V",
+            "Course": "Midwifery",
+            "External Assessment": "75",
+            "Internal Assessment": "25",
+            "Duration": "3 hrs."
+          },
+          {
+            "Paper": "Theory Paper-VI",
+            "Course": "Health Centre Management",
+            "External Assessment": "75",
+            "Internal Assessment": "25",
+            "Duration": "3 hrs."
+          },
+          {
+            "Paper": "Practical III",
+            "Course": "Midwifery",
+            "External Assessment": "100",
+            "Internal Assessment": "100",
+            "Duration": "-"
+          },
+          {
+            "Paper": "Practical III",
+            "Course": "Community Health Nursing and Health Promotion",
+            "External Assessment": "100",
+            "Internal Assessment": "100",
+            "Duration": "-"
+          },
+          {
+            "Paper": "Practical IV",
+            "Course": "Primary Health Care Nursing and Health Center Management",
+            "External Assessment": "100",
+            "Internal Assessment": "100",
+            "Duration": "3 hrs."
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "10+2 with English and must have obtained a minimum of 40% at the qualifying examination and English individually from any recognized board. Candidates from State Open School recognized by State Government and National Institute of Open School (NIOS) recognized by Central Government are also eligible. However, Science is preferable.",
+      "10+2 with English having 40% of marks in vocational ANM course from the school recognized by Indian Nursing Council.",
+      "10+2 with English having 40% of marks in Vocational Stream-Health care Science from a recognized CBSE board/State/Centre.",
+      "Registered ANM with pass mark.",
+      "For foreign nationals, the entry qualification equivalency (i.e., 12th standard) will be obtained by the Association of Indian Universities, New Delhi. The Institution and State Nursing Council must ensure that the qualification and eligibility are equivalent to the above."
+    ]
+  },
+  {
+    "slug": "mpsc-rajyaseva",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/mpsc-rajyaseva",
+    "title": "महाराष्ट्र लोकसेवा आयोग राज्यसेवा परीक्षा",
+    "paragraphs_count": 78,
+    "tables_count": 2,
+    "optional_subjects_count": 26,
+    "interview_points_count": 15,
+    "tables": [
+      {
+        "caption": "पूर्व परीक्षा",
+        "headers": [
+          "पेपर क्र.",
+          "प्रश्नसंख्या",
+          "एकूण गुण",
+          "विषय",
+          "माध्यम",
+          "कालावधी",
+          "पेपरचे स्वरूप"
+        ],
+        "rows": [
+          {
+            "पेपर क्र.": "पेपर I",
+            "प्रश्नसंख्या": "100",
+            "एकूण गुण": "200",
+            "विषय": "सामान्य अध्ययन",
+            "माध्यम": "इंग्रजी आणि मराठी",
+            "कालावधी": "2 तास",
+            "पेपरचे स्वरूप": "वस्तुनिष्ठ"
+          },
+          {
+            "पेपर क्र.": "पेपर II",
+            "प्रश्नसंख्या": "80",
+            "एकूण गुण": "200",
+            "विषय": "C-SAT (सामान्य क्षमता चाचणी)",
+            "माध्यम": "इंग्रजी आणि मराठी",
+            "कालावधी": "2 तास",
+            "पेपरचे स्वरूप": "वस्तुनिष्ठ"
+          }
+        ]
+      },
+      {
+        "caption": "मुख्य परीक्षा",
+        "headers": [
+          "विषय",
+          "गुण",
+          "कालावधी",
+          "माध्यम",
+          "स्वरूप"
+        ],
+        "rows": [
+          {
+            "विषय": "पेपर 1 – मराठी",
+            "गुण": "300",
+            "कालावधी": "3 तास",
+            "माध्यम": "मराठी",
+            "स्वरूप": "पात्रता (25% गुण आवश्यक)"
+          },
+          {
+            "विषय": "पेपर 2 – इंग्रजी",
+            "गुण": "300",
+            "कालावधी": "3 तास",
+            "माध्यम": "इंग्रजी",
+            "स्वरूप": "पात्रता (25% गुण आवश्यक)"
+          },
+          {
+            "विषय": "पेपर 3 – निबंध",
+            "गुण": "250",
+            "कालावधी": "3 तास",
+            "माध्यम": "मराठी / इंग्रजी",
+            "स्वरूप": "गुणवत्तेसाठी गणले जाईल"
+          },
+          {
+            "विषय": "पेपर 4 – सामान्य अध्ययन 1",
+            "गुण": "250",
+            "कालावधी": "3 तास",
+            "माध्यम": "मराठी / इंग्रजी",
+            "स्वरूप": "गुणवत्तेसाठी गणले जाईल"
+          },
+          {
+            "विषय": "पेपर 5 – सामान्य अध्ययन 2",
+            "गुण": "250",
+            "कालावधी": "3 तास",
+            "माध्यम": "मराठी / इंग्रजी",
+            "स्वरूप": "गुणवत्तेसाठी गणले जाईल"
+          },
+          {
+            "विषय": "पेपर 6 – सामान्य अध्ययन 3",
+            "गुण": "250",
+            "कालावधी": "3 तास",
+            "माध्यम": "मराठी / इंग्रजी",
+            "स्वरूप": "गुणवत्तेसाठी गणले जाईल"
+          },
+          {
+            "विषय": "पेपर 7 – सामान्य अध्ययन 4",
+            "गुण": "250",
+            "कालावधी": "3 तास",
+            "माध्यम": "मराठी / इंग्रजी",
+            "स्वरूप": "गुणवत्तेसाठी गणले जाईल"
+          },
+          {
+            "विषय": "पेपर 8 – ऐच्छिक विषय पेपर 1",
+            "गुण": "250",
+            "कालावधी": "3 तास",
+            "माध्यम": "मराठी / इंग्रजी",
+            "स्वरूप": "गुणवत्तेसाठी गणले जाईल"
+          },
+          {
+            "विषय": "पेपर 9 – ऐच्छिक विषय पेपर 2",
+            "गुण": "250",
+            "कालावधी": "3 तास",
+            "माध्यम": "मराठी / इंग्रजी",
+            "स्वरूप": "गुणवत्तेसाठी गणले जाईल"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [
+      "कृषी",
+      "पशुपालन आणि पशुवैद्यकीय विज्ञान",
+      "मानववंशशास्त्र",
+      "वनस्पतिशास्त्र",
+      "रसायनशास्त्र",
+      "सिव्हिल अभियांत्रिकी",
+      "वाणिज्य आणि लेखा",
+      "अर्थशास्त्र",
+      "इलेक्ट्रिकल अभियांत्रिकी",
+      "भूगोल",
+      "भूविज्ञान",
+      "इतिहास",
+      "कायदा",
+      "व्यवस्थापन",
+      "मराठी साहित्य",
+      "गणित",
+      "यांत्रिक अभियांत्रिकी",
+      "वैद्यकीय विज्ञान",
+      "तत्त्वज्ञान",
+      "भौतिकशास्त्र",
+      "राज्यशास्त्र आणि आंतरराष्ट्रीय संबंध",
+      "मानसशास्त्र",
+      "सार्वजनिक प्रशासन",
+      "समाजशास्त्र",
+      "सांख्यिकी",
+      "प्राणीशास्त्र"
+    ],
+    "interview_details": [
+      "कालावधी: 20 ते 30 मिनिटेमंडळ : 3 ते 5 सदस्य, ज्यामध्ये विविध क्षेत्रांतील तज्ज्ञांचा समावेश असतो.",
+      "उद्दिष्ट : उमेदवाराचा व्यक्तिमत्व, सामान्य ज्ञान, निर्णयक्षमतेची कौशल्ये आणि संवाद कौशल्ये यांची चाचणी घेणे.",
+      "मुलाखतीतील महत्त्वाचे घटक",
+      "प्रशासनिक व सामाजिक जाण",
+      "महाराष्ट्र व भारताच्या प्रशासकीय रचनेविषयी समज",
+      "सामाजिक प्रश्न आणि उपाययोजना",
+      "सरकारी धोरणे आणि उपक्रम",
+      "चालू घडामोडी",
+      "राज्य, राष्ट्रीय आणि आंतरराष्ट्रीय घडामोडींचे सखोल ज्ञान आवश्यक",
+      "महाराष्ट्रातील सामाजिक, आर्थिक व राजकीय विषयांवर चर्चा",
+      "नवीन तंत्रज्ञान आणि विज्ञानविषयक प्रगती",
+      "विचार करण्याची पद्धत आणि विश्लेषणात्मक कौशल्ये",
+      "दिलेल्या परिस्थितीवर उपाययोजना सुचविण्याची क्षमता",
+      "तर्कशक्ती, व्यवहारज्ञान आणि प्रसंगानुसार निर्णय घेण्याचे कौशल्य तपासले जाते.",
+      "एखाद्या मुद्द्यावर निरपेक्ष आणि संतुलित दृष्टिकोन ठेवण्याची क्षमता"
+    ],
+    "overview": [
+      "उमेदवारभारतीय नागरिक असावा.",
+      "महाराष्ट्रातीलस्थायी रहिवाशांना प्राधान्य दिले जाऊ शकते.",
+      "शैक्षणिक पात्रता:",
+      "उमेदवाराकडेसांख्यिकी, गणित किंवा अर्थशास्त्र (सांख्यिकी प्रमुख विषय म्हणून) मध्ये पदवी किंवा पदव्युत्तर पदवीअसावी.",
+      "सांख्यिकीसंदर्भातील अतिरिक्त प्रमाणपत्रे असल्यासअधिक फायदेशीर ठरेल."
+    ]
+  },
+  {
+    "slug": "mpsc-group-bc",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/mpsc-group-bc",
+    "title": "महाराष्ट्र सार्वजनिक सेवा आयोग गट ब आणि गट क परीक्षा",
+    "paragraphs_count": 66,
+    "tables_count": 5,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "गट ब पूर्व परीक्षा",
+        "headers": [
+          "विषय",
+          "प्रश्नांची संख्या",
+          "गुण",
+          "माध्यम",
+          "कालावधी"
+        ],
+        "rows": [
+          {
+            "विषय": "चालू घडामोडीराज्यघटनाइतिहासभूगोलअर्थशास्त्रसामान्य विज्ञानबुद्धिमत्ता व अंकगणित",
+            "प्रश्नांची संख्या": "100",
+            "गुण": "100",
+            "माध्यम": "मराठी आणि इंग्रजी",
+            "कालावधी": "1 तास"
+          }
+        ]
+      },
+      {
+        "caption": "गट ब मुख्य परीक्षा",
+        "headers": [
+          "पेपर",
+          "विषय",
+          "गुन",
+          "प्रश्नांची संख्या",
+          "कालावधी"
+        ],
+        "rows": [
+          {
+            "पेपर": "पेपर I",
+            "विषय": "मराठीइंग्रजीसामान्य ज्ञान",
+            "गुन": "100",
+            "प्रश्नांची संख्या": "60 (मराठी)40 (इंग्रजी)50 (सामान्य ज्ञान)",
+            "कालावधी": "1 तास"
+          },
+          {
+            "पेपर": "पेपर II",
+            "विषय": "सामान्य क्षमता चाचणी व विषयविशिष्ट ज्ञान",
+            "गुन": "200",
+            "प्रश्नांची संख्या": "100",
+            "कालावधी": "1 तास"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "",
+          "पूर्व",
+          "मुख्य"
+        ],
+        "rows": [
+          {
+            "": "प्रश्नांची संख्या",
+            "पूर्व": "100",
+            "मुख्य": "200"
+          },
+          {
+            "": "एकूण गुण",
+            "पूर्व": "100",
+            "मुख्य": "400"
+          },
+          {
+            "": "प्रश्नांचा प्रकार",
+            "पूर्व": "बहुपर्यायी प्रकार",
+            "मुख्य": "बहुपर्यायी प्रकार"
+          },
+          {
+            "": "कालावधी",
+            "पूर्व": "1 तास",
+            "मुख्य": "2 तास"
+          }
+        ]
+      },
+      {
+        "caption": "गट क पूर्व परीक्षा अभ्यासक्रम",
+        "headers": [
+          "सामान्य ज्ञान",
+          "मराठी भाषा",
+          "इंग्रजी भाषा",
+          "गणित",
+          "बुद्धिमत्ता चाचणी"
+        ],
+        "rows": [
+          {
+            "सामान्य ज्ञान": "भारतीय इतिहास  आणि महाराष्ट्राचा इतिहास (History of Maharashtra).भूगोल – भारतीय भूगोल, महाराष्ट्राचा भूगोल, जलवायू, आणि नैसर्गिक संसाधने.भारतीय राज्यघटना आणि राजकारण .भारतीय अर्थव्यवस्था, आर्थिक सुधारणांचा इतिहास, कृषी आणि उद्योग.सामान्य विज्ञान – भौतिकशास्त्र, रसायनशास्त्र, जीवशास्त्र.सध्याच्या घडामोडी – राष्ट्रीय आणि आंतरराष्ट्रीय घडामोडी, क्रीडा, पुरस्कार, महाराष्ट्र संबंधित घडामोडी.",
+            "मराठी भाषा": "वाचन समजशब्दशुद्धता, वाचन आणि समज.वाक्यरचना आणि व्याकरणशब्दप्रयोग",
+            "इंग्रजी भाषा": "वाचन समज.शब्दशुद्धता, वाक्यरचना आणि व्याकरण.वाचन आणि समज.",
+            "गणित": "अंकगणित, गुणाकार, विभाग, टक्केवारी, सरासरी.त्रिकोणमिती, संख्या प्रणाली.",
+            "बुद्धिमत्ता चाचणी": "अंकगणितीय विचार, वाद-विवाद, वॅन डायग्राम्स.दिशा-आंतर, संज्ञक समज."
+          }
+        ]
+      },
+      {
+        "caption": "गट क मुख्य परीक्षा अभ्यासक्रम",
+        "headers": [
+          "पॅपर I",
+          "पॅपर II"
+        ],
+        "rows": [
+          {
+            "पॅपर I": "मराठीव्याकरण, शब्दप्रयोग, मुहावरे, वचनप्रयोग.वाक्य सुधारणा.वाचन समज.निबंध लेखन.इंग्रजीव्याकरण, वाक्य रचना.मुहावरे आणि वचनप्रयोग.शब्दसंग्रह.वाचन समज.सामान्य ज्ञानसध्याच्या घडामोडी  – राष्ट्रीय आणि आंतरराष्ट्रीयक्रीडा, विज्ञान आणि तंत्रज्ञान.पर्यावरण आणि पारिस्थितिकी .महत्त्वाच्या व्यक्तिमत्त्वांबद्दल माहिती.",
+            "पॅपर II": "कारकून-टायपिस्टटायपिंग ज्ञान .कार्यालय प्रशासन आणि फाइलिंग.मूलभूत संगणक ज्ञान.कर सहाय्यकलेखा आणि वाणिज्य .भारतीय कर प्रणाली .अंकगणित आणि सांख्यिकी.इतर पदांसाठीसंबंधित पदांसाठी विशिष्ट विषय .सामान्य प्रशासनिक ज्ञान."
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "गट ब परीक्षा विविध प्रशासकीय पदांसाठी घेतली जाते जसे की सहायक विभाग अधिकारी (Assistant Section Officer), उपनिरीक्षक (Sub-Inspector), आणि राज्य कर निरीक्षक (State Tax Inspector). या परीक्षेच्या अभ्यासक्रमात खालील गोष्टींचा समावेश आहे.सामान्य ज्ञान, सध्याच्या घडामोडी, इतिहास, भूगोल, भारतीय राज्यघटना, आर्थिकशास्त्र, संख्यात्मक क्षमता परीक्षा दोन टप्प्यात विभागलेली आहे: प्रिलिम्स, मेंस",
+      "MPSC Group C परीक्षा महाराष्ट्र सरकारच्या विविध कार्यालयांमध्ये टॅक्स सहाय्यक, क्लर्क-टायपिस्ट आणि इतर पदांसाठी घेतली जाते. यामध्ये प्रिलिम्स आणि मेंस चाचण्या असतात. अभ्यासक्रमाची सुस्पष्ट माहिती असणे आवश्यक आहे, जेणेकरून उमेदवार तयारी सुसंगत आणि सुसंस्कृत करू शकतील.",
+      "प्रिलिम्स :सामान्य ज्ञान आणि सध्याच्या घडामोडी, गणित, मराठी व्याकरण, साहित्य व वाचन",
+      "मेंस :तांत्रिक / विशेष विषय, निबंध लेखन, लेखन कौशल्य आणि समज",
+      "प्रश्नांची संख्या"
+    ]
+  },
+  {
+    "slug": "policeBharti",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/policeBharti",
+    "title": "महाराष्ट्र राज्य पोलीस भारती",
+    "paragraphs_count": 48,
+    "tables_count": 5,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "शिपाई भारती",
+        "headers": [
+          "विषय",
+          "एकूण प्रश्न",
+          "एकूण गुण",
+          "कालावधी"
+        ],
+        "rows": [
+          {
+            "विषय": "गणित",
+            "एकूण प्रश्न": "25 प्रश्न",
+            "एकूण गुण": "25 गुण",
+            "कालावधी": "90 मिनिटे"
+          },
+          {
+            "विषय": "बुद्धिमत्ता चाचणी",
+            "एकूण प्रश्न": "25 प्रश्न",
+            "एकूण गुण": "25 गुण",
+            "कालावधी": "-"
+          },
+          {
+            "विषय": "मराठी व्याकरण",
+            "एकूण प्रश्न": "25 प्रश्न",
+            "एकूण गुण": "25 गुण",
+            "कालावधी": "-"
+          },
+          {
+            "विषय": "सामान्य ज्ञान आणि चालू घडामोडी",
+            "एकूण प्रश्न": "25 प्रश्न",
+            "एकूण गुण": "25 गुण",
+            "कालावधी": "-"
+          },
+          {
+            "विषय": "एकूण",
+            "एकूण प्रश्न": "100 प्रश्न",
+            "एकूण गुण": "100 गुण",
+            "कालावधी": "90 मिनिटे"
+          }
+        ]
+      },
+      {
+        "caption": "चालक भारती",
+        "headers": [
+          "परीक्षेचे प्रकार",
+          "गुण"
+        ],
+        "rows": [
+          {
+            "परीक्षेचे प्रकार": "लाइट मोटर वाहन ड्रायव्हिंग चाचणी",
+            "गुण": "25 गुण"
+          },
+          {
+            "परीक्षेचे प्रकार": "जीप प्रकार वाहन ड्रायव्हिंग चाचणी",
+            "गुण": "25 गुण"
+          },
+          {
+            "परीक्षेचे प्रकार": "एकूण कौशल्य चाचणी",
+            "गुण": "50 गुण"
+          },
+          {
+            "परीक्षेचे प्रकार": "कौशल्य चाचणी उत्तीर्ण करण्यासाठी लागणारी किमान गुणसंख्या",
+            "गुण": "40% गुण"
+          }
+        ]
+      },
+      {
+        "caption": "अभ्यासक्रम",
+        "headers": [
+          "विषय",
+          "महत्त्वाचे मुद्दे"
+        ],
+        "rows": [
+          {
+            "विषय": "गणित",
+            "महत्त्वाचे मुद्दे": "संख्याशास्त्र, LCM & HCF, दशांश, नफा-तोटा, सरासरी, टक्केवारी, भूमिती"
+          },
+          {
+            "विषय": "बुद्धिमत्ता चाचणी",
+            "महत्त्वाचे मुद्दे": "संख्या मालिकाएं, व्हेन्न आरेख, दिशा आणि अंतर, आकृती प्रतिबिंब, तार्किक विधान"
+          },
+          {
+            "विषय": "मराठी व्याकरण",
+            "महत्त्वाचे मुद्दे": "वाक्य संरचना, संधी, पर्यायवाची शब्द, विपरीत शब्द, मुहावरे आणि वाक्प्रचार"
+          },
+          {
+            "विषय": "सामान्य ज्ञान आणि चालू घडामोडी",
+            "महत्त्वाचे मुद्दे": "इतिहास, भूगोल, भारतीय घटकसंविधान, सामान्य विज्ञान, संगणक ज्ञान"
+          }
+        ]
+      },
+      {
+        "caption": "शारीरिक मानक चाचणी",
+        "headers": [
+          "वर्ग",
+          "पुरुष उमेदवार",
+          "महिला उमेदवार"
+        ],
+        "rows": [
+          {
+            "वर्ग": "उंची",
+            "पुरुष उमेदवार": "किमान 165 सें.मी.",
+            "महिला उमेदवार": "किमान 155 सें.मी."
+          },
+          {
+            "वर्ग": "छाती",
+            "पुरुष उमेदवार": "79 सें.मी. (विस्तारपूर्वक) ते 84 सें.मी. (विस्तारित)",
+            "महिला उमेदवार": "---"
+          }
+        ]
+      },
+      {
+        "caption": "पुरुष उमेदवार",
+        "headers": [
+          "पुरुष उमेदवार",
+          "महिला उमेदवार"
+        ],
+        "rows": [
+          {
+            "पुरुष उमेदवार": "1600 मीटर धावणे100 मीटर धावणेशॉटपुट (7.260 किलो)",
+            "महिला उमेदवार": "800 मीटर धावणे100 मीटर धावणेशॉटपुट (4 किलो)"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "एकूण प्रश्न",
+      "एकूण गुण",
+      "कालावधी",
+      "25 प्रश्न",
+      "25 गुण"
+    ]
+  },
+  {
+    "slug": "upsc",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/upsc",
+    "title": "संघ लोक सेवा आयोग (UPSC)",
+    "paragraphs_count": 166,
+    "tables_count": 2,
+    "optional_subjects_count": 25,
+    "interview_points_count": 27,
+    "tables": [
+      {
+        "caption": "पूर्व परीक्षेचे स्वरूप",
+        "headers": [
+          "पेपर",
+          "प्रकार",
+          "प्रश्नसंख्या",
+          "एकूण गुण",
+          "कालावधी",
+          "नकारात्मक गुणदंड"
+        ],
+        "rows": [
+          {
+            "पेपर": "सामान्य अध्ययन I(General Studies I)",
+            "प्रकार": "वस्तुनिष्ठ",
+            "प्रश्नसंख्या": "100",
+            "एकूण गुण": "200",
+            "कालावधी": "2 तास",
+            "नकारात्मक गुणदंड": "होय"
+          },
+          {
+            "पेपर": "सामान्य अध्ययन II(C-SAT)",
+            "प्रकार": "वस्तुनिष्ठ",
+            "प्रश्नसंख्या": "80",
+            "एकूण गुण": "200",
+            "कालावधी": "2 तास",
+            "नकारात्मक गुणदंड": "होय"
+          },
+          {
+            "पेपर": "एकूण गुण",
+            "प्रकार": "(GS Paper II हा पात्रता स्वरूपाचा असून किमान 33% गुण आवश्यक आहेत)",
+            "प्रश्नसंख्या": "-",
+            "एकूण गुण": "400",
+            "कालावधी": "-",
+            "नकारात्मक गुणदंड": "-"
+          }
+        ]
+      },
+      {
+        "caption": "यू.पी.एस.सी मुख्य परीक्षेचे स्वरूप",
+        "headers": [
+          "पेपर",
+          "विषय",
+          "पेपरचा प्रकार",
+          "वेळ",
+          "एकूण गुण"
+        ],
+        "rows": [
+          {
+            "पेपर": "पेपर अ",
+            "विषय": "अनिवार्य भारतीय भाषा",
+            "पेपरचा प्रकार": "पात्रता (किमान 75 गुण आवश्यक, म्हणजेच 25%)",
+            "वेळ": "3 तास",
+            "एकूण गुण": "300"
+          },
+          {
+            "पेपर": "पेपर ब",
+            "विषय": "इंग्रजी",
+            "पेपरचा प्रकार": "पात्रता (किमान 75 गुण आवश्यक, म्हणजेच 25%)",
+            "वेळ": "3 तास",
+            "एकूण गुण": "300"
+          },
+          {
+            "पेपर": "पेपर I",
+            "विषय": "निबंध लेखन",
+            "पेपरचा प्रकार": "अंतिम गुणवत्ता यादीसाठी (गुण मोजले जातील)",
+            "वेळ": "3 तास",
+            "एकूण गुण": "250"
+          },
+          {
+            "पेपर": "पेपर II",
+            "विषय": "सामान्य अध्ययन I",
+            "पेपरचा प्रकार": "अंतिम गुणवत्ता यादीसाठी",
+            "वेळ": "3 तास",
+            "एकूण गुण": "250"
+          },
+          {
+            "पेपर": "पेपर III",
+            "विषय": "सामान्य अध्ययन II",
+            "पेपरचा प्रकार": "अंतिम गुणवत्ता यादीसाठी",
+            "वेळ": "3 तास",
+            "एकूण गुण": "250"
+          },
+          {
+            "पेपर": "पेपर IV",
+            "विषय": "सामान्य अध्ययन III",
+            "पेपरचा प्रकार": "अंतिम गुणवत्ता यादीसाठी",
+            "वेळ": "3 तास",
+            "एकूण गुण": "250"
+          },
+          {
+            "पेपर": "पेपर V",
+            "विषय": "सामान्य अध्ययन IV",
+            "पेपरचा प्रकार": "अंतिम गुणवत्ता यादीसाठी",
+            "वेळ": "3 तास",
+            "एकूण गुण": "250"
+          },
+          {
+            "पेपर": "पेपर VI",
+            "विषय": "ऐच्छिक विषय - I",
+            "पेपरचा प्रकार": "अंतिम गुणवत्ता यादीसाठी",
+            "वेळ": "3 तास",
+            "एकूण गुण": "250"
+          },
+          {
+            "पेपर": "पेपर VII",
+            "विषय": "ऐच्छिक विषय - II",
+            "पेपरचा प्रकार": "अंतिम गुणवत्ता यादीसाठी",
+            "वेळ": "3 तास",
+            "एकूण गुण": "250"
+          },
+          {
+            "पेपर": "एकूण गुण",
+            "विषय": "",
+            "पेपरचा प्रकार": "",
+            "वेळ": "",
+            "एकूण गुण": "1750"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [
+      "कृषी",
+      "प्राणीसंगोपन आणि पशुवैद्यक शास्त्र",
+      "मानवशास्त्र",
+      "वनस्पतिशास्त्र",
+      "रसायनशास्त्र",
+      "नागरी अभियांत्रिकी",
+      "वाणिज्य आणि लेखाशास्त्र",
+      "अर्थशास्त्र",
+      "विद्युत अभियांत्रिकी",
+      "भूगोल",
+      "भूविज्ञान",
+      "इतिहास",
+      "कायदा",
+      "व्यवस्थापन",
+      "गणित",
+      "यांत्रिक अभियांत्रिकी",
+      "वैद्यकीय शास्त्र",
+      "तत्त्वज्ञान",
+      "भौतिकशास्त्र",
+      "राज्यशास्त्र आणि आंतरराष्ट्रीय संबंध",
+      "मानसशास्त्र",
+      "सार्वजनिक प्रशासन",
+      "समाजशास्त्र",
+      "संख्याशास्त्र",
+      "प्राणीशास्त्र"
+    ],
+    "interview_details": [
+      "नागरी सेवा मुलाखत, ज्यालाव्यक्तिमत्व चाचणीदेखील म्हणतात, हा UPSC नागरी सेवा परीक्षा (CSE) चा अंतिम टप्पा आहे. या टप्प्यात275 गुणअसतात, आणि अंतिम गुणवत्ता यादीमुख्य परीक्षा (1750 गुण) + मुलाखत (275 गुण)यांच्या आधारे तयार केली जाते.",
+      "मुलाखतीचे उद्दिष्ट",
+      "ही मुलाखत खालील बाबींचे मूल्यांकन करण्यासाठी घेतली जाते:व्यक्तिमत्व गुणधर्मजसे की आत्मविश्वास, संवाद कौशल्ये आणि निर्णयक्षमताप्रशासनिक सेवांसाठी उपयुक्तता(IAS, IPS, IFS इत्यादी)तार्किक विचार, नेतृत्वगुण आणि समस्या सोडवण्याची क्षमतासामान्य जागरूकता, संतुलित दृष्टिकोन आणि नैतिक मूल्ये",
+      "मुलाखत मंडळ",
+      "UPSC द्वारे नियुक्त 5 सदस्यीय पॅनेलमुलाखत घेतो",
+      "UPSC सदस्य अध्यक्ष (Chairperson) असतो",
+      "इतर सदस्य विविध क्षेत्रातील तज्ज्ञ असतात",
+      "मुलाखतीचा कालावधी:30-40 मिनिटे",
+      "मुलाखतीचा प्रारूप",
+      "ही मुलाखतव्यक्तिमत्व मूल्यमापनावरआधारित असते, केवळ ज्ञानावर नाही. प्रश्न खालील विषयांवर विचारले जातात:DAF (Detailed Application Form)– शैक्षणिक पार्श्वभूमी, छंद, कामाचा अनुभव इ.सध्याच्या घडामोडी व सामान्य जागरूकता– राष्ट्रीय व आंतरराष्ट्रीय विषय",
+      "स्थितीजन्य व नैतिक द्वंद्व (Ethical Dilemmas)– निर्णयक्षमता तपासण्यासाठीसेवा प्राधान्य (Service Preference)– IAS, IPS, IFS यासंबंधी",
+      "राज्य व मूळ गावाशी संबंधित प्रश्न– स्थानिक भाषा, संस्कृती, परंपर",
+      "मुलाखतीतील सामान्य विषय",
+      "DAF वरील प्रश्न(बायोडाटा, शिक्षण, छंद, यश)सध्याच्या घडामोडी व सरकारी धोरणे(अर्थव्यवस्था, प्रशासन, कायदे)पर्यायी विषय व पदवी शिक्षणाशी संबंधित प्रश्नस्थितीजन्य आणि नैतिक प्रश्न (Ethics Case Studies)राज्य-विशिष्ट प्रश्न(मूळ गाव, स्थानिक समस्या, परंपरा)व्यक्तिमत्व व वर्तनविषयक प्रश्न(गुण-दोष, नेतृत्व कौशल्य)",
+      "मुलाखतीसाठी महत्त्वाचे टिप्स",
+      "DAF नीट वाचा आणि सखोल तयारी करासध्याच्या घडामोडींवर (गेल्या 6 महिन्यांच्या) लक्ष ठेवासंतुलित व सकारात्मक दृष्टिकोन ठेवा (टोकाची मते टाळा)आत्मविश्वास ठेवा पण अहंकार नाही(स्पष्ट आणि तर्कशुद्ध बोला)प्रामाणिकपणा आणि नम्रता ठेवा(उत्तर माहित नसेल तर स्पष्ट सांगा)छंद आणि पर्यायी विषयांची तयारी उत्तम करा",
+      "मुलाखतीत गुण कसे दिले जातात?",
+      "मुलाखतीतगुण देण्याची प्रक्रिया व्यक्तिनिष्ठ (subjective)असते आणि ती खालील निकषांवर आधारित असते:",
+      "विचारसरणीतील स्पष्टता आणि तर्कशुद्धता",
+      "आत्मविश्वास व संवाद कौशल्ये",
+      "निर्णय घेण्याची क्षमता",
+      "एकूण व्यक्तिमत्व आणि दृष्टिकोन",
+      "UPSC मंडळखूप उच्च किंवा खूप कमी गुणदेऊ शकते, त्यामुळे तयारी अत्यंत महत्त्वाची आहे.",
+      "अंतिम गुणवत्ता यादी (Final Merit List)",
+      "मुख्य परीक्षा (1750 गुण) + मुलाखत (275 गुण) = 2025 गुण",
+      "अंतिम क्रमवारीएकूण गुणांवर आधारितअसते",
+      "मुलाखतीतील चांगली कामगिरी तुमच्या रँक सुधारू शकते"
+    ],
+    "overview": [
+      "यूपीएससी पूर्व परीक्षेच्या स्वरूपात दोन पेपर असतात, जे एका दिवसात घेतले जातात. दोन्ही पेपर बहुपर्यायी प्रश्नांसहअसतात, ज्या प्रश्नांना एकापेक्षा जास्त पर्याय असतात. पूर्व परीक्षा ही एक पात्रता परीक्षा आहे, जी उमेदवारांना मुख्य परीक्षेसाठी निवडण्यासाठी घेतली जाते.या टप्प्यावर मिळवलेले गुण अंतिम गुणवत्ता यादीत (Merit List) समाविष्ट केले जात नाहीत. मात्र, उमेदवारांनी या परीक्षेची चांगली तयारी करणे आवश्यक आहे, कारण कट-ऑफ दरवर्षी बदलतो आणि तो सरासरी गुणांवर अवलंबून असतो.",
+      "प्रकार",
+      "प्रश्नसंख्या",
+      "एकूण गुण",
+      "कालावधी"
+    ]
+  },
+  {
+    "slug": "ssc-cgl",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/ssc-cgl",
+    "title": "कर्मचारी निवड आयोग संयुक्त पदवी स्तर (SSC-CGL)",
+    "paragraphs_count": 141,
+    "tables_count": 11,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "टप्पा",
+          "परीक्षेचा प्रकार",
+          "स्वरूप"
+        ],
+        "rows": [
+          {
+            "टप्पा": "Tier 1",
+            "परीक्षेचा प्रकार": "CBT (ऑनलाइन)",
+            "स्वरूप": "वस्तुनिष्ठ प्रश्न (MCQ)"
+          },
+          {
+            "टप्पा": "Tier 2",
+            "परीक्षेचा प्रकार": "CBT (ऑनलाइन)",
+            "स्वरूप": "वस्तुनिष्ठ प्रश्न (MCQ) + संगणक कौशल्य चाचणी"
+          },
+          {
+            "टप्पा": "Tier 3",
+            "परीक्षेचा प्रकार": "वर्णनात्मक परीक्षा",
+            "स्वरूप": "निबंध आणि पत्र लेखन (ऑफलाइन)"
+          },
+          {
+            "टप्पा": "Tier 4",
+            "परीक्षेचा प्रकार": "कौशल्य/टायपिंग चाचणी",
+            "स्वरूप": "संगणक प्रवीण्य परीक्षा (DEST)"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "टप्पा",
+          "प्रकार",
+          "पद्धत"
+        ],
+        "rows": [
+          {
+            "टप्पा": "टप्पा  1",
+            "प्रकार": "वस्तुनिष्ठ बहुपर्यायी प्रश्न",
+            "पद्धत": "संगणक आधारित (ऑनलाइन)"
+          },
+          {
+            "टप्पा": "टप्पा  2",
+            "प्रकार": "(पेपर I, II, III)",
+            "पद्धत": "संगणक आधारित (ऑनलाइन)"
+          },
+          {
+            "टप्पा": "पेपर I",
+            "प्रकार": "सर्व पदांसाठी अनिवार्य",
+            "पद्धत": "वस्तुनिष्ठ प्रकार, बहुपर्यायी प्रश्न"
+          },
+          {
+            "टप्पा": "पेपर II",
+            "प्रकार": "सांख्यिकी आणि कार्यक्रम अंमलबजावणी मंत्रालयातील कनिष्ठ सांख्यिकी अधिकारी (JSO) पदासाठी",
+            "पद्धत": "वस्तुनिष्ठ प्रकार, बहुपर्यायी प्रश्न"
+          },
+          {
+            "टप्पा": "पेपर III",
+            "प्रकार": "सहाय्यक लेखा परीक्षक / सहाय्यक लेखापाल पदांसाठी",
+            "पद्धत": "वस्तुनिष्ठ प्रकार, बहुपर्यायी प्रश्न"
+          },
+          {
+            "टप्पा": "मॉड्यूल-II (सेक्शन-III, पेपर-I)",
+            "प्रकार": "अपवादात्मक स्वरूप (वस्तुनिष्ठ प्रकार, बहुपर्यायी प्रश्न वगळता)",
+            "पद्धत": "संगणक आधारित (ऑनलाइन)"
+          }
+        ]
+      },
+      {
+        "caption": "टियर 1 परीक्षा पद्धत",
+        "headers": [
+          "अ. क्र.",
+          "विभाग",
+          "प्रश्नांची संख्या",
+          "एकूण गुण",
+          "वेळ मर्यादा"
+        ],
+        "rows": [
+          {
+            "अ. क्र.": "1",
+            "विभाग": "सामान्य बुद्धिमत्ता आणि तर्कशक्ती",
+            "प्रश्नांची संख्या": "25",
+            "एकूण गुण": "50",
+            "वेळ मर्यादा": "एकत्रित1 तास (60 मिनिटे)"
+          },
+          {
+            "अ. क्र.": "2",
+            "विभाग": "सामान्य जागरूकता",
+            "प्रश्नांची संख्या": "25",
+            "एकूण गुण": "50",
+            "वेळ मर्यादा": "-"
+          },
+          {
+            "अ. क्र.": "3",
+            "विभाग": "गणितीय अभियोग्यता",
+            "प्रश्नांची संख्या": "25",
+            "एकूण गुण": "50",
+            "वेळ मर्यादा": "-"
+          },
+          {
+            "अ. क्र.": "4",
+            "विभाग": "इंग्रजी आकलन",
+            "प्रश्नांची संख्या": "25",
+            "एकूण गुण": "50",
+            "वेळ मर्यादा": "-"
+          },
+          {
+            "अ. क्र.": "एकूण",
+            "विभाग": "",
+            "प्रश्नांची संख्या": "100",
+            "एकूण गुण": "200",
+            "वेळ मर्यादा": ""
+          }
+        ]
+      },
+      {
+        "caption": "टियर 2 / पेपर - 1 परीक्षा पद्धत",
+        "headers": [
+          "विभाग",
+          "मॉड्यूल",
+          "विषय",
+          "प्रश्नांची संख्या",
+          "गुण",
+          "महत्त्व"
+        ],
+        "rows": [
+          {
+            "विभाग": "विभाग I",
+            "मॉड्यूल": "मॉड्यूल-I",
+            "विषय": "गणितीय क्षमता",
+            "प्रश्नांची संख्या": "30",
+            "गुण": "60*3 = 180",
+            "महत्त्व": "23%"
+          },
+          {
+            "विभाग": "",
+            "मॉड्यूल": "मॉड्यूल-II",
+            "विषय": "तर्कशक्ती आणि सामान्य बुद्धिमत्ता",
+            "प्रश्नांची संख्या": "30",
+            "गुण": "-",
+            "महत्त्व": "23%"
+          },
+          {
+            "विभाग": "विभाग II",
+            "मॉड्यूल": "मॉड्यूल-I",
+            "विषय": "इंग्रजी भाषा आणि आकलन",
+            "प्रश्नांची संख्या": "45",
+            "गुण": "70*3 = 210",
+            "महत्त्व": "35%"
+          },
+          {
+            "विभाग": "विभाग III",
+            "मॉड्यूल": "मॉड्यूल-I",
+            "विषय": "संगणक ज्ञान चाचणी",
+            "प्रश्नांची संख्या": "20",
+            "गुण": "20*3 = 60",
+            "महत्त्व": "पात्रताधारक"
+          },
+          {
+            "विभाग": "",
+            "मॉड्यूल": "मॉड्यूल-II",
+            "विषय": "डेटा एंट्री वेग चाचणी",
+            "प्रश्नांची संख्या": "एक डेटा एंट्री कार्य",
+            "गुण": "-",
+            "महत्त्व": "पात्रताधारक"
+          }
+        ]
+      },
+      {
+        "caption": "टियर 2 / पेपर - 2 आणि 3 परीक्षा पद्धत",
+        "headers": [
+          "पेपर",
+          "विभाग",
+          "प्रश्नांची संख्या",
+          "कमाल गुण",
+          "कालावधी"
+        ],
+        "rows": [
+          {
+            "पेपर": "पेपर II",
+            "विभाग": "सांख्यिकी (Statistics)",
+            "प्रश्नांची संख्या": "100",
+            "कमाल गुण": "200",
+            "कालावधी": "2 तास"
+          },
+          {
+            "पेपर": "पेपर III",
+            "विभाग": "सामान्य अध्ययन (अर्थशास्त्र आणि वित्त)",
+            "प्रश्नांची संख्या": "100",
+            "कमाल गुण": "200",
+            "कालावधी": "2 तास"
+          }
+        ]
+      },
+      {
+        "caption": "गणितीय अभियोग्यता",
+        "headers": [
+          "विषय",
+          "लेखक"
+        ],
+        "rows": [
+          {
+            "विषय": "स्पर्धा परीक्षांसाठी गणितीय अभियोग्यता",
+            "लेखक": "आर. एस. अग्रवाल"
+          },
+          {
+            "विषय": "फास्ट ट्रॅक ऑब्जेक्टिव्ह अंकगणित",
+            "लेखक": "राजेश वर्मा"
+          },
+          {
+            "विषय": "गणितीय क्षमता – अंकगणितीय क्षमता",
+            "लेखक": "किरण प्रकाशन"
+          },
+          {
+            "विषय": "CAT साठी गणितीय अभियोग्यता",
+            "लेखक": "अरुण शर्मा"
+          },
+          {
+            "विषय": "क्विकर मॅथ्स",
+            "लेखक": "एम. त्यारा"
+          },
+          {
+            "विषय": "सामान्य स्पर्धा परीक्षांसाठी अंकगणित (भाग 1 आणि 2)",
+            "लेखक": "नीतु सिंग"
+          }
+        ]
+      },
+      {
+        "caption": "इंग्रजी भाषा",
+        "headers": [
+          "पुस्तकाचे नाव",
+          "लेखक"
+        ],
+        "rows": [
+          {
+            "पुस्तकाचे नाव": "ऑब्जेक्टिव्ह जनरल इंग्लिश",
+            "लेखक": "एस. पी. बक्षी"
+          },
+          {
+            "पुस्तकाचे नाव": "क्विक लर्निंग ऑब्जेक्टिव्ह जनरल इंग्लिश",
+            "लेखक": "आर. एस. अग्रवाल आणि विकास अग्रवाल"
+          },
+          {
+            "पुस्तकाचे नाव": "स्पर्धा परीक्षांसाठी ऑब्जेक्टिव्ह इंग्लिश",
+            "लेखक": "एच. एम. प्रसाद"
+          },
+          {
+            "पुस्तकाचे नाव": "व्हर्बल अबिलिटी आणि वाचन आकलनाची तयारी कशी करावी",
+            "लेखक": "अरुण शर्मा"
+          },
+          {
+            "पुस्तकाचे नाव": "हाय स्कूल इंग्लिश व्याकरण आणि रचना",
+            "लेखक": "व्रेन आणि मार्टिन"
+          },
+          {
+            "पुस्तकाचे नाव": "परफेक्ट कॉम्पिटेटिव्ह इंग्लिश",
+            "लेखक": "व्ही. के. सिन्हा"
+          },
+          {
+            "पुस्तकाचे नाव": "वर्ड पॉवर मेड इझी",
+            "लेखक": "नॉर्मन लुईस"
+          },
+          {
+            "पुस्तकाचे नाव": "द किंग्स ग्रामर",
+            "लेखक": "एस. के. सिन्हा"
+          }
+        ]
+      },
+      {
+        "caption": "तर्कशक्ती",
+        "headers": [
+          "पुस्तकाचे नाव",
+          "लेखक"
+        ],
+        "rows": [
+          {
+            "पुस्तकाचे नाव": "एनालिटिकल रीझनिंग",
+            "लेखक": "एम. के. पांडे"
+          },
+          {
+            "पुस्तकाचे नाव": "व्हर्बल आणि नॉनव्हर्बल रीझनिंग",
+            "लेखक": "आर. एस. अग्रवाल"
+          },
+          {
+            "पुस्तकाचे नाव": "व्हर्बल आणि नॉनव्हर्बल रीझनिंगसाठी आधुनिक दृष्टिकोन",
+            "लेखक": "आर. एस. अग्रवाल"
+          },
+          {
+            "पुस्तकाचे नाव": "CAT साठी लॉजिकल रीझनिंग आणि डेटा इंटरप्रिटेशन",
+            "लेखक": "निशित के. सिन्हा"
+          }
+        ]
+      },
+      {
+        "caption": "सामान्य ज्ञान",
+        "headers": [
+          "NCERT (6 वी ते 12 वी पर्यंत)मनोऱामा वर्षपुस्तकइंडिया वर्षपुस्तकलुसेंटचे सामान्य ज्ञान -लुसेंट पब्लिकेशन्स"
+        ],
+        "rows": []
+      },
+      {
+        "caption": "शैक्षणिक पात्रता",
+        "headers": [
+          "पदाचे नाव",
+          "शैक्षणिक पात्रता"
+        ],
+        "rows": [
+          {
+            "पदाचे नाव": "कनिष्ठ सांख्यिकी अधिकारी (JSO)",
+            "शैक्षणिक पात्रता": "कोणत्याही विषयात मान्यता प्राप्त विद्यापीठाची पदवी.- 12वी स्तरावर गणित विषयात किमान 60% गुण.किंवा- पदवी स्तरावर सांख्यिकी हा विषय असावा."
+          },
+          {
+            "पदाचे नाव": "सहाय्यक लेखा अधिकारी / सहाय्यक लेखा अधिकारी (AAO)",
+            "शैक्षणिक पात्रता": "आवश्यक पात्रता (Essential):- कोणत्याही विषयात मान्यता प्राप्त विद्यापीठाची पदवी.वांछनीय पात्रता (Desirable):- चार्टर्ड अकाउंटंट, कॉस्ट आणि मॅनेजमेंट अकाउंटंट, कंपनी सचिव, वाणिज्य पदवी, एमबीए (वित्त), व्यवसाय अर्थशास्त्र, इ."
+          },
+          {
+            "पदाचे नाव": "सांख्यिकी अन्वेषक (Statistical Investigator Grade-II)",
+            "शैक्षणिक पात्रता": "- कोणत्याही विषयात मान्यता प्राप्त विद्यापीठाची पदवी.- उमेदवाराने पदवीच्या 3 वर्षांच्या कोर्समध्ये सांख्यिकी हा विषय वाचला असावा."
+          },
+          {
+            "पदाचे नाव": "राष्ट्रीय कंपनी कायदा अपीलीय न्यायाधिकरण (NCLAT) मध्ये सहाय्यक",
+            "शैक्षणिक पात्रता": "आवश्यक पात्रता (Essential):- मान्यता प्राप्त विद्यापीठाची पदवी.वांछनीय पात्रता (Desirable):- कायद्याची पदवी."
+          },
+          {
+            "पदाचे नाव": "राष्ट्रीय मानवाधिकार आयोग (NHRC) मध्ये संशोधन सहाय्यक",
+            "शैक्षणिक पात्रता": "आवश्यक पात्रता (Essential):- मान्यता प्राप्त विद्यापीठाची पदवी.वांछनीय पात्रता (Desirable):- एक वर्षांचा संशोधन अनुभव.- कायदा किंवा मानवाधिकार या विषयात पदवी."
+          },
+          {
+            "पदाचे नाव": "इतर पदांसाठी",
+            "शैक्षणिक पात्रता": "- कोणत्याही विषयात मान्यता प्राप्त विद्यापीठाची पदवी."
+          }
+        ]
+      },
+      {
+        "caption": "परीक्षा साठी शारीरिक पात्रता",
+        "headers": [
+          "पदाचे नाव",
+          "शारीरिक पात्रता"
+        ],
+        "rows": [
+          {
+            "पदाचे नाव": "सहाय्यक सुरक्षा अधिकारी",
+            "शारीरिक पात्रता": "उंची: पुरुषांसाठी किमान 170 सेंटीमीटर, महिलांसाठी किमान 157 सेंटीमीटर.छाती: पुरुषांसाठी 80 सेंटीमीटर (विस्तार 5 सेंटीमीटर)."
+          },
+          {
+            "पदाचे नाव": "सहाय्यक निरीक्षक",
+            "शारीरिक पात्रता": "उंची: पुरुषांसाठी किमान 170 सेंटीमीटर, महिलांसाठी किमान 157 सेंटीमीटर.छाती: पुरुषांसाठी 80 सेंटीमीटर (विस्तार 5 सेंटीमीटर)."
+          },
+          {
+            "पदाचे नाव": "कनिष्ठ सांख्यिकी अधिकारी",
+            "शारीरिक पात्रता": "शारीरिक पात्रता आवश्यक नाही."
+          },
+          {
+            "पदाचे नाव": "सांख्यिकी अन्वेषक",
+            "शारीरिक पात्रता": "शारीरिक पात्रता आवश्यक नाही."
+          },
+          {
+            "पदाचे नाव": "विविध पदांसाठी",
+            "शारीरिक पात्रता": "उंची: पुरुषांसाठी 170 सेंटीमीटर, महिलांसाठी 157 सेंटीमीटर.छाती: पुरुषांसाठी 80 सेंटीमीटर (विस्तार 5 सेंटीमीटर)."
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "कर्मचारी निवड आयोग (SSC) द्वारे संयुक्त पदवी स्तर (Combined Graduate Level - CGL) परीक्षा आयोजित केली जाते. ही परीक्षा केंद्र सरकारच्या विविध विभागांमध्ये आणि मंत्रालयांमध्ये अधिकारी, सहाय्यक आणि निरीक्षक पदांसाठी भरती करण्यासाठी घेतली जाते.",
+      "शैक्षणिक पात्रता: उमेदवाराकडे मान्यताप्राप्त विद्यापीठाची पदवी (Graduation) असावी.",
+      "वय मर्यादा: सामान्यतः 18 ते 32 वर्षे (श्रेणीनुसार शिथिलता लागू).",
+      "राष्ट्रीयत्व: उमेदवार हा भारताचा नागरिक असावा.",
+      "SSC CGL परीक्षा चार टप्प्यांमध्ये (Tiers) घेतली जाते:"
+    ]
+  },
+  {
+    "slug": "ssc",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/ssc",
+    "title": "कर्मचारी निवड आयोग संयुक्त उच्च माध्यमिक स्तर परीक्षा (SSC CHSL)",
+    "paragraphs_count": 99,
+    "tables_count": 5,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "घटक",
+          "प्रश्नांची संख्या",
+          "गुण",
+          "वेळेचे अंतर"
+        ],
+        "rows": [
+          {
+            "घटक": "सामान्य बुद्धिमत्ता आणि तर्कशक्ती",
+            "प्रश्नांची संख्या": "25",
+            "गुण": "50",
+            "वेळेचे अंतर": "60 मिनिटे (अपंग उमेदवारांसाठी 80 मिनिटे)"
+          },
+          {
+            "घटक": "सामान्य जागरूकता",
+            "प्रश्नांची संख्या": "25",
+            "गुण": "50",
+            "वेळेचे अंतर": "-"
+          },
+          {
+            "घटक": "गणित (मात्रात्मक प्रगल्भता)",
+            "प्रश्नांची संख्या": "25",
+            "गुण": "50",
+            "वेळेचे अंतर": "-"
+          },
+          {
+            "घटक": "इंग्रजी भाषा आणि आकलन",
+            "प्रश्नांची संख्या": "25",
+            "गुण": "50",
+            "वेळेचे अंतर": "-"
+          },
+          {
+            "घटक": "एकूण",
+            "प्रश्नांची संख्या": "100",
+            "गुण": "200",
+            "वेळेचे अंतर": "-"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "सामान्य बुद्धिमत्ता",
+          "गणित",
+          "इंग्रजी भाषा",
+          "सामान्य जागरूकता"
+        ],
+        "rows": [
+          {
+            "सामान्य बुद्धिमत्ता": "अल्फान्यूमेरिक मालिकातर्कशक्तीक्रमवारी/दिशा/अक्षर चाचणीकोडेबैठक व्यवस्थापनअनुमानेडेटा पर्याप्तता",
+            "गणित": "संख्याशास्त्रीय कौशल्यसाधी व मिश्रण गणनानफा व तोटासरळ व्याज व चक्रवाढ व्याजप्रमाण व टक्केवारीवेळ व अंतरमापनशास्त्र – सिलिंडर, शंकू, गोळाटेबल व डेटा विश्लेषण",
+            "इंग्रजी भाषा": "वाचन समजक्लोझ टेस्टपॅरा जंबल्सएक शब्द प्रतिशब्दसक्रिय आणि निष्क्रिय वाक्यरचनाअनेक अर्थ / त्रुटी शोधपरिच्छेद पूर्णता",
+            "सामान्य जागरूकता": "इतिहाससंस्कृतीभूगोलआर्थिक घडामोडीवैज्ञानिक संशोधनपुरस्कार आणि सन्मानपुस्तके व लेखक"
+          }
+        ]
+      },
+      {
+        "caption": "टियर 2 परीक्षा पद्धती",
+        "headers": [
+          "सत्र",
+          "मॉड्यूल",
+          "विषय",
+          "गुण",
+          "वेळ"
+        ],
+        "rows": [
+          {
+            "सत्र": "",
+            "मॉड्यूल": "मॉड्यूल II",
+            "विषय": "तर्कशक्ती आणि सामान्य बुद्धिमत्ता",
+            "गुण": "60×3180",
+            "वेळ": "1 तास30 मिनिटे"
+          },
+          {
+            "सत्र": "सत्र II",
+            "मॉड्यूल": "मॉड्यूल Iमॉड्यूल II",
+            "विषय": "इंग्रजी भाषा आणि आकलनसामान्य जागरूकता",
+            "गुण": "40×3120",
+            "वेळ": "20 मिनिटे"
+          },
+          {
+            "सत्र": "सत्र III",
+            "मॉड्यूल": "मॉड्यूल I",
+            "विषय": "संगणक ज्ञान चाचणी",
+            "गुण": "15×3 = 45",
+            "वेळ": "15 मिनिटे"
+          },
+          {
+            "सत्र": "सत्र IV",
+            "मॉड्यूल": "कौशल्य चाचणी / टायपिंग चाचणी",
+            "विषय": "भाग A– DEO (डेटा एंट्री ऑपरेटर) साठी कौशल्य चाचणीभाग B– LDC/JSA साठी टायपिंग चाचणी",
+            "गुण": "-",
+            "वेळ": "15 मिनिटे10 मिनिटे"
+          }
+        ]
+      },
+      {
+        "caption": "सत्र-2",
+        "headers": [
+          "विभाग",
+          "मॉड्यूल्स",
+          "विषय",
+          "वेळ"
+        ],
+        "rows": []
+      },
+      {
+        "caption": "टियर 2 अभ्यासक्रम",
+        "headers": [
+          "गणितीय क्षमता",
+          "तर्कशक्ती आणि सामान्य बुद्धिमत्ता",
+          "इंग्रजी भाषा आणि आकलन",
+          "सामान्य जागरूकता",
+          "संगणक ज्ञान चाचणी"
+        ],
+        "rows": [
+          {
+            "गणितीय क्षमता": "संख्या प्रणालीसरासरी, टक्केवारीप्रमाण आणि प्रमाणपत्रसाधी व चक्रवाढ व्याजनफा आणि तोटामिश्रण आणि मिश्रधातूवेळ आणि अंतरवेळ आणि कामक्षेत्रमापनत्रिकोणमितीसांख्यिकी आणि संभाव्यता",
+            "तर्कशक्ती आणि सामान्य बुद्धिमत्ता": "शब्दसंग्रह आणि अशाब्दिक तर्कशक्तीविश्लेषणात्मक तर्कशक्तीसंख्यात्मक मालिकातार्किक निष्कर्षप्रतीकात्मक कार्येवेन आकृतीअवकाश अभिमुखताअर्थसंबंधित वर्गीकरणगंभीर विचारसरणी आणि समस्या सोडवणे",
+            "इंग्रजी भाषा आणि आकलन": "शब्दसंग्रहव्याकरण आणि वाक्य रचनासमानार्थी/विरुद्धार्थी शब्दवाक्य सुधारणाक्लोझ पॅसेजचूक शोधारिक्त जागा भरासक्रीय/निष्क्रीय आवाजवाक्प्रचार आणि म्हणी",
+            "सामान्य जागरूकता": "चालू घडामोडीभारतीय इतिहासभूगोलअर्थव्यवस्थाराजकारणवैज्ञानिक संशोधनपुरस्कार आणि सन्मानपुस्तके आणि लेखकभारत आणि शेजारील देशांविषयी सामान्य ज्ञान",
+            "संगणक ज्ञान चाचणी": "मूलभूत संगणक ज्ञानइनपुट/आउटपुट उपकरणेसंगणक मेमरीऑपरेटिंग सिस्टम्सMS ऑफिसवेब ब्राउझिंग, ई-मेलसायबरसुरक्षा"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "अभ्यासक्रम 2025 परीक्षा तयारी करणाऱ्या उमेदवारांसाठी अत्यंत महत्त्वाचा आहे. कर्मचारी निवड आयोग (SSC) दरवर्षी CHSL परीक्षा आयोजित करतो, ज्याद्वारे डेटा एंट्री ऑपरेटर (DEO), लोअर डिव्हिजन लिपिक (LDC), आणि कनिष्ठ सचिवालय सहाय्यक (JSA) यांसारख्या पदांसाठी पात्र आणि योग्य उमेदवारांची निवड केली जाते. SSC CHSL परीक्षा दोन टप्प्यांमध्ये (Tier 1 आणि Tier 2) घेतली जाते. ही परीक्षा 10+2 शिक्षण पूर्ण केलेल्या उमेदवारांसाठी सरकारी नोकरी मिळवण्याची उत्कृष्ट संधी प्रदान करते.",
+      "प्रश्नांची संख्या",
+      "वेळेचे अंतर",
+      "सामान्य बुद्धिमत्ता आणि तर्कशक्ती",
+      "60 मिनिटे (अपंग उमेदवारांसाठी 80 मिनिटे)"
+    ]
+  },
+  {
+    "slug": "ibps",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/ibps",
+    "title": "बँकिंग कर्मचारी निवड संस्था",
+    "paragraphs_count": 124,
+    "tables_count": 4,
+    "optional_subjects_count": 0,
+    "interview_points_count": 61,
+    "tables": [
+      {
+        "caption": "पूर्व परीक्षा",
+        "headers": [
+          "चाचणीचे नाव",
+          "प्रश्नांची संख्या",
+          "पूर्णांक",
+          "कालावधी"
+        ],
+        "rows": [
+          {
+            "चाचणीचे नाव": "इंग्रजी भाषा",
+            "प्रश्नांची संख्या": "30",
+            "पूर्णांक": "30",
+            "कालावधी": "20 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "संख्यात्मक क्षमता",
+            "प्रश्नांची संख्या": "35",
+            "पूर्णांक": "35",
+            "कालावधी": "20 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "तर्कशुद्ध क्षमता",
+            "प्रश्नांची संख्या": "35",
+            "पूर्णांक": "35",
+            "कालावधी": "20 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "एकूण",
+            "प्रश्नांची संख्या": "100",
+            "पूर्णांक": "100",
+            "कालावधी": "60 मिनिटे"
+          }
+        ]
+      },
+      {
+        "caption": "पूर्व परीक्षा अभ्यासक्रम",
+        "headers": [
+          "संख्यात्मक क्षमता अभ्यासक्रम",
+          "तर्कशुद्ध क्षमता अभ्यासक्रम",
+          "इंग्रजी भाषा अभ्यासक्रम"
+        ],
+        "rows": [
+          {
+            "संख्यात्मक क्षमता अभ्यासक्रम": "अनुक्रम आणि मालिकावेळ आणि अंतरमिश्रण आणि आरोपमापन – सिलेंडर, शंकू, गोळासाधा व्याज आणि चक्रवाढ व्याज आणि किमान आणि निर्देशकांकप्रमाण आणि भाग, टक्केवारीकार्य आणि वेळसरलीकरणआकडे प्रणालीनफा आणि तोटागणना सुस्पष्टताडेटा विश्लेषणएकल शब्द पर्यायीतपासणी",
+            "तर्कशुद्ध क्षमता अभ्यासक्रम": "इनपुट-आउटपुटआसन व्यवस्थावर्ड यूज , वर्ड-स्वॅपपरा जंबल्सपझल्सयुज इन्पुट",
+            "इंग्रजी भाषा अभ्यासक्रम": "वाचन समजूनशब्द शोध, वर्ड स्वॅपवाचन कौशल्यवाचन सुधारणाजोडी प्रकार"
+          }
+        ]
+      },
+      {
+        "caption": "मुख्य परीक्षा",
+        "headers": [
+          "चाचणीचे नाव",
+          "प्रश्नांची संख्या",
+          "कमाल गुण",
+          "परीक्षेचा माध्यम",
+          "वेळ"
+        ],
+        "rows": [
+          {
+            "चाचणीचे नाव": "तर्कशुद्ध क्षमता आणि संगणक कौशल्य ( भाग अ आणि भाग ब )",
+            "प्रश्नांची संख्या": "40",
+            "कमाल गुण": "60",
+            "परीक्षेचा माध्यम": "इंग्रजी आणि हिंदी",
+            "वेळ": "60 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "इंग्रजी भाषा ( भाग अ आणि भाग ब )",
+            "प्रश्नांची संख्या": "35",
+            "कमाल गुण": "40",
+            "परीक्षेचा माध्यम": "फक्त इंग्रजी",
+            "वेळ": "40 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "डेटा विश्लेषण आणि अर्थ सांगणे ( भाग अ आणि भाग ब )",
+            "प्रश्नांची संख्या": "35",
+            "कमाल गुण": "60",
+            "परीक्षेचा माध्यम": "इंग्रजी आणि हिंदी",
+            "वेळ": "45 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "सामान्य, अर्थशास्त्र/बँकिंग जागरूकता",
+            "प्रश्नांची संख्या": "40",
+            "कमाल गुण": "40",
+            "परीक्षेचा माध्यम": "इंग्रजी आणि हिंदी",
+            "वेळ": "35 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "एकूण",
+            "प्रश्नांची संख्या": "155",
+            "कमाल गुण": "200",
+            "परीक्षेचा माध्यम": "",
+            "वेळ": "180 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "इंग्रजी भाषा (पत्र लेखन आणि निबंध)",
+            "प्रश्नांची संख्या": "02",
+            "कमाल गुण": "25",
+            "परीक्षेचा माध्यम": "फक्त इंग्रजी",
+            "वेळ": "30 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "एकूण",
+            "प्रश्नांची संख्या": "157",
+            "कमाल गुण": "225",
+            "परीक्षेचा माध्यम": "",
+            "वेळ": ""
+          }
+        ]
+      },
+      {
+        "caption": "मुख्य परीक्षा अभ्यासक्रम",
+        "headers": [
+          "संख्यात्मक क्षमता अभ्यासक्रम",
+          "संख्यात्मक क्षमता अभ्यासक्रम",
+          "तर्कशुद्ध क्षमता अभ्यासक्रम",
+          "संगणक कौशल्य अभ्यासक्रम",
+          "इंग्रजी भाषा अभ्यासक्रम",
+          "अन्य अभ्यासक्रम"
+        ],
+        "rows": [
+          {
+            "संख्यात्मक क्षमता अभ्यासक्रम": "आर्थिक जागरूकताचालू घडामोडीसामान्य ज्ञानस्थिर जागरूकता",
+            "तर्कशुद्ध क्षमता अभ्यासक्रम": "शब्दशक्तीसिलॉजिझमरांगेतील / वर्तुळातील आसन व्यवस्थारक्तसंबंधकोडिंग-डिकोडिंगइन्पुट-आउटपुटक्रमांक प्रणालीवेळ आणि काम",
+            "संगणक कौशल्य अभ्यासक्रम": "इंटरनेटकीबोर्ड शॉर्टकट्समायक्रोसॉफ्ट ऑफिससंगणक हार्डवेअरसंगणक सॉफ्टवेअरसंगणक मुळतत्त्वे / संज्ञा",
+            "इंग्रजी भाषा अभ्यासक्रम": "वाचन समजशब्दशक्ती (समानार्थक, विरुद्धार्थक शब्द)व्याकरणवर्तनी सुधारणाएकल शब्द वापर",
+            "अन्य अभ्यासक्रम": "रेषीय आणि रांगांची व्यवस्थाडेटा sufficiencyआस्थापनांची समस्यासंधी आणि संघटनसंभाव्यता"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [
+      "साक्षात्कार प्रक्रिया:",
+      "साक्षात्कार IBPS PO, SO, आणि क्लार्क पदांच्या निवडीच्या अंतिम टप्प्यात समाविष्ट आहे.",
+      "हे उमेदवाराच्या व्यक्तिमत्वाचे, संवाद कौशल्याचे, बँकिंग ज्ञानाचे आणि पदासाठी योग्यतेचे मूल्यांकन करते.",
+      "साक्षात्कारास 100 गुण आहेत, आणि किमान पात्रतेसाठी 40% गुण आवश्यक असतात (SC/ST/OBC/PWD उमेदवारांसाठी 35%).",
+      "जे उमेदवार मुख्य परीक्षेला पात्र ठरतात, त्यांना IBPS कडून साक्षात्कार प्रक्रियेसाठी आमंत्रित केले जाते. साक्षात्कार प्रक्रियेसाठी एकूण 100 गुण आहेत आणि यामध्ये पात्र ठरण्यासाठी किमान 40% गुणांची आवश्यकता आहे, जी SC/ST/OBC/PWD श्रेणीतील उमेदवारांसाठी 35% केली जाते.",
+      "आमंत्रण:",
+      "मुख्य परीक्षेमध्ये शॉर्टलिस्ट झालेल्या उमेदवारांना साक्षात्कारासाठी कॉल पत्र ईमेलद्वारे किंवा IBPS पोर्टलवर मिळते.",
+      "या पत्रात साक्षात्काराची तारीख, वेळ आणि स्थळ दिलेले असतात.",
+      "चुकीच्या उत्तरांसाठी दंड:",
+      "IBPS 2024 प्रिलिम्स परीक्षा आणि IBPS 2024 मुख्य परीक्षा दोन्हीमध्ये, प्रत्येक चुकीच्या उत्तरासाठी उमेदवारांकडून 0.25 गुण वजा केले जातात. उमेदवाराने ज्या प्रश्नांना उत्तर दिलेले नाहीत किंवा अनुत्तरीत सोडले आहेत, त्यासाठी कोणतेही दंड लागू होणार नाही.",
+      "अंतिम निवड:",
+      "प्रोबेशनरी ऑफिसरच्या (PO) अंतिम निवडीसाठी उमेदवारांचा एकूण गुणांकन, मुख्य परीक्षा आणि साक्षात्कार प्रक्रियेतून घेतला जातो. या दोन परीक्षांच्या वजनाचा गुणोत्तर 80:20 असा असेल. IBPS 2024 च्या साक्षात्कार प्रक्रियेच्या पूर्ण झाल्यानंतर एक मेरिट लिस्ट तयार केली जाईल. यादीत असलेल्या उमेदवारांना नंतर बँकेत सामील होण्यासाठी आमंत्रण पत्र दिले जाईल.",
+      "IBPS 2024 अभ्यासक्रम:",
+      "IBPS 2024 च्या परीक्षा मध्ये उत्तम यश मिळवण्यासाठी, IBPS च्या अभ्यासक्रमाची संपूर्ण माहिती असणे अत्यंत आवश्यक आहे. अभ्यासक्रम प्रिलिम्स आणि मुख्य परीक्षेसाठी थोडा वेगळा असतो. चला, दोन्ही परीक्षांच्या अभ्यासक्रमावर एक नजर टाकूया.",
+      "दस्तऐवज पडताळणी:",
+      "उमेदवारांना सर्व आवश्यक दस्तऐवज (मूळ आणि छायाप्रत) आणणे आवश्यक आहे:",
+      "साक्षात्कार कॉल पत्र",
+      "अर्ज फॉर्म",
+      "ओळख प्रमाणपत्र (आधार, पासपोर्ट इत्यादी)",
+      "शैक्षणिक प्रमाणपत्रे",
+      "जातीचे प्रमाणपत्र (अर्जानुसार)",
+      "अनुभव प्रमाणपत्रे (अर्जानुसार)",
+      "पॅनेल सदस्य:",
+      "साक्षात्कार पॅनेल सामान्यत: 4-5 सदस्यांचा असतो:",
+      "वरिष्ठ बँक अधिकारी",
+      "HR प्रतिनिधी",
+      "विषय तज्ज्ञ",
+      "परिचय आणि वैयक्तिक प्रश्न:",
+      "आपला परिचय करा.",
+      "कुटुंब पार्श्वभूमी आणि शैक्षणिक पात्रतेविषयी प्रश्न.",
+      "छंद, आवडीनिवडी, आणि बलस्थाने/कमकुवत पैलू.",
+      "बँकिंग जागरूकता:",
+      "बँकिंग शब्दावली आणि कार्यांची मूलभूत माहिती.",
+      "चालू बँकिंग धोरणे आणि सुधारणा.",
+      "RBI चे कार्य, बँक खात्यांचे प्रकार, कर्जे इत्यादी.",
+      "चालू घडामोडी आणि सामान्य ज्ञान:",
+      "चालू राष्ट्रीय आणि आंतरराष्ट्रीय घटनांचा आढावा.",
+      "आर्थिक आणि वित्तीय बातम्या.",
+      "जॉब रोल जागरूकता:",
+      "PO, SO, किंवा Clerk च्या जबाबदाऱ्यांबद्दल माहिती.",
+      "बँकिंग क्षेत्रात करियर करण्याची आपली इच्छा का आहे?",
+      "त्या विशिष्ट बँकेसाठी निवडीचे कारण.",
+      "संकल्पनात्मक प्रश्न:",
+      "बँकिंग संबंधित काल्पनिक परिस्थितींवर आधारित निर्णय घेण्याची क्षमता तपासण्यासाठी प्रश्न.",
+      "सामान्यत: विचारले जाणारे प्रश्न:",
+      "तुम्हाला बँकिंग क्षेत्रात का करियर करायचं आहे?",
+      "RBI चं काय कार्य आहे?",
+      "NEFT, RTGS आणि IMPS मधील फरक स्पष्ट करा.",
+      "नवीनतम सरकारी बँकिंग योजनांची माहिती द्या.",
+      "बँक कशा प्रकारे भारतीय अर्थव्यवस्थेला प्रभाव करतात?",
+      "5 वर्षांमध्ये स्वतःला कुठे पाहता?",
+      "टिप्स:",
+      "बँकेबद्दल संशोधन करा: - बँकेच्या इतिहास, मूल्ये आणि अलीकडील कार्यप्रदर्शनाबद्दल जाणून घ्या.",
+      "चालू घडामोडींबद्दल जागरूक राहा: - अलीकडील बँकिंग ट्रेंड्स, RBI अद्यतने, आणि सरकारी योजनांविषयी माहिती ठेवा.",
+      "मॉक साक्षात्कारांची सराव करा: - आत्मविश्वास आणि संवाद कौशल्य वाढवण्यासाठी.",
+      "औपचारिकपणे पोशाख घाला: - व्यावसायिक दिसणे महत्त्वाचे आहे.",
+      "प्रामाणिक रहा: - प्रश्नांची उत्तरे आत्मविश्वासाने आणि प्रामाणिकपणे द्या, जरी खात्री नसली तरी.",
+      "अखेरची निवड:",
+      "अखेरची निवड Mains परीक्षेतील (80%) आणि साक्षात्कार (20%) गुणांच्या एकत्रित गुणांवर आधारित आहे.",
+      "उच्च साक्षात्कार गुण अंतिम निवडीच्या संधींना मोठ्या प्रमाणात वाढवू शकतात.",
+      "तुम्हाला तयारीची अधिक माहिती पाहिजे का?"
+    ],
+    "overview": [
+      "अधिकृत अधिसूचना 1 ऑगस्ट 2024 रोजी जारी केली गेली आहे, ज्यामध्ये 3955 प्रोबेशनरी ऑफिसर्स  पदांची भरती केली जाणार आहे.  भरती तीन टप्प्यात आयोजित केली जाते - प्रिलिम्स, मेन्स, आणि मुलाखत. उमेदवाराला प्रत्येक टप्प्यात पात्रता मिळवणे आवश्यक आहे, जेणेकरून त्यांना रिक्त पदांसाठी शॉर्टलिस्ट केले जाईल.परीक्षेत यश मिळवण्यासाठी, परीक्षेचा पॅटर्न आणि तपशीलवार अभ्यासक्रम माहित असणे अत्यंत आवश्यक आहे. यामुळे तुम्हाला परीक्षेसाठी योग्य तयारी करण्यात मदत होईल. चला,अभ्यासक्रम आणि परीक्षेचा पॅटर्न 2024 बद्दल एक-एक करून समजून घेऊ.",
+      "पूर्व परीक्षा ऑनलाइन आयोजित केली जाईल आणि उमेदवारांना परीक्षा पूर्ण करण्यासाठी 1 तासाची वेळ दिली जाईल. यामध्ये 3 विभाग असतील, ज्यात एकूण 100 प्रश्न आणि 100 पूर्णांक असतील. पूर्व परीक्षेत नकारात्मक गुण आहे, आणि प्रत्येक चुकीच्या उत्तरासाठी 0.25 गुण वजा केले जातात. उमेदवारांना मुख्य परीक्षेसाठी पात्र होण्यासाठी सर्व 3 विभागांत काप ऑफ क्लियर करणे आवश्यक आहे.",
+      "चाचणीचे नाव",
+      "प्रश्नांची संख्या",
+      "पूर्णांक"
+    ]
+  },
+  {
+    "slug": "sbi",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/sbi",
+    "title": "स्टेट बँक ऑफ इंडिया परिविक्षाधीन अधिकारी",
+    "paragraphs_count": 78,
+    "tables_count": 3,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "पूर्व परीक्षा",
+        "headers": [
+          "स.नं.",
+          "विषयाचे नाव",
+          "प्रश्नांची संख्या",
+          "कमाल गुण"
+        ],
+        "rows": [
+          {
+            "स.नं.": "1",
+            "विषयाचे नाव": "इंग्रजी भाषा",
+            "प्रश्नांची संख्या": "40",
+            "कमाल गुण": "40"
+          },
+          {
+            "स.नं.": "2",
+            "विषयाचे नाव": "संख्यात्मक क्षमता",
+            "प्रश्नांची संख्या": "30",
+            "कमाल गुण": "30"
+          },
+          {
+            "स.नं.": "3",
+            "विषयाचे नाव": "कारणशक्ति क्षमता",
+            "प्रश्नांची संख्या": "30",
+            "कमाल गुण": "30"
+          },
+          {
+            "स.नं.": "एकूण",
+            "विषयाचे नाव": "",
+            "प्रश्नांची संख्या": "100",
+            "कमाल गुण": "100"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "चाचणीचे नाव",
+          "प्रश्नांची संख्या",
+          "कमाल गुण",
+          "कालावधी"
+        ],
+        "rows": [
+          {
+            "चाचणीचे नाव": "बुद्धिमत्ता आणि संगणक कौशल्य",
+            "प्रश्नांची संख्या": "40",
+            "कमाल गुण": "60",
+            "कालावधी": "50 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "डेटा विश्लेषण आणि व्याख्या",
+            "प्रश्नांची संख्या": "30",
+            "कमाल गुण": "60",
+            "कालावधी": "45 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "सामान्य ज्ञान / अर्थव्यवस्था / बँकिंग ज्ञान",
+            "प्रश्नांची संख्या": "60",
+            "कमाल गुण": "60",
+            "कालावधी": "45 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "इंग्रजी भाषा",
+            "प्रश्नांची संख्या": "40",
+            "कमाल गुण": "20",
+            "कालावधी": "40 मिनिटे"
+          },
+          {
+            "चाचणीचे नाव": "कुल",
+            "प्रश्नांची संख्या": "170",
+            "कमाल गुण": "200",
+            "कालावधी": "3 तास"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "पूर्व",
+          "मुख्य"
+        ],
+        "rows": [
+          {
+            "पूर्व": "गणितीय क्षमता:सरलीकरण व अंदाजनफा आणि तोटामिश्रण व आरोपक्रमबद्धता, संयोजन आणि संभाव्यताकाम आणि वेळडेटा विश्लेषण (पाई चार्ट, बार ग्राफ इत्यादी)साधा व्याज आणि संकलित व्याजक्षेत्रफळ व परिमाण (सिलिंडर, शंकू, गोळा)तार्किक क्षमता:तार्किक विचारविनिमयअल्फान्युमेरिक सिरीजदिशा व अंतरसिलॉजिझमरक्तसंबंधआसन व्यवस्था (रेषात्मक व गोलाकार)कोडिंग-डिकोडिंगडेटा पुरावाइंग्रजी भाषा:वाचन समजक्लोज टेस्टपॅरा जम्बलवाक्य सुधारणाशब्दसंग्रह (समानार्थक, विरुद्धार्थक)",
+            "मुख्य": "डेटा विश्लेषण आणि अर्थसाक्षात्कार:सारणी ग्राफरेषा ग्राफबार ग्राफपाई चार्टकेसलेट्ससंभाव्यता आणि संयोजन/क्रमबद्धतातार्किक क्षमता आणि संगणक साधन:शब्दात reasoningसिलॉजिझमगोलाकार आणि रेषात्मक आसन व्यवस्थारक्तसंबंधइनपुट-आउटपुटसंगणक संक्षेपइंटरनेट, नेटवर्किंग, ऑपरेटिंग सिस्टीमसामान्य/आर्थिक/बँकिंग जागरूकता:सध्याच्या घडामोडी (राष्ट्रीय व आंतरराष्ट्रीय)बँकिंग संज्ञाआर्थिक जागरूकतास्थिर GK (भूगोल, इतिहास, राज्यशास्त्र)इंग्रजी भाषा (वर्णनात्मक परीक्षा):वाचन समजव्याकरण व वाक्य सुधारणात्रुटी ओळखणेक्लोज टेस्टवर्णनात्मक परीक्षा:पत्र लेखननिबंध लेखन"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "विषयाचे नाव",
+      "प्रश्नांची संख्या",
+      "कमाल गुण",
+      "इंग्रजी भाषा",
+      "संख्यात्मक क्षमता"
+    ]
+  },
+  {
+    "slug": "mes",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/mes",
+    "title": "महाराष्ट्र अभियांत्रिकी सेवा (MES)",
+    "paragraphs_count": 327,
+    "tables_count": 7,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "पेपर क्रमांक",
+          "प्रश्नसंख्या",
+          "एकूण गुण",
+          "विषय",
+          "कालावधी",
+          "माध्यम",
+          "पेपरचा प्रकार"
+        ],
+        "rows": [
+          {
+            "पेपर क्रमांक": "पेपर I",
+            "प्रश्नसंख्या": "100",
+            "एकूण गुण": "200",
+            "विषय": "सामान्य अध्ययन",
+            "कालावधी": "2 तास",
+            "माध्यम": "मराठी आणि इंग्रजी",
+            "पेपरचा प्रकार": "बहुपर्यायी प्रकार"
+          },
+          {
+            "पेपर क्रमांक": "पेपर II",
+            "प्रश्नसंख्या": "80",
+            "एकूण गुण": "200",
+            "विषय": "सी-सॅट",
+            "कालावधी": "2 तास",
+            "माध्यम": "मराठी आणि इंग्रजी",
+            "पेपरचा प्रकार": "बहुपर्यायी प्रकार"
+          }
+        ]
+      },
+      {
+        "caption": "स्थापत्य अभियांत्रिकी",
+        "headers": [
+          "पेपर क्रमांक",
+          "विषय",
+          "गुण",
+          "स्तर",
+          "माध्यम",
+          "कालावधी",
+          "प्रश्न प्रकार"
+        ],
+        "rows": [
+          {
+            "पेपर क्रमांक": "पेपर I",
+            "विषय": "स्थापत्य अभियांत्रिकी",
+            "गुण": "200",
+            "स्तर": "B.E  स्तर",
+            "माध्यम": "इंग्रजी",
+            "कालावधी": "3 तास",
+            "प्रश्न प्रकार": "वर्णनात्मक"
+          },
+          {
+            "पेपर क्रमांक": "पेपर II",
+            "विषय": "स्थापत्य अभियांत्रिकी",
+            "गुण": "200",
+            "स्तर": "B.E  स्तर",
+            "माध्यम": "इंग्रजी",
+            "कालावधी": "3 तास",
+            "प्रश्न प्रकार": "वर्णनात्मक"
+          }
+        ]
+      },
+      {
+        "caption": "विद्युत अभियांत्रिकी",
+        "headers": [
+          "पेपर क्रमांक",
+          "विषय",
+          "गुण",
+          "स्तर",
+          "माध्यम",
+          "कालावधी",
+          "प्रश्न स्वरूप"
+        ],
+        "rows": [
+          {
+            "पेपर क्रमांक": "पेपर I",
+            "विषय": "विद्युत अभियांत्रिकी",
+            "गुण": "200",
+            "स्तर": "B.E ( विद्युत अभियांत्रिकी ) स्तर",
+            "माध्यम": "इंग्रजी",
+            "कालावधी": "3 तास",
+            "प्रश्न स्वरूप": "वर्णनात्मक"
+          },
+          {
+            "पेपर क्रमांक": "पेपर II",
+            "विषय": "विद्युत अभियांत्रिकी",
+            "गुण": "200",
+            "स्तर": "B.E ( विद्युत अभियांत्रिकी ) स्तर",
+            "माध्यम": "इंग्रजी",
+            "कालावधी": "3 तास",
+            "प्रश्न स्वरूप": "वर्णनात्मक"
+          }
+        ]
+      },
+      {
+        "caption": "यांत्रिक अभियांत्रिकी",
+        "headers": [
+          "पेपर क्रमांक",
+          "विषय",
+          "गुण",
+          "स्तर",
+          "माध्यम",
+          "कालावधी",
+          "प्रश्न स्वरूप"
+        ],
+        "rows": [
+          {
+            "पेपर क्रमांक": "पेपर I",
+            "विषय": "यांत्रिक अभियांत्रिकी",
+            "गुण": "200",
+            "स्तर": "B.E ( यांत्रिक अभियांत्रिकी  ) स्तर",
+            "माध्यम": "इंग्रजी",
+            "कालावधी": "3 तास",
+            "प्रश्न स्वरूप": "वर्णनात्मक"
+          },
+          {
+            "पेपर क्रमांक": "पेपर II",
+            "विषय": "यांत्रिक अभियांत्रिकी",
+            "गुण": "200",
+            "स्तर": "B.E ( यांत्रिक अभियांत्रिकी  ) स्तर",
+            "माध्यम": "इंग्रजी",
+            "कालावधी": "3 तास",
+            "प्रश्न स्वरूप": "वर्णनात्मक"
+          }
+        ]
+      },
+      {
+        "caption": "स्थापत्य अभियांत्रिकी पुस्तकांची यादी",
+        "headers": [
+          "विषय",
+          "लेखक"
+        ],
+        "rows": [
+          {
+            "विषय": "संख्यात्मक पद्धतीपदार्थाची ताकदसंरचनात्मक सिद्धांतसंरचनात्मक विश्लेषणस्टील स्ट्रक्चरक्रिटिकल पाथ मेथडआर.सी.सी. डिझाइन - भाग १आर.सी.सी. डिझाइन - भाग २पूल अभियांत्रिकीबांधकाम साहित्यबांधकाम नियोजन आणि बांधकामकॉंक्रिट तंत्रज्ञानप्री-स्ट्रेस्ड कॉंक्रिटभू-तांत्रिक अभियांत्रिकीसर्वेक्षणद्रव यांत्रिकीसिंचन अभियांत्रिकीमहामार्ग अभियांत्रिकीबोगदा अभियांत्रिकीखर्चाचा अंदाज आणि मोजणीजलसंपत्ती अभियांत्रिकीपर्यावरण अभियांत्रिकीबांधकाम व्यवस्थापन आणि लेखाबांधकाम व्यवस्थापन आणि लेखासिव्हिल अभियांत्रिकीतील खर्चाचा अंदाज आणि मोजणीसिव्हिल अभियांत्रिकीतील खर्चाचा अंदाज आणि मोजणीबांधकाम उपकरणेबांधकाम नियोजन आणि उपकरणेबांधकाम नियोजन आणि उपकरणेबांधकाम व्यवस्थापन आणि उपकरणेपीईआरटी आणि सीपीएमबांधकाम व्यवस्थापन, उपकरणे आणि लेखासर्वेक्षण - खंड १ व २सर्वेक्षणमर्यादित स्थितीतील स्टील संरचना डिझाइनजलपुरवठा अभियांत्रिकीजलपुरवठा आणि स्वच्छता अभियांत्रिकीजलपुरवठा अभियांत्रिकीस्वच्छता अभियांत्रिकीस्वच्छता अभियांत्रिकीजलपुरवठा आणि स्वच्छता अभियांत्रिकी",
+            "लेखक": "बी. एस. ग्रेवालआर. एस. राममूर्तम, आर. के. बंसलआर. एस. राममूर्तमबी. एस. ग्रेवालबी. सी. पुनमियासीतारामनएस. एस. भविक, शाह आणि गोरपिल्लई आणि मेननरंगवाला, एस. पी. बिंद्राएस. के. दुग्गल, रंगवालाएस. के. दुग्गल, रंगवालाएम. एस. शेट्टीकृष्णा राजूअरोराबी. सी. पुनमियाबंसल, पी. एन. मोदीएस. के. गर्गखन्ना आणि जस्टोएस. सी. सक्सेना, श्रीनिवासनबी. एन. दत्ता, रंगवालाएस. के. गर्गएस. के. गर्गवझरानी आणि चंडोलाएच. सिंग (TMH)एम. चक्रवर्तीएस. दत्ताडॉ. महेश वर्माप्यूरीटी, मे. ग्रॉ हिलसत्य नारायण आणि सुषमा सक्सेनासुभाष शर्मा आणि खन्नाडॉ. पी. एन. मोदीएम. आर. चौधरीबी. सी. पुनमिया, टी. पी. कानेटकरडेव्हिड क्लार्कडॉ. व्ही. एल. शाह आणि प्रा. वीणा गोर, सुब्रमणियनएस. के. गर्गरंगवालाबी. सी. पुनमियाएस. के. गर्गरंगवाला, बी. सी. पुनमियाजी. एस. बिर्दे आणि जे. एस. बिर्दे"
+          }
+        ]
+      },
+      {
+        "caption": "विद्युत अभियांत्रिकी पुस्तकांची यादी",
+        "headers": [
+          "पुस्तकेचे नाव",
+          "लेखकाचे नाव"
+        ],
+        "rows": [
+          {
+            "पुस्तकेचे नाव": "इलेक्ट्रिकल इंजिनिअरिंगपॉवर सिस्टम इंजिनिअरिंगकंट्रोल सिस्टम्सइलेक्ट्रिकल सर्किट्ससिग्नल्स आणि सिस्टिम्सइलेक्ट्रोमॅग्नेटिक फील्ड्सपॉवर इलेक्ट्रॉनिक्सडिजिटल इलेक्ट्रॉनिक्सअभियांत्रिकी गणितमशीन डिझाईनपॉवर सिस्टम प्रोटेक्शनअक्षय ऊर्जाअनालॉग आणि डिजिटल कम्युनिकेशनमॉडर्न कंट्रोल इंजिनिअरिंगइलेक्ट्रिकल इंजिनिअरिंग: संकल्पना आणि अनुप्रयोगअॅडव्हान्स कंट्रोल थिअरीहाय व्होल्टेज इंजिनिअरिंगइलेक्ट्रिकल पॉवर सिस्टिम्समायक्रोप्रोसेसर आणि मायक्रोकंट्रोलर्सइलेक्ट्रिकल इंजिनिअरिंग ऑब्जेक्टिव्हऑब्जेक्टिव्ह इलेक्ट्रिकल टेक्नॉलॉजीस्पर्धा परीक्षांसाठी इलेक्ट्रिकल इंजिनिअरिंग प्रॅक्टिस बुकस्पर्धा परीक्षा इलेक्ट्रिकल इंजिनिअरिंग",
+            "लेखकाचे नाव": "जे. बी. गुप्ताएन. व्ही. एन. के. शर्माओगाटाचार्ल्स के. अलेक्झांडर आणि मॅथ्यू एन. ओ.अॅलन व्ही. ओपेनहेमविल्यम हायटमोहन, उंडेलँड, आणि रॉबिन्सएम. मॉरिस मानोबी. एस. ग्रेव्हालशर्मा आणि अग्रवालके. आर. पाडियारगॉडफ्रे बॉयलसॅम शानमुगमओगाटाजॉन जी. हायेसए. के. गुप्ताएम. एस. नायडू आणि व्ही.सी. एल. वधवाए. पी. मॉल्विनो आणि जे. लीचआर. के. राजपूतव्ही. के. मेहता आणि रोहित मेहतापी. कुमारएस. के. भट्टाचार्य"
+          }
+        ]
+      },
+      {
+        "caption": "यांत्रिक अभियांत्रिकी पुस्तकांची यादी",
+        "headers": [
+          "पुस्तकाचे नाव",
+          "लेखकाचे नाव"
+        ],
+        "rows": [
+          {
+            "पुस्तकाचे नाव": "अभियांत्रिकी यांत्रिकीसाहित्याची ताकदउष्मागतिकशास्त्रद्रव यांत्रिकीयंत्र अभिकल्पनाउत्पादन तंत्रज्ञानऊष्मा संक्रमणयंत्रसिद्धांतयांत्रिक कंपनेउत्पादन अभियांत्रिकीयांत्रिक अभियांत्रिकी वस्तुनिष्ठ प्रकार प्रश्नथर्मल अभियांत्रिकी पाठ्यपुस्तकथंडकरण आणि वातानुकूलनअभियांत्रिकी साहित्यऑटोमोबाईल अभियांत्रिकीएमपीएससी साठी मेकेनिकल अभियांत्रिकीवस्तुनिष्ठ यांत्रिक अभियांत्रिकी",
+            "लेखकाचे नाव": "एस. टिमोशेंको आणि डी.एच. यंगएस. राममूर्थमपी. के. नागफ्रँक एम. व्हाइटशर्मा आणि अग्रवालपी. एन. रावएस. पी. सुखात्मेजे. लालएस. एस. रावआर. के. जैनआर. के. राजपूतआर. एस. खुरमीसी. पी. अरोराराघवनएस. बलबीर सिंगएम. पी. नायरएस. के. गुप्ता"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "या पदासाठी उमेदवारांकडे खालील शाखांमध्ये पदवी असणे आवश्यक आहे:",
+      "या पदासाठी उमेदवारांकडे खालीलपैकी कोणत्याही शाखेतील पदवी असणे आवश्यक आहे:",
+      "या पदासाठी उमेदवारांकडे खालील शाखांमधील पदवी असणे आवश्यक आहे:",
+      "MPSC MES परीक्षेसाठी वयोमर्यादा पुढीलप्रमाणे आहे:",
+      "मागासवर्गीय (OBC, SC, ST):४३ वर्षेअपंग (PwD):४५ वर्षेमाजी सैनिक (Ex-Servicemen):"
+    ]
+  },
+  {
+    "slug": "Ca",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/Ca",
+    "title": "सी.ए परीक्षा",
+    "paragraphs_count": 100,
+    "tables_count": 10,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "Table",
+        "headers": [
+          "वैशिष्ट्ये",
+          "तपशील"
+        ],
+        "rows": [
+          {
+            "वैशिष्ट्ये": "परीक्षेचे नाव",
+            "तपशील": "चार्टर्ड अकाउंटन्सी परीक्षा"
+          },
+          {
+            "वैशिष्ट्ये": "परीक्षा आयोजक संस्था",
+            "तपशील": "इंस्टिट्यूट ऑफ चार्टर्ड अकाउंटंट ऑफ इंडिया"
+          },
+          {
+            "वैशिष्ट्ये": "परीक्षेची पातळी",
+            "तपशील": "• सी.ए फाउंडेशन• सी.ए इंटरमीडिएट• सी.ए फायनल"
+          },
+          {
+            "वैशिष्ट्ये": "परीक्षेची पद्धत",
+            "तपशील": "संगणक-आधारित"
+          },
+          {
+            "वैशिष्ट्ये": "परीक्षेची वारंवारता",
+            "तपशील": "फाउंडेशन: वर्षातून 3 वेळाइंटरमीडिएट: वर्षातून 3 वेळाफायनल: वर्षातून 2 वेळा"
+          },
+          {
+            "वैशिष्ट्ये": "प्रत्येक पेपरचे पूर्ण गुण",
+            "तपशील": "100"
+          },
+          {
+            "वैशिष्ट्ये": "कठीणतेचा स्तर",
+            "तपशील": "कठीण"
+          },
+          {
+            "वैशिष्ट्ये": "प्रयत्नांची संख्या",
+            "तपशील": "अनेक"
+          }
+        ]
+      },
+      {
+        "caption": "सी.ए फाउंडेशन परीक्षा पॅटर्न",
+        "headers": [
+          "क्रमांक",
+          "पेपराचे नाव",
+          "गुण",
+          "प्रश्नांचा प्रकार"
+        ],
+        "rows": [
+          {
+            "क्रमांक": "1",
+            "पेपराचे नाव": "अकाउंटिंग",
+            "गुण": "100",
+            "प्रश्नांचा प्रकार": "विषयवार"
+          },
+          {
+            "क्रमांक": "2",
+            "पेपराचे नाव": "बिझनेस लॉ",
+            "गुण": "100",
+            "प्रश्नांचा प्रकार": "विषयवार"
+          },
+          {
+            "क्रमांक": "3",
+            "पेपराचे नाव": "क्वांटिटेटिव्ह अ‍ॅप्टिट्यूड:भाग Aबिझनेस गणितभाग Bलॉजिकल रिझनिंगभाग Cस्टॅटिस्टिक्स",
+            "गुण": "100",
+            "प्रश्नांचा प्रकार": "वस्तुनिष्ठ: 40 गुणवस्तुनिष्ठ: 20 गुणवस्तुनिष्ठ: 40 गुण"
+          },
+          {
+            "क्रमांक": "4",
+            "पेपराचे नाव": "बिझनेस इकॉनॉमिक्स",
+            "गुण": "100",
+            "प्रश्नांचा प्रकार": "वस्तुनिष्ठ (Objective)"
+          }
+        ]
+      },
+      {
+        "caption": "सी.ए इंटरमीडिएट परीक्षा पॅटर्न",
+        "headers": [
+          "पेपर",
+          "विषय",
+          "गुणांचे वितरण"
+        ],
+        "rows": [
+          {
+            "पेपर": "पेपर 1",
+            "विषय": "प्रगत अकाउंटिंग",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 2",
+            "विषय": "कॉर्पोरेट कायदे",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 3",
+            "विषय": "खर्च व व्यवस्थापन लेखा",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 4",
+            "विषय": "कराधान",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 5",
+            "विषय": "लेखापरीक्षण व नैतिकता",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 6",
+            "विषय": "वित्तीय व्यवस्थापन",
+            "गुणांचे वितरण": "35 गुण (विषयवार), 15 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 7",
+            "विषय": "धोरणात्मक व्यवस्थापन",
+            "गुणांचे वितरण": "35 गुण (विषयवार), 15 गुण (वस्तुनिष्ठ)"
+          }
+        ]
+      },
+      {
+        "caption": "सी.ए फायनल परीक्षा पॅटर्न",
+        "headers": [
+          "पेपर",
+          "विषय",
+          "गुणांचे वितरण"
+        ],
+        "rows": [
+          {
+            "पेपर": "पेपर 1",
+            "विषय": "वित्तीय रिपोर्टिंग",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 2",
+            "विषय": "प्रगत वित्तीय व्यवस्थापन",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 3",
+            "विषय": "प्रगत लेखापरीक्षण व व्यावसायिक नैतिकता",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 4",
+            "विषय": "बहु-शिस्तात्मक केस स्टडी (स्ट्रॅटेजिक मॅनेजमेंटसह)",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 5",
+            "विषय": "थेट कर कायदे व आंतरराष्ट्रीय कराधान",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 30 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 6",
+            "विषय": "अप्रत्यक्ष कर कायदे",
+            "गुणांचे वितरण": "70 गुण (विषयवार), 35 गुण (वस्तुनिष्ठ)"
+          },
+          {
+            "पेपर": "पेपर 7",
+            "विषय": "धोरणात्मक व्यवस्थापन",
+            "गुणांचे वितरण": "35 गुण (विषयवार), 15 गुण (वस्तुनिष्ठ)"
+          }
+        ]
+      },
+      {
+        "caption": "सी.ए फाउंडेशन अभ्यासक्रम पेपर 1",
+        "headers": [
+          "मॉड्यूल-1",
+          "मॉड्यूल-2"
+        ],
+        "rows": [
+          {
+            "मॉड्यूल-1": "अध्याय 1: सैद्धांतिक चौकटअध्याय 2: लेखा प्रक्रियाअध्याय 3: बँक समेट पत्रकअध्याय 4: साठाअध्याय 5: घसारा संकल्पना आणि लेखांकनअध्याय 6: विशेष व्यवहारांचे लेखांकन",
+            "मॉड्यूल-2": "अध्याय 7: एकमालक व्यवसायाचे अंतिम खाते तयार करणेअध्याय 8: भागीदारी लेखेअध्याय 9: नफा-न होणाऱ्या संस्थांची आर्थिक विवरणपत्रेअध्याय 10: कंपनी लेखे"
+          }
+        ]
+      },
+      {
+        "caption": "सी.ए फाउंडेशन अभ्यासक्रम पेपर 2",
+        "headers": [
+          "पेपर 1 विभाग A: व्यावसायिक कायदे",
+          "पेपर 2 विभाग B: व्यवसाय पत्रव्यवहार आणि अहवाल लेखन"
+        ],
+        "rows": [
+          {
+            "पेपर 1 विभाग A: व्यावसायिक कायदे": "अध्याय 1: भारतीय करार अधिनियम, 1872अध्याय 2: वस्तू विक्री अधिनियम, 1930अध्याय 3: भारतीय भागीदारी अधिनियम, 1932अध्याय 4: मर्यादित उत्तरदायित्व भागीदारी अधिनियम, 2008अध्याय 5: कंपन्या अधिनियम, 2013",
+            "पेपर 2 विभाग B: व्यवसाय पत्रव्यवहार आणि अहवाल लेखन": "अध्याय 1: संवादअध्याय 2: वाक्यप्रकार आणि थेट-अप्रत्यक्ष, सक्रिय-निष्क्रिय वाक्यरचनाअध्याय 3: शब्दसंग्रहअध्याय 4: आकलन उतारेअध्याय 5: टिपण लेखनअध्याय 6: लेखनाची मूलभूत तत्त्वेअध्याय 7: संक्षेप लेखनअध्याय 8: लेख लेखनअध्याय 9: अहवाल लेखनअध्याय 10: औपचारिक पत्रे आणि शासकीय पत्रव्यवहारअध्याय 11: औपचारिक ई-मेल लेखनअध्याय 12: बायोडाटा (रिज्युमे) लेखनअध्याय 13: सभा"
+          }
+        ]
+      },
+      {
+        "caption": "सी.ए फाउंडेशन अभ्यासक्रम पेपर 3",
+        "headers": [
+          "व्यवसाय गणित",
+          "तार्किक विचार",
+          "सांख्यिकी"
+        ],
+        "rows": [
+          {
+            "व्यवसाय गणित": "अध्याय 1: प्रमाण आणि समप्रमाण, करणी, लघुगणकअध्याय 2: समीकरणे आणि मॅट्रिसेसअध्याय 3: रेखीय असमानताअध्याय 4: पैशाचा वेळ मूल्यअध्याय 5: क्रमच आणि संयोग यांची मूलभूत संकल्पनाअध्याय 6: अनुक्रम आणि श्रेणी – अंकगणितीय आणि भूमितीय प्रगतीअध्याय 7: संच, फलने आणि संबंधअध्याय 8: अवकलन आणि समाकलन गणिताची मूलभूत तत्त्वे",
+            "तार्किक विचार": "अध्याय 9: संख्या मालिका, सांकेतिक लेखन आणि वेगळे शोधाअध्याय 10: दिशा चाचण्याअध्याय 11: बैठक व्यवस्थाअध्याय 12: रक्तसंबंधअध्याय 13: प्रतिज्ञा तर्कशास्त्र (सिलॉजिझम)",
+            "सांख्यिकी": "अध्याय 14: सांख्यिकीय माहितीचे वर्णनअध्याय 15: मध्यवर्ती प्रवृत्ती आणि प्रसरण मापनअध्याय 16: संभाव्यताअध्याय 17: सैद्धांतिक वितरणेअध्याय 18: सहसंबंध आणि प्रतिगमनअध्याय 19: निर्देशांक संख्या आणि कालमालिका"
+          }
+        ]
+      },
+      {
+        "caption": "सी.ए फाउंडेशन अभ्यासक्रम पेपर 4",
+        "headers": [
+          "अध्याय 1: व्यवसाय अर्थशास्त्राचा स्वरूप आणि व्यापअध्याय 2: मागणी आणि पुरवठ्याचा सिद्धांतअध्याय 3: उत्पादन आणि खर्चाचा सिद्धांतअध्याय 4: बाजाराचा अर्थ आणि प्रकारअध्याय 5: व्यवसाय चक्र",
+          "अध्याय 1: व्यवसाय आणि व्यापारी ज्ञान – एक परिचयअध्याय 2: व्यवसाय पर्यावरणअध्याय 3: व्यवसाय संघटनाअध्याय 4: व्यवसाय वाढीसाठी शासनाच्या धोरणीअध्याय 5: व्यवसाय सुलभ करणाऱ्या संस्थाअध्याय 6: सामान्य व्यावसायिक संज्ञा"
+        ],
+        "rows": []
+      },
+      {
+        "caption": "सी.ए इंटरमिजिएट अभ्यासक्रम",
+        "headers": [
+          "गट I",
+          "गट II"
+        ],
+        "rows": [
+          {
+            "गट I": "पेपर 1 प्रगत लेखाशास्त्रपेपर 2 कॉर्पोरेट आणि इतर कायदेपेपर 3 कराधान",
+            "गट II": "पेपर 4 खर्च आणि व्यवस्थापन लेखाशास्त्रपेपर 5 लेखापरीक्षण आणि नीतिशास्त्रपेपर 6 आर्थिक व्यवस्थापन आणि रणनीतिक व्यवस्थापन"
+          }
+        ]
+      },
+      {
+        "caption": "सी.ए अंतिम अभ्यासक्रम",
+        "headers": [
+          "पेपर क्रमांक",
+          "विषयाचे नाव"
+        ],
+        "rows": [
+          {
+            "पेपर क्रमांक": "पेपर 1",
+            "विषयाचे नाव": "वित्तीय अहवाल"
+          },
+          {
+            "पेपर क्रमांक": "पेपर 2",
+            "विषयाचे नाव": "प्रगत वित्तीय व्यवस्थापन"
+          },
+          {
+            "पेपर क्रमांक": "पेपर 3",
+            "विषयाचे नाव": "प्रगत लेखापरीक्षण, हमी आणि व्यावसायिक नीतिशास्त्र"
+          },
+          {
+            "पेपर क्रमांक": "पेपर 4",
+            "विषयाचे नाव": "थेट कर कायदे आणि आंतरराष्ट्रीय कराधान"
+          },
+          {
+            "पेपर क्रमांक": "पेपर 5",
+            "विषयाचे नाव": "अप्रत्यक्ष कर कायदेभाग I:वस्तू आणि सेवा करभाग II:सीमाशुल्क आणि परकीय व्यापार धोरण"
+          },
+          {
+            "पेपर क्रमांक": "पेपर 6",
+            "विषयाचे नाव": "समाकलित व्यवसाय समाधान (Integrated Business Solutions)(अनेक विषयांवरील केस स्टडी व रणनीतिक व्यवस्थापन)"
+          }
+        ]
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "सी.ए परीक्षा पॅटर्न भारतीय चार्टर्ड अकाउंटंट्स संस्थेने तयार केले आहे, जे विद्यार्थ्यांना अकाउंटिंग, कर गणना आणि कायदेशीर कागदपत्रांमध्ये कौशल्ये मिळवून देते. हा कोर्स तीन स्तरांमध्ये विभागलेला आहे: सीए फाउंडेशन, सीए इंटरमीडिएट, आणि सीए फायनल, जे चार्टर्ड अकाउंटंट प्रमाणपत्र मिळविण्यासाठी अनुक्रमे पूर्ण करावे लागतात. प्रत्येक स्तराचे परीक्षा पॅटर्न वेगळे असून कठीणतेची पातळी देखील बदलते. सीए पेपर्स कठीण असल्यामुळे, यशस्वी होण्याचे प्रमाण कमी आहे. त्यामुळे उमेदवारांना प्रत्येक स्तर क्लिअर करण्यासाठी अनेक वेळा प्रयत्न करावे लागतात.सीए परीक्षा कालावधी सी.ए फाउंडेशन आणि इंटरमीडिएट परीक्षा वर्षातून तीनदा घेतल्या जातात – मे-जून, सप्टेंबर, आणि जानेवारी, तर फायनल परीक्षा मे आणि नोव्हेंबर महिन्यात दोन वेळा घेतल्या जातात. परीक्षा संगणक-आधारित स्वरूपात घेतली जाते आणि चार दिवसांत संपते, एका दिवसात एकच पेपर घेतला जातो. च्या 2025 च्या सुधारित योजनेनुसार, सीए इंटरमीडिएट आणि फायनल स्तरांवरील परीक्षा संख्या कमी करून 8 वरून 6 करण्यात आली आहे. याशिवाय, बहुपर्यायी प्रश्न सर्व विषयांमध्ये समाविष्ट केले गेले आहेत.",
+      "वैशिष्ट्ये",
+      "परीक्षेचे नाव",
+      "चार्टर्ड अकाउंटन्सी परीक्षा",
+      "परीक्षा आयोजक संस्था"
+    ]
+  },
+  {
+    "slug": "gnm",
+    "lang": "mr",
+    "url": "https://www.sambodhiacademy.com/mr/exams/gnm",
+    "title": "सामान्य परिचर्या आणि प्रसूतीशास्त्र (GNM)",
+    "paragraphs_count": 161,
+    "tables_count": 11,
+    "optional_subjects_count": 0,
+    "interview_points_count": 0,
+    "tables": [
+      {
+        "caption": "•एकूण कालावधी: ३ वर्षे    •उपलब्ध आठवडे प्रति वर्ष: ४६ आठवडे    •एकूण तास: ५८८८ तास",
+        "headers": [
+          "वर्ष",
+          "अभ्यासक्रमातील एकूण तास"
+        ],
+        "rows": [
+          {
+            "वर्ष": "प्रथम वर्षद्वितीय वर्षतृतीय वर्ष (भाग I)इंटर्नशिप (भाग II)",
+            "अभ्यासक्रमातील एकूण तास": "१८४० तास१८४० तास९६० तास१२४८ तास"
+          }
+        ]
+      },
+      {
+        "caption": "प्रथम वर्ष",
+        "headers": [
+          "विषय",
+          "एकूण गुण",
+          "अंतर्गत मूल्यमापन",
+          "परिषदेची परीक्षा",
+          "परीक्षा कालावधी (तास)"
+        ],
+        "rows": [
+          {
+            "विषय": "बायोसायन्सेस (शरीरशास्त्र व शरीरक्रियाशास्त्र)सूक्ष्मजीवशास्त्रवर्तणूकशास्त्र (मानसशास्त्र व समाजशास्त्र)नर्सिंग मूलभूत तत्त्वेसामुदायिक आरोग्य नर्सिंग-Iप्रात्यक्षिक परीक्षा:मूलभूत नर्सिंग कौशल्ये",
+            "एकूण गुण": "१००१००१००१००१००१००",
+            "अंतर्गत मूल्यमापन": "२५२५२५२५२५५०",
+            "परिषदेची परीक्षा": "७५७५७५७५७५५०",
+            "परीक्षा कालावधी (तास)": "३३३३३-"
+          }
+        ]
+      },
+      {
+        "caption": "द्वितीय वर्ष",
+        "headers": [
+          "विषय",
+          "एकूण गुण",
+          "अंतर्गत मूल्यमापन",
+          "परिषदेची परीक्षा",
+          "परीक्षा कालावधी (तास)"
+        ],
+        "rows": [
+          {
+            "विषय": "वैद्यकीय-शल्यक्रिया नर्सिंग-Iवैद्यकीय-शल्यक्रिया नर्सिंग-IIमानसिक आरोग्य नर्सिंगबाल आरोग्य नर्सिंगप्रात्यक्षिक परीक्षा:वैद्यकीय-शल्यक्रिया नर्सिंग",
+            "एकूण गुण": "१००१००१००१००१००",
+            "अंतर्गत मूल्यमापन": "२५२५२५२५५०",
+            "परिषदेची परीक्षा": "७५७५७५७५५०",
+            "परीक्षा कालावधी (तास)": "३३३३-"
+          }
+        ]
+      },
+      {
+        "caption": "तृतीय वर्ष",
+        "headers": [
+          "विषय",
+          "एकूण गुण",
+          "अंतर्गत मूल्यमापन",
+          "परिषदेची परीक्षा",
+          "परीक्षा कालावधी (तास)"
+        ],
+        "rows": [
+          {
+            "विषय": "प्रसूती व स्त्रीरोग नर्सिंगसामुदायिक आरोग्य नर्सिंग-IIप्रात्यक्षिक परीक्षा:प्रसूती नर्सिंग",
+            "एकूण गुण": "१००१००१००",
+            "अंतर्गत मूल्यमापन": "२५२५५०",
+            "परिषदेची परीक्षा": "७५७५५०",
+            "परीक्षा कालावधी (तास)": "३३-"
+          }
+        ]
+      },
+      {
+        "caption": "Table",
+        "headers": [
+          "पहिले वर्ष",
+          "दुसरे वर्ष",
+          "तिसरे वर्ष"
+        ],
+        "rows": [
+          {
+            "पहिले वर्ष": "शरीरशास्त्र- शरीरक्रियाशास्त्र- सूक्ष्मजीवशास्त्र- समाजशास्त्र- मानसशास्त्र- मूलभूत परिचर्या- रुग्ण मूल्यांकन व संवाद कौशल्ये- प्राथमिक उपचार- सामुदायिक आरोग्य परिचर्या-I- पर्यावरणीय स्वच्छता, आरोग्य शिक्षण, पोषणशास्त्र- इंग्रजी- संगणक शिक्षण",
+            "दुसरे वर्ष": "वैद्यकीय-शल्यक्रिया परिचर्या-I- वैद्यकीय-शल्यक्रिया परिचर्या-II- मानसिक आरोग्य परिचर्या- बाल आरोग्य परिचर्या- प्रसूती व स्त्रीरोग परिचर्या- सामुदायिक आरोग्य परिचर्या-II",
+            "तिसरे वर्ष": "परिचर्या शिक्षण आणि संशोधन परिचय- व्यावसायिक प्रवृत्ती- वॉर्ड व्यवस्थापन"
+          }
+        ]
+      },
+      {
+        "caption": "प्रथम वर्ष अभ्यासक्रम",
+        "headers": [
+          "क्रमांक",
+          "विषयाचे नाव",
+          "सिद्धांत",
+          "प्रात्यक्षिक",
+          "एकूण तास"
+        ],
+        "rows": [
+          {
+            "क्रमांक": "IIIIIIIV",
+            "विषयाचे नाव": "सामुदायिक आरोग्य परिचर्याआरोग्य संवर्धनप्राथमिक आरोग्य परिचर्या-Iबाल आरोग्य परिचर्या",
+            "सिद्धांत": "12012013075",
+            "प्रात्यक्षिक": "5075150110",
+            "एकूण तास": "170195280185"
+          }
+        ]
+      },
+      {
+        "caption": "प्रथम वर्ष - परीक्षा गुणफलक",
+        "headers": [
+          "पेपर",
+          "विषय",
+          "बाह्य मूल्यमापन",
+          "आंतर मूल्यमापन",
+          "कालावधी"
+        ],
+        "rows": [
+          {
+            "पेपर": "Paper-IPaper-IIPaper-IIIPaper-IVप्रात्यक्षिक Iप्रात्यक्षिक II",
+            "विषय": "सामुदायिक आरोग्य परिचर्याआरोग्य संवर्धनप्राथमिक आरोग्य परिचर्या-Iबाल आरोग्य परिचर्यासामुदायिक आरोग्य आणि आरोग्य संवर्धनबाल आरोग्य परिचर्या",
+            "बाह्य मूल्यमापन": "75757575100100",
+            "आंतर मूल्यमापन": "25252525100100",
+            "कालावधी": "3 तास3 तास3 तास3 तास--"
+          }
+        ]
+      },
+      {
+        "caption": "द्वितीय वर्ष (पहिले सहा महिने) - अभ्यासक्रम",
+        "headers": [
+          "क्रमांक",
+          "विषयाचे नाव",
+          "सिद्धांत",
+          "प्रात्यक्षिक",
+          "रुग्णालय",
+          "समुदाय",
+          "एकूण तास"
+        ],
+        "rows": [
+          {
+            "क्रमांक": "VVI",
+            "विषयाचे नाव": "प्रसूतीशास्त्रआरोग्य केंद्र व्यवस्थापन",
+            "सिद्धांत": "20040",
+            "प्रात्यक्षिक": "16040",
+            "रुग्णालय": "220-",
+            "समुदाय": "16060",
+            "एकूण तास": "740140"
+          }
+        ]
+      },
+      {
+        "caption": "द्वितीय वर्ष (इंटर्नशिप - सहा महिने)",
+        "headers": [
+          "क्रमांक",
+          "विषयाचे नाव",
+          "अनुभव - रुग्णालय"
+        ],
+        "rows": [
+          {
+            "क्रमांक": "IIIIII",
+            "विषयाचे नाव": "प्रसूतीशास्त्रबाल आरोग्यसामुदायिक आरोग्य आणि आरोग्य केंद्र व्यवस्थापन",
+            "अनुभव - रुग्णालय": "24080160"
+          },
+          {
+            "क्रमांक": "",
+            "विषयाचे नाव": "एकूण तास",
+            "अनुभव - रुग्णालय": "480 तास"
+          }
+        ]
+      },
+      {
+        "caption": "द्वितीय वर्ष - परीक्षा गुणफलक",
+        "headers": [
+          "पेपर",
+          "विषय",
+          "बाह्य मूल्यमापन",
+          "आंतर मूल्यमापन",
+          "कालावधी"
+        ],
+        "rows": [
+          {
+            "पेपर": "Paper-VPaper-VIप्रात्यक्षिक IIIप्रात्यक्षिक IVप्रात्यक्षिक V",
+            "विषय": "प्रसूतीशास्त्रआरोग्य केंद्र व्यवस्थापनप्रसूतीशास्त्रसामुदायिक आरोग्य परिचर्या आणि आरोग्य संवर्धनप्राथमिक आरोग्य परिचर्या आणि आरोग्य केंद्र व्यवस्थापन",
+            "बाह्य मूल्यमापन": "7575100100100",
+            "आंतर मूल्यमापन": "2525100100100",
+            "कालावधी": "3 तास3 तास---"
+          }
+        ]
+      },
+      {
+        "caption": "तृतीय वर्ष अभ्यासक्रम",
+        "headers": [
+          "जैवशास्त्र: शरीरशास्त्र, शरीरक्रियाशास्त्र, सूक्ष्मजीवशास्त्रवर्तनशास्त्र: समाजशास्त्र, मानसशास्त्रमूलभूत परिचर्या: रुग्ण मूल्यांकन, संवाद कौशल्य, प्रथमोपचारसामुदायिक आरोग्य परिचर्या-I: पर्यावरणीय स्वच्छता, आरोग्य शिक्षण, पोषणइंग्रजी व संगणक शिक्षणवैद्यकीय-शल्यक्रिया परिचर्या-I आणि IIमानसिक आरोग्य परिचर्याबाल आरोग्य परिचर्याप्रसूती आणि स्त्रीरोग परिचर्यासामुदायिक आरोग्य परिचर्या-IIपरिचर्या शिक्षण आणि संशोधन परिचय"
+        ],
+        "rows": []
+      }
+    ],
+    "optional_subjects": [],
+    "interview_details": [],
+    "overview": [
+      "१०+२ इंग्रजी विषयासह उत्तीर्ण असणे आवश्यक आहे आणि कोणत्याही मान्यताप्राप्त बोर्डमधून पात्रता परीक्षेत किमान ४०% गुण मिळाले पाहिजेत. इंग्रजी स्वतंत्रपणे उत्तीर्ण असणे आवश्यक आहे.",
+      "राज्य सरकार मान्यताप्राप्त स्टेट ओपन स्कूल आणि केंद्रीय सरकार मान्यताप्राप्त नॅशनल इन्स्टिट्यूट ऑफ ओपन स्कूल (NIOS) मधून उत्तीर्ण विद्यार्थी पात्र आहेत.",
+      "विज्ञान शाखेतील विद्यार्थी प्राधान्याने पात्र असतील.",
+      "ANM कोर्ससाठी: १०+२ इंग्रजीसह आणि इंडियन नर्सिंग कौन्सिल (INC) मान्यताप्राप्त शाळेतून व्यावसायिक ANM अभ्यासक्रमात किमान ४०% गुण आवश्यक.",
+      "परदेशी विद्यार्थ्यांसाठी: भारतीय विद्यापीठ संघटनेत समकक्ष प्रमाणपत्र प्राप्त करणे आवश्यक."
+    ]
+  }
+]

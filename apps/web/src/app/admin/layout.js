@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { trackAdminPageView } from '../../lib/analytics'
 
 export default function AdminLayout({ children }) {
   const pathname = usePathname()
@@ -10,6 +11,7 @@ export default function AdminLayout({ children }) {
   const [isAuth, setIsAuth] = useState(false)
 
   useEffect(() => {
+    trackAdminPageView({ page_path: pathname })
     const token = localStorage.getItem('token')
     if (!token) {
       // In production: redirect to login. In dev: allow access via env flag.

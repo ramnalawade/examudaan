@@ -34,47 +34,62 @@ logger = logging.getLogger("DailyCA")
 # Comprehensive RSS feeds covering every ExamUdaan category & target exam
 FEEDS = [
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("site:pib.gov.in when:2d") + "&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://www.drishtiias.com/rss.rss",
+        "source": "Drishti IAS Current Affairs",
+        "priority_category": "National",
+    },
+    {
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("site:pib.gov.in") + "&hl=en-IN&gl=IN&ceid=IN:en",
         "source": "PIB India (Govt Press Releases)",
         "priority_category": "National",
     },
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("Maharashtra government OR Mantralaya OR MPSC when:3d") + "&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://www.thehindu.com/news/national/feeder/default.rss",
+        "source": "The Hindu National",
+        "priority_category": "National",
+    },
+    {
+        "url": "https://www.thehindu.com/business/Economy/feeder/default.rss",
+        "source": "The Hindu Economy",
+        "priority_category": "Economy",
+    },
+    {
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("Maharashtra government OR Mantralaya OR MPSC") + "&hl=en-IN&gl=IN&ceid=IN:en",
         "source": "Maharashtra Governance Feed",
         "priority_category": "Maharashtra",
     },
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("MPSC चालू घडामोडी OR महाराष्ट्र शासन when:3d") + "&hl=mr&gl=IN&ceid=IN:mr",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("MPSC चालू घडामोडी OR महाराष्ट्र शासन") + "&hl=mr&gl=IN&ceid=IN:mr",
         "source": "MPSC Chalu Ghadamodi",
         "priority_category": "Maharashtra",
     },
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("RBI OR repo rate OR inflation OR GDP India OR banking OR SEBI when:3d") + "&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("RBI OR repo rate OR inflation OR GDP India OR banking OR SEBI") + "&hl=en-IN&gl=IN&ceid=IN:en",
         "source": "Economy & Banking Feed",
         "priority_category": "Economy",
     },
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("ISRO OR DRDO OR space mission OR satellite OR defence India when:3d") + "&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("ISRO OR DRDO OR space mission OR satellite OR defence India") + "&hl=en-IN&gl=IN&ceid=IN:en",
         "source": "Science & Tech Feed",
         "priority_category": "Science & Tech",
     },
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("wildlife sanctuary OR Ramsar OR climate change OR solar renewable India when:4d") + "&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("wildlife sanctuary OR Ramsar OR climate change OR solar renewable India") + "&hl=en-IN&gl=IN&ceid=IN:en",
         "source": "Environment & Ecology Feed",
         "priority_category": "Environment",
     },
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("India sports OR Olympics OR cricket championship OR medal winner when:3d") + "&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("India sports OR Olympics OR cricket championship OR medal winner") + "&hl=en-IN&gl=IN&ceid=IN:en",
         "source": "National Sports Feed",
         "priority_category": "Sports",
     },
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("bilateral summit OR G20 OR BRICS OR United Nations India when:3d") + "&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("bilateral summit OR G20 OR BRICS OR United Nations India") + "&hl=en-IN&gl=IN&ceid=IN:en",
         "source": "International Relations Feed",
         "priority_category": "International",
     },
     {
-        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("Maharashtra police bharti OR police recruitment when:5d") + "&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=" + urllib.parse.quote("Maharashtra police bharti OR police recruitment") + "&hl=en-IN&gl=IN&ceid=IN:en",
         "source": "Police Bharti News",
         "priority_category": "Maharashtra",
     },

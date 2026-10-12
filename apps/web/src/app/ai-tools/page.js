@@ -6,11 +6,12 @@
 
 'use client'
 
-import { useState, Suspense } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { useLanguage } from '../../context/LanguageContext'
 import { AI_TOOLS, AI_TOOL_CATEGORIES } from '../../lib/aiToolsData'
+import { trackAiToolClick, trackAiToolFilter, trackAiToolSearch } from '../../lib/analytics'
 import ResumeBuilder from '../../components/ResumeBuilder'
 import CoverLetterBuilder from '../../components/CoverLetterBuilder'
 
@@ -139,6 +140,15 @@ function AiToolsContent() {
 
   // Filter & sort tools
   const [toolSort, setToolSort] = useState('popular')
+
+  // Track search query debounced
+  useEffect(() => {
+    if (!searchQuery.trim()) return
+    const timer = setTimeout(() => {
+      trackAiToolSearch({ search_term: searchQuery })
+    }, 600)
+    return () => clearTimeout(timer)
+  }, [searchQuery])
 
   const filteredTools = AI_TOOLS.filter(t => {
     if (activeCategory === 'MPSC / Govt Exam') {
@@ -450,7 +460,10 @@ Document:
                 return (
                   <button
                     key={cat}
-                    onClick={() => setActiveCategory(cat)}
+                    onClick={() => {
+                      setActiveCategory(cat)
+                      trackAiToolFilter({ filter_type: 'category', filter_value: cat })
+                    }}
                     style={{
                       background: activeCategory === cat ? 'var(--primary)' : 'var(--surface-container-lowest)',
                       color: activeCategory === cat ? '#fff' : 'var(--on-surface)',
@@ -575,6 +588,7 @@ Document:
                   <div className="ai-tool-card-actions">
                     <Link
                       href={`/ai-tools/${tool.slug}`}
+                      onClick={() => trackAiToolClick({ tool_name: tool.name, tool_category: tool.category })}
                       style={{
                         flex: 1, textAlign: 'center', minWidth: 100,
                         background: 'var(--primary)', color: '#fff',
@@ -582,9 +596,10 @@ Document:
                         fontSize: 13, fontWeight: 700, textDecoration: 'none',
                         display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 4,
                       }}
+                      aria-label={isMarathi ? 'मार्गदर्शक' : 'How to Use'}
                     >
-                      <span className="material-symbols-outlined" style={{ fontSize: 14 }}>menu_book</span>
-                      {isMarathi ? 'मार्गदर्शक' : 'How to Use'}
+                      <span className="material-symbols-outlined" style={{ fontSize: 14 }} aria-hidden="true">menu_book</span>
+                      <span>{isMarathi ? 'मार्गदर्शक' : 'How to Use'}</span>
                     </Link>
                     <button
                       type="button"
@@ -608,6 +623,7 @@ Document:
                       href={tool.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackAiToolClick({ tool_name: tool.name, tool_category: tool.category })}
                       style={{
                         padding: '8px 12px', borderRadius: 8,
                         background: 'var(--surface-container-lowest)',

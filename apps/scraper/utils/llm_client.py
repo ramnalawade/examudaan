@@ -20,6 +20,11 @@ from typing import Optional, Dict, Any, List
 
 logger = logging.getLogger(__name__)
 
+# Silence noisy token/glyph level DEBUG logs from pdfminer & pdfplumber
+logging.getLogger("pdfminer").setLevel(logging.WARNING)
+logging.getLogger("pdfplumber").setLevel(logging.WARNING)
+
+
 # ── Rich extraction prompt (expanded to capture all fields) ──────────────────
 EXTRACTION_PROMPT = """You are an expert at reading Indian government job/exam notifications (PDFs).
 

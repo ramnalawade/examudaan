@@ -211,6 +211,7 @@ class DuplicateStopMixin:
         from pipelines import DeduplicationPipeline
         url = str(href).strip()
         if url and DeduplicationPipeline.is_known(url):
+            self.track_duplicate(url, label=title, urls=[url])
             return True
 
         return False

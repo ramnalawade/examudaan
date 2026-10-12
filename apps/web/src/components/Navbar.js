@@ -90,7 +90,7 @@ export default function Navbar() {
     //{ href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),         icon: 'policy',                                desc: 'Scholarship, employment & training schemes' },
     { href: '/blog', label: t('nav.blog', 'Exam Blog & Guides'), icon: 'menu_book', badge: 'Guides', desc: 'In-depth exam blueprints, 90-day plans & PYQ trends' },
     { href: '/youtube', label: t('nav.youtube', 'YouTube Classes'), icon: 'play_circle', desc: 'Free lectures, strategy & exam updates' },
-    { href: '/ai-tools', label: t('nav.ai_tools', 'AI Study Tools'), icon: 'smart_toy', desc: '84+ curated AI study aids' },
+    { href: '/ai-tools', label: t('nav.ai_tools', 'AI Study Tools'), icon: 'smart_toy', desc: '114+ curated AI study aids' },
     { href: '/ai-academy', label: t('nav.ai_academy', 'AI Academy'), icon: 'school', badge: 'New', desc: 'Master AI skills, prompts & workflows' },
     { href: '/mock-interview', label: t('nav.mock_interview', 'Mock Interview AI'), icon: 'mic', badge: 'AI', desc: 'Real-time AI voice/chat board mock interview' },
     { href: '/ai-news', label: t('nav.ai_news', 'AI News Feed'), icon: 'feed', badge: 'Live', desc: 'Real-time AI research & tech updates' },
@@ -511,11 +511,10 @@ export default function Navbar() {
           ) : (
             <Link
               href="/login"
-              className="btn-ghost"
-              style={{ padding: '6px 14px', fontSize: '13px', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+              className="nav-login-btn"
               id="navbar-login-btn"
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>person</span>
+              <span className="material-symbols-outlined">person</span>
               <span>{t('nav.signin', 'Sign In')}</span>
             </Link>
           )}

@@ -113,7 +113,15 @@ function parseRss(xmlText, defaultSource = 'Govt Press Release') {
     const url = (linkMatch ? linkMatch[1] : '').replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1').trim()
     const desc = cleanText(descMatch ? descMatch[1] : '')
     const srcName = cleanText(sourceMatch ? sourceMatch[1] : defaultSource)
-    const pubDate = dateMatch ? new Date(dateMatch[1]).toISOString().split('T')[0] : new Date().toISOString().split('T')[0]
+
+    let pubDate = new Date().toISOString().split('T')[0]
+    if (dateMatch && dateMatch[1]) {
+      const rawDateStr = cleanText(dateMatch[1])
+      const parsed = new Date(rawDateStr)
+      if (!isNaN(parsed.getTime())) {
+        pubDate = parsed.toISOString().split('T')[0]
+      }
+    }
 
     if (rawTitle && url) {
       const { cleanTitle, extractedSource } = stripSource(rawTitle)
@@ -164,6 +172,7 @@ export async function GET(request) {
   const search = searchParams.get('search') || ''
   const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
   const limit = Math.max(1, Math.min(100, parseInt(searchParams.get('limit') || '60', 10)))
+  const isFresh = searchParams.get('fresh') === 'true' || searchParams.has('_t')
 
   const dbArticles = []
 
@@ -188,52 +197,70 @@ export async function GET(request) {
     console.warn('[api/current-affairs] DB fetch note:', dbErr.message)
   }
 
-  // 2. Fetch live RSS feeds — PIB, Google News, MPSC-specific sources
+  // 2. Fetch live high-authority RSS feeds (PIB, The Hindu, Indian Express, Drishti IAS, MPSC)
   const liveItems = []
   try {
     const feeds = [
-      // PIB India via Google News (official press releases)
-      {
-        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('site:pib.gov.in when:2d') + '&hl=en-IN&gl=IN&ceid=IN:en',
-        source: 'PIB India (Govt Press Releases)',
-      },
-      // Maharashtra Specific — MPSC, Police Bharti, State Govt
-      {
-        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('Maharashtra government OR Mantralaya OR MPSC when:3d') + '&hl=en-IN&gl=IN&ceid=IN:en',
-        source: 'Maharashtra Governance Feed',
-      },
-      // MPSC-Specific (Marathi language)
-      {
-        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('MPSC चालू घडामोडी OR महाराष्ट्र शासन when:3d') + '&hl=mr&gl=IN&ceid=IN:mr',
-        source: 'MPSC Current Affairs',
-      },
-      // National Governance & Cabinet
-      {
-        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('central government scheme OR cabinet decision OR ISRO OR DRDO when:3d') + '&hl=en-IN&gl=IN&ceid=IN:en',
-        source: 'Cabinet & National Schemes',
-      },
-      // Economy & Banking (RBI, SEBI, Budget)
-      {
-        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('RBI OR repo rate OR inflation OR GDP India when:3d') + '&hl=en-IN&gl=IN&ceid=IN:en',
-        source: 'Economic & Banking Feed',
-      },
-      // Police Bharti & Recruitment
-      {
-        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('Maharashtra police bharti OR police recruitment when:5d') + '&hl=en-IN&gl=IN&ceid=IN:en',
-        source: 'Police Bharti Feed',
-      },
-      // Drishti IAS
+      // Drishti IAS — daily exam-focused current affairs & editorial notes
       {
         url: 'https://www.drishtiias.com/rss.rss',
         source: 'Drishti IAS Current Affairs',
+      },
+      // PIB India via Google News (official government press releases)
+      {
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('site:pib.gov.in') + '&hl=en-IN&gl=IN&ceid=IN:en',
+        source: 'PIB India (Govt Press Releases)',
+      },
+      // The Hindu — National News Feed
+      {
+        url: 'https://www.thehindu.com/news/national/feeder/default.rss',
+        source: 'The Hindu National',
+      },
+      // The Hindu — Economy & Banking Feed
+      {
+        url: 'https://www.thehindu.com/business/Economy/feeder/default.rss',
+        source: 'The Hindu Economy',
+      },
+      // The Hindu — Science, Defence & Environment
+      {
+        url: 'https://www.thehindu.com/sci-tech/science/feeder/default.rss',
+        source: 'The Hindu Science',
+      },
+      // Indian Express — National Governance & Policies
+      {
+        url: 'https://indianexpress.com/section/india/feed/',
+        source: 'Indian Express',
+      },
+      // Maharashtra Specific — MPSC, Mantralaya, State Govt Schemes
+      {
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('Maharashtra government OR Mantralaya OR MPSC') + '&hl=en-IN&gl=IN&ceid=IN:en',
+        source: 'Maharashtra Governance Feed',
+      },
+      // MPSC-Specific in Marathi
+      {
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('MPSC चालू घडामोडी OR महाराष्ट्र शासन') + '&hl=mr&gl=IN&ceid=IN:mr',
+        source: 'MPSC Current Affairs',
+      },
+      // Economy & Banking (RBI, Repo Rate, Inflation, SEBI, Budget)
+      {
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('RBI OR repo rate OR inflation OR GDP India OR SEBI') + '&hl=en-IN&gl=IN&ceid=IN:en',
+        source: 'Economic & Banking Feed',
+      },
+      // Police Bharti & Defence Recruitment
+      {
+        url: 'https://news.google.com/rss/search?q=' + encodeURIComponent('Maharashtra police bharti OR Indian Army recruitment') + '&hl=en-IN&gl=IN&ceid=IN:en',
+        source: 'Police Bharti Feed',
       },
     ]
 
     const responses = await Promise.allSettled(
       feeds.map(f =>
         fetch(f.url, {
-          headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 ExamUdaanBot/1.0' },
-          next: { revalidate: 1800 },
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 ExamUdaanBot/1.0',
+            'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+          },
+          next: isFresh ? { revalidate: 0 } : { revalidate: 300 },
         })
           .then(async res => {
             if (!res.ok) return []
@@ -257,8 +284,8 @@ export async function GET(request) {
   const seenTitles = new Set()
   const combinedAll = []
 
-  // Priority: Database daily records first, then curated seed entries, then live RSS
-  const candidatePool = [...dbArticles, ...CURRENT_AFFAIRS, ...liveItems]
+  // Priority: Fresh live RSS first, then Database records, then curated baseline
+  const candidatePool = [...liveItems, ...dbArticles, ...CURRENT_AFFAIRS]
   for (const item of candidatePool) {
     if (!item || !item.title) continue
     const key = item.title.toLowerCase().substring(0, 42).trim()
@@ -267,6 +294,14 @@ export async function GET(request) {
       combinedAll.push(item)
     }
   }
+
+  // CRITICAL: Sort strictly descending by date so TODAY'S LIVE news is ALWAYS at the very top!
+  combinedAll.sort((a, b) => {
+    const da = a.date || '1970-01-01'
+    const db = b.date || '1970-01-01'
+    if (db !== da) return db.localeCompare(da)
+    return (a.title || '').localeCompare(b.title || '')
+  })
 
   // 4. Apply Filters
   const filtered = combinedAll.filter(ca => {
@@ -296,7 +331,11 @@ export async function GET(request) {
     timestamp: new Date().toISOString(),
   })
 
-  // Cache for 30 minutes on edge / CDN
-  response.headers.set('Cache-Control', 'public, s-maxage=1800, stale-while-revalidate=3600')
+  // Cache for 5 minutes on edge / CDN (or 0 if force-fresh requested)
+  if (isFresh) {
+    response.headers.set('Cache-Control', 'no-store, max-age=0')
+  } else {
+    response.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=600')
+  }
   return response
 }

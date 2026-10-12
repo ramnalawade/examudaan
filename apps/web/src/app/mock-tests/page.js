@@ -6,6 +6,7 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { MOCK_TESTS } from '@/lib/mockTestsData'
+import { trackMockTestStart } from '@/lib/analytics'
 import styles from './mockTests.module.css'
 
 const EXAM_FILTERS = ['All', 'MPSC', 'Police Bharti', 'Talathi Bharti', 'SSC', 'IBPS', 'Banking', 'UPSC']
@@ -357,7 +358,13 @@ function TestCard({ test }) {
   const totalMarks = test.marksPerQuestion * qCount
 
   return (
-    <Link href={`/mock-tests/${test.slug}`} className={styles.testCard}>
+    <Link
+      href={`/mock-tests/${test.slug}`}
+      className={styles.testCard}
+      onClick={() => {
+        trackMockTestStart({ exam_name: test.title, test_id: test.slug })
+      }}
+    >
       <div className={styles.testCardTop}>
         <span className={styles.examBadge} data-exam={test.examType}>{test.examType}</span>
         <span className={styles.diffBadge} style={{ color: diffColor, borderColor: diffColor, background: diffColor + '15' }}>

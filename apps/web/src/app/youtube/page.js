@@ -12,6 +12,7 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { useLanguage } from '../../context/LanguageContext'
 import { ALL_CHANNELS, EXAM_FILTERS, LANG_FILTERS, PRECOOKED_VIDEOS } from '../../lib/youtubeData'
+import { trackVideoPlay } from '../../lib/analytics'
 
 // ── Quick topic searches that pre-populate the search box ────
 const QUICK_SEARCHES = [
@@ -90,6 +91,10 @@ function YouTubeContent() {
 
   // ── Select and play video in top main player & smoothly scroll up ──
   const handlePlayVideo = useCallback((video) => {
+    trackVideoPlay({
+      video_title: video?.title || '',
+      video_id: video?.videoId || '',
+    })
     setActiveVideo(video)
     if (searchResults.length === 0) {
       setSearchResults(PRECOOKED_VIDEOS.filter(v => v.videoId !== video.videoId))

@@ -78,9 +78,9 @@ class SmartRetryMiddleware(RetryMiddleware):
     """
 
     BACKOFF_SECONDS = {
-        403: 30,   # Forbidden — wait 30s then retry with fresh UA
-        429: 60,   # Rate limited — wait 60s
-        503: 20,   # Service Unavailable — wait 20s
+        403: 5,    # Forbidden — wait 5s then retry with fresh UA
+        429: 10,   # Rate limited — wait 10s
+        503: 5,    # Service Unavailable — wait 5s
     }
 
     def process_response(self, request, response, spider):

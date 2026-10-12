@@ -8,6 +8,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { trackCtaClick, trackSocialCommunity } from '@/lib/analytics'
 import styles from './pyq.module.css'
 
 const SUBJECT_FILTERS = [
@@ -148,6 +149,7 @@ function PyqSearchInner() {
 
   // Toggle explanation
   const toggleSolution = (pyqId) => {
+    trackCtaClick(`View PYQ Solution: Q#${pyqId}`, '/pyq', 'pyq_question_card')
     setRevealedSolutions((prev) => ({ ...prev, [pyqId]: !prev[pyqId] }))
   }
 
@@ -347,6 +349,7 @@ function PyqSearchInner() {
               </Link>
               <Link
                 href="/mock-tests"
+                onClick={() => trackCtaClick('Free Online Mock Tests Link', '/mock-tests', 'pyq_hero_strip')}
                 style={{ color: '#047857', fontWeight: 700, textDecoration: 'none', background: '#ECFDF5', border: '1px solid #A7F3D0', padding: '3px 10px', borderRadius: '4px' }}
               >
                 ⏱️ मोफत ऑनलाईन मॉक टेस्ट्स ➔
@@ -520,6 +523,7 @@ function PyqSearchInner() {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackSocialCommunity('whatsapp_pyq_share', 'https://examudaan.in/pyq', 'pyq_question_card')}
                       className={styles.shareBtn}
                     >
                       <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>

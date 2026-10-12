@@ -5315,6 +5315,1836 @@ export const AI_TOOLS = [
       "v0",
       "bolt"
     ]
+  },
+  {
+    "slug": "knowt",
+    "name": "Knowt",
+    "tagline": "AI flashcards, practice test generator, and free Quizlet importer for active recall.",
+    "category": "Study",
+    "badge": "🎓 Free Flashcards",
+    "free": true,
+    "url": "https://knowt.com",
+    "logo": "school",
+    "targetUsers": [
+      "UPSC & MPSC Aspirants",
+      "College Students",
+      "Board Exam Students",
+      "Self Learners"
+    ],
+    "whatIs": "Knowt is an AI-powered study platform that automatically converts lecture notes, PDFs, textbook chapters, and YouTube video links into flashcards and practice exams with spaced repetition.",
+    "whyItMatters": "Unlike paid flashcard tools, Knowt lets aspirants import existing Quizlet sets 100% free, generate multiple-choice quizzes from coaching class notes, and master rote topics like Article numbers, historical treaties, and state schemes.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Create a Free Account",
+        "desc": "Sign up at knowt.com using your Google account to access free unlimited flashcards."
+      },
+      {
+        "step": 2,
+        "title": "Import Notes or Syllabus",
+        "desc": "Paste coaching lecture notes, upload a PDF chapter, or paste a YouTube exam lecture link."
+      },
+      {
+        "step": 3,
+        "title": "Generate AI Flashcards",
+        "desc": "Click \"Create Flashcards\" — Knowt extracts key definitions, dates, and formula pairs automatically."
+      },
+      {
+        "step": 4,
+        "title": "Take Practice Quizzes",
+        "desc": "Switch to Learn Mode or Practice Test Mode to test recall with multiple choice and fill-in-the-blank questions."
+      },
+      {
+        "step": 5,
+        "title": "Review with Spaced Repetition",
+        "desc": "Follow Knowt's spaced-repetition algorithm to review difficult cards right before forgetting."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Syllabus Chapter Flashcards",
+        "text": "Create 20 two-sided flashcards covering the key provisions, amendments, and landmark Supreme Court cases related to Article 21 of the Indian Constitution."
+      },
+      {
+        "title": "Rapid Revision Test",
+        "text": "Generate a 10-question multiple-choice revision test with tricky distractors and detailed explanations based on the uploaded notes."
+      }
+    ],
+    "limitations": "Complex mathematical formulas inside blurry images may require manual correction after scanning.",
+    "relatedSlugs": [
+      "anki",
+      "quizlet-qchat",
+      "notebooklm"
+    ]
+  },
+  {
+    "slug": "gizmo",
+    "name": "Gizmo AI",
+    "tagline": "Gamified active recall quizzes, daily learning streaks, and AI flashcard coaching.",
+    "category": "Study",
+    "badge": "⚡ Gamified Quizzes",
+    "free": true,
+    "url": "https://gizmo.ai",
+    "logo": "quiz",
+    "targetUsers": [
+      "Competitive Exam Aspirants",
+      "School Students",
+      "Language Learners",
+      "General Studies Students"
+    ],
+    "whatIs": "Gizmo AI transforms study documents, textbook PDFs, and class slides into gamified quizzes with daily habit tracking, instant feedback, and spaced repetition.",
+    "whyItMatters": "Ideal for aspirants struggling with consistent revision habits; turns tedious General Studies facts, national parks, wildlife sanctuaries, and budget figures into addictive 5-minute daily challenges.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Gizmo AI",
+        "desc": "Visit gizmo.ai on web or mobile and select your learning goal."
+      },
+      {
+        "step": 2,
+        "title": "Add Study Material",
+        "desc": "Paste textbook summaries, upload PDF sheets, or enter a topic prompt like \"MPSC Maharashtra Geography\"."
+      },
+      {
+        "step": 3,
+        "title": "Auto-Build Quiz Deck",
+        "desc": "Let Gizmo's AI identify key testable facts and format them into interactive quiz cards."
+      },
+      {
+        "step": 4,
+        "title": "Daily Recall Workout",
+        "desc": "Play 5-minute timed rounds with instant answer explanations, streaks, and level progression."
+      },
+      {
+        "step": 5,
+        "title": "Track Weak Concepts",
+        "desc": "Check your accuracy dashboard to automatically focus on questions you missed in previous sessions."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Maharashtra Rivers Drill",
+        "text": "Create a 15-question rapid recall drill covering origins, tributaries, and major dams on the Godavari, Krishna, and Tapi river systems."
+      },
+      {
+        "title": "Economic Survey Highlights",
+        "text": "Turn the following 10 points from the latest Economic Survey into interactive active-recall questions."
+      }
+    ],
+    "limitations": "Best for factual recall and objective questions; not suited for long-form essay evaluations.",
+    "relatedSlugs": [
+      "quizlet-qchat",
+      "anki",
+      "socratic"
+    ]
+  },
+  {
+    "slug": "remnote",
+    "name": "RemNote",
+    "tagline": "All-in-one note-taking workspace that automatically generates spaced-repetition flashcards from your notes.",
+    "category": "Study",
+    "badge": "🧠 Spaced Repetition Notes",
+    "free": true,
+    "url": "https://remnote.com",
+    "logo": "edit_note",
+    "targetUsers": [
+      "Civil Services Aspirants",
+      "Medical Students",
+      "Law Students",
+      "Researchers"
+    ],
+    "whatIs": "RemNote combines concept-driven outlining, hierarchical knowledge management, and built-in spaced repetition flashcards so every note you write is immediately reviewable.",
+    "whyItMatters": "Perfect for 1-to-2 year exam preparation journeys where forgetting earlier subjects is the number one threat; links syllabus concepts bidirectionally and schedules daily memory reviews.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Set Up Subject Notebook",
+        "desc": "Sign up at remnote.com and create folders for Polity, History, Economy, and Science."
+      },
+      {
+        "step": 2,
+        "title": "Type Notes with Concept Delimiters",
+        "desc": "Type terms and definitions using \"::\" (e.g., \"Habeas Corpus :: To have the body of; order to produce detained person\")."
+      },
+      {
+        "step": 3,
+        "title": "Auto-Generated Flashcards",
+        "desc": "RemNote instantly turns your notes into active recall flashcards without any manual copy-pasting."
+      },
+      {
+        "step": 4,
+        "title": "Daily Queue Review",
+        "desc": "Open your daily Flashcard Queue every morning to review prioritized cards before forgetting occurs."
+      },
+      {
+        "step": 5,
+        "title": "Bidirectional Concept Linking",
+        "desc": "Use [[Concept]] tags to link related concepts across different exam papers and GS modules."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Constitutional Articles Schema",
+        "text": "Structure notes on Constitutional Remedies (Articles 32 & 226) using hierarchical bullet points and two-sided flashcard syntax."
+      },
+      {
+        "title": "Historical Treaties Revision",
+        "text": "Format the Maratha-British treaties (Surat, Purandar, Salbai, Bassein) with dates, signatories, and strategic terms for RemNote import."
+      }
+    ],
+    "limitations": "Steeper learning curve than simple note apps due to its powerful outlining and linking conventions.",
+    "relatedSlugs": [
+      "anki",
+      "notion-ai",
+      "notebooklm"
+    ]
+  },
+  {
+    "slug": "vaia",
+    "name": "Vaia (StudySmarter)",
+    "tagline": "AI study guides, intelligent flashcards, mock exams, and exam countdown planner.",
+    "category": "Study",
+    "badge": "📚 Exam Study Planner",
+    "free": true,
+    "url": "https://www.vaia.com",
+    "logo": "menu_book",
+    "targetUsers": [
+      "Competitive Exam Students",
+      "University Students",
+      "Study Groups",
+      "Distance Learners"
+    ],
+    "whatIs": "Vaia (formerly StudySmarter) is an all-in-one study app trusted by over 20 million students globally, featuring AI mock test generation, smart summary extraction, and structured study plans.",
+    "whyItMatters": "Allows aspirants to set exam deadlines, track daily hour targets, turn coaching slides into readable study notes, and share vetted question banks with peers.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Create an Exam Plan",
+        "desc": "Enter your target exam name (e.g. MPSC State Services 2026) and set the exam countdown date."
+      },
+      {
+        "step": 2,
+        "title": "Upload Study Materials",
+        "desc": "Drag and drop PDF books, lecture presentations, or handwritten notes into your course workspace."
+      },
+      {
+        "step": 3,
+        "title": "AI Smart Summary",
+        "desc": "Highlight any chapter to auto-generate concise bullet-point study guides and revision summaries."
+      },
+      {
+        "step": 4,
+        "title": "Generate AI Flashcards & Mock Tests",
+        "desc": "Click \"Create AI Mock Test\" to turn the uploaded document into exam-ready practice sets."
+      },
+      {
+        "step": 5,
+        "title": "Monitor Weekly Milestones",
+        "desc": "Check the study tracker to ensure you are meeting your daily topic quotas and revision hours."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Executive Summary of Monetary Policy",
+        "text": "Create a 1-page structured revision guide summarizing RBI's quantitative and qualitative monetary policy tools."
+      },
+      {
+        "title": "Exam Countdown Milestone",
+        "text": "Organize a 30-day revision schedule for Modern Indian History focusing on freedom struggle events from 1905 to 1947."
+      }
+    ],
+    "limitations": "Free version includes ads on mobile apps; offline access has file limits on the free tier.",
+    "relatedSlugs": [
+      "knowt",
+      "remnote",
+      "quizlet-qchat"
+    ]
+  },
+  {
+    "slug": "mindgrasp",
+    "name": "Mindgrasp AI",
+    "tagline": "Upload video lectures, Zoom recordings, and audio to get instant notes and quizzes.",
+    "category": "Study",
+    "badge": "🎙️ Audio & Video Notes",
+    "free": false,
+    "url": "https://mindgrasp.ai",
+    "logo": "headphones",
+    "targetUsers": [
+      "Video Course Learners",
+      "Coaching Students",
+      "Auditory Learners",
+      "Busy Aspirants"
+    ],
+    "whatIs": "Mindgrasp AI processes long video lectures, podcasts, YouTube classes, and audio recordings to produce timestamped notes, question-and-answer pairs, and comprehensive study sheets.",
+    "whyItMatters": "Saves hours of manual video scrubbing; aspirants can paste a 2-hour coaching YouTube marathon and instantly receive organized notes, formulas, and flashcards.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Mindgrasp Dashboard",
+        "desc": "Access mindgrasp.ai and click on \"Add Content\"."
+      },
+      {
+        "step": 2,
+        "title": "Upload Video or Audio",
+        "desc": "Paste a YouTube lecture link, upload an MP3/MP4 recording, or drop a PDF syllabus."
+      },
+      {
+        "step": 3,
+        "title": "AI Note Processing",
+        "desc": "Mindgrasp transcribes the lecture and organizes it into headings, concepts, and key definitions."
+      },
+      {
+        "step": 4,
+        "title": "Ask Follow-Up Questions",
+        "desc": "Use the built-in Bionic Tutor chat to clarify any confusing timestamp in the lecture."
+      },
+      {
+        "step": 5,
+        "title": "Export Study Pack",
+        "desc": "Download generated flashcards and multiple-choice questions for your offline revision binder."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Lecture Clarification",
+        "text": "Based on the 45-minute lecture segment on Fiscal Deficit, explain the difference between Primary Deficit and Revenue Deficit with standard formulas."
+      },
+      {
+        "title": "Key Formula Sheet",
+        "text": "Extract all Quantitative Aptitude speed-math shortcuts mentioned in this uploaded video into a single cheat-sheet table."
+      }
+    ],
+    "limitations": "Free trial offers limited media minutes; large multi-gigabyte video uploads require high-speed internet.",
+    "relatedSlugs": [
+      "otter",
+      "tldv",
+      "notebooklm"
+    ]
+  },
+  {
+    "slug": "mapify",
+    "name": "Mapify (Chatmind)",
+    "tagline": "Turn long PDFs, syllabus outlines, and articles into interactive visual mind maps.",
+    "category": "Study",
+    "badge": "🗺️ AI Mind Maps",
+    "free": true,
+    "url": "https://mapify.so",
+    "logo": "account_tree",
+    "targetUsers": [
+      "Visual Learners",
+      "UPSC & MPSC Aspirants",
+      "Educators",
+      "Project Planners"
+    ],
+    "whatIs": "Mapify uses advanced multimodal AI to parse textbooks, gazettes, audio, and YouTube links into clear, interactive hierarchical mind maps with clickable branches.",
+    "whyItMatters": "Ideal for mastering vast syllabus branches like Indian Polity or Ancient History; visually maps out how organs of state, constitutional bodies, and ministries interconnect.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit Mapify.so",
+        "desc": "Go to mapify.so and sign in to get free monthly AI mind map credits."
+      },
+      {
+        "step": 2,
+        "title": "Provide Topic or File",
+        "desc": "Type a syllabus topic like \"Structure of Indian Judiciary\" or upload a PDF chapter."
+      },
+      {
+        "step": 3,
+        "title": "Generate Visual Map",
+        "desc": "Mapify arranges concepts into logical parent-child nodes with color coding and visual cues."
+      },
+      {
+        "step": 4,
+        "title": "Expand Specific Branches",
+        "desc": "Click any node and select \"AI Expand\" to drill deeper into sub-topics, constitutional articles, or case laws."
+      },
+      {
+        "step": 5,
+        "title": "Export as PDF or Image",
+        "desc": "Download the high-resolution mind map to print for wall revision or import into digital notebooks."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Judiciary Mind Map",
+        "text": "Generate a comprehensive mind map of the Indian Judicial System: Supreme Court, High Courts, Subordinate Courts, Tribunals, and Writ Jurisdiction."
+      },
+      {
+        "title": "Five-Year Plans Overview",
+        "text": "Create a chronological concept map of India's 12 Five-Year Plans highlighting the main model, target growth rate, and key industrial developments for each."
+      }
+    ],
+    "limitations": "Free tier has credit limits per month; very lengthy 500-page books must be processed chapter by chapter.",
+    "relatedSlugs": [
+      "napkin",
+      "gamma",
+      "notebooklm"
+    ]
+  },
+  {
+    "slug": "coconote",
+    "name": "Coconote",
+    "tagline": "Live lecture recording to structured Cornell notes, study guides, and flashcards.",
+    "category": "Study",
+    "badge": "📝 Lecture Transcriber",
+    "free": true,
+    "url": "https://coconote.app",
+    "logo": "mic",
+    "targetUsers": [
+      "Coaching Institute Students",
+      "College Students",
+      "Auditory Learners",
+      "Exam Aspirants"
+    ],
+    "whatIs": "Coconote is an AI mobile and web note-taker that records classroom and online lectures, converting spoken speech into beautifully formatted Cornell-style notes with keywords and summary blocks.",
+    "whyItMatters": "Solves the dilemma of choosing between listening to the teacher or furiously writing notes; lets aspirants focus 100% on understanding concepts during class.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Coconote App",
+        "desc": "Launch coconote.app on your phone or browser before your lecture begins."
+      },
+      {
+        "step": 2,
+        "title": "Record Live Lecture",
+        "desc": "Tap record during coaching class or upload an existing audio file or YouTube lecture."
+      },
+      {
+        "step": 3,
+        "title": "Instant Cornell Format",
+        "desc": "AI transcribes and sorts the lecture into Cues (left column), Notes (middle), and Summary (bottom)."
+      },
+      {
+        "step": 4,
+        "title": "Auto-Quiz Generation",
+        "desc": "Generate a 5-question active recall test based on what was just discussed in class."
+      },
+      {
+        "step": 5,
+        "title": "Sync Across Devices",
+        "desc": "Access and edit your formatted lecture notes from both your laptop and mobile device."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Cornell Note Structuring",
+        "text": "Summarize this lecture transcript using the Cornell note-taking method, highlighting key formulas, definitions, and teacher exam tips."
+      },
+      {
+        "title": "Class Q&A Synthesis",
+        "text": "Extract all student questions and teacher answers from this lecture recording into an exam FAQ list."
+      }
+    ],
+    "limitations": "Audio clarity in noisy lecture halls can affect transcription quality; sitting near the speaker is recommended.",
+    "relatedSlugs": [
+      "otter",
+      "mindgrasp",
+      "speechify"
+    ]
+  },
+  {
+    "slug": "explainpaper",
+    "name": "Explainpaper",
+    "tagline": "Highlight confusing text in academic papers or gazettes for instant plain explanations.",
+    "category": "Study",
+    "badge": "💡 Instant Simplifier",
+    "free": true,
+    "url": "https://www.explainpaper.com",
+    "logo": "find_in_page",
+    "targetUsers": [
+      "UPSC & MPSC Aspirants",
+      "Law Students",
+      "Postgraduates",
+      "Policy Enthusiasts"
+    ],
+    "whatIs": "Explainpaper lets you upload dense academic research papers, law acts, or government policy gazettes and highlight any jargon-heavy paragraph to receive an immediate plain-language explanation.",
+    "whyItMatters": "Invaluable when studying economic survey chapters, Supreme Court judgment passages, or environmental pacts where legal terminology slows down comprehension.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Upload Your Paper",
+        "desc": "Visit explainpaper.com and drag-and-drop a PDF research paper, act, or committee report."
+      },
+      {
+        "step": 2,
+        "title": "Read in Focused Viewer",
+        "desc": "Read through the document inside the distraction-free web reader."
+      },
+      {
+        "step": 3,
+        "title": "Highlight Confusing Passages",
+        "desc": "Use your mouse to highlight any dense sentence, formula, or legal clause."
+      },
+      {
+        "step": 4,
+        "title": "Read Instant Breakdown",
+        "desc": "A side panel opens explaining the concept in simple, accessible language with relatable examples."
+      },
+      {
+        "step": 5,
+        "title": "Adjust Reading Level",
+        "desc": "Toggle between \"Explain like I'm 5\", \"High School\", or \"Undergrad\" based on your conceptual familiarity."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Supreme Court Ratio Explainer",
+        "text": "Explain the highlighted doctrine of Basic Structure from the Kesavananda Bharati judgment in simple terms with everyday analogies."
+      },
+      {
+        "title": "Economic Jargon Translation",
+        "text": "Translate this paragraph on Countercyclical Capital Buffers (CCyB) into simple points an aspirant can write in GS-3 Economy."
+      }
+    ],
+    "limitations": "Best for text-heavy academic documents; cannot process scanned non-OCR PDFs without text selection.",
+    "relatedSlugs": [
+      "consensus",
+      "elicit",
+      "chatdoc"
+    ]
+  },
+  {
+    "slug": "omni-calculator",
+    "name": "Omni Calculator",
+    "tagline": "Over 3,800 free specialized calculators covering physics, statistics, finance, and math formulas.",
+    "category": "Study",
+    "badge": "🔢 3,800+ Free Calculators",
+    "free": true,
+    "url": "https://www.omnicalculator.com",
+    "logo": "calculate",
+    "targetUsers": [
+      "Aptitude Test Aspirants",
+      "Engineering Students",
+      "SSC CGL Candidates",
+      "Science Learners"
+    ],
+    "whatIs": "Omni Calculator is an extensive knowledge bank of 3,800+ smart calculators that not only crunch numbers but also explain the background theory, formulas, and step-by-step logic.",
+    "whyItMatters": "Helps students master Quantitative Aptitude and General Science problem types like Compound Interest, Time-Speed-Distance, Probability, Permutations, and Optics physics formulas.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Search by Topic",
+        "desc": "Go to omnicalculator.com and type your formula (e.g. \"Simple vs Compound Interest\", \"Standard Deviation\", \"Projectile Motion\")."
+      },
+      {
+        "step": 2,
+        "title": "Enter Problem Variables",
+        "desc": "Plug in your question's numbers into the input fields (principal, interest rate, time period)."
+      },
+      {
+        "step": 3,
+        "title": "Inspect Step-by-Step Proof",
+        "desc": "Read the detailed breakdown below the calculator showing the exact algebraic substitution."
+      },
+      {
+        "step": 4,
+        "title": "Experiment with Variations",
+        "desc": "Change one variable to see how the output shifts, building intuitive conceptual understanding."
+      },
+      {
+        "step": 5,
+        "title": "Bookmark Key Calculators",
+        "desc": "Save frequently used quantitative calculators to your browser for fast homework and practice checks."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Compound Interest Trick",
+        "text": "How does half-yearly compounding alter the effective annual rate on ₹50,000 at 10% per annum over 2 years?"
+      },
+      {
+        "title": "Speed Time Distance Analysis",
+        "text": "Calculate average speed when traveling half the distance at 40 km/h and the remaining half at 60 km/h with the harmonic mean formula."
+      }
+    ],
+    "limitations": "Calculators are predefined for standard equations; does not parse handwritten unformatted word problems.",
+    "relatedSlugs": [
+      "wolfram-alpha",
+      "symbolab",
+      "mathway"
+    ]
+  },
+  {
+    "slug": "symbolab",
+    "name": "Symbolab",
+    "tagline": "Advanced math equation solver with step-by-step proofs for algebra, calculus, and matrices.",
+    "category": "Study",
+    "badge": "📐 Step-by-Step Math",
+    "free": true,
+    "url": "https://www.symbolab.com",
+    "logo": "functions",
+    "targetUsers": [
+      "Engineering & Polytechnic Students",
+      "CSAT Aspirants",
+      "Defense Exam Candidates (NDA/CDS)",
+      "Statistics Students"
+    ],
+    "whatIs": "Symbolab provides automated step-by-step solutions for mathematics ranging from middle school algebra to advanced university calculus, linear algebra, and discrete mathematics.",
+    "whyItMatters": "Essential for competitive exam papers requiring higher math (NDA, CDS, JEE, Engineering Services); shows exactly how to factor polynomials, solve differential equations, and evaluate definite integrals.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Symbolab Calculator",
+        "desc": "Navigate to symbolab.com or download the mobile app."
+      },
+      {
+        "step": 2,
+        "title": "Enter Math Equation",
+        "desc": "Use the visual equation keypad or type LaTeX syntax (e.g. limits, derivatives, matrices, quadratics)."
+      },
+      {
+        "step": 3,
+        "title": "Click \"Go\"",
+        "desc": "Symbolab analyzes the expression and generates the final simplified answer."
+      },
+      {
+        "step": 4,
+        "title": "View Detailed Step Proof",
+        "desc": "Expand each step to observe algebraic transformations, factoring methods, and derivative rules applied."
+      },
+      {
+        "step": 5,
+        "title": "Practice Similar Problems",
+        "desc": "Click \"Practice\" to solve computer-generated variations of the same problem to reinforce mastery."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Quadratic Roots Step-by-Step",
+        "text": "Solve 3x^2 - 11x + 6 = 0 using both factoring and the quadratic formula, showing all intermediate arithmetic."
+      },
+      {
+        "title": "Matrix Determinant and Inverse",
+        "text": "Find the determinant and inverse of a 3x3 matrix showing cofactor expansion step-by-step."
+      }
+    ],
+    "limitations": "Detailed full-step proofs on mobile app require a subscription after free daily limits.",
+    "relatedSlugs": [
+      "wolfram-alpha",
+      "mathway",
+      "photomath"
+    ]
+  },
+  {
+    "slug": "cymath",
+    "name": "Cymath",
+    "tagline": "Free, lightning-fast math problem solver with clean step-by-step explanations.",
+    "category": "Study",
+    "badge": "➕ Instant Problem Solver",
+    "free": true,
+    "url": "https://www.cymath.com",
+    "logo": "calculate",
+    "targetUsers": [
+      "SSC Aspirants",
+      "Police Bharti Candidates",
+      "Banking Clerical Candidates",
+      "School Students"
+    ],
+    "whatIs": "Cymath is a lightweight math homework solver and tutor that simplifies algebraic expressions, factors polynomials, solves linear equations, and performs basic differentiation with zero clutter.",
+    "whyItMatters": "Fastest way for aspirants preparing for arithmetic and basic algebra in SSC MTS, GD Constable, and Railway RRB to check their calculations and learn factoring rules.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit Cymath.com",
+        "desc": "Open cymath.com in any browser without requiring mandatory login."
+      },
+      {
+        "step": 2,
+        "title": "Type Your Problem",
+        "desc": "Enter an equation like \"2x + 5 = 19\" or \"factor x^2 - 9x + 20\" into the clean search bar."
+      },
+      {
+        "step": 3,
+        "title": "Press Solve",
+        "desc": "Get the solution with every single reduction step written out clearly."
+      },
+      {
+        "step": 4,
+        "title": "Read Explanation Hints",
+        "desc": "Click on individual steps to see the mathematical rule (e.g. \"isolate x\", \"distributive property\")."
+      },
+      {
+        "step": 5,
+        "title": "Camera Capture on Mobile",
+        "desc": "Use the Cymath mobile app to snap a photo of textbook arithmetic for instant checks."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Linear Equation Isolation",
+        "text": "Solve for x: 5(2x - 3) + 4 = 3(x + 8) showing step-by-step expansion and variable isolation."
+      },
+      {
+        "title": "Polynomial Factoring",
+        "text": "Factor completely: 2x^2 + 7x + 3 and explain how to split the middle term."
+      }
+    ],
+    "limitations": "Focuses on algebra, arithmetic, and basic calculus; does not handle complex multivariable word problems.",
+    "relatedSlugs": [
+      "photomath",
+      "mathway",
+      "symbolab"
+    ]
+  },
+  {
+    "slug": "askyourpdf",
+    "name": "AskYourPDF",
+    "tagline": "Upload textbooks, question papers, and gazettes to chat, search, and extract citations.",
+    "category": "Study",
+    "badge": "📄 Conversational PDF AI",
+    "free": true,
+    "url": "https://askyourpdf.com",
+    "logo": "picture_as_pdf",
+    "targetUsers": [
+      "Civil Services Aspirants",
+      "Legal Researchers",
+      "College Students",
+      "Self Learners"
+    ],
+    "whatIs": "AskYourPDF is a dedicated document AI engine with browser extensions and mobile apps that lets students query long PDF books and gazettes with exact page-level citations.",
+    "whyItMatters": "Allows aspirants to search 600-page standard textbooks (like M. Laxmikanth or Bipan Chandra) for specific constitutional provisions or events in seconds, without scrolling endlessly.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open AskYourPDF",
+        "desc": "Go to askyourpdf.com and upload your study PDF or paste a link to an online gazette."
+      },
+      {
+        "step": 2,
+        "title": "Instant Document Indexing",
+        "desc": "The AI parses the table of contents, chapters, and index for fast contextual retrieval."
+      },
+      {
+        "step": 3,
+        "title": "Ask Natural Language Questions",
+        "desc": "Type questions like \"What are the discretionary powers of the State Governor according to this book?\""
+      },
+      {
+        "step": 4,
+        "title": "Verify Page Citations",
+        "desc": "Click the hyperlinked page numbers in the AI response to jump straight to the source paragraph."
+      },
+      {
+        "step": 5,
+        "title": "Export Q&A Summary",
+        "desc": "Export key answers and revision notes to Markdown or PDF for quick review."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Governor Powers Query",
+        "text": "List all constitutional and situational discretionary powers of the Governor mentioned in Chapter 30, along with relevant Articles."
+      },
+      {
+        "title": "Chronology Verification",
+        "text": "From the uploaded history document, summarize the sequence of events leading up to the Poona Pact of 1932."
+      }
+    ],
+    "limitations": "Free tier has daily document upload limits and maximum PDF page constraints.",
+    "relatedSlugs": [
+      "chatpdf",
+      "chatdoc",
+      "notebooklm"
+    ]
+  },
+  {
+    "slug": "chatdoc",
+    "name": "ChatDOC",
+    "tagline": "AI document reader that accurately understands tables, financial budgets, and charts in PDFs.",
+    "category": "Study",
+    "badge": "📊 Table & Formula Reader",
+    "free": true,
+    "url": "https://chatdoc.com",
+    "logo": "table_chart",
+    "targetUsers": [
+      "Economics Students",
+      "UPSC & MPSC Aspirants",
+      "Financial Analysts",
+      "Data Researchers"
+    ],
+    "whatIs": "ChatDOC is a document chat tool optimized specifically for complex documents containing intricate tables, statistical charts, multi-column layouts, and mathematical formulas.",
+    "whyItMatters": "While standard PDF AI fails at reading data tables, ChatDOC allows students to extract exact figures from the Union Budget, Maharashtra State Budget, and Census reports with zero hallucination.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Upload PDF to ChatDOC",
+        "desc": "Visit chatdoc.com and upload your data-dense PDF, report, or gazette."
+      },
+      {
+        "step": 2,
+        "title": "Select Specific Tables",
+        "desc": "Use the crop/select tool to highlight a specific budget table or multi-column data sheet."
+      },
+      {
+        "step": 3,
+        "title": "Ask Table-Specific Questions",
+        "desc": "Ask: \"Compare the fiscal deficit targets between FY 2024-25 and FY 2025-26 from this table\"."
+      },
+      {
+        "step": 4,
+        "title": "Inspect Source Snippets",
+        "desc": "Every single data point in ChatDOC's reply cites the exact row and column in the original document."
+      },
+      {
+        "step": 5,
+        "title": "Export Clean Data",
+        "desc": "Export parsed tabular data directly into clean Excel or CSV spreadsheets."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Budget Allocation Comparison",
+        "text": "Extract the sector-wise percentage allocation for Education, Health, and Defense from Table 4.2 in the uploaded Budget document."
+      },
+      {
+        "title": "Census Data Breakdown",
+        "text": "Summarize the literacy rate disparity between male and female populations across Maharashtra districts based on Table 7."
+      }
+    ],
+    "limitations": "Free tier processes up to 2 documents per day with a 300-page limit per document.",
+    "relatedSlugs": [
+      "chatpdf",
+      "askyourpdf",
+      "julius"
+    ]
+  },
+  {
+    "slug": "updf",
+    "name": "UpDF AI",
+    "tagline": "All-in-one PDF study suite with AI chapter summaries, translation, and mind mapping.",
+    "category": "Study",
+    "badge": "📑 Fast PDF Study Suite",
+    "free": true,
+    "url": "https://updf.com",
+    "logo": "edit_document",
+    "targetUsers": [
+      "Competitive Exam Students",
+      "Researchers",
+      "Book Annotators",
+      "Desktop Learners"
+    ],
+    "whatIs": "UpDF is a modern PDF editor with native AI capabilities that provides instant chapter-by-chapter summaries, multi-lingual translations, text-to-mind-map generation, and rich annotations.",
+    "whyItMatters": "Aspirants studying government reports in English or Marathi can translate paragraphs on the fly, highlight key points, and auto-generate chapter mind maps without switching apps.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open PDF in UpDF",
+        "desc": "Download UpDF on Windows, Mac, iOS, or Android and open your syllabus PDF."
+      },
+      {
+        "step": 2,
+        "title": "Click UPDF AI Sidebar",
+        "desc": "Activate the AI assistant from the bottom-right corner of the document reader."
+      },
+      {
+        "step": 3,
+        "title": "Summarize Long Chapters",
+        "desc": "Select \"Summarize Document\" or highlight pages to get structured 3-bullet chapter summaries."
+      },
+      {
+        "step": 4,
+        "title": "Translate Complex Passages",
+        "desc": "Highlight difficult English terminology and select Translate → Marathi/Hindi for immediate bilingual understanding."
+      },
+      {
+        "step": 5,
+        "title": "Convert to Mind Map",
+        "desc": "Ask UPDF AI to visualize the selected chapter headings as an interactive mind map."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Chapter Summary",
+        "text": "Summarize pages 45 to 60 on Fundamental Duties into 5 high-yield bullet points for quick pre-exam revision."
+      },
+      {
+        "title": "Bilingual Term Translation",
+        "text": "Translate the highlighted administrative terms into standard Marathi official terminology (शासन व्यवहार कोश)."
+      }
+    ],
+    "limitations": "Desktop app requires installation; advanced OCR on scanned handwritten notes requires the Pro tier.",
+    "relatedSlugs": [
+      "pdf-gear",
+      "chatpdf",
+      "mapify"
+    ]
+  },
+  {
+    "slug": "scholarcy",
+    "name": "Scholarcy",
+    "tagline": "Turns long academic papers and policy reports into structured summary flashcards.",
+    "category": "Research",
+    "badge": "🃏 Academic Flashcards",
+    "free": true,
+    "url": "https://www.scholarcy.com",
+    "logo": "fact_check",
+    "targetUsers": [
+      "Research Scholars",
+      "Civil Services Aspirants",
+      "Postgraduates",
+      "Policy Analysts"
+    ],
+    "whatIs": "Scholarcy is an automated article summarizer that breaks down research papers, policy documents, and book chapters into bite-sized \"Robo-Highlighter\" summary cards with key findings.",
+    "whyItMatters": "Cuts reading time by 70%; aspirants can feed committee reports (NITI Aayog, ARC-2, Law Commission) and get clean summaries of recommendations, methodologies, and findings.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Install Browser Extension",
+        "desc": "Add the Scholarcy extension to Chrome/Edge or use the web dashboard at scholarcy.com."
+      },
+      {
+        "step": 2,
+        "title": "Upload Report or Article",
+        "desc": "Drop a PDF or click the extension button on any online academic article or gazette."
+      },
+      {
+        "step": 3,
+        "title": "Generate Summary Card",
+        "desc": "Scholarcy extracts Objectives, Main Findings, Methodology, and Key Quotes into interactive tabs."
+      },
+      {
+        "step": 4,
+        "title": "Export to Flashcards",
+        "desc": "Download the summary cards directly into Anki or Notion for daily spaced-repetition revision."
+      },
+      {
+        "step": 5,
+        "title": "Review Tables and Figures",
+        "desc": "Access high-resolution tables and figures cleanly isolated from the paper's dense body text."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "ARC-2 Report Recommendations",
+        "text": "Extract the core administrative reforms recommendations from the 2nd ARC Report on Ethics in Governance into bullet points."
+      },
+      {
+        "title": "Environmental Summit Takeaways",
+        "text": "Summarize the Nationally Determined Contributions (NDCs) and financial commitments outlined in this climate summit report."
+      }
+    ],
+    "limitations": "Free browser extension offers limited summary cards per day without an academic subscription.",
+    "relatedSlugs": [
+      "consensus",
+      "elicit",
+      "connected-papers"
+    ]
+  },
+  {
+    "slug": "iris-ai",
+    "name": "Iris.ai",
+    "tagline": "AI workspace for researchers to systematically extract, map, and organize scientific literature.",
+    "category": "Research",
+    "badge": "🔬 Literature Mapping",
+    "free": true,
+    "url": "https://iris.ai",
+    "logo": "science",
+    "targetUsers": [
+      "STEM Students",
+      "Research Fellows",
+      "Ph.D. Candidates",
+      "Competitive Exam Faculty"
+    ],
+    "whatIs": "Iris.ai is a comprehensive research workspace that analyzes thousands of academic documents simultaneously to construct contextual topic maps, extract data points, and verify research evidence.",
+    "whyItMatters": "Enables aspirants and researchers writing in-depth papers or preparing Science & Tech modules to discover interdisciplinary linkages between biotechnology, AI ethics, and climate science.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Iris.ai Workspace",
+        "desc": "Visit iris.ai and enter a 300-word problem description or paste a research URL."
+      },
+      {
+        "step": 2,
+        "title": "Explore Topic Map",
+        "desc": "View visual 2D topic maps grouping related literature by sub-disciplines and methodology."
+      },
+      {
+        "step": 3,
+        "title": "Filter Research Cohorts",
+        "desc": "Apply filters for publication dates, study types, and peer-reviewed journals."
+      },
+      {
+        "step": 4,
+        "title": "Systematic Data Extraction",
+        "desc": "Use Iris.ai's extraction engine to pull tabular parameters across dozens of papers into one matrix."
+      },
+      {
+        "step": 5,
+        "title": "Save Research Library",
+        "desc": "Export your vetted literature collection with full bibliographic references."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Renewable Energy Storage",
+        "text": "Map the latest research papers examining solid-state battery durability in tropical temperature conditions."
+      },
+      {
+        "title": "Biotechnology in Agriculture",
+        "text": "Identify key literature reviewing CRISPR gene editing applications in drought-resistant rice varieties in South Asia."
+      }
+    ],
+    "limitations": "Advanced data extraction features are designed for institutional research users.",
+    "relatedSlugs": [
+      "scispace",
+      "elicit",
+      "semantic-scholar"
+    ]
+  },
+  {
+    "slug": "litmaps",
+    "name": "Litmaps",
+    "tagline": "Visual citation maps to discover foundational articles and trace how scientific ideas evolve.",
+    "category": "Research",
+    "badge": "🌐 Citation Map Visualizer",
+    "free": true,
+    "url": "https://www.litmaps.com",
+    "logo": "bubble_chart",
+    "targetUsers": [
+      "Postgraduates",
+      "Aspirants doing Literature Review",
+      "STEM Researchers",
+      "Academics"
+    ],
+    "whatIs": "Litmaps creates dynamic visual citation network maps that show chronologically how scientific ideas branched out, which papers are foundational, and what new studies cite them.",
+    "whyItMatters": "Eliminates the struggle of finding recent developments on scientific topics; provides a chronological timeline showing who discovered what and which papers validate the findings.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Start with a Seed Paper",
+        "desc": "Enter the title or DOI of a landmark paper at litmaps.com."
+      },
+      {
+        "step": 2,
+        "title": "Generate Citation Map",
+        "desc": "Litmaps plots a timeline graph where each circle is a paper and lines represent citations."
+      },
+      {
+        "step": 3,
+        "title": "Identify Seminal Works",
+        "desc": "Larger nodes indicate heavily cited foundational studies that every student of that topic must know."
+      },
+      {
+        "step": 4,
+        "title": "Track Recent Developments",
+        "desc": "Trace the outer timeline to discover 2024-2026 papers building on the original thesis."
+      },
+      {
+        "step": 5,
+        "title": "Export Citation Graph",
+        "desc": "Export the visual graph as an SVG or image to include in research presentations and study files."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "CRISPR Foundation Map",
+        "text": "Generate a citation map for the foundational Doudna & Charpentier 2012 CRISPR paper to see key therapeutic milestones."
+      },
+      {
+        "title": "Renewable Energy Policy Timeline",
+        "text": "Trace the citation evolution of solar tariff parity studies in developing economies from 2015 to present."
+      }
+    ],
+    "limitations": "Requires understanding basic academic paper structures and citation indexes (DOI/titles).",
+    "relatedSlugs": [
+      "connected-papers",
+      "research-rabbit",
+      "scispace"
+    ]
+  },
+  {
+    "slug": "inciteful",
+    "name": "Inciteful",
+    "tagline": "100% free, open-source citation graph builder that uncovers hidden academic literature from any seed paper.",
+    "category": "Research",
+    "badge": "🆓 100% Free Paper Graph",
+    "free": true,
+    "url": "https://inciteful.xyz",
+    "logo": "hub",
+    "targetUsers": [
+      "Students on a Budget",
+      "Academic Researchers",
+      "Exam Aspirants",
+      "Open Science Advocates"
+    ],
+    "whatIs": "Inciteful is a completely free, open-source tool that utilizes open citation data (Crossref, Semantic Scholar) to build interactive academic network graphs without subscriptions or paywalls.",
+    "whyItMatters": "Zero paywalls or hidden premium limits; gives every student world-class citation mapping to find the most influential papers on any General Studies topic.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit Inciteful.xyz",
+        "desc": "Go to inciteful.xyz — no registration or credit card needed."
+      },
+      {
+        "step": 2,
+        "title": "Enter Seed Paper or Topic",
+        "desc": "Type any paper title, author name, or DOI."
+      },
+      {
+        "step": 3,
+        "title": "Explore Network Visualizer",
+        "desc": "Examine the automatically generated network diagram showing shared citations and co-authorship."
+      },
+      {
+        "step": 4,
+        "title": "Sort by Top Authors & Journals",
+        "desc": "Use sidebar analytics to identify the most prominent researchers and premier journals in that field."
+      },
+      {
+        "step": 5,
+        "title": "Export BibTeX / RIS",
+        "desc": "Export full references directly to Zotero, Mendeley, or text files."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Indian Monsoon Climate Models",
+        "text": "Find top papers citing landmark studies on El Niño Southern Oscillation (ENSO) and Indian Summer Monsoon variability."
+      },
+      {
+        "title": "Constitutional Basic Structure Papers",
+        "text": "Map legal scholarship referencing the evolution of judicial review and basic structure doctrine in Indian jurisprudence."
+      }
+    ],
+    "limitations": "Interface is functional and academic-focused rather than flashy consumer-styled.",
+    "relatedSlugs": [
+      "connected-papers",
+      "research-rabbit",
+      "semantic-scholar"
+    ]
+  },
+  {
+    "slug": "paperpal",
+    "name": "Paperpal",
+    "tagline": "Real-time academic grammar and language enhancement trained on millions of scholarly papers.",
+    "category": "Writing",
+    "badge": "✍️ Academic Writing AI",
+    "free": true,
+    "url": "https://paperpal.com",
+    "logo": "spellcheck",
+    "targetUsers": [
+      "Mains Essay Writers",
+      "Academic Researchers",
+      "Postgraduates",
+      "English Learners"
+    ],
+    "whatIs": "Paperpal is an AI writing assistant tailored specifically for academic and formal prose, trained on over 20 years of published scholarly manuscripts and edited papers.",
+    "whyItMatters": "Helps civil services aspirants writing UPSC/MPSC Mains essays elevate casual vocabulary into sophisticated, formal administrative English with precise collocations.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Paperpal Online",
+        "desc": "Visit paperpal.com or install the Word / Google Docs add-in."
+      },
+      {
+        "step": 2,
+        "title": "Paste Essay Draft",
+        "desc": "Paste your practice essay or research draft into the editor."
+      },
+      {
+        "step": 3,
+        "title": "Review Academic Enhancements",
+        "desc": "Paperpal highlights awkward phrasing, colloquial terms, and grammatical inaccuracies."
+      },
+      {
+        "step": 4,
+        "title": "Paraphrase with Academic Tone",
+        "desc": "Click on informal phrases to see scholarly rephrasing alternatives with academic tone scores."
+      },
+      {
+        "step": 5,
+        "title": "Check Structural Flow",
+        "desc": "Use the vocabulary checker to replace repetitive verbs and filler words with rigorous expressions."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Mains Essay Vocabulary Polish",
+        "text": "Polish this paragraph on \"Inclusive Growth and Digital Economy\" to make the tone authoritative, formal, and objective."
+      },
+      {
+        "title": "Concise Academic Phrasing",
+        "text": "Shorten this 250-word policy recommendation into 150 punchy, formal words without losing technical precision."
+      }
+    ],
+    "limitations": "Free plan offers a generous monthly word limit; unlimited checks require premium.",
+    "relatedSlugs": [
+      "quillbot",
+      "grammarly",
+      "wordtune"
+    ]
+  },
+  {
+    "slug": "trinka",
+    "name": "Trinka AI",
+    "tagline": "Grammar checker and language enhancement tool built specifically for academic, formal, and technical writing.",
+    "category": "Writing",
+    "badge": "📝 Scholarly Grammar Check",
+    "free": true,
+    "url": "https://www.trinka.ai",
+    "logo": "check_circle",
+    "targetUsers": [
+      "Descriptive Exam Writers",
+      "University Students",
+      "Engineering Students",
+      "Scholars"
+    ],
+    "whatIs": "Trinka AI is a specialized grammar corrector designed for academic and technical domains, correcting nuanced nuances like style guide compliance, passive voice balance, and domain-specific terms.",
+    "whyItMatters": "General grammar tools often flag proper technical and legal jargon as errors; Trinka understands administrative, economic, and scientific terminology used in exam answers.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Go to Trinka.ai",
+        "desc": "Create a free student account at trinka.ai."
+      },
+      {
+        "step": 2,
+        "title": "Select Subject Domain",
+        "desc": "Choose your subject domain: Social Sciences, Economics, Law, Engineering, or Life Sciences."
+      },
+      {
+        "step": 3,
+        "title": "Input Your Draft Answer",
+        "desc": "Paste your essay, case study answer, or dissertation chapter."
+      },
+      {
+        "step": 4,
+        "title": "Accept Contextual Fixes",
+        "desc": "Review suggestions tailored to formal discipline standards rather than casual colloquial English."
+      },
+      {
+        "step": 5,
+        "title": "Check Readability & Style",
+        "desc": "View readability scores and vocabulary richness metrics before submitting your answers."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Administrative Tone Correction",
+        "text": "Review this GS-4 Ethics case study response for objective tone, ethical terminology, and concise sentence structure."
+      },
+      {
+        "title": "Passive-to-Active Adjustment",
+        "text": "Improve clarity in this passage on administrative decentralization by reducing excess passive voice."
+      }
+    ],
+    "limitations": "Free account includes 10,000 words per month; ideal for reviewing individual essays and practice papers.",
+    "relatedSlugs": [
+      "grammarly",
+      "hemingway",
+      "quillbot"
+    ]
+  },
+  {
+    "slug": "jenni-ai",
+    "name": "Jenni AI",
+    "tagline": "AI co-writer that assists with essay drafting, paraphrasing, and automated in-text citations.",
+    "category": "Writing",
+    "badge": "🖋️ In-Text Citation Copilot",
+    "free": true,
+    "url": "https://jenni.ai",
+    "logo": "article",
+    "targetUsers": [
+      "Essay Writers",
+      "College Students",
+      "Thesis Writers",
+      "Debaters"
+    ],
+    "whatIs": "Jenni AI is a collaborative text editor that writes alongside you with sentence completions, automatic in-text academic citations, and paraphrasing capabilities.",
+    "whyItMatters": "Helps students beat writer's block during long descriptive essays and thesis introductions while ensuring every factual claim is backed by real cited research.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Create a Document",
+        "desc": "Sign up at jenni.ai and start a new document with your prompt topic."
+      },
+      {
+        "step": 2,
+        "title": "Write with AI Copilot",
+        "desc": "Press the Right Arrow key as you write to receive intelligent, context-aware sentence completions."
+      },
+      {
+        "step": 3,
+        "title": "Add Real Citations",
+        "desc": "Click \"Cite\" on any statement — Jenni searches global academic databases and formats citations in APA, MLA, or Harvard."
+      },
+      {
+        "step": 4,
+        "title": "Paraphrase Sentences",
+        "desc": "Highlight any clumsy sentence and choose \"Make More Academic\", \"Shorten\", or \"Elaborate\"."
+      },
+      {
+        "step": 5,
+        "title": "Check Plagiarism Risk",
+        "desc": "Run the built-in originality check before finalizing your essay."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Essay Thesis Statement",
+        "text": "Draft a compelling introductory paragraph and thesis statement on \"Federalism in India: Cooperation vs Confrontation\"."
+      },
+      {
+        "title": "Academic Paraphrase",
+        "text": "Paraphrase this point on climate change adaptation in agriculture into scholarly prose with a research citation."
+      }
+    ],
+    "limitations": "Free tier includes 200 AI-assisted words per day; sufficient for refining opening arguments and introductions.",
+    "relatedSlugs": [
+      "quillbot",
+      "paperpal",
+      "claude"
+    ]
+  },
+  {
+    "slug": "goblin-tools",
+    "name": "Goblin Tools",
+    "tagline": "Free, neurodivergent-friendly AI tool that breaks daunting study topics into micro-steps.",
+    "category": "Productivity",
+    "badge": "🧩 Task Deconstructor",
+    "free": true,
+    "url": "https://goblin.tools",
+    "logo": "checklist",
+    "targetUsers": [
+      "Aspirants Feeling Overwhelmed",
+      "Neurodivergent Learners",
+      "ADHD Students",
+      "Self-Study Beginners"
+    ],
+    "whatIs": "Goblin.tools is an award-winning suite of free micro-tools (Magic ToDo, Formalizer, Estimator, Judge) designed to deconstruct overwhelming tasks into bite-sized, actionable steps.",
+    "whyItMatters": "Syllabus paralysis is the biggest hurdle in exam prep; type \"Finish Indian Polity syllabus\" and Goblin Tools automatically breaks it down into 10 painless, achievable daily tasks.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Goblin.tools",
+        "desc": "Visit goblin.tools on web or mobile — 100% free with no account creation needed."
+      },
+      {
+        "step": 2,
+        "title": "Use Magic ToDo",
+        "desc": "Type an intimidating goal like \"Complete Modern Indian History revision\"."
+      },
+      {
+        "step": 3,
+        "title": "Adjust \"Spiciness\" Level",
+        "desc": "Click the pepper icon to choose how fine-grained you want the micro-steps broken down (from 1 to 5)."
+      },
+      {
+        "step": 4,
+        "title": "Generate Subtasks",
+        "desc": "Click the magic wand — your goal turns into a clear checklist of 15-minute manageable tasks."
+      },
+      {
+        "step": 5,
+        "title": "Check Off as You Study",
+        "desc": "Tick off tasks as you complete them to build steady dopamine streaks and momentum."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Syllabus Deconstruction",
+        "text": "Break down \"Mastering Time and Work Aptitude Problems\" into 6 progressive micro-steps from basic concepts to advanced pipes & cisterns."
+      },
+      {
+        "title": "Email Formalizer",
+        "text": "Use Formalizer to convert \"Sir please send my hall ticket link\" into a polite, professional official inquiry to the exam commission."
+      }
+    ],
+    "limitations": "Minimalist interface focused purely on single-purpose task breakdowns without complex project management boards.",
+    "relatedSlugs": [
+      "taskade",
+      "forest",
+      "focusmate"
+    ]
+  },
+  {
+    "slug": "taskade",
+    "name": "Taskade",
+    "tagline": "Collaborative AI study planner, hierarchical mind maps, and automated revision workflows.",
+    "category": "Productivity",
+    "badge": "⚡ AI Study Workflows",
+    "free": true,
+    "url": "https://www.taskade.com",
+    "logo": "task_alt",
+    "targetUsers": [
+      "Study Group Leads",
+      "Competitive Exam Aspirants",
+      "Visual Planners",
+      "Organized Students"
+    ],
+    "whatIs": "Taskade is a unified productivity suite that turns plain study prompts into structured checklists, kanban boards, mind maps, and organizational charts using built-in AI agents.",
+    "whyItMatters": "Enables aspirants and study circles to maintain a live revision tracker where syllabus coverage, PYQ targets, and mock test scores are visual across lists, boards, and calendar views.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Create a Workspace",
+        "desc": "Sign up free at taskade.com and create a project for your exam year (e.g. \"Mission MPSC 2026\")."
+      },
+      {
+        "step": 2,
+        "title": "Generate with Taskade AI",
+        "desc": "Type \"/ai\" and choose \"Generate Study Schedule\" or \"Create Syllabus Breakdown\"."
+      },
+      {
+        "step": 3,
+        "title": "Toggle Visual Views",
+        "desc": "Switch between List, Kanban Board, Mind Map, and Calendar views with a single click."
+      },
+      {
+        "step": 4,
+        "title": "Set Due Dates & Reminders",
+        "desc": "Assign dates and recurring reminders for every GS subject module and revision cycle."
+      },
+      {
+        "step": 5,
+        "title": "Study Collaboratively",
+        "desc": "Invite study partners to collaborate in real-time with integrated chat and task assignment."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "60-Day Revision Kanban",
+        "text": "Generate a 60-day revision board for General Studies Paper 1 divided into Backlog, In Progress, PYQ Practiced, and Mastered columns."
+      },
+      {
+        "title": "Current Affairs Workflow",
+        "text": "Create a weekly system for collecting, summarizing, and testing monthly Current Affairs capsules."
+      }
+    ],
+    "limitations": "Rich feature set can feel complex initially if you only need a simple to-do list.",
+    "relatedSlugs": [
+      "notion-ai",
+      "goblin-tools",
+      "mapify"
+    ]
+  },
+  {
+    "slug": "focusmate",
+    "name": "Focusmate",
+    "tagline": "Live 1-on-1 virtual coworking sessions for accountability and distraction-free study blocks.",
+    "category": "Productivity",
+    "badge": "🎯 Virtual Study Buddy",
+    "free": true,
+    "url": "https://www.focusmate.com",
+    "logo": "group",
+    "targetUsers": [
+      "Self-Study Aspirants",
+      "Remote Learners",
+      "Students Struggling with Procrastination",
+      "Night Owls"
+    ],
+    "whatIs": "Focusmate provides virtual body-doubling by pairing you with a live study partner anywhere in the world for quiet, webcam-enabled 25, 50, or 75-minute structured focus sessions.",
+    "whyItMatters": "Cures self-study isolation and smartphone distraction; you state your study goal to your partner at the start of the session, work in quiet solidarity, and celebrate completion together.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Sign Up for Free Sessions",
+        "desc": "Go to focusmate.com and get 3 free sessions every week."
+      },
+      {
+        "step": 2,
+        "title": "Book a Time Slot",
+        "desc": "Select any time slot (available 24/7, every 15 minutes) and choose 25, 50, or 75 minutes."
+      },
+      {
+        "step": 3,
+        "title": "Join the Video Room",
+        "desc": "Turn on your webcam, introduce yourself, and state what you plan to accomplish (e.g. \"Solving 50 Economy MCQs\")."
+      },
+      {
+        "step": 4,
+        "title": "Mute and Focus",
+        "desc": "Mute your mic and work diligently while seeing your partner work quietly across the screen."
+      },
+      {
+        "step": 5,
+        "title": "Debrief and Celebrate",
+        "desc": "When the timer chimes, unmute, confirm your progress, and celebrate finishing your study goal."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Session Goal Setting",
+        "text": "How to formulate specific, measurable 50-minute study goals (e.g., \"Summarize 3 pages on Monetary Policy\" vs \"Study Economy\")."
+      },
+      {
+        "title": "Accountability Routine",
+        "text": "Daily 3-session morning routine to lock in 3 hours of deep GS revision before 11:00 AM."
+      }
+    ],
+    "limitations": "Requires webcam and reliable internet; free plan allows 3 sessions per week.",
+    "relatedSlugs": [
+      "forest",
+      "goblin-tools",
+      "taskade"
+    ]
+  },
+  {
+    "slug": "forest",
+    "name": "Forest App",
+    "tagline": "Gamified Pomodoro timer that grows virtual and real trees while keeping you off phone distractions.",
+    "category": "Productivity",
+    "badge": "🌲 Gamified Focus Timer",
+    "free": true,
+    "url": "https://www.forestapp.cc",
+    "logo": "park",
+    "targetUsers": [
+      "Smartphone Addicted Students",
+      "Pomodoro Enthusiasts",
+      "School & College Students",
+      "Aspirants"
+    ],
+    "whatIs": "Forest is a top-rated gamified productivity timer where you plant a virtual seed whenever you need to focus; if you leave the app to check social media, your tree withers and dies.",
+    "whyItMatters": "Transforms study focus into a rewarding visual habit; as you finish study blocks, you build a lush forest representing your dedicated hours and can even plant real trees on Earth.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Set Your Focus Timer",
+        "desc": "Choose a focus duration from 10 to 120 minutes (25 or 50 minutes recommended for Pomodoro)."
+      },
+      {
+        "step": 2,
+        "title": "Pick a Tree Species",
+        "desc": "Select from oaks, cherry blossoms, and cedar trees to represent your subject (e.g. Pine for History, Bamboo for Math)."
+      },
+      {
+        "step": 3,
+        "title": "Plant Your Seed",
+        "desc": "Tap Plant and put your phone down to start studying."
+      },
+      {
+        "step": 4,
+        "title": "Keep Your Tree Alive",
+        "desc": "Leaving the Forest app to open Instagram or WhatsApp will instantly kill your growing tree."
+      },
+      {
+        "step": 5,
+        "title": "Review Your Forest",
+        "desc": "Examine your daily, weekly, and monthly forest graphs to track total productive study hours."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Pomodoro Subject Distribution",
+        "text": "How to structure a 4-cycle Pomodoro block (50 min study, 10 min break) for heavy General Studies reading."
+      },
+      {
+        "title": "Tagging Strategy",
+        "text": "Organize Forest tags by exam papers (GS-1, GS-2, CSAT, Optional) to audit monthly revision time."
+      }
+    ],
+    "limitations": "Chrome extension is free; iOS mobile app has a small one-time app purchase fee.",
+    "relatedSlugs": [
+      "focusmate",
+      "goblin-tools",
+      "mystudylife"
+    ]
+  },
+  {
+    "slug": "korbit-ai",
+    "name": "Korbit AI",
+    "tagline": "Personalized AI computer science and coding tutor with automated exercise feedback.",
+    "category": "Study",
+    "badge": "💻 Coding & CS Tutor",
+    "free": true,
+    "url": "https://www.korbit.ai",
+    "logo": "code",
+    "targetUsers": [
+      "Computer Science Students",
+      "IT Aspirants",
+      "Engineering Graduates",
+      "Data Science Learners"
+    ],
+    "whatIs": "Korbit AI is an interactive intelligent tutoring system that teaches coding, data structures, algorithms, and machine learning with guided Socratic dialogue and automated code grading.",
+    "whyItMatters": "Perfect for students preparing for technical officer posts, banking IT Specialist exams, or engineering campus placements where conceptual DSA clarity is tested.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Sign In to Korbit",
+        "desc": "Create a free account at korbit.ai and pick your learning pathway (Python, Data Science, Algorithms)."
+      },
+      {
+        "step": 2,
+        "title": "Watch Short Micro-Lessons",
+        "desc": "Learn theoretical computer science concepts explained in bite-sized interactive modules."
+      },
+      {
+        "step": 3,
+        "title": "Write Code in Browser",
+        "desc": "Complete coding exercises inside the built-in browser IDE without installing compilers."
+      },
+      {
+        "step": 4,
+        "title": "Get Instant AI Code Feedback",
+        "desc": "If your solution fails a test case, Korbit's AI explains where the logic broke without spoiling the final answer."
+      },
+      {
+        "step": 5,
+        "title": "Track Algorithm Proficiency",
+        "desc": "Monitor your skill rating across sorting algorithms, arrays, linked lists, and time complexity."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Binary Search Logic",
+        "text": "Explain why binary search has O(log n) time complexity compared to linear search with an intuitive visual example."
+      },
+      {
+        "title": "Python Recursion Debugging",
+        "text": "Why does my recursive Fibonacci function hit maximum recursion depth for n=50, and how does memoization fix it?"
+      }
+    ],
+    "limitations": "Focuses on computer science, Python, and programming logic; not applicable to humanities subjects.",
+    "relatedSlugs": [
+      "replit",
+      "cursor",
+      "phind"
+    ]
+  },
+  {
+    "slug": "deepl-write",
+    "name": "DeepL Write",
+    "tagline": "AI writing assistant powered by DeepL that fixes syntax, tone, and nuance in academic essays.",
+    "category": "Writing",
+    "badge": "🌐 Precision Rewriter",
+    "free": true,
+    "url": "https://www.deepl.com/write",
+    "logo": "translate",
+    "targetUsers": [
+      "Language Learners",
+      "Essay Aspirants",
+      "Bilingual Students",
+      "State Board Pass-Outs"
+    ],
+    "whatIs": "DeepL Write is a precision language tool powered by DeepL's advanced neural networks that suggests nuanced phrasing, fixes subtle grammatical errors, and adapts tone between casual and academic.",
+    "whyItMatters": "A life-saver for Marathi and regional-medium students writing competitive exam essays in English; eliminates typical Indian English phrasing quirks and elevates clarity.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open DeepL Write",
+        "desc": "Go to deepl.com/write on any desktop or mobile browser."
+      },
+      {
+        "step": 2,
+        "title": "Paste Your English Paragraph",
+        "desc": "Enter your draft answer or translated essay into the left-hand editor."
+      },
+      {
+        "step": 3,
+        "title": "See Instant Polished Text",
+        "desc": "DeepL Write displays the refined, natural-sounding version in the right pane."
+      },
+      {
+        "step": 4,
+        "title": "Choose Alternative Phrasing",
+        "desc": "Click any word or phrase in the suggested output to see a dropdown of alternative synonyms and expressions."
+      },
+      {
+        "step": 5,
+        "title": "Toggle Tone and Style",
+        "desc": "Select between \"Academic\", \"Business\", \"Simple\", or \"Casual\" depending on your target exam format."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Regional Medium English Polish",
+        "text": "Polish this sentence written by a regional-medium student: \"Government is doing many schemes for the poor people upliftment.\" to formal administrative English."
+      },
+      {
+        "title": "Essay Cohesion",
+        "text": "Improve transitions between these two paragraphs explaining the causes and consequences of rural-to-urban migration."
+      }
+    ],
+    "limitations": "Free version processes up to 2,000 characters at a time; works best paragraph by paragraph.",
+    "relatedSlugs": [
+      "grammarly",
+      "quillbot",
+      "paperpal"
+    ]
+  },
+  {
+    "slug": "scribe",
+    "name": "Scribe AI",
+    "tagline": "Automatically generates illustrated step-by-step guides and tutorials from web actions.",
+    "category": "Productivity",
+    "badge": "📸 Auto Step-by-Step Guides",
+    "free": true,
+    "url": "https://scribehow.com",
+    "logo": "auto_mode",
+    "targetUsers": [
+      "Student Mentors",
+      "Educators",
+      "Coaching Coordinators",
+      "Tech-Savvy Aspirants"
+    ],
+    "whatIs": "Scribe records your browser screen as you complete a task and automatically generates an annotated, illustrated step-by-step guide with screenshots, clicked buttons, and instructions.",
+    "whyItMatters": "Invaluable for creating guides on \"How to fill MPSC application form\", \"How to download hall tickets\", or \"How to apply for caste validity certificates\" for peers and student groups.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Install Scribe Extension",
+        "desc": "Add the free Scribe extension to Chrome, Edge, or Brave from scribehow.com."
+      },
+      {
+        "step": 2,
+        "title": "Start Recording",
+        "desc": "Click \"Start Recording\" and perform the workflow (e.g. logging into mpsc.gov.in and downloading an admit card)."
+      },
+      {
+        "step": 3,
+        "title": "Stop Recording",
+        "desc": "Click the extension icon and select Stop — Scribe instantly constructs the visual tutorial."
+      },
+      {
+        "step": 4,
+        "title": "Edit and Redact",
+        "desc": "Blur sensitive personal data (Aadhaar, roll numbers) and customize step descriptions."
+      },
+      {
+        "step": 5,
+        "title": "Share Link or Export PDF",
+        "desc": "Share the interactive link with your study community or export as a clean PDF."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Exam Portal Application Guide",
+        "text": "Create a 5-step visual guide detailing how to upload photographs and signatures within official dimension and KB limits."
+      },
+      {
+        "title": "Online Objection Tracker",
+        "text": "Draft a tutorial on how to file online answer key objections on the commission portal."
+      }
+    ],
+    "limitations": "Free plan supports web browser workflows; desktop application capture requires Pro.",
+    "relatedSlugs": [
+      "loom",
+      "canva",
+      "gamma"
+    ]
+  },
+  {
+    "slug": "mystudylife",
+    "name": "MyStudyLife",
+    "tagline": "Cross-platform academic timetable, revision cycle, and exam countdown organizer.",
+    "category": "Productivity",
+    "badge": "📅 Student Timetable Tracker",
+    "free": true,
+    "url": "https://www.mystudylife.com",
+    "logo": "calendar_month",
+    "targetUsers": [
+      "College Students",
+      "Aspirants Balancing Jobs & Study",
+      "School Students",
+      "Exam Planners"
+    ],
+    "whatIs": "MyStudyLife is a cloud-based academic organizer that replaces paper planners with smart schedules, rotation timetable support, assignment progress tracking, and exam countdown alerts.",
+    "whyItMatters": "Helps working professionals and college students preparing for competitive exams juggle classes, office hours, syllabus revision slots, and mock test dates without schedule conflicts.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Create Free Account",
+        "desc": "Sign up at mystudylife.com or download the mobile app for iOS and Android."
+      },
+      {
+        "step": 2,
+        "title": "Add Your Academic Calendar",
+        "desc": "Set up your term dates, weekly coaching classes, and upcoming competitive exam dates."
+      },
+      {
+        "step": 3,
+        "title": "Input Rotating Revision Blocks",
+        "desc": "Schedule recurring study blocks (e.g., Morning Polity 6:00-8:30 AM, Evening CSAT 8:00-9:30 PM)."
+      },
+      {
+        "step": 4,
+        "title": "Track Syllabus Milestones",
+        "desc": "Add tasks with percentage completion bars to monitor progress on textbook chapters and question banks."
+      },
+      {
+        "step": 5,
+        "title": "Cloud Sync & Offline Access",
+        "desc": "Your schedule stays synced seamlessly across your laptop, tablet, and phone even without internet."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Working Aspirant Schedule",
+        "text": "Design a realistic 4-hour daily study schedule for an IT professional preparing for MPSC Group B while working 9 to 6."
+      },
+      {
+        "title": "Weekly Revision Rotation",
+        "text": "Plan a rotating timetable covering 4 GS subjects across 6 weekdays with Sundays reserved for full-length mock tests."
+      }
+    ],
+    "limitations": "Built specifically for academic timetables; not a general team project management tool.",
+    "relatedSlugs": [
+      "forest",
+      "taskade",
+      "focusmate"
+    ]
+  },
+  {
+    "slug": "brainly",
+    "name": "Brainly",
+    "tagline": "Knowledge-sharing student community with AI-verified textbook answers and step-by-step solutions.",
+    "category": "Study",
+    "badge": "🤝 Peer & AI Q&A Community",
+    "free": true,
+    "url": "https://brainly.in",
+    "logo": "live_help",
+    "targetUsers": [
+      "School Students (6th to 12th)",
+      "NCERT Learners",
+      "State Board Students",
+      "Foundation Aspirants"
+    ],
+    "whatIs": "Brainly is the world's largest peer-to-peer and AI-assisted learning platform where students ask textbook questions and receive step-by-step verified explanations from experts and AI.",
+    "whyItMatters": "Since NCERT and State Board textbooks are the foundation for UPSC/MPSC/SSC exams, Brainly provides step-by-step answers and conceptual clarity for back-of-the-chapter questions.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Brainly.in",
+        "desc": "Visit brainly.in or launch the Brainly app on Android/iOS."
+      },
+      {
+        "step": 2,
+        "title": "Search or Snap Question",
+        "desc": "Type a textbook question or snap a photo of a science/history problem."
+      },
+      {
+        "step": 3,
+        "title": "Review AI & Expert Answers",
+        "desc": "Inspect the AI Tutor breakdown followed by community-verified explanations."
+      },
+      {
+        "step": 4,
+        "title": "Ask Follow-Up Clues",
+        "desc": "Click \"Ask AI Tutor\" to clarify any intermediate step or request a simpler analogy."
+      },
+      {
+        "step": 5,
+        "title": "Help Fellow Students",
+        "desc": "Earn community points and badges by answering questions in your strongest subject."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "NCERT Science Concept",
+        "text": "Explain why the sky appears blue and why sunsets are red using Rayleigh scattering from Class 10 Science."
+      },
+      {
+        "title": "State Board History Question",
+        "text": "Provide a structured 3-point answer on the significance of the Chhatrapati Shivaji Maharaj coronation at Raigad in 1674."
+      }
+    ],
+    "limitations": "Community answers should always be cross-checked with official textbooks for authoritative exam citations.",
+    "relatedSlugs": [
+      "socratic",
+      "khanmigo",
+      "photomath"
+    ]
   }
 ]
 
@@ -5596,6 +7426,67 @@ const SLUG_ALIASES = {
   'flow-gpt': 'flowgpt',
   'artifacts': 'claude-artifacts',
   'claude-artifact': 'claude-artifacts',
+
+  // Added 30 Study-Specific AI Tools Aliases
+  'knowt-ai': 'knowt',
+  'knowtai': 'knowt',
+  'gizmo-ai': 'gizmo',
+  'gizmoai': 'gizmo',
+  'rem-note': 'remnote',
+  'remnote-ai': 'remnote',
+  'studysmarter': 'vaia',
+  'study-smarter': 'vaia',
+  'vaia-app': 'vaia',
+  'mindgrasp-ai': 'mindgrasp',
+  'mindgraspai': 'mindgrasp',
+  'chatmind': 'mapify',
+  'mapify-ai': 'mapify',
+  'mapifyai': 'mapify',
+  'coconote-ai': 'coconote',
+  'coconote-app': 'coconote',
+  'explain-paper': 'explainpaper',
+  'explainpaper-ai': 'explainpaper',
+  'omnicalculator': 'omni-calculator',
+  'omni-calc': 'omni-calculator',
+  'symbolab-ai': 'symbolab',
+  'symbolab-math': 'symbolab',
+  'cymath-ai': 'cymath',
+  'cymath-math': 'cymath',
+  'ask-your-pdf': 'askyourpdf',
+  'askyourpdf-ai': 'askyourpdf',
+  'chat-doc': 'chatdoc',
+  'chatdoc-ai': 'chatdoc',
+  'updf-ai': 'updf',
+  'updf-reader': 'updf',
+  'scholarcy-ai': 'scholarcy',
+  'iris': 'iris-ai',
+  'irisai': 'iris-ai',
+  'litmaps-ai': 'litmaps',
+  'lit-maps': 'litmaps',
+  'inciteful-xyz': 'inciteful',
+  'inciteful-ai': 'inciteful',
+  'paperpal-ai': 'paperpal',
+  'trinka-ai': 'trinka',
+  'trinkaai': 'trinka',
+  'jenni': 'jenni-ai',
+  'jenniai': 'jenni-ai',
+  'goblin': 'goblin-tools',
+  'goblintools': 'goblin-tools',
+  'taskade-ai': 'taskade',
+  'taskadeai': 'taskade',
+  'focus-mate': 'focusmate',
+  'forest-app': 'forest',
+  'forestapp': 'forest',
+  'korbit': 'korbit-ai',
+  'korbitai': 'korbit-ai',
+  'deeplwrite': 'deepl-write',
+  'deepl-ai': 'deepl-write',
+  'scribe-ai': 'scribe',
+  'scribehow': 'scribe',
+  'my-study-life': 'mystudylife',
+  'mystudy-life': 'mystudylife',
+  'brainly-in': 'brainly',
+  'brainly-ai': 'brainly',
 }
 
 // Helper: get a tool by slug (with case-insensitivity and alias resolution)

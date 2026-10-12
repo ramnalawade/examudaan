@@ -12,7 +12,13 @@ export default function robots() {
     rules: [
       {
         // Explicitly allow Bingbot, msnbot, BingPreview
-        userAgent: ['Bingbot', 'msnbot', 'BingPreview'],
+        userAgent: [
+          'Googlebot', 'Googlebot-Image',
+          'Bingbot', 'msnbot', 'BingPreview',
+          'Claude-SearchBot', 'Claude-User',
+          'OAI-SearchBot', 'ChatGPT-User',
+          'PerplexityBot', 'Perplexity-User',
+        ],
         allow: [
           '/',
           '/_next/static/',
@@ -102,10 +108,7 @@ export default function robots() {
           'Bytespider',
           'Amazonbot',
           'FacebookBot',
-          'cohere-ai',
           'omgili',
-          'anthropic-ai',
-          'PerplexityBot',
           'Diffbot',
           'ImagesiftBot',
         ],

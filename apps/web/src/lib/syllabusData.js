@@ -21,14 +21,64 @@ export const SYLLABUS_EXAMS = [
     targetPosts: ["Deputy Collector", "DSP", "Tehsildar", "Naib Tehsildar", "Section Officer", "BDO"],
     totalVacancies: "~312 (2026 cycle)",
     applicationFee: { general: "₹524", reserved: "₹324" },
-    ageLimit: { min: 19, max: 38, scStRelax: 5, obcRelax: 3 },
-    eligibility: "Graduate in any discipline from a recognized University (Final year appearing eligible for Prelims)",
-    stages: ["Prelims", "Mains (Descriptive)", "Interview"],
+    ageLimit: { min: 19, max: 38, scStRelax: 5, obcRelax: 3, pwdRelax: 10, maxReserved: 43 },
+    eligibility: "Graduate in any discipline from a recognized University (Final year appearing eligible for Prelims). Marathi language proficiency (Reading, Writing, Speaking) required. Maharashtra domicile required for reservation.",
+    stages: ["Prelims (400 Marks)", "Mains Descriptive (9 Papers — 1,750 Marks)", "Interview / Personality Test (275 Marks)"],
     officialWebsite: "https://mpsc.gov.in",
     notificationUrl: "https://mpsconline.gov.in/candidate",
+    revisedPatternNotes: {
+      totalPapers: 9,
+      mainsMarks: 1750,
+      interviewMarks: 275,
+      grandTotalMarks: 2025,
+      qualifyingPapers: "Paper 1 (Marathi — 300 Marks) & Paper 2 (English — 300 Marks) require 25% minimum qualifying marks; not counted in merit.",
+      meritPapers: "7 compulsory descriptive papers (Essay + GS 1 to 4 + 2 Optional papers) of 250 marks each (Total 1,750 marks).",
+      patternType: "Descriptive UPSC-aligned pattern with Maharashtra-specific emphasis."
+    },
+    optionalSubjects: [
+      { name: "Agriculture", nameMr: "कृषी" },
+      { name: "Animal Husbandry & Veterinary Science", nameMr: "पशुपालन आणि पशुवैद्यकीय विज्ञान" },
+      { name: "Anthropology", nameMr: "मानववंशशास्त्र" },
+      { name: "Botany", nameMr: "वनस्पतिशास्त्र" },
+      { name: "Chemistry", nameMr: "रसायनशास्त्र" },
+      { name: "Civil Engineering", nameMr: "सिव्हिल अभियांत्रिकी" },
+      { name: "Commerce & Accountancy", nameMr: "वाणिज्य आणि लेखा" },
+      { name: "Economics", nameMr: "अर्थशास्त्र" },
+      { name: "Electrical Engineering", nameMr: "इलेक्ट्रिकल अभियांत्रिकी" },
+      { name: "Geography", nameMr: "भूगोल" },
+      { name: "Geology", nameMr: "भूविज्ञान" },
+      { name: "History", nameMr: "इतिहास" },
+      { name: "Law", nameMr: "कायदा" },
+      { name: "Management", nameMr: "व्यवस्थापन" },
+      { name: "Marathi Literature", nameMr: "मराठी साहित्य" },
+      { name: "Mathematics", nameMr: "गणित" },
+      { name: "Mechanical Engineering", nameMr: "यांत्रिक अभियांत्रिकी" },
+      { name: "Medical Science", nameMr: "वैद्यकीय विज्ञान" },
+      { name: "Philosophy", nameMr: "तत्त्वज्ञान" },
+      { name: "Physics", nameMr: "भौतिकशास्त्र" },
+      { name: "Political Science & International Relations", nameMr: "राज्यशास्त्र आणि आंतरराष्ट्रीय संबंध" },
+      { name: "Psychology", nameMr: "मानसशास्त्र" },
+      { name: "Public Administration", nameMr: "सार्वजनिक प्रशासन" },
+      { name: "Sociology", nameMr: "समाजशास्त्र" },
+      { name: "Statistics", nameMr: "सांख्यिकी" },
+      { name: "Zoology", nameMr: "प्राणीशास्त्र" }
+    ],
+    interviewDetails: {
+      marks: 275,
+      duration: "20–30 minutes",
+      panel: "3–5 members (including civil services domain experts & psychologists)",
+      purpose: "Assess personality, intellectual integrity, administrative aptitude, social awareness, and communication skills.",
+      focusAreas: [
+        "Administrative and social awareness regarding Maharashtra & Indian public systems",
+        "Social challenges, welfare initiatives and policy resolution in Maharashtra",
+        "Current events across State, National and International landscapes",
+        "Logical reasoning, critical analysis, ethical clarity and crisis problem-solving",
+        "Balanced, objective perspective under situational pressure"
+      ]
+    },
     papers: [
       {
-        stage: "Prelims (Screening)",
+        stage: "Prelims (Screening — 400 Marks)",
         papers: [
           {
             name: "GS Paper I",
@@ -48,9 +98,9 @@ export const SYLLABUS_EXAMS = [
           {
             name: "CSAT Paper II",
             marks: 200,
-            questions: 100,
+            questions: 80,
             duration: "2 hours",
-            type: "MCQ (Qualifying — 33% / 66 marks required)",
+            type: "MCQ (Qualifying — 33% / 66 marks required, Negative Marking 1/4th)",
             topics: [
               { name: "Comprehension", subtopics: ["Marathi Reading Comprehension", "English Reading Comprehension passages"] },
               { name: "Interpersonal Skills & Communication", subtopics: ["Communication dynamics", "Situational context reasoning"] },
@@ -62,15 +112,17 @@ export const SYLLABUS_EXAMS = [
         ]
       },
       {
-        stage: "Mains (Descriptive Pattern)",
+        stage: "Mains (Descriptive Pattern — 9 Papers, 1,750 Marks)",
         papers: [
-          { name: "Paper 1: Marathi (Descriptive)", marks: 100, duration: "3 hours", type: "Descriptive (Qualifying 25%)", topics: [{ name: "Marathi Language", subtopics: ["Essay Writing (निबंध)", "Précis Writing (सारलेखन)", "Reading Comprehension", "Translation (English to Marathi)"] }] },
-          { name: "Paper 2: English (Descriptive)", marks: 100, duration: "3 hours", type: "Descriptive (Qualifying 25%)", topics: [{ name: "English Language", subtopics: ["Essay Writing", "Précis Writing", "Reading Comprehension", "Translation (Marathi to English)"] }] },
-          { name: "Paper 3: Essay", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Essay Topics", subtopics: ["Philosophical & Socio-cultural topics", "Economic & Political challenges in India & Maharashtra", "Science, Technology & Ethics"] }] },
-          { name: "Paper 4: General Studies I", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Indian Heritage & Culture, History & Geography", subtopics: ["Maharashtra Social Reformers", "Indian National Movement", "World Geography & Geomorphic Processes", "Society and Social Structure of Maharashtra"] }] },
-          { name: "Paper 5: General Studies II", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Governance, Constitution, Polity & IR", subtopics: ["Indian Constitution & Federalism", "Executive, Judiciary & Election Commission", "Role of Civil Services in Democracy", "India's Foreign Policy & Neighborhood Relations"] }] },
-          { name: "Paper 6: General Studies III", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Technology, Economic Development, Environment & Security", subtopics: ["Indian & Maharashtra Economy", "Agriculture & Food Security", "Internal Security Challenges & Cyber Warfare", "Disaster Resilience & Environment"] }] },
-          { name: "Paper 7: General Studies IV", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Ethics, Integrity & Aptitude", subtopics: ["Moral Thinkers & Philosophers", "Public Service Values & Ethics", "Attitude & Emotional Intelligence", "Case Studies on Administrative dilemmas"] }] },
+          { name: "Paper 1: Marathi (Descriptive)", marks: 300, duration: "3 hours", type: "Descriptive (Qualifying — 25% required)", topics: [{ name: "Marathi Language (Qualifying)", subtopics: ["Essay Writing (निबंध)", "Précis Writing (सारलेखन)", "Reading Comprehension (आकलन)", "Translation English to Marathi (भाषांतर)"] }] },
+          { name: "Paper 2: English (Descriptive)", marks: 300, duration: "3 hours", type: "Descriptive (Qualifying — 25% required)", topics: [{ name: "English Language (Qualifying)", subtopics: ["Essay Writing", "Précis Writing", "Reading Comprehension", "Translation Marathi to English"] }] },
+          { name: "Paper 3: Essay (निबंध)", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Essay Writing in Marathi or English", subtopics: ["Philosophical & Socio-cultural topics", "Economic & Political challenges in India & Maharashtra", "Science, Technology & Ethics", "Sustainable Growth & Social Justice"] }] },
+          { name: "Paper 4: General Studies I", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Indian Heritage & Culture, History & Geography", subtopics: ["Indian National Movement & 1857 Revolt", "Maharashtra Social Reformers & Renaissance", "World & Physical Geography", "Geomorphic Processes & Climate Systems", "Society and Social Structure of Maharashtra"] }] },
+          { name: "Paper 5: General Studies II", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Governance, Constitution, Polity & IR", subtopics: ["Indian Constitution & Federal Framework", "Executive, State Legislature & Governor", "Judiciary, Judicial Activism & Tribunals", "Role of Civil Services in Democracy", "India's Foreign Policy & Neighborhood Relations"] }] },
+          { name: "Paper 6: General Studies III", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Technology, Economic Development, Environment & Security", subtopics: ["Indian & Maharashtra Economy & Budget", "Agriculture, PDS & Food Processing", "Science, Tech & IT Innovations", "Western Ghats Biodiversity & Disaster Resilience", "Internal Security Challenges & Cyber Warfare"] }] },
+          { name: "Paper 7: General Studies IV", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Ethics, Integrity & Aptitude", subtopics: ["Moral Thinkers, Philosophers & Reformers", "Public Service Values, Ethics & Probity", "Emotional Intelligence & Administrative Attitude", "Case Studies on Administrative Ethics & Dilemmas"] }] },
+          { name: "Paper 8: Optional Subject Paper 1 (ऐच्छिक विषय पेपर १)", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Optional Discipline — Section A (Foundational)", subtopics: ["Core Theoretical Principles & Frameworks", "Methodological Approaches & Historical Evolution", "Fundamental Paradigms & Disciplinary Concepts"] }] },
+          { name: "Paper 9: Optional Subject Paper 2 (ऐच्छिक विषय पेपर २)", marks: 250, duration: "3 hours", type: "Descriptive (Merit)", topics: [{ name: "Optional Discipline — Section B (Applied)", subtopics: ["Specialized Field Application & Analysis", "Indian & Maharashtra Contemporary Case Studies", "Policy Formulation, Critical Evaluation & Innovations"] }] },
         ]
       }
     ],

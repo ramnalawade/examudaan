@@ -1,4 +1,4 @@
-﻿# ============================================================
+# ============================================================
 # spiders/gpsc_spider.py — Gujarat Public Service Commission
 # ExamUdaan | Scrapes https://gpsc.gujarat.gov.in
 # Run: scrapy crawl gpsc
@@ -33,6 +33,9 @@ class GPSCSpider(DuplicateStopMixin, scrapy.Spider):
                 continue
 
             if url.endswith(".pdf"):
+                dedup_hash = hashlib.sha256(f"GPSC_{url}".encode()).hexdigest()
+                if self.track_duplicate(dedup_hash, label=title, urls=[url]):
+                    continue
                 item = ExamPost()
                 item["title"]            = title
                 item["board_slug"]       = "gpsc"
@@ -40,8 +43,10 @@ class GPSCSpider(DuplicateStopMixin, scrapy.Spider):
                 item["org_name"]         = "Gujarat Public Service Commission"
                 item["source_url"]       = url
                 item["official_website"] = "https://gpsc.gujarat.gov.in"
+                item["notification_pdf"] = url
                 item["notification_pdf_url"] = url
                 item["state"]            = ["Gujarat"]
+                item["dedup_hash"]       = dedup_hash
                 yield item
                 continue
 
@@ -72,6 +77,8 @@ class GPSCSpider(DuplicateStopMixin, scrapy.Spider):
 
         pdf_links = response.css("a[href$='.pdf']::attr(href)").getall()
         if pdf_links:
-            item["notification_pdf_url"] = response.urljoin(pdf_links[0])
+            pdf_url = response.urljoin(pdf_links[0])
+            item["notification_pdf"] = pdf_url
+            item["notification_pdf_url"] = pdf_url
 
         yield item

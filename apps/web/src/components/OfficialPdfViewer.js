@@ -10,6 +10,11 @@ import { useState, useMemo, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './officialPdfViewer.module.css'
 import { toSecureDocUrl } from '../lib/docObfuscate.js'
+import {
+  trackAnswerKeyDownload,
+  trackResultPdfView,
+  trackOutboundLinkClick,
+} from '@/lib/analytics'
 
 // Bulletproof security & embed check: ONLY embed verified PDFs
 // NEVER embed internal site routes or external web portals into iframes
@@ -363,6 +368,14 @@ export default function OfficialPdfViewer({
                 download={isEmbeddablePdf ? true : undefined}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  trackAnswerKeyDownload({
+                    exam_name: activePaper?.title || activePaper?.label || '',
+                    year: activePaper?.year || '',
+                    file_name: activePaper.url,
+                  })
+                  trackOutboundLinkClick({ link_url: activePaper.url })
+                }}
                 className={styles.actionBtnPrimary}
                 title={isEmbeddablePdf ? "Download document directly" : "Open official portal"}
               >
@@ -387,6 +400,14 @@ export default function OfficialPdfViewer({
                   href={activePaper.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    trackAnswerKeyDownload({
+                      exam_name: activePaper?.title || activePaper?.label || '',
+                      year: activePaper?.year || '',
+                      file_name: activePaper.url,
+                    })
+                    trackOutboundLinkClick({ link_url: activePaper.url })
+                  }}
                   className={styles.mobileDirectLink}
                   title="Open full PDF directly in mobile browser"
                 >
@@ -529,24 +550,41 @@ export default function OfficialPdfViewer({
                           download
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() => {
+                            trackAnswerKeyDownload({
+                              exam_name: activePaper?.title || activePaper?.label || '',
+                              year: activePaper?.year || '',
+                              file_name: activePaper.url,
+                            })
+                            trackOutboundLinkClick({ link_url: activePaper.url })
+                          }}
                           className={styles.secondaryActionBtn}
                         >
                           <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#16A34A' }}>download</span>
                           <span>Download PDF</span>
                         </a>
 
-                        <Link href="/pyq" className={styles.secondaryActionBtn}>
+                        <Link
+                          href="/pyq"
+                          className={styles.secondaryActionBtn}
+                        >
                           <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#EA580C' }}>quiz</span>
                           <span>Practice 1,100+ Real PYQs</span>
                         </Link>
 
-                        <Link href="/mock-tests" className={styles.secondaryActionBtn}>
+                        <Link
+                          href="/mock-tests"
+                          className={styles.secondaryActionBtn}
+                        >
                           <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#2563EB' }}>timer</span>
                           <span>Attempt Full CBT Mock Test</span>
                         </Link>
 
                         {(examName.toLowerCase().includes('police') || conductingBody.toLowerCase().includes('police')) && (
-                          <Link href="/police-calculator" className={styles.secondaryActionBtn}>
+                          <Link
+                            href="/police-calculator"
+                            className={styles.secondaryActionBtn}
+                          >
                             <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#16A34A' }}>calculate</span>
                             <span>Police Physical & Written Marks Calculator</span>
                           </Link>

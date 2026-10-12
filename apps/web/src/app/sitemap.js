@@ -73,6 +73,15 @@ const STATIC_PAGES = [
   { url: '/jobs/district',     priority: 0.90, changeFrequency: 'daily'   },
   // Official Question Papers & Keys Directory
   { url: '/question-papers',   priority: 0.92, changeFrequency: 'daily'   },
+  // Clean Human & SEO Friendly Organization Hubs
+  { url: '/jobs/org/mpsc',     priority: 0.95, changeFrequency: 'daily'   },
+  { url: '/jobs/org/upsc',     priority: 0.95, changeFrequency: 'daily'   },
+  { url: '/jobs/org/rrb',      priority: 0.95, changeFrequency: 'daily'   },
+  { url: '/jobs/org/ssc',      priority: 0.95, changeFrequency: 'daily'   },
+  { url: '/jobs/org/banking',  priority: 0.95, changeFrequency: 'daily'   },
+  { url: '/jobs/org/police',   priority: 0.95, changeFrequency: 'daily'   },
+  { url: '/jobs/closing-soon', priority: 0.95, changeFrequency: 'hourly'  },
+  { url: '/jobs/central-govt', priority: 0.95, changeFrequency: 'daily'   },
 ]
 
 // Notification Type to Route Path
@@ -95,7 +104,7 @@ export default async function sitemap() {
     priority:        page.priority,
   }))
 
-  // 2. AI Tools Detail Pages (/ai-tools/[slug]) — All 29 Tools
+  // 2. AI Tools Detail Pages (/ai-tools/[slug]) — All 114 Tools
   const aiToolEntries = (AI_TOOLS || []).map(tool => ({
     url:             `${BASE_URL}/ai-tools/${tool.slug}`,
     lastModified:    now,

@@ -5,6 +5,7 @@
 // ============================================================
 
 import { useState } from 'react'
+import styles from './hindiToggle.module.css'
 
 export default function HindiToggle({ descriptionEn, descriptionHi }) {
   const [isHindi, setIsHindi] = useState(false)
@@ -17,63 +18,33 @@ export default function HindiToggle({ descriptionEn, descriptionHi }) {
     <div>
       {/* Language toggle button — only show if Hindi is available */}
       {descriptionHi && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-          <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 500 }}>Language:</span>
-          <div style={{
-            display: 'flex',
-            border: '1px solid var(--border)',
-            borderRadius: 'var(--radius-full)',
-            overflow: 'hidden',
-          }}>
+        <div className={styles.toggleRow}>
+          <span className={styles.toggleLabel}>Language:</span>
+          <div className={styles.toggleGroup}>
             <button
               id="lang-toggle-en"
               onClick={() => setIsHindi(false)}
-              style={{
-                padding: '4px 14px',
-                fontSize: '12px',
-                fontWeight: 600,
-                border: 'none',
-                cursor: 'pointer',
-                background: !isHindi ? 'var(--accent)' : 'transparent',
-                color: !isHindi ? 'white' : 'var(--text-body)',
-                transition: 'all 0.2s',
-              }}
+              className={`${styles.toggleBtn} ${!isHindi ? styles.toggleBtnActive : ''}`}
             >
               English
             </button>
             <button
               id="lang-toggle-hi"
               onClick={() => setIsHindi(true)}
-              style={{
-                padding: '4px 14px',
-                fontSize: '12px',
-                fontWeight: 600,
-                border: 'none',
-                cursor: 'pointer',
-                background: isHindi ? 'var(--accent)' : 'transparent',
-                color: isHindi ? 'white' : 'var(--text-body)',
-                transition: 'all 0.2s',
-              }}
+              className={`${styles.toggleBtn} ${isHindi ? styles.toggleBtnActive : ''}`}
             >
               हिंदी
             </button>
           </div>
           {isHindi && (
-            <span style={{
-              fontSize: '11px',
-              padding: '2px 8px',
-              borderRadius: 'var(--radius-full)',
-              background: 'var(--accent-light)',
-              color: 'var(--accent-text)',
-              fontWeight: 600,
-            }}>
+            <span className={styles.aiBadge}>
               AI Translated
             </span>
           )}
         </div>
       )}
 
-      <p style={{ lineHeight: '1.7', color: 'var(--text-body)' }}>
+      <p className={styles.textBody}>
         {text}
       </p>
     </div>

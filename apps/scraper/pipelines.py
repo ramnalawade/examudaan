@@ -192,7 +192,7 @@ class DeduplicationPipeline:
     def open_spider(self, spider=None):
         spider = spider or (getattr(self, 'crawler', None) and self.crawler.spider)
         self.consecutive_dups = 0
-        org = getattr(spider, 'dedup_org', None) if spider else None
+        org = (getattr(spider, 'dedup_org', None) or getattr(spider, 'org_acronym', None)) if spider else None
         try:
             DeduplicationPipeline.known_urls = pg_db.get_known_urls(org_acronym=org)
             # Load dedup_hashes if the DB helper supports it
@@ -223,7 +223,7 @@ class DeduplicationPipeline:
 
         # Check source_url + notification_pdf + dedup_hash
         source_url  = (item.get('source_url')      or '').strip()
-        pdf_url     = (item.get('notification_pdf') or '').strip()
+        pdf_url     = (item.get('notification_pdf') or item.get('notification_pdf_url') or '').strip()
         dedup_hash  = (item.get('dedup_hash')       or '').strip()
 
         matched = None

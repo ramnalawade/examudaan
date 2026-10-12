@@ -483,6 +483,12 @@ export const SECTIONAL_DRILLS = [
     "totalQuestions": 25,
     "marksPerQuestion": 2,
     "negativeMark": 0.5,
+    "cutoffs": {
+      "open": 34,
+      "obc": 30,
+      "ews": 28,
+      "sc_st": 24
+    },
     "youtubeQuery": "SSC CGL general awareness preparation",
     "questions": [
       {

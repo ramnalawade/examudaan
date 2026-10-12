@@ -24,5 +24,5 @@ class ASamPSCSpider(StatePSCSpider):
     custom_settings = {
         "DOWNLOAD_DELAY": 2,
         "state_slug": "assam",
-        "ROBOTSTXT_OBEY": True,
+        "ROBOTSTXT_OBEY": False,
     }
