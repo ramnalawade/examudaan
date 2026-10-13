@@ -263,6 +263,7 @@
   height: 4px;
   width: 100%;
   flex-shrink: 0;
+  background: var(--exam-accent, var(--primary, #ea580c));
 }
 
 .examCardHeader {
@@ -280,6 +281,8 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: color-mix(in srgb, var(--exam-accent, #ea580c) 12%, transparent);
+  color: var(--exam-accent, #ea580c);
 }
 
 .examIcon {
@@ -699,6 +702,44 @@
   filter: brightness(1.1);
 }
 
+/* ── Zero Inline Styles Helpers ────────────────────────────── */
+.searchIcon {
+  font-size: 18px;
+  color: #94a3b8;
+}
+
+.clearSearchIcon {
+  font-size: 16px;
+}
+
+.emptyStateIcon {
+  font-size: 44px;
+  color: #94a3b8;
+}
+
+.statIconOrange {
+  font-size: 13px;
+  color: #ea580c;
+}
+
+.statIconGreen {
+  font-size: 13px;
+  color: #16a34a;
+}
+
+.statIconBlue {
+  font-size: 13px;
+  color: #2563eb;
+}
+
+.quickPillIcon {
+  font-size: 14px;
+}
+
+.arrowForwardIcon {
+  font-size: 16px;
+}
+
 /* ── Mobile ─────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .examGrid { grid-template-columns: 1fr; }
@@ -706,3 +747,4 @@
   .heroStats { gap: 24px; }
   .ctaBox, .ctaBoxSlate { padding: 32px 20px; }
 }
+

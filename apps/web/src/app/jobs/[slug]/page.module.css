@@ -331,3 +331,78 @@
   color: var(--text-body);
   border: 1px solid var(--border);
 }
+
+/* ---- Closed Learning Loop Preparation Hub Card ---- */
+.learningHubCard {
+  background: #ffffff;
+  border: 1.5px solid #fed7aa;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.05);
+}
+
+.learningHubHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.learningHubIcon {
+  color: #ea580c;
+  font-size: 20px;
+}
+
+.learningHubTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  font-family: var(--font-outfit);
+}
+
+.learningHubDesc {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 0 0 12px;
+  line-height: 1.45;
+}
+
+.learningHubLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.learningHubLinkItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.learningHubLinkItem:hover {
+  background: #ffedd5;
+  border-color: #ea580c;
+  transform: translateX(2px);
+}
+
+.learningHubItemIcon {
+  font-size: 18px;
+  color: #ea580c;
+}
+
+.learningHubArrow {
+  margin-left: auto;
+  font-size: 16px;
+  color: #ea580c;
+}
+

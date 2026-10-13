@@ -656,6 +656,22 @@
 .ytSuggestion strong { font-size: 15px; color: var(--on-surface); display: block; margin-bottom: 2px; }
 .ytSuggestion p { font-size: 13px; color: var(--secondary); margin: 0; }
 
+/* ── Syllabus Suggestion (Closed Learning Loop) ─────────────── */
+.syllabusSuggestion {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  background: #fff7ed;
+  border-bottom: 1px solid #fed7aa;
+  flex-wrap: wrap;
+}
+
+.syllabusSuggestion .material-symbols-outlined { font-size: 32px; color: var(--primary, #ea580c); flex-shrink: 0; }
+.syllabusSuggestion div { flex: 1; }
+.syllabusSuggestion strong { font-size: 15px; color: #0f172a; display: block; margin-bottom: 2px; }
+.syllabusSuggestion p { font-size: 13px; color: #7c2d12; margin: 0; }
+
 /* ── Review Section ─────────────────────────────────────────── */
 .reviewSection { padding: 28px 36px; }
 

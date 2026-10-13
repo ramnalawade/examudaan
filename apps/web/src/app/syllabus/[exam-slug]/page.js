@@ -5,7 +5,7 @@
 import { use } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getExamBySlug, ALL_EXAM_SLUGS, SYLLABUS_EXAMS } from '@/lib/syllabusData'
+import { getExamBySlug, ALL_EXAM_SLUGS, SYLLABUS_EXAMS, getMockTestForExam } from '@/lib/syllabusData'
 import InteractiveSyllabusTracker from '@/components/InteractiveSyllabusTracker'
 import OfficialPdfViewer from '@/components/OfficialPdfViewer'
 import styles from './examDetail.module.css'
@@ -52,6 +52,9 @@ export default function ExamDetailPage({ params }) {
     exam.relatedExams.includes(e.slug)
   )
 
+  // Matching mock test for closed learning loop
+  const matchedMock = getMockTestForExam(exam.slug)
+
   // Question Paper & Verified PDF details
   const verifiedPdfs = exam.officialPdfs || []
   const hasOfficialPdfs = verifiedPdfs.length > 0
@@ -65,7 +68,7 @@ export default function ExamDetailPage({ params }) {
   return (
     <main className={styles.detailPage}>
       {/* ── Hero with Integrated Breadcrumb ── */}
-      <section className={styles.hero} style={{ '--exam-color': exam.color }}>
+      <section className={styles.hero}>
         <div className="container">
           {/* Integrated Breadcrumb */}
           <nav className={styles.heroBreadcrumb} aria-label="Breadcrumb">
@@ -122,10 +125,10 @@ export default function ExamDetailPage({ params }) {
                     className={`${styles.keyStat} ${styles.keyStatClickable}`}
                     title={hasDirectPdf ? `Open verified ${exam.shortName} Question Paper in PDF format` : "View verified previous year question papers"}
                   >
-                    <span className="material-symbols-outlined" style={{ color: '#22c55e' }}>picture_as_pdf</span>
+                    <span className={`material-symbols-outlined ${styles.pdfStatIcon}`}>picture_as_pdf</span>
                     <div>
                       <strong>Question Paper (PDF)</strong>
-                      <span style={{ color: '#86efac', fontWeight: 600 }}>
+                      <span className={styles.pdfStatBadge}>
                         {hasDirectPdf ? `${verifiedPdfs.length} Verified PDFs ↗` : `${pyqLinksList.length} Papers Available ↓`}
                       </span>
                     </div>
@@ -157,8 +160,7 @@ export default function ExamDetailPage({ params }) {
                     href={hasDirectPdf ? primaryPdfUrl : '#pyq'}
                     target={hasDirectPdf ? "_blank" : undefined}
                     rel={hasDirectPdf ? "noopener noreferrer" : undefined}
-                    className={styles.heroOfficialBtn}
-                    style={{ background: '#16a34a', borderColor: '#15803d', color: '#fff' }}
+                    className={`${styles.heroOfficialBtn} ${styles.heroPdfBtn}`}
                     title={`Open authentic ${exam.shortName || exam.nameEn} question paper in PDF format`}
                   >
                     <span className="material-symbols-outlined">description</span>
@@ -171,12 +173,12 @@ export default function ExamDetailPage({ params }) {
                   Official Website
                 </a>
                 {exam.notificationUrl && exam.notificationUrl !== exam.officialWebsite && (
-                  <a href={exam.notificationUrl} target="_blank" rel="noopener noreferrer" className={styles.heroOfficialBtn} style={{ background: '#2563EB', borderColor: '#1D4ED8', color: '#fff' }}>
+                  <a href={exam.notificationUrl} target="_blank" rel="noopener noreferrer" className={`${styles.heroOfficialBtn} ${styles.heroPortalBtn}`}>
                     <span className="material-symbols-outlined">notifications_active</span>
                     Recruitment Portal
                   </a>
                 )}
-                <Link href="/mock-tests" className={styles.heroMockBtn}>
+                <Link href={matchedMock ? `/mock-tests/${matchedMock.slug}` : '/mock-tests'} className={styles.heroMockBtn}>
                   <span className="material-symbols-outlined">quiz</span>
                   Practice Mock Test →
                 </Link>
@@ -210,8 +212,65 @@ export default function ExamDetailPage({ params }) {
         </div>
       </section>
 
+      {/* ── 4-Way Closed Learning Loop Bar ── */}
+      <section className={styles.learningLoopSection}>
+        <div className="container">
+          <div className={styles.learningLoopCard}>
+            <div className={styles.learningLoopHeader}>
+              <span className="material-symbols-outlined">sync</span>
+              <span>4-Way Integrated Learning Loop — {exam.shortName || exam.nameEn}</span>
+            </div>
+            <div className={styles.learningLoopGrid}>
+              {/* 1. Syllabus & Topic Tracker */}
+              <a href="#syllabus" className={styles.learningLoopItem}>
+                <div className={styles.learningLoopIconBox} data-type="mock">
+                  <span className="material-symbols-outlined">menu_book</span>
+                </div>
+                <div>
+                  <div className={styles.learningLoopTitle}>अभ्यासक्रम व घटक</div>
+                  <div className={styles.learningLoopSub}>100% Verified Blueprint</div>
+                </div>
+              </a>
+
+              {/* 2. Practice Mock Tests */}
+              <Link href={matchedMock ? `/mock-tests/${matchedMock.slug}` : '/mock-tests'} className={styles.learningLoopItem}>
+                <div className={styles.learningLoopIconBox} data-type="mock">
+                  <span className="material-symbols-outlined">quiz</span>
+                </div>
+                <div>
+                  <div className={styles.learningLoopTitle}>{matchedMock ? matchedMock.label : 'ऑनलाईन मॉक टेस्ट'}</div>
+                  <div className={styles.learningLoopSub}>100-Q CBT Simulation</div>
+                </div>
+              </Link>
+
+              {/* 3. PYQ Papers & Solutions */}
+              <a href={exam.slug.startsWith('mpsc-') ? '/mpsc-pyq' : '#pyq'} className={styles.learningLoopItem}>
+                <div className={styles.learningLoopIconBox} data-type="pyq">
+                  <span className="material-symbols-outlined">history_edu</span>
+                </div>
+                <div>
+                  <div className={styles.learningLoopTitle}>मागील प्रश्नपत्रिका (PYQ)</div>
+                  <div className={styles.learningLoopSub}>{hasOfficialPdfs ? `${verifiedPdfs.length} Verified PDFs` : 'Official Question Papers'}</div>
+                </div>
+              </a>
+
+              {/* 4. Official Answer Keys & Latest Jobs */}
+              <Link href={`/jobs?q=${encodeURIComponent(exam.shortName || exam.nameEn)}`} className={styles.learningLoopItem}>
+                <div className={styles.learningLoopIconBox} data-type="jobs">
+                  <span className="material-symbols-outlined">campaign</span>
+                </div>
+                <div>
+                  <div className={styles.learningLoopTitle}>चालू भरती जाहिराती</div>
+                  <div className={styles.learningLoopSub}>Live Vacancies & Apply Links</div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Interactive Syllabus Tracker & Topic Checklist ── */}
-      <section className={styles.syllabusSection}>
+      <section className={styles.syllabusSection} id="syllabus">
         <div className="container">
           <h2 className={styles.sectionTitle}>
             <span className="material-symbols-outlined">menu_book</span>
@@ -224,45 +283,45 @@ export default function ExamDetailPage({ params }) {
 
       {/* ── Revised Pattern Blueprint (if available) ── */}
       {exam.revisedPatternNotes && (
-        <section style={{ padding: '28px 0', background: '#FFFBF5', borderTop: '1px solid var(--outline-variant)' }}>
+        <section className={styles.revisedPatternSection}>
           <div className="container">
-            <div style={{ background: '#FFFFFF', border: '1.5px solid #FED7AA', borderRadius: '14px', padding: '24px', boxShadow: '0 2px 10px rgba(234,88,12,0.06)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-                <span className="material-symbols-outlined" style={{ color: '#EA580C', fontSize: '26px' }}>verified</span>
+            <div className={styles.revisedPatternCard}>
+              <div className={styles.revisedPatternHeader}>
+                <span className={`material-symbols-outlined ${styles.revisedPatternIcon}`}>verified</span>
                 <div>
-                  <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 800, color: '#0F172A', fontFamily: 'var(--font-outfit)' }}>
+                  <h3 className={styles.revisedPatternTitle}>
                     सुधारित परीक्षा पद्धती (Revised 9-Paper Descriptive Blueprint)
                   </h3>
-                  <p style={{ margin: '2px 0 0', fontSize: '13px', color: '#64748B' }}>
+                  <p className={styles.revisedPatternSubtitle}>
                     {exam.revisedPatternNotes.patternType}
                   </p>
                 </div>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px', marginBottom: '16px' }}>
-                <div style={{ background: '#FFF7ED', padding: '12px 16px', borderRadius: '10px', border: '1px solid #FFEDD5' }}>
-                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#C2410C', textTransform: 'uppercase' }}>एकूण मुख्य पेपर</span>
-                  <div style={{ fontSize: '20px', fontWeight: 800, color: '#9A3412', marginTop: '2px' }}>{exam.revisedPatternNotes.totalPapers} Papers</div>
+              <div className={styles.revisedPatternGrid}>
+                <div className={styles.revisedPatternStatBox}>
+                  <span className={styles.revisedPatternStatLabel}>एकूण मुख्य पेपर</span>
+                  <div className={styles.revisedPatternStatVal}>{exam.revisedPatternNotes.totalPapers} Papers</div>
                 </div>
-                <div style={{ background: '#FFF7ED', padding: '12px 16px', borderRadius: '10px', border: '1px solid #FFEDD5' }}>
-                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#C2410C', textTransform: 'uppercase' }}>मुख्य परीक्षा गुण</span>
-                  <div style={{ fontSize: '20px', fontWeight: 800, color: '#9A3412', marginTop: '2px' }}>{exam.revisedPatternNotes.mainsMarks} Marks</div>
+                <div className={styles.revisedPatternStatBox}>
+                  <span className={styles.revisedPatternStatLabel}>मुख्य परीक्षा गुण</span>
+                  <div className={styles.revisedPatternStatVal}>{exam.revisedPatternNotes.mainsMarks} Marks</div>
                 </div>
-                <div style={{ background: '#FFF7ED', padding: '12px 16px', borderRadius: '10px', border: '1px solid #FFEDD5' }}>
-                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#C2410C', textTransform: 'uppercase' }}>मुलाखत गुण</span>
-                  <div style={{ fontSize: '20px', fontWeight: 800, color: '#9A3412', marginTop: '2px' }}>{exam.revisedPatternNotes.interviewMarks} Marks</div>
+                <div className={styles.revisedPatternStatBox}>
+                  <span className={styles.revisedPatternStatLabel}>मुलाखत गुण</span>
+                  <div className={styles.revisedPatternStatVal}>{exam.revisedPatternNotes.interviewMarks} Marks</div>
                 </div>
-                <div style={{ background: '#FEF2F2', padding: '12px 16px', borderRadius: '10px', border: '1px solid #FEE2E2' }}>
-                  <span style={{ fontSize: '11px', fontWeight: 700, color: '#B91C1C', textTransform: 'uppercase' }}>अंतिम मेरिट गुण</span>
-                  <div style={{ fontSize: '20px', fontWeight: 800, color: '#991B1B', marginTop: '2px' }}>{exam.revisedPatternNotes.grandTotalMarks} Marks</div>
+                <div className={styles.revisedPatternStatBoxDanger}>
+                  <span className={styles.revisedPatternStatLabel}>अंतिम मेरिट गुण</span>
+                  <div className={styles.revisedPatternStatValDanger}>{exam.revisedPatternNotes.grandTotalMarks} Marks</div>
                 </div>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px', color: '#334155' }}>
-                <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                  <span style={{ color: '#EA580C', fontWeight: 'bold' }}>•</span>
+              <div className={styles.revisedPatternBulletList}>
+                <div className={styles.revisedPatternBulletItem}>
+                  <span className={styles.bulletDot}>•</span>
                   <span><strong>पात्रता पेपर्स:</strong> {exam.revisedPatternNotes.qualifyingPapers}</span>
                 </div>
-                <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                  <span style={{ color: '#EA580C', fontWeight: 'bold' }}>•</span>
+                <div className={styles.revisedPatternBulletItem}>
+                  <span className={styles.bulletDot}>•</span>
                   <span><strong>गुणवत्तेचे पेपर्स:</strong> {exam.revisedPatternNotes.meritPapers}</span>
                 </div>
               </div>
@@ -273,44 +332,32 @@ export default function ExamDetailPage({ params }) {
 
       {/* ── Optional Subjects Section (if available) ── */}
       {exam.optionalSubjects?.length > 0 && (
-        <section style={{ padding: '32px 0', background: '#FFFFFF', borderTop: '1px solid var(--outline-variant)' }}>
+        <section className={styles.optionalSubjectsSection}>
           <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '18px' }}>
+            <div className={styles.optionalSubjectsHeader}>
               <div>
-                <h2 style={{ fontFamily: 'var(--font-outfit)', fontSize: '22px', fontWeight: 800, color: '#0F172A', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span className="material-symbols-outlined" style={{ color: '#EA580C' }}>library_books</span>
+                <h2 className={styles.optionalSubjectsTitle}>
+                  <span className={`material-symbols-outlined ${styles.optionalSubjectsTitleIcon}`}>library_books</span>
                   ऐच्छिक विषयांची यादी — Optional Subjects ({exam.optionalSubjects.length} Disciplines)
                 </h2>
-                <p style={{ fontSize: '13.5px', color: '#64748B', margin: '4px 0 0' }}>
+                <p className={styles.optionalSubjectsDesc}>
                   मुख्य परीक्षेसाठी उमेदवाराने खालीलपैकी एका ऐच्छिक विषयाची निवड करणे आवश्यक आहे (पेपर ८ व पेपर ९, प्रत्येकी २५० गुण).
                 </p>
               </div>
-              <span style={{ fontSize: '12px', fontWeight: 700, background: '#FFF7ED', color: '#EA580C', border: '1px solid #FED7AA', padding: '4px 10px', borderRadius: '999px' }}>
+              <span className={styles.optionalSubjectsBadge}>
                 Choose Any 1 Subject
               </span>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '10px' }}>
+            <div className={styles.optionalSubjectsGrid}>
               {exam.optionalSubjects.map((subj, sIdx) => (
-                <div
-                  key={sIdx}
-                  style={{
-                    background: '#FAFAFA',
-                    border: '1px solid #E2E8F0',
-                    borderRadius: '8px',
-                    padding: '10px 14px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    transition: 'border-color 0.15s, transform 0.15s'
-                  }}
-                >
-                  <span style={{ width: '22px', height: '22px', borderRadius: '50%', background: '#F1F5F9', color: '#64748B', fontSize: '11px', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div key={sIdx} className={styles.optionalSubjectCard}>
+                  <span className={styles.optionalSubjectNum}>
                     {sIdx + 1}
                   </span>
                   <div>
-                    <strong style={{ fontSize: '13px', color: '#0F172A', display: 'block' }}>{subj.name}</strong>
-                    {subj.nameMr && <span style={{ fontSize: '12px', color: '#64748B' }}>{subj.nameMr}</span>}
+                    <strong className={styles.optionalSubjectName}>{subj.name}</strong>
+                    {subj.nameMr && <span className={styles.optionalSubjectNameMr}>{subj.nameMr}</span>}
                   </div>
                 </div>
               ))}
@@ -321,44 +368,41 @@ export default function ExamDetailPage({ params }) {
 
       {/* ── Interview & Personality Test Section (if available) ── */}
       {exam.interviewDetails && (
-        <section style={{ padding: '32px 0', background: '#F8FAFC', borderTop: '1px solid var(--outline-variant)' }}>
+        <section className={styles.interviewSection}>
           <div className="container">
-            <div style={{ background: '#FFFFFF', border: '1px solid var(--outline-variant)', borderRadius: '14px', padding: '24px', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span className="material-symbols-outlined" style={{ color: '#2563EB', fontSize: '28px' }}>record_voice_over</span>
+            <div className={styles.interviewCard}>
+              <div className={styles.interviewHeader}>
+                <div className={styles.interviewHeaderLeft}>
+                  <span className={`material-symbols-outlined ${styles.interviewHeaderIcon}`}>record_voice_over</span>
                   <div>
-                    <h2 style={{ fontFamily: 'var(--font-outfit)', fontSize: '20px', fontWeight: 800, color: '#0F172A', margin: 0 }}>
+                    <h2 className={styles.interviewTitle}>
                       मुलाखत व व्यक्तिमत्त्व चाचणी — Interview Process ({exam.interviewDetails.marks} Marks)
                     </h2>
-                    <p style={{ fontSize: '13px', color: '#64748B', margin: '2px 0 0' }}>
+                    <p className={styles.interviewMeta}>
                       कालावधी: {exam.interviewDetails.duration} • मंडळ: {exam.interviewDetails.panel}
                     </p>
                   </div>
                 </div>
-                <Link
-                  href="/mock-interview"
-                  style={{ background: '#2563EB', color: '#FFFFFF', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-                >
-                  <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>psychology</span>
+                <Link href="/mock-interview" className={styles.interviewAiBtn}>
+                  <span className={`material-symbols-outlined ${styles.interviewAiBtnIcon}`}>psychology</span>
                   AI मॉक मुलाखत सुरू करा →
                 </Link>
               </div>
 
               {exam.interviewDetails.purpose && (
-                <p style={{ fontSize: '13.5px', color: '#334155', background: '#EFF6FF', borderLeft: '4px solid #3B82F6', padding: '10px 14px', borderRadius: '0 8px 8px 0', margin: '0 0 16px' }}>
+                <p className={styles.interviewObjective}>
                   <strong>उद्दिष्ट (Objective):</strong> {exam.interviewDetails.purpose}
                 </p>
               )}
 
               <div>
-                <strong style={{ fontSize: '13.5px', color: '#0F172A', display: 'block', marginBottom: '8px' }}>
+                <strong className={styles.interviewFocusTitle}>
                   मुलाखतीतील मुख्य तपासणी घटक (Core Assessment Focus Areas):
                 </strong>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '8px' }}>
+                <div className={styles.interviewFocusGrid}>
                   {exam.interviewDetails.focusAreas.map((area, aIdx) => (
-                    <div key={aIdx} style={{ display: 'flex', gap: '8px', alignItems: 'flex-start', fontSize: '13px', color: '#475569' }}>
-                      <span className="material-symbols-outlined" style={{ fontSize: '16px', color: '#16A34A', marginTop: '2px' }}>check_circle</span>
+                    <div key={aIdx} className={styles.interviewFocusItem}>
+                      <span className={`material-symbols-outlined ${styles.interviewFocusCheckIcon}`}>check_circle</span>
                       <span>{area}</span>
                     </div>
                   ))}
@@ -401,7 +445,7 @@ export default function ExamDetailPage({ params }) {
               <div className={styles.pyqList}>
                 {pyqLinksList.map((p, idx) => (
                   <div key={idx} className={styles.pyqCardItem}>
-                    <div className={styles.pyqYearCol} style={{ background: 'rgba(234, 88, 12, 0.08)', color: 'var(--primary, #ea580c)' }}>
+                    <div className={`${styles.pyqYearCol} ${styles.pyqYearColThemed}`}>
                       <span className={styles.pyqYearText}>{p.year}</span>
                       <span className={styles.pyqYearBadge}>{p.exam || 'Paper'}</span>
                     </div>
@@ -443,11 +487,10 @@ export default function ExamDetailPage({ params }) {
                       )}
                       <Link
                         href={`/pyq?q=${encodeURIComponent(exam.shortName || exam.nameEn)}`}
-                        className={styles.pyqPaperBtn}
-                        style={{ background: '#FFF7ED', borderColor: '#FED7AA', color: '#EA580C' }}
+                        className={`${styles.pyqPaperBtn} ${styles.pyqBankBtn}`}
                         title="Practice topic questions in 15-Year PYQ Bank"
                       >
-                        <span className="material-symbols-outlined" style={{ color: '#EA580C' }}>quiz</span>
+                        <span className={`material-symbols-outlined ${styles.pyqBankIcon}`}>quiz</span>
                         <span>15-Yr Bank Practice</span>
                       </Link>
                     </div>
@@ -457,12 +500,12 @@ export default function ExamDetailPage({ params }) {
             )}
 
             {exam.slug.startsWith('mpsc-') && (
-              <div style={{ marginTop: '16px', padding: '14px 18px', background: '#FFF7ED', border: '1.5px solid #FED7AA', borderRadius: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
+              <div className={styles.mpscArchiveBanner}>
                 <div>
-                  <strong style={{ color: '#9A3412', fontSize: '14px' }}>🏛️ संपूर्ण MPSC २०२१–२०२६ अधिकृत संग्रह (841 Papers & Keys)</strong>
-                  <p style={{ margin: '2px 0 0 0', fontSize: '13px', color: '#7C2D12' }}>सर्व राज्यसेवा, संयुक्त गट ब व क, वनसेवा आणि चाळणी परीक्षा प्रश्नपत्रिका व उत्तरतालिका थेट ब्राऊझरमध्ये उपलब्ध.</p>
+                  <strong className={styles.mpscArchiveBannerTitle}>🏛️ संपूर्ण MPSC २०२१–२०२६ अधिकृत संग्रह (841 Papers & Keys)</strong>
+                  <p className={styles.mpscArchiveBannerText}>सर्व राज्यसेवा, संयुक्त गट ब व क, वनसेवा आणि चाळणी परीक्षा प्रश्नपत्रिका व उत्तरतालिका थेट ब्राऊझरमध्ये उपलब्ध.</p>
                 </div>
-                <Link href="/mpsc-pyq" style={{ background: '#EA580C', color: '#fff', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 700, textDecoration: 'none', boxShadow: '0 2px 6px rgba(234,88,12,0.2)' }}>
+                <Link href="/mpsc-pyq" className={styles.mpscArchiveBannerBtn}>
                   संपूर्ण MPSC संग्रह उघडा (841 Papers) →
                 </Link>
               </div>
@@ -503,7 +546,7 @@ export default function ExamDetailPage({ params }) {
             <div className={styles.relatedGrid}>
               {related.map(rel => (
                 <Link key={rel.slug} href={`/syllabus/${rel.slug}`} className={styles.relatedCard}>
-                  <span className={`material-symbols-outlined`} style={{ color: rel.color }}>{rel.logo}</span>
+                  <span className="material-symbols-outlined">{rel.logo}</span>
                   <div>
                     <strong>{rel.nameEn}</strong>
                     <span>{rel.conductingBody}</span>
@@ -517,149 +560,109 @@ export default function ExamDetailPage({ params }) {
       )}
 
       {/* ── Next Steps: Practice & Test Hub ── */}
-      <section style={{ padding: '36px 0', background: '#FFFFFF', borderTop: '1px solid var(--outline-variant)' }}>
+      <section className={styles.nextStepsSection}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 20px' }}>
-            <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          <div className={styles.nextStepsHeader}>
+            <span className={styles.nextStepsTag}>
               From Syllabus to Selection
             </span>
-            <h2 style={{ fontFamily: 'var(--font-outfit)', fontSize: '22px', fontWeight: 800, color: '#0F172A', margin: '4px 0 6px' }}>
+            <h2 className={styles.nextStepsTitle}>
               अभ्यासक्रमानंतर सराव करा (Practice Next Steps)
             </h2>
-            <p style={{ fontSize: '13.5px', color: '#64748B', margin: 0 }}>
+            <p className={styles.nextStepsDesc}>
               {exam.shortName || exam.nameEn} च्या संपूर्ण तयारीसाठी खालील अधिकृत टूल्स वापरा:
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '14px' }}>
+          <div className={styles.nextStepsGrid}>
             <Link
               href="/mpsc-pyq"
-              style={{
-                background: '#FFFFFF',
-                border: '1.5px solid #FED7AA',
-                borderRadius: '12px',
-                padding: '16px',
-                textDecoration: 'none',
-                boxShadow: '0 2px 6px rgba(234,88,12,0.05)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}
+              className={`${styles.nextStepCard} ${styles.nextStepCardFeatured}`}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '22px' }}>📄</span>
-                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#FFF7ED', color: '#EA580C', border: '1px solid #FED7AA', padding: '2px 7px', borderRadius: '999px' }}>
+                <div className={styles.nextStepCardTop}>
+                  <span className={styles.nextStepEmoji}>📄</span>
+                  <span className={styles.nextStepBadgePrimary}>
                     841 Papers
                   </span>
                 </div>
-                <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit)', display: 'block', marginBottom: '4px' }}>
+                <strong className={styles.nextStepCardTitle}>
                   MPSC मूळ प्रश्नपत्रिका व की
                 </strong>
-                <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                <p className={styles.nextStepCardDesc}>
                   २०२१ ते २०२६ चे सर्व ४२९ अधिकृत संच थेट ब्राऊझरमध्ये वाचा व डाऊनलोड करा.
                 </p>
               </div>
-              <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#EA580C' }}>
+              <span className={styles.nextStepCardLinkPrimary}>
                 प्रश्नपत्रिका उघडा →
               </span>
             </Link>
 
             <Link
-              href="/mock-tests"
-              style={{
-                background: '#FFFFFF',
-                border: '1px solid var(--outline-variant)',
-                borderRadius: '12px',
-                padding: '16px',
-                textDecoration: 'none',
-                boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}
+              href={matchedMock ? `/mock-tests/${matchedMock.slug}` : '/mock-tests'}
+              className={styles.nextStepCard}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '22px' }}>⏱️</span>
-                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#ECFDF5', color: '#047857', border: '1px solid #A7F3D0', padding: '2px 7px', borderRadius: '999px' }}>
+                <div className={styles.nextStepCardTop}>
+                  <span className={styles.nextStepEmoji}>⏱️</span>
+                  <span className={styles.nextStepBadgeSuccess}>
                     100% Free
                   </span>
                 </div>
-                <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit)', display: 'block', marginBottom: '4px' }}>
+                <strong className={styles.nextStepCardTitle}>
                   मोफत ऑनलाईन मॉक टेस्ट्स
                 </strong>
-                <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                <p className={styles.nextStepCardDesc}>
                   १०० प्रश्नांचे संपूर्ण मॉक पेपर्स व विषयवार स्पीड ड्रिल्स — राज्यस्तरीय रँकसह.
                 </p>
               </div>
-              <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#047857' }}>
+              <span className={styles.nextStepCardLinkSuccess}>
                 मॉक टेस्ट द्या →
               </span>
             </Link>
 
             <Link
-              href="/pyq"
-              style={{
-                background: '#FFFFFF',
-                border: '1px solid var(--outline-variant)',
-                borderRadius: '12px',
-                padding: '16px',
-                textDecoration: 'none',
-                boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}
+              href={`/pyq?q=${encodeURIComponent(exam.shortName || exam.nameEn)}`}
+              className={styles.nextStepCard}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '22px' }}>🎯</span>
-                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#F5F3FF', color: '#6D28D9', border: '1px solid #DDD6FE', padding: '2px 7px', borderRadius: '999px' }}>
+                <div className={styles.nextStepCardTop}>
+                  <span className={styles.nextStepEmoji}>🎯</span>
+                  <span className={styles.nextStepBadgePurple}>
                     9,000+ MCQs
                   </span>
                 </div>
-                <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit)', display: 'block', marginBottom: '4px' }}>
+                <strong className={styles.nextStepCardTitle}>
                   15-Year Topic PYQ Bank
                 </strong>
-                <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                <p className={styles.nextStepCardDesc}>
                   अभ्यासक्रमातील घटकनिहाय प्रश्न सोडवा — राज्यव्यवस्था, भूगोल, विज्ञान व इतिहास.
                 </p>
               </div>
-              <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#6D28D9' }}>
+              <span className={styles.nextStepCardLinkPurple}>
                 विषयवार प्रश्न सोडवा →
               </span>
             </Link>
 
             <Link
               href="/cutoffs"
-              style={{
-                background: '#FFFFFF',
-                border: '1px solid var(--outline-variant)',
-                borderRadius: '12px',
-                padding: '16px',
-                textDecoration: 'none',
-                boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}
+              className={styles.nextStepCard}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '22px' }}>📊</span>
-                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#EFF6FF', color: '#1D4ED8', border: '1px solid #BFDBFE', padding: '2px 7px', borderRadius: '999px' }}>
+                <div className={styles.nextStepCardTop}>
+                  <span className={styles.nextStepEmoji}>📊</span>
+                  <span className={styles.nextStepBadgeBlue}>
                     10-Yr Benchmark
                   </span>
                 </div>
-                <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit)', display: 'block', marginBottom: '4px' }}>
+                <strong className={styles.nextStepCardTitle}>
                   १०-वर्षीय कट-ऑफ विश्लेषण
                 </strong>
-                <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                <p className={styles.nextStepCardDesc}>
                   Open, OBC, EWS, SC, ST प्रवर्गांचे मागील १० वर्षांचे अधिकृत बेंचमार्क गुण.
                 </p>
               </div>
-              <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#1D4ED8' }}>
+              <span className={styles.nextStepCardLinkBlue}>
                 कट-ऑफ तपासा →
               </span>
             </Link>

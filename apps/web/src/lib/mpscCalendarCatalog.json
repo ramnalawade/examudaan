@@ -1,0 +1,524 @@
+{
+  "lastUpdated": "2026-10-12 22:51:56",
+  "totalScheduleDocuments": 7,
+  "totalTimetableDocuments": 42,
+  "totalDocuments": 49,
+  "annualSchedules": [
+    {
+      "id": 11978,
+      "mid": 19,
+      "advertisementNumber": "000",
+      "yearOfAdvertisement": 2025,
+      "descInEnglish": "Tentative Schedule of Competitive Examinations - 2026",
+      "descMr": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक  २०२६ ",
+      "descHin": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक  २०२६ ",
+      "meetingDate": "2025-10-17 00:00:00",
+      "publicationDate": "2025-10-17 00:00:00",
+      "officeBearerEducationalQualificationMr": "",
+      "englishFileSize": "2.54 MB",
+      "marathiFileSize": "2.54 MB",
+      "hindiFileSize": "2.54 MB",
+      "englishFileName": "Time table 2026.pdf",
+      "marathiFileName": "Time table 2026.pdf"
+    },
+    {
+      "id": 9662,
+      "mid": 19,
+      "advertisementNumber": "000",
+      "yearOfAdvertisement": 2024,
+      "descInEnglish": "Tentative Schedule of Competitive Examinations - 2025",
+      "descMr": "सन २०२५ मध्ये आयोजित स्पर्धा परीक्षांचे अंदाजित वेळापत्रक ",
+      "descHin": "सन २०२५ मध्ये आयोजित स्पर्धा परीक्षांचे अंदाजित वेळापत्रक ",
+      "meetingDate": "2024-11-22 00:00:00",
+      "publicationDate": "2024-11-22 00:00:00",
+      "officeBearerEducationalQualificationMr": "",
+      "englishFileSize": "2.49 MB",
+      "marathiFileSize": "2.49 MB",
+      "hindiFileSize": "2.49 MB",
+      "englishFileName": "Competitive Exam Time Table 20252.pdf",
+      "marathiFileName": "Competitive Exam Time Table 20252.pdf"
+    },
+    {
+      "id": 7954,
+      "mid": 19,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Schedule of Competitive Examinations - 2024",
+      "meetingDate": "2023-11-10 00:00:00",
+      "publicationDate": "2023-11-10 00:00:00",
+      "issueDate": "2023-11-10 00:00:00",
+      "monthwiseStatusContentId": 7920,
+      "officeBearerJoiningDate": "2023-11-10 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Tentative_Time_Table_2024 (1).pdf"
+    },
+    {
+      "id": 5866,
+      "mid": 19,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Schedule of Competitive Examinations-2023",
+      "meetingDate": "2022-09-28 00:00:00",
+      "publicationDate": "2022-09-28 00:00:00",
+      "issueDate": "2022-09-28 00:00:00",
+      "monthwiseStatusContentId": 5865,
+      "officeBearerJoiningDate": "2022-09-28 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Time Table 2023_2.pdf"
+    },
+    {
+      "id": 4226,
+      "mid": 19,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Schedule of Competitive Examinations-2022",
+      "meetingDate": "2021-12-04 00:00:00",
+      "publicationDate": "2021-12-04 00:00:00",
+      "issueDate": "2021-12-04 00:00:00",
+      "monthwiseStatusContentId": 4225,
+      "officeBearerJoiningDate": "2021-12-04 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Time Table 2022_final.pdf"
+    },
+    {
+      "id": 1253,
+      "mid": 19,
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination - 2020 - 3rd March, 2021",
+      "publicationDate": "2021-03-04 00:00:00",
+      "englishFileName": "Tent_Time_Table_and_Curr_Stat_01032021.pdf"
+    },
+    {
+      "id": 1243,
+      "mid": 19,
+      "descInEnglish": "Current Status-Tentative Schedule of Competitive Examinations-2020, January 2021",
+      "publicationDate": "2021-01-04 00:00:00",
+      "englishFileName": "Current Status_Competitive Examinations_Jan 2021.pdf"
+    }
+  ],
+  "examinationTimetables": [
+    {
+      "id": 9745,
+      "mid": 20,
+      "descInEnglish": "Tentative Timetable of Competitive Examination 2023 & 2024- Current Status of November 2024",
+      "descMr": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक २०२३ व २०२४ - सद्यस्थिती नोव्हेंबर २०२४ ",
+      "descHin": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक २०२३ व २०२४ - सद्यस्थिती नोव्हेंबर २०२४ ",
+      "meetingDate": "2024-12-06 00:00:00",
+      "publicationDate": "2024-12-06 00:00:00",
+      "officeBearerEducationalQualificationMr": "",
+      "englishFileSize": "1.53 MB",
+      "marathiFileSize": "1.53 MB",
+      "hindiFileSize": "1.53 MB",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - November, 2024.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - November, 2024.pdf"
+    },
+    {
+      "id": 9663,
+      "mid": 20,
+      "descInEnglish": "Tentative Timetable of Competitive Examination 2023 & 2024- Current Status of June to October 2024",
+      "descMr": "सन २०२३ व २०२४ स्पर्धा परीक्षांचे अंदाजित वेळापत्रक - जून ते ऑक्टोबर २०२४ ची सद्यस्थिती ",
+      "descHin": "सन २०२३ व २०२४ स्पर्धा परीक्षांचे अंदाजित वेळापत्रक - जून ते ऑक्टोबर २०२४ ची सद्यस्थिती ",
+      "meetingDate": "2024-11-22 00:00:00",
+      "publicationDate": "2024-11-22 00:00:00",
+      "officeBearerEducationalQualificationMr": "",
+      "englishFileSize": "1.55 MB",
+      "marathiFileSize": "1.55 MB",
+      "hindiFileSize": "1.55 MB",
+      "englishFileName": "Current Status-Tentative Schedule of Competitive Examinations 2023-2024 - June To October, 2024.pdf",
+      "marathiFileName": "Current Status-Tentative Schedule of Competitive Examinations 2023-2024 - June To October, 2024.pdf"
+    },
+    {
+      "id": 8915,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Timetable of Competitive Examination 2023 & 2024- Current Status of May 2024",
+      "publicationDate": "2024-05-21 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - May, 2024.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - May, 2024.pdf"
+    },
+    {
+      "id": 8830,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Timetable of Competitive Examination 2022 & 2023- Current Status of April 2024",
+      "publicationDate": "2024-04-08 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - March 2024.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - March 2024.pdf"
+    },
+    {
+      "id": 8690,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Timetable of Competitive Examination 2022 & 2023- Current Status of March 2024",
+      "publicationDate": "2024-03-04 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Tentative Timetable of Competitive Examination 2022 & 2023- Current Status of March 2024.pdf",
+      "marathiFileName": "Tentative Timetable of Competitive Examination 2022 & 2023- Current Status of March 2024.pdf"
+    },
+    {
+      "id": 8337,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Timetable of Competitive Examination 2022 & 2023- Current Status of February 2024",
+      "publicationDate": "2024-02-02 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Tentative Time Table and Status of Competitive Examination -February, 2024.pdf",
+      "marathiFileName": "Tentative Time Table and Status of Competitive Examination -February, 2024.pdf"
+    },
+    {
+      "id": 8161,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Timetable of Competitive Examination 2022 & 2023- Current Status of January 2024",
+      "publicationDate": "2024-01-09 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - January, 2024.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - January, 2024.pdf"
+    },
+    {
+      "id": 8007,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Timetable of Competitive Examination 2022 & 2023- Current Status of December 2023",
+      "publicationDate": "2023-12-01 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - December, 2023.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - December, 2023.pdf"
+    },
+    {
+      "id": 7920,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022 & 2023- Current Status of November 2023",
+      "publicationDate": "2023-11-02 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - November, 2023.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - November, 2023.pdf"
+    },
+    {
+      "id": 7809,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022 & 2023- Current Status of October 2023",
+      "publicationDate": "2023-10-06 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - October, 2023.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - October, 2023.pdf"
+    },
+    {
+      "id": 7663,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022 & 2023- Current Status of September 2023",
+      "publicationDate": "2023-09-05 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - September, 2023 (3).pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - September, 2023 (3).pdf"
+    },
+    {
+      "id": 7501,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022 & 2023- Current Status of August 2023",
+      "publicationDate": "2023-08-10 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - August,  2023.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - August,  2023.pdf"
+    },
+    {
+      "id": 7352,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022 & 2023- Current Status of July 2023",
+      "publicationDate": "2023-07-07 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - July, 2023.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - July, 2023.pdf"
+    },
+    {
+      "id": 7224,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022 & 2023- Current Status of June 2023",
+      "publicationDate": "2023-06-07 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - June, 2023.pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - June, 2023.pdf"
+    },
+    {
+      "id": 7038,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022 & 2023- Current Status of May 2023",
+      "publicationDate": "2023-05-03 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - May 2023 (1).pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - May 2023 (1).pdf"
+    },
+    {
+      "id": 7037,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022 & 2023- Current Status of April 2023",
+      "publicationDate": "2023-04-06 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - April 2023 (1).pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - April 2023 (1).pdf"
+    },
+    {
+      "id": 7036,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of March 2023",
+      "publicationDate": "2023-04-06 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - March 2023 (1).pdf",
+      "marathiFileName": "स्पर्धा परीक्षांचे अंदाजित वेळापत्रक व सद्यस्थिती - March 2023 (1).pdf"
+    },
+    {
+      "id": 6726,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of February, 2023",
+      "publicationDate": "2023-02-10 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "2022 current status february 2023.pdf",
+      "marathiFileName": "2022 current status february 2023.pdf"
+    },
+    {
+      "id": 6557,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of January, 2023",
+      "publicationDate": "2023-01-04 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "CS_Jan_2023.pdf",
+      "marathiFileName": "CS_Jan_2023.pdf"
+    },
+    {
+      "id": 6359,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of December 2022",
+      "publicationDate": "2022-12-06 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "current status december 2022.pdf",
+      "marathiFileName": "current status december 2022.pdf"
+    },
+    {
+      "id": 6142,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of November 2022",
+      "publicationDate": "2022-11-09 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Status.pdf",
+      "marathiFileName": "Status.pdf"
+    },
+    {
+      "id": 5929,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of October 2022",
+      "publicationDate": "2022-10-06 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Current Status.pdf",
+      "marathiFileName": "Current Status.pdf"
+    },
+    {
+      "id": 5865,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Schedule of Competitive Examinations-2023",
+      "publicationDate": "2022-09-28 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Time Table 2023_2.pdf",
+      "marathiFileName": "Time Table 2023_2.pdf"
+    },
+    {
+      "id": 5762,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of September 2022",
+      "publicationDate": "2022-09-06 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "current status september 2022.pdf",
+      "marathiFileName": "current status september 2022.pdf"
+    },
+    {
+      "id": 5483,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of August 2022",
+      "publicationDate": "2022-08-05 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "current status august 2022.pdf",
+      "marathiFileName": "current status august 2022.pdf"
+    },
+    {
+      "id": 5245,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of July 2022",
+      "publicationDate": "2022-07-08 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "current status july 2022.pdf",
+      "marathiFileName": "current status july 2022.pdf"
+    },
+    {
+      "id": 5013,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table of Competitive Examination 2022- Current Status of June 2022",
+      "publicationDate": "2022-06-03 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Tentative_Time_Table_and_Current_Status_of_Competitive_Examination_2022_June_2022.pdf",
+      "marathiFileName": "Tentative_Time_Table_and_Current_Status_of_Competitive_Examination_2022_June_2022.pdf"
+    },
+    {
+      "id": 4929,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination 2022- May, 2022",
+      "publicationDate": "2022-05-12 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Current Status May 2022.pdf",
+      "marathiFileName": "Current Status May 2022.pdf"
+    },
+    {
+      "id": 4818,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination 2022- March, 2022",
+      "publicationDate": "2022-04-13 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Tentative Time Table April-2022.pdf",
+      "marathiFileName": "Tentative Time Table April-2022.pdf"
+    },
+    {
+      "id": 4607,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination 2022- March, 2022",
+      "publicationDate": "2022-03-09 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "March 2022.pdf",
+      "marathiFileName": "March 2022.pdf"
+    },
+    {
+      "id": 4439,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination 2022- February, 2022",
+      "publicationDate": "2022-02-03 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Current_Status_Competitive_Examination_Jan_2022.pdf",
+      "marathiFileName": "Current_Status_Competitive_Examination_Jan_2022.pdf"
+    },
+    {
+      "id": 4354,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination 2022-January 2022",
+      "publicationDate": "2022-01-05 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "TT_Status_Jan_2022.pdf",
+      "marathiFileName": "TT_Status_Jan_2022.pdf"
+    },
+    {
+      "id": 4245,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination 2020-December, 2021",
+      "publicationDate": "2021-12-13 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Tentative_Time_Table_and_Current_Status_of_Competitive_Examination_2020_December, 2021.pdf",
+      "marathiFileName": "Tentative_Time_Table_and_Current_Status_of_Competitive_Examination_2020_December, 2021.pdf"
+    },
+    {
+      "id": 4225,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Schedule of Competitive Examinations-2022",
+      "publicationDate": "2021-12-04 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Time Table 2022_final.pdf",
+      "marathiFileName": "Time Table 2022_final.pdf"
+    },
+    {
+      "id": 4168,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination 2020-November, 2021",
+      "publicationDate": "2021-11-01 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Current_Status_Competitive_Examination_2020.pdf",
+      "marathiFileName": "Current_Status_Competitive_Examination_2020.pdf"
+    },
+    {
+      "id": 4118,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination 2020-October, 2021",
+      "publicationDate": "2021-10-05 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "current status september 2021.pdf",
+      "marathiFileName": "current status september 2021.pdf"
+    },
+    {
+      "id": 3971,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination- 2020- September, 2021",
+      "publicationDate": "2021-09-08 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Current Status of Competitive Examination Sept 2021.pdf",
+      "marathiFileName": "Current Status of Competitive Examination Sept 2021.pdf"
+    },
+    {
+      "id": 3433,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examination- 2020- August, 2021",
+      "publicationDate": "2021-08-03 00:00:00",
+      "officeBearerEducationalQualification": "",
+      "englishFileName": "Tentative_Time_Table_and_Current_Status_of_Competitive_Examinaion_2020_August_2021.pdf",
+      "marathiFileName": "Tentative_Time_Table_and_Current_Status_of_Competitive_Examinaion_2020_August_2021.pdf"
+    },
+    {
+      "id": 2931,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Tentative Time Table and Current Status of Competitive Examinaion- 2020- July, 2021",
+      "publicationDate": "2021-07-02 00:00:00",
+      "englishFileName": "Tentative_Time_Table_and_Current_Status_of_Competitive_Examinaion_2020_July_2021.pdf",
+      "marathiFileName": "Tentative_Time_Table_and_Current_Status_of_Competitive_Examinaion_2020_July_2021.pdf"
+    },
+    {
+      "id": 1799,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Current Status of  Competitive Examinations Dt.02062021",
+      "publicationDate": "2021-06-02 00:00:00",
+      "englishFileName": "Current Status of  Competitive Examinations Dt.02062021.pdf",
+      "marathiFileName": "Current Status of  Competitive Examinations Dt.02062021.pdf"
+    },
+    {
+      "id": 1448,
+      "mid": 20,
+      "advertisementNumber": "",
+      "descInEnglish": "Current Status Dated 05052021",
+      "publicationDate": "2021-05-05 00:00:00",
+      "englishFileName": "Current Status Dated 05052021.pdf",
+      "marathiFileName": "Current Status Dated 05052021.pdf"
+    },
+    {
+      "id": 1290,
+      "mid": 20,
+      "advertisementNumber": "000",
+      "yearOfAdvertisement": 2021,
+      "descInEnglish": "Tentative Timetable and Current Status of Competitive Examinaton 2020 - April, 2021",
+      "publicationDate": "2021-04-01 00:00:00",
+      "englishFileName": "Timetable_Current_Status_April 2021.pdf",
+      "marathiFileName": "Timetable_Current_Status_April 2021.pdf"
+    }
+  ]
+}

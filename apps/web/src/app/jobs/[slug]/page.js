@@ -14,6 +14,8 @@ import DetailActionButtons from '../../../components/DetailActionButtons'
 import SaveJobButton from '../../../components/SaveJobButton'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
+import { getSyllabusForJob } from '@/lib/syllabusData'
+import styles from './page.module.css'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
 export const revalidate = 300
@@ -541,6 +543,9 @@ export default async function JobDetailPage({ params }) {
     posts: r.total_vacancies ? `${r.total_vacancies} Posts` : 'Various Posts',
     ends:  r.apply_end_date ? `Ends ${formatDate(r.apply_end_date)}` : 'Active',
   }))
+
+  // ── Matched syllabus for closed learning loop ───────────────
+  const matchedSyllabus = getSyllabusForJob(en)
 
   // ── Shared section card style ──────────────────────────────
   const sectionStyle = {
@@ -1453,6 +1458,36 @@ export default async function JobDetailPage({ params }) {
                   </a>
                 )}
               </div>
+
+              {/* ── Closed Learning Loop: Syllabus & Exam Preparation Hub ── */}
+              {matchedSyllabus && (
+                <div className={styles.learningHubCard}>
+                  <div className={styles.learningHubHeader}>
+                    <span className={`material-symbols-outlined ${styles.learningHubIcon}`}>school</span>
+                    <h3 className={styles.learningHubTitle}>अभ्यासक्रम व परीक्षा तयारी Hub</h3>
+                  </div>
+                  <p className={styles.learningHubDesc}>
+                    {matchedSyllabus.name} साठी अधिकृत अभ्यासक्रम, मागील वर्षांच्या प्रश्नपत्रिका व मोफत ऑनलाईन मॉक टेस्ट उपलब्ध आहेत.
+                  </p>
+                  <div className={styles.learningHubLinks}>
+                    <Link href={matchedSyllabus.path} className={styles.learningHubLinkItem}>
+                      <span className={`material-symbols-outlined ${styles.learningHubItemIcon}`}>menu_book</span>
+                      <span>अभ्यासक्रम व घटक ट्रॅकर</span>
+                      <span className={`material-symbols-outlined ${styles.learningHubArrow}`}>arrow_forward</span>
+                    </Link>
+                    <Link href={matchedSyllabus.slug.startsWith('mpsc-') ? '/mpsc-pyq' : `/pyq?q=${encodeURIComponent(en.org_acronym || 'MPSC')}`} className={styles.learningHubLinkItem}>
+                      <span className={`material-symbols-outlined ${styles.learningHubItemIcon}`}>history_edu</span>
+                      <span>मागील प्रश्नपत्रिका (PYQ)</span>
+                      <span className={`material-symbols-outlined ${styles.learningHubArrow}`}>arrow_forward</span>
+                    </Link>
+                    <Link href="/mock-tests" className={styles.learningHubLinkItem}>
+                      <span className={`material-symbols-outlined ${styles.learningHubItemIcon}`}>quiz</span>
+                      <span>मोफत ऑनलाईन मॉक टेस्ट</span>
+                      <span className={`material-symbols-outlined ${styles.learningHubArrow}`}>arrow_forward</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
 
               {/* Organization Info */}
               {(en.org_website || en.org_address || en.org_phone) && (

@@ -13,6 +13,7 @@ import {
   trackMockTestSectionStart,
   trackMockTestAnswerReview,
 } from '@/lib/analytics'
+import { getSyllabusForMockTest } from '@/lib/syllabusData'
 import styles from './testEngine.module.css'
 
 export default function TestEngineClient({ test }) {
@@ -23,6 +24,7 @@ export default function TestEngineClient({ test }) {
   const [current, setCurrent] = useState(0) // question index 0..N-1
   const [timeLeft, setTimeLeft] = useState((test?.durationMinutes || 60) * 60)
   const [paletteFilter, setPaletteFilter] = useState('all') // 'all' | section.id
+  const matchedSyllabus = useMemo(() => getSyllabusForMockTest(test), [test])
   const [result, setResult] = useState(null) // evaluation result metrics
 
   // Track mock test page view on mount
@@ -407,6 +409,25 @@ export default function TestEngineClient({ test }) {
               </div>
             )}
 
+            {/* Syllabus Topic Revision & Learning Loop Card */}
+            {matchedSyllabus && (
+              <div className={styles.syllabusSuggestion}>
+                <span className="material-symbols-outlined">menu_book</span>
+                <div>
+                  <strong>अभ्यासक्रम तपासा व कच्चे मुद्दे सुधारा (Revise Full Syllabus)</strong>
+                  <p>
+                    {matchedSyllabus.name} च्या अधिकृत परीक्षा योजना, घटकनिहाय गुण आणि संदर्भ पुस्तके पाहून तयारी पूर्ण करा.
+                  </p>
+                </div>
+                <Link
+                  href={matchedSyllabus.path}
+                  className="btn-outline"
+                >
+                  अभ्यासक्रम ट्रॅकर उघडा →
+                </Link>
+              </div>
+            )}
+
             {/* YouTube Suggestion */}
             {test.youtubeQuery && (
               <div className={styles.ytSuggestion}>
@@ -488,6 +509,11 @@ export default function TestEngineClient({ test }) {
               >
                 Retry Test
               </button>
+              {matchedSyllabus && (
+                <Link href={matchedSyllabus.path} className="btn-outline">
+                  📖 {matchedSyllabus.name} अभ्यासक्रम →
+                </Link>
+              )}
               <Link href="/mock-tests" className="btn-primary">Browse All Mock Tests →</Link>
             </div>
           </div>

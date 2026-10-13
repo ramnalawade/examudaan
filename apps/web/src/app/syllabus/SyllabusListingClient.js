@@ -76,7 +76,7 @@ export default function SyllabusListingClient({ exams = [] }) {
 
         {/* Live Search */}
         <div className={styles.searchBox}>
-          <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#94A3B8' }}>search</span>
+          <span className={`material-symbols-outlined ${styles.searchIcon}`}>search</span>
           <input
             type="text"
             placeholder="Search exam, post, or body (e.g. Police, MPSC, UPSC, Talathi)..."
@@ -91,7 +91,7 @@ export default function SyllabusListingClient({ exams = [] }) {
               onClick={() => setSearchQuery('')}
               title="Clear search"
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>close</span>
+              <span className={`material-symbols-outlined ${styles.clearSearchIcon}`}>close</span>
             </button>
           )}
         </div>
@@ -120,7 +120,7 @@ export default function SyllabusListingClient({ exams = [] }) {
       {/* ── Exam Cards Grid ── */}
       {filteredExams.length === 0 ? (
         <div className={styles.emptyState}>
-          <span className="material-symbols-outlined" style={{ fontSize: 44, color: '#94A3B8' }}>manage_search</span>
+          <span className={`material-symbols-outlined ${styles.emptyStateIcon}`}>manage_search</span>
           <h3>No matching exam syllabus found</h3>
           <p>Try searching for a different exam name, post title, or reset your filters.</p>
           <button
@@ -165,19 +165,13 @@ function ExamCard({ exam }) {
   }, [exam.stages])
 
   return (
-    <div className={styles.examCard}>
+    <div className={styles.examCard} style={{ '--exam-accent': exam.color || '#ea580c' }}>
       {/* Color accent bar */}
-      <div className={styles.examCardBar} style={{ background: exam.color || 'var(--primary)' }} />
+      <div className={styles.examCardBar} />
 
       {/* Header */}
       <div className={styles.examCardHeader}>
-        <div
-          className={styles.examIconWrap}
-          style={{
-            background: `${exam.color || '#EA580C'}18`,
-            color: exam.color || '#EA580C',
-          }}
-        >
+        <div className={styles.examIconWrap}>
           <span className={`material-symbols-outlined ${styles.examIcon}`}>
             {exam.logo || 'school'}
           </span>
@@ -229,7 +223,7 @@ function ExamCard({ exam }) {
         {/* Resource Stats Strip */}
         <div className={styles.statsStrip}>
           <span className={styles.statChip}>
-            <span className="material-symbols-outlined" style={{ fontSize: 13, color: '#EA580C' }}>menu_book</span>
+            <span className={`material-symbols-outlined ${styles.statIconOrange}`}>menu_book</span>
             {totalPapers > 0 ? `${totalPapers} Papers` : 'Syllabus'}
           </span>
           <span className={styles.statDot}>•</span>
@@ -241,7 +235,7 @@ function ExamCard({ exam }) {
               className={`${styles.statChip} ${styles.statChipClickable}`}
               title={`Open ${exam.shortName || exam.nameEn} Question Paper in PDF format`}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 13, color: '#16A34A' }}>
+              <span className={`material-symbols-outlined ${styles.statIconGreen}`}>
                 picture_as_pdf
               </span>
               <span>{downloadedPdfsCount} Official PDFs ↗</span>
@@ -252,7 +246,7 @@ function ExamCard({ exam }) {
               className={`${styles.statChip} ${styles.statChipClickable}`}
               title={`View ${exam.pyqLinks?.length || 0} previous year papers for ${exam.shortName || exam.nameEn}`}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 13, color: '#2563EB' }}>
+              <span className={`material-symbols-outlined ${styles.statIconBlue}`}>
                 history_edu
               </span>
               <span>{exam.pyqLinks?.length ? `${exam.pyqLinks.length} PYQ Papers` : 'Topic Tracker'}</span>
@@ -273,7 +267,7 @@ function ExamCard({ exam }) {
                   className={styles.quickPill}
                   title="Open official question paper PDF directly in new tab"
                 >
-                  <span className="material-symbols-outlined" style={{ fontSize: 14 }}>picture_as_pdf</span>
+                  <span className={`material-symbols-outlined ${styles.quickPillIcon}`}>picture_as_pdf</span>
                   <span>Papers (PDF)</span>
                 </a>
                 <Link
@@ -281,7 +275,7 @@ function ExamCard({ exam }) {
                   className={styles.quickPill}
                   title="Jump directly to official answer keys"
                 >
-                  <span className="material-symbols-outlined" style={{ fontSize: 14 }}>task_alt</span>
+                  <span className={`material-symbols-outlined ${styles.quickPillIcon}`}>task_alt</span>
                   <span>Keys</span>
                 </Link>
               </>
@@ -291,7 +285,7 @@ function ExamCard({ exam }) {
                 className={styles.quickPill}
                 title="View previous year question papers"
               >
-                <span className="material-symbols-outlined" style={{ fontSize: 14 }}>picture_as_pdf</span>
+                <span className={`material-symbols-outlined ${styles.quickPillIcon}`}>picture_as_pdf</span>
                 <span>{exam.pyqLinks.length} PYQs</span>
               </Link>
             ) : null}
@@ -303,7 +297,7 @@ function ExamCard({ exam }) {
             title={`View full topic breakdown for ${exam.nameEn}`}
           >
             <span>Full Syllabus</span>
-            <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
+            <span className={`material-symbols-outlined ${styles.arrowForwardIcon}`}>arrow_forward</span>
           </Link>
         </div>
       </div>

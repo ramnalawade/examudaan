@@ -744,11 +744,659 @@ details[open] .topicName .material-symbols-outlined { transform: rotate(90deg); 
 .relatedCard span { font-size: 13px; color: var(--secondary); }
 .relatedArrow { font-size: 20px; color: var(--secondary); }
 
+/* ── 4-Way Learning Loop Bar ───────────────────────────────── */
+.learningLoopSection {
+  padding: 0 0 32px;
+  margin-top: -24px;
+  position: relative;
+  z-index: 20;
+}
+
+.learningLoopCard {
+  background: #ffffff;
+  border: 1px solid var(--outline-variant, #e2e8f0);
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.learningLoopHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--secondary, #475569);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.learningLoopHeader .material-symbols-outlined {
+  color: var(--primary, #ea580c);
+  font-size: 18px;
+}
+
+.learningLoopGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.learningLoopItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface-container-lowest, #fffbf5);
+  border: 1.5px solid var(--outline-variant, #e2e8f0);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.learningLoopItem:hover {
+  border-color: var(--primary, #ea580c);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1);
+}
+
+.learningLoopIconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.learningLoopIconBox[data-type="mock"] {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.learningLoopIconBox[data-type="pyq"] {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.learningLoopIconBox[data-type="keys"] {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.learningLoopIconBox[data-type="jobs"] {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.learningLoopTitle {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.learningLoopSub {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
 /* ── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .learningLoopGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
   .heroInner { grid-template-columns: 1fr; }
   .heroRight { display: none; }
   .keyStats { grid-template-columns: 1fr; }
   .papersGrid { grid-template-columns: 1fr; }
   .booksGrid { grid-template-columns: 1fr; }
+  .learningLoopGrid { grid-template-columns: 1fr; }
+  .learningLoopSection { margin-top: -12px; }
 }
+
+/* ── Hero PDF & Portal Button Styles (Zero Inline CSS) ─────── */
+.pdfStatIcon {
+  color: #22c55e;
+}
+
+.pdfStatBadge {
+  color: #86efac;
+  font-weight: 600;
+}
+
+.heroPdfBtn {
+  background: #16a34a !important;
+  border-color: #15803d !important;
+  color: #ffffff !important;
+}
+
+.heroPortalBtn {
+  background: #2563eb !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+}
+
+/* ── Revised Pattern Blueprint ─────────────────────────────── */
+.revisedPatternSection {
+  padding: 28px 0;
+  background: #fffbf5;
+  border-top: 1px solid var(--outline-variant);
+}
+
+.revisedPatternCard {
+  background: #ffffff;
+  border: 1.5px solid #fed7aa;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.06);
+}
+
+.revisedPatternHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.revisedPatternIcon {
+  color: #ea580c;
+  font-size: 26px;
+}
+
+.revisedPatternTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  font-family: var(--font-outfit);
+}
+
+.revisedPatternSubtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.revisedPatternGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.revisedPatternStatBox {
+  background: #fff7ed;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #ffedd5;
+}
+
+.revisedPatternStatLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #c2410c;
+  text-transform: uppercase;
+}
+
+.revisedPatternStatVal {
+  font-size: 20px;
+  font-weight: 800;
+  color: #9a3412;
+  margin-top: 2px;
+}
+
+.revisedPatternStatBoxDanger {
+  background: #fef2f2;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #fee2e2;
+}
+
+.revisedPatternStatValDanger {
+  font-size: 20px;
+  font-weight: 800;
+  color: #991b1b;
+  margin-top: 2px;
+}
+
+.revisedPatternBulletList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.revisedPatternBulletItem {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.bulletDot {
+  color: #ea580c;
+  font-weight: bold;
+}
+
+/* ── Optional Subjects Section ─────────────────────────────── */
+.optionalSubjectsSection {
+  padding: 32px 0;
+  background: #ffffff;
+  border-top: 1px solid var(--outline-variant);
+}
+
+.optionalSubjectsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.optionalSubjectsTitle {
+  font-family: var(--font-outfit);
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optionalSubjectsTitleIcon {
+  color: #ea580c;
+}
+
+.optionalSubjectsDesc {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 4px 0 0;
+}
+
+.optionalSubjectsBadge {
+  font-size: 12px;
+  font-weight: 700;
+  background: #fff7ed;
+  color: #ea580c;
+  border: 1px solid #fed7aa;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.optionalSubjectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.optionalSubjectCard {
+  background: #fafafa;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.optionalSubjectCard:hover {
+  border-color: #ea580c;
+  transform: translateY(-1px);
+}
+
+.optionalSubjectNum {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionalSubjectName {
+  font-size: 13px;
+  color: #0f172a;
+  display: block;
+}
+
+.optionalSubjectNameMr {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ── Interview & Personality Test Section ──────────────────── */
+.interviewSection {
+  padding: 32px 0;
+  background: #f8fafc;
+  border-top: 1px solid var(--outline-variant);
+}
+
+.interviewCard {
+  background: #ffffff;
+  border: 1px solid var(--outline-variant);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.interviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.interviewHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.interviewHeaderIcon {
+  color: #2563eb;
+  font-size: 28px;
+}
+
+.interviewTitle {
+  font-family: var(--font-outfit);
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.interviewMeta {
+  font-size: 13px;
+  color: #64748b;
+  margin: 2px 0 0;
+}
+
+.interviewAiBtn {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s;
+}
+
+.interviewAiBtn:hover {
+  opacity: 0.9;
+}
+
+.interviewAiBtnIcon {
+  font-size: 18px;
+}
+
+.interviewObjective {
+  font-size: 13.5px;
+  color: #334155;
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  margin: 0 0 16px;
+}
+
+.interviewFocusTitle {
+  font-size: 13.5px;
+  color: #0f172a;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.interviewFocusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 8px;
+}
+
+.interviewFocusItem {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #475569;
+}
+
+.interviewFocusCheckIcon {
+  font-size: 16px;
+  color: #16a34a;
+  margin-top: 2px;
+}
+
+/* ── PYQ List Enhancements ─────────────────────────────────── */
+.pyqYearColThemed {
+  background: rgba(234, 88, 12, 0.08);
+  color: var(--primary, #ea580c);
+}
+
+.pyqBankBtn {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #ea580c;
+}
+
+.pyqBankBtnIcon {
+  color: #ea580c;
+}
+
+.mpscArchiveBanner {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: #fff7ed;
+  border: 1.5px solid #fed7aa;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mpscArchiveBannerTitle {
+  color: #9a3412;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mpscArchiveBannerText {
+  margin: 2px 0 0 0;
+  font-size: 13px;
+  color: #7c2d12;
+}
+
+.mpscArchiveBannerBtn {
+  background: #ea580c;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.2);
+}
+
+.mpscArchiveBannerBtn:hover {
+  background: #c2410c;
+}
+
+/* ── Next Steps: Practice & Test Hub ───────────────────────── */
+.nextStepsSection {
+  padding: 36px 0;
+  background: #ffffff;
+  border-top: 1px solid var(--outline-variant);
+}
+
+.nextStepsHeader {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 20px;
+}
+
+.nextStepsTag {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nextStepsTitle {
+  font-family: var(--font-outfit);
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 4px 0 6px;
+}
+
+.nextStepsDesc {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+}
+
+.nextStepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.nextStepCard {
+  background: #ffffff;
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  padding: 16px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.nextStepCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.nextStepCardFeatured {
+  border: 1.5px solid #fed7aa;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.05);
+}
+
+.nextStepCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.nextStepEmoji {
+  font-size: 22px;
+}
+
+.nextStepBadgePrimary {
+  font-size: 11px;
+  font-weight: 700;
+  background: #fff7ed;
+  color: #ea580c;
+  border: 1px solid #fed7aa;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.nextStepBadgeSuccess {
+  font-size: 11px;
+  font-weight: 700;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.nextStepBadgePurple {
+  font-size: 11px;
+  font-weight: 700;
+  background: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.nextStepBadgeBlue {
+  font-size: 11px;
+  font-weight: 700;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.nextStepCardTitle {
+  font-size: 15px;
+  color: #0f172a;
+  font-family: var(--font-outfit);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.nextStepCardDesc {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.nextStepCardLinkPrimary {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ea580c;
+}
+
+.nextStepCardLinkSuccess {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #047857;
+}
+
+.nextStepCardLinkPurple {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6d28d9;
+}
+
+.nextStepCardLinkBlue {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+

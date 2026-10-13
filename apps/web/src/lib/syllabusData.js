@@ -1057,7 +1057,649 @@ export const SYLLABUS_EXAMS = [
   },
 
   // ────────────────────────────────────────────────────────────
-  // 9. UPSC Civil Services Examination (IAS / IPS)
+  // 9. MPSC Group C Combined (लिपिक-टंकलेखक / कर सहाय्यक / दुय्यम निरीक्षक)
+  // ────────────────────────────────────────────────────────────
+  {
+    slug: "mpsc-group-c",
+    name: "MPSC गट-क सेवा संयुक्त परीक्षा (Group C)",
+    nameEn: "MPSC Group C Services Combined Exam (Clerk / Tax Asst / Excise SI)",
+    shortName: "MPSC Group C",
+    conductingBody: "Maharashtra Public Service Commission (MPSC)",
+    logo: "badge",
+    color: "#0284C7",
+    examLevel: "State",
+    targetPosts: [
+      "लिपिक-टंकलेखक (Clerk-Typist)",
+      "कर सहाय्यक (Tax Assistant)",
+      "दुय्यम निरीक्षक (Sub-Inspector State Excise)",
+      "तांत्रिक सहाय्यक (Technical Assistant)",
+      "उद्योग निरीक्षक (Industry Inspector)"
+    ],
+    totalVacancies: "7,500+ (Annual Group C Vacancies)",
+    applicationFee: { general: "₹394", reserved: "₹294" },
+    ageLimit: { min: 19, max: 38, scStRelax: 5, obcRelax: 3, maxReserved: 43 },
+    eligibility: "मान्यताप्राप्त विद्यापीठाची पदवी (Any Graduate). लिपिक-टंकलेखक पदासाठी मराठी टंकलेखन ३० श.प्र.मि. किंवा इंग्रजी ४० श.प्र.मि. GCC-TBC प्रमाणपत्र आवश्यक.",
+    stages: [
+      "संयुक्त पूर्व परीक्षा (Prelims - 100 प्रश्न / 100 गुण)",
+      "मुख्य परीक्षा (Mains - 200 गुण / 2 पेपर्स)",
+      "टंकलेखन कौशल्य चाचणी (Typing Skill Test - Qualifying)"
+    ],
+    officialWebsite: "https://mpsc.gov.in",
+    notificationUrl: "https://mpsconline.gov.in/candidate",
+    papers: [
+      {
+        stage: "संयुक्त पूर्व परीक्षा (Prelims — 100 प्रश्न / 100 गुण / 1 तास / 1/4 नकारात्मक गुण)",
+        papers: [
+          {
+            name: "सामान्य क्षमता चाचणी (General Ability Test)",
+            marks: 100,
+            questions: 100,
+            duration: "1 तास (60 मिनिटे)",
+            type: "MCQ (1 गुण प्रति प्रश्न, -0.25 नकारात्मक गुण)",
+            topics: [
+              {
+                name: "इतिहास (महाराष्ट्राचा विशेष संदर्भ)",
+                subtopics: [
+                  "१८५७ चा उठाव व महाराष्ट्रातील पडसाद (सातारा, कोल्हापूर, पेठ, जमखंडी)",
+                  "महाराष्ट्रातील समाजसुधारक (महात्मा फुले, डॉ. बाबासाहेब आंबेडकर, शाहू महाराज, विठ्ठल रामजी शिंदे, धोंडो केशव कर्वे)",
+                  "भारतीय राष्ट्रीय चळवळ व वृत्तपत्रांची भूमिका (दर्पण, प्रभाकर, केसरी, मराठा, सुधारक)",
+                  "महाराष्ट्रातील सामाजिक व धार्मिक सुधारणा चळवळी (सत्यशोधक समाज, प्रार्थना समाज)"
+                ]
+              },
+              {
+                name: "भूगोल (महाराष्ट्र व भारत)",
+                subtopics: [
+                  "महाराष्ट्राची प्राकृतिक रचना (कोकण किनारपट्टी, सह्याद्री पर्वत, दख्खनचे पठार)",
+                  "महाराष्ट्राची नदीप्रणाली (गोदावरी, भीमा, कृष्णा, तापी व कोकणातील नद्या)",
+                  "हवामान व पर्जन्यमान (मान्सून, आवर्त व अवर्षण प्रवण क्षेत्रे)",
+                  "मृदा व प्रमुख पिके (काळी कापसाची मृदा, जांभी मृदा, ज्वारी, कापूस, ऊस)",
+                  "खनिज संपत्ती व प्रमुख उद्योग (बॉक्साईट, लोहखनिज, मँगेनीज, वस्त्रोद्योग, साखर कारखाने)"
+                ]
+              },
+              {
+                name: "भारतीय राज्यघटना व स्थानिक स्वराज्य संस्था",
+                subtopics: [
+                  "राज्यघटनेची निर्मिती, प्रस्तावना व ठळक वैशिष्ट्ये",
+                  "मूलभूत हक्क (Articles 12-35), मूलभूत कर्तव्ये व मार्गदर्शक तत्त्वे",
+                  "महाराष्ट्र राज्य शासन रचना (राज्यपाल, मुख्यमंत्री, मंत्रिमंडळ, विधानसभा व विधानपरिषद)",
+                  "पंचायत राज व स्थानिक स्वराज्य संस्था (७३ वी व ७४ वी घटनादुरुस्ती, ग्रामपंचायत, पंचायत समिती, जिल्हा परिषद, नगरपालिका, महापालिका)"
+                ]
+              },
+              {
+                name: "भारतीय अर्थव्यवस्था",
+                subtopics: [
+                  "राष्ट्रीय उत्पन्न व आर्थिक विकास संकल्पना",
+                  "शेती, ग्रामीण विकास व शासकीय अनुदाने",
+                  "बँकिंग प्रणाली, रिझर्व्ह बँक (RBI) व चलनविषयक धोरण",
+                  "दारिद्र्य, बेरोजगारी व शासकीय कल्याणकारी योजना",
+                  "राजकोषीय धोरण, कर रचना व जीएसटी (GST)"
+                ]
+              },
+              {
+                name: "सामान्य विज्ञान (General Science)",
+                subtopics: [
+                  "भौतिकशास्त्र (Physics: गती, बल, प्रकाश, ध्वनी, ऊर्जा, विद्युत)",
+                  "रसायनशास्त्र (Chemistry: मूलद्रव्ये, आम्ल-आम्लारी, धातू-अधातू, दैनंदिन रसायनशास्त्र)",
+                  "वनस्पतीशास्त्र व प्राणीशास्त्र (Botany & Zoology: वर्गीकरण, पोषण, श्वसन, उत्सर्जन)",
+                  "आरोग्यशास्त्र व रोग (मानवी पोषण, जीवनसत्त्वे, संसर्गजन्य व असंसर्गजन्य आजार)"
+                ]
+              },
+              {
+                name: "चालू घडामोडी (Current Affairs)",
+                subtopics: [
+                  "महाराष्ट्र व राष्ट्रीय पातळीवरील महत्त्वाच्या राजकीय व प्रशासकीय घडामोडी",
+                  "शासकीय योजना, पुरस्कार व सन्मान (पद्म पुरस्कार, भारतरत्न, साहित्य अकादमी)",
+                  "क्रीडा स्पर्धा (ऑलिम्पिक, आशियाई क्रीडा, क्रिकेट विश्वचषक, राष्ट्रीय खेळ)",
+                  "विज्ञान, तंत्रज्ञान, पर्यावरण व संरक्षण घडामोडी"
+                ]
+              },
+              {
+                name: "अंकगणित व बुद्धिमत्ता चाचणी (CSAT)",
+                subtopics: [
+                  "अंकगणित: संख्या पद्धती, लसावि-मसावि, सरासरी, गुणोत्तर-प्रमाण, शेकडेवारी, नफा-तोटा, काम-काळ-वेग, सरळव्याज-चक्रवाढव्याज",
+                  "बुद्धिमत्ता: संख्या व अक्षर मालिका, नातेसंबंध, सांकेतिक भाषा (Coding-Decoding), दिशा व अंतर, घड्याळ व दिनदर्शिका, वेन आकृत्या, तर्कसंगत निष्कर्ष"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        stage: "मुख्य परीक्षा (Mains — 200 गुण / 2 पेपर्स / नकारात्मक गुण १/४)",
+        papers: [
+          {
+            name: "पेपर १: भाषा पेपर (मराठी व इंग्रजी — 100 प्रश्न / 100 गुण / 1 तास)",
+            marks: 100,
+            questions: 100,
+            duration: "1 तास",
+            type: "MCQ",
+            topics: [
+              {
+                name: "मराठी व्याकरण व शब्दसंग्रह (50 प्रश्न / 50 गुण)",
+                subtopics: [
+                  "वर्णविचार, स्वर व व्यंजनांचे प्रकार, उच्चारस्थाने",
+                  "संधी व संधीचे प्रकार (स्वर, व्यंजन, विसर्ग संधी)",
+                  "शब्दांच्या जाती (नाम, सर्वनाम, विशेषण, क्रियापद व अव्यये)",
+                  "काळ व काळांचे प्रकार, क्रियापदांचे अर्थ",
+                  "प्रयोग (कर्तरी, कर्मणी, भावे प्रयोग व त्यांचे उपप्रकार)",
+                  "समास (अव्ययीभाव, तत्पुरुष, द्वंद्व, बहुव्रीहि)",
+                  "शब्दसिद्धी (तत्सम, तद्भव, देशी व परभाषीय शब्द)",
+                  "वाक्प्रचार, म्हणी व त्यांचे अर्थ, समानार्थी व विरुद्धार्थी शब्द",
+                  "उतारा आकलन (Comprehension Passage)"
+                ]
+              },
+              {
+                name: "इंग्रजी व्याकरण व भाषा (English Language — 50 प्रश्न / 50 गुण)",
+                subtopics: [
+                  "Parts of Speech & Sentence Structure",
+                  "Tenses, Subject-Verb Agreement, Sequence of Tenses",
+                  "Active & Passive Voice, Direct & Indirect Speech",
+                  "Punctuation, Articles & Prepositions",
+                  "Vocabulary: Synonyms, Antonyms, One-word Substitutions",
+                  "Idioms, Phrases & Common Grammatical Errors",
+                  "Reading Comprehension Passage"
+                ]
+              }
+            ]
+          },
+          {
+            name: "पेपर २: सामान्य अध्ययन व बुद्धिमत्ता चाचणी (100 प्रश्न / 100 गुण / 1 तास)",
+            marks: 100,
+            questions: 100,
+            duration: "1 तास",
+            type: "MCQ",
+            topics: [
+              {
+                name: "माहितीचा अधिकार व लोकसेवा हक्क",
+                subtopics: [
+                  "माहितीचा अधिकार अधिनियम २००५ (RTI Act 2005): उद्दिष्टे, माहिती मागवण्याची पद्धत, अपीलीय अधिकारी",
+                  "महाराष्ट्र लोकसेवा हक्क अधिनियम २०१५ (RTS Act 2015): नागरिकांचे हक्क, वेळेत सेवा, दंडात्मक तरतुदी"
+                ]
+              },
+              {
+                name: "संगणक व माहिती तंत्रज्ञान (Computer & IT)",
+                subtopics: [
+                  "संगणकाची मूलभूत रचना, हार्डवेअर व सॉफ्टवेअर",
+                  "इंटरनेट, ईमेल, सोशल मीडिया व शासकीय ई-गव्हर्नन्स पोर्टल्स",
+                  "माहिती तंत्रज्ञान कायदा २००० (IT Act 2000) व सायबर सुरक्षितता"
+                ]
+              },
+              {
+                name: "पदविशिष्ट ज्ञान व कर्तव्ये (Post Specific Topics)",
+                subtopics: [
+                  "लिपिक-टंकलेखक: कार्यालयीन कार्यपद्धती, नोंदवह्या, शासकीय पत्रव्यवहार स्वरूप",
+                  "कर सहाय्यक: Book Keeping & Accountancy, GST मूलभूत संकल्पना, प्रत्यक्ष व अप्रत्यक्ष कर",
+                  "दुय्यम निरीक्षक राज्य उत्पादन शुल्क: महाराष्ट्र दारूबंदी कायदा १९४९ व उत्पादन शुल्क नियमावली"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    officialPdfs: [
+      {
+        id: 14404,
+        year: 2026,
+        label: "2026 बेलीफ व लिपिक गट-क पेपर १",
+        title: "Advt. No. 015/2026 Bailiff cum Clerk Group-C Competitive Exam 2026 — Paper No. 1 Question Paper",
+        size: "752.62 KB",
+        url: "/api/mpsc-pdf/14404",
+        badge: "LATEST 2026",
+        isAnswerKey: false
+      },
+      {
+        id: 14403,
+        year: 2026,
+        label: "2026 बेलीफ व लिपिक गट-क पेपर २",
+        title: "Advt. No. 015/2026 Bailiff cum Clerk Group-C Competitive Exam 2026 — Paper No. 2 Question Paper",
+        size: "1.42 MB",
+        url: "/api/mpsc-pdf/14403",
+        badge: "LATEST 2026",
+        isAnswerKey: false
+      },
+      {
+        id: 10893,
+        year: 2024,
+        label: "2024 गट-क संयुक्त पूर्व परीक्षा प्रश्नपत्रिका",
+        title: "MPSC Group C Services Combined Preliminary Exam 2024 — Official Question Paper",
+        size: "1.24 MB",
+        url: "/api/mpsc-pdf/10893",
+        badge: "2024 PRELIMS",
+        isAnswerKey: false
+      },
+      {
+        id: 11232,
+        year: 2024,
+        label: "2024 गट-क संयुक्त पूर्व परीक्षा उत्तरतालिका",
+        title: "MPSC Group C Services Combined Preliminary Exam 2024 — Official Final Answer Key",
+        size: "452 KB",
+        url: "/api/mpsc-pdf/11232",
+        badge: "FINAL KEY",
+        isAnswerKey: true
+      }
+    ],
+    officialPdfs: [],
+    // Commented out until spider crawls verified official PDFs
+    // pyqLinks: [
+    //   { year: 2026, exam: "Bailiff & Clerk Group C", label: "2026 Bailiff & Clerk Paper 1 & 2 Question Papers", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+    //   { year: 2024, exam: "Group C Combined Prelims", label: "MPSC Group C 2024 Pre Paper & Final Answer Key", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" },
+    //   { year: 2023, exam: "Group C Combined Prelims & Mains", label: "MPSC Group C 2023 Question Papers & Keys", paperUrl: "https://mpsc.gov.in/prev_que_papers/9", answerKeyUrl: "https://mpsc.gov.in/final_answer_keys/10", url: "https://mpsc.gov.in/prev_que_papers/9" }
+    // ],
+    pyqLinks: [],
+    books: [
+      { title: "सुगम मराठी व्याकरण व लेखन — मो. रा. वाळंबे", useFor: "Paper 1 Marathi 50 Marks (Grammar, Vocabulary & Comprehension)" },
+      { title: "संपूर्ण इंग्रजी व्याकरण — बाळासाहेब शिंदे", useFor: "Paper 1 English 50 Marks (Grammar, Idioms & Error Spotting)" },
+      { title: "तात्यांचा ठोकळा (महाराष्ट्र सामान्य ज्ञान) — एकनाथ पाटील", useFor: "Prelims GS (History, Geography, Polity, Science)" },
+      { title: "अंकगणित व बुद्धिमत्ता चाचणी — सचिन ढवळे / पंढरीनाथ राणे", useFor: "CSAT 15-20 Questions Speed Drills" }
+    ],
+    youtubeQuery: "MPSC group c clerk typist tax assistant prelims mains syllabus preparation",
+    relatedExams: ["mpsc-combined", "mpsc-state-services", "maharashtra-talathi"]
+  },
+
+  // ────────────────────────────────────────────────────────────
+  // 10. Maharashtra Nagar Parishad (DMA — नगर परिषद भरती)
+  // ────────────────────────────────────────────────────────────
+  {
+    slug: "maharashtra-nagar-parishad",
+    name: "महाराष्ट्र नगर परिषद भरती (DMA — Municipal Council)",
+    nameEn: "Maharashtra Nagar Parishad Bharti (Municipal Council Services — DMA)",
+    shortName: "MH Nagar Parishad",
+    conductingBody: "Directorate of Municipal Administration (DMA) / नगर विकास विभाग (TCS Pattern)",
+    logo: "location_city",
+    color: "#7C3AED",
+    examLevel: "State",
+    targetPosts: [
+      "मुख्याधिकारी गट-क (Chief Officer Group C)",
+      "लेखापाल व लेखापरीक्षक (Accountant & Auditor)",
+      "स्थापत्य अभियंता (Civil Engineer)",
+      "विद्युत व संगणक अभियंता (Electrical & Computer Engineer)",
+      "कर व प्रशासकीय अधिकारी (Tax & Admin Officer)",
+      "स्वच्छता निरीक्षक (Sanitation Inspector)"
+    ],
+    totalVacancies: "1,782+ (State Cadre Cycles)",
+    applicationFee: { general: "₹1000", reserved: "₹900" },
+    ageLimit: { min: 21, max: 38, scStRelax: 5, obcRelax: 3 },
+    eligibility: "पदवीधर (Chief Officer / Tax Officer); B.Com पदवी (Accountant); संबंधित शाखेतील B.E. / B.Tech किंवा पदविका (Engineers).",
+    stages: [
+      "ऑनलाइन CBT परीक्षा (TCS Pattern — 200 गुण / 2 पेपर्स)",
+      "कागदपत्र पडताळणी (Document Verification)"
+    ],
+    officialWebsite: "https://mahadma.maharashtra.gov.in",
+    notificationUrl: "https://mahadma.maharashtra.gov.in",
+    papers: [
+      {
+        stage: "ऑनलाइन CBT परीक्षा (TCS Pattern — 200 गुण / 100 प्रश्न / 120 मिनिटे)",
+        papers: [
+          {
+            name: "पेपर १: सामान्य विषय घटक (100 गुण / 60 प्रश्न / 70 मिनिटे)",
+            marks: 100,
+            questions: 60,
+            duration: "70 मिनिटे",
+            type: "CBT MCQ",
+            topics: [
+              { name: "मराठी भाषा (15 प्रश्न / 25 गुण)", subtopics: ["मराठी व्याकरण, शब्दसंग्रह, प्रयोग, समास, समानार्थी/विरुद्धार्थी शब्द, उतारा आकलन"] },
+              { name: "इंग्रजी भाषा (15 प्रश्न / 25 गुण)", subtopics: ["English Grammar, Vocabulary, Tenses, Error Correction, Comprehension"] },
+              { name: "सामान्य ज्ञान (15 प्रश्न / 25 गुण)", subtopics: ["महाराष्ट्राचा इतिहास व भूगोल, भारतीय राज्यघटना, ७४ वी नागरी घटनादुरुस्ती, चालू घडामोडी"] },
+              { name: "बौद्धिक चाचणी (15 प्रश्न / 25 गुण)", subtopics: ["तर्कसंगत विचार, मालिका, कोडी, दिशा व अंतर, अंकगणितीय क्षमता"] }
+            ]
+          },
+          {
+            name: "पेपर २: पदनिहाय तांत्रिक व विशेष विषय (100 गुण / 40 प्रश्न / 50 मिनिटे)",
+            marks: 100,
+            questions: 40,
+            duration: "50 मिनिटे",
+            type: "CBT MCQ (Core Technical)",
+            topics: [
+              { name: "लेखापाल व लेखापरीक्षक (Accountancy & Audit)", subtopics: ["Financial Accounting, Cost Accounting, Auditing Principles, Income Tax & GST, Companies Act"] },
+              { name: "स्थापत्य अभियांत्रिकी (Civil Engineering)", subtopics: ["Building Construction, Concrete Technology, Surveying, Environmental & Waste Management, Municipal Water Supply"] },
+              { name: "कर व प्रशासकीय सेवा (Tax & Municipal Admin)", subtopics: ["महाराष्ट्र नगरपरिषदा, नगरपंचायती व औद्योगिक नगरी अधिनियम १९६५, मालमत्ता कर आकारणी, नागरी स्थानिक स्वराज्य संस्था प्रशासन"] }
+            ]
+          }
+        ]
+      }
+    ],
+    officialPdfs: [],
+    // Commented out until spider crawls verified official PDFs
+    // pyqLinks: [
+    //   { year: 2023, exam: "Nagar Parishad CBT Exam (TCS)", label: "Nagar Parishad 2023 Shiftwise Papers & Final Answer Keys", paperUrl: "https://mahadma.maharashtra.gov.in", answerKeyUrl: "https://mahadma.maharashtra.gov.in", url: "https://mahadma.maharashtra.gov.in" }
+    // ],
+    pyqLinks: [],
+    books: [
+      { title: "नगर परिषद भरती संपूर्ण मार्गदर्शक (TCS पॅटर्न) — विद्याभारती पब्लिकेशन", useFor: "Paper 1 General + Municipal Act special guide" },
+      { title: "महाराष्ट्र नगरपरिषदा अधिनियम १९६५ — अधिकृत शासकीय प्रत", useFor: "Municipal acts and taxation questions" },
+      { title: "सुगम मराठी व्याकरण — मो. रा. वाळंबे", useFor: "Marathi Grammar 25 marks" }
+    ],
+    youtubeQuery: "Maharashtra nagar parishad bharti TCS pattern syllabus preparation",
+    relatedExams: ["mpsc-group-c", "maharashtra-talathi", "maharashtra-zp"]
+  },
+
+  // ────────────────────────────────────────────────────────────
+  // 11. Maharashtra Arogya Vibhag (सार्वजनिक आरोग्य विभाग गट-क व गट-ड)
+  // ────────────────────────────────────────────────────────────
+  {
+    slug: "maharashtra-arogya-vibhag",
+    name: "सार्वजनिक आरोग्य विभाग भरती (Arogya Vibhag Group C & D)",
+    nameEn: "Maharashtra Public Health Department Recruitment (Arogya Vibhag Group C & D)",
+    shortName: "MH Arogya Vibhag",
+    conductingBody: "Commissionerate of Health Services / DMER Maharashtra (TCS Pattern)",
+    logo: "local_hospital",
+    color: "#059669",
+    examLevel: "State",
+    targetPosts: [
+      "अधिपरिचारिका (Staff Nurse)",
+      "औषध निर्माण अधिकारी (Pharmacist)",
+      "प्रयोगशाळा वैज्ञानिक अधिकारी (Lab Technician)",
+      "नेत्र चिकित्सा अधिकारी (Ophthalmic Officer)",
+      "कनिष्ठ लिपिक (Junior Clerk)",
+      "कक्ष सेवक / शिपाई (Group D Peon/Attendant)"
+    ],
+    totalVacancies: "10,949+ (Across 36 Maharashtra Districts)",
+    applicationFee: { general: "₹1000", reserved: "₹900" },
+    ageLimit: { min: 18, max: 38, scStRelax: 5, obcRelax: 3 },
+    eligibility: "GNM किंवा B.Sc Nursing (Staff Nurse); D.Pharm किंवा B.Pharm (Pharmacist); B.Sc DMLT (Lab Tech); १० वी/१२ वी (गट-ड).",
+    stages: [
+      "ऑनलाइन संगणक परीक्षा (TCS CBT — 100 प्रश्न / 200 गुण / 120 मिनिटे)",
+      "गुणवत्ता यादी व कागदपत्र पडताळणी"
+    ],
+    officialWebsite: "https://arogya.maharashtra.gov.in",
+    notificationUrl: "https://arogya.maharashtra.gov.in",
+    papers: [
+      {
+        stage: "ऑनलाइन संगणक परीक्षा (CBT — 100 प्रश्न / 200 गुण / 2 गुण प्रति प्रश्न / नकारात्मक गुण नाहीत)",
+        papers: [
+          {
+            name: "आरोग्य विभाग संयुक्त परीक्षा (Composite CBT Paper)",
+            marks: 200,
+            questions: 100,
+            duration: "2 तास (120 मिनिटे)",
+            type: "CBT MCQ",
+            topics: [
+              { name: "मराठी व्याकरण (15 प्रश्न / 30 गुण)", subtopics: ["शब्दांच्या जाती, लिंग, वचन, विभक्ती, समास, प्रयोग, समानार्थी व विरुद्धार्थी शब्द, म्हणी व वाक्प्रचार"] },
+              { name: "इंग्रजी भाषा (15 प्रश्न / 30 गुण)", subtopics: ["Tenses, Prepositions, Conjunctions, Active/Passive Voice, Vocabulary, Error Detection"] },
+              { name: "सामान्य ज्ञान (15 प्रश्न / 30 गुण)", subtopics: ["महाराष्ट्राचा भूगोल, इतिहास, आरोग्य क्षेत्रातील शासकीय योजना (आयुष्मान भारत, महात्मा फुले जन आरोग्य योजना), राष्ट्रीय आरोग्य अभियान (NHM)"] },
+              { name: "बौद्धिक चाचणी (15 प्रश्न / 30 गुण)", subtopics: ["संख्या मालिका, सांकेतिक भाषा, नातेसंबंध, तर्कसंगत विचार, वेन आकृती"] },
+              { name: "तांत्रिक व पदनिहाय विषय (40 प्रश्न / 80 गुण)", subtopics: [
+                "Staff Nurse: Anatomy & Physiology, Fundamentals of Nursing, Pharmacology, Community Health, Midwifery & Obstetrical Nursing",
+                "Pharmacist: Pharmaceutics, Pharmacology, Pharmacognosy, Pharmaceutical Jurisprudence, Hospital Pharmacy",
+                "Lab Technician: Clinical Biochemistry, Microbiology, Hematology, Pathology & Blood Banking"
+              ]}
+            ]
+          }
+        ]
+      }
+    ],
+    officialPdfs: [],
+    // Commented out until spider crawls verified official PDFs
+    // pyqLinks: [
+    //   { year: 2023, exam: "Arogya Vibhag Group C & D (TCS)", label: "Arogya Vibhag 2023 CBT Shiftwise Question Papers & Answer Keys", paperUrl: "https://arogya.maharashtra.gov.in", answerKeyUrl: "https://arogya.maharashtra.gov.in", url: "https://arogya.maharashtra.gov.in" }
+    // ],
+    pyqLinks: [],
+    books: [
+      { title: "आरोग्य विभाग भरती तांत्रिक प्रश्नसंच (Staff Nurse / Pharmacist) — टार्गेट पब्लिकेशन", useFor: "Technical section 80 marks preparation" },
+      { title: "तात्यांचा ठोकळा (आरोग्य विशेष आवृत्ती)", useFor: "General Knowledge & Health Schemes" },
+      { title: "सुगम मराठी व्याकरण — मो. रा. वाळंबे", useFor: "Marathi Grammar 30 marks" }
+    ],
+    youtubeQuery: "Maharashtra arogya vibhag bharti syllabus staff nurse pharmacist preparation",
+    relatedExams: ["maharashtra-zp", "maharashtra-police", "mpsc-group-c"]
+  },
+
+  // ────────────────────────────────────────────────────────────
+  // 12. MahaVitaran / MahaTransco AE & JE (महावितरण व महापारेषण)
+  // ────────────────────────────────────────────────────────────
+  {
+    slug: "mahadiscom-ae-je",
+    name: "महावितरण / महापारेषण भरती (MahaVitaran & MahaTransco AE & JE)",
+    nameEn: "Maharashtra State Electricity Distribution & Transmission (MSEDCL / MSETCL AE & JE)",
+    shortName: "MahaDiscom AE & JE",
+    conductingBody: "Maharashtra State Electricity Distribution Co. Ltd. (conducted via IBPS)",
+    logo: "bolt",
+    color: "#D97706",
+    examLevel: "State",
+    targetPosts: [
+      "Assistant Engineer (Electrical / Civil / Telecom)",
+      "Junior Engineer (Electrical / Civil)",
+      "Junior Assistant (Accounts)",
+      "Vidyut Sahayak (विद्युत सहाय्यक — ITI Wireman/Electrician)"
+    ],
+    totalVacancies: "5,347+ (Engineers & Technicians)",
+    applicationFee: { general: "₹500 + GST", reserved: "₹250 + GST" },
+    ageLimit: { min: 18, max: 38, scStRelax: 5, obcRelax: 3 },
+    eligibility: "B.E. / B.Tech / Diploma in Electrical / Civil / IT Engineering. Vidyut Sahayak पदासाठी ITI Electrician / Wireman प्रमाणपत्र आवश्यक.",
+    stages: [
+      "ऑनलाइन CBT परीक्षा (IBPS Pattern — 130 प्रश्न / 150 गुण / 120 मिनिटे)",
+      "कागदपत्र पडताळणी"
+    ],
+    officialWebsite: "https://mahadiscom.in",
+    notificationUrl: "https://mahadiscom.in/career",
+    papers: [
+      {
+        stage: "ऑनलाइन CBT परीक्षा (IBPS Pattern — 130 प्रश्न / 150 गुण / 1/4 नकारात्मक गुण)",
+        papers: [
+          {
+            name: "अभियांत्रिकी व क्षमता चाचणी (Engineering & Aptitude Composite Test)",
+            marks: 150,
+            questions: 130,
+            duration: "2 तास (120 मिनिटे)",
+            type: "CBT MCQ",
+            topics: [
+              {
+                name: "Core Technical Discipline (50 प्रश्न / 110 गुण — सर्वाधिक वेटेज)",
+                subtopics: [
+                  "Electrical: Electrical Machines, Power Systems, Transmission & Distribution, Control Systems, Power Electronics, Circuit Theory, Electrical Measurements",
+                  "Civil: Structural Engineering, Concrete Technology, Soil Mechanics, Fluid Mechanics, Surveying",
+                  "IT/Telecom: Computer Networks, Database Management Systems, Data Structures, Operating Systems, Telecommunication Principles"
+                ]
+              },
+              {
+                name: "Reasoning Ability (40 प्रश्न / 20 गुण)",
+                subtopics: [
+                  "Puzzles & Seating Arrangement (IBPS Pattern)",
+                  "Syllogisms, Inequalities, Input-Output, Data Sufficiency",
+                  "Coding-Decoding, Direction Sense & Blood Relations"
+                ]
+              },
+              {
+                name: "Quantitative Aptitude (20 प्रश्न / 10 गुण)",
+                subtopics: [
+                  "Data Interpretation (Bar Graphs, Pie Charts, Caselets)",
+                  "Number Series, Quadratic Equations, Simplification",
+                  "Arithmetic Word Problems: Time & Work, Speed & Distance, Profit & Loss"
+                ]
+              },
+              {
+                name: "मराठी भाषा (20 प्रश्न / 10 गुण)",
+                subtopics: [
+                  "मराठी व्याकरण, शब्दसंग्रह, वाक्यरचना, उतारा वाचन व आकलन"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    officialPdfs: [],
+    pyqLinks: [
+      { year: 2024, exam: "MahaDiscom AE & JE (IBPS)", label: "MahaDiscom 2024 Exam Pattern & Model Question Papers", paperUrl: "https://mahadiscom.in", answerKeyUrl: "https://mahadiscom.in", url: "https://mahadiscom.in" }
+    ],
+    books: [
+      { title: "Electrical Engineering Objective Type — J.B. Gupta / R.K. Rajput", useFor: "Core Technical 110 Marks" },
+      { title: "Quantitative Aptitude for Competitive Exams — R.S. Aggarwal", useFor: "Aptitude section" },
+      { title: "A Modern Approach to Verbal & Non-Verbal Reasoning — R.S. Aggarwal", useFor: "IBPS pattern reasoning" }
+    ],
+    youtubeQuery: "MahaDiscom AE JE syllabus electrical engineering preparation IBPS pattern",
+    relatedExams: ["mpsc-state-services", "rrb-ntpc", "ssc-cgl"]
+  },
+
+  // ────────────────────────────────────────────────────────────
+  // 13. Maharashtra Krushi Sevak (कृषी सेवक व कृषी सहाय्यक)
+  // ────────────────────────────────────────────────────────────
+  {
+    slug: "krushi-sevak",
+    name: "कृषी सेवक / कृषी सहाय्यक भरती (Krushi Sevak Bharti)",
+    nameEn: "Maharashtra Agriculture Department Krushi Sevak & Assistant Recruitment",
+    shortName: "MH Krushi Sevak",
+    conductingBody: "कृषी आयुक्तालय, महाराष्ट्र राज्य, पुणे (conducted via IBPS)",
+    logo: "agriculture",
+    color: "#16A34A",
+    examLevel: "State",
+    targetPosts: [
+      "कृषी सेवक (Krushi Sevak)",
+      "कृषी सहाय्यक (Agriculture Assistant)"
+    ],
+    totalVacancies: "2,109+ (Periodic State Recruitment)",
+    applicationFee: { general: "₹1000", reserved: "₹900" },
+    ageLimit: { min: 19, max: 38, scStRelax: 5, obcRelax: 3 },
+    eligibility: "कृषी पदविका (Diploma in Agriculture) किंवा बी.एस्सी. कृषी (B.Sc Agriculture) / बी.टेक कृषी अभियांत्रिकी.",
+    stages: [
+      "ऑनलाइन CBT परीक्षा (IBPS Pattern — 140 प्रश्न / 200 गुण / 120 मिनिटे)",
+      "कागदपत्र पडताळणी व जिल्हा वाटप"
+    ],
+    officialWebsite: "https://krishi.maharashtra.gov.in",
+    notificationUrl: "https://krishi.maharashtra.gov.in",
+    papers: [
+      {
+        stage: "ऑनलाइन CBT परीक्षा (IBPS Pattern — 140 प्रश्न / 200 गुण / नकारात्मक गुण नाहीत)",
+        papers: [
+          {
+            name: "कृषी व सामान्य क्षमता संयुक्त चाचणी (Composite CBT Paper)",
+            marks: 200,
+            questions: 140,
+            duration: "2 तास (120 मिनिटे)",
+            type: "CBT MCQ",
+            topics: [
+              {
+                name: "कृषी घटक तांत्रिक ज्ञान (Agriculture Core — 60 प्रश्न / 120 गुण / 60% वेटेज)",
+                subtopics: [
+                  "कृषी मूलतत्त्वे व हवामानशास्त्र (Agronomy & Agricultural Meteorology: पिके, बियाणे, खते)",
+                  "मृदा विज्ञान व जलसंधारण (Soil Science & Water Conservation: मृदा प्रकार, सिंचन पद्धती, सूक्ष्म सिंचन)",
+                  "उद्यानविद्या (Horticulture: फळबाग लागवड, भाजीपाला उत्पादन, हरितगृह तंत्रज्ञान)",
+                  "पिक संरक्षण (Plant Protection: कीटकशास्त्र, वनस्पती रोगशास्त्र, एकात्मिक कीड नियंत्रण)",
+                  "पशुसंवर्धन व दुग्धशास्त्र (Animal Husbandry & Dairying: गायी, म्हशी, शेळी-मेंढी पालन, कुक्कुटपालन)",
+                  "कृषी विस्तार व अर्थशास्त्र (Agricultural Extension & Economics: शासकीय कृषी योजना, बाजार समित्या, शेतकरी गट)"
+                ]
+              },
+              {
+                name: "मराठी भाषा (20 प्रश्न / 20 गुण)",
+                subtopics: [
+                  "मराठी व्याकरण, शब्दसंग्रह, म्हणी, वाक्प्रचार, उतारा आकलन"
+                ]
+              },
+              {
+                name: "इंग्रजी भाषा (20 प्रश्न / 20 गुण)",
+                subtopics: [
+                  "Grammar, Tenses, Vocabulary, Sentence Correction, Comprehension"
+                ]
+              },
+              {
+                name: "सामान्य ज्ञान (20 प्रश्न / 20 गुण)",
+                subtopics: [
+                  "महाराष्ट्राचा भूगोल, इतिहास, चालू घडामोडी, कृषी क्षेत्रातील शासकीय योजना"
+                ]
+              },
+              {
+                name: "बौद्धिक चाचणी (20 प्रश्न / 20 गुण)",
+                subtopics: [
+                  "तर्कसंगत विचार, संख्या मालिका, कोडी, दिशा व अंतर, नातेसंबंध"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    officialPdfs: [],
+    pyqLinks: [
+      { year: 2024, exam: "Krushi Sevak CBT (IBPS)", label: "Krushi Sevak 2024 Question Papers & Model Answer Keys", paperUrl: "https://krishi.maharashtra.gov.in", answerKeyUrl: "https://krishi.maharashtra.gov.in", url: "https://krishi.maharashtra.gov.in" }
+    ],
+    books: [
+      { title: "कृषी घटक संपूर्ण मार्गदर्शक (कृषी पदविका आधारित) — आनंद कोकरे / ज्ञानदीप", useFor: "Core Agriculture 120 Marks" },
+      { title: "कृषी विज्ञान व तंत्रज्ञान — डॉ. बाळकृष्ण कदम", useFor: "Horticulture, Agronomy & Soil Science" },
+      { title: "सुगम मराठी व्याकरण — मो. रा. वाळंबे", useFor: "Marathi Grammar" }
+    ],
+    youtubeQuery: "Maharashtra krushi sevak bharti syllabus agriculture preparation IBPS",
+    relatedExams: ["maharashtra-zp", "mpsc-vanseva", "maharashtra-talathi"]
+  },
+
+  // ────────────────────────────────────────────────────────────
+  // 14. Maharashtra Police Driver & SRPF (पोलीस चालक व SRPF शिपाई)
+  // ────────────────────────────────────────────────────────────
+  {
+    slug: "pune-mumbai-police-driver",
+    name: "महाराष्ट्र पोलीस चालक व SRPF शिपाई भरती",
+    nameEn: "Maharashtra Police Driver & SRPF Armed Police Constable Recruitment",
+    shortName: "MH Police Driver & SRPF",
+    conductingBody: "पोलीस महासंचालक कार्यालय, महाराष्ट्र राज्य",
+    logo: "local_police",
+    color: "#B91C1C",
+    examLevel: "State",
+    targetPosts: [
+      "पोलीस शिपाई चालक (Police Constable Driver)",
+      "SRPF सशस्त्र पोलीस शिपाई (Armed Police Constable)"
+    ],
+    totalVacancies: "4,200+ (State Driver & SRPF Cadres)",
+    applicationFee: { general: "₹450", reserved: "₹350" },
+    ageLimit: { min: 19, max: 28, scStRelax: 5, obcRelax: 5 },
+    eligibility: "१२ वी उत्तीर्ण (12th Passed) + वैध हलके मोटार वाहन (LMV) चालवण्याचा परवाना (Driving License TR / Non-TR).",
+    stages: [
+      "शारीरिक चाचणी (Physical Efficiency Test - 50 गुण)",
+      "चालन कौशल्य चाचणी (Driving Skill Test - 50 गुण - अहर्ताकारी / Qualifying)",
+      "लेखी परीक्षा (Written CBT/OMR Exam - 100 प्रश्न / 100 गुण / 90 मिनिटे)"
+    ],
+    officialWebsite: "https://mahapolice.gov.in",
+    notificationUrl: "https://policerecruitment2024.mahait.org",
+    papers: [
+      {
+        stage: "चालन कौशल्य चाचणी (Driving Skill Test — 50 गुण — किमान ५०% गुण आवश्यक)",
+        papers: [
+          {
+            name: "ड्रायव्हिंग प्रात्यक्षिक चाचणी (Practical Driving Ground Test)",
+            marks: 50,
+            duration: "Ground Event",
+            type: "Practical Skill Evaluation",
+            topics: [
+              { name: "हलके मोटार वाहन चालवणे (Light Motor Vehicle Driving — 25 गुण)", subtopics: ["H-Track रिव्हर्स चालवणे, 8-Track चालवणे, ग्रेडिएंट/उतार ड्रायव्हिंग, पॅरलल पार्किंग"] },
+              { name: "जड मोटार वाहन चालवणे व वाहतूक नियम (Heavy Vehicle & Rules — 25 गुण)", subtopics: ["वाहतूक चिन्हे व संकेत, मोटार वाहन कायदा कलम ज्ञान, वाहनाचे मूलभूत तांत्रिक ज्ञान (इंजिन ऑईल, बॅटरी, टायर प्रेशर)"] }
+            ]
+          }
+        ]
+      },
+      {
+        stage: "लेखी परीक्षा (Written Test — 100 प्रश्न / 100 गुण / 90 मिनिटे / नकारात्मक गुण नाहीत)",
+        papers: [
+          {
+            name: "पोलीस चालक लेखी परीक्षा (Written Examination)",
+            marks: 100,
+            questions: 100,
+            duration: "90 मिनिटे",
+            type: "OMR / CBT MCQ",
+            topics: [
+              { name: "अंकगणित (20 प्रश्न / 20 गुण)", subtopics: ["संख्या, लसावि-मसावि, सरासरी, नफा-तोटा, शेकडेवारी, काम-काळ-वेग"] },
+              { name: "बुद्धिमत्ता चाचणी (20 प्रश्न / 20 गुण)", subtopics: ["अक्षर व संख्या मालिका, सांकेतिक भाषा, दिशा व अंतर, नातेसंबंध"] },
+              { name: "मराठी व्याकरण (20 प्रश्न / 20 गुण)", subtopics: ["शब्दांच्या जाती, लिंग, वचन, प्रयोग, समास, समानार्थी व विरुद्धार्थी शब्द"] },
+              { name: "सामान्य ज्ञान व चालू घडामोडी (20 प्रश्न / 20 गुण)", subtopics: ["महाराष्ट्राचा इतिहास, भूगोल, पोलीस प्रशासन रचना, चालू घडामोडी"] },
+              { name: "मोटार वाहन कायदा व वाहतूक नियम (20 प्रश्न / 20 गुण — चालक विशेष)", subtopics: ["मोटार वाहन कायदा १९८८ (MVA 1988) व महत्त्वाचे दंड, रस्ते वाहतूक चिन्हे व अर्थ, अपघात नियंत्रण व प्राथमिक उपचार, वाहनांची देखभाल"] }
+            ]
+          }
+        ]
+      }
+    ],
+    officialPdfs: [],
+    pyqLinks: [
+      { year: 2024, exam: "Maharashtra Police Driver Written Exam", label: "Police Driver 2024 Question Papers & Answer Keys", paperUrl: "https://mahapolice.gov.in", answerKeyUrl: "https://mahapolice.gov.in", url: "https://mahapolice.gov.in" },
+      { year: 2023, exam: "Maharashtra Police Driver Written Exam", label: "Police Driver 2023 Question Papers & Answer Keys", paperUrl: "https://mahapolice.gov.in", answerKeyUrl: "https://mahapolice.gov.in", url: "https://mahapolice.gov.in" }
+    ],
+    books: [
+      { title: "पोलीस चालक भरती विशेष मार्गदर्शक (वाहतूक नियम व मोटार कायदा) — नोबल पब्लिकेशन", useFor: "Driver specific 20 marks MVA & Traffic signs" },
+      { title: "पोलीस भरती संपूर्ण मार्गदर्शक — सह्याद्री करिअर अकॅडमी", useFor: "Math, Reasoning, Marathi, GK" },
+      { title: "सुगम मराठी व्याकरण — मो. रा. वाळंबे", useFor: "Marathi Grammar" }
+    ],
+    youtubeQuery: "Maharashtra police driver bharti syllabus driving test traffic rules",
+    relatedExams: ["maharashtra-police", "maharashtra-talathi", "maharashtra-zp"]
+  },
+
+  // ────────────────────────────────────────────────────────────
+  // 15. UPSC Civil Services Examination (IAS / IPS)
   // ────────────────────────────────────────────────────────────
   {
     slug: "upsc-cse",
@@ -1767,5 +2409,100 @@ export function getExamBySlug(slug) {
   }
 }
 
+// Helper: get matching mock test for a syllabus exam
+export function getMockTestForExam(slug) {
+  const map = {
+    'mpsc-combined': { slug: 'mpsc-combined-full-prelims', label: 'MPSC संयुक्त पूर्व 100-Q Mock' },
+    'mpsc-psi-sti': { slug: 'mpsc-combined-full-prelims', label: 'MPSC गट-ब पूर्व 100-Q Mock' },
+    'mpsc-state-services': { slug: 'mpsc-combined-full-prelims', label: 'MPSC GS Speed Mock' },
+    'mpsc-group-c': { slug: 'mpsc-combined-full-prelims', label: 'MPSC गट-क CSAT & GS Mock' },
+    'maharashtra-police': { slug: 'maharashtra-police-written-mock', label: 'पोलीस शिपाई 100-Q Full Mock' },
+    'pune-mumbai-police-driver': { slug: 'maharashtra-police-written-mock', label: 'पोलीस चालक 100-Q Mock' },
+    'maharashtra-talathi': { slug: 'maharashtra-talathi-tcs-mock', label: 'तलाठी भरती TCS 100-Q Mock' },
+    'maharashtra-zp': { slug: 'maharashtra-talathi-tcs-mock', label: 'ZP भरती IBPS Mock Drill' },
+    'maharashtra-nagar-parishad': { slug: 'maharashtra-talathi-tcs-mock', label: 'नगर परिषद TCS Mock Drill' },
+    'ssc-cgl': { slug: 'ssc-cgl-general-awareness', label: 'SSC CGL General Awareness Mock' },
+    'ssc-chsl': { slug: 'ssc-cgl-general-awareness', label: 'SSC General Awareness Drill' },
+  }
+  return map[slug] || null
+}
+
+// Helper: get matching syllabus for a mock test
+export function getSyllabusForMockTest(test) {
+  if (!test) return null
+  const slug = (test.slug || '').toLowerCase()
+  const examType = (test.examType || '').toLowerCase()
+  const title = (test.title || '').toLowerCase()
+
+  if (slug.includes('police') || examType.includes('police') || title.includes('police') || title.includes('पोलीस')) {
+    return { slug: 'maharashtra-police', name: 'महाराष्ट्र पोलीस शिपाई भरती', path: '/syllabus/maharashtra-police' }
+  }
+  if (slug.includes('talathi') || examType.includes('talathi') || title.includes('talathi') || title.includes('तलाठी')) {
+    return { slug: 'maharashtra-talathi', name: 'महाराष्ट्र तलाठी भरती (TCS)', path: '/syllabus/maharashtra-talathi' }
+  }
+  if (slug.includes('group-c') || title.includes('गट-क') || title.includes('गट क')) {
+    return { slug: 'mpsc-group-c', name: 'MPSC गट-क संयुक्त परीक्षा', path: '/syllabus/mpsc-group-c' }
+  }
+  if (slug.includes('combined') || examType.includes('combined') || title.includes('संयुक्त')) {
+    return { slug: 'mpsc-combined', name: 'MPSC संयुक्त पूर्व परीक्षा (गट-ब व क)', path: '/syllabus/mpsc-combined' }
+  }
+  if (slug.includes('mpsc') || examType.includes('mpsc') || title.includes('mpsc') || title.includes('राज्यसेवा')) {
+    return { slug: 'mpsc-state-services', name: 'MPSC राज्यसेवा (नागरी सेवा)', path: '/syllabus/mpsc-state-services' }
+  }
+  if (slug.includes('ssc') || examType.includes('ssc') || title.includes('ssc')) {
+    return { slug: 'ssc-cgl', name: 'SSC CGL / CHSL Examination', path: '/syllabus/ssc-cgl' }
+  }
+  return { slug: 'mpsc-combined', name: 'MPSC संयुक्त परीक्षा', path: '/syllabus/mpsc-combined' }
+}
+
+// Helper: match syllabus for a job notification
+export function getSyllabusForJob(job) {
+  if (!job) return null
+  const text = `${job.title || ''} ${job.org_name || ''} ${job.org_acronym || ''}`.toLowerCase()
+
+  if (text.includes('police driver') || text.includes('पोलीस चालक') || text.includes('srpf')) {
+    return { slug: 'pune-mumbai-police-driver', name: 'महाराष्ट्र पोलीस चालक व SRPF शिपाई', path: '/syllabus/pune-mumbai-police-driver' }
+  }
+  if (text.includes('police') || text.includes('पोलीस') || text.includes('शिपाई')) {
+    return { slug: 'maharashtra-police', name: 'महाराष्ट्र पोलीस शिपाई भरती', path: '/syllabus/maharashtra-police' }
+  }
+  if (text.includes('nagar parishad') || text.includes('नगर परिषद') || text.includes('mahadma') || text.includes('dma')) {
+    return { slug: 'maharashtra-nagar-parishad', name: 'महाराष्ट्र नगर परिषद भरती (DMA)', path: '/syllabus/maharashtra-nagar-parishad' }
+  }
+  if (text.includes('arogya') || text.includes('आरोग्य') || text.includes('nurse') || text.includes('pharmacist') || text.includes('परिचारिका')) {
+    return { slug: 'maharashtra-arogya-vibhag', name: 'सार्वजनिक आरोग्य विभाग भरती', path: '/syllabus/maharashtra-arogya-vibhag' }
+  }
+  if (text.includes('mahadiscom') || text.includes('महावितरण') || text.includes('महापारेषण') || text.includes('mahatransco')) {
+    return { slug: 'mahadiscom-ae-je', name: 'महावितरण व महापारेषण AE & JE', path: '/syllabus/mahadiscom-ae-je' }
+  }
+  if (text.includes('krushi') || text.includes('कृषी सेवक') || text.includes('कृषी सहाय्यक')) {
+    return { slug: 'krushi-sevak', name: 'कृषी सेवक व कृषी सहाय्यक भरती', path: '/syllabus/krushi-sevak' }
+  }
+  if (text.includes('talathi') || text.includes('तलाठी')) {
+    return { slug: 'maharashtra-talathi', name: 'महाराष्ट्र तलाठी भरती', path: '/syllabus/maharashtra-talathi' }
+  }
+  if (text.includes('zp') || text.includes('जिल्हा परिषद') || text.includes('zilla parishad')) {
+    return { slug: 'maharashtra-zp', name: 'महाराष्ट्र जिल्हा परिषद भरती', path: '/syllabus/maharashtra-zp' }
+  }
+  if (text.includes('गट क') || text.includes('गट-क') || text.includes('group c') || text.includes('clerk') || text.includes('लिपिक')) {
+    return { slug: 'mpsc-group-c', name: 'MPSC गट-क संयुक्त परीक्षा', path: '/syllabus/mpsc-group-c' }
+  }
+  if (text.includes('psi') || text.includes('sti') || text.includes('aso') || text.includes('गट ब') || text.includes('गट-ब') || text.includes('संयुक्त')) {
+    return { slug: 'mpsc-combined', name: 'MPSC संयुक्त पूर्व परीक्षा (गट-ब व क)', path: '/syllabus/mpsc-combined' }
+  }
+  if (text.includes('rajyaseva') || text.includes('राज्यसेवा') || text.includes('mpsc') || text.includes('civil services')) {
+    return { slug: 'mpsc-state-services', name: 'MPSC राज्यसेवा (नागरी सेवा)', path: '/syllabus/mpsc-state-services' }
+  }
+  if (text.includes('ssc') || text.includes('cgl') || text.includes('chsl') || text.includes('mts')) {
+    return { slug: 'ssc-cgl', name: 'SSC परीक्षा अभ्यासक्रम व पॅटर्न', path: '/syllabus/ssc-cgl' }
+  }
+  if (text.includes('upsc') || text.includes('ias') || text.includes('ips')) {
+    return { slug: 'upsc-cse', name: 'UPSC Civil Services Examination', path: '/syllabus/upsc-cse' }
+  }
+  return null
+}
+
 // All exam slugs for static generation
 export const ALL_EXAM_SLUGS = SYLLABUS_EXAMS.map(e => e.slug)
+
+
