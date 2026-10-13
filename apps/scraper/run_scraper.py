@@ -757,9 +757,9 @@ def run_broadcast_alerts(logger, dry_run=False, limit=10):
     logger.info("=" * 60)
 
     try:
-        from broadcast_alerts import broadcast_new_jobs
-        sent, failed = broadcast_new_jobs(limit=limit, dry_run=dry_run)
-        logger.info(f"[BROADCAST] Complete. Broadcasted: {sent}, Failed: {failed}")
+        from broadcast_alerts import broadcast_daily_digest
+        sent, failed = broadcast_daily_digest(dry_run=dry_run)
+        logger.info(f"[BROADCAST] Complete. Daily Digest Sent: {sent}, Failed: {failed}")
     except Exception as exc:
         logger.error(f"[ERROR] Alert broadcast step failed: {exc}")
 
