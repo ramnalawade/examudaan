@@ -1,0 +1,28 @@
+{
+  "docId": 1701,
+  "examName": "Superintendent, Higher Education, Maharashtra Education Service, Gr- B",
+  "examNameMr": "अधीक्षक, उच्च शिक्षण, महाराष्ट्र शिक्षण सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Superintendent, Higher Education, Maharashtra Education Service, Gr- B",
+      "paperTitleMr": "अधीक्षक, उच्च शिक्षण, महाराष्ट्र शिक्षण सेवा, गट-ब",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

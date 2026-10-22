@@ -1,0 +1,157 @@
+{
+  "docId": 4939,
+  "examName": "State Services Preliminary Examination - Syllabus",
+  "examNameMr": "राज्यसेवा पूर्व परीक्षा अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "rajyaseva",
+  "totalMarks": 400,
+  "mainsMarks": 400,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper I",
+      "paperTitleMr": "पेपर १",
+      "totalMarks": 200,
+      "duration": "Two Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Events",
+          "unitTitleMr": "चालू घडामोडी",
+          "topics": [
+            "Current events of state, national and international importance."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "History",
+          "unitTitleMr": "इतिहास",
+          "topics": [
+            "History of India (with special reference to Maharashtra) and Indian National Movement."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Geography",
+          "unitTitleMr": "भूगोल",
+          "topics": [
+            "Maharashtra, India and World Geography - Physical, Social, Economic Geography of Maharashtra, India and the World."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Polity and Governance",
+          "unitTitleMr": "राज्यशास्त्र आणि शासन",
+          "topics": [
+            "Maharashtra and India - Polity and Governance - Constitution, Political System, Panchayati Raj, Urban Governance, Public Policy, Rights issues, etc."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Economic and Social Development",
+          "unitTitleMr": "आर्थिक आणि सामाजिक विकास",
+          "topics": [
+            "Economic and Social Development - Sustainable Development, Poverty, Inclusion, Demographics, Social Sector initiatives, etc."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Environment",
+          "unitTitleMr": "पर्यावरण",
+          "topics": [
+            "General issues on Environmental Ecology, Bio-diversity and Climate Change - that do not require subject specialisation."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "General Science",
+          "unitTitleMr": "सामान्य विज्ञान",
+          "topics": [
+            "General Science."
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper II",
+      "paperTitleMr": "पेपर २",
+      "totalMarks": 200,
+      "duration": "Two Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Comprehension",
+          "unitTitleMr": "आकलन",
+          "topics": [
+            "Comprehension"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Interpersonal Skills",
+          "unitTitleMr": "परस्पर संबधांमधील कौशल्ये",
+          "topics": [
+            "Interpersonal skills including communication skills."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Logical Reasoning",
+          "unitTitleMr": "तार्किक तर्क आणि विश्लेषणात्मक क्षमता",
+          "topics": [
+            "Logical reasoning and analytical ability."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Decision Making",
+          "unitTitleMr": "निर्णय घेणे आणि समस्या निवारण",
+          "topics": [
+            "Decision-making and problem-solving."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "General Mental Ability",
+          "unitTitleMr": "सामान्य मानसिक क्षमता",
+          "topics": [
+            "General mental ability."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Basic Numeracy and Data Interpretation",
+          "unitTitleMr": "मूलभूत अंकगणित आणि आकडेवारी निर्वचन",
+          "topics": [
+            "Basic numeracy (numbers and their relations, orders of magnitude, etc.)",
+            "Data interpretation (Charts, graphs, tables, data sufficiency etc.)"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Marathi and English Language Comprehension",
+          "unitTitleMr": "मराठी आणि इंग्रजी भाषा आकलन कौशल्ये",
+          "topics": [
+            "Marathi and English Language Comprehension skills of Class X/XII level."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "It is mandatory for the candidate to appear in both the Papers of State Services (Prelim) Examination for the purpose of evaluation.",
+    "A candidate will be disqualified in case he/she does not appear in both the papers of State Services (Prelim) Examination."
+  ]
+}

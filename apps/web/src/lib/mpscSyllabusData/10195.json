@@ -1,0 +1,54 @@
+{
+  "docId": 10195,
+  "examName": "Maharashtra Agriculture Services Main Examination - Paper- II – Revised Question Paper-Structure",
+  "examNameMr": "महाराष्ट्र कृषि सेवा मुख्य परीक्षा - पेपर- II - संशोधित प्रश्नपत्रिका रचना",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Conventional Type",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper-II",
+      "paperTitleMr": "पेपर-II",
+      "totalMarks": 200,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Instructions and Question Structure - Part 1",
+          "unitTitleMr": "सामान्य सूचना आणि प्रश्न रचना - भाग १",
+          "topics": [
+            "Attempt any THREE questions from Question No. 1 to 6.",
+            "Attempt any TWO questions from Question No. 7 to 10.",
+            "Attempt all questions from Question No. 11 to 14.",
+            "Attempt any ONE question from Question No. 15 or Question No. 16."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "General Instructions and Question Structure - Part 2",
+          "unitTitleMr": "सामान्य सूचना आणि प्रश्न रचना - भाग २",
+          "topics": [
+            "Wherever option has been given, only the required number of responses in the serial order attempted shall be assessed.",
+            "Candidates are expected to answer all the sub-questions of a question together.",
+            "Unless otherwise mentioned, symbol and notation have their usual standard meanings.",
+            "Candidates will be allowed the use of Scientific (Non-programmable type) calculators."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Candidates are allowed the use of Scientific (Non-programmable type) calculators.",
+    "Medium of answer should be strictly as claimed in the application and printed on admission card."
+  ]
+}

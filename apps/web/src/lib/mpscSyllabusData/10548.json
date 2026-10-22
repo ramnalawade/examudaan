@@ -1,0 +1,189 @@
+{
+  "docId": 10548,
+  "examName": "Assistant Professor (Microbiology) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department",
+  "examNameMr": "सहायक प्राध्यापक (सूक्ष्मजीवशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ (संस्थेची शाखा) उच्च आणि तंत्रशिक्षण विभाग",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Microbiology",
+      "paperTitleMr": "सूक्ष्मजीवशास्त्र",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Microbiology",
+          "unitTitleMr": "सामान्य सूक्ष्मजीवशास्त्र",
+          "topics": [
+            "History and scope of microbiology",
+            "Principles and methods of taxonomy, classification and taxonomy of microorganisms",
+            "Microscopy and Staining Techniques: Types of microscopy (light, electron, fluorescence), Basic staining techniques: simple, differential (Gram, acid-fast)",
+            "Control of Microbial Growth: Physical methods: heat, filtration, radiation; Chemical control: disinfectants, antiseptics, and antibiotics",
+            "Structure and function of microbial cells (bacteria, archaea, fungi, viruses, algae, and protozoa)",
+            "Growth and reproduction of microbes, including microbial growth kinetics"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Microbial Biochemistry, Physiology and Metabolism",
+          "unitTitleMr": "सूक्ष्मजीव जैव रसायन, शरीरविज्ञान आणि चयापचय",
+          "topics": [
+            "Principles of biophysical chemistry (pH, buffer, reaction kinetics, thermodynamics and colligative properties)",
+            "Structure and function of biomolecules in microbes",
+            "Conformation and stability of proteins and nucleic acids",
+            "Overview of microbial metabolism: catabolic and anabolic pathways",
+            "Metabolic pathways and energy production in microbial cells, electron transport chain and ATP synthesis",
+            "Lipid, nucleic acid, amino acid and protein metabolism in microbes",
+            "Aerobic and anaerobic respiration, fermentation, and phototrophy",
+            "Structure and function of enzymes, mechanism of enzyme action and enzyme kinetics, regulation of enzyme activity",
+            "Biochemical adaptations of extremophiles",
+            "Secondary metabolites and bioactive compounds",
+            "Structural biology tools (e.g., X-ray crystallography, NMR, cryo-EM) in studying microbial proteins",
+            "Bioanalytical methods: Spectroscopic, Chromatographic and Electrophoretic"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Evolution, Microbial Genetics and Molecular Biology",
+          "unitTitleMr": "उत्क्रांती, सूक्ष्मजीव अनुवंशशास्त्र आणि रेणवीय जीवशास्त्र",
+          "topics": [
+            "Mendelian principles, concept of gene and extension of Mendelian principles, Lamarck, Darwin- concepts of variation, adaptation, struggle, fitness and natural selection",
+            "Origin of cells and unicellular evolution: origin of basic biological molecules, abiotic synthesis of organic monomers and polymers, concept of Oparin and Haldane, experiment of Miller, evolution of prokaryotes, origin of eukaryotic cells",
+            "Salient features of genetic code, structure, replication, and function of DNA and RNA",
+            "Molecular evolution: molecular divergence and molecular clocks",
+            "Gene mapping methods",
+            "Gene expression, operon concept and regulation in prokaryotes and eukaryotes",
+            "RNA synthesis and processing",
+            "Protein synthesis and processing",
+            "Genetic recombination and implications for microbial evolution; horizontal gene transfer: transformation, transduction, and conjugation; Plasmids, transposons",
+            "Extra chromosomal inheritance",
+            "Mutations and repair mechanisms",
+            "Overview of cancer genetics, immunogenetics and pharmacogenomics",
+            "Basic and advanced genetic engineering techniques, Microbial genomics and proteomics"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Immunology and Host-Microbe Interactions",
+          "unitTitleMr": "प्रतिकारविज्ञान आणि यजमान-सूक्ष्मजीव परस्परसंवाद",
+          "topics": [
+            "Blood and circulation",
+            "Components and functions of the immune system: innate and adaptive immunity",
+            "Antigens: Determinants of antigenicity, types of antigens, MHC",
+            "Antibodies: structure, types, classes with functions",
+            "Antigen-antibody reactions and immune responses to infections",
+            "Hypersensitivity, autoimmunity and autoimmune diseases",
+            "Mechanisms of microbial pathogenicity: an overview of virulence factors, persistent infections, bacterial toxins, enzymes, and surface structures in pathogenesis",
+            "Host-microbe interactions: commensalism, mutualism, parasitism",
+            "Mechanisms of microbial evasion of host defences and immune evasion",
+            "Histochemical and immune techniques: detection of molecules using ELISA, RIA, Western Blot, immunoprecipitation, flowcytometry and immunofluorescence microscopy, detection of molecules in living cells, in situ hybridization (FISH & GISH)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Medical Microbiology and Infectious Diseases",
+          "unitTitleMr": "वैद्यकीय सूक्ष्मजीवशास्त्र आणि संसर्गजन्य आजार",
+          "topics": [
+            "Microbial pathogens: bacterial, viral, fungal, and parasitic diseases",
+            "Emerging infectious diseases and zoonoses",
+            "Antimicrobial agents, mechanisms of antibiotic actions and resistance, and current strategies in antibiotic discovery and development",
+            "Vaccines, Toxoids, immune sera, immunization schedule",
+            "Epidemiology, prevention, and control of infectious diseases"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Environmental and Soil Microbiology",
+          "unitTitleMr": "पर्यावरण आणि मृदा सूक्ष्मजीवशास्त्र",
+          "topics": [
+            "The Environment: Physical environment, biotic environment, biotic and abiotic interactions",
+            "Microbial ecology: interactions and roles in ecosystems, Biofilms",
+            "Adaptive evolution and genome plasticity in microbes",
+            "Biogeochemical cycles: carbon, nitrogen, sulphur, and phosphorus",
+            "Microbial interactions with plants: the rhizosphere and plant growth promotion",
+            "Microbial communities in soil, water, and extreme environments",
+            "Bioremediation and microbial applications in environmental clean-up"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Industrial, Pharmaceutical and Food Microbiology",
+          "unitTitleMr": "औद्योगिक, औषध निर्माण आणि अन्न सूक्ष्मजीवशास्त्र",
+          "topics": [
+            "Microbial fermentation processes and applications",
+            "Production of bio-based products: enzymes, antibiotics, biofuels, organic acids",
+            "Microbial spoilage of food and food preservation techniques, Pasteurisation and other heat treatments, foodborne pathogens and foodborne illnesses",
+            "Methods for detecting and quantifying microorganisms in food and milk",
+            "Principles of Hazard Analysis and Critical Control Points (HACCP) in the food and dairy industry, Overview of GMP for the food industry",
+            "Probiotics, prebiotics, functional foods and their role in health",
+            "Overview of the drug life cycle: Stages of drug development, Clinical Research",
+            "Quality control, assurance and safety regulations in the food and pharmaceutical industries"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Virology and Viral Pathogenesis",
+          "unitTitleMr": "विषाणूशास्त्र आणि विषाणूजन्य पॅथोजेनेसिस",
+          "topics": [
+            "Structure and classification of viruses",
+            "Replication strategies of DNA and RNA viruses",
+            "Viral pathogenesis and mechanisms of disease production",
+            "Antiviral strategies and vaccine development",
+            "Emerging viral pathogens and zoonotic viruses"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Biotechnology and Genetic Engineering",
+          "unitTitleMr": "बायोटेक्नॉलॉजी आणि अनुवंशिक अभियांत्रिकी",
+          "topics": [
+            "Techniques in recombinant DNA technology: cloning, gene editing, and expression",
+            "Applications of biotechnology in medicine, agriculture, and industry",
+            "Microbial Bio-mining, biofertilizers, biopesticides",
+            "Microbial biopolymers and bioplastics",
+            "Principles of synthetic biology and metabolic engineering"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Bioinformatics and Data Analysis in Microbiology",
+          "unitTitleMr": "बायोइन्फर्मेटिक्स आणि सूक्ष्मजीवशास्त्रातील डेटा विश्लेषण",
+          "topics": [
+            "Introduction to bioinformatics databases and sequence alignment",
+            "Phylogenetic analysis and microbial classification",
+            "Omics technologies: genomics, transcriptomics, proteomics, and metabolomics",
+            "Analysis of microbial communities using metagenomics",
+            "Basic statistical and computational tools for microbiological data analysis"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Emerging Topics and Trends in Microbiology",
+          "unitTitleMr": "सूक्ष्मजीवशास्त्रातील उदयोन्मुख विषय आणि ट्रेंड",
+          "topics": [
+            "Current advances in microbiome research and human health",
+            "Molecular approaches to diagnosis and strain identification",
+            "CRISPR and gene editing technologies in microbiology",
+            "Bioterrorism and high-risk pathogens",
+            "Bioethics of microbial research, biosafety levels, and regulations",
+            "Systems biology and applications in understanding microbial networks",
+            "Environmental microbiology and implications for climate change"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,28 @@
+{
+  "docId": 7667,
+  "examName": "Social Welfare Officer, Group B-Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Social Welfare Officer, Group B-Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

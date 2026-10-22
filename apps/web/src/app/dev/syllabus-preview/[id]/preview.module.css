@@ -1,0 +1,140 @@
+/* preview.module.css — DEV Syllabus Viewer (compact, responsive, search-first) */
+
+/* ── Base ─────────────────────────────────────────────── */
+.page { background: #FFFBF5; min-height: 100vh; font-family: Inter, sans-serif; color: #1a1a1a; }
+
+/* ── Top bar (replaces global navbar in standalone mode) ─ */
+.topBar { background: #fff; border-bottom: 2px solid #EA580C; padding: 12px calc((100% - 85%) / 2 + 10px); display: flex; align-items: center; justify-content: space-between; gap: 16px; position: sticky; top: 0; z-index: 50; box-sizing: border-box; }
+.topBarBrand { font-size: 16px; font-weight: 700; color: #EA580C; text-decoration: none; display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.topBarTitle { font-size: 13px; color: #555; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.topBarBadge { background: #1a1a2e; color: #7ec8e3; border-radius: 6px; padding: 3px 10px; font-size: 11px; font-family: monospace; white-space: nowrap; flex-shrink: 0; }
+
+
+/* ── Layout — 85% width centred ———————————————— */
+.layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); width: 85%; margin: 0 auto; min-height: calc(100vh - 50px); box-sizing: border-box; }
+
+/* ── Sidebar ──────────────────────────────────────────── */
+.sidebar { background: #fff; border-right: 1px solid #e0d8cc; padding: 16px 12px; position: sticky; top: 70px; height: calc(100vh - 70px); overflow-y: auto; box-sizing: border-box; }
+.tocSection { margin-bottom: 4px; }
+.tocLabel { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #aaa; padding: 4px 8px; }
+.tocLink { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 7px; font-size: 13px; color: #555; text-decoration: none; border-left: 3px solid transparent; transition: all 0.15s; }
+.tocLink:hover { background: #fff3e0; color: #EA580C; border-left-color: #EA580C; }
+.tocLinkActive { background: #fff3e0; color: #EA580C; border-left-color: #EA580C; font-weight: 600; }
+.tocMark { font-size: 11px; color: #bbb; margin-left: auto; }
+.tocDivider { height: 1px; background: #f0ebe3; margin: 8px 0; }
+
+/* ── Main content ─────────────────────────────────────── */
+.main { padding: 20px 28px; min-width: 0; box-sizing: border-box; }
+
+/* ── Dev badge ────────────────────────────────────────── */
+.devBadge { display: inline-flex; align-items: center; gap: 6px; background: #1a1a2e; color: #7ec8e3; border-radius: 6px; padding: 4px 12px; font-size: 11px; font-family: monospace; margin-bottom: 16px; }
+
+/* ── Exam hero card ───────────────────────────────────── */
+.examHero { background: #fff; border: 1px solid #e0d8cc; border-radius: 14px; padding: 18px 22px; margin-bottom: 16px; }
+.examName { font-size: 20px; font-weight: 700; color: #1a1a1a; margin: 0 0 6px; line-height: 1.3; }
+.examNameMr { font-size: 14px; color: #777; margin-bottom: 10px; }
+.examMeta { display: flex; flex-wrap: wrap; gap: 6px; }
+.metaPill { background: #f4ede4; border-radius: 20px; padding: 4px 12px; font-size: 12px; color: #666; }
+.metaPillPrimary { background: #EA580C; color: #fff; }
+.examPattern { margin-top: 12px; padding: 10px 14px; background: #fff7f0; border-radius: 8px; border-left: 3px solid #EA580C; font-size: 13px; color: #555; line-height: 1.5; }
+
+/* ── Stats row ────────────────────────────────────────── */
+.statsRow { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.statBox { background: #fff; border: 1px solid #e0d8cc; border-radius: 10px; padding: 12px 16px; text-align: center; flex: 1 1 120px; min-width: 100px; box-sizing: border-box; }
+.statVal { font-size: 20px; font-weight: 700; color: #EA580C; }
+.statLabel { font-size: 11px; color: #999; margin-top: 2px; }
+
+/* ── Download strip ───────────────────────────────────── */
+.downloadStrip { display: flex; align-items: center; justify-content: space-between; background: #EA580C; border-radius: 10px; padding: 12px 18px; margin-bottom: 20px; gap: 12px; }
+.downloadText { font-size: 12px; color: #fff; opacity: 0.85; display: block; margin-top: 2px; }
+.downloadTextTitle { display: block; font-size: 14px; font-weight: 700; color: #fff; }
+.downloadBtn { background: #fff; color: #EA580C; border-radius: 7px; padding: 8px 16px; font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.downloadBtn:hover { background: #fff7f0; }
+
+/* ── Section title ────────────────────────────────────── */
+.sectionTitle { font-size: 15px; font-weight: 700; color: #333; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+.sectionCount { font-size: 12px; color: #999; font-weight: 400; }
+
+/* ── Paper cards — compact, collapsible ──────────────── */
+.paperCard { background: #fff; border: 1px solid #e0d8cc; border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+
+.paperToggle { width: 100%; background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 14px 16px; text-align: left; }
+.paperToggle:hover { background: #fdf8f3; }
+.paperNumBadge { width: 30px; height: 30px; background: #EA580C; color: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; }
+.paperNumBadgeQual { background: #6b7280; }
+.paperMeta { flex: 1; min-width: 0; }
+.paperTitle { font-size: 14px; font-weight: 600; color: #1a1a1a; display: block; line-height: 1.3; }
+.paperTitleMr { font-size: 12px; color: #999; display: block; margin-top: 2px; }
+.paperBadgeRow { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
+.smallBadge { background: #f4ede4; border-radius: 20px; padding: 2px 9px; font-size: 11px; color: #777; }
+.smallBadgePrimary { background: #fff3e0; color: #EA580C; }
+.paperMarksCol { text-align: right; flex-shrink: 0; }
+.paperMarks { font-size: 18px; font-weight: 700; color: #EA580C; }
+.paperMarksSub { font-size: 10px; color: #bbb; display: block; }
+.chevron { font-size: 14px; color: #bbb; flex-shrink: 0; transition: transform 0.2s; }
+.chevronOpen { transform: rotate(180deg); }
+
+/* ── Paper body (collapsible) ─────────────────────────── */
+.paperBody { padding: 0 16px 16px; border-top: 1px solid #f0ebe3; }
+
+/* ── Unit cards ───────────────────────────────────────── */
+.unitCard { margin: 10px 0 0; border: 1px solid #ede8e0; border-radius: 8px; overflow: hidden; }
+.unitHeader { background: #fdf8f3; padding: 10px 14px; display: flex; align-items: center; gap: 8px; }
+.unitNumDot { width: 20px; height: 20px; background: #EA580C; color: #fff; border-radius: 4px; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.unitTitle { font-size: 13px; font-weight: 600; color: #333; flex: 1; }
+.unitTitleMr { font-size: 11px; color: #aaa; }
+.unitCountBadge { font-size: 10px; color: #999; background: #f0ece5; border-radius: 20px; padding: 2px 8px; white-space: nowrap; }
+.topicList { padding: 6px 14px 10px 42px; }
+.topicItem { font-size: 12.5px; color: #555; padding: 4px 0; display: flex; align-items: flex-start; gap: 7px; border-bottom: 1px dotted #f5f0ea; line-height: 1.45; }
+.topicItem:last-child { border-bottom: none; }
+.topicDot { width: 5px; height: 5px; background: #EA580C; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+.topicHighlight { background: #fff3cd; border-radius: 2px; padding: 0 1px; }
+
+/* ── Optional subjects grid ───────────────────────────── */
+.optGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 20px; }
+.optCard { background: #fff; border: 1px solid #e0d8cc; border-radius: 8px; padding: 10px 14px; display: flex; align-items: center; gap: 8px; }
+.optNum { width: 24px; height: 24px; background: #f4ede4; border-radius: 5px; font-size: 11px; font-weight: 700; color: #EA580C; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.optName { font-size: 13px; font-weight: 600; color: #333; }
+.optNameMr { font-size: 11px; color: #999; display: block; }
+
+/* ── Qualifying papers pills ──────────────────────────── */
+.qualRow { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.qualPill { background: #f0fdf4; border: 1px solid #86efac; border-radius: 20px; padding: 6px 14px; font-size: 12.5px; color: #16a34a; }
+
+/* ── Notes ────────────────────────────────────────────── */
+.notesList { background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px; padding: 12px 16px; margin-bottom: 20px; }
+.noteItem { font-size: 12.5px; color: #7c4a00; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+.noteItem::before { content: "•"; position: absolute; left: 0; font-weight: 700; }
+
+/* ── Raw JSON ─────────────────────────────────────────── */
+.jsonBox { background: #0d1117; border-radius: 10px; overflow: hidden; margin-top: 24px; margin-bottom: 40px; }
+.jsonHeader { padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; border-bottom: 1px solid #21262d; }
+.jsonHeader:hover { background: #161b22; }
+.jsonHeaderLabel { font-size: 12px; color: #8b949e; font-family: monospace; }
+.jsonChevron { font-size: 14px; color: #8b949e; }
+.jsonPre { padding: 14px 16px; font-size: 11px; color: #79c0ff; max-height: 350px; overflow-y: auto; line-height: 1.55; }
+
+/* ── Empty / Error ────────────────────────────────────── */
+.emptySearch { text-align: center; padding: 40px 20px; color: #999; }
+.emptyIcon { font-size: 40px; margin-bottom: 8px; }
+.errorPage { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; gap: 12px; }
+.errorCode { font-size: 48px; font-weight: 700; color: #EA580C; }
+.errorMsg { font-size: 16px; color: #555; }
+.errorHint { font-size: 12px; color: #999; font-family: monospace; text-align: center; max-width: 480px; }
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .layout { width: 95%; grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .main { padding: 12px 14px; }
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+  .downloadStrip { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+@media (max-width: 480px) {
+  .layout { width: 100%; }
+  .statsRow { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .examName { font-size: 16px; }
+  .paperTitle { font-size: 13px; }
+  .paperMarks { font-size: 15px; }
+  .topBar { padding: 10px 12px; }
+}

@@ -1,0 +1,102 @@
+{
+  "docId": 1670,
+  "examName": "Drugs Inspector, Food and Drugs Administration, Gr.-B",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Drugs Inspector, Food and Drugs Administration, Gr.-B",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": null,
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Physiology, Pathophysiology, Pharmacology and Toxicology",
+          "unitTitleMr": null,
+          "topics": [
+            "Physiology: Composition/function of Blood elements, Coagulation of blood, Blood groups, Blood components, manufacturing, Whole human blood (I.P.), Blood bank- operation / requirements.",
+            "Pathophysiology: STD, AIDS, Hypersensitivity, HBSAg.",
+            "Pharmacology: Factors modifying drug action, drugs affecting coagulation, Antihypertensive drugs, Antipyretic, Analgesic, Antitussive, Sedative, Hypnotics, Opioids, NSAIDS, Local Anaesthetics, Chemotherapeutic Agents including Anticancer drugs, Antifungal Agents, Drugs affecting CNS, Antidiabetic drugs, Contraceptive drugs, Hormones, Drugs acting on uterus.",
+            "Toxicology: Classification of poison, chelating agent, heavy metals, antidotes."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Microbiology",
+          "unitTitleMr": null,
+          "topics": [
+            "Sterilisation procedure",
+            "Aseptic technics",
+            "Disinfections",
+            "Pyrogens",
+            "LAL Test",
+            "Assay of antibiotics/vitamins",
+            "Biochemical serological, virological technics",
+            "BOD",
+            "Different media",
+            "Microbial drugs",
+            "Drug resistance",
+            "Microbial limit test",
+            "Pathogenic organism of common occurrence"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Biochemistry & Chemistry of drugs / Pharmaceuticals",
+          "unitTitleMr": null,
+          "topics": [
+            "DNA, RNA, Nucleic Acid & components, enzymes, metabolism of protein, carbohydrate, lipids, recombinant technology and its application, immunological product-vaccine, sera.",
+            "Isomers, Tautomers, fermentation, synthesis of antibiotics, diazo reaction, chemistry of steroids.",
+            "Dosage forms, sustained release, dosage form, enteric coating, new drugs, parental drugs, Good manufacturing practices, Good laboratory practices, Routes of administration, Preservatives, suspending / emulsifying agents, Types of vehicles / types of waters, storage conditions for pharmaceuticals.",
+            "Principal and application of analysis, UV spectra / I.R./ HPLC /GLC / Atomic absorption, HPTLC, LCMS, limit test, heavy metals, devices, sutures.",
+            "Surgical - Medical devices sutures.",
+            "Law: DCC, DTAB, Misbranded, standard, spurious, adulterated drugs definitions, Government Analyst duties, Inspector - power / procedure, definition schedule M/Y/U."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "General Knowledge related to Pharmaceuticals / Medicine field",
+          "unitTitleMr": null,
+          "topics": [
+            "National Health Programme",
+            "DPCO / NPPA",
+            "Narcotic Drugs",
+            "Poisons – Antidotes",
+            "Essential Drugs",
+            "Central Drug Authority",
+            "Neutraceuticals",
+            "Magic remedies - Act and Rules",
+            "Import of Drugs and Cosmetics",
+            "Central Drug Laboratory",
+            "WHO - GMP - entification",
+            "Current events",
+            "Consumer Protection Act",
+            "Right to Information Act"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": null,
+          "topics": [
+            "Questions will be asked to test how far candidates can think quickly and accurately."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,209 @@
+{
+  "docId": 1668,
+  "examName": "Maharashtra Education Services, Gr.-A in the Directorate of Vocational Education And Training",
+  "examNameMr": "महाराष्ट्र शिक्षण सेवा, गट-अ, व्यवसाय शिक्षण व प्रशिक्षण संचालनालय",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Maharashtra Education Services, Gr.-A in the Directorate of Vocational Education And Training",
+      "paperTitleMr": "महाराष्ट्र शिक्षण सेवा, गट-अ, व्यवसाय शिक्षण व प्रशिक्षण संचालनालय",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Education System in India",
+          "unitTitleMr": "भारतातील शिक्षण पद्धती",
+          "topics": [
+            "Education System in India",
+            "National Policies on Education in India and various Committees recommendations",
+            "Historical Background of Vocational Education in India",
+            "Need for Vocational Education in India",
+            "Various Systems of Vocational Education and Training in India",
+            "Policies for Technical and Vocational Education",
+            "Objective and scope of Vocational Education at + 2 stage",
+            "Concept and meaning of work experience and socially useful productive work",
+            "Objective and scope of Pre-Vocational Education"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Status of Vocational/ Technical Education in Maharashtra",
+          "unitTitleMr": "महाराष्ट्रातील व्यवसाय/तांत्रिक शिक्षणाची स्थिती",
+          "topics": [
+            "Various Technical and Vocational Education System in the State",
+            "World Bank assisted Projects in Technical and Vocational Education",
+            "Various Policies and programmes of the State Government for Employment and Self-employment Generation",
+            "Various Schemes of Employment and Self-employment by KVIB"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Manpower Planning",
+          "unitTitleMr": "मानवर संसाधन नियोजन",
+          "topics": [
+            "Human Resource Planning",
+            "Elements of manpower Planning",
+            "Techniques in human planning",
+            "Vocational Surveys and their objectives",
+            "Demand estimation of skilled manpower",
+            "Role of various Institutes in development of manpower such as NCERT, NIEPA, PSSCIVE, TITI, AICTE, CSTARI, ATI, CIMI, MHRD, DGE and T, NCVT, RIE, UGC, IITs, open Universities, NERI, NITIE, SIVE etc."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Management of Technical/Vocational Education",
+          "unitTitleMr": "तांत्रिक/व्यवसाय शिक्षणाचे व्यवस्थापन",
+          "topics": [
+            "Planning perspective on implementation",
+            "Internal/external environment management",
+            "Resource mobilisation, leadership and decision-making",
+            "Positive attitude, personality development, human behavior, character and moral qualities of public relation, effective communication",
+            "Problem solving techniques, personal management, CPM & PERT techniques, value analysis, SWOT analysis, importance of curriculum development"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "All Schemes being implemented in the Department of Vocational Education and Training in the State",
+          "unitTitleMr": "राज्यातील व्यवसाय शिक्षण व प्रशिक्षण विभागामार्फत राबविण्यात येणाऱ्या सर्व योजना",
+          "topics": [
+            "Competencies Based Vocational course at +2 stage (Centrally Sponsored Scheme)",
+            "Bifocal Vocational Courses",
+            "Pre-Vocational Course (Centrally Sponsored Scheme)",
+            "Technician (Vocational) Apprenticeship Scheme",
+            "Craftsman Training Scheme",
+            "Basic Training and Related Instruction Centres (BT and RI)",
+            "Advanced Vocational Training System (AVTS)",
+            "Trade Apprentices",
+            "Evening Classes for Industrial Workers",
+            "3 years time bound programme for employment and self-employment",
+            "Certificate courses of Maharashtra State Board of Vocational Examination",
+            "TRYSEM Training Centres (TRYSEM Schemes)",
+            "Various Scheme for Disabled and Women"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Selection",
+          "unitTitleMr": "निवड प्रक्रिया",
+          "topics": [
+            "Process, Significance, various procedures including Psychological Tests and interview etc.",
+            "Procedure of admission in Industrial Training Institutes",
+            "Technical High Schools/Centres",
+            "Procedures for engagement of trade apprentices"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Placements",
+          "unitTitleMr": "प्लेसमेंट्स",
+          "topics": [
+            "Requirement of various Organisations (Registered/Non-registered, Local/Outside) and availability of candidates",
+            "Process of Placement",
+            "Orientation and Training of new employees"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Training Planning and Implementation",
+          "unitTitleMr": "प्रशिक्षण नियोजन आणि अंमलबजावणी",
+          "topics": [
+            "Role of training Coordinator",
+            "Types of training - Classroom, OJT, Apprenticeship Training",
+            "Linkage with Industries",
+            "Development of curriculum",
+            "Development of media for instructions",
+            "Importance of Industry-Institution-Interaction",
+            "Apprenticeship Act, 1961",
+            "Various criteria used for evaluating the entire Training Programme",
+            "Training Manual prepared by DGE and T",
+            "Concept of Safety and measures of safety in Workshop",
+            "Role of C.I.I in training",
+            "Fire protection",
+            "First-aid techniques"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Performance Appraisal of Trainees",
+          "unitTitleMr": "प्रशिक्षितांचे कार्यप्रदर्शन मूल्यांकन",
+          "topics": [
+            "Various evaluation techniques",
+            "Effective Appraisal",
+            "Criteria for measurement of skills and performance",
+            "Methods of appraisal"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Total Quality Management",
+          "unitTitleMr": "एकूण गुणवत्ता व्यवस्थापन",
+          "topics": [
+            "Quality circle",
+            "5S Theory",
+            "Kaizen techniques",
+            "ISO-9000, ISO-9002, ISO-9003",
+            "Machinery maintenance",
+            "Teaching aids",
+            "Teachers Training Programme"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Material Management",
+          "unitTitleMr": "साहित्य व्यवस्थापन",
+          "topics": [
+            "Type of stores",
+            "Purchase",
+            "Inventory Control",
+            "Stores Manual",
+            "Economic Order quantity",
+            "Buffer stock",
+            "Reorder Level"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Financial Management (With reference to State Government and Technical Institutions)",
+          "unitTitleMr": "वित्तीय व्यवस्थापन (राज्य शासन व तांत्रिक संस्थांच्या संदर्भात)",
+          "topics": [
+            "Budget",
+            "Budgetary process",
+            "Budget Performance",
+            "Zero-based budgeting",
+            "Audit and Cost Benefit Analysis",
+            "Cost reduction techniques related to training"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Other relevant topics",
+          "unitTitleMr": "इतर संबंधित विषय",
+          "topics": [
+            "Training Methodologies",
+            "Various Teaching aids",
+            "Entrepreneurship Development Programme",
+            "Information Technology",
+            "Population Education",
+            "Environmental Protection",
+            "Various Acts viz. Factory Act, Workmen's Compensation Act, Apprentices Act 1961, 1973 and 1986, Sales of Goods Act etc.",
+            "Impact of Industrialization and globalization on Training"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

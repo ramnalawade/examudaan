@@ -1,0 +1,79 @@
+{
+  "docId": 8774,
+  "examName": "Maharashtra Civil Services Rules and Departmental Examination",
+  "examNameMr": "महाराष्ट्र नागरी सेवा नियम आणि विभागीय परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "departmental",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Maharashtra Civil Services Rules and Acts",
+      "paperTitleMr": "महाराष्ट्र नागरी सेवा नियम आणि कायदे",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Partnership and Corporation Acts",
+          "unitTitleMr": "भागीदारी आणि कर्पोरेशन कायदे",
+          "topics": [
+            "The Indian Partnership Act 1932 and Maharashtra Partnership Rules 1989",
+            "Maharashtra Non Trading Corporation Act 1959",
+            "Maharashtra Stamp Act 1958 (With Amendments) with special focus on Chapter 1 to 4"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Maharashtra Civil Services Rules",
+          "unitTitleMr": "महाराष्ट्र नागरी सेवा नियम",
+          "topics": [
+            "Maharashtra Civil Services Rules",
+            "Maharashtra Civil Services (General Conditions of Service) Rules, 1981",
+            "Maharashtra Civil Services (Provisions during tenure, non-commissioned service and periods of suspension, dismissal and removal from service) Rules, 1981",
+            "Maharashtra Civil Services (Leave) Rules 1981",
+            "Maharashtra Civil Services (Pay) Rules 1981",
+            "Maharashtra Civil Services Conduct and Discipline and Appeal Rules 1979",
+            "Maharashtra Civil Services (Pension Rules) 1982",
+            "Maharashtra Civil Services (Commutation of pension) Rules 1984",
+            "Maharashtra Civil Services (Declaration of small family) Rules 2005",
+            "Maharashtra Civil Services (Seniority Regulations) Rules 1982"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Acts and Legal Provisions",
+          "unitTitleMr": "सामान्य कायदे आणि कायदेशीर तरतुदी",
+          "topics": [
+            "Right to Information Act and Maharashtra Right to Public Service Act 2015",
+            "The Indian Evidence Act with special focus on Chapter 1 to 6",
+            "The Indian Penal Code 60 with special focus on Chapter 18 (Sections 415 to 440, and 463 to 489)",
+            "The Indian Contract Act, 1872 with special focus on Chapter 1 to 6",
+            "The Code of Civil Procedure, 1908 with special focus on Chapter 4 Order XXVII, Order XVI, Order XXX",
+            "Interpretation of Statutes",
+            "Maharashtra Industry, Trade and Investment Facilitation Act, 2023 (MAITRI)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Reasoning and English Language",
+          "unitTitleMr": "तर्कशास्त्र आणि इंग्रजी भाषा",
+          "topics": [
+            "Analytical and logical reasoning",
+            "English - Common Vocabulary, Sentence structure, Grammar, use of Idioms and phrases and their meaning etc."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

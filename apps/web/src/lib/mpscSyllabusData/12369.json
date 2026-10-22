@@ -1,0 +1,196 @@
+{
+  "docId": 12369,
+  "examName": "Assistant Professor (Commerce) Maharashtra Education Service, Group-A and Lecturer (Commerce) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (वाणिज्य) महाराष्ट्र शिक्षण सेवा, गट-अ आणि व्याख्याता (वाणिज्य) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Commerce Syllabus",
+      "paperTitleMr": "वाणिज्य अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Business Environment and International Business",
+          "unitTitleMr": "व्यवसाय पर्यावरण आणि आंतरराष्ट्रीय व्यवसाय",
+          "topics": [
+            "Concepts and elements of business environment: Economic environment- Economic systems, Economic policies (Monetary and Fiscal Policies); Political environment-Role of government in business; Legal environment- Consumer Protection Act, FEMA; Corporate Social Responsibility (CSR).",
+            "Scope and importance of international business; Globalization and its drivers.",
+            "Theories of international trade; Government intervention in international trade; Tariff and non-tariff barriers; India’s foreign trade policy.",
+            "Foreign direct investment (FDI) and Foreign portfolio investment (FPI); Types of FDI, Costs and benefits of FDI to home and host countries; Trends in FDI; India’s FDI policy.",
+            "Balance of payments (BOP): Importance and components of BOP.",
+            "Regional Economic Integration: Levels of Regional Economic Integration; Trade creation and diversion effects; Regional Trade Agreements: European Union (EU), ASEAN, SAARC.",
+            "International Economic institutions: IMF, World Bank.",
+            "World Trade Organization (WTO): Functions and objectives of WTO; Agriculture Agreement; GATS; TRIPS; TRIMS.",
+            "Supply Chain Management."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Accounting and Auditing",
+          "unitTitleMr": "लेखा आणि लेखापरीक्षण",
+          "topics": [
+            "Basic accounting principles; concepts and conventions.",
+            "Indian Accounting Standards and IFRS.",
+            "Partnership Accounts: Admission, Retirement, Death, Dissolution and Insolvency of partnership firms.",
+            "Corporate Accounting: Issue, forfeiture and reissue of shares; Liquidation of companies; Acquisition, merger, amalgamation and reconstruction of companies.",
+            "Holding company accounts: Basic Concepts.",
+            "Cost and Management Accounting: Concept, Marginal costing and Break-even analysis; Standard costing; Budgetary control; Process costing; Activity Based Costing (ABC); Costing for decision-making.",
+            "Financial Statements Analysis: Ratio analysis; Funds flow Analysis; Cash flow analysis.",
+            "Human Resources Accounting; Inflation Accounting; Environmental Accounting.",
+            "Auditing: Independent financial audit; Vouching; Verification and valuation of assets and liabilities; Audit of financial statements and audit report.",
+            "Recent Trends in Auditing: Management audit; Energy audit; Environment audit; Systems audit; Safety audit."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Business Economics",
+          "unitTitleMr": "व्यवसाय अर्थशास्त्र",
+          "topics": [
+            "Meaning and scope of business economics.",
+            "Objectives of business firms.",
+            "Demand analysis: Law of demand; Elasticity of demand and its measurement.",
+            "Consumer behavior: Concepts, Utility analysis; Indifference curve analysis.",
+            "Law of Variable Proportions: Law of Returns to Scale.",
+            "Theory of cost: Short-run and long-run cost.",
+            "Price determination under different market forms: Perfect competition; Monopolistic competition; Oligopoly- Price leadership model; Price discrimination.",
+            "Pricing strategies: Price skimming; Price penetration; Peak load pricing.",
+            "Govt. Schemes for Sustainable Development of Business."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Business Finance",
+          "unitTitleMr": "व्यवसाय वित्त",
+          "topics": [
+            "Meaning, Scope and sources of finance.",
+            "Cost of capital and time value of money.",
+            "Capital structure.",
+            "Capital budgeting decisions: Conventional and scientific techniques of capital budget analysis.",
+            "Working capital management; Dividend decision: Theories and policies.",
+            "Risk and return analysis; Asset securitization.",
+            "International monetary system.",
+            "Foreign exchange market; Exchange rate risk and hedging techniques.",
+            "International financial markets and instruments: Euro currency; Global depositary Receipts (GDRs).",
+            "Security Analysis: Objective of Security analysis.",
+            "Fundamental Analysis: Economy of Industry & Company Analysis",
+            "Technical Analysis: DOW Theory – Efficient Market Theory."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Business Statistics and Research Methodology",
+          "unitTitleMr": "व्यवसाय सांख्यिकी आणि संशोधन पद्धती",
+          "topics": [
+            "Business statistics – concept and definition.",
+            "Measures of central tendency, Measures of dispersion, Measures of skewness.",
+            "Correlation and regression of two variables.",
+            "Probability: Approaches to probability; Bayes’s theorem.",
+            "Probability distributions: Binomial, poisson and normal distributions.",
+            "Research: Concept and types; Research designs.",
+            "Data: Collection and classification of data.",
+            "Sampling: Concepts; Methods of sampling.",
+            "Hypothesis testing: z-test; t-test; ANOVA; Chi–square test; Rank correlation test.",
+            "Report writing."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Business Management and Human Resource Management",
+          "unitTitleMr": "व्यवसाय व्यवस्थापन आणि मानवी संसाधन व्यवस्थापन",
+          "topics": [
+            "Principles and functions of management",
+            "Organization structure: Formal and informal organizations; Span of control.",
+            "Responsibility and authority: Delegation of authority and decentralization.",
+            "Motivation and leadership: Concept and theories.",
+            "Corporate governance and business ethics.",
+            "Human resource management: Concept, role and functions of HRM; Human resource planning; Recruitment and selection; Training and development.",
+            "Compensation management: Job evaluation; Incentives and fringe benefits.",
+            "Performance appraisal including 360 degree performance appraisal.",
+            "Personality: Perception; Attitudes; Emotions; Group dynamics; Conflict and negotiation; Stress management",
+            "Organizational Culture: Organizational development and organizational change.",
+            "Total Quality Management, Quality Circle, Management Information System."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Banking and Financial Institutions",
+          "unitTitleMr": "बँकिंग आणि वित्तीय संस्था",
+          "topics": [
+            "Overview of Indian financial system.",
+            "Types of banks: Commercial banks; Regional Rural Banks (RRBs); Foreign banks; Cooperative banks.",
+            "Reserve Bank of India: Functions; Role and monetary policy management.",
+            "Banking sector reforms in India: Basel norms; Risk management; NPA management.",
+            "Financial markets: Money market; Capital market; Government securities market.",
+            "Financial Institutions: Development Finance Institutions (DFIs); Non-Banking Financial Companies (NBFCs); Mutual Funds; Pension Funds.",
+            "Financial Regulators in India.",
+            "Financial sector reforms including financial inclusion.",
+            "Digitization of banking and other financial services: Internet banking; mobile banking; Digital payment systems.",
+            "Insurance: Types of insurance- Life and Non-life insurance; Risk classification and management; Factors limiting the insurability of risk; Re-insurance; Regulatory framework of insurance- IRDA and its role.",
+            "Block Chain Technology. Open Banking."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Marketing Management",
+          "unitTitleMr": "विपणन व्यवस्थापन",
+          "topics": [
+            "Marketing: Concept and approaches; Marketing channels; Marketing mix; Strategic marketing planning; Market segmentation, targeting and positioning.",
+            "Product decisions: Concept; Product line; Product mix decisions; Product life cycle; New product development.",
+            "Pricing decisions: Factors affecting price determination; Pricing policies and strategies.",
+            "Promotion decisions: Role of promotion in marketing; Promotion methods - Advertising; Personal selling; Publicity; Sales promotion tools and techniques; Promotion mix.",
+            "Channels of distribution.",
+            "Consumer Behavior; Consumer buying process; factors influencing consumer buying decisions.",
+            "Service marketing.",
+            "Trends in marketing: Social marketing; Online marketing; Green marketing; Direct marketing; Rural marketing; CRM",
+            "Marketing Research, Nature, Scope.",
+            "Emerging Trends in Marketing: Viral, Neuro, Global."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Legal Aspects of Business",
+          "unitTitleMr": "व्यवसायाचे कायदेशीर बाबी",
+          "topics": [
+            "Indian Contract Act, 1872: Elements of a valid contract; Capacity of parties; Free consent; Discharge of a contract; Breach of contract and remedies against breach; Quasi contracts.",
+            "Special contracts: Contracts of indemnity and guarantee; contracts of bailment and pledge; Contracts of agency.",
+            "Sale of Goods Act, 1930: Sale and agreement to sell; Rights of unpaid seller and rights of buyer.",
+            "Negotiable Instruments Act, 1881: Types of negotiable instruments; Negotiation and assignment; Dishonor and discharge of negotiable instruments.",
+            "The Companies Act, 2013: Nature and kinds of companies; Company formation; Management, meetings and winding up of a joint stock company.",
+            "Limited Liability Partnership: Structure and procedure of formation of LLP in India.",
+            "The Information Technology Act, 2000: Objectives and main provisions; Cyber crimes and penalties.",
+            "The RTI Act, 2005: Objectives and main provisions.",
+            "Intellectual Property Rights (IPRs): Patents, trademarks and copyrights; Emerging issues in intellectual property.",
+            "Goods and Services Tax (GST): Objectives and main provisions; Benefits of GST; Implementation mechanism; Working of dual GST.",
+            "Goods & Service Tax (GST): E Way Bill, E Invoicing, Input Tax Credit, Reverse charge Mechanism & GST TDS."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Income-tax and Corporate Tax Planning",
+          "unitTitleMr": "आयकर आणि कॉर्पोरेट कर नियोजन",
+          "topics": [
+            "Income-tax: Basic concepts; Residential status and tax incidence; Exempted incomes; Agricultural income; Computation of taxable income under various heads; Deductions from Gross total income; Assessment of Individuals; Clubbing of incomes.",
+            "International Taxation: Double taxation and its avoidance mechanism; Transfer pricing.",
+            "Corporate Tax Planning: Concepts and significance of corporate tax planning; Tax avoidance versus tax evasion; Techniques of corporate tax planning; Tax considerations in specific business situations: Shut down or continue operations.",
+            "Deduction and collection of tax at source; Advance payment of tax; E-filing of income-tax returns."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

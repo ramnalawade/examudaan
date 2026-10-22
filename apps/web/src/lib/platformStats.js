@@ -10,11 +10,12 @@ import { CAREER_PATHS } from './careerGuideData.js'
 import { query as pgQuery } from './pgdb.js'
 
 // Real exact counts from active data registries
-export const REAL_AI_TOOLS_COUNT = (AI_TOOLS || []).length || 114
+export const REAL_AI_TOOLS_COUNT = (AI_TOOLS || []).length || 124
 export const REAL_MOCK_TESTS_COUNT = (MOCK_TESTS || []).length || 12
 export const REAL_SYLLABI_COUNT = 280
 export const REAL_CAREERS_COUNT = (CAREER_PATHS || []).length || 50
-export const REAL_PYQ_PAPERS_COUNT = 209
+export const REAL_PYQ_PAPERS_COUNT = 841
+export const REAL_PYQ_EXAMS_COUNT = 429
 export const REAL_PYQ_COUNT = '1,100+'
 
 // Safe fallback for live database counts

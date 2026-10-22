@@ -1,0 +1,39 @@
+{
+  "docId": 13534,
+  "examName": "Assistant Professor (Urdu) Maharashtra Education Service, Group-A and Lecturer (Urdu) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus - Corrigendum",
+  "examNameMr": "सहायक प्राध्यापक (उर्दू) महाराष्ट्र शिक्षण सेवा, गट-अ व अध्याध्याख्याता (उर्दू) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम - शुद्धिपत्र",
+  "conductingBody": "Maharashtra Public Service Commission",
+  "year": 2026,
+  "language": "Marathi",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Urdu) / Lecturer (Urdu) Syllabus Corrigendum",
+      "paperTitleMr": "सहायक प्राध्यापक (उर्दू) / अध्याध्याख्याता (उर्दू) अभ्यासक्रम शुद्धिपत्र",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 8,
+          "unitTitle": "Patras Bokhari : Lahore ka Geographya, Urdu Ki Aakhri Kitab",
+          "unitTitleMr": "पत्रास बोखारी : लाहोर का जिओग्राफी, उर्दू की आखरी किताब",
+          "topics": [
+            "Patras Bokhari : Lahore ka Geographya, Urdu Ki Aakhri Kitab"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "सदर संवर्गाच्या अभ्यासक्रमातील अनुक्रमांक ८ (९) मधील 'Patras Bokhari : Lahore ka Geographya, Murda-Ba-दस्त Zinda' या शब्दसमूहाऐवजी 'Patras Bokhari : Lahore ka Geographya, Urdu Ki Aakhri Kitab' असे वाचण्यात यावे."
+  ]
+}

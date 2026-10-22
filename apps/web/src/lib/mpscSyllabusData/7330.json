@@ -1,0 +1,63 @@
+{
+  "docId": 7330,
+  "examName": "Assistant Public Prosecutor, General State Service, Group-A - Revised Syllabus",
+  "examNameMr": "सहाय्यक सरकारी अभियोक्ता, महाराष्ट्र राजपत्रित सेवा, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper I & Paper II",
+      "paperTitleMr": "पेपर १ आणि पेपर २",
+      "totalMarks": 100,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Paper I - Criminal Procedure Code, Evidence Act and Appeal & Revision Proposal",
+          "unitTitleMr": "पेपर I - फौजदारी प्रक्रिया संहिता, पुरावा कायदा आणि अपील व पुनरावलोकन प्रस्ताव",
+          "topics": [
+            "Criminal Procedure code with amendments: Section 1 to 25A, Section 41 to 105, Section 144 to 192, Section 195 to 199, Section 204 to 224, Section 238 to 327, Section 340, Section 344, Section 345, Section 372 to 405, and Section 410, Section 436 to 484",
+            "Evidence Act with amendments: Section 4 to 39, Section 45 to 90, Section 101 to 167",
+            "Appeal & Revision Proposal"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Paper II - Indian Penal Code, Minor Acts and Essay Writing",
+          "unitTitleMr": "पेपर II - भारतीय दंड संहिता, अल्प कायदे आणि निबंध लेखन",
+          "topics": [
+            "Indian Penal Code, 1860 with amendments: Section 1 to 52A, Section 53, Section 64 to 67, Section 71, Section 76 to 120B, Section 141 to 160, Section 172 to 205, Section 268 to 294A, Section 295 to 298, Section 299 to 377, Section 378 to 477A, Section 493 to 511",
+            "Minor Acts with amendments: The Maharashtra Prohibition Act, 1949",
+            "Maharashtra Prevention of Gambling Act, 1887",
+            "Indian Forest Act, 1927",
+            "The Immoral Traffic (Prevention) Act, 1956",
+            "The Prevention of Cruelty to Animals Act, 1960",
+            "The Arms Act, 1959",
+            "The Food Safety and Standards Act, 2006",
+            "The Prevention of Damage to Public Property Act, 1984",
+            "The Narcotic Drugs and Psychotropic Substances Act, 1985",
+            "The Juvenile Justice (Care and Protection of Children) Act, 2015",
+            "The Pre-Conception and Pre-natal Diagnostic Techniques (Prohibitions of Sex Selection) Act, 1994",
+            "The Essential Commodities Act, 1955",
+            "The Information Technology Act, 2000",
+            "Wild Life Protection Act, 1972",
+            "Maharashtra Police Act, 1951",
+            "Essay writing on criminal laws"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

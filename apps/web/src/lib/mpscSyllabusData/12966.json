@@ -1,0 +1,60 @@
+{
+  "docId": 12966,
+  "examName": "Translator Hindi, Group-C, Directorate of Languages, Marathi Language Department",
+  "examNameMr": "अनुवादक हिंदी, गट-क, भाषा संचालनालय, मराठी भाषा विभाग",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "Marathi/English",
+  "category": "group-c",
+  "totalMarks": 160,
+  "mainsMarks": 160,
+  "interviewMarks": 40,
+  "examPattern": "Written Examination (160 Marks) and Translation Test (40 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Hindi",
+      "paperTitleMr": "हिंदी",
+      "totalMarks": 160,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Hindi Grammar and Vocabulary",
+          "unitTitleMr": "हिंदी: पारिभाषिक एवं सामान्य शब्दसंग्रह, वाक्यरचना, विकारी शब्द, अविकारी शब्द, मुहावरें एवं लोकोक्तियाँ, प्रयोजनमूलक शब्दावली, अवतरण/गद्यांश - गद्यांश के आधार पर प्रश्न",
+          "topics": [
+            "पारिभाषिक एवं सामान्य शब्दसंग्रह",
+            "वाक्यरचना",
+            "विकारी शब्द",
+            "अविकारी शब्द",
+            "मुहावरें एवं लोकोक्तियाँ",
+            "प्रयोजनमूलक शब्दावली",
+            "अवतरण/गद्यांश - गद्यांश के आधार पर प्रश्न"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English Grammar and Vocabulary",
+          "unitTitleMr": "इंग्रजी",
+          "topics": [
+            "Common Vocabulary",
+            "Sentences",
+            "Declinable Words",
+            "Indeclinable Words",
+            "Uses of Idioms and phrases and their meanings",
+            "Administrative Terms",
+            "Comprehension of passage"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा / कमी करण्यात येतील.",
+    "अंतिम गुणवत्ता यादी ही वस्तुनिष्ठ परीक्षेतील व अनुवाद चाचणीतील एकत्रित गुणांवर आधारित राहील."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "docId": 5864,
+  "examName": "Livestock Development Officer, Maharashtra Animal Husbandry Services, Gr-A - Syllabus",
+  "examNameMr": "पशुधन विकास अधिकारी, महाराष्ट्र पशुसंवर्धन सेवा, गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Topics Related to the Educational qualification",
+      "paperTitleMr": "शैक्षणिक पात्रतेशी संबंधित विषय",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Clinical Subjects",
+          "unitTitleMr": "क्लिनिकल विषय",
+          "topics": [
+            "Veterinary Medicine",
+            "Veterinary Surgery and Radiology",
+            "Veterinary Gynecology and Obstetrics"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Para-clinical Subjects",
+          "unitTitleMr": "पारा-क्लिनिकल विषय",
+          "topics": [
+            "Veterinary Pathology",
+            "Veterinary Parasitology",
+            "Veterinary Microbiology",
+            "Veterinary Pharmacology and Toxicology",
+            "Livestock Products Technology",
+            "Veterinary Public Health and Epidemiology"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Pre-clinical Subjects",
+          "unitTitleMr": "प्री-क्लिनिकल विषय",
+          "topics": [
+            "Veterinary Anatomy",
+            "Veterinary Physiology and Biochemistry"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Animal Production",
+          "unitTitleMr": "पशू उत्पादन",
+          "topics": [
+            "Veterinary and Animal Husbandry Extension Education",
+            "Livestock Production Management (Cattle, Poultry Science, Sheep & Goat and Pig)",
+            "Animal Genetics and Breeding",
+            "Animal Nutrition"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

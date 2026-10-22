@@ -3,8 +3,10 @@
 // ============================================================
 
 export const metadata = {
-  title: 'Top AI Tools for Students & Aspirants 2026 (114+ Tools)',
-  description: 'Curated directory of 114+ free and essential AI tools for study, note-making, PDF chat, math solving, essay writing, coding, and exam preparation — reviewed for Indian aspirants.',
+  title: {
+    absolute: 'Top AI Tools for Students & Aspirants 2026 | ExamUdaan',
+  },
+  description: 'Curated directory of 124+ free AI tools for study, note-making, PDF chat, math and exam preparation — reviewed for Indian competitive exam aspirants.',
   keywords: [
     'AI tools for students', 'free AI tools 2026', 'AI tools for exam preparation',
     'NotebookLM for MPSC', 'AI note making tool', 'PDF chat AI',
@@ -14,8 +16,8 @@ export const metadata = {
     canonical: 'https://examudaan.in/ai-tools',
   },
   openGraph: {
-    title: 'Top AI Tools for Students & Aspirants 2026 (114+ Tools) | ExamUdaan',
-    description: '114+ free AI tools for exam preparation, note-making, PDF chat, math & essay writing — for Indian aspirants.',
+    title: 'Top AI Tools for Students & Aspirants 2026 (124+ Tools) | ExamUdaan',
+    description: '124+ free AI tools for exam preparation, note-making, PDF chat, math & essay writing — for Indian aspirants.',
     url: 'https://examudaan.in/ai-tools',
     siteName: 'ExamUdaan.in',
     type: 'website',
@@ -23,7 +25,7 @@ export const metadata = {
   twitter: {
     card: 'summary',
     title: 'Best AI Tools for Students 2026 | ExamUdaan',
-    description: '114+ free AI tools for MPSC & exam preparation — note-making, PDF chat, math & more.',
+    description: '124+ free AI tools for MPSC & exam preparation — note-making, PDF chat, math & more.',
   },
 }
 

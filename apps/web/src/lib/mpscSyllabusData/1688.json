@@ -1,0 +1,129 @@
+{
+  "docId": 1688,
+  "examName": "Inspector Certified School and Institutions, Organisation and Methods Officer, Lecturer etc, GSS, Gr-B",
+  "examNameMr": "प्रमाणित शाळा व संस्था निरीक्षक, पद्धती अधिकारी, प्राध्यापक इ., म.रा.से., गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Inspector Certified School and Institutions, Organisation and Methods Officer, Lecturer etc, GSS, Gr-B",
+      "paperTitleMr": "प्रमाणित शाळा व संस्था निरीक्षक, पद्धती अधिकारी, प्राध्यापक इ., म.रा.से., गट-ब",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Teaching Methodology",
+          "unitTitleMr": "अध्यापन पद्धती",
+          "topics": [
+            "Teaching: Nature, objectives, characteristics and basic requirements",
+            "Learner's characteristics",
+            "Factors affecting teaching",
+            "Methods of teaching",
+            "Teaching aids",
+            "Evaluation systems",
+            "Research: Meaning, characteristics and types",
+            "Steps of research",
+            "Methods of research",
+            "Research ethics",
+            "Thesis, article, workshop, seminar, conference and symposium",
+            "Paper writing and its characteristics and format",
+            "Reading comprehension",
+            "Communication: Nature, characteristics, types, barriers and effective communication"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Data Interpretation and Information Technology",
+          "unitTitleMr": "आकडेवारीचा अर्थबोध व माहिती तंत्रज्ञान",
+          "topics": [
+            "Sources of data, acquisition and interpretation",
+            "Quantitative and qualitative data",
+            "Graphical representation and mapping of data",
+            "Information and Communication Technology (ICT): Meaning, advantages, disadvantages and uses",
+            "General abbreviations and terminology",
+            "Basics of Internet and E-mail"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "People and Environment",
+          "unitTitleMr": "लोकसमुदाय आणि पर्यावरण",
+          "topics": [
+            "People and environment interaction",
+            "Sources of pollution",
+            "Pollutants and their impact on human life",
+            "Exploitation of natural and energy resources",
+            "Natural hazards and mitigation measures"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Higher Education System: Governance, Polity and Administration",
+          "unitTitleMr": "उच्च शिक्षण पद्धती: शासन, राजकारण आणि प्रशासन",
+          "topics": [
+            "Structure of higher learning and research institutions in India",
+            "Formal and distance education; professional/technical and general education; value education; governance, polity and administration; concept, institutions and their interaction"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Home Science and Human Development",
+          "unitTitleMr": "गृह विज्ञान आणि मानव विकास",
+          "topics": [
+            "Nutritional science: Basic components of nutritious diet, biochemistry of nutrition, preventive microbiology, public health nutrition, dietetics",
+            "Human development: Child development principles and stages, lifespan development theories, child-rearing and socialization methods, pre-natal care and education",
+            "Problems of development in childhood and adolescence, guidance and counseling, remedial teaching and evaluation",
+            "Women's studies, family welfare programmes, child and human development: human rights perspective, theories of human development, pre-natal care and development, programmes for special categories of children (working children, street children, victims of abuse, chronically ill children)",
+            "Socialization across cultures, assessment of children"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Social Work",
+          "unitTitleMr": "समाज कार्य",
+          "topics": [
+            "Human growth and development throughout the life span",
+            "Personality development and socialization",
+            "Concept and causal factors of Indian social problems",
+            "Intervention in social problems at micro and macro levels by government and non-government efforts",
+            "Role of social workers in identifying social problems and developing appropriate policies",
+            "Demographic and social changes in families, women, youth, elderly and children",
+            "Problems of families, women, youth, elderly and children in India",
+            "Social legislations for families, women and children",
+            "National and international policies, programmes and services of governmental and non-governmental organizations",
+            "Social work intervention for families, children, women, youth and special groups"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "General Studies - Current Events",
+          "unitTitleMr": "सामान्य अध्ययन - चालू घडामोडी",
+          "topics": [
+            "Political, industrial, economic, social, educational, physical, geographical, demographic, cultural and scientific developments in India"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "General Studies - Intelligence Tests",
+          "unitTitleMr": "सामान्य अध्ययन - बुद्धिमपन विषयक प्रश्न",
+          "topics": [
+            "Tests to measure how quickly and accurately the candidate can think"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

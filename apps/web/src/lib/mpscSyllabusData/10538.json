@@ -1,0 +1,183 @@
+{
+  "docId": 10538,
+  "examName": "Associate Professor (Information Technology) Maharashtra Engineering Teachers’ Service, Group-A Higher and Technical Education Department - Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Associate Professor (Information Technology) Maharashtra Engineering Teachers’ Service, Group-A Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Computational Methods",
+          "unitTitleMr": null,
+          "topics": [
+            "Statistics and Probability: Moments, Skewness and Kurtosis, Probability, conditional probability, various theoretical distributions like binomial, normal, log-normal, Poisson, gamma distribution, Pearson type I/II distribution test of significance, Gumbel distribution, testing of hypotheses – Large sample tests for mean and proportion, Chi-square test, errors, types of errors.",
+            "Regression and Correlation: Regression and correlation – rank correlation – multiple and partial correlation – analysis of variance-one way and two way classifications – experimental design – Latin square design.",
+            "Transforms: Laplace Transformer: LT of standard function, inversions and their application in Computer Engineering.",
+            "Fourier Transformer: Fourier integral, Fourier transform and their application in Computer Engineering"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Data Structure and Algorithms",
+          "unitTitleMr": null,
+          "topics": [
+            "Arrays, linked lists, stacks, queues, binary trees, hashing, graphs, sorting & searching techniques.",
+            "Properties of sparse matrices, Linked list representation of sparse matrices.",
+            "Properties of threaded trees, insertion, deletion and traversal.",
+            "Properties of AVL trees, rotations, insertion and deletion.",
+            "Properties of red-black trees, rotations, insertion and deletion.",
+            "Definition of B-trees, basic operations on B-trees, deleting a key from a B-tree.",
+            "Properties of Min-max heaps, building a heap, basic operations on heaps, application of min-max heaps."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Database Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Concurrency & Recovery Management in Centralized DBMS, Concept of Transaction and its properties, Scheduling of transactions, Conflict operations, Two Phase Locking protocol, Recovery management in Centralized DBMS.",
+            "Distributed DBMS: Concepts and design, functions and architecture of a DDBMS, distributed relational database design.",
+            "Transparencies in a DDBMS, Date’s twelve rules for a DDBMS, Distributed transaction management, distributed concurrency control, distributed deadlock management, distributed database recovery, Replication servers, and Distributed query optimization, Mobile databases."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Information Retrieval",
+          "unitTitleMr": null,
+          "topics": [
+            "Taxonomy of Information Retrieval models, Classic Information Retrieval, Alternate set: Theoretical model, Alternative Algebraic models, Alternative Probabilistic models structured text Retrieval models, Models for browsing.",
+            "Query and Operations in Information Retrieval: Query structures, Keyboard based querying, Pattern matching, structured queries User relevance feedback, Automatic local analysis, Automatic global analysis.",
+            "Indexing and Scoring in Information Systems: Introduction, Inverted Files, Other Indices for Text, Boolean queries and Introduction to Sequential searching, Scoring, term weighting and the vector space model, Parametric and zone indexes, Weighted zone scoring, Learning weights, The optimal weight, Term frequency and weighting, Inverse document frequency, Tf-idf weighting.",
+            "The vector space model for scoring, Queries as vectors, computing vector scores, efficient scoring and ranking, In exact top K document retrieval.",
+            "Applications of Information Retrieval Systems: Multimedia Information Retrieval, Distributed Information Retrieval."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Computer Architecture",
+          "unitTitleMr": null,
+          "topics": [
+            "Fundamentals of computer design, instruction set principles and examples, pipelining, advanced pipelining and instruction-level parallelism, memory-hierarchy design and survey of design issues in storage, interconnection network and multiprocessor systems.",
+            "Quantitative Measure of Performance for Evaluation of Designs, Instruction Set Architecture: Principles and Examples.",
+            "Process Design: Data path and control units.",
+            "Pipelining: Advanced design technologies and hazards, Instruction-level parallelism.",
+            "Memory subsystems: Caches.",
+            "Input/Output subsystems: Interfacing I/O to CPU/OS.",
+            "Architectural support for security."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Software Project Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Characteristics of a software project, Software scope and feasibility, resources, the SPM plan.",
+            "Size/scope estimation, Decomposition techniques, WBS, Sizing, Function point, LOC, FP vs LOC.",
+            "GANTT Charts, Activity networks, PERT/CPM networks, COCOMO I, COCOMO II models.",
+            "Quality control, Quality assurance, Formal Technical Reviews, The SQA Plan, ISO and CMM standards.",
+            "Reactive vs. proactive Risk strategies, Risk projection, Risk Refinement, Risk Monitoring, Monitoring and management, RMMM plan, Earned Value Analysis.",
+            "Team structures: hierarchical, Egoless, chief programmer, mixed; Team software Process; Resource leveling, Building a team: Skill sets.",
+            "Configuration Management: Baselines, Configurable items, SCM repository, SCM process, version control change control, configuration audit, Project Monitoring and Control - Audits and Reviews."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Computer and Network Security",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction to computer and Network Security, Security policies and security standards, Basic cryptography, Crypto-analysis.",
+            "Digital certificate creation and signing, PKI, Use of digital certificates in secure email and web system mutual authentication.",
+            "Network Attacks, Penetration Testing, Backtrack tool set, Nessus network scanner, and Metasploit, Buffer Overflow attacks and defense.",
+            "Network Defenses, Firewalls, IP tables, IDS, Snort, DDoS and Autonomous Anti-DDoS Defense.",
+            "Access Control, Multilevel Security, SELinux, Privilege Management."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Soft Computing Techniques",
+          "unitTitleMr": null,
+          "topics": [
+            "Neural Networks History, overview of biological Neuro-system, Mathematical Models of Neurons, ANN architecture, Learning rules, Learning Paradigms - Supervised, Unsupervised and reinforcement Learning, ANN training Algorithms - perceptions, Training rules, Delta, Back Propagation Algorithm, Multilayer Perceptron Model, Hopfield Networks, Associative Memories, Applications of Artificial Neural Networks.",
+            "Introduction to Fuzzy Logic, Classical and Fuzzy Sets: Overview of Classical Sets, Membership Function, Fuzzy rule generation, Fuzzy Sets: Compliment, Intersections, Unions, Combinations of Operations, Aggregation Operations, Fuzzy Arithmetic, Fuzzy Numbers, Linguistic Variables, Arithmetic Operations on Intervals & Numbers, Lattice of Fuzzy Numbers, Fuzzy Equations.",
+            "Introduction of Neuro-Fuzzy Systems, Architecture of Neuro Fuzzy Networks, Application of Fuzzy Logic: Medicine, Economics etc.",
+            "An Overview of Genetic Algorithms (GAs), GA operators, GA in problem solving, Implementation of GA."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Artificial Intelligence",
+          "unitTitleMr": null,
+          "topics": [
+            "A.I. Representation, Non-AI & AI Techniques, Representation of Knowledge.",
+            "Uninformed Search Methods: Depth First Search, Breadth First Search, Depth Limited Search, Iterative Deepening Depth First Search, Bidirectional Search, Comparison of Uninformed search Strategies.",
+            "Informed Search Methods: Generate & test, Hill Climbing, Best First Search, A* and AO* Algorithm, Constraint satisfaction, Means Ends Analysis, Game playing: Minimax Search, Alpha-Beta Cut offs, Waiting for Quiescence.",
+            "Logical Agents: Knowledge based agents, Wumpus world. Propositional Logic: Representation, Inference, Reasoning Patterns, Resolution, Forward and Backward Chaining. First order Logic: Representation, Inference, Reasoning Patterns, Resolution, Forward and Backward Chaining.",
+            "Knowledge Base Systems, State Space Search, Production Systems, Problem Characteristics, Types of production systems, Turing Test.",
+            "Intelligent Agents: Agents and Environments, concept of rationality, the nature of environments, structure of agents, problem solving agents, problem formulation. Formulation of problems: Vacuum world, 8 queens, Route finding, robot navigation."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Augmented Reality & Virtual Reality",
+          "unitTitleMr": null,
+          "topics": [
+            "Defining Virtual Reality, History of VR, Human Physiology and Perception, Key Elements of Virtual Reality Experience, Virtual Reality System, Interface to the Virtual World - Input & output - Visual, Aural & Haptic Displays, Applications of Virtual Reality.",
+            "Representation of the Virtual World, Visual Representation in VR, Aural Representation in VR and Haptic Representation in VR.",
+            "The Geometry of Virtual Worlds & The Physiology of Human Vision: Geometric Models, Changing Position and Orientation, Axis-Angle Representations of Rotation, Viewing Transformations, Chaining the Transformations, Human Eye, eye movements & implications for VR.",
+            "Visual Perception & Rendering: Visual Perception - Perception of Depth, Perception of Motion, Perception of Color, Combining Sources of Information Visual Rendering - Ray Tracing and Shading Models, Rasterization, Correcting Optical Distortions, Improving Latency and Frame Rates.",
+            "Augmented Reality: History of augmented reality, The Relationship Between Augmented Reality and Other Technologies - Media, Technologies, Other Ideas Related to the Spectrum Between Real and Virtual Worlds, applications of augmented reality.",
+            "Augmented Reality Concepts: How Does Augmented Reality Work? Concepts Related to Augmented Reality, Ingredients of an Augmented Reality Experience.",
+            "Augmented Reality Hardware: Hardware Displays – Audio Displays, Haptic Displays, Visual Displays, Other sensory displays, Visual Perception, Requirements and Characteristics, Spatial Display Model. Processors – Role of Processors, Processor System Architecture, Processor Specifications. Tracking & Sensors - Tracking, Calibration, and Registration, Characteristics of Tracking Technology, Stationary Tracking Systems, Mobile Sensors, Optical Tracking, Sensor Fusion.",
+            "Computer Vision for Augmented Reality: Marker Tracking, Multiple-Camera Infrared Tracking, Natural Feature Tracking by Detection, Simultaneous Localization and Mapping, Outdoor Tracking.",
+            "Augmented Reality Software: Introduction, Major Software Components for Augmented Reality Systems, Software used to Create Content for the Augmented Reality Application."
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Embedded System and Internet of Things",
+          "unitTitleMr": null,
+          "topics": [
+            "Embedded Systems: Architecture & Characteristics of ES, Types of Embedded systems, Examples of Embedded Systems. Embedded System On Chip (SOC). Components of ES: Hardware and software.",
+            "Hardware components of ES: Power supply: types, characteristics, selection criteria, Processing Unit, Input devices, Output Devices.",
+            "Embedded operating Systems: Operating Systems Concepts, Real time operating systems, and, Task Scheduling, Different OS tasks, Introduction to Real-Time Operating Systems, characteristics, selection criteria, bootloader: U-boot.",
+            "Sensors: Roles of Sensors & Actuators, Types of sensors, Active and passive, analog and digital, Contact and no-contact, Absolute and relative. Working of Sensors: Position, occupancy and motion, velocity and acceleration, force, pressure, flow, Acoustic, Humidity, light, radiation, temperature, chemical, biosensor, camera.",
+            "Development boards: Types of boards - Arduino, Raspberry pi, Beagle bone, ESP8266, selection criteria. Interfacing of sensors with development boards.",
+            "Internet of Things: Definition and characteristics of IoT, Technical Building blocks of IoT, Device, Communication Technologies, Data, Physical design of IoT, IoT enabling technologies, IoT Issues and Challenges - Planning, Costs and Quality, Security and Privacy, Risks.",
+            "Communication under IoT: IoT Protocols: MQTT, CoAP, XMPP and AMQP, IoT communication models, IoT Communication technologies: Bluetooth, BLE, Zigbee, Zwave, NFC, RFID, LiFi, Wi-Fi, Interfacing of wifi, RFID, Zigbee, NFC with development board.",
+            "Case Studies: Smart Home, Smart Agriculture, e-health, Smart cities, etc."
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Data Science",
+          "unitTitleMr": null,
+          "topics": [
+            "Defining data science and big data, Recognizing the different types of data, Gaining insight into the data science process.",
+            "Data Science Process: Overview, Different steps, Machine Learning Definition and Relation with Data Science.",
+            "Statistics: Describing a Single Set of Data, Correlation, Simpson’s Paradox, Some Other Correlational Caveats, Correlation and Causation.",
+            "Probability: Dependence and Independence, Conditional Probability, Bayes’s Theorem, Random Variables, Continuous Distributions, The Normal Distribution, The Central Limit Theorem.",
+            "Data Analysis Theory and Methods: Clustering – Overview, K-means - overview of method."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

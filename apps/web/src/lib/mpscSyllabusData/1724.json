@@ -1,0 +1,50 @@
+{
+  "docId": 1724,
+  "examName": "Lecturer in Medical Electronics, Government Polytechnic, Group - A",
+  "examNameMr": "वैद्यकीय इलेक्ट्रॉनिक्समधील व्याख्याता, शासकीय तंत्रनिकेतन, गट - अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer in Medical Electronics, Government Polytechnic, Group - A",
+      "paperTitleMr": "वैद्यकीय इलेक्ट्रॉनिक्समधील व्याख्याता, शासकीय तंत्रनिकेतन, गट - अ",
+      "totalMarks": 200,
+      "duration": "3 hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Engineering Mathematics and Core Medical Electronics Syllabus",
+          "unitTitleMr": "अभियांत्रिकी गणित आणि मूळ वैद्यकीय इलेक्ट्रॉनिक्स अभ्यासक्रम",
+          "topics": [
+            "Linear Algebra: Matrix Algebra, Systems of linear equations, Eigen values and Eigen vectors.",
+            "Calculus: Mean value theorems, Theorems of integral calculus, Evaluation of definite and improper integrals, Partial Derivatives, Maxima and minima, Multiple integrals, Fourier series, Vector identities, Directional derivatives, Line, Surface and Volume integrals, Stokes, Gauss and Green’s theorems.",
+            "Differential equations: First order equation (linear and nonlinear), Higher order linear differential equations with constant coefficients, Method of variation of parameters, Cauchy’s and Euler’s equations, Initial and boundary value problems, Partial Differential Equations and variable separable method.",
+            "Complex variables: Analytic functions, Cauchy’s integral theorem and integral formula, Taylor’s and Laurent’ series, Residue theorem, solution integrals.",
+            "Probability and Statistics: Sampling theorems, Conditional probability, Mean, median, mode and standard deviation, Random variables, Discrete and continuous distributions, Poisson, Normal and Binomial distribution, Correlation and regression analysis.",
+            "Numerical Methods: Solutions of non-linear algebraic equations, single and multi-step methods for differential equations.",
+            "Transform Theory: Fourier transform, Laplace transform, Z-transform.",
+            "Networks: Network graphs: matrices associated with graphs, incidence, fundamental cut set and fundamental circuit matrices. Solution methods: nodal and mesh analysis. Network theorems: superposition, Thevenin's and Norton’s maximum power transfer, Star-Delta transformation.",
+            "Analog Electronics: Characteristics of diodes, BJT, JFET and MOSFET, diode circuits. Transistors at low and high frequencies. Amplifiers, single- and multi-stage, Feedback amplifiers, Operational amplifiers, Instrumentation amplifier, Precision rectifier, V-to-I and I-to-V converter, Op-Amp based active filters, Oscillators and signal generators.",
+            "Digital circuits: Boolean algebra, logic gates, digital IC families (DTL, TTL, ECL, MOS, CMOS). Adders, multiplexers, de-multiplexers, decoders. Sequential circuits: latches and flip-flops, counters and shift-registers. ADCs, DACs. Microprocessor (8085) and interfacing with peripherals 8255 and 8259, and Microcontrollers (8051).",
+            "Communication Engineering and Signal and Image Processing: Introduction to components in communication system, noise amplitude modulation (AM) and frequency modulation (FM). Analog and Digital pulse modulation, digital transmission and multiplexing. Introduction to signals and systems with classification, z-transform, Laplace transform, DFT and FFT, Fourier series and Transform, Sampling theorem. Design IIR and FIR filters. Stability of system using control systems. Basics of Image processing, Image enhancement, segmentation and compression techniques.",
+            "Transducers for Medical Applications: Resistive, Capacitive, Inductive, piezoelectric and semiconductor transducers and their signal conditioning. Measurement of displacement, velocity and acceleration (translational and rotational), force. Measurement of temperature, pressure and flow. General requirements of transducers, Biosensors, ECG, EEG, EMG electrodes and macro and microelectrodes.",
+            "Biomedical Instrumentation: Basic Human Physiology, Circulatory, Respiratory, Excretory, Digestive, Nervous System and sensory organs. Signal characteristics of ECG, EEG, EMG, EOG, ERG. Diagnostic instruments ECG, EEG and EMG, patient monitoring system, Biotelemetry, Foetal monitoring system. Colorimeter, Spectrophotometer, Autoanalyser, Blood Cell counter, Blood Gas Analyzer, Blood flow meter, Pulmonary Function Analyzer, Audiometer, Cardiac Pacemaker, Defibrillator, Electrosurgical Unit, Physiotherapy equipment, Artificial Kidney Dialysis and Heart Lung Machine, Anaesthesia machine and LASERS in medicine and Patient Safety.",
+            "Medical Imaging: Generation and Production of X-rays, X-ray Machine, CT, MRI, NMR, Ultrasound, PET and SPECT. Detectors used in Nuclear Radiation. Gamma Camera, scintillation detectors."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

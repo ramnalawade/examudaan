@@ -1,0 +1,48 @@
+{
+  "docId": 6121,
+  "examName": "Administrative Officer and Assistant Administrative Officer in various departments Syllabus",
+  "examNameMr": "महाराष्ट्र नागरी सेवा (सेवेच्या सर्वसाधारण शर्ती) नियम,",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "departmental",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Administrative Officer and Assistant Administrative Officer in various departments Syllabus",
+      "paperTitleMr": "महाराष्ट्र नागरी सेवा नियम व लेखा विषयक बाबी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Maharashtra Civil Services Rules and Office Procedures",
+          "unitTitleMr": "महाराष्ट्र नागरी सेवा नियम व कार्यालयीन पद्धती",
+          "topics": [
+            "Maharashtra Civil Services (General Conditions of Service) Rules",
+            "Maharashtra Civil Services (Pay) Rules",
+            "Maharashtra Civil Services (Joining Time, Foreign Service, Suspension, Dismissal and Removal from Service) Rules",
+            "Maharashtra Civil Services (Leave) Rules",
+            "Maharashtra Civil Services (Pension) Rules",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules / Departmental Enquiry Handbook",
+            "Maharashtra Civil Services (Conduct) Rules",
+            "Accounts related matters",
+            "Seniority list matters",
+            "Office procedures",
+            "Administrative matters",
+            "Legal matters"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

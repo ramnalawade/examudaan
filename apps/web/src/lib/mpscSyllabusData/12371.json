@@ -1,0 +1,90 @@
+{
+  "docId": 12371,
+  "examName": "Registrar, Group-B, District Forum Food, Civil Supplies and Consumer Protection Department and Assistant Registrar, Group-B, Industrial Court Industry, Energy, Labour and Mining Department- Syllabus",
+  "examNameMr": "निबंधक, गट-ब, जिल्हा मंच, अन्न, नागरी पुरवठा आणि ग्राहक संरक्षण विभाग आणि सहाय्यक निबंधक, गट-ब, औद्योगिक न्यायालय, उद्योग, ऊर्जा, कामगार आणि खनिकर्म विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Registrar, Group-B, District Forum and Assistant Registrar, Group-B, Industrial Court - Syllabus",
+      "paperTitleMr": "निबंधक, गट-ब, जिल्हा मंच आणि सहाय्यक निबंधक, गट-ब, औद्योगिक न्यायालय - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Consumer Protection",
+          "unitTitleMr": "ग्राहक संरक्षण",
+          "topics": [
+            "The Consumer Protection Act, 2019",
+            "The Consumer Protection (Consumer Disputes Redressal Commissions) Rules, 2020",
+            "The Consumer Protection (Consumer Commission Procedure) Regulations, 2020"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Industrial and Labour Laws",
+          "unitTitleMr": "औद्योगिक आणि कामगार कायदे",
+          "topics": [
+            "Industrial Disputes Act, 1947 and The Industrial Disputes (Maharashtra) Rules, 1957",
+            "The Maharashtra Recognition of Trade Unions and Prevention of Unfair Labour Practices Act, 1971",
+            "The Payment of Gratuity Act, 1972",
+            "The Employee’s Compensation Act, 1923"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Maharashtra Civil Services Rules",
+          "unitTitleMr": "महाराष्ट्र नागरी सेवा नियम",
+          "topics": [
+            "Maharashtra Civil Services (General Conditions of Service) Rules, 1981",
+            "Maharashtra Civil Services (Joining Time, Foreign Service and Payments during Suspension, Dismissal and Removal) Rules, 1981",
+            "Maharashtra Civil Services (Leave) Rules, 1981",
+            "Maharashtra Civil Services (Pay) Rules, 1981",
+            "Maharashtra Civil Services (Conduct) Rules, 1979 and Maharashtra Civil Services (Discipline and Appeal) Rules, 1979",
+            "Maharashtra Civil Services (Pension) Rules, 1982",
+            "Maharashtra Civil Services (Commutation of Pension) Rules, 1984",
+            "Maharashtra Civil Services (Declaration of Small Family) Rules, 2005",
+            "Maharashtra Civil Services (Seniority Regulations) Rules, 1982"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "General Acts and Legal Procedures",
+          "unitTitleMr": "सामान्य कायदे आणि कायदेशीर प्रक्रिया",
+          "topics": [
+            "Indian Contract Act, 1872",
+            "Right to Information Act, 2005",
+            "Bharatiya Nyaya Sanhita, 2023 with special focus on Sections 128 to 132 of Chapter VI, Sections 198 to 205 of Chapter XII, Sections 206 to 226 of Chapter XIII and Sections 335 to 357 of Chapter XVIII",
+            "Bharatiya Sakshya Adhiniyam, 2023 with special focus on Chapter I to VI",
+            "Bharatiya Nagarik Suraksha Sanhita, 2023 with special focus on Chapter VI and XXII",
+            "The Code of Civil Procedure, 1908 with special focus on sections 36 to 74 of Part II and Order XXI"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Aptitude and Language",
+          "unitTitleMr": "अभियोग्यता आणि भाषा",
+          "topics": [
+            "Analytical and Logical reasoning",
+            "English - Common Vocabulary, Sentence Structure, Grammar, Use of Idioms and Phrases and their meaning etc."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever Acts/Rules/Regulations are mentioned in syllabus, latest amendments/versions to be considered."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "docId": 1660,
+  "examName": "Deputy Director, Industrial Safety and Health, Group-A",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Industrial Safety and Health (Screening Test)",
+      "paperTitleMr": null,
+      "totalMarks": 150,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "SECTION-A",
+          "unitTitleMr": null,
+          "topics": [
+            "Salient features of the Factories Act, 1948 and Maharashtra factories Rules, 1963.",
+            "Salient features of Manufacture, Storage and Import of Hazardous Chemicals Rules, 1989 and Chemical Accidents (Emergency, Planning, Preparedness and Response) Rules, 1996.",
+            "Salient features of Workmen's Compensation Act 1923, Public Liability Insurance Act, 1991, and Environment Protection Act, 1986.",
+            "Identification of Hazard, Assessment and Control of Risk-Hazard Assessment Techniques, Safety Audit, Safety Report, Vulnerability Analysis, Maximum Credible Loss Scenario Reports, Event Tree Analysis, Fault Tree Analysis, Failure Mode and Effect Analysis, etc. Disaster Management Plans-on Site / off Site.",
+            "Statutory provisions to be adopted while designing and fabricating and maintaining machinery/plants and site appraisal of any factory.",
+            "Lessons learnt from various National and International disasters.",
+            "Impact of Liberalization Privatization and globalization on Industrial Safety and Health. Various means of creating Safety Awareness-involvement of N.G.O.s and other agencies for this purpose."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "SECTION-B (Group 1 Mechanical Engineering)",
+          "unitTitleMr": null,
+          "topics": [
+            "Design Engineering: Strength of Materials: Stress and strain, stress-strain relationship and elastic constants, thin cylinders, shear force and bending moment diagrams, bending and shear stresses, deflection of beams, torsion of circular shafts.",
+            "Vibrations: Free and forced vibration of single degree of freedom systems, effect of damping, vibration isolation, resonance, critical speeds of shafts.",
+            "Design: Design for static and dynamic loading, failure theories, fatigue strength and the S-N diagram.",
+            "Testing of various types of pressure vessels and safety relief systems, hoist tackles, solvent extraction plants, etc.",
+            "Thermal Engineering: Heat-Transfer: Modes of Heat Transfer, One-dimensional heat conduction, Thermal Insulation, dimensionless parameters in free and forced convective heat transfer, Thermic Fluids, Fire Protection Devices, Heat Exchanger Performance, LMTD Radiative heat transfer, black and grey surfaces, shape factors.",
+            "Thermodynamics: Zeroth, First and Second laws of thermodynamics, Carnot cycle, Steam Tables, Rankine, Brayton cycles, Boilers, Boiler mountings and Accessories.",
+            "I.C. Engines: air-standard Otto, Diesel cycles. Refrigeration and air-conditioning: Vapour refrigeration cycle, psychrometric chart and basic psychrometric processes.",
+            "Fluid Mechanics: Fluid properties, differential equations of continuity and momentum, Bernoulli’s equation, flow through pipes, head losses in pipes, bends, etc.",
+            "Turbomachinery: Pelton-wheel, Francis and Kaplan turbines—impulse and reaction principles.",
+            "Manufacturing: Engineering Materials: Structure and properties of engineering materials, heat treatment.",
+            "Metal Casting: Design of patterns, moulds and cores, solidification and cooling, riser and gating design. Joining: Physics of welding, brazing and soldering.",
+            "Machining and Machine Tool Operations: Mechanics of machining, single and multi-point cutting tools, tool geometry and materials, tool life and wear, jigs and fixtures.",
+            "Production Planning and Control: Forecasting models, aggregate production planning, scheduling.",
+            "Inventory Control: Deterministic and probabilistic models, safety stock inventory control systems. Operations Research: network flow models, simple queuing models, PERT and CPM."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "SECTION-B (Group 2 Electrical, Electronics and Instrumentation and Control)",
+          "unitTitleMr": null,
+          "topics": [
+            "Electric and Electronic Circuits: Circuit Components, Circuit analysis, Analog and Digital Circuits, Filters and Amplifiers, ADCs, DACs, Semiconductor memories, Function generators and wave-shaping circuits, 555 Timers, Power supplies, Electrical Insulation, Protection of Electric Equipments.",
+            "Electrical Machines: Single phase transformer - equivalent circuit, phasor diagram, tests, regulation and efficiency, three phase transformers, DC machines, Single phase and Three phase induction motors, synchronous machines- types, generator characteristics, starting and speed control of motors, performance, and applications, servo and stepper motors, DG Sets.",
+            "Power Systems: Basic power generation concepts, transmission line models and performance, cable performance, insulation, corona and radio interference, distribution systems, per-unit quantities, bus impedance and admittance matrices, load flow, voltage control, power factor correction, fault analysis, principles of over-current, differential and distance protection, solid state relays and digital protection, circuit breakers, system stability concepts.",
+            "Control Systems: Basic control system components, block diagrams, Open loop and closed loop systems and stability analysis, Signal flow graphs, Tools and techniques for LTI control system analysis: root loci, Routh-Hurwitz criterion, Bode and Nyquist plots, Control system compensators, PID control.",
+            "Electrical and Electronic Measurements: Bridges and potentiometers, PMMC, moving iron, dynamometer and induction type instruments, measurement of voltage, current, power, energy and power factor, instrument transformers, digital voltmeters and multi-meters, phase, time and frequency measurement, Q-meters, oscilloscopes, Serial and parallel communication, Shielding and grounding, error analysis."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "SECTION-B (Group 3 Chemical Engineering)",
+          "unitTitleMr": null,
+          "topics": [
+            "Process Calculations and Thermodynamics: First and Second laws of thermodynamics, Thermodynamic properties of pure substances, Equations of state and departure function, properties of mixtures, partial molar properties, fugacity, excess properties and activity coefficients, phase equilibria and predicting VLE of systems.",
+            "Fluid Mechanics and Mechanical Operations: Fluid statics, Newtonian and non-Newtonian fluids, Bernoulli equation, Macroscopic friction factors, flow through pipeline systems, flow meters, pumps and compressors, packed and fluidized beds, elementary boundary layer theory, size reduction and size separation, free and hindered settling, centrifuge and cyclones, thickening and classification, filtration, mixing and agitation, conveying of solids.",
+            "Heat-Transfer: Modes of Heat Transfer, One-dimensional heat conduction, Thermal Insulation, dimensionless parameters in free and forced convective heat transfer, Thermic Fluids, Fire Protection Devices, Heat Exchanger Performance, LMTD, Radiative heat transfer, black and grey surfaces, shape factors.",
+            "Mass Transfer: Fick’s laws, molecular diffusion in fluids, mass transfer coefficients, film, penetration and surface renewal theories, momentum, heat and mass transfer analogies, stagewise and continuous contacting and stage efficiencies, HTU & NTU concepts, design and operation of equipment for distillation, absorption, leaching, liquid-liquid extraction, drying, humidification, dehumidification and adsorption.",
+            "Chemical Reaction Engineering: Chemical reaction equilibria, Theories of reaction rates, kinetics of homogeneous reactions, interpretation of kinetic data, single and multiple reactions in ideal and non-ideal reactors, residence time distribution, non-isothermal reactors, kinetics of heterogeneous catalytic reactions, diffusion effects in catalysis, heat of reaction/mixing.",
+            "Instrumentation and Process Control: Measurement of process variables, sensors, transducers and their dynamics, transfer functions and dynamic responses of simple systems, process reaction curve, controller modes (P, PI, PID), control valves, analysis of closed loop systems including stability, frequency response and controller tuning, cascade, feed forward control.",
+            "Chemical Hazards: Industrial hygiene and safety aspects related to toxicity, Explosions including dust, vapour cloud, and mist explosions, Hazardous chemicals inventory, Steam heating systems, Thermic heating systems, Vacuum system, Combustion of Fuels.",
+            "Strength of Materials: Stresses and strains, Advanced materials and composites, Material and Safety data sheets, Heat of reactions/mixing/solution, explosion limits, fire and explosion index."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Candidates should attempt Section-A and any one group from Section-B."
+  ]
+}

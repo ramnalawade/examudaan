@@ -1,0 +1,256 @@
+{
+  "docId": 1587,
+  "examName": "Maharashtra Town Planning And Valuation Service",
+  "examNameMr": "महाराष्ट्र नगर रचना आणि मूल्य निर्धारण सेवा",
+  "conductingBody": "MPSC",
+  "year": 2018,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Related to the Subject",
+      "paperTitleMr": "विषयाशी संबंधित",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Studies and Science & Engineering",
+          "unitTitleMr": "सामान्य अभ्यास आणि विज्ञान व अभियांत्रिकी",
+          "topics": [
+            "Current events of national and international importance - Political, Industrial, Economic, Social, Educational, Geographical, Astronomical, Cultural, Scientific, etc.",
+            "Right to Information Act, 2005",
+            "Scientific Knowledge: Nature of Science, Pre-suppositions of Science, Scientific method.",
+            "Modernisation and Science: What is Modernisation (Definition of Modernisation), Type and Nature of Modernisation, Modernisation and Indian Society (Problems and remedies)",
+            "Scientific and Technological Developments (The World over, particularly in India)",
+            "Effects of Technological Developments on Urban and Rural Life",
+            "Various Indian Problems And Their Scientific Solutions (Energy problem, Food grains problem, Population problem, Environment Problem, Educational problem, Housing problem, Transport problem, Communication problem, Public Health problem etc.)"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Regional Plan (R.P)",
+          "unitTitleMr": "प्रादेशिक योजना",
+          "topics": [
+            "Need of contents of Regional Plan",
+            "Regional Delimitation",
+            "Surveys necessary for Regional Plan",
+            "Analysis and Projections",
+            "Necessary Steps for starting and ending the process of Regional Planning",
+            "Relation with the State plan and surroundings"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Development Plan (D.P)",
+          "unitTitleMr": "विकास योजना",
+          "topics": [
+            "Surveys, types, duration etc.",
+            "Analysis and Projections",
+            "Demographic Projections",
+            "Goals and objectives, Public Participation",
+            "Implementation and Financial Aspects",
+            "Delineation",
+            "Relation with R.P.",
+            "Content of DP and Planning norms",
+            "Modifications, purchase notice",
+            "Legal and Administrative process to start D.P."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Town Planning Scheme",
+          "unitTitleMr": "नगर रचना योजना",
+          "topics": [
+            "Concept of T.P.S",
+            "Legal Provision",
+            "Relation with D.P.",
+            "Original Plot, Final Plot, Semi-final Plot",
+            "Incremental Contribution (Betterment charge)",
+            "Rational for charging Incremental Contribution",
+            "Function of Arbitrator",
+            "Advance Possession",
+            "Amenities, Partially beneficial",
+            "Cost of Scheme"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Building Permission",
+          "unitTitleMr": "इमारत परवानगी",
+          "topics": [
+            "Building byelaws",
+            "Development",
+            "Document Required for development permission",
+            "Measurement Plan",
+            "Layout of Land",
+            "F.S.I, TDR",
+            "Development charge",
+            "Exemption from development permission",
+            "Matters to be considered while granting development permission",
+            "Appeal under refusal of Building"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Special Townships",
+          "unitTitleMr": "विशेष टाउनशिप",
+          "topics": [
+            "Special Township Policy",
+            "Land requirement, procedures for locational clearance, salient feature",
+            "Responsibilities of developer"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Transportation",
+          "unitTitleMr": "वाहतूक",
+          "topics": [
+            "Surveys",
+            "Classification of Roads",
+            "Design and grade separation",
+            "P.C.U.S.",
+            "Public transport needs",
+            "Requirement of civil aviation and Railways"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Environment Aspects",
+          "unitTitleMr": "पर्यावरणीय पैलू",
+          "topics": [
+            "Environment Protection Acts",
+            "Global Warming",
+            "Eco-sensitive Zone",
+            "Polluter Pay Principles"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Village Plan",
+          "unitTitleMr": "ग्राम योजना",
+          "topics": [
+            "Surveys",
+            "Water supply, drainage",
+            "Solid waste Management",
+            "Connectivity",
+            "Central and State Scheme related village development and plans"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Acts and Rules",
+          "unitTitleMr": "अधिनियम आणि नियम",
+          "topics": [
+            "Municipal Act",
+            "MR and TP Act 1966",
+            "LA Act 1894",
+            "MLR code",
+            "Environment Act",
+            "Bombay Stamp Act"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Value, Cost, Price",
+          "unitTitleMr": "मूल्य, किंमत",
+          "topics": [
+            "Purposes of valuation",
+            "Special Characteristics of landed property",
+            "Supply of landed property",
+            "Demand for landed property",
+            "Interest in landed property"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Capital Value & Rental Value",
+          "unitTitleMr": "भांडवली मूल्य आणि भाडे मूल्य",
+          "topics": [
+            "Rack rent",
+            "Standard rent",
+            "Lease rent"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Valuation Table",
+          "unitTitleMr": "मूल्यमापन तक्ता",
+          "topics": [
+            "Meaning & utilities of Valuation Tables",
+            "Remuneration rate of Interest",
+            "Accumulation rate of Interest",
+            "Amount of Rs. 1/-",
+            "Present value of Rs. 1/-",
+            "Amount of Rs. 1/- p.a.",
+            "Annual of sinking fund",
+            "Present value of Rs. 1/- p.a.",
+            "Annuity of Rs. 1/-",
+            "Single rate & dual rate Tables"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Methods of Valuation",
+          "unitTitleMr": "मूल्यमापनाच्या पद्धती",
+          "topics": [
+            "Comparative methods",
+            "Market approach method",
+            "Contractors method",
+            "Investment method",
+            "Belting method",
+            "Value of land in undeveloped stage"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Value of Agricultural land (Paranjape Committee report)",
+          "unitTitleMr": "शेतीच्या जमिनीचे मूल्य (परांजपे समिती अहवाल)",
+          "topics": [
+            "Types of crops",
+            "Yield",
+            "Gross income",
+            "Total deductions",
+            "Capitalization"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Annual Statement of Rates",
+          "unitTitleMr": "दरचे वार्षिक स्टेटमेंट",
+          "topics": [
+            "True Market Value",
+            "Procedure for preparing annual Statement of rates",
+            "Bagayat land, jeerayat land, sharpad land",
+            "Valuation for bulk land"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Land Acquisition",
+          "unitTitleMr": "भूसंपादन",
+          "topics": [
+            "Eminent domain",
+            "Public purpose joint measurement",
+            "Material date of valuation",
+            "Severance of injurious affection",
+            "Draft L. A. Bill 2011 before parliament",
+            "Matters to be considered while granting compensation",
+            "Matters to be neglected while deciding amount of compensation",
+            "Solatium"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

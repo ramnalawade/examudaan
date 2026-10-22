@@ -1,0 +1,28 @@
+{
+  "docId": 1652,
+  "examName": "Assistant Project Officer / Research Officer, Gr.-B (Class-II)",
+  "examNameMr": "सहाय्यक प्रकल्प अधिकारी / संशोधन अधिकारी, गट-ब (वर्ग-२)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "other",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Project Officer / Research Officer, Gr.-B (Class-II)",
+      "paperTitleMr": "सहाय्यक प्रकल्प अधिकारी / संशोधन अधिकारी, गट-ब (वर्ग-२)",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

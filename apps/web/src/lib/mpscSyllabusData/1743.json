@@ -1,0 +1,70 @@
+{
+  "docId": 1743,
+  "examName": "Statistical Officer and Research Assistant in M.C.G.M.",
+  "examNameMr": "सांख्यिकी अधिकारी / संशोधन सहायक, बृहन्मुंबई महानगरपालिका, महापालिका वरिष्ठ सेवा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination - 200 marks, Interview - 50 marks",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies, Aptitude Test and Statistics",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धीमापन चाचणी आणि सांख्यिकी",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Studies",
+          "unitTitleMr": "सामान्य अध्ययन",
+          "topics": [
+            "History of India with special reference to Maharashtra",
+            "Geography of India with special reference to Maharashtra",
+            "Indian Polity, State Government and Local Government (Rural and Urban), Structure, Rights and Duties",
+            "Indian Economy",
+            "General Science",
+            "National and International Current Affairs"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धीमापन चाचणी",
+          "topics": [
+            "Logical reasoning and mental ability tests"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Statistics",
+          "unitTitleMr": "सांख्यिकी",
+          "topics": [
+            "Data Collection: Type of data, Quantitative and Qualitative data, Data for univariate and multivariate cases, Sources of data collection - Primary and Secondary Sources",
+            "Presentation of Data: Preparation of frequency tables - Univariate, Bivariate and Multivariate; Diagrammatic and Graphical presentation of data and its interpretation (Histogram, Ogives, Frequency Curve)",
+            "Elementary Statistical Methods: Measures of Central tendency - Arithmetic Mean, Geometric Mean, Harmonic Mean, Median, Mode, Quartiles, Deciles, Percentiles; Measures of Dispersion - Absolute and Relative measures - Range, Quartile Deviation, Variance, Standard Deviation and Coefficient of variation; Concepts of skewness and Kurtosis; Correlation and Regression",
+            "Probability: Concept of probability, Elementary laws of probability, Conditional probability, Bayes Theorem, Theory of Expectations; Theoretical Probability Distributions - Binomial, Poisson and Normal",
+            "Theory of Statistical Inference: Theory of Estimation - Point Estimation and Interval Estimation - Concept of an Estimator, Desirable properties of an estimator, Methods of Estimation - Ordinary Least square method, Maximum Likelihood Method, Statement of Gauss Markov Theorem; Hypothesis Testing: Simple and composite Hypothesis, Technique of testing of Hypothesis, Small and Large sample tests - t, Normal, Z and F tests contingency Tables",
+            "Interpretation of Linear Models: Models with one and more explanatory variables, Significance of regression coefficients, Goodness of fit",
+            "Sampling Methods: Simple Random Sampling, Stratified Random Sampling, Systematic Sampling, Cluster Sampling, Multistage Sampling, use of auxiliary information",
+            "Index Numbers and Time Series: Index Numbers - Types of Index Numbers - Price, Quantity and Cost of living, Methods of construction of Index Numbers; Time Series Analysis - Components of a time series : Trend, Seasonal variation, Cyclical variation, random variation, Fitting of trend - Moving Average method, Least square method",
+            "Statistical Organizations in India: Central Statistical Organization, National Sample Survey Organization, State Directorate of Economics and Statistics, The Reserve Bank of India, Registrar General of India, Types of data collected by them i.e. Population Census, Economics Census, Agricultural Census, Forest Statistics, Livestock Census, Industrial Statistics, Trade Statistics, Labour Statistics",
+            "Vital Statistics in India: Different Birth Rates and death rates, Gross and Net reproduction rates, Infant Mortality rate, Life tables",
+            "National Income Estimation: Methods of National Income estimation concepts: Gross Domestic Product, Net Domestic Product, Gross National Product and Net National Product"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Latest and recent developments in the above topics will also be expected from candidates."
+  ]
+}

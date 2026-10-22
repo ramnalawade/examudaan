@@ -1,0 +1,61 @@
+{
+  "docId": 1662,
+  "examName": "Deputy Director of Industries [Technical], Maharashtra Industries Services, Gr-A",
+  "examNameMr": "उद्योग उपसंचालक (तांत्रिक), महाराष्ट्र उद्योग सेवा, गट-'अ' चाळणी परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge & Departmental Related Subjects",
+      "paperTitleMr": "सामान्य ज्ञान व विभागाशी संबंधित घटक",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Knowledge",
+          "unitTitleMr": "सामान्य ज्ञान",
+          "topics": [
+            "Current events of national and international importance: Political, industrial, economic, social, educational, geographical, astronomical, cultural, scientific, etc.",
+            "Right to Information Act-2005",
+            "Human Rights and Responsibilities"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "General awareness of Industrial development and Government mechanism in place for industrial promotion",
+          "unitTitleMr": "औद्योगिक विकासाची सामान्य जाणीव आणि औद्योगिकीकरणास प्रोत्साहन देणारी शासकीय यंत्रणा",
+          "topics": [
+            "State & Central development Agencies: Directorate of Industries and District Industries Centres, Maharashtra Industrial Development Corporation, Maharashtra Small Scale Industries Development Corporation, Maharashtra Agro Industrial Development Corporation, Khadi & Village Industries Board, National Small Industries Corporation, Office of Development Commissioner (MSME), Secretariat for Industrial Assistance, Councils for Scientific & Industrial Research, Export promotion Councils, Bureau of Industrial & Financial Reconstruction, MSME Development Institutes, NABARD/SIDBI",
+            "Important promotional Acts & Rules: Industrial (Development & Regulation) Act, 1951; Micro, Small & Medium Enterprises Development Act, 2006; Mumbai Tenancy & Agricultural Lands Act, 1948; Sick Industrial Companies Act, 1985",
+            "State & Central Policies & Schemes: Maharashtra Industrial Policy, 2013; ICT Policy, 2009; Bio-Tech Policy, 2001; Grape Processing Policy, 2001; Industrial location Policy for Mumbai Metropolitan Region; Foreign Trade Policy; Special Economic Zone Act, 2005; National Manufacturing Competitiveness Programme; Package Scheme of Incentives; Rehabilitation of Sick units and Easy Exit Scheme; Employment Promotion Programme; Infrastructure and Cluster Development (ASIDE, IIUS, MSECDP); Foreign Direct Investment promotion measures; The Competition Act, 2002",
+            "Regulatory Acts / Agencies: Coastal Regulation Zone policy, Maharashtra River Regulation Zone Policy, Environment Protection Acts / Rules, Maharashtra Pollution Control Board, The Indian Factories Act, 1948, Maharashtra Standard of Weights & Measures (Enforcement) Rules, 1987; Standard of Weights & Measures (Packaged Commodities) Rules, 1977, Food & Drugs Administration Department"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Educational qualification (as per RR) related",
+          "unitTitleMr": "शैक्षणिक पात्रतेशी संबंधित",
+          "topics": [
+            "Basic science up to graduation level.",
+            "Basic technical knowledge of Mechanical and Electrical Engineering."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "अंतीम गुणवत्ता यादी ही लेखी परीक्षेतील व मुलाखतीतील एकत्रित गुणांवर आधारीत राहील."
+  ]
+}

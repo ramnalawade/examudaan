@@ -1,0 +1,53 @@
+{
+  "docId": 1674,
+  "examName": "Executive Engineer (Electrical) / Electrical Inspector, Gr-A",
+  "examNameMr": "कारकारी अभियंता (विद्युत )/ विद्युत निरीक्षक, गट - अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Executive Engineer (Electrical) / Electrical Inspector, Gr-A",
+      "paperTitleMr": "कारकारी अभियंता (विद्युत )/ विद्युत निरीक्षक, गट - अ",
+      "totalMarks": 200,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Studies and Information Technology",
+          "unitTitleMr": "सामान्य ज्ञान व माहिती अधिकार",
+          "topics": [
+            "General Knowledge: Current affairs of national and international importance including political, industrial, economic, social, educational, geographical, astronomical, cultural, and scientific developments.",
+            "Right to Information Act – 2005"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Electrical Engineering",
+          "unitTitleMr": "विद्युत अभियांत्रिकी",
+          "topics": [
+            "Energy Scenario: Commercial and Non-commercial energy, primary energy resources, commercial energy production, final energy consumption, Indian and Maharashtra energy scenario, sectoral energy consumption (domestic, industrial and other sectors). Energy conservation Act 2001 and its features, notifications under the Act, Schemes of Bureau of Energy Efficiency including Designated consumers, State Designated Agencies, Electricity Act 2003, Safety regulation 2010, Integrated energy policy, National action plan on climate change, National solar mission, Photovoltaic systems- Isolated and grid connected, Introduction to wind power generation.",
+            "Electric Circuits: Network graph, KCL, KVL, node and mesh analysis, sinusoidal steady-state analysis, basic filter concepts, ideal current and voltage sources, Thevenin's, Norton's, Superposition and Maximum Power Transfer theorems, Three phase circuits and three phase loads, balanced and unbalanced conditions.",
+            "Electrical Machines: Single phase transformer – equivalent circuit, phasor diagram, tests, regulation and efficiency; three phase transformers – connections, parallel operation, auto-transformer; energy conversion principles; DC machines – types, windings, generator characteristics, armature reaction and commutation, starting, braking and speed control of motors; three phase induction motors – principles, types, performance characteristics, starting, braking and speed control; single phase induction motors; synchronous machines – performance, regulation and parallel operation of generators, motor starting, characteristics and applications; servo and stepper motors.",
+            "Power Systems and Power Conditioning: Basic power generation concepts, transmission line models and performance, cable performance, insulation, corona and radio interference, distribution systems, per-unit quantities, bus impedance and admittance matrices, load flow, voltage control, power factor correction, economic operation, symmetrical components, fault analysis of symmetrical and unsymmetrical systems, principles of over-current, differential and distance protection, solid state relays and digital protection, circuit breakers, ratings and capacity, HVDC systems. AC-DC, DC-DC, DC-AC, AC-AC power converter topologies and devices generally used, power factor and power measurement in non sinusoidal circuits, sources of harmonics and its mitigation, power quality problems such as sag, swell, unbalance and their mitigation.",
+            "Electrical Measurements: Bridges and potentiometers, PMMC, moving iron, dynamometer and induction type instruments, analog and digital measurement of voltage, current, power, energy, and power factor, Power analysers, Energy managers, instrument transformers, digital voltmeters and multimeters, Megger, earth tester and low and high resistance meters and their specifications.",
+            "L.T. Distribution System: Typical layout of a 33/22/11/0.433 kv substation, component selection for indoor and outdoor installations, commissioning, LT panel design, RMU, Compact substation, Selection of busbars, mcbs, LT breakers, isolators, relays, CTs, ELCB, RCCB, Cable and wire types, sizing and erection for different locations, Earthing types and design, Lightning arrestor technologies, selection, Related Indian standards, Cable fault locaters and cable jointing.",
+            "Industrial Systems: HVAC and Refrigeration System - Refrigerants, coefficient of performance, capacity, factors affecting Refrigeration and Air conditioning system performance and savings opportunities. Vapor absorption refrigeration system: Working principle, types and comparison with vapor compression system and saving potential, heat pumps and their applications, section on ventilation system, ice bank system, performance assessment of window and split room air conditioners, Star labeled pumps, cold storage refrigeration, humidification system. Fans and blowers: Types, performance evaluation, efficient system operation, flow control strategies and energy conservation opportunities, pressure drop calculation. Pumps and Pumping System: Types, performance evaluation, efficient system operation, flow control strategies and energy conservation opportunities. Energy conservation in boiler feed water pump, lift irrigation schemes, pumping systems for municipal drinking water and sewerage, agriculture pump sets, sizing of pump. Lighting System: Light source, choice of lighting, luminance requirements, and energy conservation avenues. Light Emitting Diodes (LEDs), metal halides, fluorescent tube lights, Compact fluorescent lamps (CFL), labeling scheme, high efficiency street lighting, electronic ballast, occupancy sensors, energy efficient lighting controls, Lighting system design for different installations. Lifts: Preliminary knowledge of lift act and rules, safety equipments and parts in lift and their applications.",
+            "Power Back up: DG, UPS and Battery, Different technologies, specifications, sizing calculations, Maintenance and testing of batteries, Testing and commissioning."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

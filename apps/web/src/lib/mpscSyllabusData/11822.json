@@ -1,0 +1,166 @@
+{
+  "docId": 11822,
+  "examName": "Assistant Professor (Urdu) Maharashtra Education Service, Group-A and Lecturer (Urdu) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहायक प्राध्यापक (उर्दू) महाराष्ट्र शिक्षण सेवा, गट-अ आणि व्याख्याता (उर्दू) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Urdu) and Lecturer (Urdu) Syllabus",
+      "paperTitleMr": "सहायक प्राध्यापक (उर्दू) आणि व्याख्याता (उर्दू) अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "History of Urdu Language",
+          "unitTitleMr": "उर्दू भाषेचा इतिहास",
+          "topics": [
+            "A brief history of Indo-Aryans",
+            "Prakrit, Aapbhransh",
+            "Characteristics of Khadi Boli",
+            "Different Theories About the Origin of Urdu (Mohammed Husain Azad, Hafiz Mahmood Shirani, Naseeruddin Hashmi, Masood Husain Khan, Allama Syed Sulaiman Nadvi, Shaukat Sabzwari)",
+            "The early period of Urdu",
+            "Basic Alignment of Urdu structure",
+            "Linguistic of Deccani Urdu (Sabras, Qutub Mushtari, Quli Qutub Shah, Wali Aurangabadi, Siraj Aurangabadi)",
+            "Urdu and its Major Dialects",
+            "Linguistic Features of Urdu",
+            "Urdu Phonetics (Phonemes)",
+            "Urdu Morphology",
+            "Urdu Syntax",
+            "Urdu Semantics"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Urdu poetry genres",
+          "unitTitleMr": "उर्दू कविता प्रकार",
+          "topics": [
+            "Qaseeda: The art and evolution of the Qaseeda, Important Urdu poets and their Qaseedas (Mirza Mohammed Rafi Sauda, Shaikh Ibrahim Mohammed Zouq)",
+            "Masnavi: The art and evolution of Masnavi, Important Urdu Masnavi writers and their Masnavis (Nizam Bidari, Mulla Wajhi, Ibn-e-Nishati, Afzal Jhanjhanvi, Meer Hasan, Daya Shankar Naseem)",
+            "Marsiya: The Art Of evolution Of Marsiya, Important Urdu Marsiya Writers and their Marsiyas (Meer Babar Ali Anees, Mirza Salamat Ali Dabeer, Mirza Ghalib, Jameel Mazhari)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Urdu Ghazal",
+          "unitTitleMr": "उर्दू गझल",
+          "topics": [
+            "The art and evolution of Ghazal",
+            "Important Urdu Ghazal poets and their poetry (Wali, Siraj, Meer, Ghalib, Momin, Shaad Azimabadi, Hasrat Mohani, Fani badayuni, Jigar Moradabadi, Asghar Gondvi, Yagana Changezi, Firaq Gorakhpuri, Majrooh Sultanpuri, Kaleem Aajiz, Shaheryar, Irfan Siddiqui)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Urdu Nazm",
+          "unitTitleMr": "उर्दू नझम",
+          "topics": [
+            "Genre identification of Nazm",
+            "The beginning and development of Nazm in urdu",
+            "Important Urdu Poets and their Nazm (Nazeer Akbarabadi, Mohammed Husain Azad, Altaf Hussain Hali, Ismail Merathi, Akbar Allhabadi, Brij Narayan Chakbast, Allama Iqbal, Josh Malihabadi, Meeraji, Faiz Ahmed Faiz, Akhtar ul Iman, Makhdoom Mohiuddin, Noon Meem Rashid, Sahir Ludhianvi, Shafiq Fatima)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Urdu Dastan and Drama",
+          "unitTitleMr": "उर्दू दास्तान आणि नाटक",
+          "topics": [
+            "The art and tradition of Dastan",
+            "Important Urdu Dastango and their Dastans (Mulla wajhi, Fazl ali fazli, Insha Allah Khan, Meer Aman, Rajab Ali Baig Suroor, Meer Mohammed Taqi Khayal)",
+            "The art of drama and its origin and evolution",
+            "Important Urdu Drama Writers and their Dramas (Amanat Lakhnavi, Agha Hashar Kashmiri, Imtiyaz Ali Taj, Habib Tanvir, Mohammed Hasan, Krishan Chander)"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Novel and Short Story",
+          "unitTitleMr": "कादंबरी आणि लघुकथा",
+          "topics": [
+            "The art of the novel and its evolution",
+            "Important Urdu Novelist and their Novels (Ratan Nath Sarshar, Deputy Nazir Ahmad, Abdul Halim Sharar, Mirza Hadi Ruswa, Premchand, Ismat chughtai, Rajinder Singh Bedi, Qurratulain Hyder, Shaukat Siddiqui, Abdullah Hussain, Intizar Husain, Iliyas Ahmad Gaddi, Joginder Paul)",
+            "The art of the short story and its evolution",
+            "Important Urdu short story Writers and their Short stories (Premchand, Sadat Hasan Manto, Krishan Chander, Rajindar Singh Bedi, Ismat Chughtai, Khwaja Ahmed Abbas, Qurratulain Hyder, Sohail Azeemabadi, Jilani Bano, Surendra Prakash, Ghayas Ahmad Gaddi, Iqbal Majeed)"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Criticism and research",
+          "unitTitleMr": "समीक्षा आणि संशोधन",
+          "topics": [
+            "Definition of criticism and its importance",
+            "The critical importance of Biography",
+            "Oriental concept of criticism (Arabi Sheriyaat, Farsi Sheriyaat, Sanskrit Sheriyaat)",
+            "Western concept of criticism",
+            "Schools of literary in Criticism (Tasurati, Marxi, Jamaliyati, Nafsiyati, Scientific, Matani, Hayatti, Aslubyati)",
+            "Important Urdu critics",
+            "The importance of research",
+            "The mutual relationship between research and criticism",
+            "Principles of research and methodology",
+            "Prominent Urdu research scholars"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Non - Fiction Prose",
+          "unitTitleMr": "वैचारिक गद्य",
+          "topics": [
+            "The Art of Biography and Autobiography and their origins and evolution",
+            "Important Urdu Biographers and Autobiographers",
+            "The Art of Letter Writing in Urdu and its Origins & Evolution",
+            "Important Urdu Letter Writers",
+            "The Origins and Evolution of Essay Writing in Urdu",
+            "Important Urdu Essay Writers",
+            "The Art of Inshaiya Writing in Urdu and its Evolution",
+            "Important Urdu Inshaiya Writers",
+            "The art of sketch writing in Urdu and its evolution",
+            "Important Urdu sketch writers",
+            "The Art of Travelogue Writing in Urdu and its Origins & Evolution",
+            "Prominent Urdu Travelogue Writers and Their Travelogues"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Different Urdu Schools, Organizations, Movements and trends",
+          "unitTitleMr": "विविध उर्दू शाळा, संस्था, चळवळी आणि प्रवाह",
+          "topics": [
+            "Dabistan-e-Delhi",
+            "Dabistan-e-Luckhnow",
+            "Fort William College",
+            "Delhi College",
+            "Dar-ul-Tarjuma Osmania",
+            "Urdu Main Islah-e-Zuban Ki Riwayat",
+            "Urdu Main Ehyaam Goi",
+            "Urdu Adab Main Romani Tahreek",
+            "Aligarh Tahreek",
+            "Taraqqi Pasand Tahreek",
+            "Halq-e-Arbab-e-Zouque",
+            "Jadeediyat",
+            "Maabad-e-Jadeediyat"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Other Urdu Poetry Genres, Forms, Translation and Media",
+          "unitTitleMr": "इतर उर्दू काव्यप्रकार, रूपे, भाषांतर आणि मीडिया",
+          "topics": [
+            "Rubai, Qitta, Shar-e-Ashob, Rekhti, Wasoqt, Tazmeen, Mustazaad, Musallas, Murrabba, Muqummas, Musaddas, Musammat, Musamman, Geet, Chahaar bait, Haiko, Taraiyele, Salaasi, Tabsera, Reportaz, Parodi",
+            "Translation and Media: Translation: Art and Tradition",
+            "Radio features, Editorial Writing, Column writing, Script Writing, Commentary"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

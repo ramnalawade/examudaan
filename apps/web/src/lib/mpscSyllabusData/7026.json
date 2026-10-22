@@ -1,0 +1,128 @@
+{
+  "docId": 7026,
+  "examName": "Medical Officer / Specialist Services Examination",
+  "examNameMr": "वैद्यकीय अधिकारी / तज्ज्ञ सेवा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Medical Sciences Syllabus including Forensic Medicine and Toxicology",
+      "paperTitleMr": "वैद्यकीय शास्त्र अभ्यासक्रम ज्यामध्ये न्यायवैद्यक शास्त्र आणि विषशास्त्र समाविष्ट आहे",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Pharmacology",
+          "unitTitleMr": "फार्माकोलॉजी",
+          "topics": [
+            "Pharmacology basics and clinical applications"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Forensic Medicine & Toxicology",
+          "unitTitleMr": "न्यायवैद्यक शास्त्र आणि विषशास्त्र",
+          "topics": [
+            "Post mortem findings",
+            "Injury report",
+            "Age determination",
+            "Examination of rape victim"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Medicine and Allied Subjects",
+          "unitTitleMr": "सामान्य वैद्यकशास्त्र आणि संबंधित विषय",
+          "topics": [
+            "Emergencies in Medicine"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Pediatrics",
+          "unitTitleMr": "बालरोगशास्त्र",
+          "topics": [
+            "Emergencies in pediatrics",
+            "Immunization"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "General Surgery",
+          "unitTitleMr": "सामान्य शल्यचिकित्सा",
+          "topics": [
+            "Emergencies in Surgery"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Orthopedics",
+          "unitTitleMr": "अस्थिरोगशास्त्र",
+          "topics": [
+            "Primary treatment of fractures"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Otorhinolaryngology (ENT)",
+          "unitTitleMr": "कान, नाक आणि घसा विकार (इएनटी)",
+          "topics": [
+            "Emergencies in ENT"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Ophthalmology",
+          "unitTitleMr": "नेत्ररोगशास्त्र",
+          "topics": [
+            "Emergencies in Ophthalmology"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Obstetrics and Gynecology",
+          "unitTitleMr": "प्रसूतिशास्त्र आणि स्त्रीरोगशास्त्र",
+          "topics": [
+            "Normal labor",
+            "Postpartum hemorrhage (PPH)",
+            "Emergencies in Obstetrics and Gynecology"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Microbiology",
+          "unitTitleMr": "सूक्ष्मजीवशास्त्र",
+          "topics": [
+            "Sterilization and disinfection of OT",
+            "Instruments and equipments",
+            "Biomedical waste management",
+            "Functioning of Central Clinical Laboratory"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Medical Acts and Health Schemes",
+          "unitTitleMr": "वैद्यकीय कायदे आणि आरोग्य योजना",
+          "topics": [
+            "Acts related to medical sciences",
+            "National & State health schemes",
+            "National & State health programs"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

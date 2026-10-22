@@ -5,7 +5,7 @@
 
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
 import { trackCtaClick, trackSocialCommunity } from '../lib/analytics'
@@ -42,6 +42,172 @@ const URGENT_OPENINGS = [
   },
 ]
 
+// ── 1B. "What's New on ExamUdaan" (New Releases, Blogs, AI Tools, Calculators & PYQs) ────
+const WHATS_NEW_ITEMS = [
+  {
+    id: 'wn-1',
+    badge: 'NEW BLOG',
+    badge_mr: 'नवीन लेख',
+    badgeClass: 'badgeBlog',
+    title: 'Marathi Grammar (मराठी व्याकरण) 15-Year PYQ Analysis',
+    title_mr: 'मराठी व्याकरण PYQ विश्लेषण: १५ वर्षांचे वारंवार विचारलेले प्रश्न',
+    subtitle: 'Deep analysis of 3,200+ questions across MPSC & TCS: समास, प्रयोग व शब्दसंग्रह.',
+    subtitle_mr: 'MPSC व TCS तलाठीच्या ३,२००+ प्रश्नांचे विश्लेषण: समास, प्रयोग व शब्दसंग्रह ट्रॅप्स.',
+    href: '/blog/marathi-grammar-pyq-analysis-mpsc-talathi-repeated-topics',
+    ctaText: 'Read Analysis ↗',
+    ctaText_mr: 'विश्लेषण वाचा ↗',
+  },
+  {
+    id: 'wn-2',
+    badge: 'NEW TOOL',
+    badge_mr: 'नवीन टूल',
+    badgeClass: 'badgeTool',
+    title: 'Police Bharti 150-Mark Physical + Written Merit Calculator',
+    title_mr: 'पोलीस शिपाई १५० गुण मैदानी + लेखी मेरिट व कट-ऑफ कॅल्क्युलेटर',
+    subtitle: 'Calculate exact 1600m/100m ground + written marks with live district cutoffs.',
+    subtitle_mr: '१६०० मी धावणे, १०० मी व गोळाफेक + लेखी गुण मिळवून जिल्हा कट-ऑफ तपासा.',
+    href: '/police-calculator',
+    ctaText: 'Calculate Merit ↗',
+    ctaText_mr: 'गुण मोजा ↗',
+  },
+  {
+    id: 'wn-3',
+    badge: 'PREP GUIDE',
+    badge_mr: 'अभ्यास मॉडेल',
+    badgeClass: 'badgeGuide',
+    title: 'How to Clear MPSC While Working Full-Time: 4-Hour Daily Plan',
+    title_mr: 'नोकरी सांभाळून MPSC कशी पास करावी: खाजगी क्षेत्रातील ४ तासांचे दैनिक मॉडेल',
+    subtitle: 'Time-blocking blueprint, commute audio routine & weekend marathon for private employees.',
+    subtitle_mr: 'खाजगी नोकरदारांसाठी सकाळचे २ तास, प्रवासातील ऑडिओ व शनिवार-रविवार मॅरेथॉन प्लॅन.',
+    href: '/blog/how-to-study-for-mpsc-with-full-time-private-job',
+    ctaText: 'Read Guide ↗',
+    ctaText_mr: 'मार्गदर्शक वाचा ↗',
+  },
+  {
+    id: 'wn-4',
+    badge: 'AI LAB',
+    badge_mr: 'AI टूल्स',
+    badgeClass: 'badgeAi',
+    title: '124+ Curated AI Study Tools, Resume Builder & Mock Interview',
+    title_mr: '१२४+ AI अभ्यास साधने, रेझ्युमे बिल्डर व थेट AI मॉक मुलाखत',
+    subtitle: 'Free NotebookLM, PDF chat, prompt templates & real-time MPSC interview simulator.',
+    subtitle_mr: 'NotebookLM, PDF चॅट, मुलाखत सिम्युलेटर आणि स्पर्धा परीक्षेसाठी उपयुक्त AI साधने.',
+    href: '/ai-tools',
+    ctaText: 'Explore Lab ↗',
+    ctaText_mr: 'AI लॅब पहा ↗',
+  },
+]
+
+const NEW_BLOGS_ITEMS = [
+  {
+    id: 'nb-1',
+    badge: 'PYQ ANALYSIS',
+    badge_mr: 'PYQ विश्लेषण',
+    badgeClass: 'badgeBlog',
+    title: 'Marathi Grammar PYQ Analysis: 15-Year Repeated Questions',
+    title_mr: 'मराठी व्याकरण PYQ विश्लेषण: १५ वर्षांचे वारंवार विचारलेले प्रश्न',
+    subtitle: 'Repeated rules in प्रयोग (नवीन कर्मणी, समापन), समास, विभक्ती व समानार्थी शब्द.',
+    subtitle_mr: 'प्रयोग, समास, विभक्ती आणि शब्दसंग्रह यावरील वारंवार विचारलेले अचूक नियम.',
+    href: '/blog/marathi-grammar-pyq-analysis-mpsc-talathi-repeated-topics',
+    ctaText: 'Read Analysis ↗',
+    ctaText_mr: 'विश्लेषण वाचा ↗',
+  },
+  {
+    id: 'nb-2',
+    badge: 'STRATEGY',
+    badge_mr: 'स्ट्रॅटेजी',
+    badgeClass: 'badgeGuide',
+    title: 'How to Clear MPSC While Working Full-Time: 4-Hour Daily Model',
+    title_mr: 'नोकरी सांभाळून MPSC कशी पास करावी: खाजगी क्षेत्रातील ४ तासांचे दैनिक मॉडेल',
+    subtitle: 'Time-blocking blueprint, commute audio routine & weekend marathon for private employees.',
+    subtitle_mr: 'खाजगी नोकरदारांसाठी सकाळचे २ तास, प्रवासातील ऑडिओ व शनिवार-रविवार मॅरेथॉन प्लॅन.',
+    href: '/blog/how-to-study-for-mpsc-with-full-time-private-job',
+    ctaText: 'Read Guide ↗',
+    ctaText_mr: 'मार्गदर्शक वाचा ↗',
+  },
+  {
+    id: 'nb-3',
+    badge: 'SYLLABUS',
+    badge_mr: 'अभ्यासक्रम',
+    badgeClass: 'badgeSyllabus',
+    title: 'Maharashtra Police Bharti Written Exam 100M Syllabus & Books',
+    title_mr: 'महाराष्ट्र पोलीस शिपाई लेखी परीक्षा १०० गुणांचे विषयनिहाय वेटेज व पुस्तके',
+    subtitle: 'Complete 25M Marathi, 25M Maths, 25M Reasoning, 25M GK blueprint with safe cutoff plan.',
+    subtitle_mr: 'मराठी, अंकगणित, बुद्धिमत्ता व सामान्य ज्ञान २५-२५ गुण वेटेज व पुस्तकांची यादी.',
+    href: '/blog/maharashtra-police-bharti-written-exam-syllabus-and-topic-weightage',
+    ctaText: 'View Syllabus ↗',
+    ctaText_mr: 'अभ्यासक्रम पहा ↗',
+  },
+  {
+    id: 'nb-4',
+    badge: 'CAREER CADRE',
+    badge_mr: 'करिअर तुलना',
+    badgeClass: 'badgeTool',
+    title: 'PWD vs Water Resources Department (WRD): Junior Engineer vs Assistant Engineer',
+    title_mr: 'PWD वि. जलसंपदा विभाग (WRD): कनिष्ठ अभियंता (JE) वि. सहाय्यक अभियंता (AE)',
+    subtitle: 'Level S-14 vs S-15 pay matrix, field inspections, tendering & promotion to Executive Engineer.',
+    subtitle_mr: 'वेतन श्रेणी (S-14 वि. S-15), साईट तपासणी, टेंडर कामे आणि कार्यकारी अभियंता पदोन्नती.',
+    href: '/blog/pwd-junior-engineer-je-vs-water-resources-wrd-ae-maharashtra-comparison',
+    ctaText: 'Compare Cadres ↗',
+    ctaText_mr: 'तुलना पहा ↗',
+  },
+]
+
+const NEW_TOOLS_ITEMS = [
+  {
+    id: 'nt-1',
+    badge: 'MERIT CALCULATOR',
+    badge_mr: 'मेरिट कॅल्क्युलेटर',
+    badgeClass: 'badgeTool',
+    title: 'Police Bharti 150-Mark Physical + Written Merit Calculator',
+    title_mr: 'पोलीस शिपाई १५० गुण मैदानी + लेखी मेरिट व कट-ऑफ कॅल्क्युलेटर',
+    subtitle: 'Calculate exact 1600m/100m ground + written marks with live district cutoffs.',
+    subtitle_mr: '१६०० मी धावणे, १०० मी व गोळाफेक + लेखी गुण मिळवून जिल्हा कट-ऑफ तपासा.',
+    href: '/police-calculator',
+    ctaText: 'Open Calculator ↗',
+    ctaText_mr: 'कॅल्क्युलेटर उघडा ↗',
+  },
+  {
+    id: 'nt-2',
+    badge: 'AI TOOLS LAB',
+    badge_mr: 'AI लॅब',
+    badgeClass: 'badgeAi',
+    title: '124+ Curated AI Study Tools, Resume Builder & Mock Interview',
+    title_mr: '१२४+ AI अभ्यास साधने, रेझ्युमे बिल्डर व थेट AI मॉक मुलाखत',
+    subtitle: 'Free NotebookLM, PDF chat, prompt templates & real-time MPSC interview simulator.',
+    subtitle_mr: 'NotebookLM, PDF चॅट, मुलाखत सिम्युलेटर आणि स्पर्धा परीक्षेसाठी उपयुक्त AI साधने.',
+    href: '/ai-tools',
+    ctaText: 'Explore Lab ↗',
+    ctaText_mr: 'AI लॅब पहा ↗',
+  },
+  {
+    id: 'nt-3',
+    badge: 'OFFICIAL PAPERS',
+    badge_mr: 'अधिकृत पेपर्स',
+    badgeClass: 'badgePyq',
+    title: '841 Official MPSC Question Papers & Final Answer Keys (2021–2026)',
+    title_mr: '८४१ अधिकृत MPSC प्रश्नपत्रिका व अंतिम उत्तरतालिका (२०२१–२०२६)',
+    subtitle: 'Download & read Rajyaseva, Group B, Group C & PSI papers free in browser.',
+    subtitle_mr: 'राज्यसेवा, गट ब व क चे अधिकृत पेपर व फायनल की एकाच ओळीत मोफत वाचा.',
+    href: '/mpsc-pyq',
+    ctaText: 'Open Papers ↗',
+    ctaText_mr: 'पेपर्स उघडा ↗',
+  },
+  {
+    id: 'nt-4',
+    badge: '15-YR PYQ BANK',
+    badge_mr: '१५-वर्षीय बँक',
+    badgeClass: 'badgeGuide',
+    title: '15-Year Topic-wise Searchable PYQ Question Bank',
+    title_mr: '१५-वर्षीय घटकनिहाय सर्च करण्यायोग्य PYQ प्रश्न बँक',
+    subtitle: 'Interactive MCQ practice with answers & explanations across Polity, History, Science & Marathi.',
+    subtitle_mr: 'राज्यघटना, इतिहास, भूगोल, विज्ञान व मराठी विषयांचे घटकनिहाय प्रश्न व स्पष्टीकरणे.',
+    href: '/pyq',
+    ctaText: 'Practice PYQs ↗',
+    ctaText_mr: 'सराव करा ↗',
+  },
+]
+
 // ── 2. "Everything You Need to Clear Govt Exams" (8 Cards) ────
 const SUITE_CARDS = [
   {
@@ -56,12 +222,12 @@ const SUITE_CARDS = [
   },
   {
     icon: 'description',
-    badge: 'MPSC 2024–2026',
+    badge: 'MPSC 2021–2026',
     title: 'MPSC Question Papers & Answer Keys',
     title_mr: 'MPSC मूळ प्रश्नपत्रिका व उत्तरतालिका',
-    desc: '209 official MPSC question papers and validated final answer keys for 2024, 2025, and 2026. Read in-browser or download.',
-    cta: 'Browse 209 MPSC Papers & Keys →',
-    cta_mr: '२०९ MPSC पेपर्स व कीज् पहा →',
+    desc: '841 official MPSC question papers and validated final answer keys across 429 exams (2021–2026). Read in-browser or download.',
+    cta: 'Browse 841 MPSC Papers & Keys →',
+    cta_mr: '८४१ MPSC पेपर्स व कीज् पहा →',
     href: '/mpsc-pyq',
   },
   {
@@ -385,25 +551,25 @@ const REGION_JOBS = {
   ],
 }
 
-// ── 5. Real Aspirant Testimonials ────────────────────────────
+// ── 5. Verified Aspirant Testimonials ────────────────────────────
 const TESTIMONIALS = [
   {
-    name: 'Pravin Deshmukh',
+    name: 'ExamUdaan Aspirant',
     exam: 'Selected in Maharashtra Mumbai Police 2025',
     text: 'ExamUdaan was the only portal where the Police physical sprint score calculator accurately mapped my 150-mark composite cutoff before the official list was declared.',
-    initial: 'P',
+    initial: 'E',
   },
   {
-    name: 'Pooja Kadam',
+    name: 'ExamUdaan Aspirant',
     exam: 'Selected as Talathi (Chhatrapati Sambhajinagar)',
     text: 'TCS answer keys always create confusion about shift normalisation. ExamUdaan shift rank predictor gave me 99.2 percentile within 15 minutes of response sheet release.',
-    initial: 'P',
+    initial: 'E',
   },
   {
-    name: 'Amol Shinde',
+    name: 'ExamUdaan Aspirant',
     exam: 'MPSC Combined Group-B (STI Aspirant)',
     text: 'Every morning at 7 AM I read the Current Affairs digest and solve the 5-Minute Quiz. The district-wise alerts saved me from missing local municipal corporation posts.',
-    initial: 'A',
+    initial: 'E',
   },
 ]
 
@@ -451,6 +617,21 @@ function getUrgentDaysLeft(dateStr) {
   return Math.round((targetUTC - nowUTC) / (1000 * 60 * 60 * 24))
 }
 
+// Format current date in Indian Standard Time (IST) — rolls over automatically at midnight
+function getFormattedTodayDate(isMr = false) {
+  try {
+    const now = new Date()
+    return now.toLocaleDateString(isMr ? 'mr-IN' : 'en-IN', {
+      timeZone: 'Asia/Kolkata',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    })
+  } catch {
+    return 'Today'
+  }
+}
+
 export default function HomePageView({
   jobs = [],
   quickUpdates = [],
@@ -460,6 +641,45 @@ export default function HomePageView({
 }) {
   const { t, isMarathi } = useLanguage()
   const [activeRegion, setActiveRegion] = useState('maharashtra')
+  const [heroTab, setHeroTab] = useState('whatsNew') // 'whatsNew' | 'blogs' | 'tools' | 'urgent'
+
+  // Dynamic daily current affairs date & live headlines (updates daily at 12am midnight IST)
+  const [todayDate, setTodayDate] = useState(() => getFormattedTodayDate(isMarathi))
+  const [caBullets, setCaBullets] = useState([
+    'Maharashtra Cabinet clears key irrigation and rural road infrastructure packages.',
+    'RBI Monetary Policy keeps repo rate steady; highlights bank liquidity norms.',
+    'National Clean Air Programme review awards Pune & Nagpur top civic score.'
+  ])
+
+  useEffect(() => {
+    setTodayDate(getFormattedTodayDate(isMarathi))
+
+    // Fetch live daily current affairs headlines from API
+    fetch('/api/current-affairs?limit=3')
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        if (data?.items && data.items.length > 0) {
+          const freshHeadlines = data.items.slice(0, 3).map(item => item.title).filter(Boolean)
+          if (freshHeadlines.length > 0) {
+            setCaBullets(freshHeadlines)
+          }
+        }
+      })
+      .catch(() => {})
+
+    // Schedule update exactly at 12:00 AM midnight (IST)
+    const now = new Date()
+    const tomorrow = new Date(now)
+    tomorrow.setDate(now.getDate() + 1)
+    tomorrow.setHours(0, 0, 1, 0)
+    const msToMidnight = Math.max(1000, tomorrow.getTime() - now.getTime())
+
+    const midnightTimer = setTimeout(() => {
+      setTodayDate(getFormattedTodayDate(isMarathi))
+    }, msToMidnight)
+
+    return () => clearTimeout(midnightTimer)
+  }, [isMarathi])
 
   // Interactive Key Analyzer widget state (Right side of Rank Section)
   const [analyzerExam, setAnalyzerExam] = useState('mpsc')
@@ -522,8 +742,29 @@ export default function HomePageView({
 
   const displayUrgent = mappedUrgent.length > 0 ? mappedUrgent : URGENT_OPENINGS
 
-  // Choose jobs for the active region tab
-  const displayOpenings = REGION_JOBS[activeRegion] || REGION_JOBS.maharashtra
+  // Choose jobs for the active region tab (live DB jobs first, fallback to mock)
+  const displayOpenings = (jobs && jobs.length > 0)
+    ? jobs.slice(0, 6).map(j => {
+        const deadline = j.apply_end
+          ? new Date(j.apply_end).toLocaleDateString(isMarathi ? 'mr-IN' : 'en-IN', { day: '2-digit', month: 'short' })
+          : 'Closing Soon'
+        const org = (isMarathi && j.org_name_mr) ? j.org_name_mr : (j.department || j.organization || 'Govt Department')
+        const vac = j.vacancies ? `${j.vacancies} Posts` : 'Various Posts'
+        const qual = j.ai_extracted_data?.education_levels?.[0] || 'Graduation / Any Degree'
+        return {
+          id: j.id,
+          region: j.organization || 'Govt of India',
+          status: j.is_walk_in ? 'Walk-in' : 'Active Recruitment',
+          isNew: true,
+          title: (isMarathi && j.title_mr) ? j.title_mr : j.title,
+          dept: org,
+          vacancies: vac,
+          qualification: qual,
+          deadline,
+          slug: j.slug || `${(j.organization || 'job').toLowerCase()}-${j.id}`,
+        }
+      })
+    : (REGION_JOBS[activeRegion] || REGION_JOBS.maharashtra)
 
   return (
     <div className={styles.page}>
@@ -630,14 +871,14 @@ export default function HomePageView({
                   <span className={styles.pillarIcon}>📚</span>
                   <div>
                     <strong>{isMarathi ? '१५-वर्षीय PYQ पेपर्स' : '15-Yr Solved PYQ Bank'}</strong>
-                    <span>{isMarathi ? '२०९+ MPSC प्रश्नपत्रिका उत्तरे' : '209+ MPSC papers & mock tests'}</span>
+                    <span>{isMarathi ? '८४१+ MPSC प्रश्नपत्रिका उत्तरे' : '841+ MPSC papers & keys'}</span>
                   </div>
                 </Link>
                 <Link href="/study-planner" className={styles.pillarCard}>
                   <span className={styles.pillarIcon}>🤖</span>
                   <div>
                     <strong>{isMarathi ? 'AI स्टडी प्लॅनर' : 'AI Study Planner & Tools'}</strong>
-                    <span>{isMarathi ? '११४+ मोफत अभ्यास साधने' : '114+ Free prep tools & timetable'}</span>
+                    <span>{isMarathi ? '१२४+ मोफत अभ्यास साधने' : '124+ Free prep tools & timetable'}</span>
                   </div>
                 </Link>
               </div>
@@ -647,75 +888,168 @@ export default function HomePageView({
                 <span className={styles.popularHubLabel}>
                   {isMarathi ? 'लोकप्रिय:' : 'Popular:'}
                 </span>
-                <Link href="/mpsc-pyq" className={styles.popularPillOrange}>
-                  🏛️ MPSC 2024-26 Papers ({stats.total_pyq_papers || 209})
+                <Link href="/talathi-bharti-2026" className={styles.popularPillOrange}>
+                  🌾 {isMarathi ? 'तलाठी भरती २०२६' : 'Talathi Bharti 2026'}
+                </Link>
+                <Link href="/maharashtra-police-bharti-2026" className={styles.popularPillRust}>
+                  👮 {isMarathi ? 'पोलीस भरती २०२६' : 'Police Bharti 2026'}
+                </Link>
+                <Link href="/mpsc-exam-dates-2026" className={styles.popularPillPurple}>
+                  📅 {isMarathi ? 'MPSC वेळापत्रक २०२६' : 'MPSC Exam Dates 2026'}
+                </Link>
+                <Link href="/mpsc-pyq" className={styles.popularPillBlue}>
+                  🏛️ MPSC Papers &amp; Keys (841)
                 </Link>
                 <Link href="/answer-keys" className={styles.popularPillGreen}>
                   🔑 Answer Keys
                 </Link>
-                <Link href="/current-affairs" className={styles.popularPillBlue}>
-                  📰 Daily CA
-                </Link>
-                <Link href="/syllabus" className={styles.popularPillPurple}>
-                  📚 Syllabus 2026
-                </Link>
-                <Link href="/mock-tests" className={styles.popularPillRust}>
+                <Link href="/mock-tests" className={styles.popularPillGray}>
                   ⏱️ Mock Tests
-                </Link>
-                <Link href="/pyq" className={styles.popularPillGray}>
-                  🎯 15-Yr PYQs
                 </Link>
               </div>
             </div>
 
-            {/* Right Hero Column: Urgent Exam Openings Card */}
+            {/* Right Hero Column: What's New & Updates Hub Card */}
             <div>
               <div className={styles.urgentCard}>
                 <div className={styles.urgentHeader}>
                   <div className={styles.urgentTitle}>
-                    <span className={`material-symbols-outlined ${styles.iconAlarmRed}`}>alarm</span>
-                    <span>{isMarathi ? 'अंतिम मुदतीच्या परीक्षा जाहिराती' : 'Urgent Exam Openings'}</span>
+                    <span className={`material-symbols-outlined ${styles.sparkleIcon}`}>
+                      {heroTab === 'urgent' ? 'alarm' : 'stars'}
+                    </span>
+                    <span>
+                      {heroTab === 'urgent'
+                        ? (isMarathi ? 'अंतिम मुदतीच्या परीक्षा जाहिराती' : 'Urgent Exam Openings')
+                        : (isMarathi ? 'ExamUdaan वर काय नवीन आहे?' : "What's New on ExamUdaan")}
+                    </span>
                   </div>
-                  <span className={styles.urgentBadge}>
-                    {urgentCount > 0
-                      ? (isMarathi ? `${urgentCount} अंतिम मुदत` : `${urgentCount} Closing Soon`)
-                      : (isMarathi ? `${displayUrgent.length} अंतिम मुदत` : `${displayUrgent.length} Closing Soon`)}
-                  </span>
+                  {heroTab === 'urgent' ? (
+                    <span className={styles.urgentBadge}>
+                      {urgentCount > 0
+                        ? (isMarathi ? `${urgentCount} अंतिम मुदत` : `${urgentCount} Closing Soon`)
+                        : (isMarathi ? `${displayUrgent.length} अंतिम मुदत` : `${displayUrgent.length} Closing Soon`)}
+                    </span>
+                  ) : (
+                    <span className={styles.whatsNewPillBadge}>
+                      <span className={styles.pulseDot} />
+                      {isMarathi ? 'नवीन अपडेट्स' : 'NEW RELEASES'}
+                    </span>
+                  )}
                 </div>
 
+                {/* Switcher Pill Tabs */}
+                <div className={styles.heroTabsBar} role="tablist" aria-label="Hero Updates Tabs">
+                  <button
+                    type="button"
+                    onClick={() => setHeroTab('whatsNew')}
+                    className={`${styles.heroTabBtn} ${heroTab === 'whatsNew' ? styles.heroTabBtnActive : ''}`}
+                  >
+                    ✨ {isMarathi ? 'काय नवीन आहे' : "What's New"}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setHeroTab('blogs')}
+                    className={`${styles.heroTabBtn} ${heroTab === 'blogs' ? styles.heroTabBtnActive : ''}`}
+                  >
+                    📝 {isMarathi ? 'नवीन लेख' : 'New Blogs'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setHeroTab('tools')}
+                    className={`${styles.heroTabBtn} ${heroTab === 'tools' ? styles.heroTabBtnActive : ''}`}
+                  >
+                    🤖 {isMarathi ? 'AI टूल्स व PYQ' : 'AI Tools & PYQ'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setHeroTab('urgent')}
+                    className={`${styles.heroTabBtn} ${heroTab === 'urgent' ? styles.heroTabBtnActive : ''}`}
+                  >
+                    ⏰ {isMarathi ? 'मुदत संपत आहे' : 'Urgent Jobs'}
+                    {urgentCount > 0 && ` (${urgentCount})`}
+                  </button>
+                </div>
+
+                {/* Items List */}
                 <div>
-                  {displayUrgent.map(item => (
-                    <div key={item.id} className={styles.urgentItem}>
-                      <div className={styles.urgentItemTop}>
-                        <Link href={`/jobs/${item.slug}`} className={styles.urgentItemTitle}>
+                  {heroTab === 'urgent' ? (
+                    displayUrgent.map(item => (
+                      <div key={item.id} className={styles.urgentItem}>
+                        <div className={styles.urgentItemTop}>
+                          <Link href={`/jobs/${item.slug}`} className={styles.urgentItemTitle}>
+                            {isMarathi && item.title_mr ? item.title_mr : item.title}
+                          </Link>
+                          <span className={styles.closingTag}>{item.closingText}</span>
+                        </div>
+                        <div className={styles.urgentMeta}>
+                          <span>{item.dept}</span>
+                          <span>•</span>
+                          <strong>{item.vacancies}</strong>
+                          <span className={styles.urgentCardSpacer}>
+                            <Link
+                              href={`/jobs/${item.slug}`}
+                              className={styles.applyLink}
+                              aria-label={isMarathi ? `${item.title_mr || item.title} तपशील पहा` : `Apply for ${item.title}`}
+                            >
+                              {isMarathi ? 'तपशील पहा ↗' : 'Apply Direct ↗'}
+                            </Link>
+                          </span>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    (heroTab === 'whatsNew'
+                      ? WHATS_NEW_ITEMS
+                      : heroTab === 'blogs'
+                      ? NEW_BLOGS_ITEMS
+                      : NEW_TOOLS_ITEMS
+                    ).map(item => (
+                      <div key={item.id} className={styles.whatsNewItem}>
+                        <div className={styles.whatsNewItemHeader}>
+                          <span className={styles[item.badgeClass] || styles.badgeBlog}>
+                            {isMarathi && item.badge_mr ? item.badge_mr : item.badge}
+                          </span>
+                          <Link href={item.href} className={styles.whatsNewAction}>
+                            {isMarathi && item.ctaText_mr ? item.ctaText_mr : item.ctaText}
+                          </Link>
+                        </div>
+                        <Link href={item.href} className={styles.whatsNewItemTitle}>
                           {isMarathi && item.title_mr ? item.title_mr : item.title}
                         </Link>
-                        <span className={styles.closingTag}>{item.closingText}</span>
+                        <p className={styles.whatsNewSubtitle}>
+                          {isMarathi && item.subtitle_mr ? item.subtitle_mr : item.subtitle}
+                        </p>
                       </div>
-                      <div className={styles.urgentMeta}>
-                        <span>{item.dept}</span>
-                        <span>•</span>
-                        <strong>{item.vacancies}</strong>
-                        <span className={styles.urgentCardSpacer}>
-                          <Link
-                            href={`/jobs/${item.slug}`}
-                            className={styles.applyLink}
-                            aria-label={isMarathi ? `${item.title_mr || item.title} तपशील पहा` : `Apply for ${item.title}`}
-                          >
-                            {isMarathi ? 'तपशील पहा ↗' : 'Apply Direct ↗'}
-                          </Link>
-                        </span>
-                      </div>
-                    </div>
-                  ))}
+                    ))
+                  )}
                 </div>
 
                 <div className={styles.urgentFooter}>
-                  <Link href="/jobs/closing-soon">
-                    {isMarathi
-                      ? `सर्व ${urgentCount || displayUrgent.length || 10}+ अंतिम मुदतीच्या जाहिराती पहा →`
-                      : `View All ${urgentCount || displayUrgent.length || 10} Urgent Notifications →`}
-                  </Link>
+                  {heroTab === 'urgent' ? (
+                    <Link href="/jobs/closing-soon">
+                      {isMarathi
+                        ? `सर्व ${urgentCount || displayUrgent.length || 10}+ अंतिम मुदतीच्या जाहिराती पहा →`
+                        : `View All ${urgentCount || displayUrgent.length || 10} Urgent Notifications →`}
+                    </Link>
+                  ) : heroTab === 'blogs' ? (
+                    <Link href="/blog">
+                      {isMarathi
+                        ? 'सर्व २८ सविस्तर परीक्षा गाईड्स व स्ट्रॅटेजी वाचा →'
+                        : 'View All 28 Prep Guides & Strategies →'}
+                    </Link>
+                  ) : heroTab === 'tools' ? (
+                    <Link href="/ai-tools">
+                      {isMarathi
+                        ? 'सर्व १२४+ AI टूल्स, कॅल्क्युलेटर व PYQ बँक उघडा →'
+                        : 'Explore All AI Tools, Calculators & PYQs →'}
+                    </Link>
+                  ) : (
+                    <Link href="/blog">
+                      {isMarathi
+                        ? 'सर्व २८ परीक्षा गाईड्स, मोफत साधने व PYQ पेपर्स पहा →'
+                        : 'Explore All 28 Guides, AI Tools & PYQ Banks →'}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -795,7 +1129,7 @@ export default function HomePageView({
             <Link href="/ai-tools" className={styles.statBox} title="Free AI Tools for Exam Preparation">
               <span className={`material-symbols-outlined ${styles.statIcon}`}>smart_toy</span>
               <div>
-                <div className={styles.statValue}>{stats.total_ai_tools ? `${stats.total_ai_tools}+` : '114+'}</div>
+                <div className={styles.statValue}>{stats.total_ai_tools ? `${stats.total_ai_tools}+` : '124+'}</div>
                 <div className={styles.statLabel}>{isMarathi ? 'AI अभ्यास साधने' : 'AI Prep Study Tools'}</div>
               </div>
             </Link>
@@ -853,7 +1187,7 @@ export default function HomePageView({
               </p>
             </div>
             <Link href="/ai-tools" className={styles.headerLink}>
-              View all tools ({stats.total_ai_tools || 114} AI Tools) →
+              View all tools ({stats.total_ai_tools || 124} AI Tools) →
             </Link>
           </div>
 
@@ -1156,26 +1490,20 @@ export default function HomePageView({
             <div className={styles.boosterCard}>
               <div className={styles.boosterCardTop}>
                 <span className={`${styles.suiteBadge} ${styles.suiteBadgeGreen}`}>
-                  Daily 02 Oct 2026
+                  {isMarathi ? `दैनिक ${todayDate}` : `Daily ${todayDate}`}
                 </span>
                 <span className={styles.suiteMetaText}>5 Min Read • PDF Ready</span>
               </div>
               <h3 className={styles.boosterTitle}>
-                Daily Current Affairs Bullet Points
+                {isMarathi ? 'दैनिक चालू घडामोडी महत्त्वाचे मुद्दे' : 'Daily Current Affairs Bullet Points'}
               </h3>
               <ul className={styles.bulletPoints}>
-                <li className={styles.bulletItem}>
-                  <span className={`material-symbols-outlined ${styles.bulletIcon}`}>check_circle</span>
-                  <span>Maharashtra Cabinet clears key irrigation and rural road infrastructure packages.</span>
-                </li>
-                <li className={styles.bulletItem}>
-                  <span className={`material-symbols-outlined ${styles.bulletIcon}`}>check_circle</span>
-                  <span>RBI Monetary Policy keeps repo rate steady; highlights bank liquidity norms.</span>
-                </li>
-                <li className={styles.bulletItem}>
-                  <span className={`material-symbols-outlined ${styles.bulletIcon}`}>check_circle</span>
-                  <span>National Clean Air Programme review awards Pune & Nagpur top civic score.</span>
-                </li>
+                {caBullets.map((bullet, idx) => (
+                  <li key={idx} className={styles.bulletItem}>
+                    <span className={`material-symbols-outlined ${styles.bulletIcon}`}>check_circle</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
               </ul>
               <div className={styles.boosterActionRow}>
                 <Link href="/current-affairs" className={`${styles.boosterBtn} ${styles.boosterBtnFlex}`}>
@@ -1225,8 +1553,8 @@ export default function HomePageView({
             </h2>
             <p className={styles.bannerSubtitle}>
               {isMarathi
-                ? '१२ लाखांहून अधिक विद्यार्थ्यांसोबत मोफत प्रश्नपत्रिका, चालू घडामोडी आणि थेट भरती अलर्ट मिळवा.'
-                : 'Join 1.2M+ aspirants with real-time verified govt notifications, current affairs, and practice sets.'}
+                ? 'हजारो विद्यार्थ्यांसोबत मोफत प्रश्नपत्रिका, चालू घडामोडी आणि थेट भरती अलर्ट मिळवा.'
+                : 'Join thousands of Maharashtra govt job aspirants with real-time verified alerts, current affairs, and practice sets.'}
             </p>
           </div>
 

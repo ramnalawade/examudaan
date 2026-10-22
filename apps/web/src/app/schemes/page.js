@@ -71,9 +71,9 @@ export default function SchemesPage() {
                     className="schemes-schemeCard"
                     style={{ textDecoration: 'none', display: 'block', cursor: 'pointer' }}
                   >
-                    <h3 className="schemes-schemeTitle" style={{ marginBottom: 6 }}>
+                    <h2 className="schemes-schemeTitle" style={{ marginBottom: 6 }}>
                       {scheme.title}
-                    </h3>
+                    </h2>
                     <p className="schemes-schemeDept" style={{ fontSize: 12, color: 'var(--secondary)', marginBottom: 8 }}>
                       {scheme.org_name || scheme.org_acronym}
                     </p>

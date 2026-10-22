@@ -1,0 +1,264 @@
+{
+  "docId": 5313,
+  "examName": "State Services Examination",
+  "examNameMr": "राज्य सेवा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "rajyaseva",
+  "totalMarks": 2025,
+  "mainsMarks": 1750,
+  "interviewMarks": 275,
+  "examPattern": "Written Examination (Mains) followed by Interview and Personality Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi Language",
+      "paperTitleMr": "मराठी भाषा",
+      "totalMarks": 300,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": true,
+      "isMerit": false,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Qualifying Paper of Marathi Language",
+          "unitTitleMr": "मराठी भाषेचा अर्हताप्राप्त कागदपत्र",
+          "topics": [
+            "Comprehension of given passages",
+            "Precis Writing",
+            "Usage and Vocabulary",
+            "Short Essays",
+            "Translation from English to Marathi and vice-versa"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "English Language",
+      "paperTitleMr": "इंग्रजी भाषा",
+      "totalMarks": 300,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": true,
+      "isMerit": false,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Qualifying Paper of English Language",
+          "unitTitleMr": "इंग्रजी भाषेचा अर्हताप्राप्त कागदपत्र",
+          "topics": [
+            "Comprehension of given passages",
+            "Precis Writing",
+            "Usage and Vocabulary",
+            "Short Essays"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 3,
+      "paperTitle": "Essay",
+      "paperTitleMr": "निबंध",
+      "totalMarks": 250,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Essay",
+          "unitTitleMr": "निबंध",
+          "topics": [
+            "Essays on multiple topics requiring candidates to keep closely to the subject and arrange ideas in an orderly fashion"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 4,
+      "paperTitle": "General Studies - 1",
+      "paperTitleMr": "सामान्य अध्ययन - १",
+      "totalMarks": 250,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Indian Heritage and Culture, History and Geography of the World and Society",
+          "unitTitleMr": "भारतीय वारसा आणि संस्कृती, जगाचा इतिहास आणि भूगोल आणि समाज",
+          "topics": [
+            "Indian culture: Art Forms, Literature and Architecture from ancient to modern times",
+            "Bhakti movement and its philosophy with special reference to saints' movement in Maharashtra",
+            "Modern Indian history from about the middle of the eighteenth century until the present",
+            "The Freedom Struggle and important contributors from different parts of the country",
+            "Post-independence consolidation and reorganization within the country",
+            "History of the world: Industrial revolution, world wars, colonization, political philosophies",
+            "Salient features of Indian Society and Diversity of India",
+            "Role of women, population, poverty, urbanization, and globalization effects",
+            "Social empowerment, communalism, regionalism, secularism",
+            "Physical geography of the world and distribution of natural resources",
+            "Geophysical phenomena: earthquakes, Tsunami, Volcanic activity, cyclone"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 5,
+      "paperTitle": "General Studies - 2",
+      "paperTitleMr": "सामान्य अध्ययन - २",
+      "totalMarks": 250,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Governance, Constitution, Polity, Social Justice and International Relations",
+          "unitTitleMr": "शासन, संविधान, राजकारण, सामाजिक न्याय आणि आंतरराष्ट्रीय संबंध",
+          "topics": [
+            "Indian Constitution: historical underpinnings, evolution, features, amendments, basic structure",
+            "Functions and responsibilities of Union and States, federal structure and devolution of powers",
+            "Parliament and State Legislatures, Executive and Judiciary structure and functioning",
+            "Representation of People’s Act, Constitutional and Statutory bodies",
+            "Government policies and interventions for development, welfare schemes for vulnerable sections",
+            "Issues relating to Health, Education, Human Resources, poverty and hunger",
+            "Governance, transparency, accountability, e-governance, civil services in a democracy",
+            "India and its neighborhood, bilateral, regional and global groupings and agreements"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 6,
+      "paperTitle": "General Studies - 3",
+      "paperTitleMr": "सामान्य अध्ययन - ३",
+      "totalMarks": 250,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Technology, Economic Development, Biodiversity, Environment, Security and Disaster Management",
+          "unitTitleMr": "तंत्रज्ञान, आर्थिक विकास, जैवविविधता, पर्यावरण, सुरक्षा आणि आपत्ती व्यवस्थापन",
+          "topics": [
+            "Indian Economy, planning, resource mobilization, growth, development and employment",
+            "Government Budgeting, major crops, cropping patterns, irrigation, e-technology in agriculture",
+            "Food processing, land reforms, liberalization, infrastructure and investment models",
+            "Science and Technology developments, IT, Space, Computers, robotics, biotechnology",
+            "Conservation, environmental pollution, degradation, environmental impact assessment",
+            "Disaster management, internal security challenges, cyber security, money laundering, border management"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 7,
+      "paperTitle": "General Studies - 4",
+      "paperTitleMr": "सामान्य अध्ययन - ४",
+      "totalMarks": 250,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Ethics, Integrity, and Aptitude",
+          "unitTitleMr": "अनैतिकता, सचोटी आणि योग्यता",
+          "topics": [
+            "Ethics and Human Interface: Essence, determinants and consequences of Ethics in human actions",
+            "Human Values, lessons from lives of great leaders, reformers and administrators",
+            "Attitude: content, structure, function, moral and political attitudes, social influence",
+            "Aptitude and foundational values for Civil Service: integrity, impartiality, empathy, compassion",
+            "Emotional intelligence concepts and utilities in administration",
+            "Public/Civil service values and Ethics in Public administration, probity in governance",
+            "Case Studies on the above issues"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 8,
+      "paperTitle": "Optional Subject Paper I",
+      "paperTitleMr": "पर्यायी विषय पेपर १",
+      "totalMarks": 250,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Optional Subject Paper I",
+          "unitTitleMr": "पर्यायी विषय पेपर १",
+          "topics": [
+            "Candidates may choose any optional subject from the approved list of optional subjects for Paper I"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 9,
+      "paperTitle": "Optional Subject Paper II",
+      "paperTitleMr": "पर्यायी विषय पेपर २",
+      "totalMarks": 250,
+      "duration": "3 hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Optional Subject Paper II",
+          "unitTitleMr": "पर्यायी विषय पेपर २",
+          "topics": [
+            "Candidates may choose any optional subject from the approved list of optional subjects for Paper II"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [
+    "Agriculture",
+    "Animal Husbandry and Veterinary Science",
+    "Anthropology",
+    "Botany",
+    "Chemistry",
+    "Civil Engineering",
+    "Commerce and Accountancy",
+    "Economics",
+    "Electrical Engineering",
+    "Geography",
+    "Geology",
+    "History",
+    "Law",
+    "Management",
+    "Marathi Literature",
+    "Mathematics",
+    "Mechanical Engineering",
+    "Medical Science",
+    "Philosophy",
+    "Physics",
+    "Political Science and International Relations",
+    "Psychology",
+    "Public Administration",
+    "Sociology",
+    "Statistics",
+    "Zoology"
+  ],
+  "importantNotes": [
+    "Candidates will have the option to answer question papers in Marathi or English for Paper 3 to 7.",
+    "For Optional papers, subjects indicated for Marathi and English can be answered in either language; subjects indicated for English only must be answered in English.",
+    "Medium of answering must be chosen at the time of submitting the online application for the mains examination.",
+    "Question papers will be set in Marathi and English except for language papers and literature subjects."
+  ]
+}

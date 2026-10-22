@@ -58,68 +58,32 @@ export default function MockTestsPage() {
       </section>
 
       {/* ── Test Format Tabs (Full Mocks vs Sectional) ── */}
-      <section style={{ background: '#fff', borderBottom: '1px solid var(--outline-variant)', padding: '12px 0' }}>
-        <div className="container" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-          <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+      <section className={styles.formatSection}>
+        <div className={`container ${styles.formatRow}`}>
+          <span className={styles.formatLabel}>
             Test Format:
           </span>
           <button
             onClick={() => setActiveTab('all')}
-            style={{
-              padding: '8px 18px',
-              borderRadius: '8px',
-              fontSize: '13px',
-              fontWeight: 700,
-              cursor: 'pointer',
-              border: activeTab === 'all' ? '1px solid var(--primary)' : '1px solid #cbd5e1',
-              background: activeTab === 'all' ? 'var(--primary)' : '#fff',
-              color: activeTab === 'all' ? '#fff' : '#475569',
-              transition: 'all 0.15s ease'
-            }}
+            className={`${styles.formatBtn} ${activeTab === 'all' ? styles.formatBtnActiveAll : ''}`}
           >
             All Practice Tests ({MOCK_TESTS.length})
           </button>
           <button
             onClick={() => setActiveTab('full')}
-            style={{
-              padding: '8px 18px',
-              borderRadius: '8px',
-              fontSize: '13px',
-              fontWeight: 700,
-              cursor: 'pointer',
-              border: activeTab === 'full' ? '1px solid #059669' : '1px solid #cbd5e1',
-              background: activeTab === 'full' ? '#059669' : '#fff',
-              color: activeTab === 'full' ? '#fff' : '#475569',
-              transition: 'all 0.15s ease',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px'
-            }}
+            className={`${styles.formatBtn} ${activeTab === 'full' ? styles.formatBtnActiveFull : ''}`}
           >
             <span>💯 Full-Length Exams (100 Qs)</span>
-            <span style={{ background: activeTab === 'full' ? 'rgba(255,255,255,0.25)' : '#ecfdf5', color: activeTab === 'full' ? '#fff' : '#047857', padding: '1px 8px', borderRadius: '10px', fontSize: '11px' }}>
+            <span className={`${styles.formatCountBadge} ${activeTab === 'full' ? styles.formatCountBadgeActive : ''}`}>
               {fullMocksCount}
             </span>
           </button>
           <button
             onClick={() => setActiveTab('sectional')}
-            style={{
-              padding: '8px 18px',
-              borderRadius: '8px',
-              fontSize: '13px',
-              fontWeight: 700,
-              cursor: 'pointer',
-              border: activeTab === 'sectional' ? '1px solid #7c3aed' : '1px solid #cbd5e1',
-              background: activeTab === 'sectional' ? '#7c3aed' : '#fff',
-              color: activeTab === 'sectional' ? '#fff' : '#475569',
-              transition: 'all 0.15s ease',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px'
-            }}
+            className={`${styles.formatBtn} ${activeTab === 'sectional' ? styles.formatBtnActiveSectional : ''}`}
           >
             <span>⚡ Sectional Speed Drills (20–25 Qs)</span>
-            <span style={{ background: activeTab === 'sectional' ? 'rgba(255,255,255,0.25)' : '#f5f3ff', color: activeTab === 'sectional' ? '#fff' : '#7c3aed', padding: '1px 8px', borderRadius: '10px', fontSize: '11px' }}>
+            <span className={`${styles.formatCountBadgePurple} ${activeTab === 'sectional' ? styles.formatCountBadgeActive : ''}`}>
               {sectionalCount}
             </span>
           </button>
@@ -127,26 +91,16 @@ export default function MockTestsPage() {
       </section>
 
       {/* ── Filter Pills by Exam ── */}
-      <section style={{ background: '#f8fafc', borderBottom: '1px solid var(--outline-variant)', padding: '12px 0' }}>
-        <div className="container" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
-          <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.5px', marginRight: '6px' }}>
+      <section className={styles.examFilterSection}>
+        <div className={`container ${styles.examFilterRow}`}>
+          <span className={styles.examFilterLabel}>
             Filter by Exam:
           </span>
           {EXAM_FILTERS.map(f => (
             <button
               key={f}
               onClick={() => setActiveFilter(f)}
-              style={{
-                padding: '5px 14px',
-                borderRadius: '100px',
-                fontSize: '12px',
-                fontWeight: 600,
-                border: activeFilter === f ? '1px solid var(--primary)' : '1px solid #cbd5e1',
-                background: activeFilter === f ? 'var(--primary)' : '#fff',
-                color: activeFilter === f ? '#fff' : '#475569',
-                cursor: 'pointer',
-                transition: 'all 0.15s ease'
-              }}
+              className={`${styles.examFilterBtn} ${activeFilter === f ? styles.examFilterBtnActive : ''}`}
             >
               {f}
             </button>
@@ -371,13 +325,13 @@ function TestCard({ test }) {
           {test.difficulty}
         </span>
         {test.isFullMock && (
-          <span style={{ fontSize: '10px', fontWeight: 800, padding: '3px 8px', borderRadius: '4px', background: '#ecfdf5', color: '#047857', border: '1px solid #6ee7b7', marginLeft: 'auto' }}>
+          <span className={styles.fullMockBadge}>
             💯 100 Qs Full Mock
           </span>
         )}
       </div>
 
-      <h3 className={styles.testTitle}>{test.title}</h3>
+      <h2 className={styles.testTitle}>{test.title}</h2>
       <p className={styles.testDesc}>{test.description}</p>
 
       {test.sections && test.sections.length > 1 && (

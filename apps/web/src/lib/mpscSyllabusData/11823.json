@@ -1,0 +1,182 @@
+{
+  "docId": 11823,
+  "examName": "Assistant Professor (Biochemistry) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (बायोकेमिस्ट्री) महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तांत्रिक शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Biochemistry) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": "सहाय्यक प्राध्यापक (बायोकेमिस्ट्री) महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तांत्रिक शिक्षण विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "BIOMOLECULES",
+          "unitTitleMr": "बायोमोलिव्ह्यूल्स",
+          "topics": [
+            "Structure of atoms, molecules and chemical bonds.",
+            "Principles of biophysical chemistry- pH, buffer, reaction kinetics, thermodynamics, colligative properties, problems related to this topic.",
+            "Carbohydrates: Classification, basic chemical structure, general reactions and properties, biological significance, Sugar derivatives, deoxy sugars, amino sugars, and sugar acids.",
+            "Lipids: Classification, structure and function of major lipid sub classes- acylglycerols, Lipoproteins, chylomicrons, LDL, HDL and VLDL, rancidity. Formation of micelles, monolayers, bilayer, liposomes.",
+            "Amino acids: Classification, Properties, reactions, rare amino acids.",
+            "Protein classification: Reactions, functions, properties and Solid phase synthesis, protein sequencing",
+            "Structural levels of protein: Primary, Secondary, Tertiary and Quaternary Structure, Structure of Hemoglobin and Keratin, Conformation of proteins (Ramachandran plot, secondary structure, domains, motif and folds).",
+            "Nucleic Acids: Types and structure of nucleosides, nucleotides. Types of DNA and RNA. Watson and Crick Model, Conformation of nucleic acids (helix (A, B, Z), t-RNA, micro-RNA).",
+            "Vitamins and Co-enzymes: Classification, water soluble and fat-soluble vitamins. Structure, dietary requirements, deficiency disorders, coenzyme forms and their mechanism."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "ENZYMOLOGY",
+          "unitTitleMr": "एंझायमॉलॉजी",
+          "topics": [
+            "Classification, isoenzymes and multienzymes.",
+            "Enzymes kinetics: One-substrate reactions, effect of pH, temperature, two substrate reactions: theory, Enzyme Inhibition- types and examples",
+            "Mechanism of enzymes action, Theoretical background, factors leading to rate enhancement of enzyme catalysed reactions, chymotrypsin as an example.",
+            "Regulation of enzyme activity, Zymogen activation, phosphorylation and dephosphorylation, allosteric enzymes, Enzyme turnover."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "METABOLISM",
+          "unitTitleMr": "चयापचय",
+          "topics": [
+            "Bioenergetics: Basic law of thermodynamics, internal energy, enthalpy, entropy, concept of free energy, standard free energy change of a chemical reaction, redox potentials, high energy compounds, structure and significance of ATP",
+            "Pathway, Energetics, regulation and significance of Glycolysis, Citric acid cycle, Pentose phosphate pathway, glyoxalate cycle, glucuronic acid pathway, inter conversion of hexoses, Gluconeogenesis.",
+            "Polysaccharide metabolism: Biosynthesis, degradation and regulation of glycogen, metabolism of starch and cellulose, inborn errors of carbohydrate metabolism",
+            "Electron transport chain and oxidative phosphorylation, ATP synthase and mechanism",
+            "Lipid metabolism: Beta oxidation of even and odd number carbon atoms fatty acids, energetics and regulation. Formation of ketone bodies, other types of fatty acid oxidation.",
+            "Biosynthesis of lipids: Requirements of carbon dioxide and citrate for biosynthesis, fatty acid synthase complex, regulation of biosynthesis. Biosynthesis of triglycerides, cholesterol and phospholipids",
+            "Amino acid metabolism: Oxidative degradation of amino acids, Proteolysis, transamination, oxidative deamination, decarboxylation, urea cycle, ammonia excretion.",
+            "Biosynthesis of amino acids: Precursor functions of amino acids, biosynthesis of aromatic amino acids, Histidine, one carbon atom transfer by folic acid (Biosynthesis of glycine, serine, cysteine, methionine, threonine.)",
+            "Inborn errors of amino acid metabolism",
+            "Purine and pyrimidine degradation pathway",
+            "Biosynthesis of purine and pyrimidine nucleotides, regulation and biosynthesis of nucleotide coenzymes"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "CELL BIOCHEMISTRY",
+          "unitTitleMr": "सेल बायोकेमिस्ट्री",
+          "topics": [
+            "Membrane structure and function: Structure of model membrane, lipid bilayer and membrane proteins, diffusion, osmosis, ion channels, active transport, membrane pumps, mechanism of sorting and regulation of intracellular transport, electrical properties of membranes.",
+            "Structural organization and function of intracellular organelles: Cell wall, nucleus, mitochondria, Golgi bodies, lysosomes, endoplasmic reticulum, peroxisomes, plastids, vacuoles, chloroplast, structure and function of cytoskeleton and its role in motility.",
+            "Organization of genes and chromosomes: Unique and repetitive DNA, interrupted genes, gene families, structure of chromatin and chromosomes, heterochromatin, euchromatin, transposons",
+            "Cell division and cell cycle: Mitosis and meiosis, their regulation, steps in cell cycle, regulation and control of cell cycle",
+            "Microbial Physiology: Growth curve, cultural characteristics, staining procedures, isolation and characterization of microorganisms, pure culture, physical and chemical methods of control of microorganisms."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "GENETICS",
+          "unitTitleMr": "अनुवंशशास्त्र",
+          "topics": [
+            "Mendelian principles: Dominance, segregation, independent assortment.",
+            "Concept of gene: Allele, multiple alleles, pseudoallele, complementation tests",
+            "Extra chromosomal inheritance: Inheritance of Mitochondrial and chloroplast genes, maternal inheritance.",
+            "Microbial genetics: Methods of genetic transfers– transformation, conjugation, transduction and sex-duction, mapping genes by interrupted mating, fine structure analysis of genes.",
+            "Mutation: Types, causes and detection, mutant types– lethal, conditional, biochemical, loss of function, gain of function, germinal verses somatic mutants, insertional mutagenesis.",
+            "Structural and numerical alterations of chromosomes: Deletion, duplication, inversion, translocation, ploidy and their genetic implications."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "MOLECULAR BIOLOGY",
+          "unitTitleMr": "रेणू जीवशास्त्र",
+          "topics": [
+            "DNA replication, repair and recombination: Unit of replication, enzymes involved, replication origin and replication fork, fidelity of replication, extrachromosomal replicons, DNA damage and repair mechanisms, homologous and site-specific recombination, transposition",
+            "RNA synthesis and processing (prokaryotic and eukaryotic): transcription factors and machinery, formation of initiation complex, transcription activator and repressor, RNA polymerases, capping, elongation, and termination, post transcriptional modifications, RNA processing, RNA editing, splicing, and polyadenylation, structure and function of different types of RNA.",
+            "Protein synthesis and processing (prokaryotic and eukaryotic): Ribosome, formation of initiation complex, initiation factors and their regulation, elongation and elongation factors, termination, genetic code, aminoacylation of tRNA, tRNA-identity, aminoacyl tRNA synthetase, and translational proof-reading, translational inhibitors, Post- translational modification of proteins, sorting and targeting of proteins.",
+            "Control of gene expression at transcription and translation level: regulating the expression of phages, viruses, prokaryotic and eukaryotic genes, role of chromatin in gene expression and gene silencing, Operon system and its regulation- lactose, tryptophan and arabinose operon"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "IMMUNOLOGY",
+          "unitTitleMr": "प्रतिकारशास्त्र",
+          "topics": [
+            "Cells and molecules involved in innate and adaptive immunity, antigens, antigenicity and immunogenicity. B and T cell epitopes",
+            "Structure and function of antibody molecules. generation of antibody diversity, monoclonal antibodies, antigen- antibody interactions, MHC molecules, antigen processing and presentation, activation and differentiation of B and T cells, B and T cell receptors, antibody engineering",
+            "Humoral and cell mediated immune responses, primary and secondary immune modulation, the complement system, Toll-like receptors, cell-mediated effector functions, inflammation, hypersensitivity and autoimmunity, immune response during bacterial (tuberculosis), parasitic (malaria) and viral (HIV) infections, congenital and acquired immune-deficiencies, vaccines."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "PLANT BIOCHEMISTRY",
+          "unitTitleMr": "वनस्पती बायोकेमिस्ट्री",
+          "topics": [
+            "Photosynthesis: Light harvesting complexes; mechanisms of electron transport; photoprotective mechanisms; CO2 fixation-C3, C4 and CAM pathways.",
+            "Respiration and photorespiration: Citric acid cycle; plant mitochondrial electron transport and ATP synthesis; alternate oxidase; photorespiratory pathway.",
+            "Nitrogen metabolism: Nitrate and ammonium assimilation; amino acid biosynthesis.",
+            "Role of various macro and micro minerals in plant growth and their deficiency",
+            "Plant hormones: Classes, biosynthesis, storage, breakdown and transport; physiological effects and mechanisms of action, deficiency."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "HUMAN PHYSIOLOGY",
+          "unitTitleMr": "मानवी शरीरविज्ञान",
+          "topics": [
+            "Respiratory system: Comparison of respiration in different species, anatomical considerations, transport of gases, exchange of gases, waste elimination, neural and chemical regulation of respiration.",
+            "Nervous system: Neurons, action potential, gross neuroanatomy of the brain and spinal cord, central and peripheral nervous system, muscle contraction.",
+            "Digestive system: Role of different organs in digestion, absorption, energy balance, BMR.",
+            "Excretory system: Comparative physiology of excretion, kidney, urine formation, urine concentration, waste elimination, regulation of water balance, blood volume, blood pressure, electrolyte balance, acid-base balance.",
+            "Blood and circulation: Blood corpuscles, haemopoiesis and formed elements, plasma function, blood volume, blood volume regulation, blood groups, haemoglobin, immunity, haemostasis, pathway of blood coagulation.",
+            "Vision- Vitamin A and visual cycle.",
+            "Endocrinology and reproduction: Types of hormones, endocrine glands, basic mechanism of hormone action, various hormones and diseases; reproductive processes, gametogenesis, ovulation, neuroendocrine regulation"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "MEDICAL BIOCHEMISTRY",
+          "unitTitleMr": "वैद्यकीय बायोकेमिस्ट्री",
+          "topics": [
+            "Mechanism of action at molecular level of selected antibiotics: inhibitors of cell wall, plasma membrane, nucleic acids and protein synthesis. Mechanism of action of anti-metabolites, analgesics, hallucinogens, antiviral, antifungal, antiprotozoal and mechanism of resistance to antibiotics and other drugs.",
+            "Lysosomes and their physiological role: Structure and function of lysosomes, role in animal and plant cells. Physiological role in various types of digestive phenomenon, disturbances to lysosomes (lysosomal pathology), lysosomal storage disease.",
+            "Molecular basis of hemoglobinopathies: concept of hemoglobinopathies, β and α-Thalassemia, sickle cell anemia, pathophysiology, biochemistry, types of mutations.",
+            "Ischemic heart disease: myocardial infarction and coronary heart diseases (pathophysiology); laboratory findings, enzymes involved.",
+            "Cancer: carcinogenesis, genetic rearrangements in progenitor cells, oncogenes, tumor suppressor genes, cancer and the cell cycle, virus-induced cancer, metastasis, interaction of cancer cells with normal cells, therapeutic interventions",
+            "Apoptosis: extrinsic and intrinsic mechanism, role in diseases and physiology"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "ENVIRONMENTAL TOXICOLOGY",
+          "unitTitleMr": "पर्यावरणीय विषशास्त्र",
+          "topics": [
+            "Types of pollution: air, water and soil, methods for assessment of pollution",
+            "Basic principles of toxicology, Classification of toxic agents, characteristics of exposure, route and site of exposure. Allergic reactions, Idiosyncratic reactions, Immediate verses delayed toxicity, Reversible verses irreversible toxicity, Local verses systemic toxicity. Concept of LD50 and its significance.",
+            "Biotransformation of toxicants: Phase I and II biotransformation reactions",
+            "Bioremediation and phytoremediation"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "RECOMBINANT DNA TECHNOLOGY",
+          "unitTitleMr": "रिक्म्बिनंट डीएनए तंत्रज्ञान",
+          "topics": [
+            "Enzymes in rDNA technology: Different enzymes used and their roles, restriction endonucleases, ligases, polymerases, etc.",
+            "Vectors for E. coli: Plasmids, M 13 bacteriophage vectors, λ bacteriophage, Cosmid. Eukaryotic cloning vectors: cloning vectors for yeast, other fungi, YAC, cloning vectors for higher plants, Ti plasmid, Ri plasmid, viruses as cloning vectors.",
+            "Expression of foreign gene: gene expression in E coli, production of recombinant proteins in Eukaryotes, fungi, yeast, mammalian and insect cells systems. Transformation, identification of recombinants, introduction of phage DNA into bacterial cells (transfection), identification of recombinant phage. Selection of recombinant DNA clones: colony and plaque hybridization probing, Southern, Northern and Western blotting techniques",
+            "RNA interference and its applications",
+            "Polymerase chain reaction: concept, types, methods and applications"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

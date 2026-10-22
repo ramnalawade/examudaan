@@ -1,0 +1,148 @@
+{
+  "docId": 6430,
+  "examName": "Inspector of Legal Metrology, Group B (Gazetted) Main Examination-Syllabus",
+  "examNameMr": "निरीक्षक, वैधमापनशास्त्र, गट-ब (राजपत्रित) मुख्य परीक्षा - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Inspector of Legal Metrology, Group B (Gazetted) Main Examination",
+      "paperTitleMr": "निरीक्षक, वैधमापनशास्त्र, गट-ब (राजपत्रित) मुख्य परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Electrical Measurements and Instruments",
+          "unitTitleMr": "विद्युत मोजमाप आणि उपकरणे",
+          "topics": [
+            "Bridges: Wheatstone, Kelvin, Megohm, Maxwell, Anderson, Schering and Wien for measurement of R, L, C and frequency, Q-meter",
+            "Measurement of voltage, current and power in single and three phase circuits",
+            "AC and DC current probes, true rms meters, voltage and current scaling, instrument transformers",
+            "Timer/counter, time, phase and frequency measurements, digital voltmeter, digital multimeter",
+            "Oscilloscope, shielding and grounding"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Sensors and Transducers",
+          "unitTitleMr": "सेन्सर्स आणि ट्रान्सड्यूसर्स",
+          "topics": [
+            "Piezoelectric, Hall effect, Sensors and associated signal conditioning circuits",
+            "Transducers, Classification of transducers, Resistance Potential Metre, Strain Gauges",
+            "Resistance Thermometers, thermistors, inductive transducers, LVDT, RVDT, Capacity Transducers",
+            "Piezoelectric, Photoelectric Transducers",
+            "Digital Transducers: Encoder, Shaft Encoder, Optical Encoder"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Industrial and Process Measurements",
+          "unitTitleMr": "औद्योगिक आणि प्रक्रिया मोजमाप",
+          "topics": [
+            "Displacement (linear and angular), velocity, acceleration, force, torque, vibration, shock, pressure",
+            "Flow (variable head, variable area, electromagnetic, ultrasonic, turbine and open channel flow meters)",
+            "Temperature (thermocouple, bolometer, thermistor, pyrometer and semiconductor)",
+            "Liquid level, pH, conductivity and viscosity measurement"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Measurement Concepts and Standards",
+          "unitTitleMr": "मोजमाप संकल्पना आणि मानके",
+          "topics": [
+            "Basic measurement concepts and errors measurement systems, Static and dynamic characteristics units and Standards",
+            "Types of errors, Accuracy and Precision, Reproducibility, Repeatability and Noise, SI units",
+            "Standards (R,L,C, voltage, current and frequency), Systematic and random errors",
+            "Expression of uncertainty, Propagation of errors, linear and weighted regression"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Applied Physics and Fundamentals",
+          "unitTitleMr": "उपयोजित भौतिकशास्त्र आणि मूलभूत बाबी",
+          "topics": [
+            "Conversation of Energy and Momentum, Mass, Pressure, Forces, Motion",
+            "Fundamentals of statistics: Mean, Standard Deviation, Accuracy of Instruments, Error Analysis, Tolerance",
+            "Heat, Electricity and Magnetism, Waves (Sound, Vibrating Strings, Wave Diffraction, Doppler Effect)",
+            "Frequency, Reflection, Refraction, Refractive Index, Hook's Law, Light, Snell's Law, Longitudinal wave"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Gravitational and Mathematical Foundations",
+          "unitTitleMr": "गुरुत्वीय आणि गणितीय पाया",
+          "topics": [
+            "Gravity (Gravitational Potential, Newton's Law of Universal Gravitation, Universal Gravitation Constant)",
+            "Buoyancy Related Error, Change in weight due to Altitude",
+            "Algebra Foundation, Geometry Foundation, Trigonometry"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Metrology Organizations and Standards",
+          "unitTitleMr": "मापनशास्त्र संस्था आणि मानके",
+          "topics": [
+            "Functions and Responsibilities of International Organization of Legal Metrology (OIML), International Bureau of Weights and Measures (BIPM), International Standards Organization (ISO)",
+            "Functions and responsibilities of Indian Organizations: National Physical Laboratories of India (NPL), Bureau of Indian Standards (BIS), National Test House (NTH), Fluid Control Research Institute (FCRI)"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Basic Concepts and Definitions in Metrology",
+          "unitTitleMr": "मापनशास्त्रातील मूलभूत संकल्पना आणि व्याख्या",
+          "topics": [
+            "Basic Concepts and Definitions: Weight, Force, Length, Density, Work, Energy, Temperature",
+            "Mensuration: Dimension, Area, Volume of Rectangular, Conical and Cylindrical, Spherical Bodies",
+            "System of Measurements and Interconversion: SI units of length, Volume, Mass, Weight, Energy",
+            "Large and Small units of length, Weight, Length and Volume; Bullion and Carot"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Fundamentals of Metrology and Volume Measurement",
+          "unitTitleMr": "मापनशास्त्राची मूलभूत तत्त्वे आणि घनफळ मोजमाप",
+          "topics": [
+            "Vernier and Micrometer Screw Gauge, Working, Least count, Levers: Type and Applications",
+            "Scales and Tapes for measuring length (Flexible and Non Flexible)",
+            "Volume Measurement: Measuring Flasks, Cups etc. their calibration, Liquid measuring Instruments",
+            "Petroleum Products Measurements, Automatic filling machines, Bottling of soft drinks, Storage Tanks Calibration"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Weighing Machines and Instruments",
+          "unitTitleMr": "वजन काटे आणि उपकरणे",
+          "topics": [
+            "Weighing Machines (Mechanical): Spring balances, Scale balances, Weighbridge and platform machines, Crane type machines",
+            "Weighing Machines (Electronic and Digital): Automatic Conveyor Belt type weighing, Weigh Feeders, Nucleonic weighing machine",
+            "Load cell-Resistance strain gauge based instruments",
+            "Other instruments: Thermometers, Manometers, Blood pressure meter, Flow Metre, Speedometers, Power and Energy Meters, PNG meters, Noise Metres, Breath Analyser, Lactometer and Moisture Meters"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Laboratory Accreditation and Quality Assurance",
+          "unitTitleMr": "प्रयोगशाळा मान्यता आणि गुणवत्ता आश्वासन",
+          "topics": [
+            "Laboratory Accreditation, Salient features and Procedures of ISO 17025",
+            "Functions and responsibilities of National Accreditation Board for Testing and Calibration Laboratories (NABL)",
+            "International Laboratory Accreditation Cooperation (ILAC) and the concept of MRA (Mutual Recognition Agreement) for Laboratories"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

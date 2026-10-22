@@ -1,0 +1,175 @@
+{
+  "docId": 10540,
+  "examName": "Electrical Engineering (MPSC)",
+  "examNameMr": "अभियांत्रिकी गणित",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Engineering Mathematics and Electrical Engineering",
+      "paperTitleMr": "अभियांत्रिकी गणित आणि विद्युत अभियांत्रिकी",
+      "totalMarks": 100,
+      "duration": "3 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Engineering Mathematics",
+          "unitTitleMr": "अभियांत्रिकी गणित",
+          "topics": [
+            "Linear Algebra: Matrix algebra, systems of linear equations, consistency and rank, Eigen value and Eigen vectors",
+            "Calculus: Mean value theorems, theorems of integral calculus, partial derivatives, maxima and minima, multiple integrals, Fourier series, vector identities, line, surface and volume integrals, Stokes, Gauss and Green’s theorems",
+            "Differential equations: First order equation (linear and nonlinear), second order linear differential equations with constant coefficients, method of variation of parameters, Cauchy’s and Euler’s equations, initial and boundary value problems, solution of partial differential equations: variable separable method",
+            "Analysis of complex variables: Analytic functions, Cauchy’s integral theorem and integral formula, Taylor’s and Laurent’s series, residue theorem, solution of integrals",
+            "Probability and Statistics: Sampling theorems, conditional probability, mean, median, mode, standard deviation and variance; random variables: discrete and continuous distributions: normal, Poisson and binomial distributions",
+            "Numerical Methods: Matrix inversion, solutions of non-linear algebraic equations, iterative methods for solving differential equations, numerical integration, regression and correlation analysis"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Electricity and Magnetism",
+          "unitTitleMr": "विद्युत आणि चुंबकत्व",
+          "topics": [
+            "Coulomb's Law",
+            "Electric Field Intensity",
+            "Electric Flux Density",
+            "Gauss's Law",
+            "Divergence",
+            "Electric field and potential due to point, line, plane and spherical charge distributions",
+            "Effect of dielectric medium",
+            "Capacitance of simple configurations",
+            "Biot-Savart’s law",
+            "Ampere’s law",
+            "Curl",
+            "Faraday’s law",
+            "Lorentz force",
+            "Inductance",
+            "Magnetomotive force",
+            "Reluctance",
+            "Magnetic circuits",
+            "Self and Mutual inductance of simple configurations"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electrical Circuits and Machines",
+          "unitTitleMr": "विद्युत सर्किट आणि मशीन्स",
+          "topics": [
+            "Voltage and current sources: independent, dependent, ideal and practical",
+            "v-i relationships of resistor, inductor, mutual inductance and capacitor",
+            "transient analysis of RLC circuits with dc excitation",
+            "Kirchoff’s laws, mesh and nodal analysis, superposition, Thevenin, Norton, maximum power transfer and reciprocity theorems",
+            "Peak-, average- and rms values of ac quantities; apparent-, active- and reactive powers; phasor analysis, impedance and admittance",
+            "series and parallel resonance, locus diagrams, realization of basic filters with R, L and C elements",
+            "transient analysis of RLC circuits with ac excitation",
+            "One-port and two-port networks, driving point impedance and admittance, open-, and short circuit parameters",
+            "Single phase transformer: equivalent circuit, phasor diagram, open circuit and short circuit tests, regulation and efficiency",
+            "Three phase induction motors: principle of operation, types, performance, torque-speed characteristics, no-load and blocked rotor tests, equivalent circuit, starting and speed control",
+            "Types of losses and efficiency calculations of electric machines"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Signals and Systems",
+          "unitTitleMr": "सिग्नल आणि सिस्टम्स",
+          "topics": [
+            "Periodic, aperiodic and impulse signals",
+            "Laplace, Fourier and z-transforms",
+            "transfer function, frequency response of first and second order linear time invariant systems, impulse response of systems",
+            "convolution, correlation",
+            "Discrete time system: impulse response, frequency response, pulse transfer function",
+            "DFT and FFT",
+            "basics of IIR and FIR filters"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Control Systems",
+          "unitTitleMr": "नियंत्रण प्रणाली",
+          "topics": [
+            "Feedback principles, signal flow graphs, transient response, steady-state-errors",
+            "Bode plot, phase and gain margins, Routh and Nyquist criteria, root loci",
+            "design of lead, lag and lead-lag compensators, state-space representation of systems; time-delay systems",
+            "mechanical, hydraulic and pneumatic system components, synchro pair, servo and stepper motors, servo valves",
+            "on-off, P, PI, PID, cascade, feed forward, and ratio controllers",
+            "tuning of PID controllers and sizing of control valves"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Analog Electronics",
+          "unitTitleMr": "अ‍ॅनालग इलेक्ट्रॉनिक्स",
+          "topics": [
+            "Characteristics and applications of diode, Zener diode, BJT and MOSFET",
+            "small signal analysis of transistor circuits, feedback amplifiers",
+            "Characteristics of ideal and practical operational amplifiers",
+            "applications of opamps: adder, subtractor, integrator, differentiator, difference amplifier, instrumentation amplifier, precision rectifier, active filters, oscillators, signal generators, voltage controlled oscillators and phase locked loop",
+            "sources and effects of noise and interference in electronic circuits"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Digital Electronics",
+          "unitTitleMr": "डिजिटल इलेक्ट्रॉनिक्स",
+          "topics": [
+            "Combinational logic circuits, minimization of Boolean functions",
+            "IC families: TTL and CMOS",
+            "Arithmetic circuits, comparators, Schmitt trigger, multi-vibrators, sequential circuits, flipflops, shift registers, timers and counters",
+            "sample-and-hold circuit, multiplexer, analog-to-digital and digital-to-analog converters",
+            "Characteristics of ADC and DAC",
+            "basics of number systems, Embedded Systems: Micro processor and micro controller applications, memory and input-output interfacing",
+            "basics of data acquisition systems, basics of distributed control systems and programmable logic controllers"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Measurements",
+          "unitTitleMr": "मोजमाप",
+          "topics": [
+            "SI units, standards, systematic and random errors in measurement",
+            "expression of uncertainty-accuracy and precision, propagation of errors, linear and weighted regression",
+            "Bridges: Wheatstone, Kelvin, Megohm, Maxwell, Anderson, Schering and Wien",
+            "Measurement of voltage, current and power in single and three phase circuits",
+            "ac and dc current probes, true rms meters, voltage and current scaling, instrument transformers",
+            "timer/counter, time, phase and frequency measurements, digital voltmeter, digital multimeter oscilloscope, shielding and grounding"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Sensors and Industrial Instrumentation",
+          "unitTitleMr": "सेन्सर्स आणि औद्योगिक इन्स्ट्रुमेंटेशन",
+          "topics": [
+            "Resistive, capacitive, inductive, piezoelectric, Hall effect sensors and associated signal conditioning circuits",
+            "transducers for industrial instrumentation: displacement, velocity, acceleration, force, torque, vibration, shock, pressure, flow and temperature",
+            "liquid level, pH, conductivity and viscosity measurement",
+            "4-20 mA two-wire transmitter"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Communication and Optical Instrumentation",
+          "unitTitleMr": "संप्रेषण आणि ऑप्टिकल इन्स्ट्रुमेंटेशन",
+          "topics": [
+            "Amplitude and frequency modulation and demodulation",
+            "Shannon's sampling theorem, pulse code modulation",
+            "frequency and time division multiplexing, digital modulation techniques",
+            "optical sources and detectors: LED, laser, photo-diode, light dependent resistor, square law detectors and their characteristics",
+            "interferometer and applications in metrology",
+            "basics of fiber optic sensing, UV-VIS Spectrophotometers, Mass spectrometer"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

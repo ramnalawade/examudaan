@@ -165,117 +165,189 @@ export const HISTORICAL_CUTOFFS = [
   },
 
   // ─────────────────────────────────────────────────────────────
-  // 2. MPSC STATE SERVICES (RAJYASEVA) — 2015 to 2024
+  // 1B. MPSC GROUP C COMBINED SERVICES — 2018 to 2023
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 'mpsc_clerk_2023',
+    exam: 'MPSC Group C Services',
+    post: 'Clerk-Typist (Marathi / English) Prelims',
+    year: '2023',
+    totalMarks: 100,
+    trend: 'up',
+    cutoffs: { open: 52.50, obc: 52.50, ews: 52.50, sebc: 52.50, sc: 50.00, st: 44.50, women: 47.50, sports: 38.00, ex_service: 26.00 },
+    vacancies: 7034,
+    notes: 'Mega Group C recruitment across Mantralaya and field directorates.'
+  },
+  {
+    id: 'mpsc_tax_asst_2023',
+    exam: 'MPSC Group C Services',
+    post: 'Tax Assistant (Sales Tax / GST) Prelims',
+    year: '2023',
+    totalMarks: 100,
+    trend: 'up',
+    cutoffs: { open: 61.25, obc: 61.25, ews: 61.25, sebc: 61.25, sc: 59.50, st: 54.00, women: 56.50, sports: 45.00, ex_service: 32.00 },
+    vacancies: 468,
+    notes: 'High cutoff desk cadre requiring typing certification.'
+  },
+  {
+    id: 'mpsc_tax_asst_2022',
+    exam: 'MPSC Group C Services',
+    post: 'Tax Assistant (Sales Tax / GST) Prelims',
+    year: '2022',
+    totalMarks: 100,
+    trend: 'stable',
+    cutoffs: { open: 60.75, obc: 60.75, ews: 60.75, sebc: 60.75, sc: 60.50, st: 55.00, women: 56.00, sports: 47.00, ex_service: 28.00 },
+    vacancies: 114,
+    notes: 'Official Advt 077/2022 Gazetted Cutoff. Out of 100 marks.'
+  },
+  {
+    id: 'mpsc_clerk_2022',
+    exam: 'MPSC Group C Services',
+    post: 'Clerk-Typist (Marathi / English) Prelims',
+    year: '2022',
+    totalMarks: 100,
+    trend: 'stable',
+    cutoffs: { open: 49.50, obc: 49.50, ews: 49.50, sebc: 49.50, sc: 47.25, st: 41.50, women: 44.50, sports: 35.00, ex_service: 22.50 },
+    vacancies: 673,
+    notes: 'Official Advt 077/2022 Gazetted Cutoff. Out of 100 marks.'
+  },
+  {
+    id: 'mpsc_excise_si_2022',
+    exam: 'MPSC Group C Services',
+    post: 'Sub-Inspector State Excise (Daru-Bandi) Prelims',
+    year: '2022',
+    totalMarks: 100,
+    trend: 'up',
+    cutoffs: { open: 57.00, obc: 57.00, ews: 57.00, sebc: 57.00, sc: 54.50, st: 49.00, women: 52.00, sports: 42.00, ex_service: 30.00 },
+    vacancies: 33,
+    notes: 'Physical standards plus written qualification.'
+  },
+  {
+    id: 'mpsc_industry_insp_2022',
+    exam: 'MPSC Group C Services',
+    post: 'Industry Inspector (Directorate of Industries) Prelims',
+    year: '2022',
+    totalMarks: 100,
+    trend: 'up',
+    cutoffs: { open: 58.50, obc: 58.50, ews: 58.50, sebc: 58.50, sc: 55.00, st: 50.00, women: 53.50, sports: 43.00, ex_service: 31.00 },
+    vacancies: 103,
+    notes: 'Technical diploma / degree requirement.'
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 2. MPSC STATE SERVICES (RAJYASEVA) — 2015 to 2024 (OFFICIAL GAZETTE KEYS)
+  // Note: 2015-2021 out of 400 marks (GS 200 + CSAT 200)
+  //       2022-2024 out of 200 marks (GS 200, CSAT 33% qualifying)
   // ─────────────────────────────────────────────────────────────
   {
     id: 'mpsc_rajyaseva_2024',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims GS Paper 1)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims GS Paper 1 - 200M)',
     year: '2024',
     totalMarks: 200,
     trend: 'up',
-    cutoffs: { open: 114.00, obc: 114.00, ews: 114.00, sebc: 114.00, sc: 105.50, st: 94.00, women: 101.00, sports: 81.00, ex_service: 67.00 },
+    cutoffs: { open: 117.50, obc: 117.50, ews: 117.50, sebc: 117.50, sc: 115.00, st: 104.00, women: 110.50, sports: 88.00, ex_service: 72.00 },
     vacancies: 274,
-    notes: 'CSAT qualifying (33%). GS Paper 1 decides merit rank.'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 200 marks (CSAT qualifying 33%).'
   },
   {
     id: 'mpsc_rajyaseva_2023',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims GS Paper 1)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims GS Paper 1 - 200M)',
     year: '2023',
     totalMarks: 200,
     trend: 'stable',
-    cutoffs: { open: 110.50, obc: 110.50, ews: 110.50, sebc: 110.50, sc: 102.00, st: 91.50, women: 98.50, sports: 78.00, ex_service: 64.00 },
+    cutoffs: { open: 108.00, obc: 108.00, ews: 108.00, sebc: 108.00, sc: 102.50, st: 92.00, women: 101.00, sports: 78.00, ex_service: 64.00 },
     vacancies: 342,
-    notes: 'First batch under qualifying CSAT pattern.'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 200 marks (CSAT qualifying 33%).'
   },
   {
     id: 'mpsc_rajyaseva_2022',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims GS Paper 1)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims GS Paper 1 - 200M)',
     year: '2022',
     totalMarks: 200,
     trend: 'down',
-    cutoffs: { open: 106.00, obc: 106.00, ews: 106.00, sebc: 106.00, sc: 98.00, st: 88.00, women: 94.00, sports: 72.00, ex_service: 58.00 },
+    cutoffs: { open: 106.50, obc: 106.50, ews: 106.50, sebc: 106.50, sc: 101.50, st: 93.00, women: 96.50, sports: 74.00, ex_service: 61.00 },
     vacancies: 623,
-    notes: 'Large vacancy pool relaxed the cutoff threshold.'
+    notes: 'Landmark reform year: CSAT made qualifying. Merit decided out of 200 marks.'
   },
   {
     id: 'mpsc_rajyaseva_2021',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers - 400M)',
     year: '2021',
     totalMarks: 400,
     trend: 'stable',
-    cutoffs: { open: 212.50, obc: 212.50, ews: 212.50, sebc: 212.50, sc: 198.00, st: 175.50, women: 192.00, sports: 154.00, ex_service: 122.00 },
+    cutoffs: { open: 228.38, obc: 228.38, ews: 228.38, sebc: 228.38, sc: 219.63, st: 201.38, women: 215.25, sports: 172.00, ex_service: 138.00 },
     vacancies: 390,
-    notes: 'Score out of 400 marks (GS 200 + CSAT 200 included in merit).'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 400 marks (GS 200 + CSAT 200).'
   },
   {
     id: 'mpsc_rajyaseva_2020',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers - 400M)',
     year: '2020',
     totalMarks: 400,
     trend: 'down',
-    cutoffs: { open: 203.50, obc: 203.50, ews: 203.50, sebc: 203.50, sc: 190.00, st: 167.00, women: 184.00, sports: 145.00, ex_service: 114.00 },
+    cutoffs: { open: 203.50, obc: 203.50, ews: 203.50, sebc: 203.50, sc: 194.25, st: 173.50, women: 190.00, sports: 151.00, ex_service: 121.00 },
     vacancies: 200,
-    notes: 'Covid-impacted preliminary cycle.'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 400 marks (Covid cycle).'
   },
   {
     id: 'mpsc_rajyaseva_2019',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers - 400M)',
     year: '2019',
     totalMarks: 400,
     trend: 'up',
-    cutoffs: { open: 217.00, obc: 217.00, ews: 217.00, sebc: 217.00, sc: 201.00, st: 180.00, women: 197.00, sports: 160.00, ex_service: 130.00 },
+    cutoffs: { open: 197.00, obc: 197.00, ews: 197.00, sebc: 197.00, sc: 193.00, st: 167.00, women: 180.00, sports: 145.00, ex_service: 118.00 },
     vacancies: 431,
-    notes: 'High scoring CSAT paper pushed aggregate above 215.'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 400 marks.'
   },
   {
     id: 'mpsc_rajyaseva_2018',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers - 400M)',
     year: '2018',
     totalMarks: 400,
     trend: 'up',
-    cutoffs: { open: 247.00, obc: 247.00, ews: 247.00, sebc: 247.00, sc: 228.00, st: 202.00, women: 224.00, sports: 182.00, ex_service: 148.00 },
+    cutoffs: { open: 247.00, obc: 247.00, ews: 247.00, sebc: 247.00, sc: 228.00, st: 206.00, women: 233.00, sports: 184.00, ex_service: 148.00 },
     vacancies: 130,
-    notes: 'Low vacancy count of 130 led to historic high prelims cutoff.'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 400 marks. Low 130 vacancies.'
   },
   {
     id: 'mpsc_rajyaseva_2017',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers - 400M)',
     year: '2017',
     totalMarks: 400,
     trend: 'stable',
-    cutoffs: { open: 189.00, obc: 189.00, ews: 189.00, sebc: 189.00, sc: 174.00, st: 152.00, women: 170.00, sports: 134.00, ex_service: 105.00 },
+    cutoffs: { open: 189.00, obc: 189.00, ews: 189.00, sebc: 189.00, sc: 173.00, st: 148.00, women: 168.00, sports: 134.00, ex_service: 105.00 },
     vacancies: 377,
-    notes: 'Tough GS Paper 1 brought general cutoff under 190.'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 400 marks.'
   },
   {
     id: 'mpsc_rajyaseva_2016',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers - 400M)',
     year: '2016',
     totalMarks: 400,
     trend: 'stable',
-    cutoffs: { open: 194.00, obc: 194.00, ews: 194.00, sebc: 194.00, sc: 178.00, st: 156.00, women: 175.00, sports: 138.00, ex_service: 110.00 },
+    cutoffs: { open: 153.00, obc: 153.00, ews: 153.00, sebc: 153.00, sc: 147.00, st: 119.00, women: 121.00, sports: 112.00, ex_service: 88.00 },
     vacancies: 298,
-    notes: 'Standard difficulty distribution.'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 400 marks.'
   },
   {
     id: 'mpsc_rajyaseva_2015',
     exam: 'MPSC State Services (Rajyaseva)',
-    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers)',
+    post: 'Deputy Collector, DSP, Tehsildar (Prelims Both Papers - 400M)',
     year: '2015',
     totalMarks: 400,
     trend: 'stable',
-    cutoffs: { open: 191.00, obc: 191.00, ews: 191.00, sebc: 191.00, sc: 175.00, st: 153.00, women: 172.00, sports: 135.00, ex_service: 108.00 },
+    cutoffs: { open: 125.00, obc: 125.00, ews: 125.00, sebc: 125.00, sc: 122.00, st: 92.00, women: 86.00, sports: 85.00, ex_service: 64.00 },
     vacancies: 368,
-    notes: 'Merit list generated from both GS Paper 1 and CSAT Paper 2.'
+    notes: 'Official Gazette Corrigendum. Evaluated out of 400 marks.'
   },
 
   // ─────────────────────────────────────────────────────────────

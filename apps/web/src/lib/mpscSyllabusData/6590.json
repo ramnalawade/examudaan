@@ -1,0 +1,46 @@
+{
+  "docId": 6590,
+  "examName": "The Legal Services Authorities Act, 1986",
+  "examNameMr": "कायदेशीर सेवा प्राधिकरण अधिनियम, १९८६",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "The Legal Services Authorities Act, 1986",
+      "paperTitleMr": "कायदेशीर सेवा प्राधिकरण अधिनियम, १९८६",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "The Legal Services Authorities Act, 1986",
+          "unitTitleMr": "कायदेशीर सेवा प्राधिकरण अधिनियम, १९८६",
+          "topics": [
+            "Introduction and Objectives of the Act",
+            "Constitution of State Legal Services Authority",
+            "Supreme Court Legal Services Committee",
+            "District Legal Services Authority",
+            "Taluka Legal Services Committee",
+            "Entitlement to Legal Services",
+            "Lok Adalats",
+            "Finance, Accounts and Audit"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Syllabus includes related acts and amendments as notified by MPSC."
+  ]
+}

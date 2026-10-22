@@ -1,0 +1,66 @@
+{
+  "docId": 1607,
+  "examName": "Assistant Director (Group B) in the Directorate of Industrial Safety and Health",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Screening test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Screening Test - Industrial Safety and Health",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1.5 hrs",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "SECTION-A",
+          "unitTitleMr": null,
+          "topics": [
+            "Salient features of the Factories Act, 1948 and Maharashtra factories Rules, 1963.",
+            "Salient features of Manufacture, Storage and Import of Hazardous Chemicals Rules, 1989 and Chemical Accidents (Emergency, Planning, Preparedness and Response) Rules, 1996.",
+            "Salient features of Workmen's Compensation Act 1923, Public Liability Insurance Act, 1991, and Environment Protection Act, 1986.",
+            "Statutory provisions to be adopted while designing and fabricating and maintaining machinery/plants and site appraisal of any factory.",
+            "Lessons learnt from various National and International disaster."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "SECTION-B",
+          "unitTitleMr": null,
+          "topics": [
+            "Group 1 Mechanical Engineering: Strength of Materials (Stress and strain, stress-strain relationship and elastic constants, thin cylinders; Testing of various types of pressure vessels and safety relief system etc., hoist tackles, solvent extraction plants etc.)",
+            "Heat-Transfer (Modes of Heat Transfer, One-dimensional heat conduction, Thermal Insulation, dimensionless parameters in free and forced convective heat transfer, Thermic Fluids, Fire Protection Devices, Radiative heat transfer, black and grey surfaces, shape factors.)",
+            "Thermodynamics (Zeroth, First and Second laws of thermodynamics; Carnot cycle, Steam Tables, Rankine, Brayton cycles. Boilers, Boiler mountings and Accessories)",
+            "Refrigeration and Air-conditioning (Vapour refrigeration cycle, psychrometric chart and basic psychrometric processes.)",
+            "Fluid Mechanics (Fluid properties; Bernoulli's equation; flow through pipes, head losses in pipes, bends etc. Turbomachinery: Pelton-wheel, Francis and Kaplan turbines - impulse and reaction principles.)",
+            "Engineering Materials (Structure and properties of engineering materials, heat treatment. Metal Casting: Design of patterns, moulds and cores; solidification and cooling; riser and gating design. Joining: Physics of welding, brazing and soldering.)",
+            "Machining and Machine Tool Operations (Mechanics of machining, single and multi-point cutting tools, tool geometry and materials, tool life and wear; jigs and fixtures.)",
+            "Group 2 Electrical, Electronics and Instrumentation and Control: Electric and Electronic Circuits (Circuit Components, Circuit analysis, Analog and Digital Circuits, Filters and Amplifiers, ADCs, DACs. Semiconductor memories, Electrical Insulation, Protection of Electric Equipments.)",
+            "Electrical Machines (Single phase transformer - equivalent circuit, phasor diagram, tests, regulation and efficiency; three phase transformers, DC machines, Single phase and Three phase induction motors, synchronous machines - types, generator characteristics, starting and speed control of motors; performance, and applications; servo and stepper motors. DG Sets.)",
+            "Control Systems (Basic control system components; block diagrams. Open loop and closed loop (feedback) systems and stability analysis of these systems.)",
+            "Electrical and Electronic Measurements (Bridges and potentiometers; PMMC, moving iron, dynamometer and induction type instruments; measurement of voltage, current, power, energy and power factor; instrument transformers; digital voltmeters and multi-meters; phase, time and frequency measurement; Q-meters; oscilloscopes; Time, phase and frequency measurements. Serial and parallel communication. Shielding and grounding, error analysis.)",
+            "Group 3 Chemical Engineering: Process Calculations and Thermodynamics (First and Second laws of thermodynamics. Thermodynamic properties of pure substances: Equations of state phase equilibria)",
+            "Fluid Mechanics and Mechanical Operations (Fluid statics, Newtonian and non-Newtonian fluids, Bernoulli equation, Macroscopic friction factors, flow through pipeline systems, flow meters, pumps and compressors, size reduction and size separation; free and hindered settling; centrifuge and cyclones; thickening and classification, filtration, mixing and agitation; conveying of solids.)",
+            "Heat-Transfer (Modes of Heat Transfer, One-dimensional heat conduction, Thermal Insulation, dimensionless parameters in free and forced convective heat transfer, Thermic Fluids, Fire Protection Devices, Heat Exchanger Performance, LMTD Radiative heat transfer, black and grey surfaces, shape factors.)",
+            "Mass Transfer (Fick's laws, mass transfer coefficients, film theory, stagewise and continuous contacting and stage efficiencies; HTU & NTU concepts design and operation of equipment for distillation, absorption, leaching, liquid-liquid extraction, drying, humidification, dehumidification and adsorption.)",
+            "Chemical Reaction Engineering (Chemical reaction equilibria, reaction rates; kinetics of homogeneous reactions, interpretation of kinetic data, single and multiple reactions in ideal reactors, non-isothermal reactors; kinetics of heterogeneous catalytic reactions; diffusion effects in catalysis. Heat of Reaction/mixing)",
+            "Instrumentation and Process Control (Measurement of process variables; sensors, transducers and their dynamics, transfer functions and dynamic responses of simple systems, process reaction curve, controller modes (P, PI, and PID); control valves; analysis of closed loop systems.)",
+            "Chemical Hazards (Industrial hygiene and safety aspects related to toxicity, Explosions including dust, vapour cloud, and mist explosions, Hazardous chemicals inventory, Vacuum system, Combustion of Fuels.)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

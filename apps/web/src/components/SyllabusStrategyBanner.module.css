@@ -1,0 +1,133 @@
+/* ============================================================
+   components/SyllabusStrategyBanner.module.css
+   ExamUdaan.in — 2-Minute Personalized Strategy Banner
+   Warm gradient aesthetic matching Screenshot 2
+   ============================================================ */
+
+.section {
+  padding: 10px 0 40px;
+}
+
+.bannerCard {
+  background: linear-gradient(135deg, #7c2d12 0%, #9a3412 50%, #c2410c 100%);
+  border-radius: 20px;
+  padding: 36px 40px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  box-shadow: 0 10px 30px rgba(154, 52, 18, 0.2);
+}
+
+.contentBlock {
+  max-width: 650px;
+}
+
+.tagPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffedd5;
+  margin-bottom: 12px;
+  letter-spacing: 0.4px;
+}
+
+.title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(24px, 2.8vw, 32px);
+  font-weight: 800;
+  margin: 0 0 10px;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.desc {
+  font-size: 14px;
+  color: #fed7aa;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.btnQuiz {
+  background: #ffffff;
+  color: #9a3412;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btnQuiz:hover {
+  background: #fff7ed;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btnMocks {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btnMocks:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .bannerCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+  .actionRow {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 520px) {
+  .bannerCard {
+    padding: 22px 16px;
+    border-radius: 16px;
+    gap: 20px;
+  }
+  .actionRow {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btnQuiz, .btnMocks {
+    width: 100%;
+    justify-content: center;
+  }
+}

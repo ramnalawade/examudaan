@@ -1,0 +1,176 @@
+{
+  "docId": 1193,
+  "examName": "Deputy Education Officer, Maharashtra Education Services, Gr-B (Administrative Branch) (Gazetted), Limited Departmental Competitive Examination",
+  "examNameMr": "उप शिक्षणधिकारी व तत्सम पदे, महाराष्ट्र शिक्षण सेवा, गट-ब (प्रशासन शाखा)(राजपत्रित) या पदांवर निवडीद्वारे नियुक्ती करण्यासाठी घेण्यात येणारी मयादित विभागीय स्पर्धा परीक्षा.",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "Marathi and English",
+  "category": "education",
+  "totalMarks": 450,
+  "mainsMarks": 400,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (Paper 1 & Paper 2) and Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper - 1: Marathi, English, General Knowledge and Related Laws/Acts/Rules",
+      "paperTitleMr": "पेपर क्र. १: मराठी, इंग्रजी, सामान्य अध्ययन व शासनाशी संबंधित निवड कायदे, संस्था, इ.",
+      "totalMarks": 150,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "marks": 30,
+          "topics": [
+            "Sarvasamanya Shabdasangrah",
+            "Vakyarachana",
+            "Vyakaran",
+            "Mhani va Vakya Prachar Yancha Arth Ani Upyog",
+            "Tasech Utara Yanchavari Prashanche Uttare"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी",
+          "marks": 30,
+          "marksNote": null,
+          "topics": [
+            "Common Vocabulary",
+            "Sentence Structure",
+            "Grammar",
+            "Use of Idioms and Phrases and their Meaning",
+            "Comprehension of Passage"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Knowledge",
+          "unitTitleMr": "सामान्य ज्ञान",
+          "marks": 40,
+          "topics": [
+            "Ganit (Iyata Baravi Anusar)",
+            "Buddhimatta Chachani",
+            "Chalu Ghadamodi",
+            "Samanya Jnan - Dainandin Ghatana, Nehamiche Anubhav, Dharma, Sahitya, Rajkaran, Shastra, Samajik va Audyogik Sudharana, Krida ya Kshetratil Mahan Vyaktiyanchi Karye, Sarvasadharanpane Bharatchya Visheshat: Maharashtracha Itihasachi va Bhugolachi Ruperesha Yavaril Prashn."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Related Laws, Acts and Institutions",
+          "unitTitleMr": "शासनाशी संबंधित निवड कायदे, संस्था, इ.",
+          "marks": 50,
+          "topics": [
+            "Mahiticha Adhikar Adhiniyam, २००५",
+            "Maharashtra Rajya Lok Seva (Anusuchit Jati, Anusuchit Jamati, Vimukta Jamati, Bhatkaya Jamati/Vishesh Magas Varga va Itar Magas Varga Yanchekarita Arakshan) Adhiniyam, २००१ (Maha. Adhiniyam K. ८/२००४)",
+            "Maharashtra Lokseva Hakk Adhiniyam, २०१५ (Seva Hami Kayda)",
+            "Shaskiya Karmanchayanchya Badalyanche Viniyaman va Shaskiya Kartavya Par Patana Honarya Vilambas Pratibandh Adhiniyam, २००५",
+            "Shasanachi Vidhiyavishak Kamkaj Chalavinyachi Niyamavali, १९८४ (Niyam Krmank १२ va १०९)",
+            "Shala Nyayadhikaran, Sarvoccha va Uccha Nyayalayin Kamkaj va Karyapaddhati (Yachika, Avaman Yachika, Janahit Yachika, Su-Moto Yachika, Ityadi)",
+            "Manavi Hakk Aayog",
+            "Rajya Bal Hakk Sanrakshan Aayog"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper - 2: Acts, Rules and Departmental Related Rules",
+      "paperTitleMr": "पेपर क्र. २: शासनाशी व विभागाशी संबंधित नियम, कायदे, इ.",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Constitution of India, Parliament and State Legislature",
+          "unitTitleMr": "भारताचे संविधान",
+          "marks": 10,
+          "topics": [
+            "Seva Vishayak Babi va Shikshan Sambandhit Kalame",
+            "Sansad va Vidhanmandal Kamkaj va Vividha Samitya"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Maharashtra Civil Services Rules",
+          "unitTitleMr": "महाराष्ट्र नागरी सेवा नियम",
+          "marks": 40,
+          "topics": [
+            "Maharashtra Nagari Seva (Sevechya Sarvasadharan Ati va Sharti) Niyam, १९८१",
+            "Maharashtra Nagari Seva (Shista va Apel) Niyam, १९७९",
+            "Maharashtra Nagari Seva (Vartanuk) Niyam, १९७९",
+            "Maharashtra Nagari Seva (Padgrahana Avadhi, Sviyantar Seva, Nilamban Kalatil Pradane) Niyam, १९८१",
+            "Maharashtra Nagari Seva (Raja) Niyam, १९८१",
+            "Maharashtra Nagari Seva (Vetan) Niyam, १९८१",
+            "Maharashtra Nagari Seva (Nivrutti Vetan) Niyam, १९८२",
+            "Maharashtra Nagari Seva (Ansharashikaran) Niyam, १९८४",
+            "Mumbai Nagari Seva (Pravasabhatta) Niyam, १९५९",
+            "Vibhagiya Chaukashi Niyam Pustika"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Educational Institutions and Acts",
+          "unitTitleMr": "शैक्षणिक संस्था व कायदे",
+          "marks": 50,
+          "topics": [
+            "Madhyamik Shala Samhita",
+            "Maharashtra Khasgi Shalatil Karmachari (Sevechya Sharti) Adhiniyam, १९७७ va Niyamavali, १९८१",
+            "Maharashtra Shaikshanik Parisanstha (Vyasthapan) Adhiniyam, १९७६",
+            "Maharashtra Shaikshanik Parisanstha (Vyasthapan - Hastantaran) Adhiniyam, १९७१",
+            "Maharashtra Swayam-Arthasahayyat Shala (Sthapana va Viniyaman) Adhiniyam, २०१२",
+            "Maharashtra Shaikshanik Sanstha (Capitation Fee Ghenyas Pratibandh) Adhiniyam, १९८४ va Maharashtra Shaikshanik Sanstha (Shulk Viniyaman) Adhiniyam, २०११",
+            "Maharashtra Rajya Madhyamik va Uccha Madhyamik Shikshan Mandal Adhiniyam, १९६५/Viniyam, १९७७",
+            "Vividh Mandalyachya Shala (CBSE, ICSE, IB, IGCSE) Karyapaddhati",
+            "Balakancha Mofat va Saktyachya Shikshanacha Adhikar Adhiniyam, २००९, Durusti Adhiniyam, २०१२ va Niyamavali, २०११",
+            "Rashtriya Shikshak Shikshan Parishad (Manyata, Nikash, Karyapaddhati) Viniyaman, २०१४"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Department Related Subjects",
+          "unitTitleMr": "विभागाशी संबंधित विषय",
+          "marks": 50,
+          "topics": [
+            "Shaleya Shikshan Vibhagachi Sanrachna (Prashaskiya Vibhag va Vividh Sanchanalaye) va Tyanchya Karyapaddhati",
+            "Rajyastariya Sansthanchi Karyapaddhati (Shikshan Vyavasay Margdarshan, Vigyan Sanstha, Anglabhasha Ityadi)",
+            "Pradeshik Vidya Pradhikaran, Jilha Shaikshik Satatpurna Vyavasaik Vikas Sanstha",
+            "Adhikaryanchi Kartavye va Jabadabya (Sanchalak, Saha Sanchalak, Upasanchalak, Sahayak Sanchalak, Prashasan Adhikari, Shikshanadhikari, Gat Shikshanadhikari, Adheekshak (Vetan Pathak), Adheekshak (Poshan Aahar), Jilha Shikshan va Prashikshan Sanstha, Ityadi)",
+            "Kendra/Rajya Shasan Arthasahayya / Vidyarthi Vaigyatikk Labhachya Yojana/Swarup va Karyapaddhati (Prathamik va Madhyamik Staraveril)",
+            "Sarva Shiksha Abhiyan va Rashtriya Madhyamik Shiksha Abhiyan",
+            "Manav Vikas Abhiyan (Shikshan Sambandhit)",
+            "Pragat Shaikshanik Maharashtra Karyakram",
+            "Rashtriya Abhyaskram Arakhada (N.C.F. ২০০५), Rajya Abhyaskram Arakhada (S.C.F. २०१०) Prathamik, Madhyamik, Uccha Madhyamik, D.El.Ed., Padvika/Padavi (B.Ed.) Abhyasakram va Mulyamapan, Shikshnatil Navin Pravah",
+            "Sanganak va Mahiti Tantrajnana - Shaikshik Kshetratil Sanganakacha Vapar, Data Communication, Netwoking va Web Technology, Shasanache Karyakram - Media Lab Asia, Vidya Vahini, Gyan Vahini, Samuhik Mahiti Kendra, E-Governance, Shalarth, Saral Pranali, U-DISE, DBT, Virtual Classroom, Digital School, Dainandin Mahiti Devan-Ghevan Tantra - Email, WhatsApp, Skype",
+            "Maharashtra Jilha Parishad va Panchayat Samiti Adhiniyam, ১৯৬१",
+            "Maharashtra Grampanchayat Adhiniyam, १९५८ va Panchayatraj Vyavasthapan - Grampanchayati, Panchayat Samitiya, Jilha Parishada",
+            "Mahanagarpalika, Nagar Palika, Nagar Parishad, Nagar Panchayat, Kamkaj (Kayde)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Financial Rules and Budget",
+          "unitTitleMr": "मुंबई वित्तीय नियम, महाराष्ट्र अर्थसंकल्प नियम, इ.",
+          "marks": 30,
+          "topics": [
+            "Mumbai Vittiya Niyam, १९५९ (Prakaran १, २, ७, ९, ११ va १२)",
+            "Maharashtra Arthasankalpa Niyampustika",
+            "Maharashtra Aakasmik Kharch Niyam, १९५९",
+            "Maharashtra Koshagar Niyam, १९६८",
+            "Shaskiya Vibhagani Karavayachya Karyalayin Kharedisathichya Karyapaddhatichi Niyam Pustika (Shasan Nirnay Dinank ३०.१०.२०१५)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

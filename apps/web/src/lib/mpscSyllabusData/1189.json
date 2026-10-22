@@ -1,0 +1,192 @@
+{
+  "docId": 1189,
+  "examName": "Assistant Grade-B (Non-Gazetted) Main Examination - Exam Scheme and Syllabus",
+  "examNameMr": "सहायक, गट - ब (अराजपत्रित) मुख्य परीक्षा - परीक्षा योजना व अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2013,
+  "language": "Marathi / English",
+  "category": "group-b",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Objective Multiple Choice Questions",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi & English",
+      "paperTitleMr": "मराठी व इंग्रजी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "topics": [
+            "Sarvasamanya Shabdasangrah",
+            "Vakyarachana",
+            "Vyakaran",
+            "Mhani va Vakprachar yancha arth ani upayog",
+            "Tasech utanyavaril prashnachi utare"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी",
+          "topics": [
+            "Common Vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "use of Idioms and phrases & their meaning and comprehension of passage"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "General Knowledge, Intelligence Test and Subject Knowledge",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धीमापन व विषयाचे ज्ञान",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Affairs - Jagatik va Bharatatil",
+          "unitTitleMr": "चालू घडामोडी - जागतिक व भारतातील",
+          "topics": [
+            "Current affairs at global and national level"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी",
+          "topics": [
+            "Logical reasoning, mental ability and IQ tests"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Geography of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा भूगोल",
+          "topics": [
+            "Physical Geography",
+            "Physiographic Division",
+            "Climate",
+            "Rainfall and Temperature",
+            "Rainfall Division Changes",
+            "Rivers",
+            "Mountains and Hills",
+            "Political Division",
+            "Administrative Division",
+            "Natural Resources",
+            "Forests and Minerals",
+            "Human and Social Geography",
+            "Population (Population, Migration of Population and its Source and Destination impact)",
+            "Rural Settlements and Tandas",
+            "Slums and their Problems"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "History of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा इतिहास",
+          "topics": [
+            "Social and Economic Awakening (1885-1947)",
+            "Important Personalities Work",
+            "Pre-independence impact of social awakening on newspapers and education",
+            "Other contemporary movements in pre-independence period",
+            "National Movement"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Indian Constitution",
+          "unitTitleMr": "भारतीय राजघटना",
+          "topics": [
+            "How the Constitution was made",
+            "Background and principles of the Preamble of the Constitution",
+            "Important articles/distinctive features of the Constitution",
+            "Center-State relations",
+            "Secular state",
+            "Fundamental rights and duties",
+            "Directive principles of state policy",
+            "Uniform civil code",
+            "Independent judiciary",
+            "Governor, Chief Minister and Council of Ministers - Role, Rights and Duties",
+            "State Legislature - Legislative Assembly, Legislative Council and their members, rights, functions and role, legislative committees"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Right to Information Act - 2005",
+          "unitTitleMr": "माहिती अधिकार अधिनियम - २००५",
+          "topics": [
+            "Provisions of Right to Information Act 2005"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Computer and Information Technology",
+          "unitTitleMr": "संगणक व माहिती तंत्रज्ञान",
+          "topics": [
+            "Role of computers in modern society",
+            "Use of computers in daily life in various fields",
+            "Data communication",
+            "Networking and web technology",
+            "Cyber crimes and prevention",
+            "Use of information technology to provide various services as an industry",
+            "Growth and status of information technology industry in India",
+            "Government programs such as Media Lab Asia, Vidya Vahini, Gyan Vahini, Community Information Center etc.",
+            "Basic questions and future of information technology industry"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Political System (Government Structure, Rights and Powers)",
+          "unitTitleMr": "राजकीय यंत्रणा (शासनाची रचना अधिकार व कार्ये)",
+          "topics": [
+            "Central Government",
+            "Central Legislature",
+            "State Government and Administration (Special reference to Maharashtra)"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "District Administration, Rural and Urban Local Government",
+          "unitTitleMr": "जिल्हा प्रशासन, ग्रामीण आणि नागरी स्थानिक शासन",
+          "topics": [
+            "Structure and functioning of district administration and local bodies"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Judiciary",
+          "unitTitleMr": "न्यायमंडळ",
+          "topics": [
+            "Structure of Judiciary",
+            "Integrated Judiciary - Functions",
+            "Role and powers of Supreme Court and High Court",
+            "Subordinate Courts",
+            "Lokpal, Lokayukta and Lok Nyayalaya",
+            "Judiciary protecting constitutional mandates",
+            "Judicial activism",
+            "Public Interest Litigation (PIL)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Total marks for the main examination are 200 distributed across two papers.",
+    "Each paper carries 100 marks and 1 hour duration."
+  ]
+}

@@ -9,9 +9,9 @@ import { query } from '../lib/pgdb'
 import { getPlatformStats } from '../lib/platformStats'
 
 export const metadata = {
-  title: "ExamUdaan — Govt Jobs, MPSC Question Papers, Police Bharti & Answer Keys 2026",
+  title: { absolute: "ExamUdaan — Govt Jobs, MPSC PYQ & Police Bharti 2026" },
   description:
-    "India & Maharashtra's #1 exam portal for MPSC Question Papers, Police Bharti 2026, Govt Job alerts, official Answer Keys, free CBT Mock Tests & daily Current Affairs.",
+    "Maharashtra & India's top portal for MPSC PYQs, Police Bharti 2026, Govt job alerts, official answer keys, CBT mock tests & daily current affairs.",
   keywords: [
     'govt jobs 2026',
     'MPSC question papers',
@@ -28,9 +28,9 @@ export const metadata = {
     canonical: 'https://examudaan.in',
   },
   openGraph: {
-    title: "ExamUdaan — Govt Jobs, MPSC Question Papers, Police Bharti & Answer Keys 2026",
+    title: "ExamUdaan — Govt Jobs, MPSC PYQ & Police Bharti 2026",
     description:
-      "India & Maharashtra's #1 exam portal for MPSC Question Papers, Police Bharti 2026, Govt Job alerts, official Answer Keys, free CBT Mock Tests & daily Current Affairs.",
+      "Maharashtra & India's top portal for MPSC PYQs, Police Bharti 2026, Govt job alerts, official answer keys, CBT mock tests & daily current affairs.",
     siteName: 'ExamUdaan',
     type: 'website',
     url: 'https://examudaan.in',
@@ -38,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "ExamUdaan — Govt Jobs, MPSC Question Papers, Police Bharti & Answer Keys 2026",
+    title: "ExamUdaan — Govt Jobs, MPSC PYQ & Police Bharti 2026",
     description:
       "MPSC Question Papers, Maharashtra Police Bharti 2026, official Answer Keys, Govt Job Alerts & CBT Mock Tests on ExamUdaan.in.",
     images: ['https://examudaan.in/logo-light.png'],
@@ -296,7 +296,7 @@ export default async function HomePage() {
       '@id': 'https://examudaan.in/#website',
       url: 'https://examudaan.in',
       name: 'ExamUdaan',
-      alternateName: ['ExamUdaan.in', 'Exam Udaan', 'एक्झामउडान'],
+      alternateName: ['Exam Udaan', 'Examudaan'],
       description: "Maharashtra's #1 AI-Powered Sarkari Job Alerts, PYQ Question Papers, Exam Syllabus & Authentic Mock Test Platform",
       inLanguage: ['en-IN', 'mr-IN'],
       publisher: {
@@ -317,7 +317,7 @@ export default async function HomePage() {
       '@type': 'Organization',
       '@id': 'https://examudaan.in/#organization',
       name: 'ExamUdaan',
-      alternateName: ['ExamUdaan.in', 'Exam Udaan'],
+      alternateName: ['Exam Udaan', 'Examudaan'],
       url: 'https://examudaan.in',
       logo: {
         '@type': 'ImageObject',

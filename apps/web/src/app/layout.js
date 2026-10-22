@@ -5,11 +5,7 @@
 // ============================================================
 
 import '../styles/globals.css'
-import Navbar from '../components/Navbar'
-import TickerBar from '../components/TickerBar'
-import MobileBottomNav from '../components/MobileBottomNav'
-import Footer from '../components/Footer'
-import CookieConsent from '../components/CookieConsent'
+import NavigationChrome from '../components/NavigationChrome'
 import Script from 'next/script'
 import { LanguageProvider } from '../context/LanguageContext'
 import { Inter, Mukta } from 'next/font/google'
@@ -106,36 +102,10 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://c.clarity.ms" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
         <link rel="dns-prefetch" href="https://c.clarity.ms" />
-        {/* Material Symbols — asynchronous non-blocking stylesheet to eliminate render-blocking delay */}
-
+        {/* Material Symbols font stylesheet — display=swap ensures non-blocking font loading */}
         <link
-          id="material-symbols-stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
-          media="print"
-        />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-            rel="stylesheet"
-          />
-        </noscript>
-        {/* Activate Material Symbols stylesheet on main thread without blocking initial paint */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var l = document.getElementById('material-symbols-stylesheet');
-                if (l) {
-                  if (window.requestAnimationFrame) {
-                    window.requestAnimationFrame(function() { l.media = 'all'; });
-                  } else {
-                    l.media = 'all';
-                  }
-                }
-              })();
-            `,
-          }}
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
         />
         {/* Instant Theme Initializer — Zero Flash */}
         <script
@@ -244,24 +214,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
         <LanguageProvider>
-          {/* Live Updates Ticker — saffron bar */}
-          <TickerBar />
-
-          {/* Sticky top navbar */}
-          <Navbar />
-
-          {/* Page content */}
-          <main>{children}</main>
-
-          {/* Desktop footer */}
-          <Footer />
-
-          {/* Mobile fixed bottom nav */}
-          <MobileBottomNav />
-
-          {/* Cookie consent banner — DPDP Act 2023 requirement.
-              Appears on first visit, stores choice in localStorage. */}
-          <CookieConsent />
+          <NavigationChrome>{children}</NavigationChrome>
         </LanguageProvider>
       </body>
     </html>

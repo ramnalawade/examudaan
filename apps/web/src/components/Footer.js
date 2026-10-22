@@ -15,23 +15,25 @@ export default function Footer() {
   const { t, isMarathi } = useLanguage()
 
   const TOP_RECRUITMENTS = [
+    { label: isMarathi ? 'तलाठी भरती २०२६' : 'Talathi Bharti 2026', href: '/talathi-bharti-2026' },
+    { label: isMarathi ? 'महाराष्ट्र पोलीस भरती २०२६' : 'Maharashtra Police Bharti 2026', href: '/maharashtra-police-bharti-2026' },
+    { label: isMarathi ? 'पोलीस भरती हॉल तिकीट २०२६' : 'Police Bharti Hall Ticket 2026', href: '/police-bharti-hall-ticket-2026' },
+    { label: isMarathi ? 'तलाठी भरती थेट ऑनलाइन अर्ज' : 'Talathi Bharti Apply Online', href: '/talathi-bharti-apply-online' },
+    { label: isMarathi ? 'BMC भरती २०२६ (MCGM मुंबई)' : 'BMC Recruitment 2026 (MCGM)', href: '/bmc-recruitment-2026' },
+    { label: isMarathi ? 'MPSC वेळापत्रक २०२६' : 'MPSC Exam Dates 2026', href: '/mpsc-exam-dates-2026' },
     { label: isMarathi ? 'MPSC राज्यसेवा २०२६' : 'MPSC State Services 2026', href: '/jobs/org/mpsc' },
-    { label: isMarathi ? 'महाराष्ट्र पोलीस भरती' : 'Maharashtra Police Bharti', href: '/jobs/org/police' },
     { label: isMarathi ? 'रेल्वे भरती (RRB NTPC)' : 'Railway RRB NTPC & Group D', href: '/jobs/org/rrb' },
     { label: isMarathi ? 'कर्मचारी निवड (SSC CGL & CHSL)' : 'SSC CGL & CHSL Combined', href: '/jobs/org/ssc' },
-    { label: isMarathi ? 'बँक ऑफ बडोदा SO व IBPS' : 'Bank of Baroda SO Specialist', href: '/jobs/org/banking' },
-    { label: isMarathi ? 'थेट मुलाखत भरती (Walk-in)' : 'Walk-in Interview Openings', href: '/walk-in-interviews' },
-    { label: isMarathi ? 'केंद्र सरकार (UPSC, SSC, संरक्षण)' : 'Central (UPSC, SSC, Defence)', href: '/jobs/central-govt' },
   ]
 
   const QUESTION_PAPERS_KEYS = [
-    { label: isMarathi ? 'MPSC मूळ प्रश्नपत्रिका व कीज् (२०२१-२०२६)' : 'MPSC Papers & Keys (2021-2026)', href: '/mpsc-pyq' },
+    { label: isMarathi ? 'MPSC मूळ प्रश्नपत्रिका व कीज् (८४१ पेपर्स)' : 'MPSC Papers & Keys (841 Papers)', href: '/mpsc-pyq' },
+    { label: isMarathi ? 'पोलीस भरती प्रश्नपत्रिका व कीज्' : 'Police Bharti Question Papers', href: '/police-bharti-question-papers' },
+    { label: isMarathi ? 'तलाठी भरती प्रश्नपत्रिका (TCS)' : 'Talathi Question Papers (TCS)', href: '/talathi-question-papers' },
+    { label: isMarathi ? 'MPSC ३४३ अधिकृत अभ्यासक्रम' : 'MPSC 343 Official Catalog', href: '/syllabus/mpsc' },
     { label: isMarathi ? 'सर्व अधिकृत प्रश्नपत्रिका (All PYQs)' : 'All Official Question Papers', href: '/question-papers' },
     { label: isMarathi ? 'अधिकृत उत्तरतालिका पोर्टल (Keys)' : 'Official Answer Keys Portal', href: '/answer-keys' },
-    { label: isMarathi ? 'महाराष्ट्र पोलीस भरती प्रश्नपत्रिका' : 'Maharashtra Police Bharti Papers', href: '/question-papers#maharashtra-direct' },
     { label: isMarathi ? '१५ वर्षांची PYQ बँक' : '15-Year Interactive PYQ Bank', href: '/pyq' },
-    { label: isMarathi ? 'SSC व रेल्वे प्रश्नपत्रिका' : 'SSC & Railway Question Papers', href: '/question-papers#central-exams' },
-    { label: isMarathi ? 'TCS उत्तरतालिका रँक प्रेडिक्टर' : 'TCS Key Rank Predictor', href: '/score-calculator' },
   ]
 
   const PREP_STUDY = [
@@ -51,7 +53,7 @@ export default function Footer() {
     { label: isMarathi ? 'वारंवार विचारले जाणारे प्रश्न (FAQ)' : 'Frequently Asked Questions', href: '/faq' },
     { label: isMarathi ? 'टेलिग्राम जॉब अलर्ट नेटवर्क' : 'Telegram Job Alerts Network', href: '/alerts' },
     { label: isMarathi ? '७ वे वेतन आयोग पगार कॅल्क्युलेटर' : '7th CPC Salary Calculator', href: '/salary-calculator' },
-    { label: isMarathi ? 'AI अभ्यास साधने (११४+ टूल्स)' : 'AI Study Tools Directory (114+ Tools)', href: '/ai-tools' },
+    { label: isMarathi ? 'AI अभ्यास साधने (१२४+ टूल्स)' : 'AI Study Tools Directory (124+ Tools)', href: '/ai-tools' },
   ]
 
   return (
@@ -115,9 +117,9 @@ export default function Footer() {
 
           {/* Column 2: Top Recruitments */}
           <div>
-            <h3 className={styles.colTitle}>
+            <h2 className={styles.colTitle}>
               {isMarathi ? 'प्रमुख भरती जाहिराती' : 'TOP RECRUITMENTS'}
-            </h3>
+            </h2>
             <ul className={styles.linkList}>
               {TOP_RECRUITMENTS.map((item, idx) => (
                 <li key={idx}>
@@ -131,9 +133,9 @@ export default function Footer() {
 
           {/* Column 3: Question Papers & Answer Keys */}
           <div>
-            <h3 className={styles.colTitle}>
+            <h2 className={styles.colTitle}>
               {isMarathi ? 'प्रश्नपत्रिका व उत्तरतालिका' : 'PAPERS & ANSWER KEYS'}
-            </h3>
+            </h2>
             <ul className={styles.linkList}>
               {QUESTION_PAPERS_KEYS.map((item, idx) => (
                 <li key={idx}>
@@ -147,9 +149,9 @@ export default function Footer() {
 
           {/* Column 4: Preparation & Current Affairs */}
           <div>
-            <h3 className={styles.colTitle}>
+            <h2 className={styles.colTitle}>
               {isMarathi ? 'तयारी व चालू घडामोडी' : 'PREPARATION & CA'}
-            </h3>
+            </h2>
             <ul className={styles.linkList}>
               {PREP_STUDY.map((item, idx) => (
                 <li key={idx}>
@@ -163,9 +165,9 @@ export default function Footer() {
 
           {/* Column 5: Portal & Helpdesk */}
           <div>
-            <h3 className={styles.colTitle}>
+            <h2 className={styles.colTitle}>
               {isMarathi ? 'पोर्टल व मदत केंद्र' : 'PORTAL & HELPDESK'}
-            </h3>
+            </h2>
             <ul className={styles.linkList}>
               {PORTAL_HELPDESK.map((item, idx) => (
                 <li key={idx}>

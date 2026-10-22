@@ -1,0 +1,191 @@
+{
+  "docId": 7914,
+  "examName": "Assistant Commissioner, Social Welfare and Allied, Group-A",
+  "examNameMr": "सहाय्यक आयुक्त, समाज कल्याण व तत्सम, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "Marathi",
+  "category": "education",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (200 marks) followed by Interview (50 marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi, English, Social Welfare and Social Welfare Administration",
+      "paperTitleMr": "मराठी, इंग्रजी, समाज कल्याण व समाज कल्याण प्रशासन इत्यादी ज्ञानावर आधारित",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "topics": [
+            "Vocabulary",
+            "grammar",
+            "idioms and proverbs and their meaning and usage"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी",
+          "topics": [
+            "Common Vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "use of Idioms and phrases and their meaning etc."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Social Welfare Study",
+          "unitTitleMr": "समाज कल्याण अध्ययन",
+          "topics": [
+            "History and Philosophy of Social Work",
+            "Methods of Social Work",
+            "Values and Principles of Social Work",
+            "Fields of Social Work",
+            "Training of Social Workers in India"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Human Aptitude and Personality Development",
+          "unitTitleMr": "मानवी अभिरुची व व्यक्तिमत्व विकास",
+          "topics": [
+            "Personality development of students in residential institutions",
+            "Personality development of persons with disabilities"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Social Welfare Administration",
+          "unitTitleMr": "समाज कल्याण प्रशासन",
+          "topics": [
+            "Welfare of weaker sections",
+            "NGOs - Types and Management",
+            "Management of residential institutions",
+            "Welfare of Divyang, senior citizens, de-addiction"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Indian Social Problems, Causes and Remedies",
+          "unitTitleMr": "भारतीय सामाजिक समस्या, कारणे व उपाय",
+          "topics": [
+            "Marginalized groups problems and remedies",
+            "Problems and remedies of farmers, landless agricultural laborers, migratory farm laborers",
+            "Women's problems, all-round development and security, women's empowerment",
+            "Urbanization and slums, problems and remedies of sanitation workers",
+            "Problems and remedies of unorganized sector workers",
+            "Problems and remedies of transgender people"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Sociology, Economics and Laws related to Social Work",
+          "unitTitleMr": "समाजकार्याच्या संबंधित समाजशास्त्र, अर्थशास्त्र व कायदे",
+          "topics": [
+            "Social security laws for vulnerable groups",
+            "Prevention of Atrocities Act 1989 and amended Act against Scheduled Castes and Scheduled Tribes",
+            "Acts for the maintenance and welfare of parents and senior citizens - 2007/2010"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Basic Research Knowledge",
+          "unitTitleMr": "मूलभूत संशोधन ज्ञान",
+          "topics": [
+            "Types of research",
+            "Research process",
+            "Research framework"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "General Studies",
+          "unitTitleMr": "सामान्य अध्ययन",
+          "topics": [
+            "History of Modern India with special reference to Maharashtra",
+            "Rural social life, Balutedari system, caste system and its impact on society",
+            "Land tenure systems, various practices, Zamindari, Ryotwari, Mahalwari, Khoti system",
+            "Land reform movements in independent India, Bhoodan movement and Gramdan movement, work of social reformers"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Geography of India with Special Reference to Maharashtra",
+          "unitTitleMr": "भारताचा विशेषतः महाराष्ट्राचा भूगोल",
+          "topics": [
+            "Climate change, causes, consequences and remedies",
+            "Natural and man-made disasters and disaster management"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Indian Constitution, Welfare State",
+          "unitTitleMr": "भारतीय राज्यव्यवस्था, कल्याणकारी राज्य",
+          "topics": [
+            "Indian Constitution",
+            "History of the Constitution",
+            "Concept of Democracy",
+            "State administration and local government",
+            "Judicial rulings"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Commissions",
+          "unitTitleMr": "राष्ट्रीय मानवाधिकार आयोग व राज्य मानवाधिकार आयोग इत्यादी",
+          "topics": [
+            "National Human Rights Commission and State Human Rights Commission",
+            "National Scheduled Castes Commission, National Scheduled Tribes Commission",
+            "National Women's Commission, State Women's Commission",
+            "Information Commission, State Backward Class Commission"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Indian Economy, Economic Development and Planning",
+          "unitTitleMr": "भारतीय अर्थव्यवस्था, आर्थिक विकास व नियोजन",
+          "topics": [
+            "Niti Aayog and National Development Council",
+            "History of Five-Year Plans",
+            "Micro planning, unemployment, skill development and entrepreneurship"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "General Science, Health and Nutrition, Environment",
+          "unitTitleMr": "सामान्य विज्ञान, आरोग्य व पोषक आहार, पर्यावरण",
+          "topics": [
+            "Health and nutrition",
+            "Environment-friendly homes",
+            "Basic computer technology",
+            "National and international current affairs"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी",
+          "topics": [
+            "Logical reasoning and quantitative aptitude"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "25% or 1/4th negative marking applies for wrong answers.",
+    "No negative marking for unanswered questions.",
+    "Final merit list is based on combined marks of written exam and interview."
+  ]
+}

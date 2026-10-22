@@ -1,0 +1,190 @@
+{
+  "docId": 1807,
+  "examName": "Lecturer in Mathematics, Government Polytechnics, Group - A",
+  "examNameMr": "गणित व्याख्याता, शासकीय तंत्रनिकेतन, गट - अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Mathematics",
+      "paperTitleMr": "गणित",
+      "totalMarks": 200,
+      "duration": "3 hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Linear Algebra",
+          "unitTitleMr": "रैखिक बीजगणित",
+          "topics": [
+            "Finite dimensional vector spaces",
+            "Linear transformations and their matrix representations, rank",
+            "Systems of linear equations, eigen values and eigen vectors",
+            "Minimal polynomial, Cayley-Hamilton Theorem, diagonalisation",
+            "Hermitian, Skew-Hermitian and unitary matrices",
+            "Finite dimensional inner product spaces, Gram-Schmidt orthonormalization process, self-adjoint operators"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Complex Analysis",
+          "unitTitleMr": "संमिश्र विश्लेषण",
+          "topics": [
+            "Analytic functions, conformal mappings, bilinear transformations",
+            "Complex integration: Cauchy's integral theorem and formula",
+            "Liouville's theorem, maximum modulus principle",
+            "Taylor and Laurent's series",
+            "Residue theorem and applications for evaluating real integrals"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Real Analysis",
+          "unitTitleMr": "वास्तविक विश्लेषण",
+          "topics": [
+            "Sequences and series of functions, uniform convergence, power series, Fourier series",
+            "Functions of several variables, maxima, minima",
+            "Riemann integration, multiple integrals, line, surface and volume integrals",
+            "Theorems of Green, Stokes and Gauss",
+            "Metric spaces, completeness, Weierstrass approximation theorem, compactness",
+            "Lebesgue measure, measurable functions",
+            "Lebesgue integral, Fatou's lemma, dominated convergence theorem"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Ordinary Differential Equations",
+          "unitTitleMr": "सामान्य अवकल समीकरणे",
+          "topics": [
+            "First order ordinary differential equations, existence and uniqueness theorems",
+            "Systems of linear first order ordinary differential equations",
+            "Linear ordinary differential equations of higher order with constant coefficients",
+            "Linear second order ordinary differential equations with variable coefficients",
+            "Method of Laplace transforms for solving ordinary differential equations, series solutions",
+            "Legendre and Bessel functions and their orthogonality"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Algebra",
+          "unitTitleMr": "बीजगणित",
+          "topics": [
+            "Normal subgroups and homomorphism theorems, automorphisms",
+            "Group actions, Sylow's theorems and their applications",
+            "Euclidean domains, Principle ideal domains and unique factorization domains",
+            "Prime ideals and maximal ideals in commutative rings",
+            "Fields, finite fields"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Functional Analysis",
+          "unitTitleMr": "विधीय विश्लेषण",
+          "topics": [
+            "Banach spaces, Hahn-Banach extension theorem",
+            "Open mapping and closed graph theorems, principle of uniform boundedness",
+            "Hilbert spaces, orthonormal bases, Riesz representation theorem, bounded linear operators"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Numerical Analysis",
+          "unitTitleMr": "संख्यात्मक विश्लेषण",
+          "topics": [
+            "Numerical solution of algebraic and transcendental equations: bisection, secant method, Newton-Raphson method, fixed point iteration",
+            "Interpolation: error of polynomial interpolation, Lagrange, Newton interpolations",
+            "Numerical differentiation",
+            "Numerical integration: Trapezoidal and Simpson rules, Gauss Legendre quadrature, method of undetermined parameters",
+            "Least square polynomial approximation",
+            "Numerical solution of systems of linear equations: direct methods (Gauss elimination, LU decomposition); iterative methods (Jacobi and Gauss-Seidel)",
+            "Matrix eigenvalue problems: power method",
+            "Numerical solution of ordinary differential equations: initial value problems: Taylor series methods, Euler's method, Runge-Kutta methods"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Partial Differential Equations",
+          "unitTitleMr": "अंशतः अवकल समीकरणे",
+          "topics": [
+            "Linear and quasilinear first order partial differential equations, method of characteristics",
+            "Second order linear equations in two variables and their classification",
+            "Cauchy, Dirichlet and Neumann problems",
+            "Solutions of Laplace, wave and diffusion equations in two variables",
+            "Fourier series and Fourier transform and Laplace transform methods of solutions for the above equations"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Mechanics",
+          "unitTitleMr": "यांत्रिकी",
+          "topics": [
+            "Virtual work",
+            "Lagrange's equations for holonomic systems",
+            "Hamiltonian equations"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Topology",
+          "unitTitleMr": "टोपोलॉजी",
+          "topics": [
+            "Basic concepts of topology",
+            "Product topology, connectedness, compactness, countability and separation axioms",
+            "Urysohn's Lemma"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Probability and Statistics",
+          "unitTitleMr": "संभाव्यता आणि आकडेवारी",
+          "topics": [
+            "Probability space, conditional probability, Bayes theorem, independence",
+            "Random variables, joint and conditional distributions, standard probability distributions and their properties",
+            "Expectation, conditional expectation, moments",
+            "Weak and strong law of large numbers, central limit theorem",
+            "Sampling distributions, UMVU estimators, maximum likelihood estimators",
+            "Testing of hypotheses, standard parametric tests based on normal, X2, t, F-distributions",
+            "Linear regression",
+            "Interval estimation"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Linear programming",
+          "unitTitleMr": "रैखिक प्रोग्रामिंग",
+          "topics": [
+            "Linear programming problem and its formulation, convex sets and their properties",
+            "Graphical method, basic feasible solution, simplex method, big-M and two phase methods",
+            "Infeasible and unbounded LPP's, alternate optima",
+            "Dual problem and duality theorems, dual simplex method and its application in post optimality analysis",
+            "Balanced and unbalanced transportation problems, u-v method for solving transportation problems",
+            "Hungarian method for solving assignment problems"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Calculus of Variation and Integral Equations",
+          "unitTitleMr": "भिन्नतेचे कलन आणि समाकल समीकरणे",
+          "topics": [
+            "Variation problems with fixed boundaries",
+            "Sufficient conditions for extremum",
+            "Linear integral equations of Fredholm and Volterra type, their iterative solutions"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

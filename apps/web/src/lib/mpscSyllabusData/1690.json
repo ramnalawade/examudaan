@@ -1,0 +1,74 @@
+{
+  "docId": 1690,
+  "examName": "Junior Geologist, Directorate of Geology and Mining, Maharashtra Mining Service, Gr B",
+  "examNameMr": "कनिष्ठ भूवैज्ञानिक, भूविज्ञान आणि खनिकर्म संचालनालय, महाराष्ट्र खनिकर्म सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Junior Geologist, Directorate of Geology and Mining, Maharashtra Mining Service, Gr B",
+      "paperTitleMr": "कनिष्ठ भूवैज्ञानिक, भूविज्ञान आणि खनिकर्म संचालनालय, महाराष्ट्र खनिकर्म सेवा, गट-ब",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Stratigraphy and Structural Geology",
+          "unitTitleMr": "स्तरतज्ज्ञान आणि संरचनात्मक भूविज्ञान",
+          "topics": [
+            "Stratigraphy of Maharashtra: Laterites and Quaternary and Tertiary Sediments, Deccan Basalts, Lameta and Bagh Formation/Groups, Gondawana Super Group, Bhima Super Group, Pakhal Super Group, Sausar Super Group, Dongargarh Super Group, Vairagarh Group, Sakoli Group, Kaladgi Super Group, Amgaon Group, Tirodi Gneisses, Amgaon Gneisses, Peninsular Gneisses.",
+            "Structural Geology: Stratification. Attitude of beds. Outcrops and Outcrop patterns. Joints, Faults and Fractures classification and recognition. Folds - classification and recognition. Unconformities classification and recognition. Concept of foliation and lineation. Dykes and sills."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Petrology",
+          "unitTitleMr": "शैलविज्ञान",
+          "topics": [
+            "Sedimentary, Igneous and Metamorphic rocks - Basic classification. Grain size, angularity and nature of cement/matrix and its relation to porosity.",
+            "Deccan Basalts - Lithostratigraphy, different type of lava flows, their classification and mapping. Nature of flow contacts, intertrappean sediments, red boles, flow contact breccias, and their relation with aquifer/multiple aquifer system.",
+            "Relationship of weathering and geochemistry of basalt and other rocks on water quality."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Geomorphology, Remote Sensing and Groundwater Exploration",
+          "unitTitleMr": "भूरूपशास्त्र, दूरसंवेदन आणि भूजल अन्वेषण",
+          "topics": [
+            "Landform and Geomorphic processes: Role of lithology, landforms and geology, Geomorphic cycles. Weathering and soil formation. Erosion. Landforms, slopes and drainage patterns. Peneplanation, endogenous and exogenous processes and forces responsible. Morphometric analysis. Geomorphic features and River systems of Maharashtra.",
+            "Remote Sensing: Use and interpretation of aerial photographs. Thematic Maps and Satellite Imagery. Indian Remote Sensing (IRS) satellites. Imageries - IRS products, MSS band - blue, green, red and near infra red, False Colour Composite (FCC).",
+            "Principles and applications of Geographic Information System (GIS) and Image Processing. Droughts, floods and landslides - use of remote sensing and GIS in disaster management.",
+            "Groundwater Exploration: Use of toposheets, geomorphic maps and remote sensing methods in groundwater exploration. Geophysical methods - different methods and types of resistivity surveys and their use in different terrains and rock types. Interpretation of VES/resistivity curves. Limitations of resistivity surveys. Magneto Telluric Surveys."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Hydrogeology and Watershed Management",
+          "unitTitleMr": "जलभूविज्ञान आणि पाणलोट व्यवस्थापन",
+          "topics": [
+            "Hydrogeology: Hydrologic cycle. Effect of climate, topography and geology on groundwater. Hydrogeological properties - Movement of groundwater. Rock properties affecting groundwater - porosity, permeability, hydraulic conductivity, storativity, transmissivity, specific retention, specific yield and storage coefficient.",
+            "Porosity, permeability, transmissivity and safe yields of various formations of Maharashtra. Aquifers - Different rocks types as aquifers. Occurrence and vertical distribution of subsurface water. Aquifer characteristics, confined and unconfined aquifers, aquicludes.",
+            "Types of aquifers in different geological formation of Maharashtra. Aquifer performance test. Preparation of Hydrogeological maps. Darcy's Law - derivation and validity of Darcy's law for laminar and turbulent flow, well inventory.",
+            "Watershed Management: Concept of Watershed - morphological characteristic of watershed, watershed management and methods of water conservation.",
+            "Land use planning, control of erosion by land and crop management practices, erosion control structures in arable and non-arable lands. Unit Hydrographs and their interpretation, relationship of recharge components with discharge/withdrawal/draft.",
+            "Watershed interventions, drainage line and area treatments. Methods of artificial recharge and rainwater harvesting. Conventional and non-conventional methods of rainwater harvesting. Rainwater harvesting, drought analysis and its application.",
+            "Hydrogeochemistry - sampling and interpretation, stable isotopes and their application in interpretation of data. Water Quality - Drinking water sources - BIS and WHO standards. Water pollution - types and sources of eutrophication, anoxia and hypoxia.",
+            "Groundwater management - technical and social aspects. Groundwater provinces of Maharashtra. Groundwater audit and budgeting. Groundwater acts and legislation."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

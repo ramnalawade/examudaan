@@ -1,0 +1,636 @@
+{
+  "docId": 11409,
+  "examName": "Assistant Professor (Geology) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहायक प्राध्यापक (भूशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Geology) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": "सहायक प्राध्यापक (भूशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "1. The Earth and the Solar System",
+          "unitTitleMr": "१. पृथ्वी आणि सूर्यमाला",
+          "topics": [
+            "Milky Way Galaxy and the Solar system",
+            "Kepler’s laws of planetary motion",
+            "Modern theories on the origin of the Earth and other planetary bodies",
+            "Meteorites",
+            "Earth’s orbital parameters, Geological Time Scale",
+            "Chemical composition and the primary differentiation of the earth, Earth’s gravity and magnetic fields and its thermal structure",
+            "Isostasy",
+            "Radioactive isotopes and their applications."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "2. Earth Materials, Surface Features and Processes",
+          "unitTitleMr": "२. पृथ्वीचे साहित्य, भूपृष्ठ वैशिष्ट्ये आणि प्रक्रिया",
+          "topics": [
+            "Gross composition and physical properties of important minerals and rocks",
+            "Properties and processes responsible for mineral concentrations",
+            "Nature and distribution of rocks and minerals in different units of the earth and different parts of India",
+            "Physiography of the Earth",
+            "Weathering, erosion, transportation and deposition of Earth’s material",
+            "Formation of soil, sediments and sedimentary rocks",
+            "Energy balance of the Earth’s surface processes",
+            "Physiographic features and river basins in India."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "3. Interior of the Earth, Deformation and Tectonics",
+          "unitTitleMr": "३. पृथ्वीचा अंतर्भाग, विकृती आणि विवर्तनिकी",
+          "topics": [
+            "Basic concepts of seismology and internal structure of the Earth",
+            "Physico-chemical and seismic properties of Earth’s interior",
+            "Concepts of stress and strain",
+            "Behaviour of rocks under stress",
+            "Folds, faults and joints",
+            "Earthquakes – their causes and measurement",
+            "Interplate and intraplate seismicity",
+            "Paleomagnetism, sea floor spreading and plate tectonics."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "4. Oceans and Atmosphere",
+          "unitTitleMr": "४. महासागर आणि वातावरण",
+          "topics": [
+            "Hypsography of the continents and ocean floor",
+            "Continental shelf, slope, rise and abyssal plains",
+            "Physical and chemical properties of seawater and their spatial variations",
+            "Residence times of elements in seawater",
+            "Ocean currents, waves and tides, important current systems, thermohaline circulation and the oceanic conveyor belt",
+            "Major water masses of the world’s oceans",
+            "Biological productivity in the oceans",
+            "Motion of fluids, waves in atmospheric and oceanic systems",
+            "Atmospheric turbulence and boundary layer",
+            "Structure and chemical composition of the atmosphere, lapse rate and stability, scale height, geopotential, greenhouse gases and global warming",
+            "Cloud formation and precipitation processes, air-sea interactions on different space and time scales",
+            "Insolation and heat budget, radiation balance, general circulation of the atmosphere and ocean",
+            "Climatic and sea level changes on different time scales",
+            "Coupled ocean-atmosphere system, Indian ocean dipole",
+            "El Nino Southern Oscillation (ENSO)",
+            "General weather systems of India, Monsoon system, cyclones and jet stream, Western disturbances and severe local convective systems, distribution of precipitation over India",
+            "Marine and atmospheric pollution, ozone depletion."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "5. Environmental Earth Science",
+          "unitTitleMr": "५. पर्यावरणीय पृथ्वी विज्ञान",
+          "topics": [
+            "Properties of water",
+            "Hydrological cycle",
+            "Water resources and management",
+            "Energy resources, uses, degradation, alternatives and management",
+            "Ecology and biodiversity",
+            "Impact of use of energy and land on the environment",
+            "Exploitation and conservation of mineral and other natural resources",
+            "Natural hazards."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "6. Mineralogy and Petrology",
+          "unitTitleMr": "६. खनिजशास्त्र आणि खडकशास्त्र",
+          "topics": [
+            "Concept of point group, space group, reciprocal lattice",
+            "Diffraction and imaging",
+            "Concepts of crystal field theory and mineralogical spectroscopy",
+            "Lattice defects (point, line and planar)",
+            "Electrical, magnetic and optical properties of minerals",
+            "Bonding and crystal structures of common oxides, sulphides, and silicates",
+            "Transformation of minerals – polymorphism, polytypism, and polysomatism",
+            "Solid solution and exsolution",
+            "Steady-state geotherms",
+            "Genesis, properties, emplacement and crystallization of magmas",
+            "Phase equilibrium studies of simple systems, effect of volatiles on melt equilibria",
+            "Magma- mixing, mingling and immiscibility",
+            "Classification of Igneous rocks, historic perspective and the IUGS systematic",
+            "Petrogenetic aspects of important rock suites of India, such as the Deccan Traps, layered igneous complexes, anorthosites, carbonatites, alkaline rocks, kimberlites, ophiolites and granitoids",
+            "Metamorphic structures and textures",
+            "Isograds and facies",
+            "Mineral reactions with condensed phases, solid solutions, mixed volatile equilibria and thermo-barometry",
+            "Metamorphism of pelites, mafic-ultra mafic rocks",
+            "Material transport during metamorphism",
+            "P-T-t path in regional metamorphic terrains",
+            "Plate tectonics and metamorphism",
+            "Important metamorphic rock suites of India such as Charnockites, Khondalites, Marbles and Granulites."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "7. Structural Geology and Geotectonics",
+          "unitTitleMr": "७. संरचनात्मक भूविज्ञान आणि भूविवर्तनिकी",
+          "topics": [
+            "Theory of stress and strain",
+            "Behaviour of rocks under stress",
+            "Various states of stress and their representation by Mohr circles",
+            "Application of Mohr Circle methods",
+            "Different types of failure and sliding criteria",
+            "Geometry and mechanics of fracturing and conditions for reactivation of pre-existing discontinuities",
+            "Common types of finite strain ellipsoids",
+            "L-S tectonic fabrics",
+            "Techniques of strain analysis",
+            "Particle paths and flow patterns",
+            "Progressive strain history",
+            "Introduction to deformation mechanisms",
+            "Role of fluids in deformation processes",
+            "Shear Zone analysis",
+            "Geometry and analyses of brittle-ductile and ductile shear zones",
+            "Geometry and mechanics of development of folds, foliations and lineations",
+            "Interference patterns of superposed fold",
+            "Fault-related folding",
+            "Gravity induced structures",
+            "Tectonic features of extensional-, compressional-, and strike-slip-terrains and relevance to plate boundaries",
+            "Mantle plumes."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "8. Plate Tectonics and Geodynamics",
+          "unitTitleMr": "८. प्लेट टेक्टोनिक्स आणि जिओडायनामिक्स",
+          "topics": [
+            "Marine magnetic anomalies, sea floor spreading",
+            "Mid-oceanic ridges and geodynamics",
+            "Plate tectonics hypothesis",
+            "Plate boundaries and seismicity",
+            "Heat flow mechanisms, thermal modeling of earth, core-mantle convection and mantle plumes",
+            "Himalayan Orogeny",
+            "Concept of super continent, their assembly and breakup."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "9. Paleontology and its applications",
+          "unitTitleMr": "९. जीवाश्मशास्त्र आणि त्याचे उपयोग",
+          "topics": [
+            "Theories on the origin of life",
+            "Organic evolution – Punctuated Equilibrium and Phyletic Gradualism models",
+            "Mass extinctions and their causes",
+            "Application of fossils in age determination and correlation",
+            "Paleoecology, Life habitats and various ecosystems, Paleobiogeography",
+            "Modes of preservation of fossils and taphonomic considerations",
+            "Types of microfossils",
+            "Environmental significance of fossils and trace fossils",
+            "Use of microfossils in interpretation of sea floor tectonism",
+            "Application of micropaleontology in hydrocarbon exploration",
+            "Oxygen and Carbon isotope studies of microfossils and their use in paleo-oceanographic and paleoclimatic interpretation",
+            "Important invertebrate fossils, vertebrate fossils, plant fossils and microfossils in Indian stratigraphy."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "10. Sedimentology and Stratigraphy",
+          "unitTitleMr": "१०. सादशास्त्र आणि स्तरशास्त्र",
+          "topics": [
+            "Classification of sediments and sedimentary rocks",
+            "Clastic, volcanoclastic and chemical sedimentation",
+            "Flow regimes and processes of sediment transport",
+            "Sedimentary textures and structures",
+            "Sedimentary facies and environments, reconstruction of paleoenvironments",
+            "Formation and evolution of sedimentary basins",
+            "Diagenesis of siliciclastic and carbonate rocks",
+            "Recent developments in stratigraphic classification",
+            "Code of stratigraphic nomenclature – Stratotypes, Global Boundary Stratotype Sections and Points (GSSP)",
+            "Lithostratigraphic, chronostratigraphic and biostratigraphic subdivisions",
+            "Methods of stratigraphic correlation including Shaw’s Graphic correlation",
+            "Concept of sequence stratigraphy",
+            "Rates of sediment accumulation, unconformities",
+            "Facies concept in Stratigraphy–Walther’s law",
+            "Methods for paleogeographic reconstruction",
+            "Earth’s Climatic History",
+            "Phanerozoic stratigraphy of India with reference to the type areas– their correlation with equivalent formations in other regions",
+            "Boundary problems in Indian Phanerozoic stratigraphy."
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "11. Marine Geology and Paleoceanography",
+          "unitTitleMr": "११. सागरी भूविज्ञान आणि पुरा-महासागरशास्त्र",
+          "topics": [
+            "Morphologic and tectonic domains of the ocean floor",
+            "Structure, composition and mechanism of the formation of oceanic crust",
+            "Hydrothermal vents",
+            "Ocean margins and their significance",
+            "Ocean Circulation, Coriolis effect and Ekman spiral, convergence, divergence and upwelling",
+            "Thermohaline circulation and oceanic conveyor belt",
+            "Formation of bottom waters",
+            "Major water masses of the world’s oceans",
+            "Factors controlling the deposition and distribution of oceanic sediments",
+            "Geochronology of oceanic sediments, diagenetic changes in oxic and anoxic environments",
+            "Tectonic evolution of the ocean basins",
+            "Mineral resources",
+            "Paleoceanography – Approaches to paleoceanographic reconstructions",
+            "Various proxy indicators for paleoceanographic interpretation",
+            "Reconstruction of monsoon variability by using marine proxy records",
+            "Opening and closing of ocean gateways and their effect on circulation and climate during the Cenozoic",
+            "Sea level processes and sea level changes",
+            "Sea surface temperatures."
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "12. Geochemistry",
+          "unitTitleMr": "१२. भूरासायनिकशास्त्र",
+          "topics": [
+            "Atomic structure and properties of elements, Periodic Table",
+            "Ionic substitution in minerals",
+            "Phase rule and its applications in petrology, thermodynamics of reactions involving pure phases, ideal and non-ideal solutions and fluids",
+            "Equilibrium and distribution coefficients",
+            "Nucleation and diffusion processes in igneous, metamorphic and sedimentary environments, redox reactions and Eh- pH diagrams and their applications",
+            "Mineral assemblages as ‘sensors’ of ambient environments",
+            "Geochemical studies of aerosols, surface-and marine waters",
+            "Radioactive decay schemes and their application to geochronology and petrogenesis",
+            "Stable isotopes and their application to earth system processes",
+            "Geochemical differentiation of the earth, geochemical cycles."
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "13. Economic Geology",
+          "unitTitleMr": "१३. आर्थिक भूविज्ञान",
+          "topics": [
+            "Magmatic, hydrothermal and surface processes of ore formation",
+            "Genetic classification of ore deposits",
+            "Metallogeny and its relation to crustal evolution",
+            "Ore-forming systems",
+            "Methods of mineral deposit studies including ore microscopy, fluid inclusions and isotopic systematics",
+            "Ores and metamorphism- cause and effect relationships",
+            "Geological setting, characteristics, and genesis of ferrous, base and noble metals",
+            "Detailed study of major Indian mineral deposits",
+            "National Mineral Policy and Mineral Economics",
+            "Origin, migration and entrapment of petroleum",
+            "Properties of source and reservoir rocks",
+            "Structural, stratigraphic and combination traps",
+            "Methods of petroleum exploration",
+            "Concepts of petrophysics",
+            "Petroliferous basins of India",
+            "Origin of peat, lignite, bitumen and anthracite",
+            "Classification, rank and grading of coal, coal petrography",
+            "Coal bed methane",
+            "Coal resources of India",
+            "Gas hydrates",
+            "Nuclear and non-conventional energy resources."
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "14. Precambrian Geology and Crustal Evolution",
+          "unitTitleMr": "१४. प्रिकॅम्ब्रियन भूविज्ञान आणि भूपटल उत्क्रांती",
+          "topics": [
+            "Evolution of lithosphere, hydrosphere, atmosphere, biosphere, and cryosphere",
+            "Lithological, geochemical and stratigraphic characteristics of granite – greenstone and granulite belts",
+            "Stratigraphy and geochronology of the cratonic nuclei, mobile belts and Proterozoic sedimentary basins of India",
+            "Life in Precambrian",
+            "Precambrian–Cambrian boundary with special reference to India."
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "15. Quaternary Geology",
+          "unitTitleMr": "१५. क्वाटरनरीज भूविज्ञान",
+          "topics": [
+            "Definition and subdivisions of the Quaternary period",
+            "Quaternary Stratigraphy – Marine Oxygen Isotope stratigraphy, biostratigraphy and magnetostratigraphy",
+            "Quaternary climates – glacial-interglacial cycles, eustatic changes",
+            "Proxy indicators of paleoenvironmental/ paleoclimatic changes",
+            "Quaternary records from land, ocean and cryosphere (ice core studies)",
+            "Responses of geomorphic systems to climate",
+            "Sea level and tectonics on variable time scales",
+            "Quaternary dating methods – radiocarbon, uranium series, luminescence",
+            "Quaternary stratigraphy of India– continental records (fluvial, glacial, aeolian, palaeosols and duricrust), marine records",
+            "Evolution of man and Stone Age cultures",
+            "Plant and animal life in relation to glacial and interglacial cycles during Quaternary."
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "16. Climatology",
+          "unitTitleMr": "१६. हवामानशास्त्र",
+          "topics": [
+            "Fundamental principles of climatology",
+            "Earth’s radiation balance",
+            "Latitudinal and seasonal variation of insolation, temperature, pressure, wind belts, humidity",
+            "Cloud formation and precipitation",
+            "Water balance",
+            "Air masses, monsoon, Jet streams, tropical cyclones and ENSO",
+            "Classification of climates – Koppen’s and Thornthwaite’s scheme of classification",
+            "Climate change."
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "17. Geomorphology",
+          "unitTitleMr": "१७. भूरूपशास्त्र",
+          "topics": [
+            "Concepts in geomorphology",
+            "Historical and process Geomorphology",
+            "Landforms in relation to climate, rock type, structure and tectonics",
+            "Processes – weathering, pedogenesis, mass movement, erosion, transportation and deposition",
+            "Geomorphic processes and landforms – fluvial, glacial, eolian, coastal and karst",
+            "River forms and processes – stream flow, stage- discharge relationship",
+            "Hydrographs and flood frequency analysis",
+            "Submarine relief",
+            "Geomorphology and topographic analysis including DEM",
+            "Environmental change– causes, effects on processes and landforms",
+            "Extra-terrestrial geomorphology."
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "18. Remote Sensing, GIS and GPS",
+          "unitTitleMr": "१८. रिमोट सेन्सिंग, जीआयएस आणि जीपीएस",
+          "topics": [
+            "Elements of photo-interpretation",
+            "Electromagnetic spectrum, emission range energy sources, energy interaction in the atmosphere, atmospheric windows, atmospheric effects on remotely sensed data, sensors",
+            "Geological interpretations of aerial photos and imageries, image enhancement, digital analysis",
+            "Microwave remote sensing for geological applications",
+            "Indian Remote Sensing satellite programmes",
+            "GIS - Preparation of raster and vector database and maps",
+            "Data structure, attribute data, design, query, and analysis",
+            "Data models, spatial data structures and spatial operations",
+            "DEM, interpolation techniques",
+            "GIS tools and applications",
+            "Global positioning systems - GPS data collection and processing techniques",
+            "Differential GPS (DGPS) and real-time kinematic (RTK) positioning",
+            "Geodetic Datum and Coordinate Systems",
+            "Recent advancements in GPS technology and applications in geosciences."
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "19. Satellite Meteorology",
+          "unitTitleMr": "१९. उपग्रह हवामानशास्त्र",
+          "topics": [
+            "Meteorological satellites",
+            "Types - Polar-orbiting and geostationary satellites",
+            "Payloads - Visible and infrared radiometers, microwave sensors, multi-scanner radiometers",
+            "Remote Sensing Applications",
+            "Identification of synoptic systems, fog, sandstorms, and cyclones",
+            "Sea Surface Temperature (SST) estimation, cloud top temperature retrieval, wind and rainfall measurements",
+            "Atmospheric temperature and humidity soundings",
+            "Microwave and hyperspectral observations for weather and climate studies",
+            "Satellite-based precipitation estimation (e.g., TRMM, GPM)",
+            "Data assimilation in numerical weather prediction (NWP)",
+            "Detection of extreme weather events and long-term climate trends",
+            "Aerosol and greenhouse gas monitoring."
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "20. Engineering Geology",
+          "unitTitleMr": "२०. अभियांत्रिकी भूविज्ञान",
+          "topics": [
+            "Engineering properties of rocks and physical characteristics of building stones, concretes and other aggregates",
+            "Geological investigations for construction of dams, bridges, highways and tunnels",
+            "Mass movements with special emphasis on landslides and solutions for hillslope stability",
+            "Geo-material in engineering construction",
+            "Types of synthetic materials used as remedial measures",
+            "Seismic design of buildings."
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "21. Hydrogeology",
+          "unitTitleMr": "२१. जलभूविज्ञान",
+          "topics": [
+            "Different components of the hydrological cycle",
+            "Unit hydrograph",
+            "Characteristics of unsaturated and saturated zones",
+            "Vertical distribution of subsurface water",
+            "Darcy’s law, limitations and validity",
+            "Hydrogeological classification of water-bearing formations",
+            "Types of aquifers in different geological settings",
+            "Principles of groundwater flow",
+            "Steady and unsteady state",
+            "Aquifer Performance Test",
+            "Tracing of groundwater movement with flow net",
+            "Measurement of groundwater recharge, various artificial recharge techniques, rainwater harvesting",
+            "Managed Aquifer Recharge",
+            "Hydrogeochemistry",
+            "Geochemical processes in the groundwater, application of stable isotopes",
+            "Quality of groundwater and suitability for various purposes",
+            "Fresh and salt-water relationships in coastal areas",
+            "Groundwater provinces in India."
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "22. Exploration Geology",
+          "unitTitleMr": "२२. अन्वेषण भूविज्ञान",
+          "topics": [
+            "Geological, geophysical, geochemical and geobotanical methods of surface and sub- surface exploration on different scales",
+            "Sampling, assaying and evaluation of mineral deposits."
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "23. Gravity and Magnetic fields of the earth",
+          "unitTitleMr": "२३. पृथ्वीची गुरुत्वीय आणि चुंबकीय क्षेत्रे",
+          "topics": [
+            "Normal gravity field",
+            "Clairaut’s theorem",
+            "Shape of the earth, geoid",
+            "Free-air, Bouguer and isostatic anomalies, isostatic models for local and regional compensation",
+            "Geomagnetic field, secular and transient variations and their theories",
+            "Palaeomagnetism, construction of polar wandering curves."
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "24. Gravity and Magnetic Methods",
+          "unitTitleMr": "२४. गुरुत्वीय आणि चुंबकीय पद्धती",
+          "topics": [
+            "Gravimeters and magnetometers",
+            "Data acquisition from land, air and under water",
+            "Corrections and reduction of anomalies, ambiguity, interpretation of anomalies of simple geometric bodies",
+            "Single pole, sphere, horizontal cylinder, sheet, dyke and fault",
+            "Forward modelling, inversion of arbitrary shaped bodies and 2-D, 3-D interfaces."
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "25. Seismology",
+          "unitTitleMr": "२५. भूकंपशास्त्र",
+          "topics": [
+            "Seismometry - short period, long period, broad band and strong motion",
+            "Elements of earthquake seismology",
+            "Seismic sources –faulting source, double couple hypothesis, seismic moment tensor",
+            "Focal mechanism and fault plane solutions",
+            "Seismic gaps",
+            "Seismotectonics and structure of the earth",
+            "Himalayan and stable continental region earthquakes",
+            "Reservoir induced seismicity",
+            "Seismic hazards",
+            "Earthquake prediction, travel time residuals, velocity anomalies",
+            "Seismic tomography."
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "26. Seismic Methods",
+          "unitTitleMr": "२६. भूकंपीय पद्धती",
+          "topics": [
+            "Snell’s Law",
+            "Ray theory",
+            "Reflection, refraction, diffraction",
+            "Seismic energy sources",
+            "Detectors, seismic data recording",
+            "Seismic noises and noise profile analysis",
+            "Reduction to a datum and weathering corrections",
+            "Interpretation of refraction and reflection data",
+            "Time-distance graph, Horizontal and dipping interfaces, CDP/CMP, velocity analysis, F-K filtering, stacking, deconvolution, migration before and after stack",
+            "Bright spot analysis",
+            "Wavelet processing",
+            "Attenuation studies, MASW, shear waves, AVO",
+            "VSP",
+            "Introduction to 3D seismic imaging",
+            "Seismic stratigraphy."
+          ]
+        },
+        {
+          "unitNumber": 27,
+          "unitTitle": "27. Electrical and Electromagnetic Methods",
+          "unitTitleMr": "२७. विद्युत आणि विद्युतचुंबकीय पद्धती",
+          "topics": [
+            "Principles of electrical method – electrical properties of rocks",
+            "Electrical resistivity method",
+            "Electrode array configurations, profiling and sounding",
+            "Resistivity transform and direct interpretation",
+            "Curve matching techniques",
+            "Electrical resistivity imaging",
+            "Self-potential method",
+            "Induced polarization method",
+            "Electromagnetic field techniques",
+            "Elliptic polarization, in-phase and out of phase components, horizontal and vertical loop methods",
+            "Data interpretation",
+            "VLF (very low frequency)",
+            "AFMAG (Audio frequency magnetic) methods",
+            "Central frequency sounding",
+            "Transient electromagnetic methods",
+            "Magneto-telluric method",
+            "GPR."
+          ]
+        },
+        {
+          "unitNumber": 28,
+          "unitTitle": "28. Well logging",
+          "unitTitleMr": "२८. वेल लॉगिंग",
+          "topics": [
+            "Open hole, cased hole and production logging",
+            "Electrical logs",
+            "Lateral, induction, temperature, S.P",
+            "Porosity logs",
+            "Sonic, density, neutron",
+            "Natural gamma",
+            "Determination of formation factor, water saturation, lithology",
+            "Logging while drilling."
+          ]
+        },
+        {
+          "unitNumber": 29,
+          "unitTitle": "29. Environmental Geography",
+          "unitTitleMr": "२९. पर्यावरण भूगोल",
+          "topics": [
+            "Man-land relationship",
+            "Resources – renewable and non-renewable",
+            "Natural and man-made hazards – droughts, floods, cyclones, earthquakes, landslides, tsunamis",
+            "Ecological balance",
+            "Environmental pollution and deterioration."
+          ]
+        },
+        {
+          "unitNumber": 30,
+          "unitTitle": "30. Geography of India",
+          "unitTitleMr": "३०. भारताचा भूगोल",
+          "topics": [
+            "Physiography, drainage, climate, soils and natural resources – the Himalaya, Ganga- Brahmaputra Plains, and Peninsular India Precambrian shield, the Gondwana rift, Deccan Plateau",
+            "Indian climatology with special reference to seasonal distribution and variation of temperature, humidity, wind and precipitation",
+            "Climate zones of India",
+            "Agricultural geography of India",
+            "Population – its distribution and characteristics",
+            "Urbanization and migration",
+            "Environmental problems and issues."
+          ]
+        },
+        {
+          "unitNumber": 31,
+          "unitTitle": "31. Physical Oceanography",
+          "unitTitleMr": "३१. भौतिक महासागरशास्त्र",
+          "topics": [
+            "Water masses and mixing - T-S diagrams",
+            "Mixing processes in the oceans",
+            "Characteristics of major water masses",
+            "Waves and coastal processes - Wind generated waves, shallow and deep-water waves, propagation, principles of wave forecasting",
+            "Tides - tide producing forces, harmonic method",
+            "Tidal currents in shallow seas, estuaries and rivers",
+            "Coastal processes – wave transformation stratification effects, bottom friction, wave reflection, refraction and diffraction",
+            "Breakers and surf",
+            "Littoral currents",
+            "Wave action on sediments – movement of beach material",
+            "Rip currents",
+            "Beach stability",
+            "Ocean beach nourishment",
+            "Harbour resonance",
+            "Seiches",
+            "Tsunamis",
+            "Estuarine and coastal dynamics",
+            "Estuaries - classification and nomenclature",
+            "Circulation, mixing models, sedimentation, salinity intrusion, effect of stratification",
+            "Coastal pollution - pollutant dispersion in estuaries and near-shore areas",
+            "Coastal zone management",
+            "Ocean circulation and Large-scale Motion",
+            "Wind-driven ocean motion",
+            "Ekman’s theory",
+            "Sverdrup- Stommel- Munk theories",
+            "Upwelling and sinking (with reference to the Indian ocean)",
+            "Divergences, convergences, barotropic/baroclinic conditions, oceanic eddies",
+            "Global conveyor belt circulation, subtropical gyres, western boundary currents, equatorial currents",
+            "El Niño, monsoonal winds and currents over the North Indian Ocean, Somali current",
+            "Southern Ocean",
+            "Arabian Sea upwelling."
+          ]
+        },
+        {
+          "unitNumber": 32,
+          "unitTitle": "32. Chemical Oceanography",
+          "unitTitleMr": "३२. रासायनिक महासागरशास्त्र",
+          "topics": [
+            "Seawater composition and element distribution",
+            "Major and minor elements, classification by distribution, chemical exchanges across interfaces, residence times",
+            "Element chemistry in specialized environments",
+            "Hydrothermal vents",
+            "Anoxic basins",
+            "Sediment pore fluids",
+            "Anthropogenic influences",
+            "Chemical and biological interactions",
+            "Ionic interactions",
+            "Biogeochemical cycling of nutrients, trace metals, and organic matter",
+            "Air-sea exchange of biogenic dissolved gases",
+            "CO₂-carbonate system, alkalinity, pH regulation, biological pump",
+            "Factors influencing CaCO₃, silicates, manganese nodules, phosphorites, and massive sulfide deposits."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

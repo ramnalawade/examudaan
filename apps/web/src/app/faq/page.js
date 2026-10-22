@@ -283,9 +283,9 @@ export default function FAQPage() {
           padding: '28px 24px',
           textAlign: 'center',
         }}>
-          <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 8 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 8 }}>
             Still have a question?
-          </h3>
+          </h2>
           <p style={{ fontSize: 14, color: 'var(--secondary)', maxWidth: 500, margin: '0 auto 20px' }}>
             Can&apos;t find what you are looking for? Our friendly support team is here to assist you via WhatsApp and Email.
           </p>

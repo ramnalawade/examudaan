@@ -4,7 +4,7 @@
 
 export const metadata = {
   title: 'Pricing & Subscription Plans — WhatsApp Alerts',
-  description: 'Choose affordable monthly plans (from ₹29/month) for personalized WhatsApp, SMS, and Email job alerts with custom eligibility matching for MPSC, Police, SSC & more.',
+  description: 'Affordable monthly plans from ₹29/mo for personalized WhatsApp, SMS & Email alerts with custom eligibility filters for MPSC, Police & SSC.',
   keywords: [
     'ExamUdaan pricing', 'WhatsApp job alerts subscription', 'govt job alert plans',
     'MPSC alert subscription', 'sarkari naukri alert price', 'monthly job alert'

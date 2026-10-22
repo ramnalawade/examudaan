@@ -1,0 +1,126 @@
+{
+  "docId": 7440,
+  "examName": "Maharashtra Medical Officer / Medical Services Examination",
+  "examNameMr": "महाराष्ट्र वैद्यकीय अधिकारी परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Medical Sciences Syllabus",
+      "paperTitleMr": "वैद्यकीय शास्त्र अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Pharmacology",
+          "unitTitleMr": "औषधशास्त्र",
+          "topics": [
+            "Pharmacology"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Forensic Medicine & Toxicology",
+          "unitTitleMr": "वैद्यकीय न्यायशास्त्र आणि विषशास्त्र",
+          "topics": [
+            "Forensic Medicine & Toxicology with special emphasis on post mortem findings",
+            "Injury report",
+            "Age determination and examination of rape victim"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Medicine",
+          "unitTitleMr": "सामान्य वैद्यकशास्त्र",
+          "topics": [
+            "General Medicine and allied subjects with special emphasis on emergencies in Medicine"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Pediatrics",
+          "unitTitleMr": "बालरोगशास्त्र",
+          "topics": [
+            "Pediatrics with special emphasis on emergencies in pediatrics and immunization"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "General Surgery",
+          "unitTitleMr": "सामान्य शल्यचिकित्सा",
+          "topics": [
+            "General Surgery with special emphasis on emergencies in Surgery"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Orthopedics",
+          "unitTitleMr": "अस्थिरोगशास्त्र",
+          "topics": [
+            "Orthopedics with special emphasis on primary treatment of fractures"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Otorhinolaryngology (ENT)",
+          "unitTitleMr": "कान, नाक, घसा शास्त्र",
+          "topics": [
+            "Otorhinolaryngology (ENT) with special emphasis on emergencies in ENT"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Ophthalmology",
+          "unitTitleMr": "नेत्ररोगशास्त्र",
+          "topics": [
+            "Ophthalmology with special emphasis on emergencies in Ophthalmology"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Obstetrics and Gynecology",
+          "unitTitleMr": "प्रसूतीशास्त्र आणि स्त्रीरोगशास्त्र",
+          "topics": [
+            "Obstetrics and Gynecology with special emphasis on normal labor",
+            "PPH and emergencies in Obstetrics and Gynecology"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Microbiology",
+          "unitTitleMr": "सूक्ष्मजीवशास्त्र",
+          "topics": [
+            "Microbiology with special emphasis on sterilization and disinfection of OT",
+            "Instruments and equipments and biomedical waste management",
+            "Functioning of Central Clinical Laboratory"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Medical Acts and Health Schemes",
+          "unitTitleMr": "वैद्यकीय कायदे आणि आरोग्य योजना",
+          "topics": [
+            "Acts related to medical sciences",
+            "National & State health schemes",
+            "National & State health programs"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Syllabus covers major clinical and pre-clinical medical subjects for screening tests."
+  ]
+}

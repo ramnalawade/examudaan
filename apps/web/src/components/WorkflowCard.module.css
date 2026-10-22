@@ -1,0 +1,145 @@
+.card {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--primary-fixed-dim);
+  box-shadow: 0 6px 20px rgba(163, 57, 0, 0.08);
+}
+
+.header {
+  padding: 16px 20px;
+  background: var(--surface-container-low);
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titleIcon {
+  font-size: 20px;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.goal {
+  font-size: 13px;
+  color: var(--secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.toolsRow {
+  padding: 14px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--outline-variant);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stackLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.toolPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.toolPill:hover {
+  background: var(--primary-fixed);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.toolRole {
+  font-size: 11px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.body {
+  padding: 20px;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.stepNumber {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.stepContent {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--on-surface);
+}
+
+.timeSavedBanner {
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: #065f46;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeSavedIcon {
+  font-size: 18px;
+  color: #059669;
+  line-height: 1;
+  flex-shrink: 0;
+}

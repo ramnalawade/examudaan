@@ -1,0 +1,122 @@
+{
+  "docId": 10134,
+  "examName": "Assistant Professor on Government Pharmacy Colleges, Maharashtra Engineering Teachers Service’s, Group-A, Syllabus",
+  "examNameMr": "शासकीय फार्मसी कॉलेजमधील सहाय्यक प्राध्यापक, महाराष्ट्र अभियांत्रिकी शिक्षक सेवा, गट-अ, अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor on Government Pharmacy Colleges, Group-A, Syllabus",
+      "paperTitleMr": "शासकीय फार्मसी कॉलेजमधील सहाय्यक प्राध्यापक, गट-अ, अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "PHARMACEUTICS",
+          "unitTitleMr": "फार्मस्युटिक्स",
+          "topics": [
+            "Historical background and development of profession of pharmacy, Pharmacopoeias, IP, BP, USP and Extra Pharmacopoeia",
+            "Prescription, Posology, Pharmaceutical calculations",
+            "Dosage forms- Powders, Liquid dosage forms, Monophasic liquids, Biphasic liquids, aerosols, Suppositories, Semisolid dosage forms, solid dosage forms- tablet, capsule, pellets, Sterile dosage forms-parenteral, ophthalmic Cosmetics",
+            "Pharmaceutical incompatibilities, Solubility of drugs, States of Matter and properties of matter, Physicochemical properties of drug molecules, Surface and interfacial phenomenon, Complexation and protein binding, pH, buffers and Isotonic solutions, Sorensen’s pH scale, pH determination (electrometric and calorimetric), applications of buffers, buffer equation, buffer capacity, buffers in pharmaceutical and biological systems, buffered isotonic solutions",
+            "Classification of dispersed systems and their general characteristics- Colloidal, coarse",
+            "Rheology, Deformation of solids, Micromeretics, Drug stability, Preformulation Studies for all types of formulations, Packaging Materials Science",
+            "Biopharmaceutics and Pharmacokinetics- Bioavailability and Bioequivalence, Pilot plant scale up techniques",
+            "Novel drug delivery systems-Like Controlled, Polymers, Microencapsulation, nano, Mucosal, Implantable, Transdermal, Gastroretentive, Nasopulmonary, Ocular, Intrauterine"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "PHARMACEUTICAL CHEMISTRY",
+          "unitTitleMr": "फार्मस्युटिकल केमिस्ट्री",
+          "topics": [
+            "Inorganic- General methods of preparation & assay, Acids and Bases, Major extra and intracellular electrolytes, Dental products, Gastrointestinal agents-Acidifiers; Antacid; Cathartics; Emetics, Antimicrobials, Expectorants, Haematinics, Astringents, Radiopharmaceuticals",
+            "Organic-Classification, nomenclature and isomerism, General methods of preparation and reactions of organic compounds like Alkanes, Alkenes and Conjugated dienes, Alkylhalides, Alcohols, Carbonyl compounds, Carboxylic acids, Aliphatic amines, Benzene and its derivatives, Phenols, Aromatic Amines, Aromatic Acids, Fatty acids & their reactions, Polynuclear hydrocarbons, Cyclo alkanes",
+            "Stereo isomerism- Optical isomerism, Geometrical isomerism, Heterocyclic compounds- Nomenclature and classification Synthesis, reactions and medicinal uses",
+            "Biochemistry-Bioenergetics, Biomolecules- Carbohydrate, lipid, Amino acid, Nucleic acid their role and metabolism, Biological oxidation, Enzymes",
+            "Medicinal Chemistry- Study of the following classes of drugs, Classification, mechanism of action, uses of drugs mentioned in the course (B Pharm syllabi prescribed by PCI), Structure activity relationship of selective class of drugs and synthesis of drugs acting on ANS, CNS, Antihistaminic agents, GIT, Cancer, endocrine, CVS, local anaesthetics, chemotherapeutic agents, Drug design, Combinatorial Chemistry"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "PHARMACEUTICAL ANALYSIS AND QUALITY ASSURANCE",
+          "unitTitleMr": "फार्मस्युटिकल अनालिसिस आणि क्वालिटी अश्युरन्स",
+          "topics": [
+            "Pharmaceutical analysis- Different techniques of analysis, Primary and secondary standards, Errors, Sources of errors, types of errors, methods of minimizing errors, accuracy, precision and significant figures",
+            "Pharmacopoeia, Sources of impurities in medicinal agents, limit tests",
+            "Instrumental Methods of analysis - Theory, Instrumentations and Applications of-UV Visible spectroscopy, Fluorimetry, IR spectroscopy, Flame Photometry, Atomic absorption, Conductometry, Potentiometry, Polarography",
+            "Chromatography- Adsorption and partition column chromatography, Thin layer chromatography, Paper chromatography, Electrophoresis, Gas chromatography, High performance liquid chromatography (HPLC), Ion exchange chromatography, Gel chromatography, Affinity chromatography",
+            "Quality Assurance and Quality Management concepts- Definition, elements, philosophies, Quality Management (TQM), Quality management systems, ICH Guidelines, QbD, NABL accreditation, Equipments and raw materials, Personnel, Good Laboratory Practices, Document maintenance in pharmaceutical industry, Calibration and Validation, Warehousing, Technology development and transfer, Regulatory affairs, Regulatory requirements for drug approval, Indian Regulatory Requirements"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "PHARMACOLOGY",
+          "unitTitleMr": "फार्माकॉलॉजी",
+          "topics": [
+            "Human Anatomy and Physiology- Definition and scope of anatomy and physiology, levels of structural organization and body systems, basic life processes, homeostasis, basic anatomical terminology, Cellular and Tissue level of organization",
+            "Anatomy and Physiology of following systems-Integumentary, Skeletal, Osseus and joints, hematological (blood), Lymphatic, cardiovascular, Digestive, Respiratory, Urinary, Endocrine, Reproductive, Nervous (Organization of nervous system, neuron, neuroglia, classification and properties of nerve fibre, electrophysiology, action potential, nerve impulse, receptors, synapse, neurotransmitters)- CNS, PNS (including ANS), Special Senses",
+            "Genetics- Chromosomes, genes and DNA, protein synthesis, genetic pattern of inheritance",
+            "Pharmacology- A. General Pharmacology- i. Definition, historical landmarks and scope of pharmacology, nature and source of drugs and routes of drug administration, ii. Pharmacokinetics, Pharmacodynamics, factors modifying drug action, Bioassays, Chronopharmacology, Principles of toxicology",
+            "B. Pharmacology (classification, pharmacokinetics, pharmacodynamics-mechanism of action, adverse effects, contraindications, Therapeutic uses, dose and route of administration along with interactions) of drugs acting on following systems / diseases / disorders- Peripheral nervous system, Central nervous system, Cardio Vascular System, Urinary system, Autocoids and related drugs, Endocrine system, Respiratory system, Gastrointestinal Tract, Chemotherapy- (Against microbes, protozoa, metazoan, fungi, viruses, cancer)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "PHARMACY PRACTICE",
+          "unitTitleMr": "फार्मसी प्रॅक्टिस",
+          "topics": [
+            "Hospital Pharmacy- Hospital, Hospital pharmacy and their organization, Hospital formulary Drug distribution system in a hospital, Education and training program in the hospital, Adverse drug reaction, Therapeutic drug monitoring",
+            "Community Pharmacy, Community pharmacy management, Medication adherence, Patient medication history interview Patient counseling, Pharmacy and therapeutic committee, Drug information services, Prescribed medication order and communication skills, Clinical Pharmacy, Interpretation of Clinical Laboratory Tests, Sociology and health, Hygiene and health, Preventive medicine",
+            "National health programs (objectives, functioning and outcome), Community services in rural, urban and school health",
+            "PATHOPHYSIOLOGY (Etiology, symptoms, diagnostic tests) of following diseases/ disorders- Basic principles of Cell injury, Adaptation, inflammation and repair, Cardiovascular System- Hypertension, congestive heart failure, ischemic health disease, Respiratory system-Asthma, Chronic obstructive airways diseases, Renal system- Acute and chronic renal failure, Haematological Diseases- Iron deficiency, megaloblastic anemia, sickle cell anemia, thalasemia, hereditary acquired anemia, Endocrine system, Diabetes, thyroid diseases, disorders of sex hormones, Nervous system, Epilepsy, Parkinson’s disease, stroke, Psychiatric disorders-depression, schizophrenia and Alzheimer’s disease, Gastrointestinal system, Peptic Ulcer, Inflammatory bowel diseases, jaundice, hepatitis, Alcoholic liver disease, Disease of bones and joints-Rheumatoid arthritis, osteoporosis and gout",
+            "Cancer- classification, etiology and pathogenesis of cancer, Infectious diseases-Meningitis, Typhoid, Leprosy, Tuberculosis Urinary tract infections, Sexually transmitted diseases, AIDS, Syphilis, Gonorrhea",
+            "Essential drugs concept, National List of Essential Medicines (NLEM)"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "PHARMACOGNOSY",
+          "unitTitleMr": "फार्माकोग्नसी",
+          "topics": [
+            "Introduction, Definition, history, scope and development, Sources of Drugs, Organized drugs, unorganized drugs, Classification of drugs, Quality control of Drugs of Natural Origin, Conservation of medicinal plants, Plant tissue culture, Edible vaccines, Pharmacognosy in various systems of medicine, Introduction to secondary metabolites",
+            "Study of biological source, chemical nature and uses of drugs of natural origin containing following constituents-Plant Products, Fibers - Hallucinogens, Teratogens, Natural allergens, Carbohydrates, Proteins and Enzymes, Lipids, Marine Drugs, Alkaloids, Phenylpropanoids and Flavonoids, Steroids, Cardiac Glycosides & Triterpenoids, Volatile oils, Tannins, Resins, Glycosides, Iridoids, Other terpenoids & Naphthaquinones, Biopesticides/Bioinsecticides, Neutraceuticals, Herbal Cosmetics, Herbal excipients, Herbal formulations",
+            "Indian Systems of Medicine, Herbal-Drug and Herb-Food Interactions",
+            "Evaluation of Drugs WHO & ICH guidelines for the assessment of herbal drugs Stability testing of herbal drugs, Patenting and Regulatory requirements of natural products",
+            "Definition of the terms- Farmers right, Breeder’s right, Bioprospecting and Biopiracy, Patenting aspects of Traditional Knowledge and Natural Products",
+            "Regulatory Issues - Regulations in India (ASU DTAB, ASU DCC), Regulation of manufacture of ASU drugs - Schedule Z of Drugs & Cosmetics Act for ASU drugs"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "ALLIED SUBJECTS",
+          "unitTitleMr": "संबंधित विषय",
+          "topics": [
+            "COMPUTER APPLICATIONS- Concept of Information Systems and Software, Information gathering, requirement and feasibility analysis, data flow diagrams, process specifications, input/output design, process life cycle, planning and managing the project, Introduction to databases, MYSQL, MS ACCESS, Pharmacy Drug database",
+            "Application of computers in Pharmacy –Drug information storage and retrieval, Pharmacokinetics, Mathematical model in Drug design, Hospital and Clinical Pharmacy, Electronic Prescribing and discharge systems, barcode medicine identification and automated dispensing of drugs, mobile technology and adherence monitoring, Diagnostic System, Lab-diagnostic System, Patient Monitoring System, Pharma Information System",
+            "Bioinformatics- Introduction, Objective of Bioinformatics, Bioinformatics Databases, Concept of Bioinformatics, Impact of Bioinformatics in Vaccine Discovery, Computers as data analysis in Preclinical development, Chromatographic data analysis (CDS), Laboratory Information management System (LIMS) and Text Information Management System (TIMS)",
+            "ENVIRONMENTAL SCIENCES- Renewable and non-renewable resources, Natural resources and associated problems, Ecosystems, Environmental Pollution, Air pollution; Water pollution; Soil pollution",
+            "MICROBIOLOGY- Introduction- Study of ultra-structure and morphological classification of bacteria, Fungi and Virus, nutritional requirements, raw materials used for culture media and physical parameters for growth, growth curve, isolation and preservation methods for pure cultures, cultivation of anaerobes, quantitative measurement of bacterial growth",
+            "Identification of bacteria using staining techniques, methods of sterilization, Evaluation of the efficiency of sterilization method, Sterility indicators, Sterility testing of products, disinfection and disinfectants, Microbiological assay",
+            "Growth of animal cells in culture, general procedure for cell culture, Primary, established and transformed cell cultures, Application of cell cultures in pharmaceutical industry and research",
+            "BIOTECHNOLOGY- Introduction, Enzyme Biotechnology, Biosensors- Protein Engineering, Use of microbes in industry, Production of Enzymes-genetic engineering, cloning vectors, Recombinant DNA technology, Application of r DNA technology and genetic engineering in the products, Interferon, Vaccines- hepatitis-B, Hormones- Insulin",
+            "Types of immunity- humoral immunity, cellular immunity, vaccines and other products relative to immunity- their Production, Storage"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

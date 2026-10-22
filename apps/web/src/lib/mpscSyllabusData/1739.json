@@ -1,0 +1,109 @@
+{
+  "docId": 1739,
+  "examName": "Special Auditor, Maharashtra Co-operative Services, Co-op Societies, Group – B",
+  "examNameMr": "विशेष लेखापरक्षक, महाराष्ट्र सहकार सेवा, सहकारी संस्था, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Special Auditor, Maharashtra Co-operative Services, Co-op Societies, Group – B Screening Test",
+      "paperTitleMr": "विशेष लेखापरक्षक, महाराष्ट्र सहकार सेवा, सहकारी संस्था, गट-ब चाचणी परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "1. Accounting Marks 30",
+          "unitTitleMr": "१. लेखांकन गुण ३०",
+          "topics": [
+            "A) Financial Accounting :",
+            "Accounting as a financial information system",
+            "Accounting Standards in India and international accounting standards (only outlines)",
+            "Final Accounts.",
+            "Depreciation accounting, Depreciation policies as per accounting standard.",
+            "Accounts of non-trading institution.",
+            "Partnership accounts.",
+            "Advanced problems of company accounts.",
+            "Amalgamation, absorption and reconstruction of companies.",
+            "Valuation of shares and goodwill.",
+            "Consolidated books of holding company with one subsidiary only.",
+            "B) Cost Accounting :",
+            "Nature and functions of cost accounting",
+            "Accountancy for material, labour and overheads",
+            "Job costing and Contract costing",
+            "Process costing",
+            "Marginal Costing",
+            "Techniques of segregating semi-variable costs into fixed and variable costs",
+            "Cost-volume-profit relationship",
+            "Aid to decision making including pricing decisions, shutdown etc.",
+            "Techniques of cost control and cost reduction",
+            "Costing of joint and by production. Reconciliation of cost and financial accounts",
+            "Budgetary control, flexible budgets",
+            "Standard costing and variance analysis.",
+            "Responsibility accounting, investment, profit and cost centres."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "2. Auditing Marks : 25",
+          "unitTitleMr": "२. लेखापरीक्षण गुण : २५",
+          "topics": [
+            "Considerations for commencing an Audit",
+            "Audit of cash transactions, expenses, incomes, purchases, sales.",
+            "Internal check system.",
+            "Valuation and verification of assets with special reference to fixed assets, stocks and debts.",
+            "Verification of liabilities",
+            "Audit of limited companies: appointment, removal, powers, duties and liabilities of company auditor, significance of ‘true and fair’, MAOCARO report.",
+            "Auditor’s report: Standard and qualified.",
+            "Special points in the audit of different organizations like clubs, hospitals, colleges, charitable institutes",
+            "Investigations of fraudulent activities",
+            "Audit Approach - EDP and mechanical systems",
+            "Social Auditing"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "3. Business Finance Marks 10",
+          "unitTitleMr": "३. व्यवसाय वित्त गुण १०",
+          "topics": [
+            "Financial Analysis as a diagnostic tool.",
+            "Concepts of Valuation - Valuation of firm's Fixed Income, Securities and Common Stocks.",
+            "Dividend and Retention Policy - Residual Theory - Dividend Policy - Other Models - Actual Practices.",
+            "Capital Structure - Leverages - Significance of Leverages - Theories of Capital Structure with special reference to Modigliani and Miller approach. Planning the Capital Structure of a Company",
+            "EBIT-EPS Analysis, Cash-flow ability to service debt, Capital Structure Ratios, other methods, receivable agency"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "4. Maharashtra Co-operative Societies Act, 1960 Marks 10",
+          "unitTitleMr": "४. महाराष्ट्र सहकारी संस्था अधिनियम, १९६० गुण १०",
+          "topics": [
+            "Provisions of Maharashtra Co-operative Societies Act, 1960"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "5. General Knowledge and General Aptitude Test Marks 25",
+          "unitTitleMr": "५. सामान्य ज्ञान आणि सामान्य क्षमता चाचणी गुण २५",
+          "topics": [
+            "Mathematics - Addition, Subtraction, Multiplication, Division, Decimal, Fraction, Average.",
+            "General History of India - 1857 to 1947, Geography, Current Affairs and Polity in respect of Maharashtra.",
+            "General Science - Physics, Chemistry, Biology, Botany, Hygiene."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

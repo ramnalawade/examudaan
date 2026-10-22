@@ -1,0 +1,199 @@
+{
+  "docId": 11410,
+  "examName": "Librarian, Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "ग्रंथपाल, महाराष्ट्र शिक्षण सेवा, गट-अ (संलग्र शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Librarian, Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": "ग्रंथपाल, महाराष्ट्र शिक्षण सेवा, गट-अ (संलग्र शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Foundation of Library and Information Science",
+          "unitTitleMr": "ग्रंथालय आणि माहिती विज्ञानाचा पाया",
+          "topics": [
+            "Data, Information, Knowledge and Wisdom",
+            "Information Life Cycle - Generation, Collection, Storage and Dissemination",
+            "Role of Information in Planning, Management, Socio-economic, Cultural, Educational and Technological Development",
+            "Information Science - Relationship with other subjects, Information Society and Knowledge Society",
+            "Communication – Concept, Types, Theories, Models, Channels and Barriers; Trends in Scholarly Communication",
+            "Information Industry - Generators, Providers and Intermediaries",
+            "IPR and Legal Issues - Categories, Conventions, Treaties, Laws",
+            "Plagiarism: Concept and Types. UGC Regulation 2018 on Academic Integrity",
+            "Right to Information Act (RTI); Information Technology Act",
+            "National Knowledge Commission, National Mission on Libraries, and National Education Policy 2020 and Libraries"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Library Management and Administration",
+          "unitTitleMr": "ग्रंथालय व्यवस्थापन आणि प्रशासन",
+          "topics": [
+            "Historical Development of Libraries in India; Committees and Commissions on Libraries in India",
+            "Types of Libraries – Academic, Public, Special and National",
+            "Library Legislation and Library Acts in Indian States; The Press and Registration of Books Act; The Delivery of Books and Newspapers (Public Libraries) Act",
+            "Laws of Library Science",
+            "Library and Information Science Profession - Librarianship as a Profession, Professional Skills and Competences; Professional Ethics",
+            "Professional Associations – State – Maharashtra University and College Librarians Association (MUCLA), National – ILA, IASLIC, IATLIS; International – IFLA, ALA, CILIP, ASLIB, SLA; Role of UGC, RRRLF and UNESCO in Promotion and Development of Libraries",
+            "Library and Information Science Education in India",
+            "Library Public Relations and Extension Activities",
+            "Type of Users - User Studies, User Education",
+            "Information Literacy - Areas, Standards, Types and Models; Trends in Information Literacy"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Information Sources and Services",
+          "unitTitleMr": "माहिती स्रोत आणि सेवा",
+          "topics": [
+            "Information Sources - Nature, Characteristics, Types and Formats",
+            "Sources of Information - Primary, Secondary and Tertiary; Documentary and Non-Documentary",
+            "Primary Information Sources (Print and Electronic) - Journals, Conference Proceedings, Patents, Standards, Thesis & Dissertations, Trade Literature",
+            "Secondary Information Sources (Print and Electronic) - Dictionaries, Encyclopedias, Bibliographies, Indexing & Abstracting, Statistical sources, Handbooks and Manuals",
+            "Tertiary Information Sources (Print and Electronic)- Directories, Year Books, Almanacs",
+            "Reference Sources - Bibliographical, Biographical, Educational, Language and Geographical",
+            "Electronic Information Resources - Subject Gateways, Web Portals, Bulletin Boards, Discussion Forums /Groups",
+            "Databases: Bibliographic, Numeric, Full text, Multimedia; Open Access Databases",
+            "Institutional and Human Resources",
+            "Evaluation of Reference Sources and Web Resources"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Information Services and Systems",
+          "unitTitleMr": "माहिती सेवा आणि प्रणाली",
+          "topics": [
+            "Community Information Services",
+            "Reference Service – Concept and Types; Referral Services",
+            "Services - CAS, SDI, Inter Library Loan and Document Delivery",
+            "Mobile based Library Services and Tools – Mobile OPAC, Mobile Databases, Mobile Library Website, Library Apps, Mobile Library Instructions, Augmented Reality, SMS Alerts, Geo-Location, Reference Enquiry",
+            "Web 2.0, 3.0, 4.0 and 5.0 - Library 2.0 and Library 4.0 - Concept, Characteristics, Components; Instant Messaging, RSS Feeds, Podcasts, Vodcasts, Ask a Librarian",
+            "Collaborative Services- Social Networks, Academics Social Networks, Social Tagging, Social Bookmarking",
+            "Web – Scale Discovery Services",
+            "National Information Systems and Networks: NISCAIR, DESIDOC, SENDOC, ENVIS, INFLIBNET, DELNET, NICNET, ERNET, National Knowledge Network (NKN), Biotechnology Information System Network",
+            "International Information Systems and Networks: INIS, AGRIS, INSPEC, MEDLARS, BIOSIS, ERIC, Patent Information System (PIS), Biotechnology Information System (BIS)",
+            "Library Resource Sharing and Library Consortia – National and International"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Knowledge Organization, Information Processing and Retrieval",
+          "unitTitleMr": "ज्ञान संघटन, माहिती प्रक्रिया आणि पुनर्प्राप्ती",
+          "topics": [
+            "Universe of Knowledge - Nature and Attributes; Modes of Formation of Subjects",
+            "Knowledge Organisation - Classification – Theories, Cannons, and Principles; Simple Knowledge Organisation System (SKOS), Taxonomies, Folksonomy, Trends in Classification",
+            "Mapping of Subjects in Library Classification Schemes – DDC, UDC and CC",
+            "Knowledge Organisation: Cataloguing - Cannons and Principles; Centralized and Co-operative Catalogue; Library Cataloguing Codes: CCC and AACR - II",
+            "Standards of Bibliographic Record Formats and Description – ISBD, MARC 21, CCF, RDA, FRBR, Bibframe",
+            "Standards for Bibliographic Information Interchange & Communication – ISO 2709, Z39.50, Z39.71",
+            "Metadata Standards: Dublin Core; MARC21, METS, MODES, EAD",
+            "Indexing Systems and Techniques: Assigned - Pre-coordinate; Post-Coordinate; Derived-Title-based; Vocabulary Control",
+            "Abstracting – Types and Guidelines",
+            "Information Retrieval System – Features, Components, Models and Evaluation"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Management of Library and Information Centers",
+          "unitTitleMr": "ग्रंथालय आणि माहिती केंद्रांचे व्यवस्थापन",
+          "topics": [
+            "Management - Principles, Functions and Schools of thought",
+            "Library and Information Centers Management - Book Selection Tools and Principles; Library Acquisition, Technical Processing, Circulation, Serial Control, Maintenance and Stock Verification; Preservation and Conservation; Hazards and Control Measures of Library Materials",
+            "Human Resource Management – Planning, Job Analysis, Job Description, Job Evaluation, Selection, Recruitment, Motivation, Training and Development, Performance Appraisal; Staff Manual",
+            "Financial Management in Libraries - Sources of Finance, Resource Mobilisation, Budgeting Methods; Cost Effective and Cost Benefit Analysis, Annual Reports & Statistics; Library Authority and Committee",
+            "Project Management - SWOT, PEST, PERT / CPM",
+            "Total Quality Management (TQM) - Concepts, Principles and Techniques, Six Sigma; Evaluation of Services of Libraries and Information Centers",
+            "Library Building, Furniture and Equipments; Green Library Building; Information Commons; Makers Space; Security and Safety",
+            "Management Information System (MIS), MBO, Change Management, Disaster Management, Crisis Management",
+            "Knowledge Management – Principles, Tools, Components and Architecture",
+            "Marketing of Library Products and Services – Plan, Research, Strategies, Mix, Segmentation, Pricing and Advertising; Management Consultancy"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Information Technology - Basics",
+          "unitTitleMr": "माहिती तंत्रज्ञान - मूलभूत गोष्टी",
+          "topics": [
+            "Computer Technology - Character Representation (ASCII, ISCII, Unicode); Computer Hardware, Software; Storage Devices; Input and Output Devices",
+            "Types of Software - System Software, Application Software",
+            "Programming Languages – Object Oriented, Procedural, High Level, Scripting; Web Languages",
+            "Telecommunication - Transmission Channels, Mode, and Media, ISDN, PSDN, Multiplexing, Modulation, Standards and Protocols",
+            "Wireless Communication – Media, Wi-fi, Li-fi, Satellite Communication, Mobile Communication",
+            "Computer Networks - Topologies, Types of Networks – LAN, MAN, WAN",
+            "Internet - Web browsers, WWW, E-mail; Search Engines, Meta and Entity Search engines",
+            "Internet Protocols and Standards – HTTP, SHTTP, FTP, SMTP, TCP/IP, URI, URL",
+            "Hypertext, Hypermedia, Multimedia, Video conferencing, Virtual Reality, Augmented Technologies",
+            "Data Security, Network Security, Firewalls, Cryptographic Techniques, Anti-virus software, Anti-spyware, Intrusion Detection System"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Library Automation, Digital Libraries and Network",
+          "unitTitleMr": "ग्रंथालय ऑटोमेशन, डिजिटल ग्रंथालये आणि नेटवर्क",
+          "topics": [
+            "Library Automation – Areas, Planning, Selection of Hardware and Software, Implementation and Evaluation; Standards for Library Automation",
+            "Barcode, RFID, QR Code, Biometric, Smartcard: Features and Applications",
+            "Digitization – Planning, Selection of Materials, Hardware, Software, Process, Issues",
+            "Digital Library: Genesis, Characteristics, Types, Architecture; Standards, Formats and Protocols, DOI",
+            "Digital Preservation - Need, Purpose, Standards, Methods, Techniques, Projects (National and International)",
+            "Digital Library Initiatives – National and International",
+            "Institutional Repositories - Need, Purpose, Types and Tools; Institutional Repositories in India; ROAR, DOAR, SHARPA-ROMIO",
+            "Content Management Systems – Architecture, Data Integration, CMS Software – Selection, Implementation and Evaluation",
+            "Application of Artificial Intelligence, Expert Systems and Robotics in Libraries; Social Mobile Analytics Cloud (SMAC); Cloud Computing",
+            "Ontology – Tools (RDF, RDFS, Potege); Semantic Web, Linked Data, Big Data, Data Mining, Data Harvesting"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Research Methodology and Bibliometrics",
+          "unitTitleMr": "संशोधन पद्धती आणि ग्रंथमिती",
+          "topics": [
+            "Research - Concept, Purpose, Functions, Scope and Ethics; Types of Research – Basic and Applied, Interdisciplinary and Multidisciplinary",
+            "Research Methods: Historical, Descriptive, Experimental and Delphi",
+            "Research Design - Selection of Research Problem, Review of Literature; Formulation of Research Problem; Hypothesis – Formulation, Types and Testing; Sampling Techniques",
+            "Methods of Data Collection: Questionnaire, Interview, Observation, Library Records, Scales and Checklist",
+            "Data Analysis and Interpretation - Presentation of Data; Statistical Methods/ Techniques",
+            "Statistical Packages – Spreadsheet, SPSS, Bibexcel, ‘R’ Statistics",
+            "Research Report Writing and Citation Tools – Structure, Style, Contents, Guidelines; Style Manuals; Online Citation Tools; Reference Style Management Tools; Antiplagiarism Tools; Evaluation of Research Report",
+            "Metric Studies in LIS - Bibliometrics, Scientometric, Webometrics, Altmetrics",
+            "Impact Factors – Journal, Institutional and Authors; h-Index, p-index, g-Index, i10 Index",
+            "Trends in Library and Information Science Research"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Types of Libraries and Information Systems",
+          "unitTitleMr": "ग्रंथालय आणि माहिती प्रणालीचे प्रकार",
+          "topics": [
+            "Academic Library and Information System",
+            "Public Library and Information System",
+            "Special Library and Information System",
+            "Health Science Library and Information System",
+            "Corporate Library and Information System",
+            "Agricultural Library and Information System",
+            "Engineering and Technological Library and Information System",
+            "Archive, Museums and Oriental Libraries",
+            "Community Information System",
+            "Information Services and System for Persons with Disability, Children and Women"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

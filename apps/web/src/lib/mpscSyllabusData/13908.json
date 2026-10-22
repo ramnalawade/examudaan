@@ -1,0 +1,118 @@
+{
+  "docId": 13908,
+  "examName": "Deputy Director / Senior Research Officer, Group-A (Gazetted)",
+  "examNameMr": "उपसंचालक / वरिष्ठ संशोधन अधिकारी, गट-अ (राजपत्रित)",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "English",
+  "category": "group-a",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Deputy Director / Senior Research Officer, Group-A (Gazetted) Syllabus",
+      "paperTitleMr": "उपसंचालक / वरिष्ठ संशोधन अधिकारी, गट-अ (राजपत्रित) अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Planning",
+          "unitTitleMr": "नियोजन",
+          "topics": [
+            "Definitions needs goals",
+            "Process of planning, setting the objectives",
+            "Analysing the current situations",
+            "Forecasting: assumptions",
+            "Staffing, directing, controlling",
+            "Performance evaluation, supporting ongoing learning",
+            "Output-outcome monitoring framework"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Economic analysis",
+          "unitTitleMr": "आर्थिक विश्लेषण",
+          "topics": [
+            "Indicators of development",
+            "Measures of poverty indices including MPI",
+            "Environmental accounting of development",
+            "Public policy issues: economic and Fiscal Policy",
+            "Public health welfare",
+            "Environmental And Energy Policy, Social And Civil Rights Global security And Technology",
+            "Sustainable development goals- monitoring and implementations"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Basic Statistical analysis",
+          "unitTitleMr": "मूलभूत सांख्यिकीय विश्लेषण",
+          "topics": [
+            "Collection, compilation, analysis and interpretation of Primary and secondary data",
+            "Descriptive statistics",
+            "Inferential statistics",
+            "Use of computers in statistical analysis",
+            "Regression, correlation"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Advance statistical analysis",
+          "unitTitleMr": "प्रगत सांख्यिकीय विश्लेषण",
+          "topics": [
+            "Multivariate analysis: cluster, factor, multidimensional scaling etc",
+            "Structural equation modeling"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Research Methodology",
+          "unitTitleMr": "संशोधन पद्धती",
+          "topics": [
+            "Research objectives",
+            "Literature review",
+            "Formulation of objectives and hypothesis",
+            "Research design",
+            "Sampling design",
+            "Survey methods and action research method for implementations of government policies and its implementation, evaluation"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Economics",
+          "unitTitleMr": "अर्थशास्त्र",
+          "topics": [
+            "Macroeconomic analysis",
+            "Census and types of surveys"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Project and Quality Management",
+          "unitTitleMr": "प्रकल्प आणि गुणवत्ता व्यवस्थापन",
+          "topics": [
+            "Project conceptualization, project finance, implementation, review and evaluation",
+            "Measures of quality: definition, measurements and improvement in the quality parameters"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Governance",
+          "unitTitleMr": "शासन",
+          "topics": [
+            "Organizational structure of national, state and district level Government machinery and its impact on development",
+            "Roles and responsibilities in government functions"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,64 @@
+{
+  "docId": 13739,
+  "examName": "Bailiff and Clerk, Group-C Sheriff Office of Mumbai - Syllabus",
+  "examNameMr": "बायािफफ आणि लर्क, गट-क मुंबईचे शेरीफ कार्यालय - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "Bilingual",
+  "category": "group-c",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies, Marathi, English and Intelligence Test",
+      "paperTitleMr": "सामान्य अध्ययन, मराठी, इंग्रजी व बुद्धिमत्ता चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi and English",
+          "unitTitleMr": "मराठी व इंग्रजी",
+          "topics": [
+            "General Vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Use of Idioms and phrases & their meaning",
+            "Comprehension of passage"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी",
+          "topics": [
+            "Tests to measure how quickly and accurately the candidate can think"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Science and Technology",
+          "unitTitleMr": "सामान्य विज्ञान आणि तंत्रज्ञान",
+          "topics": [
+            "Physics",
+            "Chemistry",
+            "Zoology",
+            "Botany",
+            "Remote Sensing, Aerial and drone photography, Geographic Information System (GIS) and its application",
+            "Information and communication technology"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever Acts/Rules/Regulations are mentioned in syllabus, latest amendments/versions to be considered thereto."
+  ]
+}

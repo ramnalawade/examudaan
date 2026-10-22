@@ -1,0 +1,121 @@
+{
+  "docId": 1696,
+  "examName": "Maharashtra Education Service, Group B (Collegiate Branch) - Chemistry",
+  "examNameMr": "महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) - रसायनशास्त्र",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer in Chemistry (Degree)",
+      "paperTitleMr": "रसायनशास्त्र प्राध्यापक (पदवी)",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Atomic Structure and Chemical Bonding",
+          "unitTitleMr": "अणूची रचना आणि रासायनिक बंधन",
+          "topics": [
+            "Idea of De Broglie matter waves, Heisenberg uncertainty principle",
+            "Atomic orbitals, Schrodinger wave equation, significance of wave functions, quantum numbers, radial and angular wave functions and probability distribution curves, shapes of s, p, d orbitals",
+            "Aufbau and Pauli exclusion principles, Hund's multiplicity rule, electronic configurations of the elements, effective nuclear charge",
+            "Covalent Bond: Valence bond theory and its limitations, directional characteristics of covalent bond, various types of hybridizations and shapes of simple inorganic molecules and ions",
+            "Valence shell electron pair repulsion (VSEPR) theory, molecular orbital theory and its applications to homonuclear and heteronuclear diatomic molecules",
+            "Ionic Solids: Ionic structures, radius ratio effect and coordination number, limitation of radius ratio rule, lattice defects, semiconductors, lattice energy and Born-Haber cycle",
+            "Weak Interactions: Hydrogen bonding, Van der Waals forces",
+            "s-Block and p-Block Elements: Comparative study, diagonal relationships, salient features of hydrides, oxides, and halides",
+            "Chemistry of Elements of First, Second and Third Transition Series: General characteristics, comparative treatment with their 3d-analogues",
+            "Coordination Compounds: Werner's coordination theory, effective atomic number concept, chelates, nomenclature, isomerism, and valence bond theory of transition metal complexes"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Metal-ligand Bonding in Transition Metal Complexes",
+          "unitTitleMr": "संक्रमण धातू संकुलांमधील धातू-लिगांड बंधन",
+          "topics": [
+            "Limitations of valence bond theory, an elementary idea of crystal-field theory, crystal field splitting in octahedral, tetrahedral and square planar complexes, factors affecting the crystal-field parameters",
+            "Magnetic Properties of Transition Metal Complexes: Types of magnetic behaviour, methods of determining magnetic susceptibility, spin-only formula, L-S coupling, orbital contribution to magnetic moments",
+            "Electron Spectra of Transition Metal Complexes: Types of electronic transitions, selection rules for d-d transitions, spectroscopic ground states, spectrochemical series",
+            "Chemistry of Lanthanide Elements: Electronic structure, oxidation states and ionic radii, lanthanide contraction, complex formation, occurrence and isolation",
+            "Chemistry of Actinides: General features and chemistry of actinides, chemistry of separation of Np, Pu and Am from U, similarities between later actinides and later lanthanides",
+            "Organometallic Chemistry: A brief account of metal-ethylenic complexes and homogeneous hydrogenation, mononuclear and polynuclear carbonyls and the nature of bonding in metal carbonyls"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Bioinorganic Chemistry, Acids, Bases and States of Matter",
+          "unitTitleMr": "बायोइनरॅगानिक रसायनशास्त्र, आम्ल, आम्लारी आणि द्रव्याची अवस्था",
+          "topics": [
+            "Essential and trace elements in biological processes, metalloporphyrins with special reference to haemoglobin and myoglobin",
+            "Acids and Bases: Arrhenius, Bronsted-Lowry, Lux-Flood, solvent system and Lewis concepts",
+            "Non-aqueous Solvents: Physical properties, types of solvents and reactions in non-aqueous solvents with reference to liquid NH3 and liquid SO2",
+            "Gaseous States: Postulates of kinetic theory of gases, deviation from ideal behaviour, Van der Waals equations of state, molecular velocities and liquefaction of gases",
+            "Liquid State: Intermolecular forces, structure of liquids, liquid crystals and their classification",
+            "Solid State: Space lattice, unit cell, laws of crystallography, X-ray diffraction by crystals and Bragg's equation",
+            "Colloidal State: Definition, classification, properties, stability of colloids, emulsions, gels, and micelles"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Chemical Kinetics, Thermodynamics and Equilibrium",
+          "unitTitleMr": "रासायनिक गतिकशास्त्र, उष्णताशास्त्र आणि समतोल",
+          "topics": [
+            "Chemical Kinetics and Catalysis: Rate of a reaction, factors influencing rate, zero order, first order, second order, pseudo order, half life and mean life",
+            "Thermodynamics: First, second, and third laws of thermodynamics, internal energy, enthalpy, entropy, Gibbs and Helmholtz functions",
+            "Thermochemistry: Bond dissociation energy, Kirchhoff's equation",
+            "Chemical Equilibrium: Equilibrium constant and free energy, Le Chatelier's principle, Clapeyron and Clausius-Clapeyron equations",
+            "Phase Equilibrium: Phase, component, degree of freedom, Gibbs phase rule, phase diagrams of water and carbon dioxide",
+            "Environmental Safety and Waste Disposal: Air, water, soil and noise pollutions, industrial toxins organic and inorganic treatment"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Structure, Bonding and Reaction Mechanism in Organic Chemistry",
+          "unitTitleMr": "सेंद्रिय रसायनशास्त्रातील रचना, बंधन आणि अभिक्रिया यंत्रणा",
+          "topics": [
+            "Hybridizations, bond lengths, bond angles, bond energy, resonance, hyperconjugation, inductive effects, reactive intermediates",
+            "Stereochemistry of Organic Compounds: Optical isomerism, geometrical isomerism, conformations of cyclohexane, Baeyer's strain theory",
+            "Absorption Spectroscopy: UV, IR, Rotational, and NMR spectroscopy, principles and applications",
+            "Alkenes, Dienes and Alkynes: Methods of formation, mechanisms of dehydration, elimination rules, chemical reactions, polymerization"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Arenes, Alcohols, Carbonyl Compounds and Organic Synthesis",
+          "unitTitleMr": "एरिन्स, अल्कोहोल, कार्बोनील संयुगे आणि सेंद्रिय संश्लेषण",
+          "topics": [
+            "Arenes and Aromaticity: Huckel rule, aromatic electrophilic substitutions, activating and deactivating substituents, Birch reduction",
+            "Alcohols, Phenols, Aldehydes, Ketones, and Carboxylic Acids: Preparation, chemical reactions, rearrangements, and reduction mechanisms",
+            "Organic Compounds of Nitrogen: Amines, synthetic transformations of aryl diazonium salt, azo coupling",
+            "Organosulphur and Heterocyclic Compounds: Thiols, thioethers, sulphonic acids, pyridine, indole, quinoline, and isoquinoline",
+            "Carbohydrates, Amino Acids, Peptides, Proteins, Nucleic Acids, Synthetic Polymers, Synthetic Dyes, and Green Chemistry"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Electrochemistry, Quantum Mechanics and Photochemistry",
+          "unitTitleMr": "विद्युत रसायनशास्त्र, क्वांटम मेकॅनिक्स आणि प्रकाश रसायनशास्त्र",
+          "topics": [
+            "Migration of ions, Kohlrausch law, Ostwald's dilution law, Debye-Huckel-Onsager equation, applications of conductivity measurements",
+            "Types of reversible electrodes, Nernst equation, electrochemical series, galvanic cells, EMF measurement, pH determination, buffers, corrosion, energy sources and fuel cells",
+            "Elementary Quantum Mechanics: Hamiltonian operator, Schrodinger wave equation, particle in a one-dimensional box",
+            "Photochemistry: Laws of photochemistry, fluorescence, phosphorescence, quantum yield, photosensitized reactions",
+            "Computers: Basic concepts, use of computers in chemistry, computer simulations and molecular modelling"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

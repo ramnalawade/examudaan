@@ -1,0 +1,231 @@
+{
+  "docId": 1631,
+  "examName": "Syllabus for the post of Assistant Professor- Electrical, Government Engineering",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Syllabus for the post of Assistant Professor- Electrical, Government Engineering",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Energy Scenario",
+          "unitTitleMr": null,
+          "topics": [
+            "Commercial and Non-commercial energy",
+            "Primary energy resources",
+            "Commercial energy production",
+            "Energy consumption",
+            "Indian and Maharashtra energy scenario",
+            "Energy conservation Act 2001 and its features",
+            "Electricity Act 2003",
+            "Safety regulation 2010"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Electric Circuits",
+          "unitTitleMr": null,
+          "topics": [
+            "Network graph",
+            "KCL, KVL, node and mesh analysis",
+            "Sinusoidal steady-state analysis",
+            "Basic filter concepts",
+            "Ideal current and voltage sources",
+            "Thevenin's, Norton's and Superposition and Maximum Power Transfer theorems"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electrical Measurements",
+          "unitTitleMr": null,
+          "topics": [
+            "Bridges and potentiometers",
+            "PMMC, moving iron, dynamometer and induction type instruments",
+            "Measurement of voltage, current, power, energy and power factor",
+            "Instrument transformers",
+            "Digital voltmeters and multimeters",
+            "Phase, time and frequency measurement",
+            "Q-meters",
+            "Oscilloscopes",
+            "Potentiometric recorders",
+            "Error analysis",
+            "Megger, earth tester and low and high resistance meters and their specifications"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Electronics",
+          "unitTitleMr": null,
+          "topics": [
+            "Diodes, BJT, FET and their characteristics",
+            "Amplifiers - biasing, equivalent circuit, oscillators and feedback amplifiers",
+            "Operational amplifiers - characteristics and applications",
+            "Simple active filters",
+            "VCOs and timers",
+            "Combinational and sequential logic circuits",
+            "Multiplexer",
+            "Schmitt trigger",
+            "Multi-vibrators",
+            "Sample and hold circuits",
+            "A/D and D/A converters",
+            "8-bit microprocessor basics",
+            "Power diodes, transistors, thyristors, triacs, GTOs, MOSFETs and IGBTs - static characteristics and principles of operation",
+            "Triggering circuits",
+            "Phase control rectifiers"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Digital Electronics",
+          "unitTitleMr": null,
+          "topics": [
+            "Number systems",
+            "Binary codes",
+            "Logic gates",
+            "Boolean algebra, laws & theorems",
+            "Implementation of Boolean expressions using logic gates",
+            "Standard forms of Boolean expression"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Communication Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Block diagram of a basic communication system",
+            "Frequency spectrum",
+            "Need for modulation",
+            "Methods of modulation",
+            "Principles of AM, FM, pulse analog and pulse digital modulation",
+            "AM / FM transmitters & receivers"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Signals and Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Representation of continuous and discrete-time signals",
+            "Shifting and scaling operations",
+            "Linear, time-invariant and causal systems",
+            "Fourier series representation of continuous periodic signals",
+            "Sampling theorem",
+            "Fourier, Laplace and Z transforms"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Electric Field",
+          "unitTitleMr": null,
+          "topics": [
+            "Gauss Theorem",
+            "Electric field and potential due to point, line, plane and spherical charge distributions",
+            "Ampere's and Biot-Savart's laws",
+            "Inductance",
+            "Dielectrics",
+            "Capacitance"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Electrical Machines",
+          "unitTitleMr": null,
+          "topics": [
+            "Single phase transformer - equivalent circuit, phasor diagram, tests, regulation and efficiency",
+            "Three phase transformers - connections, parallel operation",
+            "Auto-transformer",
+            "DC machines - types, windings, generator characteristics, armature reaction and commutation",
+            "Three phase induction motors - principles, types, performance characteristics",
+            "Single phase induction motors - principle and types",
+            "Synchronous machines - principle, regulation and parallel operation of generators, motor starting, applications",
+            "Servo and stepper motors",
+            "Energy efficient motors"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Electrical Drives",
+          "unitTitleMr": null,
+          "topics": [
+            "DC and AC drives",
+            "Basic parts, duty cycle, steady state stability, starting methods, braking methods and speed control method",
+            "Fully controlled and half controlled bridge converters",
+            "Choppers and inverters"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Power System",
+          "unitTitleMr": null,
+          "topics": [
+            "Different Power plants - power generation concepts",
+            "Conventional and non-conventional",
+            "Transmission line models and performance",
+            "Corona effect",
+            "Per-unit system",
+            "Zbus and Ybus matrices",
+            "Load flow",
+            "Voltage control",
+            "Power factor correction",
+            "Economic operation",
+            "Symmetrical components",
+            "Fault analysis of symmetrical and unsymmetrical systems"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Power System Protection",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of over-current, differential and distance protection",
+            "Solid state relays and digital protection",
+            "Circuit breakers",
+            "Ratings and capacity"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "HVDC Transmission and FACTS Technology",
+          "unitTitleMr": null,
+          "topics": [
+            "Problems of AC transmission system",
+            "Evolution of FACTS technology",
+            "Principle of operation"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Reactive Power Management and Substation Layout",
+          "unitTitleMr": null,
+          "topics": [
+            "Necessity of reactive power control",
+            "Power quality issues: Sources of harmonics and its mitigation, sag, swell, voltage flicker, unbalance and their mitigation",
+            "Substation layout - types, earthing types and design",
+            "Causes of overvoltages",
+            "Lightning arrestor - types, selection",
+            "Cable fault locaters and cable jointing"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

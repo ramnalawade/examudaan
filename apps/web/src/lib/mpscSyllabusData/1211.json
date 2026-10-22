@@ -1,0 +1,235 @@
+{
+  "docId": 1211,
+  "examName": "Maharashtra Agriculture Services, Group-A & B (Pre) & (Main)",
+  "examNameMr": "महाराष्ट्र कृषी सेवा, गट-अ व गट-ब (पूर्व व मुख्य) परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 600,
+  "mainsMarks": 400,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper I (Compulsory) - Agriculture Science",
+      "paperTitleMr": "पेपर १ (अनिवार्य) - कृषी विज्ञान",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Agronomy",
+          "unitTitleMr": "सस्यशास्त्र",
+          "topics": [
+            "Principles of Agronomy: Definition, Scope, and role of Agronomist in agriculture.",
+            "Classification of Crops: Agriculture seasons in India and in Maharashtra. Factors affecting crop production.",
+            "Tillage: Factors affecting tillage, type of tillage operations, tillage implements. Effects of tillage on soil and crop growth. Modern concepts of tillage.",
+            "Seed: Qualities of good seed, types of seed, seed testing and seed treatment, different methods of sowing, optimum plant population and geometry. Classification of Seeds.",
+            "Cropping systems: Types of cropping systems, crop rotations, relay cropping.",
+            "Weeds: Definition, methods of weed control, integrated weed management concept."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Agriculture Meteorology",
+          "unitTitleMr": "कृषी हवामानशास्त्र",
+          "topics": [
+            "Definition of meteorology, weather and climate elements of weather.",
+            "Temperature measurement, factors affecting temperature.",
+            "Solar radiation, significance of solar radiation in agriculture, factors affecting solar radiation, measurement of solar radiation.",
+            "Atmosphere pressure its measurement, variation of pressure with height, hydrological cycle.",
+            "Drought climatology, classification of draught, weather forecasting in agriculture, its classification, techniques of weather forecasting, forecasting network in India."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Irrigation Water Management",
+          "unitTitleMr": "सिंचन पाणी व्यवस्थापन",
+          "topics": [
+            "Soil water: Sources of water, absorption and movement of water in soil, soil moisture constants, forms of soil water, factors affecting available soil moisture.",
+            "Absorption of soil moisture by plant, factors affecting absorption, evaporation, transpiration, consumptive use and effective rainfall.",
+            "Irrigation: Water requirement, irrigation requirement of crops, factors affecting water requirement, scheduling of irrigation - different approaches.",
+            "Depth of irrigation, measurement of irrigation, water use efficiency.",
+            "Drainage: Importance of drainage, types of drainage, effect of bad drainage on soil and crop growth."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Field Crops",
+          "unitTitleMr": "पिकै",
+          "topics": [
+            "Kharif crops including forages, cereals, millets and pulses: Cereals and Millets (Rice, Sorghum, Pearl millet, Maize, Hill millets), Pulses (Red gram, Greengram, Blackgram, Horsegram, Cowpea, Kidney bean and Dolichos), Oilseeds (Groundnut, sesame, soybean, Castor, Sunflower, Niger), Fibre crops (Cotton and Sannhemp), Commercial crops (Turmeric and ginger), Forage crops (Cowpea, Maize, Jowar, Napier, Rhodes, Paragrass, Subabhul, Shevari, stylo, Cluster bean, Marvel, Dinanath, Anjan), Green manuring crops (Sannhemp, Dhaincha, Glyricedia).",
+            "Rabi crops including forages, oilseeds and commercial crops: Cereals (Wheat, Rabi Sorghum), Pulses (Gram and Pea), Oilseeds (Linseed, Rapeseed mustard, safflower, sunflower), Commercial crops (Sugarcane, sugarbeat, potato), Forage crops (Lucern, Berseem, Oat, Summer maize, Summer sorghum), Summer crops (Rice, Groundnut, Greengram)."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Rainfed Agriculture and Farming Systems",
+          "unitTitleMr": "जिरायत शेती आणि शेती पद्धती",
+          "topics": [
+            "Rainfed Agriculture: Agroclimatic zones of Maharashtra, Techniques of soil and water conservation, moisture conservation, crop residue management, mulches, minimum tillage, zero tillage, harvesting and recycling of runoff water, Drought resistant crops, contingency planning.",
+            "Farming System and Sustainable Agriculture: Definition, sustainable agriculture, resource management, components of farming system, Effect of preceding and associated crops."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Soil Science",
+          "unitTitleMr": "मृद शास्त्र",
+          "topics": [
+            "Definition of Soil, Weathering of rocks and minerals, physical and chemical properties of soil.",
+            "Soil structure, definition, types and its importance in crop production.",
+            "Soil texture, classes, ion exchange, soil solution, organic matter, soil moisture, Alkaline and Acid soils.",
+            "Quality of irrigation water, soil survey, Soil fertility and soil productivity.",
+            "Soil water movement, infiltration, percolation, evaporation and evapo-transpiration.",
+            "Essential plant nutrients, organic manures, fertilizers, Integrated Nutrient Management.",
+            "Eco-friendly farming, Nutrient management in problem soils, preparation of compost, vermicompost, Organic farming, Mixed, Complex and Compound fertilizers, micro nutrients, liquid fertilizers, Bio-fertilizer, Soil pollution by agro-chemicals."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Agricultural Engineering",
+          "unitTitleMr": "कृषी अभियांत्रिकी",
+          "topics": [
+            "Farm Machinery and Power: Sources of Farm Power, I.C. engines, Tractors, Tillage implements, Seed cum fertilizer drills, planters, chaff cutters, harvesters, threshers, plant protection equipment.",
+            "Agricultural Process Engineering: Food grain storage structures, pre-cooling, freezing, refrigeration, cold storage, drying, pasteurization, sterilization, evaporation, processing equipments, material handling equipments.",
+            "Soil and Water Conservation, Watershed Management: Principles of watershed management, surveying, leveling, watershed characteristics, soil and water conservation structures, erosion control.",
+            "Micro Irrigation and Drainage Engineering: Definition and Concept of micro-irrigation, design, pump selection, drainage systems.",
+            "Farm Structures: Building materials, farmstead location, dairy and poultry houses, farm fencing, greenhouse technology."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [
+    {
+      "paperTitle": "Paper II - Agriculture (Optional)",
+      "paperTitleMr": "पेपर २ - कृषी (पर्यायी)",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Agricultural Botany",
+          "unitTitleMr": "कृषी वनस्पतिशास्त्र",
+          "topics": [
+            "Morphology, Anatomy, Cytogenetics, Genetics, Plant Breeding, Plant Physiology, Social forestry, Medicinal and Aromatic plants, Environmental Science & Agro-ecology, Plant Biotechnology."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Plant Protection (Entomology and Plant Pathology)",
+          "unitTitleMr": "वनस्पति संरक्षण (कीटकशास्त्र आणि वनस्पति रोगशास्त्र)",
+          "topics": [
+            "Entomology: General morphology, anatomy, physiology, classification, economic importance of insects, pest management, beneficial insects.",
+            "Plant Pathology: History, economic importance of plant diseases, fungi, bacteria, viruses, mycoplasma, disease control measures."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Horticulture",
+          "unitTitleMr": "बागवानी / फलोत्पादन",
+          "topics": [
+            "Cultivation of fruits, vegetables, flowers, plant growth regulators, post harvest management and processing."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Agricultural Extension",
+          "unitTitleMr": "कृषी विस्तार",
+          "topics": [
+            "Rural Sociology and Community Development, Principles of Extension Education and Educational Psychology, Extension teaching methods and aids, Extension Administration and Programme Evaluation."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Agricultural Economics",
+          "unitTitleMr": "कृषी अर्थशास्त्र",
+          "topics": [
+            "Economics, Agricultural Economics, Agricultural Marketing, Agricultural credit, Farm management and production economics."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Animal Husbandry and Dairying",
+          "unitTitleMr": "पशुसंवर्धन आणि दुग्धव्यवसाय",
+          "topics": [
+            "Animal Husbandry: Breeds, Farming & Management, Breeding, Reproduction, Nutrition.",
+            "Dairying: Milk and milk product, Legal standard and quality control tests."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Food Science",
+          "unitTitleMr": "अन्न विज्ञान",
+          "topics": [
+            "Principles and methods of food preservation, raw material in food processing, industrial processing, quality control, food packaging."
+          ]
+        }
+      ]
+    },
+    {
+      "paperTitle": "Paper II - Agricultural Engineering (Optional)",
+      "paperTitleMr": "पेपर २ - कृषी अभियांत्रिकी (पर्यायी)",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Farm Power and Farm Machinery",
+          "unitTitleMr": "फार्म पॉवर आणि फार्म मशिनरी",
+          "topics": [
+            "Farm Power, Agricultural Tractors, Tillage Machinery, Planting and Harvesting Machinery, Plant Protection Appliances."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Agricultural Process Engineering",
+          "unitTitleMr": "कृषी प्रक्रिया अभियांत्रिकी",
+          "topics": [
+            "Drying of Farm Crops, Handling of Agricultural Materials, Processing of Agricultural & Horticultural Products, Dairy and Food Engineering."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electrical and Other Energy Sources",
+          "unitTitleMr": "विद्युत आणि इतर ऊर्जा स्रोत",
+          "topics": [
+            "Electricity, Solar Energy, Wind Energy, Biomass Energy."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Farm Structures",
+          "unitTitleMr": "फार्म स्ट्रक्चर्स",
+          "topics": [
+            "Engineering Properties of materials of construction, foundation design, walls, roofs, flooring, doors, windows, farm roads, fences, greenhouse."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Soil and Water Conservation Engineering",
+          "unitTitleMr": "मृदू व जलसंधारण अभियांत्रिकी",
+          "topics": [
+            "Hydrology, Sedimentation, Soil Erosion, Watershed Management."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Irrigation and Drainage Engineering",
+          "unitTitleMr": "सिंचन आणि निचरा अभियांत्रिकी",
+          "topics": [
+            "Fluid Mechanics, Irrigation Methods, Canal Irrigation, Drainage Engineering, Ground Water Hydrology, Land Development."
+          ]
+        }
+      ]
+    }
+  ],
+  "importantNotes": [
+    "Candidates must appear for both Preliminary and Main examinations as applicable for Group-A and Group-B services."
+  ]
+}

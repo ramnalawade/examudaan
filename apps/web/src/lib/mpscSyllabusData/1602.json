@@ -1,0 +1,154 @@
+{
+  "docId": 1602,
+  "examName": "Assistant Controller of Legal Metrology, Group-B",
+  "examNameMr": "सहाय्यक नियंत्रक वैध मापनशास्त्र, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2009,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Screening Test",
+      "paperTitleMr": "स्क्रीनिंग चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Basic concepts & definitions",
+          "unitTitleMr": "मूळ संकल्पना आणि व्याख्या",
+          "topics": [
+            "Mass",
+            "Weight",
+            "Force",
+            "Length",
+            "Density",
+            "Work",
+            "Energy",
+            "Temperature",
+            "Pressure"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Systems of Measurement & Interconversion",
+          "unitTitleMr": "मोजमाप प्रणाली आणि आंतररूपांतर",
+          "topics": [
+            "British Units of Length, Volume, Mass, Weight, Energy",
+            "Metric Units of Length, Volume, Mass, Weight, Energy",
+            "International S.I. Length, Volume, Mass, Weight, Energy",
+            "Large & small units of Length, Weight & volume",
+            "Ordinary, Bullion & Carat"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Fundamental of Metrology",
+          "unitTitleMr": "मेट्रोलॉजीची मूलभूत तत्त्वे",
+          "topics": [
+            "Venire & Micrometer Screw gauge",
+            "Working",
+            "Least Count",
+            "Levers-Types & applications",
+            "Scales & Tapes for measuring length (Flexible & non-flexible)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Menstruation",
+          "unitTitleMr": "क्षेत्रफळ आणि घनफळ मापन",
+          "topics": [
+            "Dimensions",
+            "Area",
+            "Volume of Rectangular, Conical & Cylindrical, Spherical Bodies"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Effect of Temperature variation on measurements",
+          "unitTitleMr": "मोजमापांवर तापमान बदलाचा परिणाम",
+          "topics": [
+            "Linear & volumetric coefficients of expansion of common metals",
+            "Cast iron",
+            "Brass",
+            "Steel"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Weighing Machines (Mechanical)",
+          "unitTitleMr": "वजन काटे (यांत्रिक)",
+          "topics": [
+            "Spring balances",
+            "Scale balances effect of unequal arms",
+            "Weigh Bridges & Platform machines",
+            "Crane type machines"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Weighing Machines (Electronic & Digital)",
+          "unitTitleMr": "वजन काटे (इलेक्ट्रॉनिक आणि डिजिटल)",
+          "topics": [
+            "Automatic conveyor Belt-type weighing",
+            "Nucleonic Weight machine",
+            "Load cells-Resistance Strain gage type"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Volume measurement",
+          "unitTitleMr": "घनफळ मापन",
+          "topics": [
+            "Ordinary Measuring flasks, Cups, etc. their calibration",
+            "Liquor measuring",
+            "Petroleum products",
+            "Measurements on pumps",
+            "Automatic Volumetric filling machines e.g. Bottling of soft drinks",
+            "Storage tanks Calibration & operation"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Other Instruments",
+          "unitTitleMr": "इतर उपकरणे",
+          "topics": [
+            "Thermometers",
+            "Manometers",
+            "Measurement of Blood Pressure",
+            "Flow meters for water & oil",
+            "Distance meter",
+            "Speedometers on Automobiles",
+            "Electrical power & energy meters"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Fundamentals of Statistics",
+          "unitTitleMr": "सांख्यिकीची मूलभूत तत्त्वे",
+          "topics": [
+            "Mean",
+            "Standard deviation",
+            "Precision & Accuracy of Instruments",
+            "Error analysis",
+            "Tolerances"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "The Screening Test will be of objective type carrying 100 marks and 100 questions with a duration of one hour.",
+    "The question paper will be set in English only and will be of B.Sc./B.E. degree level.",
+    "Final selection will be decided on performance in the interview alone based on the short-listed candidates through the screening test."
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "docId": 10804,
+  "examName": "Associate Professor and Assistant Professor (Applied Mechanics), Maharashtra Engineering Teachers' Services, Group A - Higher and Technical Education Department",
+  "examNameMr": "सहयोगी प्राध्यापक आणि सहायक प्राध्यापक (अपलाईड मेकॅनिक्स), महाराष्ट्र अभियांत्रिकी शिक्षक सेवा, गट-अ - उच्च व तंत्र शिक्षण विभाग",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Applied Mechanics",
+      "paperTitleMr": "अपलाईड मेकॅनिक्स",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Mechanics of Materials",
+          "unitTitleMr": "मेकॅनिक्स ऑफ मटेरियल्स",
+          "topics": [
+            "Stress & strain: Stress, yield stress, ultimate stress, shear stress, factor of safety, strain, modulus of elasticity (E), modulus of rigidity (G), bulk modulus (K), Poisson’s ratio, relationship between elastic constants (No derivations), bars of varying sections, stresses in composite section, temperature stresses",
+            "Stresses due to suddenly applied axial load & impact load (including derivations)",
+            "Axial force, shear force and bending moment in beams: Axial force, shear force and bending moment diagrams for statically determinate beams including beams with internal hinges for different types of loading, relationships between intensity of loading, shear force and bending moment",
+            "Simple theory of bending: Flexure formula for beam, simple problems involving the application of flexure formula, section modulus, moment of resistance of a section, flitched/ composite beams",
+            "Shear stress in beams: Distribution of shear stress across beam cross sections used commonly for beams, Maximum and average shear stress across the beam cross sections",
+            "Simple theory of torsion: Torsion equation for circular shafts (No derivations) – Application of equation to solid and hollow circular shafts, stresses in shaft when transmitting power",
+            "Principal stresses: General equations for transformation of stress, principle stresses and principal planes, maximum shear stress, determination using Mohr’s circle",
+            "Thin cylindrical and spherical shells: Stresses and strains in thin cylindrical shells subjected to internal pressure, Stresses and strains in thin spherical shells subjected to internal pressure"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Structural Analysis",
+          "unitTitleMr": "स्ट्रक्चरल अनालिसिस",
+          "topics": [
+            "Bending moment combined with axial loads: Application to members subjected to eccentric loads, core of the section, problems on chimneys, retaining walls",
+            "Unsymmetrical bending: Moment of inertia about rotated axes, principal axes and principal moment of inertia, flexural stresses due to bending in two planes for symmetrical sections, bending of unsymmetrical sections",
+            "Axial force, shear force and bending moment in frames: Axial force, shear force and bending moment diagrams for statically determinate frames",
+            "Deflection of statically determinate structures: Deflection of cantilever and simply supported beams by Macaulay’s Method, deflection of cantilever and simply supported beams due to loads using Moment area method, Conjugate beam method",
+            "Columns and Struts: Short and long/slender columns, Concept of buckling in slender columns subjected to axial loads, Euler’s and Rankine’s design formulae for columns with different support conditions",
+            "Three hinged arches: Determination of normal thrust, radial shear force and bending moment for three hinged parabolic arch, determination of normal thrust, radial shear force and bending moment for segmental arch",
+            "Cables and suspension bridges: Simple suspension cable, minimum and maximum tensions in the cable supported at same and at different levels, anchor cable, cable supports, suspension cable with three hinged stiffening girder, shear force and bending moment at any section of the three hinged stiffening girder",
+            "Influence lines for statically determinate structures: Influence lines for reaction, shear force and bending moment at a section in cantilever, simply supported and overhanging beams, criteria for maximum shear force and bending moment at a section, absolute maximum shear force and bending moment under moving loads (UDL and series of point loads) for simply supported beams",
+            "Degree of indeterminacy of structures: Types of structures occurring in practice and their classification, stable and unstable structure, degree of static and kinematic indeterminacy of structures",
+            "Introduction to analysis of indeterminate structures by force method: Flexibility coefficients and their use in formulation of compatibility equations, application of the flexibility method to analyse indeterminate beams, simple rigid jointed frames and pin joined frames, moment distribution method- application to indeterminate beams",
+            "Analysis of indeterminate structures by stiffness method: Stiffness coefficients for prismatic members and their use for formulation of equilibrium equations, direct stiffness method, application of the above methods to indeterminate beams and simple rigid jointed frames with kinematic indeterminacy up to 3"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Design of RCC structures",
+          "unitTitleMr": "डिझाईन ऑफ आरसीसी स्ट्रक्चर्स",
+          "topics": [
+            "Limit State Method: Introduction to limit state method of design as per IS 456 (latest edition): concepts of probability and reliability, characteristic loads, characteristic strength, partial safety factors for loads and materials, introduction to various limit states",
+            "Limit State of Collapse - Flexure: Limit state of collapse in flexure, shear and Limit state of serviceability in deflection and cracking, design of singly reinforced rectangular sections, design and analysis of doubly reinforced rectangular sections, T sections for flexure, design of members in shear and bond, design of beam subjected to bending moment & Torsional moments, continuous beams etc.",
+            "Design of Slabs: Design of one-way slab, two-way slab, staircase, cantilever slab and continuous slab",
+            "Limit State of Collapse - Compression: Limit state of collapse compression for short and slender column, column members subjected to combined axial and uni-axial as well as biaxial bending",
+            "Design of Foundations: Isolated square and rectangular footings subjected to axial load and moments, design of combined rectangular pad footings, slab beam type footing"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Design of Steel Structures",
+          "unitTitleMr": "डिझाईन ऑफ स्टील स्ट्रक्चर्स",
+          "topics": [
+            "Introduction to types of steel, mechanical properties of steel, advantages of steel as structural material, design philosophies of Working Stress Method (WSM) and Limit State Method (LSM)",
+            "Limit state method, limit state of strength and serviceability (deflection, vibration, durability, fatigue, fire), characteristics and design loads, classification of cross section- plastic, compact, semi- compact and slender, limiting width to thickness ratio, introduction to bolted and welded connections by LSM [IS : 800 (latest version)]",
+            "Design of tension members with welded / bolted end connections using single and double angle sections by LSM, design strength due to- yielding of cross section, rupture of critical section and block shear",
+            "Design of compression members with welded / bolted end connections using single and double angle by LSM, design strength, effective length of compression members",
+            "Design of columns with single and built-up sections, design of lacing and batten plates with bolted and welded connections using LSM, column buckling curves, effective length, slenderness ratio, limiting values of effective slenderness ratio, buckling class of various cross sections",
+            "Design of slab base and gusseted base using bolted and welded connection by LSM",
+            "Design of members subjected to bending by LSM, design strength in bending, effective length, laterally supported and unsupported beams",
+            "Beam to beam and beam to column connections, design of framed connections",
+            "Truss: Determinate truss, imposed load on sloping roof, wind load on sloping roof and vertical cladding including effect of permeability and wind drag, analysis of pin jointed trusses under various loading cases, computation of forces in members, design and detailing of connections and supports, wind bracing for roof system, supported on columns"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Design of Pre-stressed Concrete Structures",
+          "unitTitleMr": "डिझाईन ऑफ प्री-स्ट्रेस्ड काँक्रीट स्ट्रक्चर्स",
+          "topics": [
+            "Introduction to basic concepts and general principles of pre-stressed concrete, materials used in pre-stressed concrete, advantages and need of High strength materials in PSC",
+            "Analysis of pre-stressed concrete sections for flexure considering loading stages, computational of sectional properties, critical sections under working loads for pre-tensioned and post tensioned members, load balancing method of analysis of pre-stressed concrete beams, losses in pre-stress, application to simply supported beams and slabs, concept of de-bonding of cables in pre tensioned units",
+            "Design philosophy of pre-stressed concrete sections, permissible stresses in concrete and steel, design approaches using working stress method as per IS 1343 – 2012 (latest version), limit state of collapse – flexure and shear as applied to pre-stressed concrete beams, kern points, choice and efficiency of sections, cable profile and layouts, cable zone, deflection of pre-stressed concrete sections"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

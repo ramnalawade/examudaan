@@ -1,0 +1,107 @@
+{
+  "docId": 10547,
+  "examName": "Assistant Professor (Mathematics) Maharashtra Education Service, Group-A and Lecturer (Mathematics) Maharashtra Education Service, Group-B (Collegiate Branch) - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (गणित) महाराष्ट्र शिक्षण सेवा, गट-अ आणि व्याख्याता (गणित) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Mathematics Syllabus",
+      "paperTitleMr": "गणित अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Real Analysis and Complex Analysis",
+          "unitTitleMr": "वास्तविक विश्लेषण आणि संमिश्र विश्लेषण",
+          "topics": [
+            "Elementary set theory, countable and uncountable sets, real number system as a complete ordered field, Archimedean property, supremum, infimum",
+            "Sequences and series, convergence, limsup, liminf",
+            "Bolzano Weierstrass theorem, Heine Borel theorem",
+            "Uniform continuity, differentiability, mean value theorem, Riemann integral",
+            "Sequences and series of functions, uniform convergence",
+            "Functions of several variables, directional derivative, partial derivative, derivative as a linear transformation, inverse and implicit function theorem",
+            "Lebesgue measure, Lebesgue measurable function, Lebesgue integration",
+            "Monotonic functions, functions of bounded variations, absolutely continuous functions",
+            "Metric spaces, compactness, connectedness, normed linear spaces, spaces of continuous functions as examples",
+            "Algebra of complex numbers, the complex plane",
+            "Power series, transcendental functions as exponential, trigonometric and hyperbolic functions",
+            "Analytic functions, Cauchy-Riemann equations",
+            "Conformal mappings, Mobius transformations",
+            "Contour integral, Cauchy's theorem, Cauchy's integral formula",
+            "Liouville's theorem, Maximum modulus principle, Schwarz lemma, Open mapping theorem",
+            "Taylor series, Laurent series, calculus of residues"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Algebra, Topology and Probability",
+          "unitTitleMr": "बीजगणित, टोपोलॉजी आणि संभाव्यता",
+          "topics": [
+            "Permutations, combinations, pigeon-hole principle, inclusion-exclusion principle, derangements",
+            "Fundamental theorem of arithmetic, divisibility in Z, congruences, Chinese remainder theorem, Euler's phi function, primitive roots",
+            "Groups, subgroups, normal subgroups, quotient groups, homomorphisms",
+            "Cyclic groups, permutation groups, Cayley's theorem, class equations, Sylow theorem",
+            "Rings, ideals, prime and maximal ideals, quotient rings",
+            "Unique factorization domain, principal ideal domain, Euclidean domain, polynomial rings and irreducibility criteria",
+            "Fields, finite fields, field extensions, algebraic extensions, splitting fields, separable extensions, Galois groups, solvable by radicals",
+            "Topological spaces, basis for topology, product topology, subspace topology, closed sets and limit points, continuous functions, quotient topology",
+            "Connectedness and compactness, countability axioms, separation axioms",
+            "Introduction to probability, probability space, events, sigma fields, sigma field of borel sets, limit superior and limit inferior for a sequence of events, probability measure, conditional probability, Bayes formula",
+            "Random variables, discrete and absolutely continuous random variables, Bernoulli, binomial, Poisson and normal distributions, expectation and variance of random variables both discrete and absolutely continuous",
+            "Characteristic functions, Chebyshev inequality, weak law of large numbers, convergence of random variables, Kolmogorov strong law of large numbers, central limit theorem"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Ordinary Differential Equations, Partial Differential Equations, Calculus of Variations and Classical Mechanics",
+          "unitTitleMr": "सामान्य अवकल समीकरणे, आंशिक अवकल समीकरणे, कॅल्क्युलस ऑफ व्हेरिएशन्स आणि क्लासिकल मेकॅनिक्स",
+          "topics": [
+            "Existence and uniqueness of solutions to initial value problem of first order ordinary differential equations (ODE), system of first order linear ODE with constant coefficient and variable coefficients",
+            "Linear dependence and independence of solution of homogenous n-th order linear ODE, Wronskian matrix, Lagrange's method (variation of parameters)",
+            "Sturm-Liouville separation and comparison theorems, oscillation properties of solutions, eigenvalues and eigenfunctions of Sturm-Liouville boundary value problem",
+            "Lagrange and Charpit methods for solving first order Partial Differential Equations (PDE), Cauchy's problem for first order PDEs",
+            "Classification of second order PDEs, general solution of higher order PDEs with constant coefficients, method of separation of variables for Laplace, heat and wave equations",
+            "The variation of a functional, Euler-Lagrange equation, necessary and sufficient conditions for extrema, the case of several variables, simple variable end point problem",
+            "Variational problems with subsidiary conditions, variational methods for boundary value problems in ordinary and partial differential equations",
+            "Generalized coordinates, Lagrange's equations, Hamilton's canonical equations, Hamilton's principle and principle of least action",
+            "Two dimensional motion of rigid bodies, Euler's dynamical equations for the motion of a rigid body about an axis, theory of small oscillations"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Linear Algebra, Linear Integral Equations and Numerical Analysis",
+          "unitTitleMr": "रेषीय बीजगणित, रेषीय समाकल समीकरणे आणि संख्यात्मक विश्लेषण",
+          "topics": [
+            "Vector spaces over a field F, subspaces, basis and dimensions, linear transformations, rank and nullity of a linear transformation",
+            "Matrix associated with a linear transformation, rank of a matrix and its equivalence to rank of linear transformation, determinant of matrices, linear equations",
+            "Characteristic polynomial, annihilating polynomial, Cayley-Hamilton theorem, minimal polynomial, eigenvalues and eigenvectors",
+            "Invariant subspaces, diagonalization, triangularization, Jordan canonical form",
+            "Inner product spaces, orthonormal basis",
+            "Quadratic forms, reduction and classification of quadratic forms",
+            "Linear integral equation of the first and second kind of Fredholm and Volterra type, solutions with separable kernels, characteristic numbers and eigenfunctions, resolvent kernel",
+            "Types of integral equations: initial value problems, boundary value problems, singular integral equations, Abel integral equations",
+            "Numerical solutions of algebraic equations, method of iterations and Newton-Raphson method, rate of convergence",
+            "Solution of a system of linear algebraic equations using Gauss elimination and Gauss-Seidel methods",
+            "Finite differences, Lagrange, Hermite and spline interpolation",
+            "Numerical differentiation and integration",
+            "Numerical solutions of ODEs using Picard, Euler, modified Euler and Runge-Kutta methods"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

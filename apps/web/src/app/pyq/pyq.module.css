@@ -668,19 +668,35 @@
 
 /* Mobile responsive */
 @media (max-width: 640px) {
+  .hero {
+    padding: 28px 0 20px;
+  }
+
+  .searchCard {
+    padding: 14px 12px;
+    border-radius: 12px;
+  }
+
   .optionsGrid {
     grid-template-columns: 1fr;
   }
 
   .pyqCard {
-    padding: 18px 16px;
+    padding: 18px 14px;
+    border-radius: 12px;
   }
 
   .subjectTabs {
     overflow-x: auto;
     flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     padding-bottom: 8px;
+    width: 100%;
+  }
+
+  .subjectTab {
+    flex-shrink: 0;
   }
 }
 
@@ -822,4 +838,22 @@
 .mpscBannerBtn:hover {
   background: #C2410C;
   transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .mpscBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
+  }
+  .mpscBannerLeft {
+    min-width: 100%;
+  }
+  .mpscBannerBtn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+  }
 }

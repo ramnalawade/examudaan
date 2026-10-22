@@ -364,9 +364,9 @@
   transition: color 0.15s;
 }
 
-/* Done state — green check icon, strikethrough text */
+/* Done state — green check icon, clean readable text, NO strikethrough */
 .studiedBtnDone {
-  color: #64748b;
+  color: #065f46;
 }
 
 .studiedBtnDone .material-symbols-outlined {
@@ -374,8 +374,9 @@
 }
 
 .subtopicItem[data-checked="true"] .subtopicText {
-  text-decoration: line-through;
-  color: #64748b;
+  text-decoration: none;
+  color: #065f46;
+  font-weight: 600;
 }
 
 .pyqQuickLink {

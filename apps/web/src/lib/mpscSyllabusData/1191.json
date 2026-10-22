@@ -1,0 +1,88 @@
+{
+  "docId": 1191,
+  "examName": "Assistant Section Officer, Sales Tax Inspector, Police Sub Inspector, Gr.B (Non-Gazetted) (Pre) & (Main) Competitive Exam",
+  "examNameMr": "सहाय्यक कक्ष अधिकारी, विक्रीकर निरीक्षक, पोलीस उप निरीक्षक, गट-ब (अराजपत्रित) (पूर्व) व (मुख्य) स्पर्धा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "Marathi and English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Combined Preliminary Exam (100 Marks) followed by Main Exam (200 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Capacity Test",
+      "paperTitleMr": "सामान्य क्षमता चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current affairs",
+          "unitTitleMr": "चालू घडामोडी",
+          "topics": [
+            "Current affairs - World and India"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Civics",
+          "unitTitleMr": "नागरिकशास्त्र",
+          "topics": [
+            "Indian Constitution - Basic study, State administration (Administration), Village administration (Administration)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "History",
+          "unitTitleMr": "इतिहास",
+          "topics": [
+            "History - Modern India with special reference to Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Geography",
+          "unitTitleMr": "भूगोल",
+          "topics": [
+            "Geography (with special study of geography of Maharashtra) - Earth, world divisions, climate, latitude-longitude, types of soils in Maharashtra, rainfall, major crops, cities, rivers, industries, etc."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Economy",
+          "unitTitleMr": "अर्थव्यवस्था",
+          "topics": [
+            "Indian Economy - National Income, Agriculture, Industry, Foreign Trade, Banking, Population, Poverty and Unemployment, Currency and Fiscal Policy, etc.",
+            "Government Economy - Budget, Accounts, Auditing, etc."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "General Science",
+          "unitTitleMr": "सामान्य विज्ञान",
+          "topics": [
+            "Physics, Chemistry, Zoology, Botany, Hygiene"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Intelligence Test and Arithmetic",
+          "unitTitleMr": "बुद्धिमापन चाचणी व अंकगणित",
+          "topics": [
+            "Intelligence Test and Arithmetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "सदर एकत्रित पूर्व परीक्षेचा अभ्यासक्रम सन २०१७ मध्ये प्रसिद्ध होणाऱ्या जाहिरातीपासून लागू राहील."
+  ]
+}

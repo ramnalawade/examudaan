@@ -212,7 +212,9 @@ const DICTIONARY = {
     'listing.filter_board': 'Filter by Board / Organization',
     'listing.filter_qualification': 'Educational Qualification',
     'listing.filter_state': 'State / Region',
-    'listing.filter_salary': 'Minimum Salary',
+    // Job detail alerts
+    'detail.alerts_title': 'Never Miss an Exam Alert',
+    'detail.alerts_desc': 'Get hall tickets, answer keys and results for Govt Exams on your phone.',
   },
   mr: {
     // Navbar
@@ -430,6 +432,9 @@ const DICTIONARY = {
     'home.latest_verified_sub': 'अधिकृत जाहिरात PDF सह २४ तास अद्ययावत',
     'home.vacancies_label': 'जागा:',
     'home.details_btn': 'तपशील →',
+    // Job detail alerts
+    'detail.alerts_title': 'मोफत परीक्षा व निकाल अलर्ट्स',
+    'detail.alerts_desc': 'या परीक्षेचे प्रवेशपत्र (Hall Ticket), उत्तरतालिका (Answer Key) व निकाल जाहीर होताच सर्वात आधी मोबाईलवर मिळवा.',
   }
 }
 

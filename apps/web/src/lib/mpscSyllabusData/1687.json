@@ -1,0 +1,84 @@
+{
+  "docId": 1687,
+  "examName": "Industries Officer (Technical), Maharashtra Industries Services, Gr-B",
+  "examNameMr": "उद्योग अधिकारी (तांत्रिक),महाराष्ट्र उद्योग सेवा, गट-'ब' चाळणी परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge",
+      "paperTitleMr": "सामान्य ज्ञान",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Geography of India with special reference to Maharashtra",
+          "unitTitleMr": "भारताचा विशेषत: महाराष्ट्राचा भूगोल",
+          "topics": [
+            "Geography of India and Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Indian Polity and Rural Administration",
+          "unitTitleMr": "भारतीय राज्यपद्धती व ग्राम प्रशासन",
+          "topics": [
+            "Indian Polity and Rural Administration"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Science and Engineering",
+          "unitTitleMr": "विज्ञान व अभियांत्रिकी",
+          "topics": [
+            "(1) जागितक तसेच भारतातील वैज्ञानिक व अभियांत्रिकी प्रगती.",
+            "(2) वैज्ञानिक प्रगतीमुळे शहरी तसेच ग्रामीण जीवनावर झालेला परिणाम.",
+            "(3) भारतीय समस्यांवर वैज्ञानिक उपाय, उदा. ऊर्जा समस्या, अन्नधान्य समस्या, लोकसंख्या समस्या, पर्यावरण समस्या, शैक्षणिक समस्या, गृहनिर्माण समस्या, परिवहन समस्या, संपर्क विषयक समस्या, लोकस्वास्थ्य, इत्यादी."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Commerce and Economy",
+          "unitTitleMr": "वाणिज्य व अर्थव्यवस्था",
+          "topics": [
+            "(1) भारतीय आयात - निर्यात.",
+            "(2) राष्ट्रीय विकासात सरकारी, सहकारी, ग्रामीण बँकांची भूमिका.",
+            "(3) शासकीय अर्थव्यवस्था - अर्थसंकल्प, लेखा, लेखापरीक्षण, इत्यादी."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Current Events of National and International Importance",
+          "unitTitleMr": "जागतिक तसेच भारतातील चालू घडामोडी",
+          "topics": [
+            "राजकीय,औद्योगिक,आर्थिक, सामाजिक, शैक्षणिक, खगोलशास्त्रीय, सांस्कृतिक, वैज्ञानिक, इत्यादी ."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "General Awareness of Industrial Development, Technical, Science and Mathematics Knowledge and Pattern & Process",
+          "unitTitleMr": "औद्योगिक विकास, तांत्रिक, विज्ञान व गणित यांची माहिती आणि रचना व कार्यपद्धती",
+          "topics": [
+            "(1) औद्योगिक विकासाची सर्वसाधारण माहिती (General awareness of Industrial Development) :- IDR Act, MSMED Act, Environment State & Central Policy, औद्योगिक विकासासंबंधी महामंडळे (MIDC/MSSIDC/KVIB/SICOM/RDC/MAIDC/MEARC/MSEDCL/MSE)",
+            "(2) तांत्रिक मुलभूत माहिती (Technical basic knowledge) :- Technical basic Core knowledge of Mechanical/Electrical/ Electronics/ IT/BT/ Chemical/Computer/Instrumentation",
+            "(3) विज्ञान व गणिताची माहिती (Science & Maths Knowledge) :- Science (core knowledge of Physics/Chemistry/Biology ) & Maths.",
+            "(4) रचना व कार्यपद्धती (Pattern & Process) :- उद्योग संचालनालय/विभागीय कार्यालय/ जिल्हा उद्योग केंद्र/उद्योग मित्र/उद्योग सेतू"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

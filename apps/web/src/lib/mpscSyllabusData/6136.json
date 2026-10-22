@@ -1,0 +1,79 @@
+{
+  "docId": 6136,
+  "examName": "Assistant Chemical Analyser, Directorate of Forensic Science Laboratories, General State Services, Group-B",
+  "examNameMr": "सहायक रासायनिक विश्लेशक, न्यायसहायक वैज्ञानिक प्रयोगशाला, सामान्य राज्य सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination - 200 Marks, Interview - 50 Marks",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Chemical Analyser, Directorate of Forensic Science Laboratories, General State Services, Group-B",
+      "paperTitleMr": "सहायक रासायनिक विश्लेशक, न्यायसहायक वैज्ञानिक प्रयोगशाला, सामान्य राज्य सेवा, गट-ब",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Basic concepts in Analytical Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Preparation of solution, Concentration units, mole, molarity, molality, equivalent weight, normality, ppm, milliequivalents and other related units.",
+            "Definition of the terms :- Precision, deviation, mean deviation, standard deviaton, accuracy, absolute error, types of errors, Students 't' test, Confidence limit, Criteria for rejection of observation.",
+            "Titrations:- Acid-base, redox, precipitation, complexometric, Indicators, theory of indicators, Metal-ion indicators, non-aqueous titrations.",
+            "Gravimetric Analysis :- Preparation of sample solution, precipitation, types of precipitates. Role of organic precipitants in gravimetric analysis. Some important organic precipitants.",
+            "Sampling, extraction, purification and identification of substances."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Analytical techniques in Inorganic Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Atomic spectroscopic techniques:- Flame emission, uv-visible spectroscopy, AAS(Atomic Absorption Spectroscopy), SEM(Scanning Electron Microscopy), Energy Dispersive X-ray Spectrophotometry, Emission Spectroscopy.",
+            "Electro-analytical Techniques such as polarography, Amperometry, Voltammetry, Electro-gravimetry, Cyclic Voltammetry and Stripping Voltammetry."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Analytical Techniques in Organic Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Spectroscopy :- Theory and application in chemical analysis of UV-Vis, IR(FTIR), NMR, MS, Raman and Fluorescence Spectroscopy",
+            "Separation Technique :- Theory and application in chemical analysis of Crystallisation, distillation, Fractional Distillation under reduced pressure, Paper chromatography, TLC, HPTC, GLC, LC, HPLC, GCMC, LCMC, Ion exchange chromatography, Adsorption chromatography, Reverse phase chromatography."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Analytical Techniques in Biochemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Methods for Estimation:- Protein, Nucleic acids, Lipids, Carbohydrates.",
+            "Biological buffers.",
+            "DNA finger printing RFLP (Restriction Fragment Length Polymorphism), PCR (Polymerase Chain Reaction), RT-PCR (Reverse Transcriptase Polymerase Chain Reaction), RIA (Radio Immuno Assay)",
+            "Separation of Biomolecules :- Affinity chromatography, Moleculer exclusion chromatography (gel filtration), One Dimension (PAGE) and Two Dimension electrophoresis, Iso-electric focusing, High voltage electrophoresis, SDS-PAGE, Agarose electrophoresis, capillary electrophoresis.",
+            "Isotope tracer technique",
+            "Enzymes :- Classification, Iso-enzyme, DNA Polymerase enzyme",
+            "Blood Groups."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा / कमी करण्यात येतील.",
+    "एखाद्या प्रश्नाच्या एकापेक्षा अधिक उत्तरे दिली असल्यास अथवा ज्या उमेदवाराने उत्तरपत्रिकेत पूर्ण वर्तुळ चिन्हांकित केले नसेल अशा प्रश्नाचे उत्तर चुकीचे समजण्यात येऊन त्या प्रश्नाच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा/कमी करण्यात येतील.",
+    "वरीलप्रमाणे कार्यपद्धतीचा अवलंब करताना एकूण अंतिम गुणांची बेरीज अपूर्णांकात आली तरीही ती अपूर्णांकातच राहील व पुढील कार्यवाही त्याच्या आधारे करण्यात येईल.",
+    "एखाद्या प्रश्नाचे उत्तर अनuttarit असेल तर, अशा प्रकरणी नकारात्मक गुणांची पद्धत लागू असणार नाही.",
+    "अंतिम गुणवत्ता यादी ही वस्तुनिष्ठ परीक्षेतील व मुलाखतीतील एकत्रित गुणांवर आधारित राहील."
+  ]
+}

@@ -13,6 +13,7 @@ import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
+import { buildSyllabusMetadata, fitDescription } from '../../../lib/seoMetadata'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
 export const revalidate = 300
@@ -97,34 +98,44 @@ const TYPE_TO_PATH = {
   syllabus:    '/schemes',
 }
 
-// ── SEO Metadata ──────────────────────────────────────────────
 export async function generateMetadata({ params }) {
   const resolvedParams = await params
   const data = await getSyllabusData(resolvedParams.slug)
   if (!data) return { title: { absolute: 'Syllabus | ExamUdaan' } }
   const { en } = data
+  const org = en.org_acronym || en.org_name || 'Govt'
+  const year = en.apply_end_date
+    ? new Date(en.apply_end_date).getFullYear()
+    : (en.published_at ? new Date(en.published_at).getFullYear() : (en.created_at ? new Date(en.created_at).getFullYear() : null))
+  const yearStr = year ? ` ${year}` : ''
 
-  let rawTitle = en.seo_metadata?.meta_title || `${en.title} Syllabus`
-  let cleanBase = rawTitle.replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '').trim()
-  if (cleanBase.length > 44) {
-    cleanBase = cleanBase.slice(0, 41).trim() + '...'
+  let title = `${org} ${en.title} Syllabus${yearStr} & Exam Pattern - PDF`
+  if (title.length > 60) {
+    title = `${org} ${en.title} Syllabus${yearStr} - PDF`
   }
-  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Syllabus | ExamUdaan'
+  if (title.length > 60) {
+    title = `${en.title} Syllabus${yearStr} - PDF`
+  }
+  if (title.length > 60) {
+    title = `${en.title} Syllabus${yearStr}`.slice(0, 60)
+  }
 
-  const metaDesc = (
-    en.seo_metadata?.meta_description ||
-    `Download ${en.title} official syllabus from ${en.org_name}. Check topics, marking scheme, paper pattern, and selection process.`
-  ).slice(0, 160)
   const rawUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
   const siteUrl = (rawUrl && !rawUrl.includes('localhost')) ? rawUrl : 'https://examudaan.in'
-  const targetSection = TYPE_TO_PATH[en.notification_type] || '/schemes'
   const canonicalSlug = en.slug || resolvedParams.slug
-  const canonicalUrl = `${siteUrl}${targetSection}/${canonicalSlug}`
+  const canonicalUrl = `${siteUrl}/schemes/${canonicalSlug}`
+
+  const desc = fitDescription(
+    `Download official ${en.title} syllabus from ${org}. Check paper pattern, marking scheme, subject topics & selection process.`,
+    'Official syllabus PDF download on ExamUdaan.'
+  )
+
   return {
-    title: { absolute: metaTitle },
-    description: metaDesc,
+    title: { absolute: title },
+    description: desc,
     alternates: { canonical: canonicalUrl },
-    openGraph: { title: metaTitle, description: metaDesc, url: canonicalUrl, type: 'article', siteName: 'ExamUdaan.in' },
+    openGraph: { title, description: desc, url: canonicalUrl, type: 'article', siteName: 'ExamUdaan' },
+    twitter: { card: 'summary', title, description: desc },
   }
 }
 

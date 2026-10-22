@@ -1,0 +1,83 @@
+{
+  "docId": 1679,
+  "examName": "Government Labour Officer, Maharashtra Labour Services, Gr-B",
+  "examNameMr": "शासकीय कामगार अधिकारी, महाराष्ट्र कामगार सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Government Labour Officer, Maharashtra Labour Services, Gr-B",
+      "paperTitleMr": "शासकीय कामगार अधिकारी, महाराष्ट्र कामगार सेवा, गट-ब",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Social Conditions and Labour Studies",
+          "unitTitleMr": "सामाजिक परिस्थिती आणि कामगार अध्ययन",
+          "topics": [
+            "Labour and Industrial Economics",
+            "Industrial, Rural Sociology",
+            "Trade Unionism in India",
+            "Understanding Human Behaviour",
+            "Labour and Industry Related Legislations, Policy, etc",
+            "Labour Statistics"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "General Knowledge",
+          "unitTitleMr": "सामान्य ज्ञान",
+          "topics": [
+            "Modern History of India with special reference to Maharashtra",
+            "Geography of India with special reference to Maharashtra",
+            "Indian Polity: Constitution of India, State Administration and Local Government",
+            "Indian Economy",
+            "General Science",
+            "National and International Current Affairs"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धीमत्ता चाचणी",
+          "topics": [
+            "Mental Ability and Logical Reasoning"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Various Acts / Laws related to Labour and Industries/ domestic",
+          "unitTitleMr": "कामगार आणि उद्योग क्षेत्राशी संबंधित विविध कायदे",
+          "topics": [
+            "Arbitration Act (between employer and employee)",
+            "Labour working in unorganised sector",
+            "Women and child protection laws (Related with organised and unorganised sector, domestic etc)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Other Acts",
+          "unitTitleMr": "इतर कायदे",
+          "topics": [
+            "Right to Information Act",
+            "Protection of Human Rights Act",
+            "Minimum Wages Act"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,177 @@
+{
+  "docId": 5879,
+  "examName": "Dental Surgeon, General State Service, Group-B",
+  "examNameMr": "दंत शल्यचिकित्सक, सामान्य राज्य सेवा, गट-ब - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Dental Surgeon, General State Service, Group-B - Syllabus",
+      "paperTitleMr": "दंत शल्यचिकित्सक, सामान्य राज्य सेवा, गट-ब - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Anatomy, Physiology, Biochemistry, Pathology, Microbiology, Pharmacology, Medicine and Surgery as applied to dentistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Anatomy: Muscles of mastication, T.M.J., Tongue and Oral mucosa, Salivary Glands, Dental Morphology",
+            "Physiology & Biochemistry: Blood, Bone, Functions of Saliva",
+            "Pathology and Microbiology: Inflammations and Infections, Neoplasias, Degeneration, Sterilization procedures, aseptic techniques & disinfections, Pathogenic organisms of common occurrence",
+            "Pharmacology: Anaesthetics, Analgesics, Antibiotics, Pharmacotherapy of common oral conditions",
+            "Medical emergencies in dental practice",
+            "Various aspects of Surgical Principles as related to Orodental diseases"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Conservative dentistry and Endodontics",
+          "unitTitleMr": null,
+          "topics": [
+            "Dental Caries",
+            "Principles of Cavity preparation",
+            "Tooth Vitality tests",
+            "Diagnosis and Treatment Planning",
+            "Restorative dentistry",
+            "Endodontics - various endodontic procedures including emergency procedures",
+            "Pulpal and Periapical diseases and their management",
+            "Dental Materials"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Oral and Maxillofacial Surgery",
+          "unitTitleMr": null,
+          "topics": [
+            "Infection control and cross-infection control",
+            "Asepsis",
+            "Anesthetic Considerations",
+            "Exodontia - instruments, procedures & complications",
+            "General considerations of traumatic injuries of the Jaws",
+            "Surgical Management of common oral conditions such as cysts, tumours, infections etc."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Oral Medicine & Radiology",
+          "unitTitleMr": null,
+          "topics": [
+            "Importance of medical history",
+            "Premalignant lesions, conditions & oral malignancies",
+            "Common oral ulcerative lesions",
+            "Radiographic techniques & interpretations & RVG"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Orthodontics",
+          "unitTitleMr": null,
+          "topics": [
+            "General principles of orthodontic treatment",
+            "Materials used in the construction of various orthodontic appliances",
+            "Removable appliances"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Pediatric & Preventive dentistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Behaviour Management & various preventive treatment modalities in a child patient",
+            "Dental care of children with special needs",
+            "Dental emergencies in children and their management",
+            "Special emphasis on Pit & fissure sealants & fluorides"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Periodontology",
+          "unitTitleMr": null,
+          "topics": [
+            "Various Gingival & Periodontal diseases & their etiology & management"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Prosthodontics",
+          "unitTitleMr": null,
+          "topics": [
+            "Diagnosis, Indications, Fabrication, Delivery & post operative follow up in Partial Denture, Complete Denture & fixed prosthesis patients",
+            "Dental Materials"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Public Health Dentistry",
+          "unitTitleMr": null,
+          "topics": [
+            "General Epidemiology",
+            "Environmental health with emphasis on waste disposal",
+            "Health educations aids",
+            "Survey procedures",
+            "Various Community related services",
+            "Practice management & maintenance of records, dead stock, accounts and audit"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Oral Implantology",
+          "unitTitleMr": null,
+          "topics": [
+            "A brief introduction to various implant systems in practice"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Aesthetic Dentistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Bleaching of teeth",
+            "Veneers with various materials",
+            "Ceramics"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Forensic Odontology",
+          "unitTitleMr": null,
+          "topics": [
+            "Examination of dental evidence with proper evaluation & presentation of dental findings"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Ethics",
+          "unitTitleMr": null,
+          "topics": [
+            "WHO declarations and DCI code of ethics",
+            "Local Governing bodies"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Recent Advances in Dentistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Recent advances and modern techniques in dentistry"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "EMPHASIS WILL BE GIVEN TO THE CLINICAL ASPECTS OF EACH SUBJECT ENCOUNTERED IN DAY-TO-DAY DENTAL PRACTICE."
+  ]
+}

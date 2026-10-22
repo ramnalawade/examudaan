@@ -703,7 +703,7 @@ export default function DashboardPage() {
 
           {/* Nav items */}
           <div className="dashboard-nav-container">
-            <nav className={s.sidebarNavList}>
+            <nav className={`dashboard-nav-list ${s.sidebarNavList}`}>
               {SIDEBAR_ITEMS.map(item => (
                 <button
                   key={item.id}
@@ -849,7 +849,7 @@ export default function DashboardPage() {
                   </Link>
                   <Link href="/ai-tools" className={s.pulseCard}>
                     <span className={s.pulseCardLabel}>AI Study Tools</span>
-                    <strong className={s.pulseCardValue} style={{ color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : '114 Tools'}</strong>
+                    <strong className={s.pulseCardValue} style={{ color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : '124 Tools'}</strong>
                     <span className={s.pulseCardCta} style={{ color: '#2563eb' }}>Explore tools →</span>
                   </Link>
                   <Link href="/pyq" className={s.pulseCard}>

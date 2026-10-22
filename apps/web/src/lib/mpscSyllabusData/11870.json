@@ -1,0 +1,85 @@
+{
+  "docId": 11870,
+  "examName": "Drugs Inspector, Food and Drugs Administrative Service, Group-B, Medical Education & Drugs Department - Syllabus",
+  "examNameMr": "औषध निरीक्षक, अन्न आणि औषध प्रशासन सेवा, गट-ब, वैद्यकीय शिक्षण व औषधी द्रव्ये विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Drugs Inspector, Food and Drugs Administrative Service, Group-B, Medical Education & Drugs Department - Syllabus",
+      "paperTitleMr": "औषध निरीक्षक, अन्न आणि औषध प्रशासन सेवा, गट-ब, वैद्यकीय शिक्षण व औषधी द्रव्ये विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Physiology, Pathophysiology, Pharmacology and Toxicology",
+          "unitTitleMr": null,
+          "topics": [
+            "Physiology: Whole human blood (I.P.), Composition and function of blood elements, Coagulation of blood, Blood groups, Blood components manufacturing and storage, Blood bank operation requirement and standards",
+            "Pathophysiology: STD, AIDS, Hypersensitivity, Hepatitis and HBSAg",
+            "Pharmacology: Chemistry, SAR, Factors modifying drug action, and mechanism of drugs belonging to coagulation and hematinics, anti-hypertensives, CHF, Angina, arrhythmia, diuretics, CNS drugs, Chemotherapeutic agents, Anti-diabetics, contraceptives, endocrine and hormones, uterine drugs, Respiratory drugs, GIT drugs, Autocoids, immuno-stimulants and immuno-suppressants, Introduction to drug design and combinatorial chemistry",
+            "Toxicology: Classification of poison, chelating agents, heavy metal, insecticide poisoning, antidotes, Sign, symptoms and management of CNS drug poisons, Genotoxicity, carcinogenicity, teratogenicity, mutagenicity"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Microbiology",
+          "unitTitleMr": null,
+          "topics": [
+            "Sterilization principles and procedures, Aseptic techniques, Disinfections, pyrogen and pyrogen testing",
+            "Assay of antibiotics and vitamins",
+            "Biochemical serological, virological techniques",
+            "BoD, different media",
+            "Microbial drugs, drug resistance, microbial limit test, Pathogenic organism of common occurrence"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Biochemistry and Chemistry of drugs / Pharmaceuticals",
+          "unitTitleMr": null,
+          "topics": [
+            "Biochemistry: Metabolism of carbohydrates, proteins and lipids, DNA, RNA, nucleic acid and components, Enzymes, Recombinant technology and its applications, Immunological products – vaccines, sera",
+            "Chemistry: Isomers, tautomers, fermentation, synthesis of antibiotics, diazo reaction, chemistry of steroids",
+            "Pre-formulation studies and Pharmaceuticals: Physical and chemical properties, Preservatives, suspending, emulsifying agents, different additives, vehicles, types of waters, Dosage forms, Novel drug delivery systems, Storage conditions, Medical devices, Route of administration",
+            "Industrial Pharmacy: Pilot plant scale up techniques, Technology development and transfer, Regulatory authorities and requirements",
+            "Cosmetic Science and Herbal Drug Technology: Formulation of cosmetics and standards, Herbs as a pharmaceutical raw material, Indian system of medicine, Herbal formulations, Nutraceuticals and herbal cosmetics",
+            "Pharmaceutical Analysis: UV, Atomic absorption & IR spectroscopy, NMR, Mass spectrometry, Thermal and x-ray diffraction analysis, Chromatography, Hyphenated analytical techniques, Limit tests, Radioimmunoassay, Quality assurance and quality management system",
+            "Pharmacy Practice: Community pharmacy and management, wholesale store management, retail store management, Hospital pharmacy and its management, Drug distribution in hospital"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Regulations related to drugs and General knowledge related to Pharmaceuticals",
+          "unitTitleMr": null,
+          "topics": [
+            "Drugs and Cosmetics Act 1940 and Rules 1945: Definitions, Statutory bodies, Standard quality, misbranded, adulterated, Spurious drugs and cosmetics, Government analysts, Drug inspector, Import, manufacture, sale and distribution of drugs, GMP and GLP, Schedules, Cosmetics Rules 2020, Medical Devices Rules 2017",
+            "Other Acts and Regulations: Drugs and Magic Remedies Act 1954, NDPS Act 1985, Drugs Price Control Order 2013, Poisons Act 1919, Pharmacy Act 1948, Intellectual Property Rights, Consumer Protection Act, Right to Information Act, WHO-GMP certification, National health programs, Antimicrobial resistance, IPC, Adverse Drug Reactions"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": null,
+          "topics": [
+            "Questions will be asked to test how far candidates can think quickly and accurately"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever Acts/Rule/Regulations are mentioned in syllabus, latest amendments/versions to be considered."
+  ]
+}

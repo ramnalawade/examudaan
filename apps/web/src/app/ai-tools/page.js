@@ -535,9 +535,9 @@ Document:
 
                   {/* Name + tagline */}
                   <div>
-                    <div style={{ fontSize: 15, fontWeight: 800, color: 'var(--on-surface)', marginBottom: 4 }}>
+                    <h2 style={{ fontSize: 15, fontWeight: 800, color: 'var(--on-surface)', margin: '0 0 4px', fontFamily: 'inherit' }}>
                       {tool.name}
-                    </div>
+                    </h2>
                     <div style={{ fontSize: 13, color: 'var(--secondary)', lineHeight: 1.5 }}>
                       {tool.tagline}
                     </div>
@@ -651,9 +651,9 @@ Document:
           display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 20,
         }}>
           <div style={{ flex: 1, minWidth: 280 }}>
-            <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 8 }}>
+            <h2 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 8px', fontFamily: 'inherit' }}>
               {isMarathi ? '🎓 केवळ साधने नव्हे, तर प्रत्यक्ष AI कोडिंग व कौशल्ये शिकायची आहेत?' : '🎓 Want hands-on AI training — not just tools?'}
-            </div>
+            </h2>
             <p style={{ fontSize: 13, color: '#94A3B8', margin: 0, lineHeight: 1.6 }}>
               {isMarathi
                 ? 'ExamUdaan AI अकॅडमी मध्ये सामील व्हा — २० वर्षांचा अनुभव असलेल्या आंतरराष्ट्रीय सॉफ्टवेअर आर्किटेक्टकडून थेट वीकेंड प्रशिक्षण. प्रॉम्ट इंजिनिअरिंग, Cursor, NotebookLM आणि प्रत्यक्ष प्रोजेक्ट्स.'

@@ -1,0 +1,69 @@
+{
+  "docId": 1620,
+  "examName": "Assistant Legal Advisor-cum-Under Secretary, General State Service, Gr-A (Gazetted)",
+  "examNameMr": "सहायक विधि सल्लागार - सह - अवर सचिव, सामान्य राज्य सेवा, गट - अ (राजपत्रित)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge & Law",
+      "paperTitleMr": "सामान्य ज्ञान, विधी विषयक घटक",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Affairs - World and India",
+          "unitTitleMr": "जागतिक तसेच भारतातील चालू घडामोडी",
+          "topics": [
+            "Political, Industrial, Economic, Social, Educational, Geographical, Astronomical, Cultural, Scientific and others."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Mental Ability Test",
+          "unitTitleMr": "बुद्धीमापन चाचणी",
+          "topics": [
+            "Logical reasoning, quantitative aptitude."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Right to Information Act - 2005",
+          "unitTitleMr": "माहितीचा अधिकार कायदा - २००५",
+          "topics": [
+            "Right to Information Act 2005 and its provisions."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Law",
+          "unitTitleMr": "विधी",
+          "topics": [
+            "Code of Criminal Procedure",
+            "Civil Procedure Code",
+            "Evidence Act",
+            "Indian Penal Code",
+            "Constitution of India",
+            "Hindu Law",
+            "Limitation Act"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "लेखी परीक्षेचे २०० गुण + मुलाखतीचे ५० गुण मिळवून गुणवत्ता यादी तयार करण्यात येईल."
+  ]
+}

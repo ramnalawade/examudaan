@@ -1,0 +1,56 @@
+{
+  "docId": 1694,
+  "examName": "Translator (Marathi), Directorate of Languages, General State Service, Gr-C.",
+  "examNameMr": "अनुवादक (मराठी), भाषा संचालनालय, सामान्य राज्य सेवा, गट-क.",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "Bilingual",
+  "category": "group-c",
+  "totalMarks": 190,
+  "mainsMarks": 150,
+  "interviewMarks": 40,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi and English",
+      "paperTitleMr": "मराठी व इंग्रजी",
+      "totalMarks": 150,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "topics": [
+            "सर्वसामान्य शब्दसंग्रह",
+            "वाक्यरचना",
+            "वाक्यविचार",
+            "वाक्प्रचार व म्हणी यांचा अर्थ आणि उपयोग",
+            "उताऱ्यावरील प्रश्नांची उत्तरे"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी",
+          "topics": [
+            "Common vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Use of Idioms & Phrases and their meaning",
+            "Comprehension of passage"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "अंतिम गुणवत्ता यादी ही वस्तुनिष्ठ परीक्षेतील व मुलाखतीतील एकत्रित गुणांवर आधारित राहील.",
+    "मुलाखतीच्या एकूण 40 गुणांपैकी, अनुवाद चाचणीकरिता 20 गुण व मुलाखतीकरिता 20 गुण असतील."
+  ]
+}

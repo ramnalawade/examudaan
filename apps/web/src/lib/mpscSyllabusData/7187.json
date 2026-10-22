@@ -1,0 +1,95 @@
+{
+  "docId": 7187,
+  "examName": "Assistant Director, Forensic Science Laboratories, General State Service, Group A-Syllabus",
+  "examNameMr": "सहायक संचालक, न्यायसहायक वैज्ञानिक प्रयोगशाळा, महाराष्ट्र राजपत्रित सेवा, गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "rajyaseva",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Director, Forensic Science Laboratories, General State Service, Group A-Syllabus",
+      "paperTitleMr": "सहायक संचालक, न्यायसहायक वैज्ञानिक प्रयोगशाळा, महाराष्ट्र राजपत्रित सेवा, गट-अ - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Rules and Laboratory Accreditation",
+          "unitTitleMr": null,
+          "topics": [
+            "The Indian Evidence Act - related to Forensic Science",
+            "Right to information act 2005",
+            "Maharashtra Right to Public Service Act 2015",
+            "Laboratory Accreditation"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Crime Scene Investigation and Forensic Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Theory of Crime scene investigation, guidelines of collection of evidence and physical evidence.",
+            "Forensic Chemistry and Toxicology"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Narcotic Drugs, Explosives and Poisons",
+          "unitTitleMr": null,
+          "topics": [
+            "Narcotic drugs and Psychotropic substances, Explosives, petroleum product, Gold examination, Alkali and acids, Fire and arson, Examination of liquor/ alcoholic drinks and alcohols and other adulterants.",
+            "Isolation and purification of poisons, gaseous and volatile poisons, analysis of inorganic poisons, analysis of basic drugs / poisons, analysis of acidic drugs and poisons."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Method of Chemical Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic concept - Preparation of solution, Concentration units, mole, molarity, molality, equivalent weight, normality, ppm, mill equivalents and other related units, Precision, deviation, mean deviation, standard deviation, accuracy, absolute error, types of errors, Students 't' test, Confidence limit, uncertainty.",
+            "Titrations: - Acid-base, redox, precipitation, complexometric, Indicators, theory of indicators, Metal-ion indicators, non-aqueous titrations.",
+            "Gravimetric analysis: - Preparation of sample solution, precipitation, types of precipitates. Role of organic precipitants in gravimetric analysis. Some important organic precipitants.",
+            "Sampling, extraction, purification and identification of substances, SAP value, iodine value.",
+            "Spectroscopy like UV (Ultra Violet) visible, mass spectroscopy, RAMAN spectroscopy, FTIR spectroscopy (Fourier Transformer Infra Red spectroscopy), Fluorescence spectroscopy.",
+            "Application in chemical analysis of Crystallization, distillation, Fractional Distillation, Separation techniques like TLC (Thin Layer Chromatography), HPTLC (High Performance Thin Layer Chromatography), HPLC (High Performance Liquid Chromatography), GC (Gas Chromatography), and Head space GC.",
+            "Combine techniques like GC-MS (Gas Chromatography –Mass spectroscopy) and LC-MS (Liquid Chromatography –Mass spectroscopy)."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Forensic Biology, Serology, Human DNA and Wildlife DNA",
+          "unitTitleMr": null,
+          "topics": [
+            "Forensic Biology, serology, Human DNA and Wild life DNA",
+            "Examination of Blood and blood stains, Examination of other body fluids and their stains, Examination of semen and seminal fluids, Examination of vaginal fluid and stains of vaginal secretions, examination of Saliva, saliva stains, vomit, urine stains, Faecal matter and its stains, hair examination.",
+            "Method of Analysis- Presumptive and confirmatory test, Estimation of Protein, Nucleic acids, Lipids, Carbohydrates, Enzymes, Isoenzyme, blood group identification, Biological buffers, High voltage electrophoresis, SDS-PAGE (Sodium Dodecysil Sulfate-Polyacrylamide Gel Electrophoresis), Agarose electrophoresis, capillary electrophoresis, COE (Cross Over Electrophoresis).",
+            "DNA sample collection and extraction - Presumptive and confirmatory tests, DNA extraction, Bone processing and DNA isolation from tooth and bone, automated DNA extraction, Quantification of DNA, Amplification (PCR), Detection of PCR product using genetic analyzer, STR data analysis, data analysis and interpretation of PCR",
+            "Method of Analysis- DNA finger printing RFLP (Restriction Fragment Length Polymorphism), SNP (Single Nucleotide Polymorphism), PCR (Polymerase Chain Reaction), RT-PCR (Reverse Transcriptase Polymerase Chain Reaction), RIA (Radio Immuno Assay) and other related methods"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Forensic Physics and Ballistics",
+          "unitTitleMr": null,
+          "topics": [
+            "Forensic Physics and Ballistics",
+            "Barrel washing examination, Identification and Examination of Firearms, Identification and Examination of ammunition, Identification of shots, pellets, wads, propellant charge and ballistics related examination.",
+            "Examination of Foot / Footwear/ Tyre impression, tool marks, tampered electrical energy meters, paints, identification mark, glass fragments, broken objects paper, forensic documents, fiber, restoration of number, soil analysis.",
+            "Method of analysis: Microscopic analysis, XRD (X-Ray Diffraction), STA (Simultaneous Thermal analysis), DSC (Differential Scanning Calorimetry), Tensile strength, Atomic emission spectroscopy, Flame emission spectroscopy, AAS (Atomic Absorption Spectroscopy), SEM (Scanning Electron Microscopy), Energy Dispersive X-ray Spectrophotometry, Video Spectral Comparator."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

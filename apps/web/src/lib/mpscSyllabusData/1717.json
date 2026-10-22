@@ -1,0 +1,83 @@
+{
+  "docId": 1717,
+  "examName": "Maharashtra Education Service, Group B (Collegiate Branch) - Lecturer in English",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Literature in English during 1600–1990",
+      "paperTitleMr": null,
+      "totalMarks": 150,
+      "duration": "1 1/2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "DRAMA",
+          "unitTitleMr": null,
+          "topics": [
+            "Dramatic Theory: The Renaissance, Elizabethan Drama, Neo-classicism, Restoration Drama, Drama of Ideas.",
+            "Dramatic Theory: Poetic Drama, Absurd Drama, Drama and Social Realism, Modern Indian Drama.",
+            "Texts: William Shakespeare - Hamlet, Ben Jonson - Volpone, William Congreve - The Way of the World, George Bernard Shaw - Arms and the Man.",
+            "Texts: T.S. Eliot - Murder in the Cathedral, Arthur Miller - Death of a Salesman, Harold Pinter - The Birthday Party, Girish Karnad - The Fire and the Rain."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "POETRY",
+          "unitTitleMr": null,
+          "topics": [
+            "Poetic Theory: Metaphysical Poetry, The Epic and the Mock-epic, The Romantic Movement, Victorian Poetry.",
+            "Poetic Theory: Modernism in Poetry, Experimental trends in Modern Poetry, Myth in Modern Poetry, Symbolism in Modern Poetry, Confessional Poetry.",
+            "Texts: John Donne - ‘Canonization’, ‘Death be not proud’, ‘Love’s War’, ‘Good Morrow’; Andrew Marvell - ‘To his Coy Mistress’, ‘Eyes and Tears’, ‘Bermudas’, ‘The Garden’.",
+            "Texts: John Milton - ‘Paradise Lost’, Book I and II; William Wordsworth - ‘She dwelt among untrodden ways’, ‘Tintern Abbey’, ‘She was a Phantom of Delight’, ‘Ode on the Intimations of Immortality’.",
+            "Texts: John Keats - ‘The Eve of Saint Agnes’, ‘La Belle Dame Sans Merci’, ‘Ode on a Grecian Urn’, ‘Ode to a Nightingale’; Robert Browning - ‘My Last Duchess’, ‘A Grammarian’s Funeral’, ‘Andrea Del Sarto’, ‘The Patriot’.",
+            "Texts: Alfred Tennyson - ‘The Lotus Eaters’, ‘Ulysses’, ‘Crossing the Bar’, ‘The Lady of Shalott’.",
+            "Texts: William Butler Yeats - ‘Byzantium’, ‘Leda and the Swan’, ‘Among School Children’, ‘A Prayer for My Daughter’; T.S. Eliot - ‘The Waste Land’.",
+            "Texts: Ted Hughes - ‘Crow’s Song of Himself’, ‘Crow on the Beach’, ‘Crow and the Birds’, ‘Crow’s Nerve Fails’; Sylvia Plath - ‘Morning Song’, ‘Spinster’, ‘The Courage of Shutting Up’, ‘Three Women’.",
+            "Texts: Nissim Ezekiel - ‘The Egoist’s Prayer’, ‘Background Casually’, ‘Night of the Scorpion’, ‘Goodbye Party to Miss Pushpa T.S.’; Kamala Das - ‘An Introduction’, ‘The Sunshine Cat’, ‘My Grandmother’s House’, ‘A Hot Noon in Malabar’."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "NOVEL",
+          "unitTitleMr": null,
+          "topics": [
+            "Theory of the Novel: The Rise of the middle class, The Rise of the Reading Public, The Rise of the Novel, The Novel and the Romance, The Victorian Novel.",
+            "Theory of the Novel: The stream of consciousness Novel, Colonization and Post-Colonism, Symbolism and the Novel, Novel and Social Commitment, Feminist concerns in the Indian English Novel.",
+            "Texts: Henry Fielding - Tom Jones, Jane Austen - Sense and Sensibility, Charles Dickens - David Copperfield, Herman Melville - Moby Dick.",
+            "Texts: Joseph Conrad - The Heart of Darkness, Ernest Hemingway - The Old Man and the Sea, Mulkraj Anand - Untouchable, William Golding - Lord of the Flies, Shashi Deshpande - That Long Silence."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "The Beginnings of English Studies in India & The Status of English in Independent India",
+          "unitTitleMr": null,
+          "topics": [
+            "The impact of Colonialism on India – the culture contact and the problem of acculturation.",
+            "The Anglicist v/s Orientalist debate. Macaulay’s minute of 1835 on Indian Education. Introduction of English Language and Literature in India.",
+            "Rise of Nationalism in the English Educated Indian middle class, Imperialism and Orientalism.",
+            "Reference Books: Gauri Vishwanathan - Masks of Conquest, Rajeshwari Sundar Rajan - The Lie of the Land, Edward Said - Orientalism, Leela Gandhi - Post-Colonial Theory, Bernard Cohn - Colonialism and its forms of knowledge, Partha Chatterjee - The Nation and its Fragments.",
+            "The Language policy of the Government of India - English as Associate Official Language.",
+            "Position of English in the Three-Language Formula - English as a Second/Foreign Language in Independent India.",
+            "Uses of English in India today: As a Link Language, Library Language and Language of Business and Commerce.",
+            "English in Mass Communication - Indianisation of English Grammar and Phonology - ‘Chutnification’ of English in Indian Writing in English.",
+            "Reference Books: V.K. Gokak - English in India, Braj Kachru - Indianisation of English & The Other Tongue, Bansal and Harrison - Spoken English for India, N. Krishnaswamy and Archana S. Burde - The Politics of India’s English."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

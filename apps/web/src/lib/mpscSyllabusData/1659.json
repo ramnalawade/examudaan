@@ -1,0 +1,177 @@
+{
+  "docId": 1659,
+  "examName": "MAHARASHTRA PUBLIC SERVICE COMMISSION - Dental Surgeon (Group -B) Screening Test",
+  "examNameMr": "महाराष्ट्र लोकसेवा आयोग - दंत शल्यचिकित्सक (गट-ब) चाळणी परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Screening Test / Objective type",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Screening Test for Dental Surgeon (Group -B)",
+      "paperTitleMr": "दंत शल्यचिकित्सक (गट-ब) पदाच्या भरतीसाठी चाळणी परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Anatomy, Physiology, Biochemistry, Pathology, Microbiology, Pharmacology, Medicine and Surgery as applied to dentistry",
+          "unitTitleMr": "दंतचिकित्सेशी संबंधित शरीररचनाशास्त्र, शरीरक्रियाशास्त्र, जैव रसायनशास्त्र, विकृतिशास्त्र, जंतूशास्त्र, औषधशास्त्र, वैद्यकशास्त्र आणि शल्यचिकित्साशास्त्र",
+          "topics": [
+            "Anatomy - Muscles of mastication, T.M.J., Tongue and Oral mucosa, Salivary Glands, Dental Morphology",
+            "Physiology & Biochemistry - Blood, Bone, Functions of Saliva",
+            "Pathology and Microbiology - Inflammations and Infections, Neoplasias, Degeneration, Sterilization procedures, aseptic techniques & disinfections, Pathogenic organisms of common occurrence",
+            "Pharmacology - Anaesthetics, Analgesics, Antibiotics, Pharmacotherapy of common oral conditions",
+            "Medical emergencies in dental practice",
+            "Various aspects of Surgical Principles as related to Orodental diseases"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Conservative dentistry and Endodontics",
+          "unitTitleMr": "कंझर्व्हेटिव्ह डेंटिस्ट्री आणि एंडोडाँटिक्स",
+          "topics": [
+            "Dental Caries",
+            "Principles of Cavity preparation",
+            "Tooth Vitality tests",
+            "Diagnosis and Treatment Planning",
+            "Restorative dentistry",
+            "Endodontics - various endodontic procedures including emergency procedures",
+            "Pulpal and Periapical diseases and their management",
+            "Dental Materials"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Oral and Maxillofacial Surgery",
+          "unitTitleMr": "ओरल अँड मॅक्सिलोफेशियल सर्जरी",
+          "topics": [
+            "Infection control and cross-infection control",
+            "Asepsis",
+            "Anesthetic Considerations",
+            "Exodontia - instruments, procedures & complications",
+            "General considerations of traumatic injuries of the Jaws",
+            "Surgical Management of common oral conditions such as cysts, tumours, infections etc."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Oral Medicine & Radiology",
+          "unitTitleMr": "ओरल मेडिसिन अँड रेडिओलॉजी",
+          "topics": [
+            "Importance of medical history",
+            "Premalignant lesions, conditions & oral malignancies",
+            "Common oral ulcerative lesions",
+            "Radiographic techniques & interpretations & RVG"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Orthodontics",
+          "unitTitleMr": "ऑर्थोडॉन्टिक्स",
+          "topics": [
+            "General principles of orthodontic treatment",
+            "Materials used in the construction of various orthodontic appliances",
+            "Removable appliances"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Pediatric & Preventive dentistry",
+          "unitTitleMr": "पिडियाट्रिक अँड प्रिव्हेंटिव्ह डेंटिस्ट्री",
+          "topics": [
+            "Behaviour Management & various preventive treatment modalities in a child patient",
+            "Dental care of children with special needs",
+            "Dental emergencies in children and their management",
+            "Special emphasis on Pit & fissure sealants & fluorides"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Periodontology",
+          "unitTitleMr": "पेरिओडाँटोलॉजी",
+          "topics": [
+            "Various Gingival & Periodontal diseases & their etiology & management"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Prosthodontics",
+          "unitTitleMr": "प्रोस्थोडॉन्टिक्स",
+          "topics": [
+            "Diagnosis, Indications, Fabrication, Delivery & post operative follow up in Partial Denture, Complete Denture & fixed prosthesis patients",
+            "Dental Materials"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Public Health Dentistry",
+          "unitTitleMr": "पब्लिक हेल्थ डेंटिस्ट्री",
+          "topics": [
+            "General Epidemiology",
+            "Environmental health with emphasis on waste disposal",
+            "Health education aids",
+            "Survey procedures",
+            "Various Community related services",
+            "Practice management & maintenance of records, dead stock, accounts and audit"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Oral Implantology",
+          "unitTitleMr": "ओरल इम्प्लांटोलॉजी",
+          "topics": [
+            "A brief introduction to various implant systems in practice"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Aesthetic Dentistry",
+          "unitTitleMr": "अस्थेटिक डेंटिस्ट्री",
+          "topics": [
+            "Bleaching of teeth",
+            "Veneers with various materials",
+            "Ceramics"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Forensic Odontology",
+          "unitTitleMr": "फॉरेन्सिक ओडोंटोलॉजी",
+          "topics": [
+            "Examination of dental evidence with proper evaluation & presentation of dental findings"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Ethics",
+          "unitTitleMr": "नैतिकता",
+          "topics": [
+            "WHO declarations and DCI code of ethics",
+            "Local Governing bodies"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Recent Advances in Dentistry",
+          "unitTitleMr": "दंतचिकित्सेतील अलीकडील प्रगती",
+          "topics": [
+            "Recent advances and modern techniques in dental practice"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Emphasis will be given to the clinical aspects of each subject encountered in day-to-day dental practice."
+  ]
+}

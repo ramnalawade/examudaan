@@ -281,9 +281,9 @@ function PyqSearchInner() {
             <div className={styles.mpscBanner}>
               <div className={styles.mpscBannerLeft}>
                 <span className={styles.mpscBadge}>🏛️ 100% Official MPSC PDFs</span>
-                <h3 className={styles.mpscBannerTitle}>
+                <h2 className={styles.mpscBannerTitle}>
                   संपूर्ण MPSC प्रश्नपत्रिका व अंतिम उत्तरतालिका हव्या आहेत का?
-                </h3>
+                </h2>
                 <p className={styles.mpscBannerDesc}>
                   राज्यसेवा, संयुक्त गट ब व क (PSI/STI/ASO), वनसेवा आणि नगर रचनाकार परीक्षांचे सर्व १३८ अधिकृत पेपर एकाच ओळीत वाचण्यासाठी आमचे नवीन स्टडी वर्कस्पेस वापरा.
                 </p>

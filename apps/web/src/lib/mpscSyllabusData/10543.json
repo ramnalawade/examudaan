@@ -1,0 +1,208 @@
+{
+  "docId": 10543,
+  "examName": "Assistant Professor (Economics) Maharashtra Education Service, Group-A and Lecturer (Economics) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (अर्थशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ आणि व्याख्याता (अर्थशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Economics (Degree Level)",
+      "paperTitleMr": "अर्थशास्त्र (पदवी स्तर)",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Micro Economics",
+          "unitTitleMr": "सूक्ष्म अर्थशास्त्र",
+          "topics": [
+            "Theory of Consumer Behaviour",
+            "Theory of Production and Costs",
+            "Modern Approach to Short-term and Long-term Costs",
+            "Decision making under uncertainty Attitude towards Risk",
+            "Game Theory – Non Cooperative games",
+            "Market Structures, competitive and non-competitive equilibria and their efficiency properties",
+            "Behavioral theories of firm",
+            "Factor Pricing",
+            "General and partial equilibrium",
+            "Efficiency Criteria: Pareto-Optimality, Kaldor – Hicks and Wealth Maximization",
+            "Welfare Economics: Fundamental Theorems , Social Welfare Function",
+            "Asymmetric Information: Adverse Selection and Moral Hazard"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Macro Economics",
+          "unitTitleMr": "स्थूल अर्थशास्त्र",
+          "topics": [
+            "National Income: Concepts and Measurement, limitations",
+            "Determination of output and employment: Classical & Keynesian Approach",
+            "Consumption Function",
+            "Investment Function",
+            "Multiplier and Accelerator",
+            "Keynesianism and Monetarism",
+            "Demand for Money",
+            "Supply of Money",
+            "Theories of Interest",
+            "IS – LM Model Approach",
+            "Inflation and Phillips Curve Analysis",
+            "Business Cycles",
+            "Monetary and Fiscal Policy",
+            "Rational Expectation Hypothesis and its critique"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Statistics and Econometrics",
+          "unitTitleMr": "संख्याशास्त्र आणि अर्थमिती",
+          "topics": [
+            "Probability Theory: Concepts of probability, Distributions, Moments, Central Limit theorem",
+            "Descriptive Statistics – Measures of Central tendency & dispersions, Correlation, Index Numbers",
+            "Sampling methods & Sampling Distribution",
+            "Statistical Inferences, Hypothesis testing",
+            "Linear Regression Models and their properties – BLUE",
+            "Multicollinearity, Heteroscedasticity and Autocorrelation",
+            "Econometric Modeling : Traditional and Alternative Methodologies",
+            "Identification Problem",
+            "Simultaneous Equation Models – recursive and non-recursive",
+            "Discrete choice models",
+            "Time Series Analysis"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Mathematical Economics",
+          "unitTitleMr": "गणितीय अर्थशास्त्र",
+          "topics": [
+            "Sets, functions and continuity, sequence, series",
+            "Differential Calculus and its Applications",
+            "Linear Algebra – Matrices, Vector Spaces",
+            "Static Optimization Problems and their applications",
+            "Input-Output Model, Linear Programming",
+            "Difference and Differential equations with applications"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "International Economics",
+          "unitTitleMr": "आंतरराष्ट्रीय अर्थशास्त्र",
+          "topics": [
+            "International Trade: Basic concepts and analytical tools",
+            "Theories of International Trade",
+            "International Trade under imperfect competition",
+            "Balance of Payments: Composition, Equilibrium and Disequilibrium and Adjustment Mechanisms",
+            "Exchange Rate: Concepts and Theories",
+            "Foreign Exchange Market and Arbitrage",
+            "Gains from Trade, Terms of Trade, Trade Multiplier",
+            "Tariff and Non-Tariff barriers to trade; Dumping",
+            "GATT, WTO and Regional Trade Blocks; Trade Policy Issues",
+            "IMF & World Bank",
+            "Foreign Direct Investment; Globalisation"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Public Economics",
+          "unitTitleMr": "सार्वजनिक अर्थशास्त्र",
+          "topics": [
+            "Market Failure and Remedial Measures: Asymmetric Information, Public Goods, Externality",
+            "Regulation of Market – Collusion and Consumers’ Welfare",
+            "Public Revenue: Tax & Non-Tax Revenue, Direct & Indirect Taxes, Progressive and non-Progressive Taxation, Incidence and Effects of Taxation",
+            "Public expenditure",
+            "Public Debt and its management",
+            "Public Budget and Budget Multiplier",
+            "Fiscal Policy and its implications",
+            "Central and State Government Finances in India",
+            "Issues and Reforms in Indian Tax System"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Money and Banking",
+          "unitTitleMr": "पैसा आणि बँकिंग",
+          "topics": [
+            "Components of Money Supply",
+            "Quantity Theory of Money : Transactions vs. Cash Balances Approach",
+            "Central Bank",
+            "Commercial Banking",
+            "Instruments and Working of Monetary Policy",
+            "Non-banking Financial Institutions",
+            "Money market, Capital Market and Markets for derivatives and its Regulation"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Growth and Development Economics",
+          "unitTitleMr": "वाढ आणि विकास अर्थशास्त्र",
+          "topics": [
+            "Economic Growth and Economic Development",
+            "Theories of Economic Development: Adam Smith, Ricardo, Malthus, Marx, Schumpeter, Rostow, Lewis, Fei-Ranis Model, Critical Minimum Effort Thesis; Balanced & Unbalanced growth, Big Push approach",
+            "Models of Economic Growth: Harrod-Domar, Solow, Robinson, Kaldor, Meade, Pasinetti",
+            "Capital-Output Ratio; Choice of Techniques; Investment Criteria in Economic Development, Appropriate Technology",
+            "Technical progress – Disembodied & embodied; endogenous growth",
+            "Indicators of Economic Development: PQLI, HDI, SDGs",
+            "Poverty and Inequalities – Concepts and Measurement",
+            "Social Sector Development: Health, Education, Gender"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Environmental Economics and Demography",
+          "unitTitleMr": "पर्यावरणीय अर्थशास्त्र आणि लोकसंख्याशास्त्र",
+          "topics": [
+            "Environment as a Public Good",
+            "Market Failure",
+            "Coase Theorem",
+            "Cost-Benefit Analysis and Compensation Criteria",
+            "Environmental Pollution and Climate Change",
+            "International Conferences on Environment",
+            "Economics of resource management",
+            "Valuation of Environmental Goods",
+            "Theories of Population",
+            "Concepts and Measures: Fertility, Morbidity, Mortality",
+            "Age Structure, Demographic Dividend",
+            "Life Table",
+            "Migration"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Indian Economy",
+          "unitTitleMr": "भारतीय अर्थव्यवस्था",
+          "topics": [
+            "Economic Growth in India: Pattern and Structure",
+            "Demographic Trends in India, Characteristics of Indian Population, Population policy 2000",
+            "Agriculture: Pattern & Structure of Growth, Major Challenges, Policy Responses",
+            "Industry: Pattern & Structure of Growth, Major Challenges, Policy Responses. Role performance and challenges of MSMEs",
+            "Services: Pattern & Structure of Growth, Major Challenges, Policy Responses",
+            "Rural Development – Issues, Challenges & Policy Responses",
+            "Urban Development – Issues, Challenges and Policy Responses",
+            "India and Sustainable Development Goals",
+            "Foreign Trade: Structure and Direction, BOT, BOP, Flow of Foreign Capital, Trade Policies",
+            "Infrastructure Development: Physical and Social; Public-Private Partnerships",
+            "Economic crisis in 1991 and Policy of Economic Reforms",
+            "Reforms in Land, Labour and Capital Markets",
+            "Centre-State Financial Relations and Finance Commissions of India",
+            "Recommendations of 14th and 15th Finance Commission",
+            "FRBM",
+            "Role of NITI Aayog",
+            "Poverty, Inequality & Unemployment",
+            "Impact of COVID-19 pandemic on Indian Economy"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

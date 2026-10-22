@@ -1,0 +1,209 @@
+{
+  "docId": 11413,
+  "examName": "Lecturer (Philosophy) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer (Philosophy) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Classical Indian: Epistemology and Metaphysics",
+          "unitTitleMr": null,
+          "topics": [
+            "Vedic and Upaniṣadic: Ṛta – the cosmic order, the divine and the human realms; the centrality of the institution of yajῆa (sacrifice), theories of creation Ātman – Self ( and not – self ), Jāgrat, Svapna, Susupti and turiya, Brahmaṇ.",
+            "Cārvāka : Pratyakṣa as the only pramāṇa, critique of anumāna and śabda, Consciousness as epi-phenomenon.",
+            "Jainism : Concept of reality – sat, dravya, guṇa, paryāya, Jiva, ajiva, anekāntavāda, syādvāda and nayavāda; theory of knowledge.",
+            "Buddhism : Four Noble Truths, Āstangika Mārga, Distinction between Brahmiṇic and Śraminic traditions. Pratityasamutpāda, kṣaṇabhahgavāda, anātmavāda. Schools of Buddhism : Vaibhāṣika, Sautrāntika, Yogacāra, Mādhyamika and Tibetan Buddhism.",
+            "Nyāya : Pramā and apramā, Theories of pramāṇa: pratyakṣa, anumāna, upamana, śabda. Hetvabhāsa. Concept of God. Debate between Buddhism and Nyāya about Pramāṇa-Vyavasthā and Pramāṇa Samplava. Anyathākhyati.",
+            "Vaiśeṣika : Concept of padārtha and its kinds, Asatkāryavāda, Kinds of Kāraṇa: samavāyi, asamavāyi, and nimitta kāraṇa, paramaṇukaraṇavāda.",
+            "Sāṃkhya : Satkāryavāda, prakṛti and its evolutes, arguments for the existence of prakṛti, nature of puruṣa, arguments for the existence and plurality of puruṣa, relationship between puruṣa and prakṛti, atheism.",
+            "Yoga : Pataῆjali’s Theory of Pramāṇa, concept of ćitta and ćitta – vṛtti, stages of ćitt-bhumi, the role of God in Yoga.",
+            "Purva – Mimāṃsā : Pramāṇyavāda: Svatah-pramāṇyavāda and Paratah-pramāṇyavada, Śruti and its importance, classification of śruti-vākyas, vidhi, niṣedha and arthavāda, dharma, bhāvanā, śabda-nityavāda, Jāti, śaktivada; Kumārila and Prabhākara Schools of Mimāṃsa and their major points of difference, triputi – samvit, jῆatatā, abhāva and anupalabdhi, anvitadbhidhanavāda, abhihitanvayavāda, Theories of error: Akhyāti, Viparitakhyāti, atheism.",
+            "Vedānta: Advaita : Brahmaṇ, relation between Brahmaṇ and Ātman, three grades of sattā, Adhyāsa, māya, Jiva, Vivartavāda, Anirvachniya-khyāti.",
+            "Viśiṣtādvaita : Saguṇa Brahmaṇ, refutation of māya, aprthaksiddhi pariṇāmavāda, Jiva, bhakti and prapatti, Brahma-Pariṇāmavāda, Sat-khyāti.",
+            "Dvaita : Rejection of nirguṇa brahmaṇ and māya, bheda and sāksi, bhakti.",
+            "Dvaitavaita: Concept of Jῆānaswaroop, kinds of inanimate",
+            "Sudhadvaita: Concept of Avikrta-pariṇāmavāda."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Classical Western: Ancient, Medieval, and Modern : Epistemology and Metaphysics",
+          "unitTitleMr": null,
+          "topics": [
+            "Pre-Socratic Philosophers: Thales, Anaxagoras, Anaximenies, Ionians, Pythagoras, Parmenides, Heraclitus and Democritus",
+            "The Sophists and Socrates Plato and Aristotle",
+            "Plato – Theory of knowledge, knowledge and opinion, theory of Ideas, the method of dialectic, soul and God.",
+            "Aristotle – Classification of the sciences, the theoretical, the practical and the productive, logic as an organon, critique of Plato’s theory of Ideas, theory of causation, form and matter, potentiality and actuality, soul and God.",
+            "Medieval Philosophy: St. Augustine: Problem of Evil.",
+            "St. Anselm: Ontological argument.",
+            "St. Thomas Aquinas: Faith and Reason, Essence and Existence, the Existence of God.",
+            "Modern Western Philosophy: Descartes : Conception of method, Criteria of truth, doubt and methodological scepticism, cogito ergo sum, innate ideas, Cartesian dualism: mind and matter, proofs for the existence of God, interactionism.",
+            "Spinoza : Substance, Attribute and Mode, the concept of ‘God or Nature’, Intellectual love of God, parallelism, pantheism, three orders of knowing.",
+            "Leibnitz : Monadology, truths of reason and fact, innateness of ideas, proofs for the existence of God, principles of non – contradiction, sufficient reason and identity of indiscernibles, the doctrine of pre -established harmony, problem of freedom.",
+            "Locke : Ideas and their classification, refutation of innate ideas, theory of substance, distinction between primary and secondary qualities, theory of knowledge, three grades of knowledge.",
+            "Berkeley : Rejection of the distinction between primary and secondary qualities, immaterialism, critique of abstract ideas, esse est percipi, the problem of solipcism; God and self.",
+            "Hume : Impressions and ideas, knowledge concerning relations of ideas and knowledge concerning matters of fact, induction and causality, the external world and the self, personal identity, rejection of metaphysics, scepticism, reason and the passions.",
+            "Kant : The critical philosophy, classification of judgements, possibility of synthetic a priori judgements, the Copernican revolution, forms of sensibility, categories of understanding, the metaphysical and the transcendental deduction of the categories, phenomenon and noumenon, the Ideas of Reason – soul, God and world as a whole, rejection of speculative metaphysics.",
+            "Hegel : The conception of Geist (spirit), the dialectical method, concepts of being, non – being and becoming, absolute idealism, Freedom."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Indian Ethics",
+          "unitTitleMr": null,
+          "topics": [
+            "Varṇāshrama, Dharma, Sādhāraṇa Dharma",
+            "Ṛta and Satya",
+            "Ṛna and yajῆa, Concept of duty",
+            "Karma-yoga, Sthitprajῆa, Svadharma, Lokasaṃgraha",
+            "Apurva and Adṛṣta",
+            "Law of Karma: ethical implications",
+            "Concept of Purusārtha, Śreyas and Preyas",
+            "Astānga Yoga",
+            "Jainism: Tri-ratṇa, Panch-vrata.",
+            "Buddhism: Brahma-vihāra: matri, karuṇā, muditā, upeksha, Bodhi-sattva",
+            "Carvaka’s Hedonism"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Western Ethics",
+          "unitTitleMr": null,
+          "topics": [
+            "Concepts of Good, right, justice, duty, obligation, cardinal virtues, Eudaemonism, Intuition as explained in Teleological and Deontological Theories.",
+            "Egoism, Altruism, Universalism",
+            "Subjectivism, Cultural Relativism, Super-naturalism.",
+            "Ethical realism and Intuitionism",
+            "Kant’s moral theory: Postulates of morality, Good-will, Categorical Imperative, Duty, Mean and ends, Maxims.",
+            "Utilitarianism: principle of utility, problem of sanction and justification of morality, kinds of utilitarianism, Moral theories of Bentham, J. S. Mill, Sidgwick",
+            "Theories of Punishment",
+            "Ethical cognitivism and non-cognitivism: Emotivism, Prescriptivism, Descriptivism"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Contemporary Indian Philosophy",
+          "unitTitleMr": null,
+          "topics": [
+            "Vivekananda: Practical Vedanta, Universal Religion, Religious Experience, Religious Rituals",
+            "Sri Aurobindo: Evolution, mind and supermind, Integral Yoga",
+            "Iqbal: Self, God, man and superman, Intellect and Intuition",
+            "Tagore: Religion of man, ideas on education, Concept of Nationalism",
+            "K. C. Bhattacharyya: Swaraj in ideas, Concept of Philosophy, subject as Freedom, the doctrine of Maya.",
+            "Radhakrishnan: Intellect and intuition, the Idealist view of life, concept of Universal Religion, Hindu view of life.",
+            "J. Krishnamurti: Freedom from the known, analysis of self, Choiceless awareness",
+            "Gandhi: Truth, Non-violence, satyagraha, swaraj, critique of modern civilization.",
+            "Ambedkar: Annihilation of caste, philosophy of Hinduism, Neo-Buddhism",
+            "D.D. Upadhyaya: Integral Humanism",
+            "Narayana Guru: the spiritual freedom and social equality, one caste, one religion, one God.",
+            "Jyotiba Phule: Critical understanding of Caste-system.",
+            "Gopal Ganesh Agarkar: Reformist Position as expressed in Sudharaka",
+            "M.N.Roy: Radical Humanism, Materialism",
+            "Maulana Azad: Humanism"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Recent Western Philosophy",
+          "unitTitleMr": null,
+          "topics": [
+            "Analytic and Continental Philosophy: Frege: Sense and Reference",
+            "Logical Positivism: Verification theory of meaning, Elimination of metaphysics, concept of Philosophy",
+            "Moore: Distinction between Sense and Reference, Refutation of Idealism, Defense of common-sense, Proof of an External World.",
+            "Russell: Logical Atomism, Definite Descriptions, Refutation of Idealism",
+            "Wittgenstein: Language and Reality, Facts and objects, the picture theory, critique of private language, meaning and use, forms of life, notion of philosophy",
+            "Gilbert Ryle: Systematically misleading expressions, category mistake, concept of mind, critique of Cartesian dualism",
+            "A. J. Ayer: The Problem of Knowledge",
+            "Phenomenology and Existentialism: Husserl: Phenomenological Method, Philosophy as a rigorous science, Intentionality, Phenomenological Reduction, Inter-subjectivity",
+            "Heidegger: The concept of Being (Dasein), Man as being in the world, critique of technological civilization",
+            "Kierkegaard: Subjectivity as Truth, Leap of faith",
+            "Sartre: Concept of Freedom, Bad-faith, Humanism",
+            "Pragmatism: William James: Pragmatic Theories of Meaning and Truth, Varieties of Religious experience",
+            "John Dewey: Concept of Truth, Common-faith, education",
+            "Post-Modernism: Nietzsche: Critique of Enlightenment, Will to Power, Genealogy of Moral",
+            "Richard Rorty: Critique of representationalism, Against Epistemological method, Edifying Philosophy"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Social and Political Philosophy: Indian",
+          "unitTitleMr": null,
+          "topics": [
+            "Mahabharata: Danda-niti, foundations, Rajdharma, Law and Governance, Narada’s Questions to King Yudhisthir",
+            "Kautilya: Sovereignty, Seven Pillars of State-craft, State, Society, Social-life, State administration, State economy, law and justice, internal security, welfare and external affairs",
+            "Constitutional Morality, Secularism and Fundamental Rights",
+            "Constitutionalism, Total revolution, terrorism, Swadeshi, Satyagrah",
+            "Social Institutions: Family, Marriage, property, education and religion Colonialism, Decolonization"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Social and Political Philosophy: Western",
+          "unitTitleMr": null,
+          "topics": [
+            "Plato: Ideal State and Justice",
+            "Locke, Hobbes, Rousseau: Social Contract Theory",
+            "Isaiah Berlin: Conceptions of Liberty",
+            "Bernard Williams: Idea of Equality Liberalism",
+            "Rawls: Distributive justice",
+            "Nozick: Justice as Entitlement",
+            "Dworkin: Justice as equality",
+            "Amartya Sen: Global Justice, Freedom and Capability.",
+            "Marxism: Dialectical Materialism, Alienation, Critique of Capitalism, Doctrine of Class Struggle and Classless Society.",
+            "Multiculturalism: Politics of recognition, Will Kymlicka; conception of Minority Rights, Bhiku Parekh",
+            "Feminism: Basic Concepts: Patriarchy, misogyny, Gender, Theories of Feminism; Liberal, Socialist, radical and eco-feminism"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Logic",
+          "unitTitleMr": null,
+          "topics": [
+            "Truth and Validity Denotation and Connotation Nature of Propositions Categorical Syllogism",
+            "Laws of thought Classification of Propositions Square of Opposition",
+            "Truth-Functions and Propositional Logic Quantification and Rules of Quantification Symbolic Logic: Use of symbols",
+            "Decision Procedures: Truth Table, Using Truth- Tables for testing the validity of arguments Venn diagram, informal and formal Fallacies",
+            "Proving Validity, Argument and Argument-form Axiomatic System, Consistency, Completeness",
+            "Differences between Deductive and Inductive Logic"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Applied Philosophy",
+          "unitTitleMr": null,
+          "topics": [
+            "What is applied Philosophy?",
+            "Philosophy of Technology; technology, dominance, power and social inequalities Democratization of Technology",
+            "Public evaluation of science and technology",
+            "Ethical Implication of information technology, bio-technology, non-technology",
+            "Environmental Ethics: Nature as means or end, Aldo-Leopold; land-ethics, Arne Naess: Deep Ecology, Peter Singer; Animal Rights",
+            "Medical-Ethics: Surrogacy, Doctor-patient relationship, abortion, euthanasia, female-infanticide",
+            "Professional Ethics: Corporate Governance and ethical responsibility",
+            "Media Ethics: ethical issues in Privacy, cyber space, pornography, representation and differences-marginalization",
+            "Legal Ethics: law and morality, Legal Obligation, Authority and Validity of Law",
+            "Philosophical Counseling: Managing everyday problems"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

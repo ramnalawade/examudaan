@@ -1,0 +1,158 @@
+{
+  "docId": 11415,
+  "examName": "Lecturer (Environment) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "व्याख्याता (पर्यावरण) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer (Environment) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": "व्याख्याता (पर्यावरण) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Fundamentals of Environmental Sciences",
+          "unitTitleMr": "पर्यावरण विज्ञानाची मूलभूत तत्त्वे",
+          "topics": [
+            "Definition, Principles and Scope of Environmental Science.",
+            "Structure and composition of atmosphere, hydrosphere, lithosphere and biosphere.",
+            "Earth's metamorphic changes and environmental conditions, Earth's uniqueness for survival and flourishing living organisms, unique physical phenomenon in earth's environment.",
+            "Laws of thermodynamics, heat transfer processes, mass and energy transfer across various interfaces, material balance.",
+            "Meteorological parameters - pressure, temperature, precipitation, humidity, mixing ratio, saturation mixing ratio, radiation and wind velocity, adiabatic lapse rate, environmental lapse rate. Wind roses.",
+            "Interaction between Earth, Man and Environment. Biogeographic provinces of the world and agro-climatic zones of India. Concept of sustainable development.",
+            "Natural resources and their assessment.",
+            "Remote Sensing and GIS: Principles of remote sensing and GIS. Digital image processing and ground truthing. Application of remote sensing and GIS in land cover/land use planning and management (urban sprawling, vegetation study, forestry, natural resource), waste management and climate change.",
+            "Environmental education and awareness. Environmental ethics."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Environmental Chemistry",
+          "unitTitleMr": "पर्यावरणीय रसायनशास्त्र",
+          "topics": [
+            "Fundamentals of Environmental Chemistry: Classification of elements, Stoichiometry, Gibbs’ energy, chemical potential, chemical kinetics, chemical equilibria, solubility of gases in water, the carbonate system, unsaturated and saturated hydrocarbons, radioisotopes.",
+            "Composition of air. Particles, ions and radicals in the atmosphere. Chemical speciation. Chemical processes in the formation of inorganic and organic particulate matters, thermochemical and photochemical reactions in the atmosphere, Oxygen and Ozone chemistry.",
+            "Hydrological cycle. Water as a universal solvent. Concept of DO, BOD and COD. Sedimentation, coagulation, flocculation, filtration, pH and Redox potential (Eh).",
+            "Inorganic and organic components of soils. Biogeochemical cycles – nitrogen, carbon, phosphorus and sulphur.",
+            "Toxic chemicals: Pesticides and their classification and effects. Biochemical aspects of heavy metals and metalloids. Carcinogens in the air.",
+            "Principles of analytical methods: Titrimetry, Gravimetry, Bomb Calorimetry, Chromatography, Flame photometry, Spectrophotometry, Electrophoresis, XRF, XRD, NMR, FTIR, GC-MS, SEM, TEM."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Environmental Biology",
+          "unitTitleMr": "पर्यावरणीय जीवशास्त्र",
+          "topics": [
+            "Ecology as an inter-disciplinary science. Origin of life and speciation. Human Ecology and Settlement. Evolution of living organisms on earth.",
+            "Ecosystem Structure and functions: Biotic and Abiotic components, Energy flow, food chains and webs, Biogeochemical cycles, Ecological succession, Species diversity, Ecotone, Edge effects, Niche.",
+            "Basis of Ecosystem classification and types: Desert, forest, rangeland, wetlands, lotic, lentic, estuarine, Oceanic.",
+            "Biomes: Concept, classification, and characteristics.",
+            "Population ecology: Characteristics, carrying capacity, population growth, regulations, r and k species.",
+            "Community ecology: Definition, types, interactions, biological invasions.",
+            "Biodiversity and its conservation: Types, importance, threats, hotspots, strategies for conservation, protected areas.",
+            "Toxicology and Microbiology: Absorption, distribution, excretion of toxic agents, toxicity types, major diseases and microbes.",
+            "Environmental Biotechnology: Bioremediation, bioindicators, biofertilizers, biofuels, biosensors."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Environmental Geosciences",
+          "unitTitleMr": "पर्यावरणीय भूविज्ञान",
+          "topics": [
+            "Origin of earth, primary geochemical differentiation, formation of core, mantle, crust, atmosphere and hydrosphere. Concept of minerals and rocks.",
+            "Weathering, erosion, transportation and deposition of sediments. Soil forming minerals and processes.",
+            "Geochemical classification of elements, abundance, partitioning, geochemical recycling, paleoclimate.",
+            "Distribution of water in earth, hydrology and hydrogeology, major basins and groundwater provinces of India, Darcy's law, groundwater quality.",
+            "Natural resource exploration, exploitation, and related environmental concerns.",
+            "Hazard and Disaster: Natural and industrial hazards, prediction, planning, disaster management cycle and preparedness."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Energy and Environment",
+          "unitTitleMr": "ऊर्जा आणि पर्यावरण",
+          "topics": [
+            "Sun as source of energy; solar radiation. Fossil fuels: classification, composition, physico-chemical characteristics.",
+            "Principles of generation of hydro-power, tidal energy, ocean thermal energy conversion, wind power, geothermal energy, solar energy.",
+            "Nuclear energy: fission and fusion, nuclear fuels, reactors, environmental impacts.",
+            "Bioenergy: methods to produce energy from biomass, biofuel production.",
+            "Energy from alternate sources: Hydrogen, solid and liquid waste.",
+            "Environmental implications of energy use, carbon trading, carbon credits, global warming."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Environmental Pollution and Control",
+          "unitTitleMr": "पर्यावरणीय प्रदूषण आणि नियंत्रण",
+          "topics": [
+            "Air Pollution: Sources, types, monitoring, ambient air quality standards, impact, dispersion models, control devices for particulate and gaseous pollutants.",
+            "Noise Pollution: Sources, measurement of noise indices, standards, control and abatement measures, vibrations.",
+            "Water Pollution: Types, sources, measurement of water quality parameters, drinking water standards, water and wastewater treatment technologies.",
+            "Soil Pollution: Properties of soil, analysis, control, industrial effluents, soil micro-organisms.",
+            "Thermal, Marine Pollution and Radioactive Pollution: Sources, causes, consequences, abatement methods, coastal management."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Solid and Hazardous Waste Management",
+          "unitTitleMr": "घन आणि घातक कचरा व्यवस्थापन",
+          "topics": [
+            "Solid Waste: Types, sources, characteristics, collection, transportation, processing, recovery, recycling, disposal methods.",
+            "Hazardous waste: Classification, characteristics, health impacts, management, treatment methods.",
+            "Biomedical Waste Management: Sources, classification, storage, transportation, treatment, and disposal.",
+            "Radioactive Waste Management: Fundamentals, sources, measures, health effects, disposal options.",
+            "Occupational health hazards, e-waste, flyash, and plastic waste management."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Environmental Assessment, Management and Legislation",
+          "unitTitleMr": "पर्यावरणीय मूल्यांकन, व्यवस्थापन आणि कायदे",
+          "topics": [
+            "Aims and objectives of Environmental Impact Assessment (EIA), EIS, EMP, guidelines, life-cycle analysis, environmental audit.",
+            "Risk Assessment: Hazard identification, risk characterization, risk management.",
+            "Overview of Environmental Laws in India: Constitutional provisions, Wildlife Protection Act, Forest Conservation Act, Water Act, Air Act, Environment (Protection) Act, and various waste management rules.",
+            "National policies, environmental conventions, and international agreements (Stockholm, Montreal, Basel, Rio, Kyoto, etc.)."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Statistical Approaches and Modelling in Environmental Sciences",
+          "unitTitleMr": "पर्यावरण विज्ञानातील सांख्यिकीय दृष्टिकोन आणि मॉडेलिंग",
+          "topics": [
+            "Attributes and Variables: types, scales of measurement, central tendency, dispersion, probability theory, sampling theory, distributions, correlation, regression, tests of hypothesis.",
+            "Concept of modelling and simulations, types of models, validation, population growth models, Lotka-Volterra model, Gaussian plume model, Leslie's matrix model."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Contemporary Environmental Issues",
+          "unitTitleMr": "समकालीन पर्यावरणीय समस्या",
+          "topics": [
+            "Global Environmental Issues: Biodiversity loss, climate change, ozone layer depletion, sea level rise.",
+            "National Action Plan on Climate Change and its eight national missions.",
+            "Current Environmental Issues in India: Water resource projects, water conservation, river conservation plans, eutrophication, desertification.",
+            "Forest and wildlife conservation projects in India.",
+            "Sustainable habitat, green buildings, GRIHA rating norms, vehicular emission norms, epidemiological issues, and environmental disasters."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever Acts/Rule/Regulations are mentioned in syllabus, latest amendments/versions to be considered."
+  ]
+}

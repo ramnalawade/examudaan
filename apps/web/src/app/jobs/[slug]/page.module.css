@@ -406,3 +406,147 @@
   color: #ea580c;
 }
 
+/* ---- Community Retention / WhatsApp & Telegram Card ---- */
+.communityRetentionCard {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 18px;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.communityHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.communityIcon {
+  font-size: 22px;
+  color: #38bdf8;
+}
+
+.communityTitle {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  font-family: var(--font-outfit);
+}
+
+.communityDesc {
+  font-size: 12.5px;
+  color: #94a3b8;
+  margin: 0 0 14px;
+  line-height: 1.45;
+}
+
+.communityButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.telegramBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: #0284c7;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.telegramBtn:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+}
+
+.whatsappBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: #16a34a;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.whatsappBtn:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+.retentionIcon {
+  font-size: 18px;
+}
+
+/* Not Found / Relocated card */
+.notFoundWrapper {
+  padding: 40px 0 80px;
+}
+
+.notFoundCard {
+  max-width: 620px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 28px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.notFoundIcon {
+  font-size: 44px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.notFoundTitle {
+  color: var(--on-surface, #0f172a);
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 12px;
+  font-family: var(--font-outfit, sans-serif);
+}
+
+.notFoundDesc {
+  color: var(--secondary, #64748b);
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.notFoundActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.notFoundPrimaryBtn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.notFoundOutlineBtn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+

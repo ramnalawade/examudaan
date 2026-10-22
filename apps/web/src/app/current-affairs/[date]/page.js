@@ -9,6 +9,7 @@
 
 import Link from 'next/link'
 import styles from './dailySummary.module.css'
+import { fitDescription } from '@/lib/seoMetadata'
 
 // ── URL helper — converts "01-october-2026" → "2026-10-01" ────
 function slugToDate(slug) {
@@ -40,28 +41,53 @@ async function getDailySummary(dateStr) {
   }
 }
 
-// ── SEO Metadata ───────────────────────────────────────────────
 export async function generateMetadata({ params }) {
   const { date: slug } = await params
   const dateStr = slugToDate(slug)
   if (!dateStr) {
-    return { title: 'Current Affairs | ExamUdaan' }
+    return { title: { absolute: 'Daily Current Affairs | ExamUdaan' } }
   }
 
   const dateDisplay = new Date(dateStr).toLocaleDateString('en-IN', {
     day: 'numeric', month: 'long', year: 'numeric',
   })
 
+  // Pattern: "{Date} Current Affairs - Daily GK PDF | ExamUdaan", max 60 chars
+  let title = `${dateDisplay} Current Affairs - Daily GK PDF | ExamUdaan`
+  if (title.length > 60) {
+    title = `${dateDisplay} Current Affairs - Daily GK PDF`
+  }
+  if (title.length > 60) {
+    title = `${dateDisplay} Current Affairs | ExamUdaan`
+  }
+  if (title.length > 60) {
+    title = `${dateDisplay} Current Affairs`.slice(0, 60)
+  }
+
+  const description = fitDescription(
+    `Daily current affairs digest for ${dateDisplay} — essential for MPSC, UPSC, Police Bharti, SSC & Banking. Bilingual English & Marathi summary with exam angles.`,
+    'Daily Chalu Ghadamodi GK on ExamUdaan.'
+  )
+
+  const canonicalUrl = `https://examudaan.in/current-affairs/${slug}`
+
   return {
-    title: `Current Affairs ${dateDisplay}`,
-    description: `Daily current affairs digest for ${dateDisplay} — essential for MPSC, UPSC, Police Bharti, SSC, and Banking exams. Bilingual English + Marathi summary with exam angles.`,
+    title: { absolute: title },
+    description,
     alternates: {
-      canonical: `https://examudaan.in/current-affairs/${slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title: `Current Affairs ${dateDisplay} | ExamUdaan`,
-      description: `Daily Chalu Ghadamodi digest — MPSC, UPSC, Police Bharti important news for ${dateDisplay}.`,
-      url: `https://examudaan.in/current-affairs/${slug}`,
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: 'ExamUdaan',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
     },
   }
 }

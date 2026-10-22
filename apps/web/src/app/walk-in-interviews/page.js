@@ -50,11 +50,11 @@ function WalkInCard({ item }) {
         </div>
 
         {/* Title */}
-        <h3 className={styles.cardTitle}>
+        <h2 className={styles.cardTitle}>
           <Link href={`/jobs/${item.slug || item.id}`} className={styles.titleLink}>
             {item.title}
           </Link>
-        </h3>
+        </h2>
 
         {/* Key details row */}
         <div className={styles.detailRow}>

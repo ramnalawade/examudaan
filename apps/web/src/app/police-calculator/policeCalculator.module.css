@@ -317,3 +317,16 @@
   transition: background .15s;
 }
 .whatsappShareBtn:hover { background: #1eb956; }
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 32px 0 24px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+  .card {
+    padding: 18px 14px;
+    border-radius: 12px;
+  }
+}

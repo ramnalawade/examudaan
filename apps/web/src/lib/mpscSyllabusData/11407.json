@@ -1,0 +1,194 @@
+{
+  "docId": 11407,
+  "examName": "Assistant Professor (Botany) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (वनस्पतिशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ (संलग्र महाविद्यालयीन शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Botany) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": "सहाय्यक प्राध्यापक (वनस्पतिशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ (संलग्र महाविद्यालयीन शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "1. Molecules and their interaction relevant to Biology",
+          "unitTitleMr": "१. जीरशास्त्राशी संबंधित रेणू आणि त्यांची आंतरक्रिया",
+          "topics": [
+            "A. Structure of atoms, molecules and chemical bonds.",
+            "B. Composition, structure and function of biomolecules (carbohydrates, lipids, proteins, nucleic acids and vitamins).",
+            "C. Stabilizing interactions (Van der Waals, electrostatic, hydrogen bonding, hydrophobic interaction, etc.).",
+            "D. Principles of biophysical chemistry (pH, buffer, reaction kinetics, thermodynamics, colligative properties).",
+            "E. Bioenergetics, glycolysis, oxidative phosphorylation, coupled reaction, group transfer, biological energy transducers.",
+            "F. Principles of catalysis, enzymes and enzyme kinetics, enzyme regulation, mechanism of enzyme catalysis, isozymes.",
+            "G. Conformation of nucleic acids (helix (A, B, Z), t-RNA, micro-RNA). Stability of proteins and nucleic acids.",
+            "H. Metabolism of carbohydrates, lipids, amino acids, nucleotides and vitamins."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "2. Cellular organization",
+          "unitTitleMr": "२. पिशकीय संघटन",
+          "topics": [
+            "A. Membrane structure and function :- Structure of model membrane, lipid bilayer and membrane protein diffusion, osmosis, ion channels, active transport, membrane pumps, mechanism of sorting and regulation of intracellular transport, electrical properties of membranes.",
+            "B. Structural organization and function of intracellular organelles :- Cell wall, nucleus, mitochondria, Golgi bodies, lysosomes, endoplasmic reticulum, peroxisomes, plastids, vacuoles, chloroplast, structure & function of cytoskeleton and its role in motility.",
+            "C. Organization of genes and chromosomes :- Operon, unique and repetitive DNA, interrupted genes, gene families, structure of chromatin and chromosomes, heterochromatin, euchromatin, transposons.",
+            "D. Cell division and cell cycle :- Mitosis and meiosis, their regulation, steps in cell cycle, regulation and control of cell cycle.",
+            "E. Microbial Physiology: - Growth yield and characteristics, strategies of cell division, stress response."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "3. Fundamental processes",
+          "unitTitleMr": "३. मूलभूत प्रक्रिया",
+          "topics": [
+            "A. DNA replication, repair and recombination :- Unit of replication, enzymes involved replication origin and replication fork, fidelity of replication, extrachromosomal replicons, DNA damage and repair mechanisms, homologous and site-specific recombination.",
+            "B. RNA synthesis and processing :- transcription factors and machinery, formation of initiation complex, transcription activator and repressor, RNA polymerases, capping, elongation, and termination, RNA processing, RNA editing, splicing and polyadenylation, structure and function of different types of RNA, RNA transport.",
+            "C. Protein synthesis and processing :- Ribosome, formation of initiation complex, initiation factors and their regulation, elongation and elongation factors, termination, genetic code, aminoacylation of tRNA, tRNA-identity, aminoacyl tRNA synthetase, and translational proof-reading, translational inhibitors, Post- translational modification of proteins.",
+            "D. Control of gene expression at transcription and translation level :- regulating the expression of phages, viruses, prokaryotic and eukaryotic genes, role of chromatin in gene expression and gene silencing."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "4. Cell communication and Cell signaling",
+          "unitTitleMr": "४. पेशी संप्रेषण आणि पेशी संकेत",
+          "topics": [
+            "A. Host parasite interaction :- Recognition and entry processes of different pathogens like bacteria, viruses into animal and plant host cells, alteration of host cell behavior by pathogens, virus-induced cell transformation, pathogen-induced diseases in animals and plants, cell-cell fusion in both normal and abnormal cells.",
+            "B. Cell signaling :- Hormones and their receptors, cell surface receptor, signaling through G-protein coupled receptors, signal transduction pathways, second messengers, regulation of signaling pathways, bacterial and plant two-component systems, light signaling in plants, bacterial chemotaxis and quorum sensing.",
+            "C. Cellular communication :- Regulation of hematopoiesis, general principles of cell communication, cell adhesion and roles of different adhesion molecules, gap junctions, extracellular matrix, integrins, neurotransmission and its regulation.",
+            "D. Cancer :- Genetic rearrangements in progenitor cells, oncogenes, tumor suppressor genes, cancer and the cell cycle, virus-induced cancer, metastasis, interaction of cancer cells with normal cells, apoptosis, therapeutic interventions of uncontrolled cell growth."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "5. Developmental Biology",
+          "unitTitleMr": "५. विकासात्मक जीवशास्त्र",
+          "topics": [
+            "A. Basic concepts of Plant development :- Potency, commitment, specification, induction, competence, determination and differentiation, morphogenetic gradients, cell fate and cell lineages, Polarity and symmetry, Juvenility and transition to adult phase, Cytoplasmic determinants, imprinting, mutants and transgenics in analysis of development.",
+            "B. Vegetative development: - Meristems types and activities of meristems. Organization of shoot and root apical meristems. Regulation of meristem size, lateral organ initiation from root and shoot meristems. Leaf development, plastochron, phyllotaxy, development of trichrome and stomata. Development of Vascular elements, Secondary growth and Secretory tissues – Nectaries, laticifers, resin ducts.",
+            "C. Reproductive development :- Transition from vegetative to reproductive phase in shoot apex, floral meristems and floral development. Male Gametophyte - Development of stamen, anther structure, tapetum, microsporogenesis, pollen and male gametophyte. Female Gametophyte - Development of carpel, ovule, placenta, sporogenous tissue, integuments, megasporogenesis, female gametophyte. Pollen and pistil interaction - Structure of pollen, Pollen wall proteins, Structure of stigma and style, Chemotropism, Stigma surface proteins, pollen germination, pollen tube guidance, self-incompatibility. Post fertilization events - double fertilization and triple fusion, role of synergids, endosperm development.",
+            "D. Morphogenesis and organogenesis in plants :- Organization of shoot and root apical meristem, shoot and root development, transition to flowering, floral meristems and floral development in Arabidopsis and Antirrhinum.",
+            "E. Programmed cell death, aging and senescence :- Types of cell death observed in plants. Overview of senescence, pigment and protein metabolism during senescence. Impact of senescence on Photosynthesis and oxidative metabolism. Degradation of nucleic acid during senescence. Endogenous plant growth regulators and senescence, Environmental influence on senescence."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "6. System Physiology – Plant",
+          "unitTitleMr": "६. प्रणाली शरीरक्रियाशास्त्र - वनस्पती",
+          "topics": [
+            "A. Photosynthesis - Light harvesting complexes, mechanisms of electron transport, photoprotective mechanisms, CO2 fixation-C3, C4 and CAM pathways.",
+            "B. Respiration and photorespiration – Citric acid cycle, plant mitochondrial electron transport and ATP synthesis, alternate oxidase, photo respiratory pathway.",
+            "C. Nitrogen metabolism - Nitrate and ammonium assimilation, amino acid biosynthesis.",
+            "D. Plant hormones – Biosynthesis, storage, breakdown and transport, physiological effects and mechanisms of action.",
+            "E. Sensory photobiology - Structure, function and mechanisms of action of phytochromes, cryptochromes and phototropins, stomatal movement, photoperiodism and biological clocks.",
+            "F. Solute transport and photoassimilate translocation – uptake, transport and translocation of water, ions, solutes and macromolecules from soil, through cells, across membranes, through xylem and phloem, transpiration, mechanisms of loading and unloading of photoassimilates.",
+            "G. Secondary metabolites - Biosynthesis of terpenes, phenols and nitrogenous compounds and their roles.",
+            "H. Stress physiology – Responses of plants to biotic (pathogen and insects) and abiotic (water, temperature and salt) stresses."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "7. Inheritance Biology",
+          "unitTitleMr": "७. अनुवंशशास्त्र",
+          "topics": [
+            "A. Mendelian principles: Dominance, segregation, independent assortment.",
+            "B. Concept of gene: Allele, multiple alleles, pseudoallele, complementation tests.",
+            "C. Extensions of Mendelian principles: Codominance, incomplete dominance, gene interactions, pleiotropy, genomic imprinting, penetrance and expressivity, phenocopy, linkage and crossing over, sex linkage, sex limited and sex influenced characters.",
+            "D. Gene mapping methods: Linkage maps, tetrad analysis, mapping with molecular markers, mapping by using somatic cell hybrids, development of mapping population in plants.",
+            "E. Extra chromosomal inheritance: Inheritance of Mitochondrial and chloroplast genes, maternal inheritance.",
+            "F. Microbial genetics: Methods of genetic transfers – transformation, conjugation, transduction and sex-duction, mapping genes by interrupted mating, fine structure analysis of genes.",
+            "G. Human genetics: Pedigree analysis, lod score for linkage testing, karyotypes, genetic disorders.",
+            "H. Quantitative genetics: Polygenic inheritance, heritability and its measurements, QTL mapping.",
+            "I. Mutation: Types, causes and detection, mutant types – lethal, conditional, biochemical, loss of function, gain of function, germinal verses somatic mutants, insertional mutagenesis.",
+            "J. Structural and numerical alterations of chromosomes: Deletion, duplication, inversion, translocation, ploidy and their genetic implications.",
+            "K. Recombination: Homologous and non-homologous recombination including transposition."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "8. Diversity of life forms",
+          "unitTitleMr": "८. जीवन रूपांची विविधता",
+          "topics": [
+            "A. Principles & methods of taxonomy: Concepts of species and hierarchical taxa, biological nomenclature, classical & quantitative methods of taxonomy of plants.",
+            "B. Levels of structural organization: Unicellular, colonial and multicellular forms. Levels of organization of tissues, organs & systems.",
+            "C. Outline classification of plants: Important criteria used for classification in each taxon. Classification of plants. Phases of taxonomy. Evolutionary relationships among taxa.",
+            "D. Botanical nomenclature: Apomorphies of Angiosperms, Taxonomic hierarchy, Taxonomic tools and literature, causes of variations in population, population and environment.",
+            "E. Biosystematics: Concepts and categories, scope and limitations. Taxometrics: Principles, methodology, merits and demerits. Cladistics: Principles, cladistic approach in plant classification, merits and demerits.",
+            "F. Endemism, hotspots, IUCN categories, biodiversity strategy and systematics agenda for 2020.",
+            "G. Organisms of conservation concern: Rare, endangered species. Conservation strategies."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "9. Ecological Principles",
+          "unitTitleMr": "९. पर्यावरणीय तत्त्वे",
+          "topics": [
+            "A. The Environment: Physical environment, biotic environment, biotic and abiotic interactions.",
+            "B. Habitat and Niche: Concept of habitat and niche, niche width and overlap, fundamental and realized niche, resource partitioning, character displacement.",
+            "C. Population Ecology: Characteristics of a population, population growth curves, population regulation, life history strategies (r and K selection), concept of metapopulation – demes and dispersal, interdemic extinctions, age structured populations.",
+            "D. Species Interactions: Types of interactions, interspecific competition, herbivory, carnivory, pollination, symbiosis.",
+            "E. Community Ecology: Nature of communities, community structure and attributes, levels of species diversity and its measurement, edges and ecotones.",
+            "F. Ecological Succession: Types, mechanisms, changes involved in succession, concept of climax.",
+            "G. Ecosystem Ecology: Ecosystem structure, ecosystem function, energy flow and mineral cycling (C,N,P), primary production and decomposition, structure and function of some Indian ecosystems: terrestrial (forest, grassland) and aquatic (fresh water, marine, estuarine).",
+            "H. Biogeography: Major terrestrial biomes, theory of island biogeography, biogeographical zones of India.",
+            "I. Applied Ecology: Environmental pollution, global environmental change, biodiversity: status, monitoring and documentation, major drivers of biodiversity change, biodiversity management approaches.",
+            "J. Conservation Biology: Principles of conservation, major approaches to management, Indian case studies on conservation/management strategy (Biosphere reserves)."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "10. Evolution and Behaviour",
+          "unitTitleMr": "१०. उत्क्रांती आणि वर्तन",
+          "topics": [
+            "A. Emergence of evolutionary thoughts Lamarck, Darwin – concepts of variation, adaptation, struggle, fitness and natural selection, Mendelism, Spontaneity of mutations, The evolutionary synthesis.",
+            "B. Origin of cells and unicellular evolution: Origin of basic biological molecules, Abiotic synthesis of organic monomers and polymers, Concept of Oparin and Haldane, Experiment of Miller (1953), The first cell, Evolution of prokaryotes, Origin of eukaryotic cells, Evolution of unicellular eukaryotes, Anaerobic metabolism, photosynthesis and aerobic metabolism.",
+            "C. Paleo botany and Evolutionary History: The Geological time scale, Eras, periods and epoch, Major events in the evolutionary time scale, Fossils, process of fossilization, Types of fossils. Study of some fossils – Psilopsida, Lycopsida, Lepidodendron, Sphenopsida, Calamitales. Major groups of plants.",
+            "D. Molecular Evolution: Concepts of neutral evolution, molecular divergence and molecular clocks, Molecular tools in phylogeny, classification and identification, Protein and nucleotide sequence analysis, origin of new genes and proteins, Gene duplication and divergence.",
+            "E. The Mechanisms: Population genetics – Populations, Gene pool, Gene frequency, Hardy-Weinberg Law, concepts and rate of change in gene frequency through natural selection, migration and random genetic drift, Adaptive radiation, Isolating mechanisms, Speciation, Allopatricity and Sympatricity, Convergent evolution, Sexual selection, Co-evolution."
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "11. Applied Biology",
+          "unitTitleMr": "११. उपयोजित जीवशास्त्र",
+          "topics": [
+            "A. Microbial fermentation: Production of small and macromolecules.",
+            "B. Tissue and cell culture methods for plants. Applications of Tissue culture in Agriculture.",
+            "C. Transgenic plants. Genomics and its application to health and agriculture, including gene therapy.",
+            "D. Bio resource and uses of biodiversity.",
+            "E. Breeding in plants - including marker – assisted selection.",
+            "F. Bioremediation and phytoremediation.",
+            "G. Biosensors."
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "12. Methods in Biology",
+          "unitTitleMr": "१२. जीवशास्त्रातील पद्धती",
+          "topics": [
+            "A. Molecular Biology and Recombinant DNA methods: Isolation and purification of RNA, DNA (genomic and plasmid) and proteins, different separation methods. Analysis of RNA, DNA and proteins by one and two dimensional gel electrophoresis, Isoelectric-focusing gels. Molecular cloning of DNA or RNA fragments in bacterial and eukaryotic systems. Expression of recombinant proteins using bacterial, animal and plant vectors. Isolation of specific nucleic acid sequences. Generation of genomic and cDNA libraries in plasmid, phage, cosmid, BAC and YAC vectors. In vitro mutagenesis and deletion techniques, gene knock out in bacterial and eukaryotic organisms. Protein sequencing methods, detection of post translation modification of proteins. DNA sequencing methods, strategies for genome sequencing. Methods for analysis of gene expression at RNA and protein level, large-scale expression, such as micro array based techniques. Isolation, separation and analysis of carbohydrate and lipid molecules. RFLP, RAPD and AFLP techniques.",
+            "B. Modern cytogenetic techniques - Flow cytometry, Electrostatic cell sorting, in situ localization by techniques such as FISH and GISH.",
+            "C. Biophysical Method: Molecular analysis using UV/visible, fluorescence, circular dichroism, NMR and ESR spectroscopy. Molecular structure determination using X-ray diffraction and NMR. Molecular analysis using light scattering, different types of mass spectrometry and surface plasma resonance methods.",
+            "D. Statistical Methods: Measures of central tendency and dispersal, probability distributions (Binomial, Poisson and normal), Sampling distribution, Difference between parametric and non-parametric statistics, Confidence Interval, Errors, Levels of significance, Regression and Correlation, t-test, Analysis of variance, Chi-square test, Basic introduction to Multivariate statistics.",
+            "E. Mutation and radioactive active isotopes for plant improvement techniques: Nature and classification of mutations: spontaneous and induced mutations, micro and macro mutations, pre and post adaptive mutations - Detection of mutations in lower and higher organisms - paramutations. Mutagenic agents: physical -- Radiation types and sources: Ionizing and non-ionizing radiations viz., X rays, y rays, protons, neutrons and UV rays - Radiobiology: mechanism of action of various radiations (photoelectric absorption, Compton scattering and pair production) and their biological effects - RBE and LET relationships. Treatment methods using physical and chemical mutagens. Dose determination, Detection and measurement of different types of radioisotopes normally used in plant improvement, incorporation of radioisotopes in biological tissues and cells, molecular imaging of radioactive material, safety guidelines.",
+            "F. Microscopic techniques: Visualization of cells and subcellular components by light microscopy, resolving powers of different microscopes, microscopy of living cells, scanning and transmission microscopes, different fixation and staining techniques for EM, freeze-etch and freeze-fracture methods for EM, image processing methods in microscopy.",
+            "G. Methods in field biology: Methods of estimating population density of plants, ranging patterns through direct, indirect and remote observations, sampling methods in the study of behavior, habitat characterization: ground and remote sensing methods."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

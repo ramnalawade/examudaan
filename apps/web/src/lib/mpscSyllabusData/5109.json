@@ -1,0 +1,287 @@
+{
+  "docId": 5109,
+  "examName": "Assistant Town Planner, Group-B",
+  "examNameMr": "सहाय्यक नगर रचनाकार, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Town Planner, Group-B Syllabus",
+      "paperTitleMr": "सहाय्यक नगर रचनाकार, गट-ब अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current events and Technology",
+          "unitTitleMr": "चालू घडामोडी आणि तंत्रज्ञान",
+          "topics": [
+            "Current events of national and international importance",
+            "Industrial, Economic, Spatial Planning",
+            "Urban Development",
+            "Technology - Applications of Total station, Drone, Remote sensing, GIS, GPS, Computer-Aided Design in Urban Planning"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Urbanisation, Govt. Schemes and Missions",
+          "unitTitleMr": "नागरीकरण, शासकीय योजना आणि मोहिमा",
+          "topics": [
+            "Salient features of Indian Urbanisation with specific reference to Maharashtra",
+            "Challenges of Urbanisation",
+            "Atal Mission for Rejuvenation and Urban Transformation",
+            "Shyam Prasad Mukherjee Rurban Mission",
+            "Pradhan Mantri Awas Yojna",
+            "Smart City"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Policies in India and Maharashtra",
+          "unitTitleMr": "भारत आणि महाराष्ट्रातील धोरणे",
+          "topics": [
+            "National Urban Transport Policy",
+            "National Land-utilisation policy",
+            "National Housing Policy"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "RTI & RTS Acts",
+          "unitTitleMr": "माहिती अधिकार आणि सेवा हक्क अधिनियम",
+          "topics": [
+            "Right to Information Act",
+            "Right to Services Act"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Theories of Planning",
+          "unitTitleMr": "नियोजनाचे सिद्धांत",
+          "topics": [
+            "Garden City Concept",
+            "Geddian Trio Concept",
+            "Concentric zone model",
+            "Sector Theory",
+            "Multi-nuclei theory",
+            "Neighborhood Concept"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Regional Plan",
+          "unitTitleMr": "प्रादेशिक योजना",
+          "topics": [
+            "Need of Regional Plan",
+            "Delineation of Region",
+            "Types of Regions",
+            "Contents of Regional Plan",
+            "Surveys necessary for Regional Plan",
+            "Analysis and Projections",
+            "Process of preparation of Regional Plan as per provisions of MR and TP Act, 1966",
+            "Relation with State Plan and surroundings"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Development Plan",
+          "unitTitleMr": "विकास आराखडा",
+          "topics": [
+            "Difference between Structure Plan and Development Plan",
+            "Classification of Towns",
+            "Surveys, Analysis and Projections",
+            "Demographic projections",
+            "Goals and Objectives",
+            "Public participation",
+            "Implementation and financial aspects",
+            "Relation with Regional Plan",
+            "Contents of D.P.",
+            "Planning norms",
+            "Modifications to sanctioned DP",
+            "Modifications of substantial nature",
+            "Notices under section 49 and 127",
+            "Process of DP preparation, publication, submission and approval as per provisions of MR and TP Act, 1966"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Town Planning Scheme",
+          "unitTitleMr": "नगर रचना योजना",
+          "topics": [
+            "Concept, Preparation of TP Scheme as per provisions of MR and TP Act, 1966",
+            "Relation with DP",
+            "Original Plot, Final Plot, Semi-final plot",
+            "Incremental contribution and rationale for charging it",
+            "Contents of TPS",
+            "Cost of TPS",
+            "Advance possession",
+            "Amenities partially beneficial",
+            "Functions of Arbitrator",
+            "Functions of Tribunal of Appeal"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Local Area Plan",
+          "unitTitleMr": "स्थानिक क्षेत्र योजना",
+          "topics": [
+            "Concept, Objectives",
+            "Delineation of LAP boundary",
+            "Methodology of preparation",
+            "Case studies in India",
+            "Provision in UDCPR"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Unified Development Control Regulations",
+          "unitTitleMr": "एकत्रित विकास नियंत्रण नियमावली",
+          "topics": [
+            "Procedure for obtaining development permission/building permission",
+            "Grant/refusal of permission, deemed permission",
+            "Approvals on risk-based categorisation",
+            "Commencement of works",
+            "General land development requirements",
+            "Land-Use Classification and equivalency of zones",
+            "Concept of p-line",
+            "Ancillary FSI, TDR, AR, Reservation Credit Certificate",
+            "Removal of difficulties",
+            "Redevelopment of old dilapidated/dangerous buildings",
+            "Housing for EWS/LIG",
+            "Incentive for green buildings",
+            "Off-street parking requirements",
+            "Affordable housing",
+            "Voluntary TP Schemes",
+            "Heritage list card",
+            "Premiums and their payment",
+            "Integrated Township",
+            "Transit oriented development"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Development Charges and Appeal",
+          "unitTitleMr": "विकास शुल्क आणि अपील",
+          "topics": [
+            "Development charges",
+            "Revocation of permission",
+            "Provisions of appeal under section 47 and 124",
+            "Actions against unauthorised development"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Transportation System",
+          "unitTitleMr": "वाहतूक प्रणाली",
+          "topics": [
+            "Transportation Studies",
+            "Origin and Destination",
+            "Traffic volume survey",
+            "Modal split",
+            "Transport system"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Environment",
+          "unitTitleMr": "पर्यावरण",
+          "topics": [
+            "Environment Clearance",
+            "Environmental Impact Assessment"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Acts and Rules",
+          "unitTitleMr": "कायदे आणि नियम",
+          "topics": [
+            "Evolution of Planning Legislation in India",
+            "Maharashtra Regional Town Planning Act, 1966 and rules thereunder",
+            "Maharashtra Municipal Corporations Act, 1949",
+            "Maharashtra Municipal Councils, Nagar Panchayats and Industrial Townships Act, 1965",
+            "Maharashtra Land Revenue Code, 1966",
+            "Environment Protection Act, 1986",
+            "Bombay Stamp Act, 1958",
+            "73rd and 74th Constitutional Amendment Act"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Land Acquisition",
+          "unitTitleMr": "भूसंपादन",
+          "topics": [
+            "Need of compulsory acquisition",
+            "Functions of Land Acquisition officer",
+            "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Valuation Basics",
+          "unitTitleMr": "मूल्यांकन मूलभूत गोष्टी",
+          "topics": [
+            "Value, Cost, Price",
+            "Purposes of Valuation",
+            "Special Characteristics of landed property",
+            "Supply and demand of landed property",
+            "Interests in landed property",
+            "Forms of Value",
+            "Forms of rent",
+            "Capitalised value",
+            "Year's purchase",
+            "Outgoing, Depreciation, sinking fund, reversionary value"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Valuation Tables",
+          "unitTitleMr": "मूल्यांकन तक्ते",
+          "topics": [
+            "Meaning and utilities of valuation tables",
+            "Amount of Rs. 1/-",
+            "Present value of Rs 1/-",
+            "Amount of Rs.1/- p.a.",
+            "Present value of Rs.1/-p.a.",
+            "Annuity of Rs.1/-",
+            "Sinking fund",
+            "Single and dual rate table-concepts"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Methods of Valuation",
+          "unitTitleMr": "मूल्यांकनाच्या पद्धती",
+          "topics": [
+            "Comparative methods",
+            "Market Approach",
+            "Contractor's method",
+            "Investment method",
+            "Belting method"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Annual Statement of Rates",
+          "unitTitleMr": "वार्षिक दर तक्ता",
+          "topics": [
+            "True Market Value",
+            "Procedure for preparation of Annual Statement of Rates",
+            "Valuation for bulk land"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import pyqSeedData from '@/lib/pyqSeed.json'
 import PyqSubjectClient from './PyqSubjectClient'
+import { fitDescription } from '@/lib/seoMetadata'
 
 // All 9 supported subjects
 export const SUBJECT_METADATA = {
@@ -94,21 +95,44 @@ export async function generateMetadata({ params }) {
   const info = SUBJECT_METADATA[resolvedParams.subject]
   if (!info) return {}
 
-  const title = `${info.name} PYQ Questions`
+  // Pattern: "{Subject} PYQ Question Paper with Answer Key PDF", max 60 chars
+  let title = `${info.name} PYQ Paper with Answer Key PDF`
+  if (title.length > 60) {
+    title = `${info.dbSubject} PYQ Paper with Answer Key PDF`
+  }
+  if (title.length > 60) {
+    title = `${info.dbSubject} PYQ Question Paper & Key PDF`
+  }
+  if (title.length > 60) {
+    title = `${info.dbSubject} PYQ Question Paper PDF`
+  }
+  if (title.length > 60) {
+    title = `${info.dbSubject} PYQ Paper PDF`.slice(0, 60)
+  }
+
   const canonicalUrl = `https://examudaan.in/pyq/${info.slug}`
+  const description = fitDescription(
+    `Practice ${info.count}+ solved ${info.name} previous year questions (PYQ) with official answer keys for MPSC, Police Bharti & Talathi.`,
+    'Free question bank on ExamUdaan.'
+  )
 
   return {
-    title,
-    description: info.description,
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
       title,
-      description: info.description,
+      description,
       url: canonicalUrl,
-      siteName: 'ExamUdaan.in',
+      siteName: 'ExamUdaan',
       type: 'article',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
     },
   }
 }

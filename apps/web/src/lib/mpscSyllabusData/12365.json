@@ -1,0 +1,130 @@
+{
+  "docId": 12365,
+  "examName": "Assistant Professor (Persian) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहायक प्राध्यापक (पर्शियन) महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Persian) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": "सहायक प्राध्यापक (पर्शियन) महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Origin and Development of Persian Language",
+          "unitTitleMr": "पर्शियन भाषेची उत्पत्ती आणि विकास",
+          "topics": [
+            "Indo-Aryan family of languages",
+            "Development of Persian script and phonetic changes: Development of Iranian scripts, Cuneiform, Avestan Alphabet, Pahlavi Script",
+            "Avestan language: Its importance, its literature, its poetic style",
+            "Pahlavi language: Pahlavi literature, Poetry in Pahlavi language",
+            "Modern Persian: Development of Modern Persian"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Early History of Persian Literature",
+          "unitTitleMr": "पर्शियन साहित्याचा प्रारंभिक इतिहास",
+          "topics": [
+            "The Period of Tahirid Dynasty (820-872), Saffarid Dynasty (860-903), Samanid Empire (874-999)",
+            "The Earliest poets of Persian language: Abu Hafs Sughdi, Hanzala Badghisi, Firoz Mashriqi, Abu Sulik Gurgani, Mohammad bin Wasif, Abu Shakoor Balkhi, Hakim Kasai Marozi, Rudki Samarqandi, Daqiqi Tusi",
+            "Recommended Books to be studied: Tafsir-e Tabri, Kitabul Buldan"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "The Period of Ghaznavid Dynasty (977-1186)",
+          "unitTitleMr": "गझनावीड राजघराण्याचा काळ (९७७-११८६)",
+          "topics": [
+            "Recommended Poets to be studied: Unsuri, Farrukhi Sistani, Manuchehri Damaghani, Ferdowsi Tusi"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "The Period of Seljuk Dynasty (1037-1194)",
+          "unitTitleMr": "सेलजुक राजघराण्याचा काळ (१०३७-११९४)",
+          "topics": [
+            "Recommended Poets to be studied: Baba Taher Uryan, Abu Sa'eed Abul Khair, Khawja Abdullah Ansari, Sanai Ghaznavi, Fariduddin Attar, Asadi Tusi, Nasir Khusraw, Masud Sa'd Salman, Omar Khayyam, Amir Mu'izzi, Anvari Khavarani, Zahir Faryabi, Khaqani Shirvani, Nizami Ganjavi",
+            "Recommended Books to be studied: Kashaful Mahjoob, Tazkeratul aulia by Attar, Siyasat Nama, Qabus Nama, Marzuban Nama"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Period of Mongol and Timurid Empire",
+          "unitTitleMr": "मंगोल आणि तैमूर साम्राज्याचा काळ",
+          "topics": [
+            "Recommended Poets to be studied: Sa'di Shirazi, Jalaluddin Rumi, Kamaluddin Ismail, Amir Khusrau, Khawjo Kirmani, Salman Saoji, Hafiz Shirazi, Nooruddin Jami",
+            "Recommended Books to be studied: Tarikh-e Jahangusha, Tabaqat-e Nasiri, Lubab ul Albab, Tazkera-e Daulatshah Samarqandi, Akhlaq-e Nasiri, Akhlaq-e Mohsini, Anwarus Suhaili, Nafhaatul Uns"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Period of Safavid and Qachari Dynasties",
+          "unitTitleMr": "सफवी आणि कजार राजघराण्यांचा काळ",
+          "topics": [
+            "Recommended Poets to be studied: Baba Fughani, Wahshi Bafqi, Mohtasham Kashani, Saib Tabrezi, Mushtaq Esfahani, Azar Baigdili, Hakim Qaani, Eraj Mirza, Malikushura Bahar, Arif Qazwaini, Lahuti, Farrukhi Yazdi, Parveen Etesami",
+            "Recommended Books to be studied: Tarikh-e Alam Ara-e Abbasi, Habibus Siyar, Tazkira-e Haft Iqlim, Nasikhut Twarikh"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Persian Literature in India",
+          "unitTitleMr": "भारतातील पर्शियन साहित्य",
+          "topics": [
+            "During the Sultanat Period - Recommended Poets: Tajuddin Reeza, Shihabuddin Mahmara, Amir Khusrau, Hasan Sijzi; Recommended Books: Jawameul Hikayaat, Tajul Maasir, Fawaidus Salikeen, Tarikh-e Firoz Shahi",
+            "Persian Literature in Deccan - Recommended Poets: Zahuri Turshezi, Malik Qummi",
+            "During the Mughal Empire - Recommended Poets: Urfi Shirazi, Faizi, Naziri Nishapuri, Talib Amli, Abutalib Kalim, Abdul Qadir Bedil, Mirza Ghalib; Recommended Books: Tuzuk-e Baburi, Humayun Nama, Tuzuk-e Jahangiri, Akbar Nama, Muntakhabut Twarikh",
+            "During British Period - Recommended Poets: Allama Iqbal; Recommended Books: Sherul Ajam by Maulana Shibli Nomani, The Literary History of Persia by E. G. Brown"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Contemporary Era",
+          "unitTitleMr": "समकालीन काळ",
+          "topics": [
+            "Recommended Poets to be studied: Nima Yushij, Farogh Farrukhzad, Ahmad Shamlo, Nadir Nadirpour, Mehdi Akhavan Sales, Rahi Mo'ayeri",
+            "Recommended Prose writers to be studied: Ali Akbar Dehkhuda, Sadiq Hidayat, Mohammad Ali Jamalzadeh, Buzurg Alavi, Ghulam Husain Saaedi"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Study of different poetic and prose genres",
+          "unitTitleMr": "विविध कविता आणि गद्य प्रकारांचा अभ्यास",
+          "topics": [
+            "Classical forms of poetry: Qasida, Mathnavi, Ghazal, Rubai, Musammat",
+            "Modern forms of poetry: Sh'er-E Nimai, Sh'er-E Sapid",
+            "Rhetorics: Tajnees, Ishteqaq, Luzumma-la-yalzum, seyaqatul Aadad, Qalb, Tarsee, Esteaara, Maratun Nazir, Laff-o-Nashr, Husn-i-Taalil, Tajahuli-Aarefaneh, Talmih",
+            "Prosody: Bahr-I Muzara, Bahr-I Ramal, Bahr-I Mutaqarib, Bahr-i Hazaj",
+            "Different Style of Prose Writing: Nasr-E Sada, Nasr-e Masnoo, Nasr-e Shikasta"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Cultural and Historical Context",
+          "unitTitleMr": "सांस्कृतिक आणि ऐतिहासिक संदर्भ",
+          "topics": [
+            "Influence of Sufi philosophy on Persian poetry and prose",
+            "Major historical events affecting Persian literature (e.g. Islamic conquest, Mongol invasions)",
+            "Persian influence on Indian art, music, and philosophy",
+            "Cultural contributions of Persian literature to Islamic and global civilization",
+            "Influence of Persian on Marathi Language and Literature"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

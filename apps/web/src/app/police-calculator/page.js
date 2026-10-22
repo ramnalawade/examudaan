@@ -192,11 +192,11 @@ export default function PoliceCalculatorPage() {
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <span className="material-symbols-outlined">sprint</span>
-                <h3 className={styles.cardTitle}>
+                <h2 className={styles.cardTitle}>
                   {isMarathi
                     ? `१. ${gender === 'male' ? '१६०० मीटर धावणे' : '८०० मीटर धावणे'} (कमाल २० गुण)`
                     : `1. ${gender === 'male' ? '1600m Running' : '800m Running'} (Max 20 Marks)`}
-                </h3>
+                </h2>
               </div>
               <div className={styles.formGroup}>
                 <div className={styles.formLabel}>
@@ -224,9 +224,9 @@ export default function PoliceCalculatorPage() {
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <span className="material-symbols-outlined">timer</span>
-                <h3 className={styles.cardTitle}>
+                <h2 className={styles.cardTitle}>
                   {isMarathi ? '२. १०० मीटर धावणे (कमाल १५ गुण)' : '2. 100m Sprint (Max 15 Marks)'}
-                </h3>
+                </h2>
               </div>
               <div className={styles.formGroup}>
                 <div className={styles.formLabel}>
@@ -254,11 +254,11 @@ export default function PoliceCalculatorPage() {
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <span className="material-symbols-outlined">fitness_center</span>
-                <h3 className={styles.cardTitle}>
+                <h2 className={styles.cardTitle}>
                   {isMarathi
                     ? `३. गोळाफेक (${gender === 'male' ? '७.२६ किलोग्रॅम' : '४.०० किलोग्रॅम'}) (कमाल १५ गुण)`
                     : `3. Shot Put (${gender === 'male' ? '7.26 kg' : '4.00 kg'}) (Max 15 Marks)`}
-                </h3>
+                </h2>
               </div>
               <div className={styles.formGroup}>
                 <div className={styles.formLabel}>
@@ -286,9 +286,9 @@ export default function PoliceCalculatorPage() {
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <span className="material-symbols-outlined">edit_note</span>
-                <h3 className={styles.cardTitle}>
+                <h2 className={styles.cardTitle}>
                   {isMarathi ? '४. लेखी परीक्षा व जिल्हा निवड (१०० गुण)' : '4. Written Exam & District Selection (100 Marks)'}
-                </h3>
+                </h2>
               </div>
 
               <div className={styles.formGroup}>

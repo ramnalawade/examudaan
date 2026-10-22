@@ -1,0 +1,96 @@
+{
+  "docId": 1718,
+  "examName": "Lecturer in English, Government Polytechnics, Group - A",
+  "examNameMr": "इंग्रजी प्राध्यापक, शासकीय तंत्रनिकेतन, गट - अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer in English, Government Polytechnics, Group - A",
+      "paperTitleMr": "इंग्रजी प्राध्यापक, शासकीय तंत्रनिकेतन, गट - अ",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Common Vocabulary",
+          "unitTitleMr": "समानार्थी व इतर शब्दसंग्रह",
+          "topics": [
+            "Synonyms",
+            "Antonyms",
+            "One word for a phrase",
+            "A Phrase for one word",
+            "One word having different meaning (Polysemy)",
+            "Word Formation",
+            "Words which are pronounced alike but have different meanings (Homonyms)",
+            "Words which are written alike but pronounced differently (Homographs)",
+            "Use of common (active) vocabulary in sentences",
+            "Words commonly mis-spelt"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Sentence structure",
+          "unitTitleMr": "वाक्य रचना",
+          "topics": [
+            "Types of sentences",
+            "Types of clauses",
+            "Transformation of sentences",
+            "A clause to be replaced by a phrase; and a phrase to be replaced by a clause",
+            "Comparisons",
+            "Conditional sentences",
+            "Direct / Indirect speech",
+            "The uses of cohesive devices / sentence connectors",
+            "Types of question",
+            "Ordering/Meaningful sequencing of words in sentences"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Grammar",
+          "unitTitleMr": "व्याकरण",
+          "topics": [
+            "A detailed study of parts of speech",
+            "The use of modal auxiliaries",
+            "The use of Tense forms",
+            "Mood",
+            "Agreement of subject, pronoun, verb",
+            "Sentence corrections / spotting (detecting) common grammatical errors",
+            "Punctuation"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Idioms and phrases",
+          "unitTitleMr": "वाक्प्रचार आणि म्हणी",
+          "topics": [
+            "Meaning",
+            "Appropriate contextual use"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Comprehension of passage",
+          "unitTitleMr": "उतारावरील आकलन",
+          "topics": [
+            "Comprehension of passage"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

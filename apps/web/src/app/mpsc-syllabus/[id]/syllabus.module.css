@@ -1,0 +1,638 @@
+/* apps/web/src/app/mpsc-syllabus/[id]/syllabus.module.css
+   MPSC Interactive Syllabus & Exam Pattern Viewer */
+
+/* ── Base ─────────────────────────────────────────────── */
+.page { background: #FFFBF5; min-height: 100vh; font-family: Inter, sans-serif; color: #1a1a1a; padding-bottom: 60px; }
+
+/* ── Layout — 85% width centred ───────────────────────── */
+.layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); width: 85%; margin: 24px auto 0; min-height: calc(100vh - 120px); box-sizing: border-box; }
+
+/* ── Sidebar TOC ──────────────────────────────────────── */
+.sidebar { background: #fff; border: 1px solid #e0d8cc; border-radius: 12px; padding: 16px 12px; position: sticky; top: 80px; height: calc(100vh - 100px); overflow-y: auto; box-sizing: border-box; align-self: start; }
+.tocSection { margin-bottom: 6px; }
+.tocLabel { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #888; padding: 4px 8px; }
+.tocLink { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 7px; font-size: 13px; color: #444; text-decoration: none; border-left: 3px solid transparent; transition: all 0.15s; }
+.tocLink:hover { background: #fff3e0; color: #EA580C; border-left-color: #EA580C; }
+.tocLinkActive { background: #fff3e0; color: #EA580C; border-left-color: #EA580C; font-weight: 600; }
+.tocMark { font-size: 11px; color: #888; margin-left: auto; }
+.tocDivider { height: 1px; background: #f0ebe3; margin: 8px 0; }
+
+/* ── Main content ─────────────────────────────────────── */
+.main { padding: 0 0 0 28px; min-width: 0; box-sizing: border-box; }
+
+/* ── Breadcrumb ───────────────────────────────────────── */
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #777; margin-bottom: 16px; flex-wrap: wrap; }
+.breadcrumb a { color: #EA580C; text-decoration: none; font-weight: 500; transition: color 0.15s ease; }
+.breadcrumb a:hover { color: #C2410C; text-decoration: underline; }
+.breadcrumbSep { color: #94a3b8; font-size: 13px; }
+.breadcrumbCurrent {
+  color: #334155;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.breadcrumbCurrent:hover {
+  color: #EA580C;
+  text-decoration: underline;
+}
+
+/* ── Exam hero card ───────────────────────────────────── */
+.examHero { background: #fff; border: 1px solid #e0d8cc; border-radius: 14px; padding: 22px 26px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+.examName { font-size: 22px; font-weight: 700; color: #1a1a1a; margin: 0 0 6px; line-height: 1.3; }
+.examNameMr { font-size: 15px; color: #666; margin-bottom: 12px; font-family: 'Mukta', sans-serif; }
+.examMeta { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.metaPill {
+  background: #f4ede4;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  color: #475569;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.metaPillPrimary {
+  background: #EA580C;
+  color: #fff;
+  font-weight: 600;
+}
+
+.metaPillLink {
+  cursor: pointer;
+}
+
+.metaPillLink:hover {
+  background: #ffedd5;
+  color: #ea580c;
+  border-color: #fed7aa;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(234, 88, 12, 0.12);
+}
+
+.metaPillPrimary.metaPillLink:hover {
+  background: #c2410c;
+  color: #ffffff;
+  border-color: #c2410c;
+}
+
+.metaPillIcon {
+  font-size: 14px;
+}
+
+.examPattern { margin-top: 14px; padding: 12px 16px; background: #fff7f0; border-radius: 8px; border-left: 3px solid #EA580C; font-size: 13.5px; color: #444; line-height: 1.5; }
+
+/* ── Stats row ────────────────────────────────────────── */
+.statsRow { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+
+.statBox {
+  background: #fff;
+  border: 1px solid #e0d8cc;
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-align: center;
+  flex: 1 1 120px;
+  min-width: 100px;
+  box-sizing: border-box;
+}
+
+.statBoxLink {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.statBoxLink:hover {
+  border-color: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(234, 88, 12, 0.12);
+  background: #fffdfb;
+}
+
+.statBoxLink:active {
+  transform: translateY(0);
+}
+
+.statVal { font-size: 22px; font-weight: 700; color: #EA580C; }
+.statLabel { font-size: 11px; color: #777; margin-top: 2px; display: flex; align-items: center; justify-content: center; gap: 3px; }
+.statLabelIcon { font-size: 12px; color: #ea580c; opacity: 0; transition: opacity 0.15s ease; }
+.statBoxLink:hover .statLabelIcon { opacity: 1; }
+
+/* ── Download strip ───────────────────────────────────── */
+.downloadStrip { display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #EA580C, #C2410C); border-radius: 12px; padding: 14px 20px; margin-bottom: 20px; gap: 14px; box-sizing: border-box; color: #fff; }
+.downloadTextTitle { display: block; font-size: 15px; font-weight: 700; color: #fff; }
+.downloadText { font-size: 12.5px; color: #ffedd5; display: block; margin-top: 2px; }
+.downloadBtn { background: #fff; color: #EA580C; border-radius: 7px; padding: 8px 18px; font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.15s; }
+.downloadBtn:hover { background: #fff7f0; }
+
+/* ── Section title ────────────────────────────────────── */
+.sectionTitle { font-size: 16px; font-weight: 700; color: #222; margin: 24px 0 12px; display: flex; align-items: center; gap: 8px; }
+.sectionCount { font-size: 12px; color: #888; font-weight: 400; }
+
+/* ── Paper cards — compact, collapsible ──────────────── */
+.paperCard { background: #fff; border: 1.5px solid #e0d8cc; border-radius: 12px; margin-bottom: 14px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.02); transition: border-color 0.15s ease, box-shadow 0.15s ease; }
+.paperCard:hover { border-color: #fed7aa; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.06); }
+.paperToggle { width: 100%; background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 18px; text-align: left; transition: background 0.15s ease; }
+.paperToggle:hover { background: #fffdfa; }
+.paperToggle:focus-visible { outline: 2px solid #ea580c; outline-offset: -2px; }
+.paperNumBadge { width: 32px; height: 32px; background: #EA580C; color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13.5px; flex-shrink: 0; }
+.paperNumBadgeQual { background: #6b7280; }
+.paperMeta { flex: 1; min-width: 0; }
+.paperTitle { font-size: 15px; font-weight: 600; color: #1a1a1a; display: block; line-height: 1.35; }
+.paperTitleMr { font-size: 12.5px; color: #777; display: block; margin-top: 2px; }
+.smallBadge {
+  background: #f4ede4;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 11px;
+  color: #666;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.smallBadge:hover {
+  background: #ffedd5;
+  color: #ea580c;
+  border-color: #fed7aa;
+}
+.smallBadgeClickable { cursor: pointer; transition: all 0.15s ease; }
+.smallBadgeClickable:hover { background: #ffedd5; color: #ea580c; border-color: #fed7aa; }
+.smallBadgePrimary {
+  background: #fff3e0;
+  color: #EA580C;
+  font-weight: 600;
+  border-color: #fed7aa;
+}
+.smallBadgePrimary:hover {
+  background: #ea580c;
+  color: #ffffff;
+}
+.paperMarksCol { text-align: right; flex-shrink: 0; }
+.paperMarks { font-size: 18px; font-weight: 700; color: #EA580C; }
+.paperMarksSub { font-size: 10.5px; color: #888; display: block; }
+.chevron { font-size: 20px; color: #999; flex-shrink: 0; transition: transform 0.2s, color 0.15s; }
+.paperToggle:hover .chevron { color: #ea580c; }
+.chevronOpen { transform: rotate(180deg); color: #ea580c; }
+
+/* ── Paper body (collapsible) ─────────────────────────── */
+.paperBody { padding: 0 18px 18px; border-top: 1px solid #f0ebe3; }
+
+/* ── Unit cards ───────────────────────────────────────── */
+.unitCard { margin: 12px 0 0; border: 1px solid #ede8e0; border-radius: 8px; overflow: hidden; }
+.unitHeader { background: #fdf8f3; padding: 10px 14px; display: flex; align-items: center; gap: 8px; }
+.unitNumDot { width: 22px; height: 22px; background: #EA580C; color: #fff; border-radius: 5px; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.unitTitle { font-size: 13.5px; font-weight: 600; color: #333; flex: 1; }
+.unitTitleMr { font-size: 11.5px; color: #888; }
+.unitCountBadge { font-size: 10.5px; color: #777; background: #f0ece5; border-radius: 20px; padding: 2px 8px; white-space: nowrap; }
+.topicList { padding: 8px 16px 12px 42px; }
+.topicItem { font-size: 13px; color: #444; padding: 5px 0; display: flex; align-items: flex-start; gap: 8px; border-bottom: 1px dotted #f5f0ea; line-height: 1.5; }
+.topicItem:last-child { border-bottom: none; }
+.topicDot { width: 5px; height: 5px; background: #EA580C; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+
+/* ── Optional subjects grid ───────────────────────────── */
+.optGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; margin-bottom: 20px; }
+.optCard { background: #fff; border: 1px solid #e0d8cc; border-radius: 8px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; }
+.optNum { width: 24px; height: 24px; background: #f4ede4; border-radius: 5px; font-size: 11px; font-weight: 700; color: #EA580C; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.optName { font-size: 13px; font-weight: 600; color: #333; }
+.optNameMr { font-size: 11px; color: #888; display: block; font-family: 'Mukta', sans-serif; }
+
+/* ── Qualifying papers pills ──────────────────────────── */
+.qualRow { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.qualPill { background: #f0fdf4; border: 1px solid #86efac; border-radius: 20px; padding: 6px 14px; font-size: 13px; color: #16a34a; font-weight: 500; }
+
+/* ── Notes ────────────────────────────────────────────── */
+.notesList { background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; }
+.noteItem { font-size: 13px; color: #7c4a00; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+.noteItem::before { content: "•"; position: absolute; left: 0; font-weight: 700; }
+
+/* ── Empty / Error ────────────────────────────────────── */
+.errorPage { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; gap: 12px; text-align: center; }
+.errorCode { font-size: 48px; font-weight: 700; color: #EA580C; }
+.errorMsg { font-size: 16px; color: #444; }
+.errorHint { font-size: 12px; color: #888; font-family: monospace; text-align: center; max-width: 480px; }
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .layout { width: 95%; grid-template-columns: 1fr; margin-top: 16px; }
+  .sidebar { display: none; }
+  .main { padding: 0; }
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+  .downloadStrip { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+@media (max-width: 480px) {
+  .layout { width: 100%; padding: 0 12px; }
+  .examName { font-size: 18px; }
+  .paperTitle { font-size: 13.5px; }
+  .paperMarks { font-size: 16px; }
+}
+
+/* ── Interactive Practice PYQ Quiz Section ────────────────── */
+.pyqSection {
+  background: #ffffff;
+  border: 1.5px solid #fed7aa;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 32px 0 24px;
+  box-shadow: 0 4px 20px rgba(234, 88, 12, 0.05);
+}
+
+.pyqSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pyqBadgeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pyqMainBadge {
+  background: #fff7ed;
+  border: 1px solid #ea580c;
+  color: #ea580c;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pyqTagPill {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.pyqTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.pyqSubtitle {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ── Glimpse Card ──────────────────────────────────────────── */
+.pyqGlimpseCard {
+  background: #ffffff;
+  border: 1.5px solid #fed7aa;
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.05);
+}
+
+.pyqGlimpseHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.pyqGlimpseTopic {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9a3412;
+  background: #fff7ed;
+  border: 1px solid #ffedd5;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.pyqGlimpseBadge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.pyqQuestionText {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.pyqQuestionTextMr {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.pyqKeyInsight {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: #f0fdf4;
+  border-left: 3px solid #16a34a;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #166534;
+  line-height: 1.5;
+}
+
+.insightHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: #15803d;
+  margin-bottom: 4px;
+}
+
+.insightHeader span {
+  font-size: 18px;
+}
+
+.insightMr {
+  font-size: 12.5px;
+  color: #15803d;
+  margin: 4px 0 0;
+}
+
+/* ── Dedicated Mock Test Bridge Banner ─────────────────────── */
+.mockTestBridge {
+  background: linear-gradient(135deg, #fff7ed 0%, #fffbf5 100%);
+  border: 1.5px solid #ea580c;
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.08);
+}
+
+.bridgeContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.bridgeIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ea580c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.bridgeTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 6px;
+}
+
+.bridgeDesc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.bridgeActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnBridgePrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  background: #ea580c;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+}
+
+.btnBridgePrimary:hover {
+  background: #c2410c;
+  transform: translateY(-1px);
+}
+
+.btnBridgeSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.btnBridgeSecondary:hover {
+  border-color: #ea580c;
+  color: #ea580c;
+  background: #fff7ed;
+}
+
+/* ── Interconnected Ecosystem Hub Section ──────────────────── */
+.ecosystemSection {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.ecosystemTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.ecosystemSubtitle {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0 0 20px;
+}
+
+.ecosystemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.ecosystemCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.15s ease;
+}
+
+.ecosystemCard:hover {
+  transform: translateY(-2px);
+  border-color: #ea580c;
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.08);
+  background: #ffffff;
+}
+
+.ecosystemCardIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: #fff7ed;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ecosystemCardTitle {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px;
+}
+
+.ecosystemCardDesc {
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.4;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+.ecosystemCardCta {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ea580c;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Feedback Desk Section ────────────────────────────────── */
+.feedbackSection {
+  background: linear-gradient(180deg, #ffffff 0%, #fffbf5 100%);
+  border: 1px dashed #ea580c;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 32px 0;
+  text-align: center;
+}
+
+.feedbackTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 6px;
+}
+
+.feedbackDesc {
+  font-size: 13.5px;
+  color: #64748b;
+  max-width: 520px;
+  margin: 0 auto 16px;
+}
+
+.feedbackActionRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.feedbackBtnThumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.feedbackBtnThumbs:hover {
+  border-color: #ea580c;
+  color: #ea580c;
+  background: #fff7ed;
+}
+
+.feedbackBtnThumbsActive {
+  background: #16a34a !important;
+  border-color: #16a34a !important;
+  color: #ffffff !important;
+}
+
+.feedbackLinkDesk {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  background: #ea580c;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.feedbackLinkDesk:hover {
+  background: #c2410c;
+}
+

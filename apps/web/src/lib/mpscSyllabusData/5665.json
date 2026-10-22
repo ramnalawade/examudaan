@@ -1,0 +1,221 @@
+{
+  "docId": 5665,
+  "examName": "Assistant Motor Vehicle Inspector, Group-C (Pre) & (Main) Competitive",
+  "examNameMr": "सहाय्यक मोटार वाहन निरीक्षक, गट-क (पूर्व) व (मुख्य) स्पर्धा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "group-c",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Motor Vehicle Inspector, Group-C Engineering and Automobile Subject",
+      "paperTitleMr": "अभियांत्रिकी व स्वयंचल विषय",
+      "totalMarks": 100,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Strength of Materials",
+          "unitTitleMr": "स्ट्रेंथ ऑफ मटेरिअल्स",
+          "topics": [
+            "Simple stress",
+            "Strain energy",
+            "Shearing force and bending moment",
+            "Moment of inertia",
+            "Principal planes and stresses",
+            "Slope and deflection",
+            "Direct and bending stresses",
+            "Theory of torsion",
+            "Assumptions",
+            "Torsional stresses and strains"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Manufacturing Processes",
+          "unitTitleMr": "मॅन्युफॅक्चरिंग प्रक्रियेस",
+          "topics": [
+            "Engineering materials and their properties",
+            "Metal cutting process: Turning, Drilling, Milling, Boring, Broaching, Finishing and super finishing",
+            "Plastics and their processing",
+            "Metal joining processes",
+            "NC-CNC, and non-conventional machining methods"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Theory of Machines",
+          "unitTitleMr": "थिअरी ऑफ मशिन्स",
+          "topics": [
+            "Kinematics and dynamics of machines",
+            "Role of friction",
+            "Power transmission equipment such as fly wheel, clutch, belt drive and governors",
+            "Principle of gyroscopes and its effects",
+            "Applications of cams"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Hydraulics and hydraulic machineries",
+          "unitTitleMr": "हायड्रॉलिक्स आणि हायड्रॉलिक मशिनरी",
+          "topics": [
+            "Fluids and their properties",
+            "Laminar and turbulent flow",
+            "Bernoulli’s Equation",
+            "Fluid Pressure",
+            "Pascal’s Law",
+            "Surface tension",
+            "Fluid flow and its measurement",
+            "Hydraulic turbines",
+            "Hydraulic pumps"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Thermal Engineering and refrigeration",
+          "unitTitleMr": "थर्मल इंजिनिअरिंग आणि रेफ्रिजरेटर",
+          "topics": [
+            "Sources of energy: Conventional and non-conventional",
+            "Laws of thermodynamics",
+            "Principle and working of heat engines, air compressors",
+            "Air Standard, vapors power and Gas power cycles",
+            "Refrigerator and heat pump",
+            "Vapor compression and vapor absorption refrigeration system"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Industrial Engineering and Management",
+          "unitTitleMr": "इंडस्ट्रियल इंजिनिअरिंग आणि मॅनेजमेंट",
+          "topics": [
+            "Types of Management and organization and their functions",
+            "Industrial acts",
+            "Types of production",
+            "Plant layouts",
+            "Process planning",
+            "Work study",
+            "Statistical quality control",
+            "Metrology"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Power Developing Systems and construction",
+          "unitTitleMr": "पॉवर डेव्हलपिंग सिस्टीम आणि कन्स्ट्रक्शन",
+          "topics": [
+            "Chassis, layout types",
+            "Sub-systems of automobile",
+            "SI/CI -Two stroke, four stroke construction and working",
+            "Types of Chassis and frames",
+            "CRDI, MPFI system",
+            "Fuel pumps and fuel injector ECU for CI engine",
+            "Ignition systems used in the automobile"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Cooling and Lubrication systems",
+          "unitTitleMr": "कूलिंग आणि लुब्रिकेशन सिस्टीम्स",
+          "topics": [
+            "Cooling system: purpose, types of cooling system, troubles, and remedies of cooling system",
+            "Lubrication systems: Types of lubricants, multi viscosity oils, chassis lubrication",
+            "Engine lubrication: types of lubricating systems, crankcase ventilation, Engine lubrication troubles and remedies"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Transmission systems",
+          "unitTitleMr": "ट्रान्समिशन सिस्टीम्स",
+          "topics": [
+            "Construction and working of single plate, multi-plate, cone clutch, centrifugal clutch",
+            "Faults and remedies/repairs of clutches",
+            "Gear Box: Construction and working of sliding mesh, constant mesh, synchromesh, torque converter",
+            "Faults and remedies/repairs of gear box"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Steering Systems and starting drives",
+          "unitTitleMr": "स्टीयरिंग सिस्टीम्स आणि स्टार्टिंग ड्राईव्ह्ज",
+          "topics": [
+            "Front axle, types of stub axle, steering geometry, Ackerman’s mechanism",
+            "Under steer, over steer, steering linkage",
+            "Type of steering gears, Power steering wheel alignment",
+            "Wheel balancing starter motor drive-Bendix drive, over running clutch drive, follow thru drive",
+            "Construction and working of dynamo and alternator, specifications of alternator Cutouts, relay, and regulator"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Differential, rear axle and brakes",
+          "unitTitleMr": "डिफरेंशियल, रियर अक्ष आणि ब्रेक्स",
+          "topics": [
+            "Differential: function, construction, working principal, Transfer case",
+            "Types of rear axle: semi-floating, full floating bearing, three quarter floating axle",
+            "Types of brakes: drum brakes, disk brakes, Hand Brake/ Parking Brake, hydraulic, air brakes",
+            "Brake troubleshooting, ABS"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Vehicle maintenance and Transport Management",
+          "unitTitleMr": "व्हेहिकल मेंटेनन्स आणि ट्रान्सपोर्ट मॅनेजमेंट",
+          "topics": [
+            "Performance of vehicles",
+            "Engine electrical and electronics",
+            "Workshop layout, repairing and servicing",
+            "Emission measurements and control techniques",
+            "Elements of transport and its operations"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Automobile Electrical and Electronic systems",
+          "unitTitleMr": "ऑटोमोबाइल इलेक्ट्रिकल आणि इलेक्ट्रॉनिक सिस्टीम्स",
+          "topics": [
+            "Battery",
+            "Starting system",
+            "Alternators",
+            "Charging",
+            "Inspection, and maintenance of electrical systems"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Introduction to Electric Vehicles",
+          "unitTitleMr": "इलेक्ट्रिक व्हेईकल्सची ओळख",
+          "topics": [
+            "Introduction to Energy Storage Requirements in Hybrid and Electric Vehicles",
+            "Battery based energy storage",
+            "Battery Specifications",
+            "Battery Management System"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Motor Vehicle Act and Road Safety",
+          "unitTitleMr": "मोटार वाहन कायदा आणि रस्ते सुरक्षा",
+          "topics": [
+            "Introduction to Vehicle Act and Road Safety",
+            "Licensing, registration",
+            "Motor Vehicle Act, Taxation, Insurance etc",
+            "Organization structure of RTO Department",
+            "Passenger comfort and safety"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Latest trends and technological development in the field of Mechanical and Automobile Engineering are included."
+  ]
+}

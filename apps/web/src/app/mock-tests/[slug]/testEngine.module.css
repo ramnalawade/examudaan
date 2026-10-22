@@ -909,3 +909,452 @@
   .sectionBreakdownCard { margin: 0 16px 20px; padding: 14px 12px; }
 }
 
+.feedbackTriggerBtn {
+  background: #FFF7ED;
+  color: #EA580C;
+  border: 1.5px solid #FED7AA;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.feedbackTriggerBtn:hover {
+  background: #EA580C;
+  color: #FFFFFF;
+  border-color: #EA580C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.2);
+}
+
+/* ── Personalized Preparation Roadmap & Lead Magnet Card ── */
+.roadmapLeadCard {
+  margin: 0 24px 24px;
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 100%);
+  border: 1.5px solid #FED7AA;
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 20px rgba(234, 88, 12, 0.08);
+}
+
+.roadmapLeadHeader {
+  margin-bottom: 20px;
+}
+
+.roadmapLeadBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #EA580C;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.roadmapLeadBadge .material-symbols-outlined {
+  font-size: 14px;
+}
+
+.roadmapLeadTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
+}
+
+.roadmapLeadDesc {
+  font-size: 14px;
+  color: var(--secondary);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.roadmapValuePills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.roadmapValuePillItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid #FED7AA;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #9A3412;
+}
+
+.roadmapValuePillItem .material-symbols-outlined {
+  font-size: 16px;
+  color: #EA580C;
+}
+
+/* Lead Form */
+.leadFormContainer {
+  background: #FFFFFF;
+  border: 1px solid #FED7AA;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+}
+
+.leadFormInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .leadFormInputs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .leadFormInputs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leadInput {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  font-size: 13.5px;
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 10px;
+  background: var(--surface-container-lowest);
+  color: var(--on-surface);
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.leadInput:focus {
+  outline: none;
+  border-color: #EA580C;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12);
+}
+
+.leadSelect {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 10px;
+  background: var(--surface-container-lowest);
+  color: var(--on-surface);
+  font-family: inherit;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.leadSelect:focus {
+  outline: none;
+  border-color: #EA580C;
+}
+
+.leadSubmitBtn {
+  height: 44px;
+  padding: 0 20px;
+  background: #EA580C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+}
+
+.leadSubmitBtn:hover {
+  background: #C2410C;
+  transform: translateY(-1px);
+}
+
+.leadSubmitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.leadPrivacyNotice {
+  font-size: 11.5px;
+  color: var(--secondary);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.leadErrorText {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.leadErrorText .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* Unlocked Personalized Content */
+.roadmapUnlockedContent {
+  animation: fadeInRoadmap 0.35s ease-out;
+}
+
+@keyframes fadeInRoadmap {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.diagnosticBox {
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.diagnosticIcon {
+  font-size: 22px;
+  color: #DC2626;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.diagnosticText {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #991B1B;
+}
+
+.diagnosticText strong {
+  color: #7F1D1D;
+}
+
+/* Recommendations Grid (Syllabus + Live Jobs) */
+.recGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 680px) {
+  .recGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recCard {
+  background: #FFFFFF;
+  border: 1px solid #FED7AA;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.recCard:hover {
+  border-color: #EA580C;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.1);
+}
+
+.recCardTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.recCardIcon {
+  font-size: 20px;
+  color: #EA580C;
+}
+
+.recCardTitle {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.recCardDesc {
+  font-size: 12.5px;
+  color: var(--secondary);
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.recCardAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #EA580C;
+}
+
+/* AI Tools Recommendation Section */
+.aiRecSection {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+
+.aiRecSectionTitle {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.aiRecSectionTitle .material-symbols-outlined {
+  color: #7C3AED;
+  font-size: 18px;
+}
+
+.aiRecGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 680px) {
+  .aiRecGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aiRecCard {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.15s ease;
+}
+
+.aiRecCard:hover {
+  border-color: #7C3AED;
+  background: #FAF5FF;
+  transform: translateY(-1px);
+}
+
+.aiRecCardHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.aiRecCardHead .material-symbols-outlined {
+  font-size: 18px;
+  color: #7C3AED;
+}
+
+.aiRecCardName {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.aiRecCardBenefit {
+  font-size: 12px;
+  color: var(--secondary);
+  line-height: 1.45;
+  margin: 0 0 8px 0;
+}
+
+.aiRecCardLink {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #7C3AED;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* WhatsApp Share Row */
+.whatsappShareBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #FED7AA;
+}
+
+.whatsappShareBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #25D366;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.whatsappShareBtn:hover {
+  background: #1EBE5D;
+  transform: translateY(-1px);
+}
+
+.saveConfirmedNote {
+  font-size: 12px;
+  color: #047857;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+

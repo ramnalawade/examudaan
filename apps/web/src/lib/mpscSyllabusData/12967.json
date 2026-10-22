@@ -1,0 +1,56 @@
+{
+  "docId": 12967,
+  "examName": "Translator Marathi, Group-C, Directorate of Languages, Marathi Language Department - Syllabus",
+  "examNameMr": "अनुवादक मराठी, गट-क, भाषा संचालनालय, मराठी भाषा विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "Marathi/English",
+  "category": "group-c",
+  "totalMarks": 160,
+  "mainsMarks": 160,
+  "interviewMarks": 40,
+  "examPattern": "Objective Multiple Choice",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi and English",
+      "paperTitleMr": "मराठी व इंग्रजी",
+      "totalMarks": 160,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "topics": [
+            "सर्वसामान्य शब्दसंग्रह",
+            "वाक्यरचना",
+            "व्याकरण",
+            "वाक्यप्रचार व म्हणी यांचा अर्थ आणि उपयोग",
+            "उताऱ्यावरील प्रश्नांची उत्तरे"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी",
+          "topics": [
+            "Common Vocabulary",
+            "Sentences structure",
+            "Grammar",
+            "Use of Idioms and phrases and their meanings",
+            "Comprehension of passage"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा/कमी करण्यात येतील.",
+    "अंतिम गुणवत्ता यादी ही वस्तुनिष्ठ परीक्षेतील व अनुवाद चाचणीतील एकत्रित गुणांवर आधारीत राहील."
+  ]
+}

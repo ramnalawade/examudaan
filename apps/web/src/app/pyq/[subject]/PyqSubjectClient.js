@@ -7,12 +7,15 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import MpscFeedbackModal from '@/components/MpscFeedbackModal'
 
 export default function PyqSubjectClient({ subjectInfo, questions, allSubjects }) {
   const [selectedExam, setSelectedExam] = useState('All')
   const [selectedAnswers, setSelectedAnswers] = useState({})
   const [revealedSolutions, setRevealedSolutions] = useState({})
   const [searchFilter, setSearchFilter] = useState('')
+  const [feedbackModalOpen, setFeedbackModalOpen] = useState(false)
+  const [feedbackCategory, setFeedbackCategory] = useState('missing_papers')
 
   // Unique exams present in this subject
   const availableExams = useMemo(() => {
@@ -54,7 +57,22 @@ export default function PyqSubjectClient({ subjectInfo, questions, allSubjects }
   }, [questions, selectedExam, searchFilter])
 
   const handleSelectOption = (qId, optionKey) => {
-    setSelectedAnswers(prev => ({ ...prev, [qId]: optionKey }))
+    setSelectedAnswers(prev => {
+      const next = { ...prev, [qId]: optionKey }
+      const totalAnswered = Object.keys(next).length
+      if (totalAnswered === 5) {
+        const storageKey = `mpsc_pyq_subject_feedback_${subjectInfo?.slug || 'sub'}`
+        const alreadyShown = typeof window !== 'undefined' ? sessionStorage.getItem(storageKey) : null
+        if (!alreadyShown) {
+          setTimeout(() => {
+            setFeedbackCategory('general_feedback')
+            setFeedbackModalOpen(true)
+            try { sessionStorage.setItem(storageKey, 'true') } catch (e) {}
+          }, 1200)
+        }
+      }
+      return next
+    })
     setRevealedSolutions(prev => ({ ...prev, [qId]: true }))
   }
 
@@ -125,16 +143,29 @@ export default function PyqSubjectClient({ subjectInfo, questions, allSubjects }
       </div>
 
       {/* Showing count indicator */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
         <p style={{ margin: 0, fontSize: '14px', color: '#4B5563' }}>
           Showing <strong>{filteredQuestions.length}</strong> solved questions for <strong>{subjectInfo.name}</strong>
         </p>
-        <Link
-          href="/pyq"
-          style={{ fontSize: '13px', color: '#EA580C', fontWeight: 600, textDecoration: 'none' }}
-        >
-          View Full 1,100+ Question Bank ➔
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <button
+            type="button"
+            className="btn-outline"
+            onClick={() => {
+              setFeedbackCategory('error_report')
+              setFeedbackModalOpen(true)
+            }}
+            title="Report question error or request topics"
+          >
+            💬 Feedback / Report
+          </button>
+          <Link
+            href="/pyq"
+            style={{ fontSize: '13px', color: '#EA580C', fontWeight: 600, textDecoration: 'none' }}
+          >
+            Full Bank ➔
+          </Link>
+        </div>
       </div>
 
       {/* Questions List */}
@@ -355,6 +386,17 @@ export default function PyqSubjectClient({ subjectInfo, questions, allSubjects }
         </div>
       </section>
 
+      <MpscFeedbackModal
+        isOpen={feedbackModalOpen}
+        onClose={() => setFeedbackModalOpen(false)}
+        examContext={{
+          title: `MPSC PYQ — ${subjectInfo?.name || 'Subject'} (${subjectInfo?.nameMr || ''})`,
+          subject: subjectInfo?.name,
+          examFilter: selectedExam,
+          answered: Object.keys(selectedAnswers).length
+        }}
+        defaultCategory={feedbackCategory}
+      />
     </div>
   )
 }

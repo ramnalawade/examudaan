@@ -1,0 +1,50 @@
+{
+  "docId": 1654,
+  "examName": "Assistant Section Officer, Gr.-B (Non-gazetted) (Pre) & (Main) Examination",
+  "examNameMr": "सहायक कक्ष अधिकारी, गट-ब (अराजपत्रित) (पूर्व आणि मुख्य) परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 300,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Preliminary Examination (100 Marks) followed by Main Examination (200 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Section Officer, Gr.-B (Non-gazetted) Pre Examination",
+      "paperTitleMr": "सहायक कक्ष अधिकारी, गट-ब (अराजपत्रित) पूर्व परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Assistant Section Officer, Gr.-B (Non-gazetted) Main Examination - Paper 1",
+      "paperTitleMr": "सहायक कक्ष अधिकारी, गट-ब (अराजपत्रित) मुख्य परीक्षा - पेपर १",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    },
+    {
+      "paperNumber": 3,
+      "paperTitle": "Assistant Section Officer, Gr.-B (Non-gazetted) Main Examination - Paper 2",
+      "paperTitleMr": "सहायक कक्ष अधिकारी, गट-ब (अराजपत्रित) मुख्य परीक्षा - पेपर २",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

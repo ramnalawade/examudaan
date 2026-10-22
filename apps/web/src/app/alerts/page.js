@@ -9,7 +9,7 @@ import { query } from '@/lib/pgdb'
 export const revalidate = 300 // 5-minute ISR cache
 
 export const metadata = {
-  title: 'Instant Govt Job Alerts & Exam Notifications | ExamUdaan',
+  title: { absolute: 'Instant Govt Job Alerts & Notifications 2026 | ExamUdaan' },
   description: 'Get instant notifications for MPSC, Maharashtra Police Bharti, RRB, SSC, and Banking exams. Free WhatsApp and Telegram alert broadcasts.',
   keywords: [
     'govt job alerts', 'exam notifications 2026', 'MPSC notification', 'WhatsApp job alerts',

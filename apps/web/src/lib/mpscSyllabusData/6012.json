@@ -1,0 +1,133 @@
+{
+  "docId": 6012,
+  "examName": "Statistical Officer, General State Service, Group B, Public Health Department-Syllabus",
+  "examNameMr": "सांख्यिकी अधिकारी, महाराष्ट्र शासन राजपत्रित, गट-ब, सार्वजनिक आरोग्य विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Statistical Officer, General State Service, Group B, Public Health Department",
+      "paperTitleMr": "सांख्यिकी अधिकारी, महाराष्ट्र शासन राजपत्रित, गट-ब, सार्वजनिक आरोग्य विभाग",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Data Collection",
+          "unitTitleMr": "डेटा संकलन",
+          "topics": [
+            "Data Collection methods and sources",
+            "Primary and Secondary data"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Presentation of Data",
+          "unitTitleMr": "डेटाचे प्रस्तुतीकरण",
+          "topics": [
+            "Tabulation",
+            "Diagrammatic and Graphical representation of data"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Elementary Statistical Methods",
+          "unitTitleMr": "प्राथमिक सांख्यिकी पद्धती",
+          "topics": [
+            "Measures of central tendency",
+            "Dispersion",
+            "Skewness and Kurtosis"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Probability",
+          "unitTitleMr": "संभाव्यता",
+          "topics": [
+            "Basic probability concepts",
+            "Random variables",
+            "Probability distributions"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Theory of Statistical Inference",
+          "unitTitleMr": "सांख्यिकी अनुमानाचा सिद्धांत",
+          "topics": [
+            "Estimation theory",
+            "Testing of hypothesis"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Interpretation of Linear Models",
+          "unitTitleMr": "रिखीय मॉडेलचे अर्थनिर्णयन",
+          "topics": [
+            "Correlation and Regression",
+            "Linear models analysis"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Sampling Methods",
+          "unitTitleMr": "मुनाफा पद्धती / नमुनेवारी पद्धती",
+          "topics": [
+            "Simple random sampling",
+            "Stratified sampling",
+            "Systematic sampling"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Index Numbers and Time Series",
+          "unitTitleMr": "निर्देशांक आणि काल श्रेणी",
+          "topics": [
+            "Construction of index numbers",
+            "Components of time series analysis"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Statistical Organizations in India",
+          "unitTitleMr": "भारतातील सांख्यिकी संस्था",
+          "topics": [
+            "National Statistical Office (NSO)",
+            "Central Statistical Organization (CSO)",
+            "NSSO"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Vital Statistics in India",
+          "unitTitleMr": "भारतातील महत्त्वाची सांख्यिकी",
+          "topics": [
+            "Birth rate",
+            "Death rate",
+            "Fertility and Mortality rates"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "National Income Estimation",
+          "unitTitleMr": "राष्ट्रीय उत्पन्न अंदाज",
+          "topics": [
+            "Concepts of national income",
+            "Methods of estimation in India"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

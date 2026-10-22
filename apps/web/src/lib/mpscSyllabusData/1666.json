@@ -1,0 +1,120 @@
+{
+  "docId": 1666,
+  "examName": "Deputy Engineer (Mechanical), Maharashtra Engineering Services, Gr A in Water Resource Department",
+  "examNameMr": "उपअभियंता (यांत्रिकी), महाराष्ट्र अभियांत्रिकी सेवा, गट-अ, जलसंपदा विभाग",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Mechanical Engineering",
+      "paperTitleMr": "सामान्य ज्ञान व यंत्रअभियांत्रिकी",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Affairs",
+          "unitTitleMr": "चालू घडामोडी",
+          "topics": [
+            "Political, Industrial, Economic, Social, Educational, Geographical, Astronomical, Cultural, Scientific and others"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Right to Information Act - 2005",
+          "unitTitleMr": "माहितीचा अधिकार कायदा-२००५",
+          "topics": [
+            "Right to Information Act-2005"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Engineering",
+          "unitTitleMr": "जनरल इंजिनिअरिंग",
+          "topics": [
+            "Non destructive Testing methods and details of N.D.T.",
+            "Various types welding methods, weld defects and remedies.",
+            "Various types of casting methods, casting defects and remedies.",
+            "Various types of machines in machine shop, their use and machinery processes.",
+            "Various types of measuring instruments and their application.",
+            "Various types of material handling equipments with their application.",
+            "Various types of heat treatment processes and their application.",
+            "Various types of I.C. Engines and their application.",
+            "Various types of Industrial Engineering Techniques such as PERT, CPM, EOQ, SCADA, BASE WEB BASE Technology etc.",
+            "Purpose of the Various Labour Laws such as Industrial dispute Act, Factory Act, Industrial Safety Act, Minimum Wages act."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Construction Machinery",
+          "unitTitleMr": "कन्स्ट्रक्शन मशिनरी",
+          "topics": [
+            "Types of construction machineries used for construction of Earthen Dams, M.I. Tanks Canal cleaning and various types of Tank cleaning and rebuilding works.",
+            "Construction, Capacity, Utility and Use of allied equipments of construction machinery.",
+            "Calculation of requirement of construction machineries for the specific work.",
+            "Operation, Maintenance and Repairs of all types of construction machinery.",
+            "Details of the fuels, lubricants, tyres, batteries and other allied spare parts required for construction machineries."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Hydraulic gates",
+          "unitTitleMr": "हायड्रॉलिक गेट्स",
+          "topics": [
+            "Purpose and types of various Hydraulic Gates, Hoists and Cranes used in Irrigation Dams, Hydro Power Houses, Lift Irrigation Schemes.",
+            "Construction details of the various types of Hydraulic Gates, Hoists and Cranes.",
+            "Design of the all types of Hoists and Cranes required for the operation of Hydraulic gates.",
+            "Details of various materials and equipments used in Manufacturing of Hydraulic Gates, Hoists and Cranes.",
+            "Manufacturing, Erection Testing and Commissioning of the Hydraulic Gates, Hoists and Cranes.",
+            "Operation, Maintenance and Repairs of the Hydraulic Gates, Hoists and Cranes.",
+            "Inspection and Testing of the Hydraulic Gates, Hoists and Cranes during manufacturing, erection and commissioning.",
+            "Types of various operation troubles and remedies during the operation of Hydraulic Gates, Hoists and Cranes."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Lift Irrigation Schemes",
+          "unitTitleMr": "लिफ्ट इरिगेशन स्किम्स",
+          "topics": [
+            "Layout and construction of the Lift Irrigation Scheme.",
+            "Types of pumps and motors along with their construction details operation, maintenance repairs and testing used in the L.I.S.",
+            "Selection of type of pump with its capacity for the specific requirement of any L.I.S.",
+            "Types of valves along with their construction details operation, maintenance repairs used in L.I.S.",
+            "Various types of allied equipments such as starters, Air Vessels, Manifolds, reducers etc. used in the L.I.S.",
+            "Details of various tests carried out for the various equipments used in L.I.S.",
+            "Testing and Commissioning of L.I.S.",
+            "Various type trouble shootings and remedies for that during the operation of L.I.S.",
+            "Various phenomena such as Cavitations, Water hammer Priming etc. in L.I.S."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Road Construction Machinery and Boring",
+          "unitTitleMr": "रोड कन्स्ट्रक्शन मशिनरी अँड बोरिंग",
+          "topics": [
+            "Types of Road Construction Machineries used for Construction of National and State Highway and Rural Roads.",
+            "Construction details Capacity, utility of the allied equipments and Road Construction Machinery.",
+            "Operation, maintenance and repairs of all types of Road Construction Machinery.",
+            "Details of the Fuels, Lubricants, tyres, batteries and other allied spares or parts required for Road Construction Machinery.",
+            "Purpose of boring in the field of various projects.",
+            "Types of Boring machines, their construction and capacities.",
+            "Operation, Maintenance and Repairs of Boring Machines.",
+            "Various types of Boring techniques such as NX, BX Core etc."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

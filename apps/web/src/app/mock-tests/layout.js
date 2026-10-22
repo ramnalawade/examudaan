@@ -4,7 +4,7 @@
 
 export const metadata = {
   title: 'Free Mock Tests 2026 — Online Practice Sets',
-  description: 'Practice real exam-pattern CBT mock tests with timer, question palette, negative marking, and instant scorecard & performance analytics for MPSC, Police Bharti, SSC & Banking.',
+  description: 'Practice authentic CBT mock tests with timer, negative marking, question palette and instant scorecard for MPSC, Police Bharti, SSC & Banking exams.',
   keywords: [
     'free mock tests 2026', 'MPSC mock test', 'police bharti mock test',
     'SSC CGL mock test', 'online practice test', 'CBT mock test',

@@ -1,0 +1,171 @@
+{
+  "docId": 8876,
+  "examName": "Deputy Director (Technical Education)/Secretary, MSBTE and Assistant Director (Technical Education)/Deputy Secretary (Technical), MSBTE, Maharashtra Engg. Admin. Services, Group A - Syllabus",
+  "examNameMr": "उपसंचालक (तांत्रिक शिक्षण) / सचिव, एमएसबीटीई आणि सहसंचालक (तांत्रिक शिक्षण) / उपसचिव (तांत्रिक), एमएसबीटीई, महाराष्ट्र अभियांत्रिकी प्रशासन सेवा, गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Deputy Director (Technical Education)/Secretary, MSBTE and Assistant Director (Technical Education)/Deputy Secretary (Technical), MSBTE, Maharashtra Engg. Admin. Services, Group A - Syllabus",
+      "paperTitleMr": "उपसंचालक (तांत्रिक शिक्षण) / सचिव, एमएसबीटीई आणि सहसंचालक (तांत्रिक शिक्षण) / उपसचिव (तांत्रिक), एमएसबीटीई, महाराष्ट्र अभियांत्रिकी प्रशासन सेवा, गट-अ - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Education System in India and Status of Technical Education in Maharashtra",
+          "unitTitleMr": "भारतातील शिक्षण प्रणाली आणि महाराष्ट्रातील तांत्रिक शिक्षणाची स्थिती",
+          "topics": [
+            "Education System in India",
+            "National Policies on Education in India, including NEP 2020",
+            "Historical Background of Technical Education in India",
+            "Recommendations of various Committees on Technical Education",
+            "Need for Technical Education in India",
+            "Various Systems of Technical Education in India",
+            "Policies for Technical Education",
+            "Objective and scope of Technical Education System",
+            "National Credit Framework",
+            "Outcome based Education",
+            "National Institute Ranking Framework (NIRF)",
+            "NAAC",
+            "Technical and Vocational Education System in the State, Three-tier System",
+            "Various projects taken up so far for under Directorate of Technical Education",
+            "Various Policies and programmes of the State Government for skill development, enhancement of employability, Employment and Self-employment",
+            "University Act 2016",
+            "Anti-ragging Act",
+            "MSBTE Act"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Manpower Planning relevant to Various Programs in Technical Education",
+          "unitTitleMr": "तांत्रिक शिक्षणातील विविध कार्यक्रमांशी संबंधित मनुष्यबळ नियोजन",
+          "topics": [
+            "Human Resource Planning",
+            "Elements of manpower planning",
+            "Techniques in human planning",
+            "Surveys and their objectives",
+            "Demand estimation of skilled manpower",
+            "Role of various organizations such as DTE, MSBTE, AICTE, MoE, NSDC, BOAT, UGC, IITs, NITTTR, State/ Central/ Open/ Deemed/ Private Universities, NEERI, PCI and COA, RUSA, MSFDA",
+            "Perspective plan of the authorities",
+            "Institute Development Plan"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Administration of Government, Government Aided and Private Institutions",
+          "unitTitleMr": "शासकीय, शासकीय अनुदानित आणि खाजगी संस्थांचे प्रशासन",
+          "topics": [
+            "Organization structure of Government, Government Aided and Private Institutions at Degree & Diploma levels",
+            "Reporting systems and reporting authorities",
+            "SWOT analysis, Vision and mission, Goals, Strategic Planning",
+            "Internal/external environment management, Resource mobilisation, library management, maintenance of academic facilities, marketing strategies related to educational institute",
+            "Norms for granting autonomy to institutes, RTI act, RTS act",
+            "Leadership and decision-making, personality development, human behavior, character and moral qualities of public relation, effective communication",
+            "Problem solving techniques, personal management, value analysis, faculty norms",
+            "Maharashtra Civil Service Rules (MCSR)",
+            "Procedure for approval of teaching & non teaching staff, faculty and staff development plans, training policies of faculty and staff",
+            "Types of training, motivation, evaluation of performance of faculty & staff, team building, orientation training of new employees",
+            "Budget, Budget process, Budget Performance, PLAN & Non-plan budget heads",
+            "Bill passing procedure, financial powers, finance rules, Audit, Cost Benefit Analysis, Cost reduction techniques",
+            "Revenue generation, sources of funds, Treasure/ Pay & Accounts Office rules, assessment of finance, cash book and transaction, record and reports",
+            "Purchase through GeM, purchase procedures, tenders, classification of inventory, Type of stores, Inventory Control, Stores Manual, stock register",
+            "Procurement plan, Economic Order quantity, Buffer stock, Reorder Level, CPM & PERT techniques, infrastructure norms",
+            "Stores audit, records & reports, physical verification of goods and equipments, maintenance plan of equipments & machineries, write off rules and procedures"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Admission and Affiliation",
+          "unitTitleMr": "प्रवेश आणि संलग्नीकरण",
+          "topics": [
+            "Approval process including establishment of new institutions, addition of courses, variation in intake, closure of institution",
+            "CET cell, Admission regulatory authority (ARA), Competent authority, CAP, Eligibility",
+            "Statutory reservations, Rounds of admission, Tuition fee waiver schemes, NRI/PIO Quota",
+            "Fee regulatory authority (FRA), Fee exemptions and various scholarship schemes, reimbursement of fees",
+            "Affiliation of institutes, enrolment of students, Autonomous Institution Structure"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Curriculum Development",
+          "unitTitleMr": "अभ्यासक्रम विकास",
+          "topics": [
+            "Definition, importance of curriculum development, components of curriculum",
+            "Participation of industry, objectives, outcomes, programme educational objectives, program outcomes, course objectives, course outcomes",
+            "Purpose of laboratory courses, need of multi-disciplinary and inter-disciplinary courses, sandwich programmes, implant training, self study",
+            "Course contents, Credit and grading systems, choice based credit system, different grades, relative and absolute grading system",
+            "Lateral entry, multi entry and multi exit system"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Teaching-Learning Process",
+          "unitTitleMr": "अध्यापन-अधिगम प्रक्रिया",
+          "topics": [
+            "Assessment of curriculum implementation, CIAAN",
+            "Learning material development, development of media for instructions, various Teaching aids",
+            "MOOCS/SWAYAM platform",
+            "Class room/ laboratory monitoring, feedback systems, academic audit",
+            "Accreditation process (NBA), Institute monitoring, LMS, Remedial Coaching"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Examination System",
+          "unitTitleMr": "परीक्षा पद्धती",
+          "topics": [
+            "Purpose of examination, types, Various evaluation techniques, effective evaluation",
+            "Criteria for measurement of skills and performance, methods of examination",
+            "Examination schemes of MSBTE and Autonomous institutions and Universities",
+            "Revaluation processes, Blooms Taxonomy"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Training and Placements",
+          "unitTitleMr": "प्रशिक्षण आणि प्लेसमेंट्स",
+          "topics": [
+            "Requirement of various Organisations and availability of candidates, Process of Placement",
+            "Role of training and placement officer, Training Methodologies, Apprenticeship Training",
+            "Linkage with Industries, Importance of Industry-Institution-Interaction, Apprenticeship Act 1961",
+            "Various criteria used for evaluating the Training Programme, Entrepreneurship Development Programme, CSR, MoUs"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Schemes of Government of India, World Bank and State Government",
+          "unitTitleMr": "भारत सरकार, जागतिक बँक आणि राज्य सरकारच्या योजना",
+          "topics": [
+            "World Bank Assisted Technical Education Quality Improvement Programs (TEQIP), MERITE etc.",
+            "Minority schemes of Government of India and Government of Maharashtra",
+            "Government approved short term diploma courses under MSBTE",
+            "Various Schemes for Disabled (PWD) and Women",
+            "Continuing education programs",
+            "Community Colleges & Distance education",
+            "Teachers Training Programme",
+            "Finishing courses/ Skill Courses",
+            "Community Development through Polytechnic Scheme",
+            "National Skill Qualification Framework",
+            "Unnat Maharashtra Abhiyan",
+            "Learn and Earn Scheme",
+            "Center of Excellence",
+            "Startups / Incubation Activities"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

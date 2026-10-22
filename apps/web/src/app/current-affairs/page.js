@@ -459,7 +459,7 @@ function CACard({ ca }) {
       </div>
 
       {/* Title */}
-      <h3 className={styles.cardTitle}>{title}</h3>
+      <h2 className={styles.cardTitle}>{title}</h2>
 
       {/* Summary */}
       <p className={styles.cardSummary}>{summary}</p>

@@ -1,0 +1,98 @@
+{
+  "docId": 6220,
+  "examName": "Assistant Commissioner (Drugs), Medical Education and Drugs Department, Group A - Syllabus",
+  "examNameMr": "सहाय्यक आयुक्त (औषधे), वैद्यकीय शिक्षण आणि औषधी द्रव्ये विभाग, गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Commissioner (Drugs), Medical Education and Drugs Department, Group A",
+      "paperTitleMr": "सहाय्यक आयुक्त (औषधे), वैद्यकीय शिक्षण आणि औषधी द्रव्ये विभाग, गट-अ",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Physiology, Pathophysiology, Pharmacology and Toxicology",
+          "unitTitleMr": "शरीरक्रियाशास्त्र, पॅथोफिजियोलॉजी, औषधशास्त्र आणि विषशास्त्र",
+          "topics": [
+            "Physiology - Composition/ function of Blood elements, Coagulation of blood, Blood groups, Blood components, manufacturing, Whole human blood (I.P.), Blood bank- operation / requirements",
+            "Pathophysiology - STD, AIDS, Hypersensitivity, HBSAg",
+            "Pharmacology - Factors modifying drug action, drugs affecting coagulation, Antihypertensive drugs, Antipyretic, Analgesic, Antitussive, Sedative, Hypnotics, Opioids, NSAIDS, Local Anaesthetics, Chemotherapeutic Agents including Anticancer drugs, Antifungal Agents, Drugs affecting CNS, Antidiabetic drugs, Contraceptive drugs, Hormones, Drugs acting on uterus",
+            "Toxicology - Classification of poison, chelating agent, heavy metals, antidotes"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Microbiology",
+          "unitTitleMr": "सूक्ष्मजीवशास्त्र",
+          "topics": [
+            "Sterilisation procedure",
+            "Aseptic technics",
+            "Disinfections",
+            "Pyrogens",
+            "LAL Test",
+            "Assay of antibiotics/vitamins",
+            "Biochemical serological, virological technics",
+            "BOD, different media, microbial drugs, drug resistance, microbial limit test, pathogenic organism of common occurrence"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Biochemistry & Chemistry of drugs / Pharmaceuticals",
+          "unitTitleMr": "बायोकैमिस्ट्री आणि औषधांचे रसायनशास्त्र / फार्मास्युटिकल्स",
+          "topics": [
+            "DNA, RNA, Nucleic Acid & components, enzymes, metabolism of protein, carbohydrate, lipids, recombinant technology and its application, immunological product-vaccine, sera",
+            "Isomers, Tautomers, fermentation, synthesis of antibiotics, diazo reaction, chemistry of steroids",
+            "Dosage forms, sustained release, dosage form, enteric coating, new drugs, parental drugs, Good manufacturing practices, Good laboratory practices, Routes of administration, Preservatives, suspending / emulsifying agents, Types of vehicles / types of waters, storage conditions for pharmaceuticals",
+            "Principal and application of analysis, UV spectra / I.R. / HPLC / GLC / Atomic absorption",
+            "HPTLC, LCMS, limit test, heavy metals, devices, sutures",
+            "Surgical - Medical devices sutures",
+            "Law - DCC, DTAB, Misbranded, standard, spurious, adulterated drugs definitions, Government Analyst duties, Inspector - power / procedure, definition schedule M/Y/U"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "General Knowledge related to Pharmaceuticals / Medicine field",
+          "unitTitleMr": "फार्मास्युटिकल्स / वैद्यकीय क्षेत्राशी संबंधित सामान्य ज्ञान",
+          "topics": [
+            "National Health Programme",
+            "DPCO / NPPA",
+            "Narcotic Drugs",
+            "Poisons - Antidotes",
+            "Essential Drugs",
+            "Central Drug Authority",
+            "Neutraceuticals",
+            "Magic remedies - Act and Rules",
+            "Import of Drugs and Cosmetics",
+            "Central Drug Laboratory",
+            "WHO - GMP - entification",
+            "Current events",
+            "Consumer Protection Act",
+            "Right to Information Act"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी",
+          "topics": [
+            "Questions will be asked to test how far candidates can think quickly and accurately"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

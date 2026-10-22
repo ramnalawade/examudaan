@@ -1,0 +1,87 @@
+{
+  "docId": 1622,
+  "examName": "Assistant Professor - Finance, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": "सहाय्यक प्राध्यापक - वित्त, महाराष्ट्र शिक्षण सेवा, गट - अ (संबंधित शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (200 Marks) followed by Interview (50 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Finance",
+      "paperTitleMr": "वित्त",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Financial Management and Valuation Concepts",
+          "unitTitleMr": "वित्तीय व्यवस्थापन आणि मूल्यमापन संकल्पना",
+          "topics": [
+            "Financial management - Nature and Scope",
+            "Valuation concepts and valuation of securities",
+            "Valuation Concepts - Risk and Return",
+            "Pricing theories - Capital asset pricing model and Arbitrage pricing theory"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Capital Budgeting and Capital Structure",
+          "unitTitleMr": "भांडवल अर्थसंकल्प आणि भांडवल रचना",
+          "topics": [
+            "Capital budgeting decisions - Risk analysis",
+            "Capital structure and Cost of capital",
+            "Capital budgeting decisions - Risk analysis in capital budgeting and Long-term sources of finance",
+            "Capital structure - Theories and Factors",
+            "Cost of capital"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Dividend Policy and Financing Instruments",
+          "unitTitleMr": "लाभांश धोरण आणि वित्तपुरवठा साधने",
+          "topics": [
+            "Dividend policy - Determinants",
+            "Long-term and short-term financing instruments",
+            "Dividend Policies - Theories and Determinants"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Working Capital and Financial Statement Analysis",
+          "unitTitleMr": "कार्यकारी भांडवल आणि आर्थिक विवरणपत्र विश्लेषण",
+          "topics": [
+            "Understanding financial statements and analysis thereof",
+            "Working Capital Management - Determinants and Financing",
+            "Cash management",
+            "Inventory management",
+            "Receivables management"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Derivatives, Risk Management, Mergers and International Finance",
+          "unitTitleMr": "डिरिव्हेटिव्ह्ज, जोखीम व्यवस्थापन, विलीनीकरण आणि आंतरराष्ट्रीय वित्त",
+          "topics": [
+            "Elements of Derivatives",
+            "Corporate risk management",
+            "Mergers and Acquisitions",
+            "International Financial Management"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

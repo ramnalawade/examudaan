@@ -563,7 +563,7 @@ export default function FeedbackPage() {
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
                 <span className="material-symbols-outlined fill" style={{ fontSize: 24 }}>favorite</span>
-                <h3 style={{ fontSize: 18, fontWeight: 800, margin: 0 }}>Built for Aspirants, by Aspirants</h3>
+                <h2 style={{ fontSize: 18, fontWeight: 800, margin: 0 }}>Built for Aspirants, by Aspirants</h2>
               </div>
               <p style={{ fontSize: 14, opacity: 0.92, lineHeight: 1.6, margin: 0 }}>
                 Every single feature on ExamUdaan — from our AI eligibility extractor to our WhatsApp alerts — was built because an aspirant asked for it. We review new portal requests every Friday and add scrapers continuously.
@@ -577,12 +577,12 @@ export default function FeedbackPage() {
               borderRadius: 'var(--radius-lg)',
               padding: '24px 20px',
             }}>
-              <h3 style={{ fontSize: 16, fontWeight: 800, color: 'var(--on-surface)', marginBottom: 4, display: 'flex', alignItems: 'center', gap: 8 }}>
+              <h2 style={{ fontSize: 16, fontWeight: 800, color: 'var(--on-surface)', marginBottom: 4, display: 'flex', alignItems: 'center', gap: 8 }}>
                 <span className="material-symbols-outlined" style={{ color: 'var(--tertiary)', fontSize: 20 }}>
                   verified
                 </span>
                 Ideas You Suggested That We Shipped:
-              </h3>
+              </h2>
               <p style={{ fontSize: 13, color: 'var(--secondary)', marginBottom: 16 }}>
                 Real features built from candidate feedback
               </p>
@@ -621,9 +621,9 @@ export default function FeedbackPage() {
               borderRadius: 'var(--radius-md)',
               padding: '18px 20px',
             }}>
-              <h4 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 6 }}>
+              <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 6 }}>
                 Need Immediate Customer Support?
-              </h4>
+              </h3>
               <p style={{ fontSize: 13, color: 'var(--secondary)', lineHeight: 1.5, margin: '0 0 10px' }}>
                 For billing, account login issues, or subscription management, chat with our human helpdesk directly.
               </p>

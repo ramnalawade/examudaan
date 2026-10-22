@@ -1,0 +1,558 @@
+{
+  "docId": 1626,
+  "examName": "Assistant Professor- Botany, Biology, Microbiology, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Botany, Biology, Microbiology, Maharashtra Education Services, Group - A (Collegiate Branch)",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Principles of Taxonomy and Plant Kingdom",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of Taxonomy as applied to the systematics and Classification of Plant Kingdom",
+            "Taxonomic structure",
+            "Biosystematics",
+            "Plant geography",
+            "Floristics"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Plant Morphology and Evolution",
+          "unitTitleMr": null,
+          "topics": [
+            "Patterns of variation in morphology and life history in plants",
+            "Broad outlines of classification and evolutionary trends among algae, fungi, bryophytes and pteridophytes",
+            "Principles of palaeobotany",
+            "Economic importance of algae, fungi and lichens"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Comparative Anatomy and Developmental Morphology",
+          "unitTitleMr": null,
+          "topics": [
+            "Comparative anatomy and developmental morphology of gymnosperms and angiosperms",
+            "Histochemical and ultrastructural aspects of development",
+            "Differentiation and morphogenesis"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Reproductive Biology in Plants",
+          "unitTitleMr": null,
+          "topics": [
+            "Androgenesis and gynogenesis",
+            "Breeding systems",
+            "Pollination biology",
+            "Structural and functional aspects of pollen and pistil",
+            "Male sterility",
+            "Self and inter-specific incompatibility",
+            "Fertilization",
+            "Embryo and seed development"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Plants and Civilization",
+          "unitTitleMr": null,
+          "topics": [
+            "Centres of origin and gene diversity",
+            "Botany, utilization, cultivation and improvement of plants of food, drug, fibre and industrial values",
+            "Unexploited plants of potential economic value",
+            "Plants as a source of renewable energy",
+            "Genetic resources and their conservation"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Plant Physiology - I",
+          "unitTitleMr": null,
+          "topics": [
+            "Water Relations",
+            "Mineral nutrition",
+            "Photosynthesis and photorespiration",
+            "Nitrogen, Phosphorous and Sulphur metabolism",
+            "Stomatal physiology",
+            "Source and sink relationship"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Plant Physiology - II",
+          "unitTitleMr": null,
+          "topics": [
+            "Physiology and biochemistry of seed dormancy and germination",
+            "Hormonal regulation of growth and development",
+            "Photoregulation",
+            "Growth responses",
+            "Physiology of flowering",
+            "Senescence"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Principles of Plant Breeding",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of plant breeding",
+            "Important conventional methods of breeding self and cross pollinated and vegetatively propagated crops",
+            "Non-conventional methods",
+            "Polyploidy",
+            "Genetic variability",
+            "Plant diseases and defensive mechanism"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Animal Taxonomy and Invertebrates",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of taxonomy as applied to the systematics and classification of the animal kingdom",
+            "Classification and interrelationship amongst the major invertebrate phyla",
+            "Minor invertebrate phyla",
+            "Functional anatomy of the non-chordates",
+            "Larval forms and their evolutionary significance"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Chordates and Evolution",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification and comparative anatomy of protochordates and chordates",
+            "Origin, evolution and distribution of chordate groups",
+            "Adaptive radiation"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Mammalian Systems and Physiology",
+          "unitTitleMr": null,
+          "topics": [
+            "Histology of mammalian organ systems",
+            "Nutrition, digestion and absorption",
+            "Circulation (open and closed circular, lymphatic systems, blood composition and function)",
+            "Muscular contraction and electric organs",
+            "Excretion and osmoregulation",
+            "Nerve conduction and neurotransmitter",
+            "Major sense organs and receptors",
+            "Homeostasis (neural and hormonal)",
+            "Bioluminescence",
+            "Reproduction"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Animal Embryology and Genetics",
+          "unitTitleMr": null,
+          "topics": [
+            "Gametogenesis in animals",
+            "Molecular events during fertilization",
+            "Cleavage patterns and fate maps",
+            "Concepts of determination, competence and induction",
+            "Totipotency and nuclear transfer experiments",
+            "Cell differentiation and differential gene activity",
+            "Morphogenetic determinants in egg cytoplasm",
+            "Role of maternal contributions in early embryonic development",
+            "Genetic regulation of early embryonic development in Drosophila",
+            "Homeotic genes"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Animal Behaviour and Adaptation",
+          "unitTitleMr": null,
+          "topics": [
+            "Feeding, learning, social and sexual behaviour of animals",
+            "Parental care",
+            "Circadian rhythms",
+            "Mimicry",
+            "Migration of fishes and birds",
+            "Sociobiology",
+            "Physiological adaptation at high altitude"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Parasitology",
+          "unitTitleMr": null,
+          "topics": [
+            "Important human and veterinary parasites (protozoans and helminths)",
+            "Life cycle and biology of Plasmodium, Trypanosoma, Ascaris, Wuchereria, Fasciola, Schistosoma and Leishmania",
+            "Molecular, cellular and physiological basis of host-parasite interactions"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Economic Entomology and Vectors",
+          "unitTitleMr": null,
+          "topics": [
+            "Arthropods and vectors of human diseases (mosquitoes, lice, flies, and ticks)",
+            "Mode of transmission of pathogens by vectors",
+            "Chemical biological and environmental control of anthropod vectors",
+            "Biology and control of chief insect pests of agricultural importance",
+            "Plant host-insect interaction, insect-pest management, useful insects, Silkworm"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Cytogenetics and Evolution",
+          "unitTitleMr": null,
+          "topics": [
+            "The law of DNA constancy and C-value paradox",
+            "Numerical and structural changes in chromosomes",
+            "Molecular basis of spontaneous and induced mutation and their role in evolution",
+            "Environment mutagenesis and Toxicity testing",
+            "Population genetics"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Cell Biology",
+          "unitTitleMr": null,
+          "topics": [
+            "Structure of pro and eukaryotic cells",
+            "Membrane structure and function",
+            "Intracellular compartments, protein sorting, secretory and endocytic pathways",
+            "Cytoskeleton",
+            "Nucleus, Mitochondria and chloroplasts and their genetic organisation",
+            "Cell cycle",
+            "Structure and organisation of chromatin, polytene and lampbrush chromosomes",
+            "Dosage compensation and sex determination and sex-linked inheritance"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Ecology - I",
+          "unitTitleMr": null,
+          "topics": [
+            "Interactions between environment and biota",
+            "Concept of habitat and ecological niches",
+            "Limiting factors",
+            "Energy flow, food chain, food web and trophic levels",
+            "Ecological pyramids and recycling",
+            "Biotic community-concept, structure, dominance, fluctuation and succession",
+            "Nutrient cycles in nature"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Ecosystem Dynamics and Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Stability and complexity of ecosystems",
+            "Specialisation and extinction",
+            "Environmental impact assessment",
+            "Principles of conservation",
+            "Conservation strategies",
+            "Sustainable development"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Aquatic Ecosystems and Fisheries",
+          "unitTitleMr": null,
+          "topics": [
+            "Physico-chemical properties of water",
+            "Kinds of aquatic habitats (fresh water and marine)",
+            "Distribution of and impact of environmental factors on the aquatic biota",
+            "Productivity, mineral cycles and biodegradation in different aquatic ecosystems",
+            "Fish and Fisheries of India with respect to the management of estuarine, coastal water systems and man-made reservoirs",
+            "Biology and ecology of reservoirs"
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Microbiology - General",
+          "unitTitleMr": null,
+          "topics": [
+            "Structure, classification, genetics, reproduction and physiology of bacteria and viruses",
+            "Mycoplasma protozoa and yeast"
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "Applied Microbiology",
+          "unitTitleMr": null,
+          "topics": [
+            "Microbial fermentation",
+            "Antibiotics, organic acids and vitamins",
+            "Microbes in decomposition and recycling processes",
+            "Symbiotic and asymbiotic N2-fixation",
+            "Microbiology of water, air, soil and sewage",
+            "Microbes as pathological agents in plants, animals and man",
+            "General design and applications of a biofermenter",
+            "Biofertilizer"
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Immunology",
+          "unitTitleMr": null,
+          "topics": [
+            "Antigen structure and functions of different classes of immunoglobulins",
+            "Primary and secondary immune response",
+            "Lymphocytes and accessory cells",
+            "Humoral and cell mediated immunity",
+            "MHC, Mechanism of immune response and generation of immunological diversity",
+            "Genetic control of immune response",
+            "Effector mechanism",
+            "Application of immunological techniques"
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "Enzymology",
+          "unitTitleMr": null,
+          "topics": [
+            "Enzyme kinetics (negative and positive cooperativity)",
+            "Regulation of enzymatic activity",
+            "Active sites, Coenzymes, Activators and inhibitors",
+            "Isoenzymes, allosteric enzymes",
+            "Ribozyme and abzyme"
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "Biophysics and Structural Biology",
+          "unitTitleMr": null,
+          "topics": [
+            "Van der Waals, electrostatic, hydrogen bonding and hydrophobic interactions",
+            "Primary structure of proteins and nucleic acids",
+            "Conformation of proteins and polypeptides",
+            "Reverse turns and Ramachandran plot",
+            "Structural polymorphism of DNA, RNA and three-dimensional structure of tRNA",
+            "Structure of carbohydrates, polysaccharides, glycoproteins and peptidoglycans",
+            "Helix-coil transition",
+            "Energy terms in biopolymer conformational calculation"
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "Metabolism",
+          "unitTitleMr": null,
+          "topics": [
+            "Glycolysis and TCA cycle",
+            "Glycogen breakdown and synthesis",
+            "Gluconeogenesis",
+            "Interconversion of hexoses and pentoses",
+            "Amino acid metabolism",
+            "Coordinated control of metabolism",
+            "Biosynthesis of purines and pyrimidines",
+            "Oxidation of lipids",
+            "Biosynthesis of fatty acids, Triglycerides, Phospholipids, Sterols"
+          ]
+        },
+        {
+          "unitNumber": 27,
+          "unitTitle": "Bioenergetics",
+          "unitTitleMr": null,
+          "topics": [
+            "Energy metabolism (concept of free energy)",
+            "Thermodynamic principles in biology",
+            "Energy rich bonds",
+            "Weak interactions",
+            "Coupled reactions and oxidative phosphorylations",
+            "Group transfers",
+            "Biological energy transducers",
+            "Bioenergetics"
+          ]
+        },
+        {
+          "unitNumber": 28,
+          "unitTitle": "Molecular Biology - Genome Organization",
+          "unitTitleMr": null,
+          "topics": [
+            "Fine structure of gene",
+            "Eukaryotic genome organisation",
+            "DNA damage and repair",
+            "DNA replication, amplification and rearrangements"
+          ]
+        },
+        {
+          "unitNumber": 29,
+          "unitTitle": "Transcription and Translation",
+          "unitTitleMr": null,
+          "topics": [
+            "Organization of transcriptional units",
+            "Mechanism of transcription of prokaryotes and eukaryotes",
+            "RNA processing (capping, polyadenylation, splicing, introns and exons)",
+            "Ribonucleoproteins",
+            "Structure of mRNA",
+            "Genetic code and protein synthesis"
+          ]
+        },
+        {
+          "unitNumber": 30,
+          "unitTitle": "Gene Regulation",
+          "unitTitleMr": null,
+          "topics": [
+            "Regulation of gene expression in pro- and eukaryotes",
+            "Attenuation and antitermination",
+            "Operon concept",
+            "DNA methylation",
+            "Heterochromatization",
+            "Transposition",
+            "Regulatory sequences and transcription factors",
+            "Environmental regulation of gene expression"
+          ]
+        },
+        {
+          "unitNumber": 31,
+          "unitTitle": "Medical Biochemistry and Cancer",
+          "unitTitleMr": null,
+          "topics": [
+            "Biochemistry and molecular biology of cancer",
+            "Oncogenes",
+            "Chemical carcinogenesis",
+            "Genetic and metabolic disorders",
+            "Hormonal imbalances",
+            "Drug metabolism and detoxification",
+            "Genetic load and genetic counselling"
+          ]
+        },
+        {
+          "unitNumber": 32,
+          "unitTitle": "Molecular Genetics and Vectors",
+          "unitTitleMr": null,
+          "topics": [
+            "Lysogeny and lytic cycle in bacteriophages",
+            "Bacterial transformation",
+            "Host cell restriction, Transduction",
+            "Complementation",
+            "Molecular recombination",
+            "DNA ligases, Topoisomerases, gyrases, Methylases, Nucleases, Restriction endonucleases",
+            "Plasmids and bacteriophage based vectors for cDNA and genomic libraries"
+          ]
+        },
+        {
+          "unitNumber": 33,
+          "unitTitle": "Genetic Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles and methods of genetic engineering and Gene targeting",
+            "Application in agriculture, health and industry"
+          ]
+        },
+        {
+          "unitNumber": 34,
+          "unitTitle": "Plant and Animal Tissue Culture",
+          "unitTitleMr": null,
+          "topics": [
+            "Cell and tissue culture in plants and animals",
+            "Primary culture, Cell line, Cell clones",
+            "Callus cultures, Somaclonal variation, Micropropagation, Somatic embryogenesis",
+            "Haploidy, Protoplast fusion and somatic hybridization, Cybrids",
+            "Gene transfer methods in plants and in animals",
+            "Transgenic biology, Allopheny, Artificial seeds, Hybridoma technology"
+          ]
+        },
+        {
+          "unitNumber": 35,
+          "unitTitle": "Membrane Biology and Signal Transduction",
+          "unitTitleMr": null,
+          "topics": [
+            "Structure and organisation of membranes",
+            "Glycoconjugates and proteins in membrane systems",
+            "Ion transport / Na/K ATPase",
+            "Molecular basis of signal transduction in bacteria, plants and animals",
+            "Model membranes, Liposomes"
+          ]
+        },
+        {
+          "unitNumber": 36,
+          "unitTitle": "Microscopy and Cytological Techniques",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles and application of light, phase contrast, fluorescence, scanning and transmission electron microscopy",
+            "Cytophotometry and flow cytometry",
+            "Fixation and staining"
+          ]
+        },
+        {
+          "unitNumber": 37,
+          "unitTitle": "Chromatography and Separation Techniques",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles and applications of gel-filtration, ion-exchange and affinity chromatography",
+            "Thin layer and gas chromatography",
+            "High pressure liquid chromatography (HPLC)",
+            "Electrophoresis and electrofocusing",
+            "Ultracentrifugation (velocity and buoyant density)"
+          ]
+        },
+        {
+          "unitNumber": 38,
+          "unitTitle": "Nucleic Acid Techniques",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles and techniques of nucleic acid hybridization and Cot curves",
+            "Sequencing of proteins and nucleic acids",
+            "Southern, Northern and South-Western blotting techniques",
+            "Polymerase chain reaction",
+            "Methods for measuring nucleic acid and protein interactions"
+          ]
+        },
+        {
+          "unitNumber": 39,
+          "unitTitle": "Biophysical Spectroscopy",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of biophysical methods used for analysis of biopolymer structure",
+            "X-ray diffraction, fluorescence, UV, ORD/CD Visible, NMR and ESR spectroscopy",
+            "Hydrodynamic methods",
+            "Atomic absorption and plasma emission spectroscopy"
+          ]
+        },
+        {
+          "unitNumber": 40,
+          "unitTitle": "Tracer Techniques",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles and applications of tracer techniques in biology",
+            "Radiation dosimetry",
+            "Radioactive isotopes and half life of isotopes",
+            "Effect of radiation on biological system",
+            "Autoradiography",
+            "Cerenkov radiation",
+            "Liquid scintillation spectroscopy"
+          ]
+        },
+        {
+          "unitNumber": 41,
+          "unitTitle": "Biostatistics",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles and practice of statistical methods in biological research",
+            "Samples and populations",
+            "Basic statistics - average, statistics of dispersion, coefficient of variation, Standard error, Confidence limits",
+            "Probability distributions (binomial, poisson and normal)",
+            "Tests of statistical significance",
+            "Simple correlation of regression",
+            "Analysis of variance"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

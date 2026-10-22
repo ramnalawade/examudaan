@@ -1010,7 +1010,14 @@ function ListingPageInner({
               ))}
             </div>
           )}
-
+          <LoadMore
+            currentCount={items.length}
+            totalCount={total}
+            onLoadMore={() => setPage(p => p + 1)}
+            loading={loading}
+            label={isMarathi ? `अधिक ${tabLabel} पहा` : `Load More ${tabLabel}`}
+            itemLabel={tabLabel.toLowerCase()}
+          />
           {/* On-Demand Closed / Expired Prompt */}
           {statusFilter === 'published' && !loading && items.length > 0 && (
             <div style={{
@@ -1063,14 +1070,7 @@ function ListingPageInner({
           )}
 
           {/* Load more with progress counter & bar */}
-          <LoadMore
-            currentCount={items.length}
-            totalCount={total}
-            onLoadMore={() => setPage(p => p + 1)}
-            loading={loading}
-            label={isMarathi ? `अधिक ${tabLabel} पहा` : `Load More ${tabLabel}`}
-            itemLabel={tabLabel.toLowerCase()}
-          />
+
 
           {loading && items.length > 0 && (
             <div style={{ textAlign: 'center', padding: 24 }}>

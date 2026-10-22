@@ -1,32 +1,47 @@
 // ============================================================
 // app/jobs/page.js — Jobs Listing Page (Server component wrapper)
-// Metadata is set here; actual client UI is in ListingPage component
+// Metadata is set dynamically: filter/query params (?org=, ?q=, ?state=)
+// receive robots: { index: false, follow: true } and canonical to clean URL.
 // ============================================================
 
 import ListingPage from '../../components/ListingPage'
+import { fitDescription } from '../../lib/seoMetadata'
 
-export const metadata = {
-  title: 'Government Jobs 2026 — Apply Online',
-  description: 'Browse 270+ latest Maharashtra & India government jobs 2026. MPSC, Police Bharti, SSC, RRB, Banking, ZP, BMC — filter by qualification, state & salary.',
-  keywords: [
-    'government jobs 2026', 'sarkari naukri', 'MPSC recruitment', 'Maharashtra govt jobs',
-    'SSC jobs', 'Railway jobs', 'Banking jobs', 'police bharti', 'ZP bharti', 'BMC recruitment'
-  ],
-  alternates: {
-    canonical: 'https://examudaan.in/jobs',
-  },
-  openGraph: {
-    title: 'Government Jobs 2026 — Apply Online | ExamUdaan',
-    description: 'Browse 270+ latest Maharashtra & India government job notifications. MPSC, Police Bharti, SSC, RRB, Banking & more.',
-    url: 'https://examudaan.in/jobs',
-    siteName: 'ExamUdaan.in',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Government Jobs 2026 | ExamUdaan',
-    description: '270+ latest Maharashtra & India govt job notifications — MPSC, SSC, RRB, Banking, Police Bharti.',
-  },
+export async function generateMetadata({ searchParams }) {
+  const resolvedParams = await searchParams
+  const hasParams = resolvedParams && Object.keys(resolvedParams).length > 0
+
+  const title = 'Govt Jobs 2026 — Latest Recruitment Notifications'
+  const description = fitDescription(
+    'Browse 270+ latest Maharashtra & India government jobs 2026. MPSC, Police Bharti, SSC, RRB, Banking, ZP & BMC — filter by qualification, state & salary.',
+    'Apply online on ExamUdaan.'
+  )
+  const canonicalUrl = 'https://examudaan.in/jobs'
+
+  return {
+    title: { absolute: title },
+    description,
+    keywords: [
+      'government jobs 2026', 'sarkari naukri', 'MPSC recruitment', 'Maharashtra govt jobs',
+      'SSC jobs', 'Railway jobs', 'Banking jobs', 'police bharti', 'ZP bharti', 'BMC recruitment'
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    ...(hasParams ? { robots: { index: false, follow: true } } : {}),
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: 'ExamUdaan',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+    },
+  }
 }
 
 export default function JobsPage() {

@@ -6,7 +6,7 @@
 
 import React, { cache } from 'react'
 import Link from 'next/link'
-import { permanentRedirect } from 'next/navigation'
+import { permanentRedirect, notFound } from 'next/navigation'
 import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import DetailHowToApply from '../../../components/DetailHowToApply'
@@ -15,6 +15,15 @@ import SaveJobButton from '../../../components/SaveJobButton'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 import { getSyllabusForJob } from '@/lib/syllabusData'
+import {
+  isWalkInNotification,
+  buildSeoTitle,
+  buildSeoDescription,
+  isThinNotification,
+  buildJobPostingSchema,
+  safeJsonLd,
+  safeHref,
+} from '@/lib/jobSeo'
 import styles from './page.module.css'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
@@ -89,6 +98,7 @@ function formatSalary(salary, posts) {
   return scales.length > 0 ? scales.join(' / ') : null
 }
 
+
 // ── Utility: map education levels to Schema.org / Google JobPosting valid enum ──
 // Google Search Console strictly requires credentialCategory to be one of:
 // 'high school' | 'associate degree' | 'bachelor degree' | 'postgraduate degree' | 'professional certificate'
@@ -157,73 +167,36 @@ function getValidEducationRequirements(educationLevels) {
 
 // ──────────────────────────────────────────────────────────────
 // Database fetch helper — memoized per request lifecycle via React cache()
+const SELECT_JOB = `SELECT en.*, o.name AS org_name, o.name_mr AS org_name_mr, o.acronym AS org_acronym,
+  o.website AS org_website, o.department AS org_department, o.parent_org AS org_parent_org,
+  o.address AS org_address, o.phone AS org_phone
+  FROM exam_notifications en JOIN organizations o ON o.id = en.organization_id`
+
 const getJobData = cache(async function getJobData(slugParam) {
   if (!slugParam || typeof slugParam !== 'string') return null
+  // 1. Exact match on slug column
+  let en = await queryOne(`${SELECT_JOB} WHERE en.slug = $1 AND en.status = 'published'`, [slugParam])
 
-  // 1. First: exact match by full slug column
-  let en = await queryOne(
-    `SELECT en.*,
-            o.name        AS org_name,
-            o.name_mr     AS org_name_mr,
-            o.acronym     AS org_acronym,
-            o.website     AS org_website,
-            o.department  AS org_department,
-            o.parent_org  AS org_parent_org,
-            o.address     AS org_address,
-            o.phone       AS org_phone
-     FROM exam_notifications en
-     JOIN organizations o ON o.id = en.organization_id
-     WHERE en.slug = $1`,
-    [slugParam]
-  )
-
-  // 2. Second: extract numeric ID from slug (e.g. "bmc-514" → 514, or "514" → 514)
+  // 2. Numeric ID match (e.g. bmc-514, nalco-8273, or raw id 8273)
   if (!en) {
     let id = null
     const idMatch = slugParam.match(/-(\d+)$/) || slugParam.match(/^(\d+)$/)
     if (idMatch) id = parseInt(idMatch[1], 10)
     if (id) {
-      en = await queryOne(
-        `SELECT en.*,
-                o.name        AS org_name,
-                o.name_mr     AS org_name_mr,
-                o.acronym     AS org_acronym,
-                o.website     AS org_website,
-                o.department  AS org_department,
-                o.parent_org  AS org_parent_org,
-                o.address     AS org_address,
-                o.phone       AS org_phone
-         FROM exam_notifications en
-         JOIN organizations o ON o.id = en.organization_id
-         WHERE en.id = $1`,
-        [id]
-      )
+      en = await queryOne(`${SELECT_JOB} WHERE en.id = $1 AND en.status = 'published'`, [id])
     }
   }
 
-  // 3. Third: fuzzy fallback by acronym or title to gracefully resolve legacy or descriptive URLs
+  // 3. Fuzzy fallback on acronym / title words
   if (!en) {
     const cleanWord = slugParam.replace(/[-_0-9]/g, ' ').trim().split(/\s+/)[0]
-    en = await queryOne(
-      `SELECT en.*,
-              o.name        AS org_name,
-              o.name_mr     AS org_name_mr,
-              o.acronym     AS org_acronym,
-              o.website     AS org_website,
-              o.department  AS org_department,
-              o.parent_org  AS org_parent_org,
-              o.address     AS org_address,
-              o.phone       AS org_phone
-       FROM exam_notifications en
-       JOIN organizations o ON o.id = en.organization_id
-       WHERE en.status = 'published'
-         AND (en.slug ILIKE $1 OR en.title ILIKE $2 OR o.acronym ILIKE $3)
-       ORDER BY en.published_at DESC NULLS LAST
-       LIMIT 1`,
-      [`%${slugParam}%`, `%${cleanWord || slugParam}%`, `%${cleanWord || slugParam}%`]
-    )
+    if (cleanWord && cleanWord.length >= 3) {
+      en = await queryOne(
+        `${SELECT_JOB} WHERE en.status = 'published' AND (en.slug ILIKE $1 OR en.title ILIKE $2 OR o.acronym ILIKE $3) ORDER BY en.published_at DESC NULLS LAST LIMIT 1`,
+        [`%${cleanWord}%`, `%${cleanWord}%`, `%${cleanWord}%`]
+      )
+    }
   }
-
   if (!en) return null
 
   // Posts: vacancy breakdown with all columns
@@ -277,66 +250,35 @@ export async function generateMetadata({ params }) {
   }
   const data = await getJobData(resolvedParams.slug)
   if (!data) {
-    return { title: { absolute: 'Government Job | ExamUdaan' } }
+    return {
+      title: { absolute: 'Job not found | ExamUdaan' },
+      robots: { index: false },
+    }
   }
-  const { en } = data
-
-  // ── Absolute Title: strictly under 60 chars for SERP & Bingbot (no truncation) ──
-  let rawTitle = en.seo_metadata?.meta_title
-
-  if (!rawTitle) {
-    const postTitle = en.title_en || en.title || ''
-    const englishTitle = postTitle
-      .split(/\s+/)
-      .filter(w => !/^[\u0900-\u097F]+$/.test(w))
-      .join(' ')
-      .replace(/\s+/g, ' ')
-      .trim()
-
-    const displayTitle = englishTitle || postTitle
-    const orgName = en.org_acronym || en.org_name || ''
-    const year = en.apply_end_date
-      ? new Date(en.apply_end_date).getFullYear()
-      : (en.published_at ? new Date(en.published_at).getFullYear() : new Date().getFullYear())
-
-    rawTitle = orgName ? `${displayTitle} — ${orgName} ${year}` : `${displayTitle} ${year}`
-  }
-
-  // Strip duplicate branding & trim base to max 44 chars so with ' | ExamUdaan' it is <= 56 chars
-  let cleanBase = (rawTitle || '')
-    .replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '')
-    .trim()
-  if (cleanBase.length > 44) {
-    cleanBase = cleanBase.slice(0, 41).trim() + '...'
-  }
-  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Govt Job 2026 | ExamUdaan'
-
-  const metaDesc =
-    en.seo_metadata?.meta_description ||
-    `Apply for ${en.title_en || en.title}. Vacancies: ${en.total_vacancies || 'Various'}. Last date: ${formatDate(en.apply_end_date)}. Eligibility, fee & how to apply.`
-
+  const { en, posts } = data
   const rawUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
   const siteUrl = (rawUrl && !rawUrl.includes('localhost')) ? rawUrl : 'https://examudaan.in'
-  const targetSection = TYPE_TO_PATH[en.notification_type] || '/jobs'
-  const canonicalSlug = en.slug || resolvedParams.slug
-  const canonicalUrl = `${siteUrl}${targetSection}/${canonicalSlug}`
+  const canonicalUrl = `${siteUrl}/jobs/${resolvedParams.slug}`
 
+  const metaTitle = buildSeoTitle(en, posts)
+  const metaDesc = buildSeoDescription(en, posts)
   return {
+    metadataBase: new URL(siteUrl),
     title: { absolute: metaTitle },
-    description: metaDesc.slice(0, 160),
-    alternates: {
-      canonical: canonicalUrl,
-    },
+    description: metaDesc,
+    alternates: { canonical: canonicalUrl },
+    robots: isThinNotification(en, posts) ? { index: false, follow: true } : undefined,
     openGraph: {
       title: metaTitle,
-      description: metaDesc.slice(0, 160),
+      description: metaDesc,
       url: canonicalUrl,
       type: 'article',
-      siteName: 'ExamUdaan.in',
+      siteName: 'ExamUdaan',
+      modifiedTime: en.updated_at ? new Date(en.updated_at).toISOString() : undefined,
     },
+    twitter: { card: 'summary_large_image', title: metaTitle, description: metaDesc },
   }
 }
-
 
 // ──────────────────────────────────────────────────────────────
 // Main Page (Server Component)
@@ -356,39 +298,9 @@ export default async function JobDetailPage({ params }) {
   }
 
   const data = await getJobData(resolvedParams.slug)
-
-  // No data found → high-converting recovery card for organic traffic
   if (!data) {
-    return (
-      <div className="container" style={{ paddingTop: 40, paddingBottom: 80 }}>
-        <div style={{
-          maxWidth: 620,
-          margin: '0 auto',
-          background: '#FFFFFF',
-          padding: '40px 28px',
-          borderRadius: 16,
-          border: '1px solid #E5E7EB',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
-          textAlign: 'center'
-        }}>
-          <span style={{ fontSize: 44 }}>📋</span>
-          <h1 style={{ color: 'var(--on-surface, #0F172A)', fontSize: 22, fontWeight: 800, marginTop: 12 }}>
-            Notification Updated or Relocated
-          </h1>
-          <p style={{ color: 'var(--secondary, #64748B)', marginTop: 8, fontSize: 14, lineHeight: 1.6 }}>
-            ही जाहिरात मुदत संपल्यामुळे किंवा नवीन माहिती प्रसिद्ध झाल्यामुळे अद्ययावत केली गेली आहे. खालील लिंकवरून सध्या सुरू असलेल्या अधिकृत भरती जाहिराती पहा.
-          </p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginTop: 24, flexWrap: 'wrap' }}>
-            <Link href="/jobs" className="btn-primary" style={{ padding: '10px 20px', borderRadius: 8, textDecoration: 'none' }}>
-              View All Active Jobs →
-            </Link>
-            <Link href="/mpsc-pyq" className="btn-outline" style={{ padding: '10px 18px', borderRadius: 8, textDecoration: 'none' }}>
-              🏛️ MPSC Question Papers & Keys
-            </Link>
-          </div>
-        </div>
-      </div>
-    )
+    const cleanQuery = (resolvedParams.slug || '').replace(/[-_0-9]/g, ' ').trim()
+    permanentRedirect(cleanQuery ? `/jobs?q=${encodeURIComponent(cleanQuery)}` : '/jobs')
   }
 
   const { en, posts, related } = data
@@ -417,14 +329,7 @@ export default async function JobDetailPage({ params }) {
   const expMax              = ai.experience_max_years ?? null
 
   // ── Walk-in detection ──────────────────────────────────────
-  // Walk-in when: explicit flag, OR selection_process contains 'walk-in', 
-  // OR contractual employment with exam_date and no application dates
-  const selectionProcessText = (en.selection_process || '').toLowerCase()
-  const isWalkIn = en.is_walk_in === true
-    || selectionProcessText.includes('walk-in')
-    || selectionProcessText.includes('walk in')
-    || selectionProcessText.includes('interview')
-    || (en.employment_type === 'contractual' && !en.apply_start_date && !en.apply_end_date)
+  const isWalkIn = isWalkInNotification(en)
 
   // ── ai_extracted_data: IISER-style has posts[] array ───────
   // ai.posts[] = [{post_name, pay_scale, qualification, vacancies, job_type}]
@@ -496,19 +401,19 @@ export default async function JobDetailPage({ params }) {
       : []
 
   // ── Apply link: NEVER '#' — use null and conditionally render
-  const applyLink = en.application_links?.apply_online || en.application_links?.detail_page || null
+  const applyLink = safeHref(en.application_links?.apply_online || en.application_links?.detail_page || null)
   // Primary PDF from notification_pdf or all_pdfs[0]
-  const allPdfs   = en.application_links?.all_pdfs || []
-  const pdfLink   = en.notification_pdf
-                 || en.application_links?.notification_pdf
-                 || allPdfs[0]
-                 || en.source_url
-                 || null
+  const allPdfs   = (en.application_links?.all_pdfs || []).map(safeHref).filter(Boolean)
+  const pdfLink   = safeHref(
+    en.notification_pdf
+    || en.application_links?.notification_pdf
+    || allPdfs[0]
+    || en.source_url
+    || null
+  )
 
   // Detail page link (for IISER-style sites)
-  const detailPageLink = en.application_links?.detail_page || null
-
-
+  const detailPageLink = safeHref(en.application_links?.detail_page || null)
 
   // ── Urgency / status ───────────────────────────────────────
   // For walk-ins use exam_date; for regular jobs use apply_end_date
@@ -523,21 +428,20 @@ export default async function JobDetailPage({ params }) {
     || null
 
   const allLinks = [
-    { label: 'Apply Online',              url: en.application_links?.apply_online,       icon: 'open_in_new' },
-    { label: 'View Job Details',          url: detailPageLink && detailPageLink !== en.application_links?.apply_online ? detailPageLink : null, icon: 'open_in_new' },
-    { label: 'Official Website',          url: en.application_links?.official_website || en.org_website, icon: 'language' },
-    { label: 'Official Notification PDF', url: pdfLink,                                  icon: 'picture_as_pdf' },
-    { label: 'Result Link',               url: en.application_links?.result_link,        icon: 'assignment_turned_in' },
-    { label: 'Admit Card',                url: en.application_links?.admit_card_link,    icon: 'badge' },
-    { label: 'Answer Key',                url: en.application_links?.answer_key_link,    icon: 'fact_check' },
+    { label: 'Apply Online',              url: safeHref(en.application_links?.apply_online),       icon: 'open_in_new' },
+    { label: 'View Job Details',          url: safeHref(detailPageLink && detailPageLink !== en.application_links?.apply_online ? detailPageLink : null), icon: 'open_in_new' },
+    { label: 'Official Website',          url: safeHref(en.application_links?.official_website || en.org_website), icon: 'language' },
+    { label: 'Official Notification PDF', url: safeHref(pdfLink),                                  icon: 'picture_as_pdf' },
+    { label: 'Result Link',               url: safeHref(en.application_links?.result_link),        icon: 'assignment_turned_in' },
+    { label: 'Admit Card',                url: safeHref(en.application_links?.admit_card_link),    icon: 'badge' },
+    { label: 'Answer Key',                url: safeHref(en.application_links?.answer_key_link),    icon: 'fact_check' },
     // Extra PDFs (IISER-style)
-    ...allPdfs.slice(1).map((url, i) => ({ label: `Notification PDF ${i + 2}`, url, icon: 'picture_as_pdf' })),
+    ...allPdfs.slice(1).map((url, i) => ({ label: `Notification PDF ${i + 2}`, url: safeHref(url), icon: 'picture_as_pdf' })),
   ].filter(l => l.url)
-
 
   // ── Related jobs ───────────────────────────────────────────
   const relatedJobs = related.map(r => ({
-    slug:  r.org_acronym && r.id ? `${r.org_acronym.toLowerCase()}-${r.id}` : r.slug,
+    slug:  r.slug || (r.org_acronym && r.id ? `${r.org_acronym.toLowerCase()}-${r.id}` : r.id),
     title: r.title,
     org:   r.org_acronym || 'GOVT',
     posts: r.total_vacancies ? `${r.total_vacancies} Posts` : 'Various Posts',
@@ -580,55 +484,16 @@ export default async function JobDetailPage({ params }) {
 
   const richDescription = fullJobDescParts.length > 0 ? fullJobDescParts.join('\n') : (en.title || 'Government recruitment notification')
 
-  // Parse salary if present
-  const salaryNum = en.salary?.amount ? Number(en.salary.amount) : (en.salary?.breakdown?.base ? Number(en.salary.breakdown.base) : null)
-
-  const jobPostingSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'JobPosting',
-    title: en.title,
-    description: richDescription,
-    datePosted: en.published_at ? new Date(en.published_at).toISOString() : new Date().toISOString(),
-    validThrough: en.apply_end_date
-      ? new Date(en.apply_end_date).toISOString()
-      : new Date(Date.now() + 45 * 24 * 60 * 60 * 1000).toISOString(),
-    employmentType: en.employment_type === 'contractual' ? 'CONTRACTOR' : 'FULL_TIME',
-    hiringOrganization: {
-      '@type': 'Organization',
-      name: en.org_name || 'Government of Maharashtra',
-      sameAs: en.org_website || siteUrl,
-      logo: `${siteUrl}/icon.png`,
-    },
-    identifier: {
-      '@type': 'PropertyValue',
-      name: en.org_name || 'Government of Maharashtra',
-      value: String(en.id || resolvedParams.slug),
-    },
-    jobLocation: {
-      '@type': 'Place',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: (en.exam_cities && en.exam_cities[0]) || 'Mumbai',
-        addressRegion: en.state_slug || 'Maharashtra',
-        addressCountry: 'IN',
-      },
-    },
-    ...(salaryNum && !isNaN(salaryNum) && salaryNum > 0 ? {
-      baseSalary: {
-        '@type': 'MonetaryAmount',
-        currency: 'INR',
-        value: {
-          '@type': 'QuantitativeValue',
-          value: salaryNum,
-          unitText: 'MONTH',
-        },
-      },
-    } : {}),
-    ...(getValidEducationRequirements(en.ai_extracted_data?.education_levels) ? {
-      educationRequirements: getValidEducationRequirements(en.ai_extracted_data?.education_levels),
-    } : {}),
-    directApply: true,
-  }
+  const jobPostingSchema = buildJobPostingSchema({
+    en,
+    posts: allPosts,
+    richDescription,
+    siteUrl,
+    pageUrl,
+    isClosed,
+    isWalkIn,
+    educationRequirements: getValidEducationRequirements(en.ai_extracted_data?.education_levels),
+  })
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -642,13 +507,15 @@ export default async function JobDetailPage({ params }) {
 
   return (
     <>
+      {jobPostingSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(jobPostingSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
       />
       <div className="container" style={{ paddingTop: '20px', paddingBottom: '100px' }}>
 
@@ -1489,8 +1356,39 @@ export default async function JobDetailPage({ params }) {
                 </div>
               )}
 
+              {/* ── Community Retention: Telegram & WhatsApp Alerts ── */}
+              <div className={styles.communityRetentionCard}>
+                <div className={styles.communityHeader}>
+                  <span className={`material-symbols-outlined ${styles.communityIcon}`}>send</span>
+                  <h3 className={styles.communityTitle}>
+                    <T k="detail.alerts_title" fallback="Never Miss an Exam Alert" />
+                  </h3>
+                </div>
+                <p className={styles.communityDesc}>
+                  <T k="detail.alerts_desc" fallback={`Get hall tickets, answer keys and results for ${en.org_acronym || 'Govt Exams'} on your phone.`} />
+                </p>
+                <div className={styles.communityButtons}>
+                  <a
+                    href="https://t.me/examudaanjobs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.telegramBtn}
+                  >
+                    <span className={`material-symbols-outlined ${styles.retentionIcon}`}>send</span>
+                    <span>Join Official Telegram</span>
+                  </a>
+                  <Link
+                    href="/alerts"
+                    className={styles.whatsappBtn}
+                  >
+                    <span className={`material-symbols-outlined ${styles.retentionIcon}`}>chat</span>
+                    <span>Get Free WhatsApp / SMS Alerts</span>
+                  </Link>
+                </div>
+              </div>
+
               {/* Organization Info */}
-              {(en.org_website || en.org_address || en.org_phone) && (
+              {(safeHref(en.org_website) || en.org_address || en.org_phone) && (
                 <div style={{
                   background: 'var(--surface-container-lowest)',
                   border: '1px solid var(--outline-variant)',
@@ -1500,9 +1398,9 @@ export default async function JobDetailPage({ params }) {
                     <T k="detail.organization" fallback="Organization" />
                   </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    {en.org_website && (
+                    {safeHref(en.org_website) && (
                       <a
-                        href={en.org_website}
+                        href={safeHref(en.org_website)}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--primary)', textDecoration: 'none' }}

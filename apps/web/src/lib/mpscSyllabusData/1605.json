@@ -1,0 +1,122 @@
+{
+  "docId": 1605,
+  "examName": "Administrative Officer, General State Service, Gr-B (Food and Drug Administration)",
+  "examNameMr": "शासकीय अधिकारी, सामायिक राज्य सेवा, गट-ब, अन्न व औषध शासन",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "Marathi",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "वस्तुनिष्ठ बहुपर्यायी परीक्षा",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Intelligence Test",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धिमत्ता चाचणी",
+      "totalMarks": 100,
+      "duration": "एक तास",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "History of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा इतिहास",
+          "topics": [
+            "महाराष्ट्राचा इतिहास"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Geography of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा भूगोल",
+          "topics": [
+            "महाराष्ट्राचा भूगोल"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Right to Information Act - 2005",
+          "unitTitleMr": "माहितीचा अधिकार कायदा - 2005",
+          "topics": [
+            "माहितीचा अधिकार कायदा - 2005"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Indian Constitution",
+          "unitTitleMr": "भारतीय राज्यघटना",
+          "topics": [
+            "भारतीय राज्यघटना"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Computer and Information Technology",
+          "unitTitleMr": "संगणक व माहिती तंत्रज्ञान",
+          "topics": [
+            "संगणक व माहिती तंत्रज्ञान"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Human Rights and Responsibilities",
+          "unitTitleMr": "मानवी हक्क व जबाबदाऱ्या",
+          "topics": [
+            "मानवी हक्क व जबाबदाऱ्या"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Current Affairs (World and India)",
+          "unitTitleMr": "जागतिक तसेच भारतातील चालू घडामोडी",
+          "topics": [
+            "राजकीय",
+            "औद्योगिक",
+            "आर्थिक",
+            "सामाजिक",
+            "शैक्षणिक",
+            "भौगोलिक",
+            "खगोलशास्त्रिय",
+            "सांस्कृतिक",
+            "वैज्ञानिक",
+            "इत्यादी"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता विषयक प्रश्न",
+          "topics": [
+            "उमेदवार किती लवकर व अचूकपणे विचार करू शकतो याचा अंदाज घेण्यासाठीच्या पद्धtinे सदर प्रश्न विचारण्यात येतील."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Rules and Orders regarding Administrative Work",
+          "unitTitleMr": "प्रशासकीय कामकाजाच्या संदर्भात लागू होणारे नियम व आदेश",
+          "topics": [
+            "महाराष्ट्र नागरी सेवा (सेवेच्या सर्वसाधारण शर्ती) नियम 1981",
+            "महाराष्ट्र नागरी सेवा (वेतन) नियम 1981",
+            "महाराष्ट्र नागरी सेवा (पदग्रहण अवधी, परकीय सेवा, निलंबन, बडतर्फ, सेवेतून काढून टाकणे या काळातील प्रदाने) नियम 1981",
+            "महाराष्ट्र नागरी सेवा (रजा) नियम 1981",
+            "महाराष्ट्र नागरी सेवा (निवृत्तीवेतन) नियम 1982",
+            "महाराष्ट्र नागरी सेवा (शिस्त व अपील) नियम 1979 / विभागीय चौकशी पुस्तिका",
+            "महाराष्ट्र नागरी सेवा (वर्तणूक) नियम 1979",
+            "लेखा विषयक बाबत",
+            "ज्येष्ठतासूचीबाबत",
+            "कार्यालयीन कार्यपद्धती",
+            "प्रशासकीय बाबी"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "विषय सांकेतांक - 927"
+  ]
+}

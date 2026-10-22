@@ -1,0 +1,73 @@
+{
+  "docId": 6205,
+  "examName": "Assistant Administration Officer, Group-B (Industries, Energy and Labour Department)",
+  "examNameMr": "सहायक प्रशासन अधिकारी, गट - ब (उद्योग, ऊर्जा व कामगार विभाग)",
+  "conductingBody": "Maharashtra Lokseva Ayog",
+  "year": 2022,
+  "language": "Marathi",
+  "category": "group-b",
+  "totalMarks": 125,
+  "mainsMarks": 100,
+  "interviewMarks": 25,
+  "examPattern": "Written Examination - 100 Marks, Interview - 25 Marks",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge, Intelligence Test and Administrative Work",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धीमापन चाचणी व प्रशासकीय कामकाज (१७३)",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective Multiple Choice",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Knowledge",
+          "unitTitleMr": "सामान्य ज्ञान",
+          "topics": [
+            "History of Maharashtra",
+            "Geography of Maharashtra",
+            "Right to Information Act - 2005",
+            "Indian Constitution",
+            "Computer and Information Technology",
+            "Human Rights and Responsibilities",
+            "Current Affairs of Global and India - Political, Industrial, Economic, Social, Educational, Geographical, Astronomical, Cultural, Scientific, etc."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धीमापन विषयक प्रश्न",
+          "topics": [
+            "Candidate's ability to think quickly and accurately"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Rules and Orders applicable in context of Administrative Work",
+          "unitTitleMr": "प्रशासकीय कामकाजाच्या संदर्भात लागू होणारे नियम व आदेश",
+          "topics": [
+            "Maharashtra Civil Services (General Conditions of Service) Rules, 1981",
+            "Maharashtra Civil Services (Pay) Rules, 1981",
+            "Maharashtra Civil Services (Join Time, Foreign Service, Suspension, Dismissal and Removal from Service Periods of Provisions) Rules, 1981",
+            "Maharashtra Civil Services (Leave) Rules, 1981",
+            "Maharashtra Civil Services (Superannuation Pension) Rules, 1982",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules, 1979 / Departmental Enquiry Booklet",
+            "Maharashtra Civil Services (Conduct) Rules, 1979",
+            "Matters related to Accounts",
+            "Matters related to Seniority List",
+            "Office Procedure",
+            "Administrative Matters",
+            "Judicial Matters"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Negative Marking: 25% or 1/4th of the total marks given for a correct answer will be deducted for each incorrect answer.",
+    "Final merit list will be based on the combined marks of the objective examination and interview."
+  ]
+}

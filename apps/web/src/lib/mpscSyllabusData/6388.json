@@ -1,0 +1,158 @@
+{
+  "docId": 6388,
+  "examName": "Maharashtra Civil Services Gazetted (Prelim) Examination",
+  "examNameMr": "महाराष्ट्र नागरी सेवा राजपत्रित (पूर्व) परीक्षा परीक्षा योजना",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "rajyaseva",
+  "totalMarks": 400,
+  "mainsMarks": 0,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test (Prelim)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper I",
+      "paperTitleMr": "पेपर १",
+      "totalMarks": 200,
+      "duration": "Two hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current events of state, national and international importance.",
+          "unitTitleMr": null,
+          "topics": [
+            "Current events of state, national and international importance."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "History of India and Indian National Movement",
+          "unitTitleMr": null,
+          "topics": [
+            "History of India and Indian National Movement with some weightage to Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Maharashtra, India and World Geography",
+          "unitTitleMr": null,
+          "topics": [
+            "Physical, Social, Economic Geography of Maharashtra, India and the World."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "India and Maharashtra - Polity and Governance",
+          "unitTitleMr": null,
+          "topics": [
+            "Constitution, Political System, Panchayati Raj, Urban Governance, Public Policy, Rights issues, etc."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Economic and Social Development",
+          "unitTitleMr": null,
+          "topics": [
+            "Sustainable Development, Poverty, Inclusion, Demographics, Social Sector initiatives, etc."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "General issues on Environmental Ecology, Bio-diversity and Climate Change",
+          "unitTitleMr": null,
+          "topics": [
+            "General issues on Environmental Ecology, Bio-diversity and Climate Change - that do not require subject specialisation."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "General Science",
+          "unitTitleMr": null,
+          "topics": [
+            "General Science."
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper II (Qualifying)",
+      "paperTitleMr": "पेपर २ (पात्रता)",
+      "totalMarks": 200,
+      "duration": "Two hours",
+      "type": "Objective",
+      "isQualifying": true,
+      "isMerit": false,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Comprehension",
+          "unitTitleMr": null,
+          "topics": [
+            "Comprehension"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Interpersonal skills",
+          "unitTitleMr": null,
+          "topics": [
+            "Interpersonal skills including communication skills."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Logical reasoning and analytical ability",
+          "unitTitleMr": null,
+          "topics": [
+            "Logical reasoning and analytical ability."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Decision-making and problem-solving",
+          "unitTitleMr": null,
+          "topics": [
+            "Decision-making and problem-solving."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "General mental ability",
+          "unitTitleMr": null,
+          "topics": [
+            "General mental ability."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Basic numeracy and Data interpretation",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic numeracy (numbers and their relations, orders of magnitude, etc.) (Class X level)",
+            "Data interpretation (Charts, graphs, tables, data sufficiency etc.- Class X level)"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Marathi and English Language Comprehension skills",
+          "unitTitleMr": null,
+          "topics": [
+            "Marathi and English Language Comprehension skills (Class X/XII level)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Questions relating to Marathi and English Language Comprehension skill of Class X/XII level will be tested through passages from Marathi and English language without providing cross translation thereof in the question paper.",
+    "The questions will be of multiple choice, objective type.",
+    "It is mandatory for the candidate to appear in both the Papers of Maharashtra Civil Services Gazetted (Prelim) Examination for the purpose of evaluation."
+  ]
+}

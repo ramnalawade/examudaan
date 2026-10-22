@@ -889,7 +889,8 @@ export const AI_TOOLS = [
     "category": "Dev",
     "badge": "🚀 Elite Tool",
     "free": true,
-    "url": "https://antigravity.dev",
+    "url": "https://antigravity.google",
+    "docsUrl": "https://antigravity.google/docs",
     "logo": "rocket_launch",
     "targetUsers": [
       "Software Engineers",
@@ -7145,8 +7146,619 @@ export const AI_TOOLS = [
       "khanmigo",
       "photomath"
     ]
+  },
+  {
+    "slug": "studyfetch",
+    "name": "StudyFetch (AI Study Coach Spark.e)",
+    "tagline": "Transform lectures, notes, PDFs & YouTube into interactive study sets & flashcards.",
+    "category": "Study",
+    "badge": "🎓 AI Study Coach",
+    "free": true,
+    "url": "https://www.studyfetch.com",
+    "logo": "school",
+    "targetUsers": [
+      "MPSC Aspirants",
+      "UPSC Students",
+      "College Students",
+      "Banking Candidates"
+    ],
+    "whatIs": "StudyFetch is an AI-powered study platform featuring 'Spark.e', an interactive AI tutor. It takes course materials—including recorded video lectures, PDFs, audio notes, and PowerPoint presentations—and converts them into full study sets, interactive quizzes, flashcards, and personalized tutoring conversations.",
+    "whyItMatters": "Instead of passively watching a 2-hour Indian Economy or History video lecture, StudyFetch transcribes the content, builds summary notes, extracts high-yield MCQs, and lets you interrogate the AI tutor about confusing exam concepts.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Upload Lecture or Link",
+        "desc": "Go to studyfetch.com, create a notebook, and upload your PDF notes, lecture slides, or paste a YouTube coaching lecture link."
+      },
+      {
+        "step": 2,
+        "title": "Chat with Spark.e",
+        "desc": "Ask Spark.e conceptual questions like 'Explain the difference between Monetary Policy and Fiscal Policy based on this lecture.'"
+      },
+      {
+        "step": 3,
+        "title": "Generate Interactive Flashcards",
+        "desc": "Click 'Create Flashcards' to extract all core facts and definitions into active recall cards."
+      },
+      {
+        "step": 4,
+        "title": "Take Practice Quizzes",
+        "desc": "Test your retention with auto-generated multiple-choice, true/false, and short-answer tests with detailed rationales."
+      },
+      {
+        "step": 5,
+        "title": "Track Study Progress",
+        "desc": "Review mastery scores across chapters to pinpoint weak sections before the official exam."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Lecture Synthesis",
+        "text": "Synthesize this 90-minute lecture into 5 high-yield revision pillars with key definitions, formulas, and historical dates."
+      },
+      {
+        "title": "PYQ MCQ Generator",
+        "text": "Generate 15 challenging MPSC-style multiple-choice questions testing conceptual clarity from this uploaded study module."
+      }
+    ],
+    "limitations": "Free plan offers generous introductory study sessions; extended unlimited lecture ingestion requires a premium subscription.",
+    "relatedSlugs": [
+      "notebooklm",
+      "knowt",
+      "turbolearn-ai"
+    ]
+  },
+  {
+    "slug": "turbolearn-ai",
+    "name": "TurboLearn AI",
+    "tagline": "Record audio or drop YouTube links to get instant Cornell notes, flashcards & revision summaries.",
+    "category": "Study",
+    "badge": "⚡ Instant Notes",
+    "free": true,
+    "url": "https://www.turbolearn.ai",
+    "logo": "mic_none",
+    "targetUsers": [
+      "Offline Coaching Students",
+      "MPSC/UPSC Aspirants",
+      "College Students",
+      "Distance Learners"
+    ],
+    "whatIs": "TurboLearn AI records live classroom lectures or accepts audio/video links and turns them into beautifully structured Cornell-style revision notes, automatic flashcards, and chapter summaries within seconds.",
+    "whyItMatters": "Aspirants sitting in 3-hour coaching classes in Pune or Delhi often struggle between listening and writing notes. TurboLearn captures the voice, formats bullet points, and highlights test-critical concepts automatically.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Record or Paste Link",
+        "desc": "Open the TurboLearn mobile or web app and tap record during class, or paste a YouTube/mp4 educational lecture URL."
+      },
+      {
+        "step": 2,
+        "title": "AI Audio Processing",
+        "desc": "TurboLearn's speech engine transcribes the audio and structures it into titled headings, key takeaways, and definition boxes."
+      },
+      {
+        "step": 3,
+        "title": "Review Cornell Notes",
+        "desc": "Study structured notes formatted with cues on the left, detailed notes in the center, and summaries at the bottom."
+      },
+      {
+        "step": 4,
+        "title": "Study Smart Flashcards",
+        "desc": "Swipe through automatically compiled flashcards for active recall practice."
+      },
+      {
+        "step": 5,
+        "title": "Export & Share",
+        "desc": "Download as PDF or sync to Notion for your master revision binder."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Cornell Note Formatting",
+        "text": "Extract key keywords and 1-line mnemonics from this lecture transcript into standard Cornell note format."
+      },
+      {
+        "title": "Doubt Clarification",
+        "text": "Identify the 3 most complex concepts explained in this class recording and clarify them with simple everyday analogies."
+      }
+    ],
+    "limitations": "Works best with clear speaker audio; heavy background classroom noise may require manual transcript review.",
+    "relatedSlugs": [
+      "notebooklm",
+      "otter",
+      "studyfetch"
+    ]
+  },
+  {
+    "slug": "wisdolia",
+    "name": "Wisdolia",
+    "tagline": "AI flashcard generator with smart feedback on your free-text answers from any web page or PDF.",
+    "category": "Study",
+    "badge": "🧠 Smart Feedback",
+    "free": true,
+    "url": "https://www.wisdolia.com",
+    "logo": "psychology",
+    "targetUsers": [
+      "Medical & Science Students",
+      "UPSC Aspirants",
+      "MPSC Mains Candidates",
+      "Language Learners"
+    ],
+    "whatIs": "Wisdolia is an AI-powered smart study assistant available as a Chrome extension and web app that generates high-yield flashcards from any online article, YouTube video, or PDF. Uniquely, it evaluates your typed or spoken answers with personalized pedagogical feedback, explaining exactly where your understanding was incomplete.",
+    "whyItMatters": "Standard flashcards only show Front and Back. Wisdolia grades your actual answer like a human teacher, helping GS Mains aspirants practice articulating concise 50-word explanations.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Install Browser Extension",
+        "desc": "Add Wisdolia to Chrome or visit wisdolia.com to create an account."
+      },
+      {
+        "step": 2,
+        "title": "Open Any Study Material",
+        "desc": "Open a government PIB release, Wikipedia article, The Hindu editorial, or state government report."
+      },
+      {
+        "step": 3,
+        "title": "Click Generate Flashcards",
+        "desc": "Wisdolia creates active recall question cards focused on causal relationships and facts."
+      },
+      {
+        "step": 4,
+        "title": "Answer in Your Own Words",
+        "desc": "Type or speak your answer into the prompt box without peeking at the answer key."
+      },
+      {
+        "step": 5,
+        "title": "Get Instant AI Feedback",
+        "desc": "Wisdolia highlights what you nailed, what you missed, and how to improve your score."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Editorial Comprehension",
+        "text": "Create 5 critical thinking flashcards analyzing the economic ramifications of this budget speech."
+      },
+      {
+        "title": "Answer Evaluation",
+        "text": "Evaluate my answer on Article 32: 'It allows citizens to move Supreme Court for Fundamental Rights.' Give specific suggestions for legal completeness."
+      }
+    ],
+    "limitations": "Free tier includes daily card generation quotas; premium unlocks unlimited card sets and advanced analytics.",
+    "relatedSlugs": [
+      "anki",
+      "knowt",
+      "remnote"
+    ]
+  },
+  {
+    "slug": "shiken-ai",
+    "name": "Shiken AI",
+    "tagline": "Mindful exam preparation platform with AI question banks, spaced repetition & gamified mock tests.",
+    "category": "Study",
+    "badge": "🎯 Exam Simulator",
+    "free": true,
+    "url": "https://shiken.ai",
+    "logo": "quiz",
+    "targetUsers": [
+      "Competitive Exam Aspirants",
+      "Medical Students",
+      "Civil Service Candidates",
+      "Certification Seekers"
+    ],
+    "whatIs": "Shiken AI is a modern learning platform combining spaced repetition, active recall, question generation, and mindfulness exercises. It allows students to generate realistic practice exam papers, flashcards, and interactive speed drills while tracking daily learning streaks and stress reduction.",
+    "whyItMatters": "Exam anxiety and burnout are rampant among competitive exam aspirants. Shiken pairs rigorous adaptive quiz engines with mental wellness tools, keeping study sessions engaging and high-retention.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Sign Up & Pick Topic",
+        "desc": "Visit shiken.ai and select your target exam subjects (e.g., General Studies, Aptitude, History)."
+      },
+      {
+        "step": 2,
+        "title": "Upload Notes",
+        "desc": "Paste study outlines or upload textbook PDFs to auto-generate customized question banks."
+      },
+      {
+        "step": 3,
+        "title": "Choose Study Mode",
+        "desc": "Switch between Quick Speed Drill, Timed Exam Simulation, or Spaced Repetition Flashcards."
+      },
+      {
+        "step": 4,
+        "title": "Review Detailed Explanations",
+        "desc": "Each question provides step-by-step reasoning explaining why distractors are incorrect."
+      },
+      {
+        "step": 5,
+        "title": "Track Retention Curve",
+        "desc": "View mastery analytics showing memory retention strength across syllabus modules."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Distractor-Rich MCQs",
+        "text": "Create 10 high-difficulty multiple-choice questions on Constitutional Amendments with 4 plausible options each."
+      },
+      {
+        "title": "Rapid Revision Drill",
+        "text": "Generate a 15-minute speed drill testing key treaties and governor-generals of British India."
+      }
+    ],
+    "limitations": "Advanced question bank exports and team collaboration features require premium tiers.",
+    "relatedSlugs": [
+      "gizmo",
+      "quizlet-qchat",
+      "vaia"
+    ]
+  },
+  {
+    "slug": "monic-ai",
+    "name": "Monic AI",
+    "tagline": "All-in-one AI study workbench: convert documents & slides into mock tests, summaries & flashcards.",
+    "category": "Study",
+    "badge": "📚 All-in-One Prep",
+    "free": true,
+    "url": "https://monic.ai",
+    "logo": "auto_stories",
+    "targetUsers": [
+      "University Students",
+      "MPSC & State PSC Aspirants",
+      "UPSC Prelims Candidates",
+      "Banking Exam Prep"
+    ],
+    "whatIs": "Monic AI is a comprehensive study workspace that ingests textbooks, presentation slides, research PDFs, and video links to automatically generate chapter-by-chapter summaries, simulated mock assessments, flashcard decks, and spaced repetition schedules.",
+    "whyItMatters": "Rather than juggling separate apps for note-taking, flashcards, and testing, Monic AI keeps everything organized in unified course workspaces, cutting study preparation time in half.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Create Workspace",
+        "desc": "Open monic.ai and create a dedicated workspace (e.g., 'Maharashtra Geography & Rivers')."
+      },
+      {
+        "step": 2,
+        "title": "Upload Materials",
+        "desc": "Upload PDF textbooks, notes, or YouTube lecture links."
+      },
+      {
+        "step": 3,
+        "title": "Generate Study Aids",
+        "desc": "Choose whether to produce comprehensive summaries, key term flashcards, or mock exams."
+      },
+      {
+        "step": 4,
+        "title": "Take Mock Assessment",
+        "desc": "Sit for an AI-generated exam with custom timers, negative marking, and pass/fail thresholds."
+      },
+      {
+        "step": 5,
+        "title": "Review Analytics",
+        "desc": "Identify weak topics and auto-regenerate remedial flashcards for targeted revision."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Chapter Synthesis",
+        "text": "Extract the core administrative reforms from this chapter into a 1-page structured bulleted revision sheet."
+      },
+      {
+        "title": "Targeted Assessment",
+        "text": "Generate a 20-question mock exam focusing purely on western Ghats geography, passes, and rainfall patterns."
+      }
+    ],
+    "limitations": "Free tier provides monthly resource upload allowances; heavier file processing requires credit top-ups.",
+    "relatedSlugs": [
+      "studyfetch",
+      "knowt",
+      "coconote"
+    ]
+  },
+  {
+    "slug": "algor-education",
+    "name": "Algor Education",
+    "tagline": "Visual concept & mind-map generator from text, PDFs, and books for rapid visual revision.",
+    "category": "Study",
+    "badge": "🗺️ Mind Mapping",
+    "free": true,
+    "url": "https://www.algoreducation.com",
+    "logo": "account_tree",
+    "targetUsers": [
+      "Visual Learners",
+      "UPSC & MPSC Aspirants",
+      "School & College Students",
+      "Teachers & Educators"
+    ],
+    "whatIs": "Algor Education is an AI-powered visual learning tool that automatically synthesizes long texts, textbook chapters, and PDF documents into interactive concept mind maps, flowcharts, and study summaries.",
+    "whyItMatters": "Complex subjects like Indian Polity (Panchayati Raj structure, judicial hierarchy) or History (Maratha Empire, freedom struggle timelines) are far easier to recall in exams when stored as visual branching nodes rather than flat text.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Algor Workspace",
+        "desc": "Visit algoreducation.com and select 'Create Concept Map'."
+      },
+      {
+        "step": 2,
+        "title": "Import Source Material",
+        "desc": "Paste notes, upload chapter PDFs, or enter a topic prompt like 'Indian Judicial System Hierarchy'."
+      },
+      {
+        "step": 3,
+        "title": "Auto-Generate Map",
+        "desc": "Algor builds an interactive visual tree with main ideas, sub-branches, definitions, and relationships."
+      },
+      {
+        "step": 4,
+        "title": "Customize & Annotate",
+        "desc": "Color-code branches, add personal memory cues, and re-arrange nodes to fit your mental model."
+      },
+      {
+        "step": 5,
+        "title": "Export or Print",
+        "desc": "Export mind maps as high-resolution PNG, PDF, or interactive shareable web links for quick pre-exam glance."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Historical Timeline Mapping",
+        "text": "Create a hierarchical concept map of the socio-religious reform movements in 19th-century Maharashtra."
+      },
+      {
+        "title": "Polity Structure Map",
+        "text": "Generate a clean visual flowchart depicting the powers and appointment procedures of the Governor under the Indian Constitution."
+      }
+    ],
+    "limitations": "Free plan allows up to a set number of AI map credits; large textbook chapters should be mapped section by section.",
+    "relatedSlugs": [
+      "mapify",
+      "napkin",
+      "gamma"
+    ]
+  },
+  {
+    "slug": "saveall",
+    "name": "Save All (SaveAll.ai)",
+    "tagline": "AI-powered quiz and spaced repetition app that turns any text or notes into automatic active recall drills.",
+    "category": "Study",
+    "badge": "🔄 Forgetting Curve",
+    "free": true,
+    "url": "https://saveall.ai",
+    "logo": "update",
+    "targetUsers": [
+      "School & College Students",
+      "MPSC/UPSC Candidates",
+      "Vocabulary Learners",
+      "Law & Medical Students"
+    ],
+    "whatIs": "SaveAll is an AI study platform founded on cognitive science and forgetting curve algorithms. You paste any notes, syllabus guidelines, or facts, and SaveAll automatically turns them into quizzes that it schedules at scientifically optimal intervals right before you forget them.",
+    "whyItMatters": "Unlike manual flashcard apps that require typing both questions and answers, SaveAll uses natural language processing to extract testable facts directly from raw notes in one click.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open SaveAll",
+        "desc": "Go to saveall.ai or download the mobile app."
+      },
+      {
+        "step": 2,
+        "title": "Paste Your Notes",
+        "desc": "Paste a section of your notes (e.g., Important Supreme Court judgments or national park locations)."
+      },
+      {
+        "step": 3,
+        "title": "Auto-Quiz Generation",
+        "desc": "The AI scans the text and produces fill-in-the-blank, multiple choice, and recall questions."
+      },
+      {
+        "step": 4,
+        "title": "Answer Daily Quizzes",
+        "desc": "Complete your 5-10 minute daily quiz session based on what the algorithm flags as fading memory."
+      },
+      {
+        "step": 5,
+        "title": "Watch Your Retention Grow",
+        "desc": "Visual progress rings track your long-term memory mastery per subject."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Fact Extraction",
+        "text": "Turn these 15 key wildlife sanctuaries in Maharashtra into active recall quiz questions."
+      },
+      {
+        "title": "Constitutional Articles Quiz",
+        "text": "Generate flashcard questions testing Articles 14 to 32 of the Fundamental Rights from this summary."
+      }
+    ],
+    "limitations": "Free tier supports essential quiz decks; advanced AI card generation speed and unlimited decks require a subscription.",
+    "relatedSlugs": [
+      "anki",
+      "remnote",
+      "quizlet-qchat"
+    ]
+  },
+  {
+    "slug": "pdf-ai",
+    "name": "PDF.ai",
+    "tagline": "Interactive PDF document chat & study assistant for textbooks, legal acts & government gazettes.",
+    "category": "Study",
+    "badge": "📄 Document Chat",
+    "free": true,
+    "url": "https://pdf.ai",
+    "logo": "picture_as_pdf",
+    "targetUsers": [
+      "Legal Aspirants",
+      "MPSC/UPSC Candidates",
+      "Researchers",
+      "Chartered Accountants"
+    ],
+    "whatIs": "PDF.ai is a dedicated document AI that enables aspirants to upload complex PDFs—such as state acts, commission gazettes, budget speeches, and economic surveys—and interactively extract summaries, legal definitions, and exam-relevant data with exact page-level citations.",
+    "whyItMatters": "Official government publications like the Economic Survey of Maharashtra run 300+ pages. PDF.ai lets you query specific numbers, welfare scheme budgetary outlays, and policy dates in seconds.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Upload Your Document",
+        "desc": "Visit pdf.ai and drag-and-drop any PDF (e.g., RTI Act 2005 or Maharashtra State Budget summary)."
+      },
+      {
+        "step": 2,
+        "title": "Instant Summarization",
+        "desc": "View the auto-generated high-level executive summary and recommended questions."
+      },
+      {
+        "step": 3,
+        "title": "Ask Specific Exam Questions",
+        "desc": "Type questions like 'What are the penalty clauses for SPIO under Section 20 of RTI Act?'."
+      },
+      {
+        "step": 4,
+        "title": "Verify Source Citations",
+        "desc": "Click any citation tag to jump directly to the verified page and highlighted sentence in the PDF."
+      },
+      {
+        "step": 5,
+        "title": "Export Study Highlights",
+        "desc": "Copy answered snippets directly into your study notebook."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Legal Section Extraction",
+        "text": "Extract all key definitions and limitation periods mentioned in this draft act into a two-column study table."
+      },
+      {
+        "title": "Budget Scheme Highlights",
+        "text": "List the top 5 agricultural schemes mentioned in this budget document with allocated expenditure figures."
+      }
+    ],
+    "limitations": "Free plan has file size and question limits per day; large 500-page gazettes may need to be split into chapters.",
+    "relatedSlugs": [
+      "chatpdf",
+      "askyourpdf",
+      "chatdoc"
+    ]
+  },
+  {
+    "slug": "studyx",
+    "name": "StudyX",
+    "tagline": "Multi-model AI homework & reasoning solver comparing GPT-4o, Claude 3.5 & Gemini side-by-side.",
+    "category": "Study",
+    "badge": "🧮 Multi-Model Solver",
+    "free": true,
+    "url": "https://studyx.ai",
+    "logo": "calculate",
+    "targetUsers": [
+      "CSAT Aspirants",
+      "SSC CGL Candidates",
+      "Banking Math Prep",
+      "Engineering Students"
+    ],
+    "whatIs": "StudyX is an academic problem-solving hub designed for math, logical reasoning, data interpretation, and science questions. Uniquely, it routes queries to multiple top-tier AI models (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro) side-by-side to deliver step-by-step verified explanations with zero math hallucinations.",
+    "whyItMatters": "Standard LLMs frequently make simple arithmetic errors in CSAT, time-speed-distance, or permutation problems. StudyX uses specialized math solvers and cross-model validation to guarantee step-by-step correctness.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Access StudyX",
+        "desc": "Go to studyx.ai on desktop or open the mobile browser app."
+      },
+      {
+        "step": 2,
+        "title": "Snap or Type Math Problem",
+        "desc": "Paste a quantitative aptitude problem or snap a photo of a reasoning puzzle diagram."
+      },
+      {
+        "step": 3,
+        "title": "Select Model Comparison",
+        "desc": "View the step-by-step breakdown generated across top AI engines."
+      },
+      {
+        "step": 4,
+        "title": "Learn the Underlying Formula",
+        "desc": "Expand the 'Solution Method' box to understand the core shortcut formula used."
+      },
+      {
+        "step": 5,
+        "title": "Generate Similar Practice Problems",
+        "desc": "Click 'Practice Similar' to test your mastery with 5 new variations of the same problem."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "CSAT Quantitative Step-by-Step",
+        "text": "Solve this Time & Work problem step-by-step without skipping formulas: A can complete a work in 12 days, B in 18 days. If they work together for 4 days, what fraction remains?"
+      },
+      {
+        "title": "Syllogism Reasoning Verification",
+        "text": "Analyze these statements using Venn diagram logic: All poets are dreamers. No dreamers are realists. Conclude whether Some poets are realists."
+      }
+    ],
+    "limitations": "Free daily solver credits are refreshed every 24 hours; unlimited high-speed solver access requires subscription.",
+    "relatedSlugs": [
+      "mathway",
+      "wolfram-alpha",
+      "symbolab"
+    ]
+  },
+  {
+    "slug": "yomu-ai",
+    "name": "Yomu AI",
+    "tagline": "AI study & essay writing assistant for academic research, GS descriptive answers & literature reviews.",
+    "category": "Study",
+    "badge": "✍️ Essay & Mains Prep",
+    "free": true,
+    "url": "https://www.yomu.ai",
+    "logo": "edit_note",
+    "targetUsers": [
+      "UPSC CSE Mains Aspirants",
+      "MPSC Descriptive Candidates",
+      "College Researchers",
+      "Essay Writers"
+    ],
+    "whatIs": "Yomu AI is an AI academic writing partner that helps students craft structured essays, GS descriptive answers, and literature papers. It includes built-in academic citation finders, outline builders, and a live tone enhancer that refines colloquial phrasing into authoritative administrative prose.",
+    "whyItMatters": "MPSC's revised descriptive pattern and UPSC Mains require crisp introduction-body-conclusion answers with balanced perspectives. Yomu helps aspirants critique, structure, and polish their handwritten practice drafts.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Open Yomu Document",
+        "desc": "Navigate to yomu.ai and start a new document."
+      },
+      {
+        "step": 2,
+        "title": "Input Exam Prompt",
+        "desc": "Type your Mains essay or 15-mark GS question (e.g., 'Role of Self-Help Groups in Women Empowerment in Maharashtra')."
+      },
+      {
+        "step": 3,
+        "title": "Generate Structured Outline",
+        "desc": "Use Yomu's outline generator to establish introduction, challenges, government initiatives, case studies, and conclusion."
+      },
+      {
+        "step": 4,
+        "title": "Refine Tone & Vocabulary",
+        "desc": "Highlight paragraphs to ask Yomu to 'Make this more administrative and formal' or 'Add relevant constitutional articles'."
+      },
+      {
+        "step": 5,
+        "title": "Check Integrity & Flow",
+        "desc": "Review vocabulary enhancements and ensure clear logical transitions between arguments."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Descriptive GS Structure",
+        "text": "Provide a balanced 250-word answer structure for: 'Critically analyze the role of micro-irrigation in combating drought in Vidarbha and Marathwada.'"
+      },
+      {
+        "title": "Administrative Tone Polish",
+        "text": "Rewrite this essay introduction on Cooperative Federalism to match the formal tone expected in Civil Services Mains examinations."
+      }
+    ],
+    "limitations": "Optimized for academic prose; free plan includes daily writing assistance quotas.",
+    "relatedSlugs": [
+      "paperpal",
+      "trinka",
+      "grammarly"
+    ]
   }
 ]
+
 
 // Slug aliases map to ensure zero 404s
 const SLUG_ALIASES = {
@@ -7487,6 +8099,30 @@ const SLUG_ALIASES = {
   'mystudy-life': 'mystudylife',
   'brainly-in': 'brainly',
   'brainly-ai': 'brainly',
+
+  // 10 New Study AI Tools Aliases
+  'study-fetch': 'studyfetch',
+  'studyfetch-ai': 'studyfetch',
+  'turbolearn': 'turbolearn-ai',
+  'turbo-learn': 'turbolearn-ai',
+  'turbolearnai': 'turbolearn-ai',
+  'wisdolia-ai': 'wisdolia',
+  'shiken': 'shiken-ai',
+  'shikenai': 'shiken-ai',
+  'monic': 'monic-ai',
+  'monicai': 'monic-ai',
+  'algor': 'algor-education',
+  'algor-ai': 'algor-education',
+  'algoreducation': 'algor-education',
+  'save-all': 'saveall',
+  'saveall-ai': 'saveall',
+  'save-all-ai': 'saveall',
+  'pdfai': 'pdf-ai',
+  'pdf-ai-app': 'pdf-ai',
+  'study-x': 'studyx',
+  'studyx-ai': 'studyx',
+  'yomu': 'yomu-ai',
+  'yomuai': 'yomu-ai',
 }
 
 // Helper: get a tool by slug (with case-insensitivity and alias resolution)

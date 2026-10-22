@@ -1,0 +1,110 @@
+{
+  "docId": 1731,
+  "examName": "Screening test for recruitment of Matron (Grade - III) Group-B",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Conventional type Screening test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Screening test for recruitment of Matron (Grade - III) Group-B",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "Three hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "01) Principles of Management for Nursing services and Nursing Education. (55 Marks)",
+          "unitTitleMr": null,
+          "topics": [
+            "A) Understanding Management, Managerial Principles in Nursing Services.",
+            "Philosophy and concept of Management; Hospital, Nursing service in a hospital.",
+            "Aims, objectives and purposes of hospital.",
+            "Types of hospitals, services rendered by hospitals.",
+            "Principals of Management.",
+            "Qualities of a good manager.",
+            "B) Functions, methods & technique of management.",
+            "Planning - Planning Process, Principles in Planning.",
+            "Planning of rules, policies, standards, budgets, projects.",
+            "Organization - importance of organisation, Delegation of authority / responsibilities, decentralisation; line of authority.",
+            "Directing & Co-ordination methods - Supervision, records & reports, use & issue of directives like circulars, notices, resolutions. Controlling - control process, Conduct & disciplinary issues.",
+            "Decision making - types of decision making, process / steps of decision making.",
+            "C) Personnel Management - Functions of Personnel management - Man power Planning - recruitment & selections, promotions, placement, job description, job specifications, Training & development programmes - In service education, staff welfare programmes including staff & student health programmes, performance appraisal.",
+            "D) Material Management - Systems of Indenting, maintaining, stocking, Dead stock & live stock, purchases, inventory, Bufferstock, condomination.",
+            "E) Techniques & Skills of Management",
+            "Communication - Principles, Process & types.",
+            "Motivation",
+            "Time management",
+            "Collective bargaining",
+            "Ethical + legal aspects in nursing.",
+            "Role - responsibilities of a nurse in protection and safe guard from legal involvement.",
+            "Consumerism - consumer laws, Medical insurance claims.",
+            "Disaster management.",
+            "F) Management of Nursing Education -",
+            "Inter facing between Nursing School and nursing service.",
+            "Setting of a new nursing school, nursing colleges.",
+            "Affiliation & Recognition with State council, Central council & University.",
+            "Creating & Maintaining learning environment in Clinical areas.",
+            "Planning for clinical experience of students, rotations plan.",
+            "Student's evaluation - process and techniques.",
+            "Developing professional organisations, Student nurses Association, Trained nurses Associations.",
+            "G) Basic understanding about Research and Research Project",
+            "Concept of research, Action research, research methodology.",
+            "Importance of research and incorporation of research findings in nursing practice.",
+            "Research for quality assurance.",
+            "Understanding of research reports, understanding of Tables, graphs."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "02. Clinical Nursing (35 Marks)",
+          "unitTitleMr": null,
+          "topics": [
+            "A) Comprehensive Nursing practices - Concept of health, degrees of illness concept of Nursing, Problem solving approach to patient care, Nursing process.",
+            "B) Therapeutic environment in hospital - Temperature, lighting, Noise level, humidity, Psycho-social environment, ventilation aesthetic consideration, Microbial safety of the environment.",
+            "Medical surgical asepsis - methods, policies & practice of sterilization. Practice of Universal precautions.",
+            "C) Meeting basic needs of patients - Nurses role in meeting hygienic needs, Physical comfort, nutritional needs, elimination needs, activity & exercises safety needs, communication needs, psychological and spiritual needs.",
+            "D) Nursing Responsibilities - Nursing responsibilities in the management of common ailments - Pyrexia, Diarrhea, vomiting, dehydration, rigor and chill.",
+            "E) Nursing responsibilities in terminal illness, death and dying - stages of grieving, emotional support to patients and relatives, concept of hospice, legal and ethical aspects in relations to death & dying [Medico - legal cases, Do Not Resuscitate (DNR)].",
+            "F) Nursing assessment & Nursing management of patient with common medical, surgical conditions, including preventive & rehabilitative aspects of patient care.",
+            "i) Infections & inflammatory disorders of the respiratory systems: Bronchitis, Pneumonia, Tuberculosis & pleurisy, Bronchial asthma, Chronic obstructive pulmonary diseases, Lobectomy, Pneumonectomy, inter coastal drainage.",
+            "ii) Cardiovascular system: Hypertension, Myocardial infections, Heart block, Congestive cardiac failure, Valvular disorders & surgical interventions, Angiography, Angioplasty, Bypass surgery.",
+            "iii) Gastrointestinal and endocrine system: Peptic ulcer, Mal absorption syndrome, Hepatitis, Cirrhosis of liver, hepatic encephalopathy, Pancreatitis, Cholecystitis, Diabetes mellitus, Hyper and hypothyroidism.",
+            "iv) Urinary systems: Nephritis - acute & chronic, Nephrotic syndrome, Renal failure - acute & chronic, Prostatic enlargement, Nephrectomy, Renal, bladder calculus, Surgical interventions.",
+            "v) Nervous System: Cerebrovascular accident, epilepsy, Meningitis, encephalitis, Parkinson diseases, Alzheimers disease, Space occupying lesion, Head injury, Spinal injury.",
+            "vi) Auto immune & immuno suppressive disorders: Rheumatic fever, rheumatic heart diseases, Gout, Systemic lupus erythematosus, Autoimmune deficiency syndrome.",
+            "vii) Musculo Skeletal system: Osteomyelitis, Tumors, TB Spine, Sprain, dislocation & fractures, Application of Plaster casts, traction.",
+            "viii) Disorders related to eye & ear, nose, throat ( ENT ): Cataract, Glaucoma, Otitis media, Menieres disease, Tonsillitis, Pharyngitis, Epistaxis.",
+            "ix) Burns.",
+            "G) Community Health Nursing:",
+            "i) Concept of community, Community health, family health services.",
+            "ii) Health issues, National health Policies & Programmes (recent programmes).",
+            "iii) RCH (Reproductive child health programmes).",
+            "iv) School health programmes."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "03. Nutrition & Dietetics : (10 marks)",
+          "unitTitleMr": null,
+          "topics": [
+            "A) Concept of Nutrition, Nutrition in relation to health. Classification of Nutrients, Sources, functions, daily requirement, effects of Deficiency, well balanced diet.",
+            "B) Nutritional need in children adolescence, adulthood & old age, pregnancy, convalescence. Types of hospital diet.",
+            "C) Diet as a therapy, Nurses responsibility in diet therapy. Dietary modifications and dietary needs of clients with various conditions i.e. Burns, hepatic & biliary dysfunctions, obesity, Diabetes, Peptic ulcers, malabsorption Syndrome, Renal conditions, Cardiac conditions, Hypertension, Diet for patients with colostomy, gastrostomy & jejunostomy, Post-operative, Immuno - compromised."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

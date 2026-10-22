@@ -1,0 +1,327 @@
+{
+  "docId": 1636,
+  "examName": "Assistant Professor- Mathematics, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": "सहायक प्राध्यापक - गणित, महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Mathematics, Maharashtra Education Services, Group - A (Collegiate Branch)",
+      "paperTitleMr": "सहायक प्राध्यापक - गणित, महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा)",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Real Analysis",
+          "unitTitleMr": "वास्तविक विश्लेषण",
+          "topics": [
+            "Riemann integrable functions; improper integrals, their convergence and uniform convergence.",
+            "Euclidean space Rn, Bolzano-Weierstrass theorem, compact subsets of Rn, Heine-Borel theorem, Fourier series.",
+            "Continuity of functions on Rn, Differentiability of functions. Properties of differential, partial and directional derivatives, continuously differentiable functions. Taylor's series.",
+            "Inverse function theorem, Implicit function theorem.",
+            "Integral functions, line and surface integrals, Green's theorem, Stokes's theorem."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Complex Analysis",
+          "unitTitleMr": "संमिश्र विश्लेषण",
+          "topics": [
+            "Cauchy's theorem for convex regions. Power series representation of analytic functions.",
+            "Liouville's theorem, Fundamental theorem of algebra, Riemann's theorem on removable singularities, maximum modulus principle.",
+            "Schwarz lemma, Open Mapping theorem, Casorati-Weierstrass theorem, Weierstrass's theorem on uniform convergence on compact sets.",
+            "Bilinear transformations, Multivalued Analytic Functions, Riemann Surfaces."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Algebra",
+          "unitTitleMr": "बीजगणित",
+          "topics": [
+            "Symmetric groups, Alternating groups, Simple groups, Rings, Maximal Ideals, Prime Ideals, Integral domains, Euclidean domains, principal Ideal domains.",
+            "Unique Factorization domains, quotient fields, Finite fields, Algebra of Linear Transformations.",
+            "Reduction of matrices to Canonical Forms, Inner Product Spaces, Orthogonality, Quadratic Forms, Reduction of quadratic forms."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Advanced Analysis",
+          "unitTitleMr": "प्रगत विश्लेषण",
+          "topics": [
+            "Elements of Metric Spaces, Convergence, continuity, compactness, Connectedness.",
+            "Weierstrass's approximation Theorem, Completeness, Baire category theorem.",
+            "Lebesgue measure, Lebesgue Integral, Differentiation and Integration."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Advanced Algebra",
+          "unitTitleMr": "प्रगत बीजगणित",
+          "topics": [
+            "Conjugate elements and class equations of finite groups, Sylow theorems, solvable groups, Jordan Holder Theorem.",
+            "Direct Products, Structure Theorem for finite abelian groups, Chain conditions on Rings.",
+            "Characteristic of Field, Field extensions, Elements of Galois theory, solvability by Radicals, Ruler and compass construction."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Functional Analysis",
+          "unitTitleMr": "फंक्शनल विश्लेषण",
+          "topics": [
+            "Banach Spaces, Hahn-Banach Theorem, Open mapping and closed Graph Theorems.",
+            "Principle of Uniform boundedness, Boundedness and continuity of Linear Transformations, Dual Space, Embedding in the second dual.",
+            "Hilbert Spaces, Projections, Orthonormal Basis, Riesz-representation theorem.",
+            "Bessel's Inequality, Parseval's identity, self adjoint operators, Normal Operators."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Topology",
+          "unitTitleMr": "टोपोलॉजी",
+          "topics": [
+            "Elements of Topological Spaces, Continuity, convergence, Homeomorphism, Compactness, Connectedness.",
+            "Separation Axioms, First and Second Countability, Separability, Subspaces, Product Spaces, quotient spaces.",
+            "Tychonoff's Theorem, Urysohn's Metrization theorem, Homotopy and Fundamental Group."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Discrete Mathematics",
+          "unitTitleMr": "असतत गणित",
+          "topics": [
+            "Partially ordered sets, Lattices, Complete Lattices, Distributive lattices, Complements, Boolean Algebra, Boolean Expressions.",
+            "Application to switching circuits, Elements of Graph Theory, Eulerian and Hamiltonian graphs, planar Graphs, Directed Graphs, Trees.",
+            "Permutations and Combinations, Pigeonhole principle, principle of Inclusion and Exclusion, Derangements."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Ordinary and Partial Differential Equations",
+          "unitTitleMr": "सामान्य आणि आंशिक विकल्पीय समीकरणे",
+          "topics": [
+            "Existence and Uniqueness of solution dy/dx = f(x,y).",
+            "Green's function, Sturm-Liouville Boundary Value Problems, Cauchy Problems and Characteristics.",
+            "Classification of Second Order PDE, Separation of Variables for heat equation, wave equation and Laplace equation, Special functions."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Number Theory",
+          "unitTitleMr": "संख्या सिद्धान्त",
+          "topics": [
+            "Divisibility, Linear Diophantine equations, Congruences, Quadratic residues.",
+            "Sums of two squares, Arithmetic functions Mu, Tau, and Sigma."
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Mechanics",
+          "unitTitleMr": "यांत्रिकी",
+          "topics": [
+            "Generalized coordinates, Lagrange's equation, Hamilton's canonical equations.",
+            "Variational Principles-Hamilton's principles and principles of least action.",
+            "Two dimensional motion of rigid bodies, Euler's dynamical equations for the motion of rigid body.",
+            "Motion of a rigid body about an axis, Motion about revolving axes."
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Elasticity",
+          "unitTitleMr": "लवचिकतारूप",
+          "topics": [
+            "Analysis of strain and stress, strain and stress tensors, Geometrical representation, Compatibility conditions.",
+            "Strain energy function, Constitutive relations, Elastic solids, Hooke's law, Saint-Venant's principle, Equations of equilibrium.",
+            "Plane problem-Airy's stress function, vibrations of elastic, cylindrical and spherical media."
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Fluid Mechanics",
+          "unitTitleMr": "द्रव यांत्रिकी",
+          "topics": [
+            "Equation of continuity in fluid motion, Euler's equations of motion for perfect fluids.",
+            "Two dimensional motion complex potential, Motion of sphere in perfect liquid and motion of liquid past a sphere, vorticity.",
+            "Navier-Stokes's equations for viscous flows - some exact solutions."
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Differential Geometry",
+          "unitTitleMr": "अवरकल भूमिती",
+          "topics": [
+            "Space curves-their curvature and torsion, Serret-Frenet Formula, Fundamental theorem of space curves.",
+            "Curves on surfaces, First and second fundamental form, Gaussian curvatures.",
+            "Principal directions and principal curvatures, Geodesics, Fundamental equations of surface theory."
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Calculus of Variations",
+          "unitTitleMr": "कॅलक्युलस ऑफ व्हेरियेशन्स",
+          "topics": [
+            "Linear functionals, minimal functional theorem, general variation of a functional, Euler-Lagrange equation.",
+            "Variational methods of boundary value problems in ordinary and partial differential equations."
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Linear Integral Equations",
+          "unitTitleMr": "रैखिक समाकल समीकरणे",
+          "topics": [
+            "Linear Integral Equations of the first and second kind of Fredholm and Volterra type.",
+            "Solution by successive substitutions and successive approximations, Solution of equations with separable kernels.",
+            "The Fredholm Alternative, Hilbert-Schmidt theory for symmetric kernels."
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Numerical Analysis",
+          "unitTitleMr": "संख्यात्मक विश्लेषण",
+          "topics": [
+            "Finite differences, Interpolation, Numerical solution of algebraic equation, Iteration, Newton-Raphson Method.",
+            "Solution of Linear system, Direct method, Gauss elimination method, Matrix-Inversion eigenvalue problems.",
+            "Numerical differentiation and integration, Numerical solution of ordinary differential equation, iteration method, Picard's method, Euler's method and improved Euler's method."
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Integral Transform",
+          "unitTitleMr": "समाकल रूपांतर",
+          "topics": [
+            "Laplace transform, Transform of elementary functions, Transform of Derivatives, Inverse Transform, Convolution Theorem, Applications to ordinary and partial differential equations.",
+            "Fourier transform, sine and cosine transform, Inverse Fourier Transform, Application to ordinary and partial differential equations."
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Mathematical Programming",
+          "unitTitleMr": "गणितीय प्रोग्रामिंग",
+          "topics": [
+            "Revised simplex method, Dual simplex method, Sensitivity analysis and parametric linear programming.",
+            "Kuhn-Tucker conditions of optimality, Quadratic programming methods due to Beale, Wolfe and Vandepanne.",
+            "Duality in quadratic programming, self duality, Integer programming."
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Measure Theory",
+          "unitTitleMr": "माप सिद्धांत",
+          "topics": [
+            "Measurable and measure spaces, Extension of measures, signed measures, Jordan-Hahn decomposition theorems.",
+            "Integration, monotone convergence theorem, Fatou's lemma, dominated convergence theorem.",
+            "Absolute continuity, Radon-Nikodym theorem, Product measures, Fubini's theorem."
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Probability",
+          "unitTitleMr": "संभाव्यता",
+          "topics": [
+            "Sequences of events and random variables: Zero-one laws of Borel and Kolmogorov.",
+            "Almost sure convergence, convergence in mean square, Khintchine's weak law of large numbers, Kolmogorov's inequality, strong law of large numbers.",
+            "Convergence of series of random variables, three-series criterion, Central limit theorems of Liapounov and Lindeberg-Feller, Conditional expectation, martingales."
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "Distribution Theory",
+          "unitTitleMr": "वितरण सिद्धांत",
+          "topics": [
+            "Properties of distribution functions and characteristic functions, continuity theorem, inversion formula.",
+            "Representation of distribution function as a mixture of discrete and continuous distribution functions, Convolutions, marginal and conditional distributions of bivariate discrete and continuous distributions.",
+            "Relations between characteristic functions and moments, Moment inequalities of Holder and Minkowski."
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Statistical Inference and Decision Theory",
+          "unitTitleMr": "संख्याशास्त्रीय अनुमान आणि निर्णय सिद्धांत",
+          "topics": [
+            "Statistical decision problem: non-randomized, mixed and randomized decision rules, risk function admissibility, Bayes rules, minimax rules, least favourable distributions.",
+            "Admissible, Bayes and minimax estimators, Unbiasedness, UMVU estimators.",
+            "Families of distributions with monotone likelihood property, exponential family of distributions, Tests of a simple hypothesis against a simple alternative."
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "Large Sample Statistical Methods",
+          "unitTitleMr": "मोठ्या नमुन्याच्या संख्याशास्त्रीय पद्धती",
+          "topics": [
+            "Various modes of convergence, Op and oP, CLT, Sheffe's theorem, Polya's theorem and Slutsky's theorem.",
+            "Transformation and variance stabilizing formula, Asymptotic distribution of function of sample moments, Sample quantiles, Order statistics.",
+            "Tests on correlations, coefficient of variation, skewness and kurtosis, Pearson Chi-square, contingency Chi-square and likelihood ratio statistics."
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "Multivariate Statistical Analysis",
+          "unitTitleMr": "बहुचल संख्याशास्त्रीय विश्लेषण",
+          "topics": [
+            "Singular and non-singular multivariate distributions, Characteristics functions, Multivariate normal distributions.",
+            "Inference on parameters of multivariate normal distributions, Wishart distribution, Hotelling's T2, Mahalanobis D2.",
+            "Discrimination analysis, Principal components, Canonical correlations, Cluster analysis."
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "Linear Models and Regression",
+          "unitTitleMr": "रैखिक मॉडेल आणि रेग्रेession",
+          "topics": [
+            "Standard Gauss-Markov models, Estimability of parameters, best linear unbiased estimates (BLUE), Method of least squares.",
+            "Tests of linear hypothesis, One-way and two-way classifications, Fixed, random and mixed effects models.",
+            "Bivariate and multiple linear regression, Polynomial regression, Analysis of covariance."
+          ]
+        },
+        {
+          "unitNumber": 27,
+          "unitTitle": "Sample Surveys",
+          "unitTitleMr": "मुना सर्वेक्षण",
+          "topics": [
+            "Sampling with varying probability of selection, Horvitz-Thompson estimator, PPS sampling, Double sampling, Cluster sampling.",
+            "Non-sampling errors, Interpenetrating samples, Multiphase sampling, Ratio and regression methods of estimation."
+          ]
+        },
+        {
+          "unitNumber": 28,
+          "unitTitle": "Design of Experiments",
+          "unitTitleMr": "प्रयोगांची रचना",
+          "topics": [
+            "Factorial experiments, confounding and fractional replication, Split and strip plot designs, Quasi-Latin square designs, Youden square.",
+            "Incomplete block designs, Balanced, connectedness and orthogonality, BIBD, PBIBD."
+          ]
+        },
+        {
+          "unitNumber": 29,
+          "unitTitle": "Time-Series Analysis",
+          "unitTitleMr": "टाइम-सिरीज विश्लेषण",
+          "topics": [
+            "Discrete-parameter stochastic processes, strong and weak stationarity, autocovariance and autocorrelation.",
+            "Moving average, autoregressive, ARMA and ARIMA processes, Box-Jenkins models, Forecasting, Periodogram and correlogram analysis."
+          ]
+        },
+        {
+          "unitNumber": 30,
+          "unitTitle": "Stochastic Processes",
+          "unitTitleMr": "स्टोकास्टिक प्रक्रिया",
+          "topics": [
+            "Markov chains with finite and countable state space, classification of states, limiting behaviour of n-step transition probabilities.",
+            "Branching processes, Random walk, Gambler's ruin, Markov processes in continuous time, Poisson processes, birth and death processes, Wiener process."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

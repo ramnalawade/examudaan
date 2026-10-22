@@ -11,6 +11,7 @@ import DetailBreadcrumb from '../../../components/DetailBreadcrumb'
 import JobDetailTitle from '../../../components/JobDetailTitle'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
+import { buildAnswerKeyMetadata } from '../../../lib/seoMetadata'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
 export const revalidate = 300
@@ -98,25 +99,7 @@ export async function generateMetadata({ params }) {
   const data = await getAnswerKeyData(resolvedParams.slug)
   if (!data) return { title: { absolute: 'Answer Key | ExamUdaan' } }
   const { en } = data
-
-  let rawTitle = en.seo_metadata?.meta_title || `${en.title} Answer Key`
-  let cleanBase = rawTitle.replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '').trim()
-  if (cleanBase.length > 44) {
-    cleanBase = cleanBase.slice(0, 41).trim() + '...'
-  }
-  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Answer Key | ExamUdaan'
-
-  const rawUrlMeta = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
-  const siteUrlMeta = (rawUrlMeta && !rawUrlMeta.includes('localhost')) ? rawUrlMeta : 'https://examudaan.in'
-  const targetSection = TYPE_TO_PATH[en.notification_type] || '/answer-keys'
-  const canonicalSlug = en.slug || resolvedParams.slug
-  const canonicalUrl = `${siteUrlMeta}${targetSection}/${canonicalSlug}`
-  return {
-    title: { absolute: metaTitle },
-    description: `Download ${en.title} official answer key from ${en.org_name}. Calculate your expected score, raise objections if any, and check expected cut-off.`.slice(0, 160),
-    alternates: { canonical: canonicalUrl },
-    openGraph: { title: metaTitle, url: canonicalUrl, type: 'article', siteName: 'ExamUdaan.in' },
-  }
+  return buildAnswerKeyMetadata(en, resolvedParams.slug)
 }
 
 export default async function AnswerKeyDetailPage({ params }) {

@@ -1,0 +1,128 @@
+{
+  "docId": 1665,
+  "examName": "Deputy Engineer [Mechanical], Maharashtra Groundwater Survey, Gr-A",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Deputy Engineer [Mechanical], Maharashtra Groundwater Survey, Gr-A",
+      "paperTitleMr": null,
+      "totalMarks": 150,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Faculty of Science & Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Scientific Knowledge:- Nature of Science, Pre-suppositions of Science, Scientific method.",
+            "(2) Modernisation and Science:- What is Modernisation (Definition of Modernisation), Type and Nature of Modernisation, Modernisation and Indian Society (Problems and remedies)",
+            "(3) Scientific and Technological Developments (The World over, particularly in India)",
+            "(4) Effects of Technological Developments on Urban and Rural Life",
+            "(5) Various Indian Problems And Their Scientific Solutions :- For Example - Energy problem, Foodgrains problem, Population problem, Environment Problem, Educational problem, Housing problem, Transport problem, Communication problem, Public Health problem etc."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Basic Mechanical Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction to Mechanical Engineering",
+            "Mechanical Elements: Function and Description of Uses of- Shaft, Axle, Key (Parallel key), Coupling (Rigid Flanged Coupling), Bearing (Ball bearing), Clutch (Single Plate Clutch), Brake (Disc Brake).",
+            "Power Transmission Devices: Construction, working, comparison & applications of- Belt Drive (Flat and V Belt), Chain Drive and Spur Gear Drive arranged with simple gear train."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Internal Combustion Engines",
+          "unitTitleMr": null,
+          "topics": [
+            "Air standard cycles and fuel Air cycles, Spark Ignition engines, and Compression Ignition engines.",
+            "Engine systems and components: Fuel System, Lubrication System, Engine Cooling System, Turbochargers."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Pumps",
+          "unitTitleMr": null,
+          "topics": [
+            "Types, classification, principle of working and constructional details of Vane pumps, gear pumps, radial and axial plunger pumps, screw pumps, power and efficiency calculations, characteristics curves, selection of pumps for hydraulic Power transmission."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Rotary pumps",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification, components of centrifugal pumps, various terms associated with centrifugal pump, various heads, cavitations, priming of pumps, installation, maintenance, troubles and remedies, series and parallel operation of pumps, system resistance curve, water hammer problem in pumping system."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Theory and Design of Compressors",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic theory, classification and application, working of compressor, Types of compressors like Reciprocating and Screw Compressors."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Automobile Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Automobile history and development, Classification, vehicle layout- engine location and drive arrangement, safety regulations, specifications of vehicles, Type of vehicle bodies, Chassis types, constructional details, Frames, sub frames, frameless vehicles, vehicle dimensions, details of chassis material, Vehicle life development, cycle overview."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "System Design",
+          "unitTitleMr": null,
+          "topics": [
+            "Design of Hydraulic/Pneumatic circuits for practical applications. Selection of different components such as reservoirs, various valves, actuators, filters, pumps based on design."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Hydraulics: Actuators",
+          "unitTitleMr": null,
+          "topics": [
+            "Linear and rotary",
+            "Hydraulic Motors – Vane, Gear, and Piston types, Radial Piston.",
+            "Methods of control of acceleration and deceleration.",
+            "Types of cylinders and mounting."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Tribology",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction of Tribology, Lubrication, basic modes of lubrication, lubricants, properties of lubricants- physical and chemical, types of additives, extreme pressure lubricants. Types of sliding contact bearings, comparison of sliding and rolling contact bearings.",
+            "Friction and Wear Friction: Introduction, laws of friction, kinds of friction, causes of friction, friction measurement, theories of friction, effect of surface preparation. Wear: Types of wear, various factors affecting wear, measurement of wear, wear between solids & liquids, theories of wear."
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "New and renewable Energy sources",
+          "unitTitleMr": null,
+          "topics": [
+            "Application of new and renewable energy technologies."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

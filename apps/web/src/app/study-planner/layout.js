@@ -1,7 +1,7 @@
 // app/study-planner/layout.js
 export const metadata = {
   title: 'AI Smart Exam Study Planner 2026',
-  description: 'Generate a personalized, day-by-day study schedule for MPSC, Police Bharti, Talathi, SSC, and Banking exams. Features adaptive catch-up, PYQ targets, and daily checklist.',
+  description: 'Create a personalized daily study schedule for MPSC, Police Bharti, SSC & Banking exams with adaptive catch-up, PYQ goals and revision checklists.',
   keywords: 'MPSC study planner, exam study timetable generator, police bharti study schedule, UPSC study plan, daily study checklist',
   alternates: {
     canonical: 'https://examudaan.in/study-planner',

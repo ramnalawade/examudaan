@@ -1,0 +1,65 @@
+{
+  "docId": 6428,
+  "examName": "Food and Drugs Administrative Services (Gazetted) Main Examination",
+  "examNameMr": "अन्न व औषध प्रशासन सेवा (राजपत्रित) मुख्य परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "other",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Food and Drugs Administrative Services (Gazetted) Main Examination Syllabus",
+      "paperTitleMr": "अन्न व औषध प्रशासन सेवा (राजपत्रित) मुख्य परीक्षा अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Section – A : CHEMISTRY SYLLABUS",
+          "unitTitleMr": null,
+          "topics": [
+            "Periodic table/ Concepts of qualitative analysis: Periodicity of Elements: s, p, d, f block elements, the long form of periodic table, Effective nuclear charge, shielding or screening effect, Slater rules, variation of effective nuclear charge in periodic table, Atomic radii (van der Waals), Ionic and crystal radii, Covalent radii (octahedral and tetrahedral).",
+            "Bonding & Structure of organic compounds & their nomenclature: Hybridization: sp3, sp2, sp hybridization of carbon and nitrogen; sp3 and sp2 hybridizations of Organic compounds (alcohol, ether, aldehyde, ketone, carboxylic acid, ester, cyanide, amine and amide), IUPAC nomenclature, Nomenclature of organic compounds: alkanes, alkenes, alkynes, haloalkanes, alcohols, ethers, aldehydes, ketones, carboxylic acids, carboxylic acid derivatives, nitro compounds, nitriles and amines; including their cyclic analogues.",
+            "Mechanism of organic reactions Alkanals and Cycloalkanes: Alkanes and Cycloalkanes, Organic Reactions, Reactions of alkanes, Alcohols, and Amines, Nucleophilic Substitution, Formation of Alkenes and Alkynes, Elimination Reactions, Free Radical Addition and Substitution Reactions.",
+            "Chemical calculations – Introduction to molecular spectroscopy: Chemical Calculations; Expressing concentration of solutions: Normality, molality, molarity, formality, mole fractions, weight ratio, volume ratio, weight to volume ratio, ppm, ppb, millimoles, milliequivalents, Molecular spectroscopy; Electromagnetic radiation, electromagnetic spectrum, interaction of electromagnetic radiation with matter.",
+            "Chemical thermodynamics: Thermodynamic terms: System, surrounding, boundaries, open, closed and isolated system, intensive and extensive properties, state functions and path functions, zeroth law of thermodynamics, Thermochemistry, First law of thermodynamics."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Section – B : INTRODUCTION TO FOOD",
+          "unitTitleMr": null,
+          "topics": [
+            "Constituents of food: Carbohydrates, Proteins, Fats, and Fibers.",
+            "Food Nutrition: Nutritional aspects of foods, Relation of food and diseases, Nutritional requirement of special group of people, Effect of food processing on food nutrition, Structure and functions of Vitamins, Minerals.",
+            "Food Safety: Types of hazards, Risk assessment, Existing and emerging pathogens, Microbial spoilage of foods, Toxins in foods, Pesticides residues in foods, Heavy metals detection, Food contaminants, Food adulteration.",
+            "Food Additives: Intentional and unintentional additives, Additives used in food preservation and processing, Safety aspects of Food Additives.",
+            "Food Packaging & labelling: Packaging types, Testing of various packaging materials, Food and packaging material interactions, Newer packaging technologies, Understanding labelling rules & Regulations."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Section – A : INTRODUCTION OF FOOD PROCESSING AND TECHNOLOGY",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of food processing and preservation techniques.",
+            "Technology of fruits and vegetables processing.",
+            "Technology of plantation crops, herbs and spices processing.",
+            "Technology of meat, fish, poultry and egg processing.",
+            "Technology of cereal processing and legume/oilseed processing."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

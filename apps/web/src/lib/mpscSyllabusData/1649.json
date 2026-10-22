@@ -1,0 +1,248 @@
+{
+  "docId": 1649,
+  "examName": "Assistant Professor- Computer Science, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Computer Science",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Digital Logic and Microprocessors",
+          "unitTitleMr": null,
+          "topics": [
+            "Combinational Circuit Design",
+            "Sequential Circuit Design",
+            "Hardwired and Microprogrammed processor design",
+            "Instruction formats",
+            "Addressing modes",
+            "Memory types and organisation",
+            "Interfacing peripheral devices",
+            "Interrupts",
+            "Microprocessor architecture, Instruction set and Programming (8085, P-III/P-IV)",
+            "Microprocessor applications"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Database Management Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Database Concepts",
+            "ER diagrams",
+            "Data Models",
+            "Design of Relational Database",
+            "Normalisation",
+            "SQL and QBE",
+            "Query Processing and Optimisation",
+            "Centralised and Distributed Database",
+            "Security, Concurrency and Recovery in Centralised and Distributed Database Systems",
+            "Object Oriented Database, Management Systems (Concepts, Composite objects, Integration with RDBMS applications)",
+            "ORACLE"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Computer Graphics and Multimedia",
+          "unitTitleMr": null,
+          "topics": [
+            "Display systems",
+            "Input devices",
+            "2D Geometry",
+            "Graphic operations",
+            "3D Graphics",
+            "Animation",
+            "Graphic standard",
+            "Applications",
+            "Concepts, Storage Devices, Input Tools, Authoring Tools, Application, Files"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Programming Languages and Compilers",
+          "unitTitleMr": null,
+          "topics": [
+            "Programming language concepts, paradigms and models",
+            "Data, Data types, Operators, Expressions, Assignment, Flow of Control-Control structures, I/O statements, User-defined and built-in functions, Parameter passing",
+            "Principles, classes, inheritance, class hierarchies, polymorphism, dynamic binding, reference semantics and their implementation",
+            "Principles, functions, lists, types and polymorphisms, higher order functions, lazy evaluation, equations and pattern matching",
+            "Principles, horn clauses and their execution, logical variables, relations, data structures, controlling the search order, program development in prolog, implementation of prolog, example programs in prolog",
+            "Principles of parallelism, coroutines, communication and execution, Parallel Virtual Machine (PVM) and Message Passing Interface (MPI) routines and calls. Parallel programs in PVM paradigm as well as MPI paradigm for simple problems like matrix multiplication",
+            "Preconditions, post-conditions, axiomatic approach for semantics, correctness, denotational semantics",
+            "Compiler structure, compiler construction tools, compilation phases",
+            "Finite Automata, Pushdown Automata, Non-determinism and NFA, DPDA, and PDAs and languages accepted by these structures. Grammars, Languages-types of grammars-type 0, type 1, type 2 and type 3. The relationship between types of grammars, and finite machines",
+            "Pushdown automata and Context Free Grammars. Lexical Analysis-regular expressions and regular languages, LEX package on Unix. Conversion of NFA to DFA. Minimizing the number of states in a DFA. Compilation and Interpretation. Bootstrap compilers",
+            "Context free grammars, Parsing and parse trees. Representation of parse (derivation) trees as rightmost and leftmost derivations. Bottom up parsers-shift-reduce, operator precedence, and LR, YACC package on Unix system. Topdown parsers-left recursion and its removal. Recursive descent parser. Predictive parser, Intermediate codes-Quadruples, triples, Intermediate code generation, code generation, Code optimization"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Computer Networks",
+          "unitTitleMr": null,
+          "topics": [
+            "Analog and Digital transmission",
+            "Asynchronous and Synchronous transmission",
+            "Transmission media",
+            "Multiplexing and Concentration",
+            "Switching techniques",
+            "Polling",
+            "Topologies, Networking Devices, OSI Reference Model",
+            "Protocols for Data link layer, Network layer, and Transport layer",
+            "TCP/IP protocols, Networks security, Network administration"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Data Structures and Algorithms",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, Simple and Composite structures",
+            "Arrays, Lists, Stacks queues, Priority queues, Binary trees, B-trees, Graphs",
+            "Sorting and Searching Algorithms",
+            "Analysis of Algorithms, Interpolation and Binary Search",
+            "Asymptotic notations-big ohm, omega and theta",
+            "Average case analysis of simple programs like finding of a maximum of n elements, Recursion and its systematic removal",
+            "Quicksort-Non-recursive implementation with minimal stack storage",
+            "Design of Algorithms (Divide and Conquer, Greedy method, Dynamic programming, Back tracking, Branch and Bound)",
+            "Lower bound theory, Non-deterministic algorithm-Non-deterministic programming constructs",
+            "Simple non-deterministic programs, NP-hard and NP-complete problems"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Object Oriented Programming and Web Technologies",
+          "unitTitleMr": null,
+          "topics": [
+            "Object, messages, classes, encapsulation, inheritance, polymorphism aggregation, abstract classes generalization as extension and restriction, Object oriented design",
+            "Multiple inheritance, metadata",
+            "HTML, DHTML, XML, Scripting, Java, Servelets, Applets"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Software Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Software development models",
+            "Requirement analysis and specifications",
+            "Software design",
+            "Programming techniques and tools",
+            "Software validation and quality assurance techniques",
+            "Software maintenance and advanced concepts",
+            "Software management"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Operating Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction, Memory management",
+            "Support for concurrent process",
+            "Scheduling",
+            "System deadlock",
+            "Multiprogramming system",
+            "I/O management",
+            "Distributed operating systems",
+            "Study of Unix and Windows NT"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Artificial Intelligence and Management Information Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Definitions, AI approach for solving problems",
+            "Automated Reasoning with propositional logic and predicate logic-fundamental proof procedure, refutation, resolution, refinements to resolution",
+            "State space representation of problems, bounding functions, breadth first, depth first, A, A*, AO*, etc. Performance comparison of various search techniques",
+            "Frames, scripts, semantic nets, production systems, procedural representations, Prolog programming",
+            "Components of an expert system, Knowledge representation and Acquisition techniques, Building expert system and Shell",
+            "RTNs, ATNs, Parsing of Ambiguous CFGs, Tree Adjoining Grammars (TAGs)",
+            "Systems approach to planning, Designing, Development, Implementation and Evaluation of MIS",
+            "Decision-making processes, evaluation of DSS, Group decision support system and case studies, Adaptive design approach to DSS development, Cognitive style in DSS, Integrating expert and Decision support systems"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Theory of Computation",
+          "unitTitleMr": null,
+          "topics": [
+            "Formal language, Need for formal computational models, Non-computational problems, diagonal argument and Russel's paradox",
+            "Deterministic Finite Automaton (DFA), Non-deterministic Finite Automaton (NFA), Regular languages and regular sets",
+            "Equivalence of DFA and NFA, Minimizing the number of states of a DFA, Non-regular languages and Pumping lemma",
+            "Pushdown Automaton (PDA), Deterministic Pushdown Automaton (DPDA), Non-equivalence of PDA and DPDA",
+            "Context free Grammars : Greibach Normal Form (GNF) and Chomsky Normal Form (CNF), Ambiguity, Parse Tree Representation of Derivations",
+            "Equivalence of PDA's and CFG's, Parsing techniques for parsing of general CFG's-Early's, Cook-Kassami-Younger (CKY) and Tomita's parsing",
+            "Linear Bounded Automata (LBA) : Power of LBA, Closure properties",
+            "Turing Machine (TM) : One tape, multitape, The notions of time and space complexity in terms of TM, Construction of TM for simple problems, Computational complexity",
+            "Chomsky Hierarchy of languages : Recursive and recursively-enumerable languages"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Information Theory, Coding and Image Processing",
+          "unitTitleMr": null,
+          "topics": [
+            "Models for Information Channel : Discrete Memoryless Channel, Binary Symmetric Channel (BSC), Burst Channel, Bit-error rates",
+            "Probability, Entropy and Shannon's measure of information, Mutual information, Channel capacity theorem, Rate and optimality of Information transmission",
+            "Variable Length Codes : Prefix Codes, Huffmann Codes, Lempel-Ziev (LZ) Codes",
+            "Error Correcting and Detecting Codes : Finite fields, Hamming distance, Bounds of codes, Linear (Parity Check) codes, Generator matrix, Decoding of linear codes, Hamming codes",
+            "Image Processing : Image Registration, Spatial Fourier transforms, Discrete Spatial (2-dimensional) Fourier Transforms, Restoration, Lossy Compression of images",
+            "Data Compression Techniques : Representation and compression of text, sound, picture, and video files (based on JPEG and MPEG standards)"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Operations Research and Optimization",
+          "unitTitleMr": null,
+          "topics": [
+            "Linear Programming : Problem (LPP) in standard form, canonical form, Simplex, Big M Method, dual simplex and revised simplex",
+            "Ellipsoid method and karmakar's method for solving LPPs, Comparison of complexity",
+            "Assignment and Transportation Problems : Hungarian method",
+            "Shortest Path Problems : Dijkstra's and Moore's method",
+            "Network Flow Problem : Formulation, Max-Flow Min-Cut theorem, Ford and Fulkerson's algorithm, MPM Polynomial algorithm",
+            "Matroids : Definition, Graphic and Cographic matroids, Matroid intersection problem",
+            "Non-Linear programming : Kuhn-Tucker conditions, Convex functions and regions, Algorithms for solving convex programming problems"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Neural Networks and Fuzzy Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Neural Networks : Perceptron model, Linear separability and XOR problem, Two and three layered neural nets, Backpropagation, Hopfield nets, Applications",
+            "Fuzzy Systems : Definition of a Fuzzy set, Fuzzy relations, Fuzzy functions, Fuzzy measures, Fuzzy reasoning, Applications of Fuzzy systems"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Advanced Operating Systems and Windows Programming",
+          "unitTitleMr": null,
+          "topics": [
+            "Unix : Operating System, Structure, Commands, Interfacing, Editors and Compilers, LEX and YACC, File system, System calls, Filters, Shell programming",
+            "Windows : Windows environment, Unicode, Documents and Views, Drawing in a window, Message handling, Scrolling and Splitting views, Docking toolbars and Status bars, Common dialogs and Controls, MDI, Multithreading, OLE, Active X controls, ATL, Database access, Network programming"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

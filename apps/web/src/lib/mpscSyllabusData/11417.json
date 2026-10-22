@@ -1,0 +1,136 @@
+{
+  "docId": 11417,
+  "examName": "Assistant Professor (Statistics) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (संख्याशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Statistics",
+      "paperTitleMr": "संख्याशास्त्र",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Statistical Mathematics",
+          "unitTitleMr": "संख्याशास्त्रीय गणित",
+          "topics": [
+            "Real Analysis: Elementary set theory: finite, countable and uncountable sets, supremum, infimum. Sequences and series: convergence, limsup, liminf. Statements and applications of Bolzano Weierstrass theorem, Heine Borel theorem.",
+            "Continuity, uniform continuity, differentiability, mean value theorems. Sequences and series of functions, uniform convergence. Riemann sums and Riemann integrals, Improper Integrals.",
+            "Linear Algebra: Vector spaces, subspaces, linear dependence, basis, dimension of a vector space, linear transformations. Algebra of matrices, rank and determinant of matrices, linear equations.",
+            "Eigenvalues and eigenvectors, Cayley-Hamilton theorem. Change of basis, canonical forms, diagonal forms, triangular forms.",
+            "Quadratic forms: reduction and classification of quadratic forms.",
+            "Numerical Analysis: Numerical solutions of algebraic equations, Newton-Raphson method, Solution of systems of linear algebraic equations using Gauss elimination and Gauss-Seidel methods, Numerical integration."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Data Summarization",
+          "unitTitleMr": "डेटा सारांश",
+          "topics": [
+            "Measures of Central Tendency and Dispersion: Mean, Median, Mode, Partition values, range, quartile deviation, mean deviation, standard deviation, and their relative measures. Graphical representation of various measures of location and dispersion (Ogives, Histograms, Box Plot) frequency distributions, Raw moments, Central moments, Absolute moments, Factorial moments, Sheppard’s corrections, skewness and kurtosis, coefficient of variation.",
+            "Bivariate data: Definition, scatter diagram, concept and types of correlations, Karl Pearson’s coefficient of correlation. Spearman’s rank correlation coefficient. Principle of least squares and fitting of polynomials and exponential curves, lines of regression, properties of regression coefficients, angle between two regression lines, and residual variance."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Probability Modeling",
+          "unitTitleMr": "संभाव्यता मॉडेलिंग",
+          "topics": [
+            "Sample Space, discrete probability, independent events, Bayes theorem, Random variables and distribution functions (univariate and multivariate), expectation and moments.",
+            "Independent random variables, marginal and conditional distributions. Characteristic functions. Standard discrete and continuous univariate distributions.",
+            "Sampling distributions, standard errors and asymptotic distributions, distribution of order statistics and range.",
+            "Probability inequalities (Tchebysheff, Markov, Jensen). Modes of convergence, limit theorems: weak and strong laws of large numbers, Central Limit theorems (i.i.d. case)."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Statistical Inference",
+          "unitTitleMr": "संख्याशास्त्रीय अनुमान",
+          "topics": [
+            "Principles of data reduction: sufficiency principle; sufficient statistics; factorization theorem; minimal sufficient statistic; minimal sufficient statistic for exponential family, power series family.",
+            "Unbiased estimation: unbiased estimator; uniformly minimum variance unbiased estimator (UMVUE); Rao-Blackwell theorem and Lehmann-Scheffe theorem, Fisher information function and Fisher information matrix; Cramer-Rao lower bound; Chapman-Robbins-Kiefer lower bound.",
+            "Methods of finding estimators: method of moment’s estimator; maximum likelihood estimator (MLE), properties of MLE.",
+            "Consistency of an estimator, weak and strong consistency, joint and marginal consistency, invariance property under continuous transform. Elementary Bayesian inference.",
+            "Testing of Hypothesis: Problem of testing of hypothesis, null and alternative hypotheses, Simple and composite hypotheses, test function, Randomized and non-randomized tests, power function of a test, Most powerful (MP) test, Uniformly Most Powerful (UMP) test, Uniformly Most Powerful unbiased (UMPU) test, Likelihood ratio test (LRT) and its asymptotic distribution, Nonparametric test for one or two sample Problem.",
+            "Interval estimation: Confidence interval, Uniformly Most Accurate (UMA) and Uniformly Most Accurate Unbiased (UMAU) confidence intervals."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Sampling Theory and Design of Experiments",
+          "unitTitleMr": "मुनामुना सिद्धांत आणि प्रयोगांची रचना",
+          "topics": [
+            "Simple random sampling, stratified sampling and systematic sampling. Probability proportional to size sampling. Ratio and regression methods.",
+            "Completely randomized designs, randomized block designs and Latin-square design, 2K factorial experiments: analysis of full and confounded models, concept of fractional replication and aliases, construction and analysis of ½ and ¼ fractions."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Elementary Stochastic Processes",
+          "unitTitleMr": "प्राथमिक स्टोचॅस्टिक प्रक्रिया",
+          "topics": [
+            "Markov chains with finite and countable state space, classification of states, limiting behaviour of n-step transition probabilities, stationary distribution.",
+            "Poisson and birth-and-death processes. Chapman-Kolmogorov equations, calculation of n-step transition probabilities. Simulation of Markov Chain."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Linear Models and Multivariate Analysis",
+          "unitTitleMr": "रेषीय मॉडेल आणि मल्टिव्हेरियेट विश्लेषण",
+          "topics": [
+            "Gauss-Markov models, estimability of parameters, best linear unbiased estimators, confidence intervals, tests for linear hypotheses. Analysis of variance and covariance. Fixed, random and mixed effects models.",
+            "Simple and multiple linear regression. Parameter estimation, Elementary regression diagnostics. Multicollinearity, Autocorrelation, generalized linear model, Link function, ML estimation, Logistic regression.",
+            "Multivariate normal distribution, Wishart distribution and their properties. Distribution of quadratic forms. Inference for parameters, partial and multiple correlation coefficients and related tests.",
+            "Data reduction techniques: Principal component analysis, Discriminant analysis, Cluster analysis, Canonical correlation."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Reliability Theory and Operations Research",
+          "unitTitleMr": "विश्वासार्हता सिद्धांत आणि ऑपरेशन्स रिसर्च",
+          "topics": [
+            "Reliability Theory: Hazard function and failure rates, type I and type II censoring, series, parallel, and k-out-of-n systems. IFR, IFRA, NBU, NBUE failure rates and their complementary counterparts, inter-relationships among these classes, ageing properties of common life time distributions.",
+            "Linear programming: Linear programming problem, simplex methods, duality. Integer and quadratic programming.",
+            "Theory of games: two person zero sum games, minimax and maximin principles, Saddle point, Elementary queuing and inventory models. Steady-state solutions of Markovian queuing models: M/M/1, M/M/1 with limited waiting space, M/M/C, M/M/C with limited waiting space."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Time-series Analysis",
+          "unitTitleMr": "टाइम-सिरीज विश्लेषण",
+          "topics": [
+            "Exploratory time Series analysis: Auto covariance and autocorrelation functions (ACF), Partial auto covariance and autocorrelation functions and their properties.",
+            "Methods of estimation and elimination of trend and seasonality: Moving average, exponential smoothing and least square method, Holt-Winters smoothing and forecasting.",
+            "The sample ACF and PACF and their properties. Test for random noise: the Portmanteau tests, the turning point test, the difference sign test and the rank test.",
+            "Stationary processes: General linear processes, moving average (MA), auto regressive (AR) and autoregressive moving average (ARMA) processes of order up to 2. Causal and non-causal process, Stationarity and inevitability conditions."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Process Control",
+          "unitTitleMr": "प्रक्रिया नियंत्रण",
+          "topics": [
+            "CUSUM chart, tabular form. Moving average and exponentially weighted moving average (EWMA) charts. Use of these charts for monitoring process mean.",
+            "Introduction to six-sigma methodology, Process Capability Indices (Cp, Cpk, Cpm).",
+            "Product Control: Sampling Inspection plans for attribute, Concept of AQL, LTPD, Consumer’s risk, producer’s risk, AOQ, AOQL, OC, ASN and ATI.",
+            "Description of single sampling plan with determination of above constants. Introduction to double sampling plan."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -13,6 +13,7 @@ import ResultActionButtons from '../../../components/ResultActionButtons'
 import { ResultCheckSteps } from '../../../components/DetailActionSteps'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
+import { buildResultMetadata } from '../../../lib/seoMetadata'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
 export const revalidate = 300
@@ -107,28 +108,7 @@ export async function generateMetadata({ params }) {
   const data = await getResultData(resolvedParams.slug)
   if (!data) return { title: { absolute: 'Exam Result | ExamUdaan' } }
   const { en } = data
-
-  let rawTitle = en.seo_metadata?.meta_title || `${en.title} Result`
-  let cleanBase = rawTitle.replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '').trim()
-  if (cleanBase.length > 44) {
-    cleanBase = cleanBase.slice(0, 41).trim() + '...'
-  }
-  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Exam Result | ExamUdaan'
-
-  const metaDesc =
-    en.seo_metadata?.meta_description ||
-    `${en.title} result declared by ${en.org_name}. Download scorecard, check merit list, and find out next steps.`
-  const rawUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
-  const siteUrl = (rawUrl && !rawUrl.includes('localhost')) ? rawUrl : 'https://examudaan.in'
-  const targetSection = TYPE_TO_PATH[en.notification_type] || '/results'
-  const canonicalSlug = en.slug || resolvedParams.slug
-  const canonicalUrl = `${siteUrl}${targetSection}/${canonicalSlug}`
-  return {
-    title: { absolute: metaTitle },
-    description: metaDesc.slice(0, 160),
-    alternates: { canonical: canonicalUrl },
-    openGraph: { title: metaTitle, description: metaDesc.slice(0, 160), url: canonicalUrl, type: 'article', siteName: 'ExamUdaan.in' },
-  }
+  return buildResultMetadata(en, resolvedParams.slug)
 }
 
 export default async function ResultDetailPage({ params }) {

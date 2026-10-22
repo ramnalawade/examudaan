@@ -1,0 +1,332 @@
+/* ============================================================
+   hallTicket.module.css — Maharashtra Police Bharti Hall Ticket 2026 Hub
+   ExamUdaan.in | Zero inline styles, fully mobile responsive
+   ============================================================ */
+
+.pageWrapper {
+  background: #fffbf5;
+  min-height: 100vh;
+  padding-bottom: 72px;
+}
+
+.hero {
+  background: linear-gradient(180deg, #fef2f2 0%, #fffbf5 100%);
+  padding: 40px 0 32px;
+  border-bottom: 1px solid #fecaca;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.pillBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pillPulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  animation: pulseAnim 1.6s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulseAnim {
+  to {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+}
+
+.updatedDate {
+  font-size: 13px;
+  color: #78716c;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.heroTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1c1917;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.heroTitleHighlight {
+  color: #dc2626;
+  border-bottom: 3px solid #fca5a5;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  color: #57534e;
+  line-height: 1.6;
+  max-width: 860px;
+  margin: 0 0 24px;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btnDownloadPortal {
+  background: #dc2626;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btnDownloadPortal:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  background: #ffffff;
+  color: #1c1917;
+  border: 1px solid #fecaca;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s;
+}
+
+.btnSecondary:hover {
+  background: #fef2f2;
+}
+
+.section {
+  padding: 40px 0 20px;
+}
+
+.sectionHeader {
+  margin-bottom: 24px;
+}
+
+.sectionTag {
+  font-size: 12px;
+  font-weight: 800;
+  color: #dc2626;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.sectionTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1c1917;
+  margin: 0 0 8px;
+}
+
+.sectionDesc {
+  font-size: 15px;
+  color: #78716c;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Steps Grid */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stepCard {
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.stepNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: #dc2626;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.stepTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1917;
+  margin: 0 0 6px;
+}
+
+.stepText {
+  font-size: 13px;
+  color: #57534e;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Checklist Cards */
+.checklistGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.checklistCard {
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.checklistCardTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1917;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  border-bottom: 1px solid #fed7aa;
+  padding-bottom: 12px;
+}
+
+.checklistItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #44403c;
+  line-height: 1.45;
+}
+
+.checkIcon {
+  color: #16a34a;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.warningBox {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: #991b1b;
+  line-height: 1.5;
+}
+
+/* FAQ Accordion */
+.faqGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.faqQuestion {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1917;
+  margin: 0 0 8px;
+}
+
+.faqAnswer {
+  font-size: 14px;
+  color: #57534e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 26px;
+  }
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+  .checklistGrid {
+    grid-template-columns: 1fr;
+  }
+  .actionRow {
+    flex-direction: column;
+  }
+  .btnDownloadPortal, .btnSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

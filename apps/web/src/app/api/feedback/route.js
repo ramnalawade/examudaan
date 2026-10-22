@@ -48,8 +48,11 @@ export async function POST(req) {
 
     // Extract request audit metadata
     const userAgent = req.headers.get('user-agent') || null
-    const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || null
-    const metadata = { userAgent, ip }
+    const metadata = {
+      userAgent,
+      ip,
+      ...(typeof body.metadata === 'object' && body.metadata !== null ? body.metadata : {})
+    }
 
     // 3. Persist to PostgreSQL feedback table
     try {

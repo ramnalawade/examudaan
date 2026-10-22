@@ -1,0 +1,176 @@
+{
+  "docId": 11401,
+  "examName": "Assistant Professor (Sociology) Maharashtra Education Service, Group-A and Lecturer (Sociology) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Sociology Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Sociological Theory",
+          "unitTitleMr": null,
+          "topics": [
+            "Classical Sociological Traditions: Emile Durkheim, Max Weber, Karl Marx",
+            "Structure-Functionalism and Structuralism: Bronislaw Malinowski, A.R. Radcliffe-Brown, Talcott Parsons, Robert K. Merton, Claude Levi Strauss",
+            "Hermeneutic and Interpretative Traditions: G.H. Mead, Karl Mannheim, Alfred Schutz, Harold Garfinkel, Erving Goffman, Clifford Geertz",
+            "Post Modernism, Post Structuralism and Post Colonialism: Edward Said, Pierre Bourdieu, Michel Foucault, Jurgen Habermas, Anthony Giddens, Manuel Castells",
+            "Indian Thinkers: M.K. Gandhi, B.R. Ambedkar, Radha Kamal Mukherjee, G.S. Ghurye, M.N. Srinivas, Irawati Karve"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Research Methodology and Methods",
+          "unitTitleMr": null,
+          "topics": [
+            "Conceptualizing Social Reality: Philosophy of Science, Scientific Method and Epistemology in Social Science, Hermeneutic Traditions, Objectivity and Reflexivity in Social Science, Ethics and Politics",
+            "Formulating Research Design: Reading Social Science Research, Data and Documents, Induction and Deduction, Fact, Concept and Theory, Hypotheses, Research Questions, Objectives",
+            "Quantitative and Qualitative Methods: Ethnography, Survey Method, Historical Method, Comparative Method",
+            "Techniques: Sampling, Questionnaire and Schedule, Statistical Analysis, Observation, Interview and Case study, Interpretation, Data Analysis and Report Writing"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Basic Concepts and Institutions",
+          "unitTitleMr": null,
+          "topics": [
+            "Sociological Concepts: Social Structure, Culture, Network, Status and Role, Identity, Community, Diaspora, Values, Norms and Rules, Personhood, Habitus and Agency, Bureaucracy, Power and Authority",
+            "Social Institutions: Marriage, Family and Kinship, Economy, Polity, Religion, Education, Law and Customs",
+            "Social Stratification: Social Difference, Hierarchy, Inequality and Marginalization, Caste and Class, Gender, Sexuality and Disability, Race, Tribe and Ethnicity",
+            "Social Change and Processes: Evolution and Diffusion, Modernization and Development, Social Transformations and Globalization, Social Mobility"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Rural and Urban Transformations",
+          "unitTitleMr": null,
+          "topics": [
+            "Rural and Peasant Society: Caste-Tribe Settlements, Agrarian Social Structure and Emergent Class Relations, Land Ownership and Agrarian Relations, Decline of Agrarian Economy, De-Peasantization and Migration, Agrarian Unrest and Peasant Movements, Changing Inter-Community Relations and Violence",
+            "Urban Society: Urbanism, Urbanity and Urbanization, Towns, Cities and Mega-Cities, Industry, Service and Business, Neighbourhood, Slums and Ethnic Enclaves, Middle Class and Gated Communities, Urban Movements and Violence"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "State, Politics and Development",
+          "unitTitleMr": null,
+          "topics": [
+            "Political Processes in India: Tribe, Nation State and Border, Bureaucracy, Governance and Development, Public Policy: Health, Education and Livelihoods, Political Culture, Grass-root Democracy, Law and Society, Gender and Development, Corruption, Role of International Development Organizations",
+            "Social Movements and Protests: Political Factions, Pressure Groups, Movements based on Caste, Ethnicity, Ideology, Gender, Disability, Religion and Region, Civil Society and Citizenship, NGOs, Activism and Leadership, Reservations and Politics"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Economy and Society",
+          "unitTitleMr": null,
+          "topics": [
+            "Exchange, Gift, Capital, Labour and Market",
+            "Mode of Production Debates",
+            "Property and Property Relations",
+            "State and Market: Welfarism and Neoliberalism",
+            "Models of Economic Development",
+            "Poverty and Exclusion",
+            "Factory and Industry Systems",
+            "Changing Nature of Labour Relations",
+            "Gender and Labour Process",
+            "Business and Family",
+            "Digital Economy, E-Commerce",
+            "Global Business and Corporates",
+            "Religion and Economy"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Environment and Society",
+          "unitTitleMr": null,
+          "topics": [
+            "Social and Cultural Ecology: Diverse Forms",
+            "Technological Change, Agriculture and Biodiversity",
+            "Indigenous Knowledge Systems and Ethno-Medicine",
+            "Gender and Environment",
+            "Forest Policies, Adivasis and Exclusion",
+            "Ecological Degradation and Migration",
+            "Development, Displacement and Rehabilitation",
+            "Water and Social Exclusion",
+            "Disasters and Community Responses",
+            "Environmental Pollution, Public Health and Disability",
+            "Climate Change and International Policies",
+            "Environmental Movements"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Family, Marriage and Kinship",
+          "unitTitleMr": null,
+          "topics": [
+            "Theoretical Approaches: Structure-Functionalist, Alliance and Cultural",
+            "Gender Relations and Power Dynamics",
+            "Inheritance, Succession and Authority",
+            "Gender, Sexuality and Reproduction",
+            "Children, Youth and Elderly",
+            "Emergent Forms of Family",
+            "Changing Marriage Practices",
+            "Changing Care and Support Systems",
+            "Family Laws",
+            "Domestic Violence and Crime against Women",
+            "Honour Killing"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Science, Technology and Society",
+          "unitTitleMr": null,
+          "topics": [
+            "History of Technological Development",
+            "Changing notions of Time and Space",
+            "Flows and Boundaries",
+            "Virtual Community",
+            "Media: Print and Electronic, Visual and Social Media",
+            "E-Governance and Surveillance Society",
+            "Technology and Emerging Political Processes",
+            "State Policy, Digital Divide and Inclusion",
+            "Technology and Changing Family Relations",
+            "Technology and Changing Health Systems",
+            "Cyber Crime"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Culture and Symbolic Transformations",
+          "unitTitleMr": null,
+          "topics": [
+            "Signs and Symbols Rituals, Beliefs and Practices",
+            "Changing Material Culture",
+            "Education: Formal and Informal",
+            "Commodification of Rituals",
+            "Communalism and Secularism",
+            "Cultural Identity and Mobilization",
+            "Culture and Politics",
+            "Gender, Body and Culture",
+            "Art and Aesthetics",
+            "Ethics and Morality",
+            "Sports and Culture",
+            "Culture and Environment",
+            "New Religious Movements"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

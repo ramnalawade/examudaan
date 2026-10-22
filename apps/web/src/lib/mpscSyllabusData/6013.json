@@ -1,0 +1,72 @@
+{
+  "docId": 6013,
+  "examName": "State Services Examination - Revised Pattern 2022",
+  "examNameMr": "राज्यसेवा परीक्षा - सुधारित पॅटर्न २०२२ अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "rajyaseva",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Anthropology Syllabus",
+      "paperTitleMr": "मानवशास्त्र अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Meaning, Scope and Development of Anthropology",
+          "unitTitleMr": "मानवशास्त्राचा अर्थ, व्याप्ती आणि विकास",
+          "topics": [
+            "Relationship with other disciplines: Social sciences, behavioral sciences, biological sciences, medical sciences, earth sciences and humanities",
+            "Main branches of anthropology, their scope and relevance: Social-cultural anthropology, Biological anthropology, Archaeological anthropology, Linguistic anthropology",
+            "Human evolution and emergence of man",
+            "Biological and cultural factors in human evolution",
+            "Theories of organic evolution (Pre-Darwinian, Darwinian, Post-Darwinian)",
+            "Primate taxonomy, characteristics, evolutionary trends and primate classification",
+            "Comparative anatomy of man and apes, skeletal changes due to upright posture and its implications"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [
+    "Agriculture",
+    "Animal Husbandry and Veterinary Science",
+    "Anthropology",
+    "Botany",
+    "Chemistry",
+    "Civil Engineering",
+    "Commerce and Accountancy",
+    "Economics",
+    "Electrical Engineering",
+    "Geography",
+    "Geology",
+    "History",
+    "Law",
+    "Management",
+    "Marathi Literature",
+    "Mathematics",
+    "Mechanical Engineering",
+    "Medical Science",
+    "Philosophy",
+    "Physics",
+    "Political Science and International Relations",
+    "Psychology",
+    "Public Administration",
+    "Sociology",
+    "Statistics",
+    "Zoology"
+  ],
+  "importantNotes": [
+    "Candidates can choose any optional subject from the given list of optional subjects."
+  ]
+}

@@ -4,7 +4,7 @@
 
 export const metadata = {
   title: 'Police Bharti Ground Marks Calculator 2026',
-  description: 'Calculate your exact Maharashtra Police Bharti ground physical test marks — 1600m/800m run, 100m sprint, shot put. Real-time merit estimation and category cut-off.',
+  description: 'Calculate your exact Maharashtra Police Bharti physical ground marks — 1600m/800m run, 100m sprint & shot put with live category cutoffs.',
   keywords: [
     'police bharti ground test calculator', 'Maharashtra police physical test marks',
     'police bharti 1600m marks', 'police bharti score calculator',

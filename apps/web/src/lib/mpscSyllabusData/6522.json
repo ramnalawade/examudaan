@@ -1,0 +1,125 @@
+{
+  "docId": 6522,
+  "examName": "Junior Geologist, Directorate of Geology and Mining, Maharashtra Mining Service, Group - B",
+  "examNameMr": "कनिष्ठ भूशास्त्रज्ञ, भूविज्ञान आणि खनिकर्म संचालनालय, महाराष्ट्र खनिकर्म सेवा, गट - ब",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Junior Geologist Syllabus",
+      "paperTitleMr": "कनिष्ठ भूशास्त्रज्ञ अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Stratigraphy of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राची स्तरशास्त्र",
+          "topics": [
+            "Laterites and Quaternary and Tertiary Sediments",
+            "Deccan Basalts",
+            "Lameta and Bagh Formation/Groups",
+            "Gondawana Super Group",
+            "Bhima Super Group",
+            "Pakhal Super Group",
+            "Sausar Super Group",
+            "Dongargarh Super Group",
+            "Vairagarh Group",
+            "Sakoli Group",
+            "Kaladgi Super Group",
+            "Amgaon Group",
+            "Tirodi Gneisses",
+            "Amgaon Gneisses",
+            "Peninsular Gneisses"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Structural Geology",
+          "unitTitleMr": "संरचनात्मक भूविज्ञान",
+          "topics": [
+            "Stratification and Attitude of beds",
+            "Outcrops and Outcrop patterns",
+            "Joints, Faults and Fractures classification and recognition",
+            "Folds - classification and recognition",
+            "Unconformities classification and recognition",
+            "Concept of foliation and lineation",
+            "Dykes and sills"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Petrology",
+          "unitTitleMr": "शैलविज्ञान",
+          "topics": [
+            "Sedimentary, Igneous and Metamorphic rocks - Basic classification",
+            "Grain size, angularity and nature of cement/matrix and its relation to porosity",
+            "Deccan Basalts - Lithostratigraphy, different type of lava flows, their classification and mapping",
+            "Nature of flow contacts, intertrappean sediments, red boles, flow contact breccias, and their relation with aquifer/multiple aquifer system",
+            "Relationship of weathering and geochemistry of basalt and other rocks on water quality"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Geomorphology, Remote Sensing and Groundwater Exploration",
+          "unitTitleMr": "भूरूपशास्त्र, रिमोट सेन्सिंग आणि भूजल अन्वेषण",
+          "topics": [
+            "Landform and Geomorphic processes: Role of lithology, landforms and geology, Geomorphic cycles",
+            "Weathering, soil formation, and erosion",
+            "Landforms, slopes, drainage patterns, and Peneplanation",
+            "Endogenous and exogenous processes and forces responsible, and Morphometric analysis",
+            "Geomorphic features and River systems of Maharashtra",
+            "Remote Sensing: Use and interpretation of aerial photographs, Thematic Maps and Satellite Imagery",
+            "Indian Remote Sensing (IRS) satellites, Imageries, IRS products, MSS band, and False Colour Composite (FCC)",
+            "Principles and applications of Geographic Information System (GIS) and Image Processing",
+            "Droughts, floods and landslides - use of remote sensing and GIS in disaster management",
+            "Groundwater Exploration: Use of toposheets, geomorphic maps and remote sensing methods in groundwater exploration",
+            "Geophysical methods - different methods and types of resistivity surveys and their use in different terrains and rock types",
+            "Interpretation of VES/resistivity curves, limitations of resistivity surveys, and Magneto Telluric Surveys"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Hydrogeology",
+          "unitTitleMr": "जलभूविज्ञान",
+          "topics": [
+            "Hydrologic cycle and effect of climate, topography and geology on groundwater",
+            "Hydrogeological properties - Movement of groundwater, porosity, permeability, hydraulic conductivity, storativity, transmissivity, specific retention, specific yield and storage coefficient",
+            "Porosity, permeability, transmissivity and safe yields of various formations of Maharashtra",
+            "Aquifers - Different rocks types as aquifers, occurrence and vertical distribution of subsurface water",
+            "Aquifer characteristics, confined and unconfined aquifers, aquicludes, and types of aquifers in different geological formations of Maharashtra",
+            "Aquifer performance test and preparation of hydrogeological maps",
+            "Darcy's Law - derivation and validity of Darcy's law for laminar and turbulent flow, and well inventory"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Watershed Management and Hydrogeochemistry",
+          "unitTitleMr": "पाणलोट व्यवस्थापन आणि जलभूरासायनिकशास्त्र",
+          "topics": [
+            "Concept of Watershed - morphological characteristic of watershed, watershed management and methods of water conservation",
+            "Land use planning, control of erosion by land and crop management practices, erosion control structures in arable and non-arable lands",
+            "Unit Hydrographs and their interpretation, relationship of recharge components with discharge/withdrawal/draft, watershed interventions, drainage line and area treatments",
+            "Methods of artificial recharge and rainwater harvesting, conventional and non-conventional methods, drought analysis and its application",
+            "Hydrogeochemistry - sampling and interpretation, stable isotopes and their application in interpretation of data",
+            "Water Quality - Drinking water sources - BIS and WHO standards, water pollution - types and sources of eutrophication, anoxia and hypoxia",
+            "Groundwater management - technical and social aspects, groundwater provinces of Maharashtra",
+            "Groundwater audit and budgeting, and groundwater acts and legislation"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,327 @@
+{
+  "docId": 10539,
+  "examName": "AUTOMOBILE ENGINEERING",
+  "examNameMr": "ऑटोमोबाइल अभियांत्रिकी",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "AUTOMOBILE ENGINEERING",
+      "paperTitleMr": "ऑटोमोबाइल अभियांत्रिकी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Applied Thermodynamics",
+          "unitTitleMr": null,
+          "topics": [
+            "Thermodynamic Concepts",
+            "First Law of Thermodynamics",
+            "One Dimensional Flow of Compressible Fluid",
+            "Second Law of Thermodynamics",
+            "Availability",
+            "Properties of Steam"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Strength of Materials",
+          "unitTitleMr": null,
+          "topics": [
+            "Simple Stress and Strain",
+            "S. F. and B. M. in Beams",
+            "Simple Theory of Bending",
+            "Sheer Stress in Beams",
+            "Simple Theory of Torsion",
+            "Bending Moment combined with Torsion and Axial Loads",
+            "Principal Stresses",
+            "Deflection of Beams",
+            "Strain Energy",
+            "Theories of failure"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Material Science",
+          "unitTitleMr": null,
+          "topics": [
+            "Strain Hardening",
+            "Constitution of Alloys",
+            "Iron-Carbon Equilibrium Diagram",
+            "Heat-Treatment of Steels",
+            "Cast Irons",
+            "Introduction to International Standards/Codes",
+            "Non-Ferrous Metals and Alloys",
+            "Fatigue Failure",
+            "Creep",
+            "Alloy Steels",
+            "Strengthening mechanism",
+            "Powder Metallurgy"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Heat Transfer",
+          "unitTitleMr": null,
+          "topics": [
+            "Conduction, Convection and Radiation",
+            "Emissivity",
+            "Heat exchangers",
+            "Mass Transfer (Mechanism, Fick's Law of Diffusion, Isothermal evaporation of water into air, Convective Mass Transfer)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Machine Design and Vibration",
+          "unitTitleMr": null,
+          "topics": [
+            "Design consideration in Castings and Forgings",
+            "Theories of Failure",
+            "Design for Static Loading",
+            "Design against Fluctuating Loads",
+            "Design of Shafts",
+            "Design of Springs",
+            "Design of Belts",
+            "Free undamped single degree of freedom vibration system",
+            "Free damped single degree of freedom vibration system",
+            "Free undamped multi degree of freedom vibration system",
+            "Forced single degree of freedom vibration system",
+            "Vibration measuring system",
+            "Rotor Dynamics",
+            "Balancing"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Theory of Machines",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic Kinematics",
+            "Special Mechanisms",
+            "Velocity Analysis of Mechanisms",
+            "Acceleration Analysis of Mechanism",
+            "Static and Dynamic force analysis",
+            "Flexible Connector Mechanisms",
+            "Spur Gear Mechanism",
+            "Gear Trains",
+            "Cam Mechanism",
+            "Clutches",
+            "Brakes Dynamometer",
+            "Cam and followers",
+            "Governors",
+            "Gyroscope",
+            "Static and Dynamic balancing of single rotor and multi rotor system",
+            "In-line Engines, Radial Engines, V-Engines",
+            "Vibrations (Classification of Vibrations)",
+            "Free undamped multi Degree of freedom vibratory systems",
+            "Forced single degree of freedom vibratory system"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Internal Combustion Engines",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification of I.C. Engines",
+            "Cycle Analysis of I.C. Engines",
+            "S.I. Engines",
+            "C.I. Engines",
+            "Supercharging / Turbo charging",
+            "Performance Characteristics of S.I. and C.I. Engines",
+            "Air Pollution due to I.C. Engines",
+            "Fuels of I.C. Engines",
+            "Engine Lubrication",
+            "Engine Cooling",
+            "Alternative Fuels",
+            "Introduction to CNG, LPG, Stratified Charge and Wankel engines",
+            "Recent Developments in I.C. Engines"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Vehicle Dynamics",
+          "unitTitleMr": null,
+          "topics": [
+            "Fundamentals of Vehicle Dynamics",
+            "Road loads",
+            "Aerodynamic Drag, Lift, Rolling",
+            "Steering Geometry Parameters",
+            "Cornering Force, Cornering Power",
+            "Recent trends in Vehicle Dynamics",
+            "Vehicle Sensors",
+            "Central Tyre inflation systems",
+            "Sources of noise and vibration",
+            "pass-by noise requirements",
+            "target vehicles and objective targets",
+            "Vehicle structure noise",
+            "Engine noise",
+            "Transmission noise",
+            "Exhaust noise",
+            "causes and remedies on road shocks"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Fluid Mechanics",
+          "unitTitleMr": null,
+          "topics": [
+            "Fluid Kinematics",
+            "Fluid Dynamics",
+            "Real Fluid Flows",
+            "Boundary Layer Flows",
+            "Compressible Fluid Flow",
+            "Hydraulic Machinery (Turbines, Pumps, Compressors)"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Measurement and Metrology",
+          "unitTitleMr": null,
+          "topics": [
+            "Static characteristics",
+            "Displacement measurement",
+            "Strain measurement",
+            "Measurement of angular velocity",
+            "Pressure measurement",
+            "Temperature measurement",
+            "Vacuum measurement",
+            "Acceleration measurement",
+            "Metrology"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "CAD/CAM",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction and Elements of Interactive Computer Graphics",
+            "Techniques for Geometric Modeling",
+            "Transformation, Manipulation and Data Storage",
+            "NC and CNC Technology",
+            "Group Technology",
+            "CAPP and CAQC",
+            "Computer Integrated Manufacturing and Technology Driven Practices"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Vehicle Systems, Chassis And Body Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Types of Clutches used in Automobiles",
+            "Braking systems",
+            "Steering system",
+            "Suspension system",
+            "Drive line, Final Drive, and Rear axels",
+            "Wheels and Tyres",
+            "Recent trends in Automobile Systems",
+            "Classification of motor Vehicles",
+            "Vehicle body materials",
+            "Visibility and Blind area",
+            "Driver's seat design requirements",
+            "Latest trends in Design, Manufacturing and Materials"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Finite Element Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "Introductory Concepts: Introduction to FEM, Brief History, General FEM Procedure",
+            "Applications of FEM in various fields",
+            "Advantages and Disadvantages of FEM Differential Equations in different Approximate solution of differential equations in fields",
+            "Matrix Algebra, FEM Procedure, Minimization of functional",
+            "Principle of minimum total potential",
+            "Piecewise Rayleigh-Ritz method",
+            "Example problems in one-D",
+            "Isoparametric, Algorithms for solution of equations dimensional structural analysis",
+            "Two dimensional finite element formulations",
+            "Finite element formulation of dynamics"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Vehicle Testing And Maintenance",
+          "unitTitleMr": null,
+          "topics": [
+            "Specification and Classification of Vehicles (including M, N and O layout)",
+            "Regulations overview (ECE, EEC, FMVSS, AIS, CMVR, ADR)",
+            "Homologation and its Types",
+            "Type approval and Conformity of Production",
+            "Types of World Harmonized Tests for Vehicles",
+            "Important Test tracks: Proving ground testing, high speed track, pavement track, corrugated track, mud track, steering pad, gradient track, Water/salt water wade track, Straight line braking track, split mu track, wet pad, Accelerated fatigue track, External noise test track, comfort track",
+            "Engine Tuning and vehicle care",
+            "Engine Diagnostics and testing",
+            "Engine overhaul",
+            "Diagnosis of various engine faults",
+            "Inspection, service and troubleshooting of ignition system, Starter motor and alternator",
+            "Latest diagnostic equipments",
+            "Wheel balancing and alignment",
+            "On boards diagnostics"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Hybrid and Electric Vehicles",
+          "unitTitleMr": null,
+          "topics": [
+            "History and evolution of Electric Vehicles",
+            "Comparison of Electric with Internal Combustion Engine Vehicles",
+            "Exhaust Emission and Global warming",
+            "Environmental importance of Hybrid and Electric Vehicles",
+            "Overview of EV Challenges",
+            "Classification of EV, Overview of EV Technologies, Architecture, Construction, Working",
+            "Economic and Environmental impacts of using Electrical Vehicles",
+            "Emerging Technologies for Electric Vehicle Drives",
+            "Brief introduction to Autonomous and self-driving Vehicles",
+            "Classification of HEV, Architecture, Construction, Working, Tractive force",
+            "Power and Energy requirements for standard drive cycles of HEV",
+            "Power flow Control in Hybrid Drive-Train Topologies",
+            "Fuel Efficiency Analysis",
+            "Energy Management Systems, Energy management strategies used in hybrid and electric vehicles, classification of different energy management strategies, comparison of different energy management strategies, implementation issues of energy management strategies",
+            "Battery Thermal Management Systems and its types, working and comparison"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Automotive industry standards",
+          "unitTitleMr": null,
+          "topics": [
+            "Key industry quality standards, need, advantages",
+            "Cost of quality and value of quality",
+            "Vehicle safety norms",
+            "Indian Standards (IS) and Automotive Industry standards (AIS)",
+            "Motor Vehicle Act (MVA) and Central motor vehicle Rule (CMVR)",
+            "Bharat NCAP",
+            "Deming's cycles and 14 Points",
+            "Juran Trilogy approach",
+            "Seven Quality Tools",
+            "Introduction to N Seven Tools",
+            "Quality Circle",
+            "5S",
+            "Kaizen",
+            "Poka yoke",
+            "Kanban",
+            "JIT",
+            "ISO14001",
+            "Six Sigma",
+            "Criteria for Quality Award (National and International)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

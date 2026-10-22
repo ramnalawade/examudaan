@@ -1,0 +1,52 @@
+{
+  "docId": 1590,
+  "examName": "Deputy Superintendent of Police / Assistant Commissioner of Police (Motor Transport), General State Police Services, Gr.-A.",
+  "examNameMr": "उपअधीक्षक पोलीस / सहायक पोलीस आयुक्त (मोटार परिवहन), राज्य पोलीस सेवा, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2018,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Mechanical and Automobile Engineering",
+      "paperTitleMr": "यांत्रिक आणि ऑटोमोबाइल अभियांत्रिकी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "MECHANICAL and AUTOMOBILE ENGINEERING",
+          "unitTitleMr": "यांत्रिक आणि ऑटोमोबाइल अभियांत्रिकी",
+          "topics": [
+            "Engineering Mechanics: Equivalent force systems, free body concepts, equations of equilibrium, trusses and frames, Kinematics and dynamics of particles and rigid bodies, impulse and momentum (linear and angular), Potential and kinetic energy and principles of conservation of kinetic energy and momentum.",
+            "Strength of Materials: Stress and Strain, stress-strain relationship and elastic constants, shear force and bending moment diagrams, Bending & Shear Stresses, deflection of Beams, Torsion of circular shafts, thin and thick cylinders.",
+            "Theory of Machines and Machine Dynamics: Planar cams and followers, gear tooth profiles, governors and flywheels, balancing of reciprocating and rotating masses. Free and forced vibration of single degree freedom systems, effect of damping vibration isolation, resonance, critical speed of rotors.",
+            "Design of Machine Elements: Design for static and dynamic loading, failure theories; fatigue, Design of bolted and welded joints, design of simple machine elements like shafts and keys, spur gears, brakes and clutches, belt drives, selection of rolling and sliding contact bearings.",
+            "Heat Transfer: Modes of heat transfer; one dimensional heat conduction, thermal resistance, contact resistance, heat flow through composite plane walls. Natural and forced convection, non-dimensional numbers, radiative heat transfer, black and grey surfaces, shape factors.",
+            "Thermodynamics: Zeroth, First and Second laws of thermodynamics; thermodynamic system and processes; irreversibility and availability; behaviour of ideal and real gases, properties of pure substances, calculation of work and heat in ideal processes; analysis of thermo-dynamic cycles related to energy conversion – Carnot, Otto and Diesel cycles.",
+            "Automobile Engines: I.C. Engines and its classification, Air Standard Cycles, Fuel air cycles, Actual cycles, Requirements and suitability of fuels in IC engines, fuel ratings, fuel-air mixture requirements, Alternative fuels, Comparison of four stroke and two stroke engine, Firing order and its significance.",
+            "S.I. & C.I. Engine Fuel System: Carburetor and its working principle. Requirements of an automotive carburetor; Starting, idling, acceleration, circuits of carburetors, mechanical and electrical pumps, fuel feed system, petrol injection strategies - M.P.F.I and port fuelling techniques, diesel injection system - requirements, function of components, jerk and distributor type pumps, fuel injector - type of injection nozzle, spray characteristic, injection.",
+            "Fuel Combustion in I.C. Engines: Magneto and battery ignition systems for S.I engines; ignition timing, combustion of diesel - ignition quality. Cetane number, Stoichiometric equation of combustion of diesel fuel.",
+            "Combustion in S.I. Engines: Stages of combustion, flame propagation, rate of pressure rise, abnormal combustion: phenomena of knocking, effect of engine variables on knock.",
+            "Combustion Chambers: Combustion Chambers – different types, factor controlling combustion chamber design.",
+            "Combustion in C.I. Engines: Stages, heat release and ignition delay correlations. Abnormal combustion, factors affecting abnormal combustion. Knock in C.I. engines - comparison of knock in C.I. & S.I. engines.",
+            "Fuel Air Mixing: Importance of air motion – swirl, squish and turbulence - swirl ratio, period, factors affecting delay period.",
+            "Super Charging And Turbo Charging: Necessity and Limitation, charge cooling, type of Super Charging And Turbo Charging, relative merits, matching of turbo charger.",
+            "Engine Cooling System: Need for cooling system. Types of cooling system, liquid and air cool systems. Thermo siphon and pressurized cooling system. Properties of coolants.",
+            "Lubrication System: Lubrication System, Mist lubrication System, Wet sump and dry sump lubrication, forced feed lubrication system. Scavenging – Scavenging Methods, Scavenging pumps."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

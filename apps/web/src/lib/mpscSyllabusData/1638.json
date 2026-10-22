@@ -1,0 +1,103 @@
+{
+  "docId": 1638,
+  "examName": "Assistant Professor- Physics, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Physics, Maharashtra Education Services, Group - A (Collegiate Branch)",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Electronics Semiconductor discrete devices",
+          "unitTitleMr": null,
+          "topics": [
+            "Characteristic curves and physics of p-n junction, Schottky, Tunnel and MOS diodes",
+            "Bipolar junction transistor, junction field effect transistor (JFET), Metal-Oxide-Semiconductor Field Effect Transistor (MOSFET)",
+            "Unijunction transistor and silicon controlled rectifier (SCR), opto-electronic devices (Photo-diode, solar cell, LED, LCD and photo transistor)",
+            "Diffusion of impurities in silicon, growth of oxide",
+            "Applications of semiconductor devices in linear and digital circuits - Zener regulated power supply, transistor (bipolar, MOSFET, JFET) as amplifier",
+            "Coupling of amplifier stages (DC, RC and Transformer coupling), RC-coupled amplifier, dc and power amplifier",
+            "Feedback in amplifiers and oscillators (phase shift, Hartley, Colpitts and crystal controlled), clipping and clamping circuits",
+            "Transistor as a switch, OR, AND and NOT gates (TTL and CMOS gates), multivibrators (using transistor) and sweep generator (using transistors, UJT and SCR)",
+            "Linear integrated circuits - Operational amplifier and its applications - Inverting and non-inverting amplifier, adder, integrator, differentiator, waveform generator, comparator and Schmitt trigger, Butterworth active filter, phase shifter",
+            "Digital integrated circuits - NAND and NOR gates building block, X-OR gate, simple combinational circuits - Half and full adder, Flip-Flops, shift registers, counters, A/D and D/A converters, semiconductor memories (ROM, RAM, and EPROM), basic architecture of 8 bit microprocessor (INTEL 8085)",
+            "Communication Electronics - Basic principle of amplitude frequency and phase modulation, simple circuits for amplitude modulation and demodulation, digital (PCM) modulation and demodulation",
+            "Fundamentals of optical communication, Microwave Oscillators (reflex klystron, magnetron and Gunn diode), Cavity resonators, Standing wave detector"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Atomic and Molecular Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Atomic Physics - quantum states of an electron in an atom, Hydrogen atom spectrum, electron spin, Stern-Gerlach experiment, spin-orbit coupling, fine structure, spectroscopic terms and selection rules, hyperfine structure",
+            "Exchange symmetry of wave functions, Pauli exclusion principles, periodic table, alkali-type spectra, LS and JJ coupling, Hund's rules and term reversal",
+            "Mechanisms of line broadening",
+            "Zeeman, Paschen-Back and Stark effects",
+            "Inner-shell vacancy, X-rays and Auger transitions, Compton effect",
+            "Principles of resonance Spectroscopy (ESR and NMR)",
+            "Molecular Physics - Covalent, ionic and Van der Waal's interaction, Born-Oppenheimer approximation",
+            "Heitler-London and molecular orbital theories of H2",
+            "Rotation, rotation-vibration spectra, Raman Spectra, selection rules, nuclear spin and intensity alteration, isotope effects, electronic states of diatomic molecules, Franck-Condon principle",
+            "Laser - spontaneous and stimulated emission, optical pumping, population inversion, coherence (temporal and spatial), simple description of ammonia maser, CO and He-Ne lasers"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Condensed Matter Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Crystal classes and system, 2D and 3D lattices, bonding of common crystal structure",
+            "Reciprocal lattice, diffraction and structure factor, elementary ideas about point defect and dislocations, short and long range order in liquids and solids, liquid crystals, quasicrystals and glasses",
+            "Lattice vibrations, phonons, specific heat of solids, free electron theory, Fermi statistics, heat capacity and Pauli paramagnetic susceptibility",
+            "Electron motion in periodic potentials, energy bands in metals, insulators and semiconductors, tight binding approximation, impurity levels in doped semiconductors",
+            "Dielectrics - Polarization mechanisms, Clausius-Mossotti equation, piezo, pyro and ferroelectricity",
+            "Dia and Para magnetism, exchange interactions, magnetic order, ferro, anti ferro and ferromagnetism",
+            "Superconductivity - basic phenomenology, Meissner effect, Type I and Type II superconductors, BCS pairing mechanisms, High Tc materials"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Nuclear and Particle Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic nuclear properties - size, shape, charge distribution, spin and parity, binding, empirical mass formula, liquid drop model, nuclear stability and radioactive decay",
+            "Nature of nuclear force, elements of deuteron problem and low energy N-N scattering, charge independence and charge symmetry of nuclear forces",
+            "Evidence for nuclear shell structure, single particle shell model - its validity and limitations",
+            "Interactions of charged particles and X-rays with matter, basic principles of particle detectors - ionization chamber, proportional counter and GM counters, solid state detectors - scintillation and semiconductor detectors",
+            "Radioactive decays - alpha, beta, gamma decays, their classifications and characteristics, basic theoretical understanding",
+            "Nuclear reactions - Q values and kinematics of nuclear cross-sections, its energy and angular dependence, elementary ideas of reaction mechanisms, elementary ideas of fission and fusion"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Particle Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification of fundamental forces and elementary particles",
+            "Isospin, strangeness, Gell-Mann-Nishijima formula",
+            "Quark model and SU(3) symmetry",
+            "CPT invariances in different interactions, weak interactions, parity-non-conservation, K-meson complex and time reversal invariance, elementary ideas of gauge theory of strong and weak interactions"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

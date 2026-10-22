@@ -7,7 +7,9 @@ import BlogClientView from './BlogClientView'
 import { getAllBlogPosts } from '../../lib/blogData'
 
 export const metadata = {
-  title: 'Exam Prep Blog \u2014 MPSC, Police Bharti & Talathi Guides',
+  title: {
+    absolute: 'Exam Prep Blog — MPSC & Police Bharti Guides | ExamUdaan',
+  },
   description: 'In-depth preparation blueprints, 90-day micro-study plans, 10-year PYQ trend analysis, and career guidance for Maharashtra government competitive examinations.',
   keywords: [
     'how to crack mpsc in 6 months',

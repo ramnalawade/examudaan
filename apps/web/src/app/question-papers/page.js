@@ -8,10 +8,16 @@ import Link from 'next/link'
 import { SYLLABUS_EXAMS } from '@/lib/syllabusData'
 import mpscLocalPapers from '@/lib/mpscLocalPapers.json'
 import mpscPairedExams from '@/lib/mpscPairedExams.json'
+import { fitDescription } from '@/lib/seoMetadata'
 
 export const metadata = {
-  title: 'Previous Year Question Papers & Answer Keys',
-  description: 'Official MPSC question papers 2021-2026, Police Bharti, Talathi, ZP, UPSC, SSC & RRB previous year papers with answer keys. Read free in browser from official sources.',
+  title: {
+    absolute: 'Previous Year Question Papers & Answer Keys | ExamUdaan',
+  },
+  description: fitDescription(
+    'Official MPSC question papers 2021-2026, Police Bharti, Talathi, ZP, UPSC, SSC & RRB previous year papers with answer keys. Read free in browser.',
+    'Official question paper PDF on ExamUdaan.'
+  ),
   keywords: [
     'MPSC question papers', 'Maharashtra government exam papers',
     'police bharti question paper', 'talathi question paper',
@@ -23,10 +29,10 @@ export const metadata = {
     canonical: 'https://examudaan.in/question-papers',
   },
   openGraph: {
-    title: 'Previous Year Question Papers & Answer Keys | ExamUdaan',
+    title: 'Previous Year Question Papers & Answer Keys - PDF',
     description: 'Official MPSC, Police Bharti, Talathi, SSC, RRB previous year papers with answer keys — read free in browser from official sources.',
     url: 'https://examudaan.in/question-papers',
-    siteName: 'ExamUdaan.in',
+    siteName: 'ExamUdaan',
     type: 'website',
   },
   twitter: {

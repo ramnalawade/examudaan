@@ -446,6 +446,13 @@ class JobClassification(BaseModel):
     experience_min_years: Optional[int] = None
     experience_max_years: Optional[int] = None
 
+    # --- Rich Salary & Location fields for Schema.org / Google JobPosting ---
+    salary_min: Optional[float] = Field(default=None, description="Minimum monthly basic salary in INR as a number (e.g. 35400.0)")
+    salary_max: Optional[float] = Field(default=None, description="Maximum monthly basic salary in INR as a number (e.g. 112400.0)")
+    salary_note: Optional[str] = Field(default=None, description="Pay matrix level or scale text (e.g. 'Level S-13 (₹35,400 - ₹1,12,400)')")
+    postal_code: Optional[str] = Field(default=None, description="6-digit Indian PIN code of headquarters or exam location")
+    street_address: Optional[str] = Field(default=None, description="Physical street or office address of the hiring organization")
+
     is_mpsc: bool = False
     is_upsc: bool = False
     is_ssc: bool = False
@@ -583,6 +590,16 @@ MCA→PG+Computer/IT; MBA→PG+Management.
 
 GOVERNMENT LEVEL
 Central / State / PSU / Local / Autonomous / Private / Mixed / Unknown.
+
+SALARY & PAY SCALE (GOOGLE JOBPOSTING COMPLIANT)
+• salary_min / salary_max: Extract monthly basic pay amounts in INR as numbers (e.g. 35400.0, 112400.0).
+• If pay scale is "Level S-13 (₹35,400 - ₹1,12,400)", set salary_min=35400.0, salary_max=112400.0.
+• If consolidated monthly pay like "₹25,000/- p.m." is given, set salary_min=25000.0, salary_max=25000.0.
+• salary_note: Brief pay scale string (e.g. "Pay Matrix Level S-13 (₹35,400 - ₹1,12,400) + allowances").
+
+LOCATION & POSTAL PIN CODE
+• postal_code: 6-digit Indian PIN code if found in notification, address, or exam center (e.g. "400032").
+• street_address: Physical office / headquarters address if mentioned in text.
 """
 
 
@@ -643,6 +660,9 @@ def build_job_context(row: Dict[str, Any]) -> Dict[str, Any]:
         "is_walk_in": row.get("is_walk_in"),
         "total_vacancies": row.get("total_vacancies"),
         "advt_no": clean_text(row.get("advt_no"), 200),
+        "salary": clean_text(row.get("salary"), 2000),
+        "salary_min": row.get("salary_min"),
+        "salary_max": row.get("salary_max"),
     }
 
 
@@ -751,6 +771,25 @@ SET
     title_mr    = COALESCE(%(title_mr)s, title_mr),
     summary_mr  = COALESCE(%(summary_mr)s, summary_mr),
 
+    salary_min = COALESCE(%(salary_min)s, salary_min),
+    salary_max = COALESCE(%(salary_max)s, salary_max),
+    salary = CASE
+        WHEN (salary IS NULL OR salary = '{}'::jsonb) AND (%(salary_min)s IS NOT NULL OR %(salary_max)s IS NOT NULL) THEN
+            jsonb_build_object(
+                'amount', %(salary_min)s,
+                'min', %(salary_min)s,
+                'max', %(salary_max)s,
+                'period', 'MONTH',
+                'note', %(salary_note)s
+            )
+        ELSE salary
+    END,
+    ai_extracted_data = COALESCE(ai_extracted_data, '{}'::jsonb) || jsonb_strip_nulls(jsonb_build_object(
+        'postal_code', %(postal_code)s,
+        'street_address', %(street_address)s,
+        'salary_note', %(salary_note)s
+    )),
+
     classification_confidence = %(confidence)s,
     classification_status     = 'completed',
     classification_error      = NULL,
@@ -805,6 +844,12 @@ def update_job(cur, result: JobClassification, rule_type: str, deadline_source):
         "experience_min_years": result.experience_min_years,
         "experience_max_years": result.experience_max_years,
 
+        "salary_min": result.salary_min,
+        "salary_max": result.salary_max,
+        "salary_note": result.salary_note,
+        "postal_code": result.postal_code,
+        "street_address": result.street_address,
+
         "is_mpsc": result.is_mpsc, "is_upsc": result.is_upsc,
         "is_ssc": result.is_ssc, "is_railway": result.is_railway,
         "is_banking": result.is_banking, "is_police": result.is_police,
@@ -835,7 +880,7 @@ def mark_failed(cur, job_ids, error):
 
 
 # ============================================================
-# FETCH  (now includes important_dates + cancellation refs)
+# FETCH  (now includes important_dates + cancellation refs + salary)
 # ============================================================
 
 FETCH_SQL = """
@@ -847,7 +892,7 @@ SELECT
     advertisement_details, application_details, ai_extracted_data,
     state_slug, is_walk_in, notification_type,
     cancellation_ref, cancellation_or_corrigendum_ref,
-    total_vacancies, advt_no
+    total_vacancies, advt_no, salary, salary_min, salary_max
 FROM public.exam_notifications
 WHERE
     deleted_at IS NULL

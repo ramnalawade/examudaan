@@ -1,0 +1,40 @@
+{
+  "docId": 14139,
+  "examName": "Law Officer, Group-A, Tribal Research and Training Institute Tribal Development Department - Corrigendum regarding syllabus",
+  "examNameMr": "विधि अधिकारी, गट-अ, आदिवासी संशोधन आणि प्रशिक्षण संस्था, आदिवासी विकास विभाग - अभ्यासक्रमाबाबत शुद्धिपत्रक",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Procedural Law, Presidency Small Causes Courts Act 1882",
+      "paperTitleMr": "कार्यपद्धती कायदा, प्रेसिडेन्सी स्मॉल कॉजेस कोर्ट्स कायदा १८८२",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Procedural Law and Presidency Small Causes Courts Act 1882",
+          "unitTitleMr": "कार्यपद्धती कायदा आणि प्रेसिडेन्सी स्मॉल कॉजेस कोर्ट्स कायदा १८८२",
+          "topics": [
+            "Procedural Law",
+            "Presidency Small Causes Courts Act 1882"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Syllabus is based on the corrigendum issued by MPSC for the post of Law Officer, Group-A."
+  ]
+}

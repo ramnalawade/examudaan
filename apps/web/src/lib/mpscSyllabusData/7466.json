@@ -1,0 +1,38 @@
+{
+  "docId": 7466,
+  "examName": "Chief Administrative Officer, General State Insurance Service, Group-A and Administrative Officer, Maharashtra Agriculture Administrative Services, Group-A - Syllabus",
+  "examNameMr": "मुख्य प्रशासकीय अधिकारी, राज्य कामगार विमा सेवा, गट-अ आणि प्रशासकीय अधिकारी, महाराष्ट्र कृषी प्रशासकीय सेवा, गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Aptitude Test",
+      "paperTitleMr": "सामान्य अध्ययन आणि क्षमता चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Awareness and Mental Ability",
+          "unitTitleMr": "सामान्य जाणीव आणि मानसिक क्षमता",
+          "topics": [
+            "Political, industrial, economic, social, educational, geographical, astronomical, cultural, and scientific developments",
+            "Logical reasoning and analytical ability"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

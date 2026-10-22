@@ -545,14 +545,97 @@
 .criteriaPreviewFooter { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; padding-top: 6px; border-top: 1px solid var(--outline-variant); }
 .criteriaPreviewChips { display: flex; gap: 6px; flex-wrap: wrap; }
 
-/* ── Mobile ── */
-@media (max-width: 600px) {
-  .featureBanner { flex-direction: column; }
-  .planCard { flex-direction: column; align-items: flex-start; gap: 10px; }
-  .statCardsGrid { grid-template-columns: repeat(2,1fr); }
-  .prepPulseGrid { grid-template-columns: repeat(2,1fr); }
-  .themeGridSmall { grid-template-columns: 1fr; }
-  .themeStudioGrid { grid-template-columns: 1fr; }
+/* ── Tablet & Small Desktop Nav (< 900px) ── */
+@media (max-width: 899px) {
+  .sidebarNavList {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 2px 8px;
+    scrollbar-width: none;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .sidebarNavList::-webkit-scrollbar {
+    display: none;
+  }
+  .sidebarNavBtn {
+    flex-shrink: 0;
+    width: auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--outline-variant);
+    font-size: 13px;
+    white-space: nowrap;
+    background: var(--surface-container-lowest);
+  }
+  .sidebarProfileCard {
+    padding: 12px 14px;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .adminSection {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 0;
+    margin-top: 6px;
+    white-space: nowrap;
+    border-top: none;
+  }
+  .adminThemeNavBtn, .adminPanelLink {
+    width: auto;
+    flex-shrink: 0;
+    padding: 7px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--outline-variant);
+    font-size: 12px;
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+  .adminLabel {
+    display: none;
+  }
+}
+
+/* ── Mobile Viewports (< 640px) ── */
+@media (max-width: 640px) {
+  .pageWrap { padding-top: 16px; padding-bottom: 40px; }
+  .pageHeader { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .logoutBtn { align-self: flex-start; }
+  .featureBanner { flex-direction: column; align-items: flex-start; padding: 16px 14px; }
+  .featureBannerLeft { flex: 1 1 100%; }
+  .featureBannerActions { width: 100%; flex-direction: column; }
+  .featureBannerBtnPrimary, .featureBannerBtnSecondary { width: 100%; justify-content: center; }
+  .statCardsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .statCard { padding: 12px 10px; }
+  .statCardValue { font-size: 20px; }
+  .prepPulse { padding: 14px 12px; }
+  .prepPulseGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .pulseCard { padding: 10px 8px; }
+  .pulseCardValue { font-size: 16px; }
+  .planCard { flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px; }
   .formGrid2 { grid-template-columns: 1fr; }
+  .formActions { flex-direction: column; width: 100%; }
+  .formActions button { width: 100%; justify-content: center; }
+  .savedJobCard { padding: 14px 12px; }
+  .savedJobFooter { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .savedJobActionRow { width: 100%; justify-content: space-between; }
+  .criteriaCard { padding: 14px 12px; }
+  .criteriaCardHeader { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .criteriaCardActions { width: 100%; justify-content: flex-end; }
   .criteriaPreviewGrid { grid-template-columns: 1fr; }
+  .themeStudioGrid, .themeGrid { grid-template-columns: 1fr; }
+  .adminThemeStudioHeader { flex-direction: column; align-items: flex-start; }
+  .adminPanelBtn { width: 100%; justify-content: center; }
+}
+
+/* ── Extra Small Mobile (< 380px) ── */
+@media (max-width: 380px) {
+  .statCardsGrid { grid-template-columns: 1fr; }
+  .prepPulseGrid { grid-template-columns: 1fr; }
 }

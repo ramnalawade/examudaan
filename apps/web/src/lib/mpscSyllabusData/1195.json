@@ -1,0 +1,108 @@
+{
+  "docId": 1195,
+  "examName": "Maharashtra Forest Services, Group-A & B (Pre) & (Main)",
+  "examNameMr": "महाराष्ट्र वन सेवा, गट-अ आणि गट-ब (पूर्व) व (मुख्य) परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 2,
+      "paperTitle": "General Science & Nature Conservation",
+      "paperTitleMr": "सामान्य विज्ञान आणि निसर्ग संरक्षण",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Science & Nature Conservation Basics",
+          "unitTitleMr": "सामान्य विज्ञान आणि निसर्ग संरक्षण मूलभूत बाबी",
+          "topics": [
+            "General Science (Physics, Chemistry, Botany, Zoology)",
+            "Nature Conservation"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Soils and Soil Conservation",
+          "unitTitleMr": "माती आणि मृदा संरक्षण",
+          "topics": [
+            "Soils: Physical, chemical and biological properties. Processes and factors of soil formation. Mineral and organic constituents of soil and their role in maintaining soil productivity. Soil profile. Problem soils and their reclamation.",
+            "Soil and moisture conservation: Causes of soil erosion, method of control, role of forest, characteristics of and steps in Watershed Management."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Ecosystems, Manures, Pests and Pesticides",
+          "unitTitleMr": "परिसंस्था, खते, कीटक आणि कीटकनाशके",
+          "topics": [
+            "Eco Systems: Types, food chain, food web, ecological pyramids, energy flow, biogeochemical cycle of carbon and nitrogen.",
+            "Manures and Fertilizers: Types, organic, inorganic.",
+            "Diseases and pests of plants and animals.",
+            "Pesticides and insecticides.",
+            "Injurious plants and weeds."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Environmental Pollution and Climate Change",
+          "unitTitleMr": "पर्यावरणीय प्रदूषण आणि हवामान बदल",
+          "topics": [
+            "Environmental Pollution: Types, control, bio-indicators, endangered species.",
+            "Environmental problems related to quarrying and mining.",
+            "Greenhouse effect, Carbon trading, Climate Change."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Wildlife, Cattle Breeds, Fodder and Pasture",
+          "unitTitleMr": "वन्यजीव, जनावरांच्या जाती, चारा आणि कुरण व्यवस्थापन",
+          "topics": [
+            "Important wild animals of India.",
+            "Breeds of cattle, Economics of fodder and pasture of grassland management."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Forest Flora, Products and Industries",
+          "unitTitleMr": "वन वनस्पती, उत्पादने आणि उद्योग",
+          "topics": [
+            "Important indigenous trees species of India, exotic plants, plants as a source of forest products such as food, fibre, fuel wood, timber, non-timber, forest produce/minor forest produce. Medicinal plants, Energy plantations, Mangroves, Forest based industries.",
+            "Factors effecting growth and distribution of plants. Forest types of India."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Protected Areas, Forestry Policies and Acts",
+          "unitTitleMr": "संरक्षित क्षेत्रे, वनीकरण धोरणे आणि कायदे",
+          "topics": [
+            "National parks and Sanctuaries, World heritage sites.",
+            "Social forestry, Joint Forest Management, Agro forestry.",
+            "Indian forest policy, Indian Forest Act, Wild Life Protection Act, Forest Conservation Act, 1980.",
+            "National and International Organization working for nature conservation."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Remote Sensing, Biodiversity and Plant Biotechnology",
+          "unitTitleMr": "रिमोट सेन्सिंग, जैवविविधता आणि वनस्पती जैवतंत्रज्ञान",
+          "topics": [
+            "Use of aerial photographs, thematic maps, Satellite imageries, Principle and application of GIS.",
+            "Biodiversity, causes of loss of biodiversity, importance of biodiversity conservation.",
+            "Plants breeding, tissue culture. Tribals and forests. Important tribes of India."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

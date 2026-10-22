@@ -1,0 +1,86 @@
+{
+  "docId": 11406,
+  "examName": "Assistant Professor (Chemistry) Maharashtra Education Service, Group-A and Lecturer (Chemistry) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (रसायनशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ आणि प्राध्यापक (रसायनशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Chemistry Syllabus",
+      "paperTitleMr": "रसायनशास्त्र अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Inorganic Chemistry",
+          "unitTitleMr": "अकार कार्बनिक रसायनशास्त्र",
+          "topics": [
+            "Chemical periodicity",
+            "Structure and bonding in homo- and heteronuclear molecules, including shapes of molecules (VSEPR Theory)",
+            "Concepts of acids and bases, Hard-Soft acid base concept, Non-aqueous solvents",
+            "Main group elements and their compounds: Allotropy, synthesis, structure and bonding",
+            "Transition elements and coordination compounds: structure, bonding theories, spectral and magnetic properties, reaction mechanisms. Inner transition elements: spectral and magnetic properties, redox chemistry, analytical applications",
+            "Organometallic compounds: synthesis, bonding and structure, and reactivity. Organometallics in homogeneous catalysis. Cages and metal clusters",
+            "Bioinorganic chemistry: photosystems, porphyrins, metalloenzymes, oxygen transport, electron-transfer reactions; nitrogen fixation, metal complexes in medicine",
+            "Characterisation of inorganic compounds by IR, Raman, NMR, EPR, Mössbauer, UV-vis, NQR, MS, electron spectroscopy and microscopic techniques",
+            "Nuclear chemistry: nuclear reactions, fission and fusion, radio-analytical techniques and activation analysis",
+            "Analytical chemistry - separation, spectroscopic, electro- and thermoanalytical methods"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Physical Chemistry",
+          "unitTitleMr": "भौतिक रसायनशास्त्र",
+          "topics": [
+            "Basic principles of quantum mechanics: Postulates; operator algebra; exactly-solvable systems: particle-in-a-box, harmonic oscillator and the hydrogen atom, including shapes of atomic orbitals; orbital and spin angular momenta; tunneling",
+            "Approximate methods of quantum mechanics: Variational principle; perturbation theory upto second order in energy; applications",
+            "Atomic structure and spectroscopy; term symbols; many-electron systems and antisymmetry principle",
+            "Chemical bonding in diatomics; elementary concepts of MO and VB theories; Huckel theory for conjugated pi-electron systems",
+            "Molecular spectroscopy: Rotational and vibrational spectra of diatomic molecules; electronic spectra; IR and Raman activities - selection rules; basic principles of magnetic resonance",
+            "Chemical thermodynamics: Laws, state and path functions and their applications; thermodynamic description of various types of processes; Maxwell's relations; spontaneity and equilibria; temperature and pressure dependence of thermodynamic quantities; LeChatelier principle; elementary description of phase transitions; phase equilibria and phase rule; thermodynamics of ideal and non-ideal gases, and solutions",
+            "Statistical thermodynamics: Boltzmann distribution; kinetic theory of gases; partition functions and their relation to thermodynamic quantities - calculations for model systems",
+            "Electrochemistry: Nernst equation, redox systems, thermodynamics of electrochemical cells; Electromotive force (EMF) of electrochemical reaction, Debye Huckel theory; activity and activity coefficient, electrolytic conductance - Kohlrausch's law and its applications; ionic equilibria; conductometric and potentiometric titrations",
+            "Chemical kinetics: Empirical rate laws and temperature dependence rate of reaction; complex reaction mechanisms steady state approximation; pre-equilibrium approximation, determination of reaction mechanisms; collision and transition state (activated complex) theories; unimolecular reactions; enzyme kinetics, competitive inhibition, kinetic-salt effects, Chain reaction; homogeneous catalysis; photochemical reactions",
+            "Colloids and surfaces: Stability and properties of colloids; isotherms and surface area; heterogeneous catalysis",
+            "Solid state Chemistry: Crystal structures unit cell, miller indices, X-ray diffraction, Bragg's law and applications; structure factor, atomic scattering factor, Brillouin zones, reciprocal lattice, band structure of solids, electric and magnetic properties of solids",
+            "Polymer chemistry: Molar masses; kinetics of polymerization",
+            "Data analysis: Mean and standard deviation; absolute and relative errors; linear regression; covariance and correlation coefficient"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Organic Chemistry",
+          "unitTitleMr": "सेंद्रिय रसायनशास्त्र",
+          "topics": [
+            "IUPAC nomenclature of organic molecules including regio- and stereoisomers",
+            "Principles of stereochemistry: Configurational and conformational isomerism in acyclic and cyclic compounds; stereogenicity, stereoselectivity, enantioselectivity, diastereoselectivity and asymmetric induction",
+            "Aromaticity: Benzenoid and non-benzenoid compounds - generation and reactions",
+            "Organic reactive intermediates: Generation, stability and reactivity of carbocations, carbanions, free radicals, carbenes, benzynes and nitrenes",
+            "Organic reaction mechanisms involving addition, elimination and substitution reactions with electrophilic, nucleophilic or radical species. Determination of reaction pathways",
+            "Common named reactions and rearrangements - applications in organic synthesis",
+            "Organic transformations and reagents: Functional group interconversion including oxidations and reductions; common catalysts and reagents (organic, inorganic, organometallic and enzymatic). Chemo, regio and stereoselective transformations",
+            "Concepts in organic synthesis: Retrosynthesis, disconnection, synthons, linear and convergent synthesis, umpolung of reactivity and protecting groups",
+            "Asymmetric synthesis: Chiral auxiliaries, methods of asymmetric induction - substrate, reagent and catalyst controlled reactions; determination of enantiomeric and diastereomeric excess; enantiodiscrimination. Resolution - optical and kinetic",
+            "Pericyclic reactions - electrocyclisation, cycloaddition, sigmatropic rearrangements and other related concerted reactions. Principles and applications of photochemical reactions in organic chemistry",
+            "Synthesis and reactivity of common heterocyclic compounds containing one or two heteroatoms (O, N, S)",
+            "Chemistry of natural products: Carbohydrates, proteins and peptides, fatty acids, nucleic acids, terpenes, steroids and alkaloids. Biogenesis of terpenoids and alkaloids",
+            "Structure determination of organic compounds by IR, UV-Vis, 1H & 13C NMR and Mass spectroscopic techniques"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,64 @@
+{
+  "docId": 7941,
+  "examName": "Maharashtra Agriculture Services Main Examination - Question Paper-Structure and Specific Instructions",
+  "examNameMr": "महाराष्ट्र कृषी सेवा मुख्य परीक्षा - प्रश्नपत्रिकेची रचना आणि विशिष्ट सूचना",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 400,
+  "mainsMarks": 400,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper I - Question Paper-Structure and Specific Instructions",
+      "paperTitleMr": "पेपर I - प्रश्नपत्रिकेची रचना आणि विशिष्ट सूचना",
+      "totalMarks": 200,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Instructions and Question Structure",
+          "unitTitleMr": "साधारण सूचना आणि प्रश्न रचना",
+          "topics": [
+            "Attempt any FOUR questions from Question No. 1 to 5.",
+            "Attempt either Question No. 6 or Question No. 7.",
+            "Attempt all questions from Question No. 8, 9 and 10."
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper II - Question Paper-Structure and Specific Instructions",
+      "paperTitleMr": "पेपर II - प्रश्नपत्रिकेची रचना आणि विशिष्ट सूचना",
+      "totalMarks": 200,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Instructions and Question Structure",
+          "unitTitleMr": "साधारण सूचना आणि प्रश्न रचना",
+          "topics": [
+            "Attempt any THREE questions from Question No. 1 to 6.",
+            "Attempt any TWO questions from Question No. 7 to 10.",
+            "Attempt all questions from Question No. 11 to 14.",
+            "Attempt any ONE question from Question No. 15 or Question No. 16."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Candidates will be allowed the use of Scientific (Non-programmable type) calculators."
+  ]
+}

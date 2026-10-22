@@ -1,0 +1,143 @@
+{
+  "docId": 8194,
+  "examName": "Deputy Engineer (Electrical), Maharashtra Electrical Engineering Service, Group-A",
+  "examNameMr": "उपअभियंता (विद्युत), महाराष्ट्र विद्युत अभियांत्रिकी सेवा, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Deputy Engineer (Electrical), Maharashtra Electrical Engineering Service, Group-A",
+      "paperTitleMr": "उपअभियंता (विद्युत), महाराष्ट्र विद्युत अभियांत्रिकी सेवा, गट-अ",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current affairs (National / International)",
+          "unitTitleMr": "चालू घडामोडी (राष्ट्रीय / आंतरराष्ट्रीय)",
+          "topics": [
+            "Scientific Developments.",
+            "Education policies feedback and research.",
+            "Social, Political, Industrial, Economic, Cultural and Sports.",
+            "Right To Information Act-2005.",
+            "Right To Services Act-2015 Maharashtra State:",
+            "Services covered under this act and duties of public services officials.",
+            "Provision of Action and punishments and ladder.",
+            "Energy Scenario:",
+            "National Electricity Policy 2023.",
+            "Electricity Act 2003.",
+            "Energy conservation Act 2001.",
+            "Statutory obligations like CEA (measures relating to safety and electricity supply) Regulations 2023.",
+            "Central Electricity Authority CEA (Technical standards for construction of electrical plants and lines) Regulations 2022.",
+            "Energy conservation building code (ECBC).",
+            "Indian and global energy scenario.",
+            "Energy sector reforms.",
+            "National building code chapter 8.",
+            "Maharashtra Fire Safety Act 2006.",
+            "Maharashtra Lifts Act and Maharashtra Lifts Rules."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Electrical networks and theorems",
+          "unitTitleMr": "विद्युत नेटवर्क आणि प्रमेय",
+          "topics": [
+            "KCL, KVL, Maximum power transfer theorem.",
+            "Electrical HT/LT distribution systems and load calculations.",
+            "Power system analysis, fault analysis, load flow analysis."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electrical measuring systems and instrumentation",
+          "unitTitleMr": "विद्युत मोजमाप प्रणाली आणि इन्स्ट्रुमेंटेशन",
+          "topics": [
+            "Power measurements, trivector meters, analog and digital meters and measurements, use of CTs, PTs.",
+            "Bridges for measurement of electrical parameters.",
+            "Smart meters."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Electrical motors and power utilization",
+          "unitTitleMr": "विद्युत मोटर्स आणि पॉवर युटिलायझेशन",
+          "topics": [
+            "Fundamental operating principles of alternate current, direct current motors, Speed control methods and characteristics.",
+            "Energy efficient motors.",
+            "Refrigeration system.",
+            "Pumping systems.",
+            "Motors for lift operations.",
+            "EV chargers."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Switchgear Principles",
+          "unitTitleMr": "स्विचगियर तत्त्वे",
+          "topics": [
+            "Switchgear installation and criteria for selection. Circuit breaker ratings, principles of alternate current circuit breaking. RRRV and recovery voltage and their control. Current chopping. Switching of capacitive currents. Kilometric faults. Resistance switching. Direct Current current interruption.",
+            "Principles of fuse gear. Salient features and characteristics of different arc interrupting media -- air, oil, air-blast, SF6, and vacuum. The electric arc and circuit-breaker.",
+            "Theories of arc interruption - restriking voltage and energy balance theories and their applications.",
+            "Semiconductor switching and protective devices."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Power System Protection",
+          "unitTitleMr": "पॉवर सिस्टम संरक्षण",
+          "topics": [
+            "Principles of power system protection: overcurrent, directional, differential and distance protection. Sequence networks & short circuit analysis.",
+            "Power quality and power network stability.",
+            "Relay coordination: Overcurrent & distance relay coordination."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Electrical Drives",
+          "unitTitleMr": "विद्युत ड्राइव्हस्",
+          "topics": [
+            "Methods of Direct Current motor control, non-regenerative controlled rectifiers, fully controlled converters, field control and switching systems for Direct Current motors, chopper regulators, aspects of analysis, performance and stability of variable speed dc drives.",
+            "Induction motor control systems, alternate current regulators and static switches, control of effective rotor resistance, recovery of slip energy, variable frequency control of alternate current motors, current source inverter fed Induction motor drive, forced commutated inverter fed drives, self-controlled synchronous motor drives and traction drives."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Modern Industrial Controls",
+          "unitTitleMr": "आधुनिक औद्योगिक नियंत्रणे",
+          "topics": [
+            "Composite controllers and Tuning of controllers.",
+            "SCADA controllers in Power networks.",
+            "IOT devices for network safety."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Design and Estimation of Electrical systems",
+          "unitTitleMr": "विद्युत प्रणालींची रचना आणि अंदाज",
+          "topics": [
+            "Single line diagrams, electrical drawings, equipment selection criteria, preparation of rough and detailed estimations, Tender documents and procedures.",
+            "Design of Overhead HT/LT distribution systems.",
+            "Cable installations, termination and accessories.",
+            "Energy auditing Primary, targeted and comprehensive audits, recommendation and financial justification.",
+            "Design of HVAC system, Heat Load Calculations, VRF systems.",
+            "Design of Fire Alarm, Fire Fighting system, sprinkler system.",
+            "Design calculations for Lifts, Travelling time, waiting time.",
+            "Design calculations for Solar water heaters, Solar PV system."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

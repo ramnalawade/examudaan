@@ -43,7 +43,7 @@ export default function BlogClientView({ initialPosts = [] }) {
           </div>
 
           <div className={styles.badgePill}>
-            <span className="material-symbols-outlined" style={{ fontSize: 16 }}>menu_book</span>
+            <span className={`material-symbols-outlined ${styles.badgeIcon}`}>menu_book</span>
             <span>ExamUdaan Academic Intelligence</span>
           </div>
 
@@ -51,7 +51,7 @@ export default function BlogClientView({ initialPosts = [] }) {
             Exam Preparation Blueprints & Masterclasses
           </h1>
           <p className={styles.heroSubtitle}>
-            Long-tail, actionable study plans, 10-year PYQ analyses, and official syllabus breakdowns verified by serving civil servants and exam toppers.
+            Comprehensive, actionable study plans, 10-year PYQ analyses, and official syllabus breakdowns compiled by the ExamUdaan Editorial &amp; Research Desk.
           </p>
 
           {/* Daily Freshness Signal */}
@@ -62,7 +62,7 @@ export default function BlogClientView({ initialPosts = [] }) {
             </div>
             <Link href="/daily-quiz" className={styles.freshnessLink}>
               <span>Attempt Today&apos;s 5-Min Quiz</span>
-              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
+              <span className={`material-symbols-outlined ${styles.freshnessIcon}`}>arrow_forward</span>
             </Link>
           </div>
 
@@ -99,7 +99,7 @@ export default function BlogClientView({ initialPosts = [] }) {
       <main className={styles.mainContainer}>
         {/* Flagship Featured Article Banner (Only on "All" without search) */}
         {activeCategory === 'All' && !searchQuery && featuredPost && (
-          <Link href={`/blog/${featuredPost.slug}`} className={styles.featuredCard} style={{ textDecoration: 'none' }}>
+          <Link href={`/blog/${featuredPost.slug}`} className={styles.featuredCard}>
             <div className={styles.featuredContent}>
               <div className={styles.featuredMeta}>
                 <span className={styles.catBadge}>{featuredPost.category}</span>
@@ -112,7 +112,7 @@ export default function BlogClientView({ initialPosts = [] }) {
               <p className={styles.featuredExcerpt}>{featuredPost.excerpt}</p>
               <div className={styles.readMoreLink}>
                 <span>Read Complete Masterplan</span>
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
+                <span className={`material-symbols-outlined ${styles.readMoreIcon}`}>arrow_forward</span>
               </div>
             </div>
             <div className={styles.featuredBanner}>
@@ -125,14 +125,14 @@ export default function BlogClientView({ initialPosts = [] }) {
         {/* ── Article Grid ── */}
         <section>
           {filteredPosts.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '60px 20px', background: '#FFFFFF', borderRadius: 16, border: '1px solid #E2E8F0' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: 44, color: '#94A3B8', marginBottom: 12 }}>search_off</span>
-              <h3 style={{ fontSize: 18, color: '#1E293B', margin: '0 0 8px' }}>No matching articles found</h3>
-              <p style={{ color: '#64748B', fontSize: 14, margin: '0 0 16px' }}>Try searching for &quot;MPSC&quot;, &quot;Police&quot;, &quot;TCS&quot;, or &quot;Syllabus&quot;.</p>
+            <div className={styles.emptyState}>
+              <span className={`material-symbols-outlined ${styles.emptyIcon}`}>search_off</span>
+              <h3 className={styles.emptyTitle}>No matching articles found</h3>
+              <p className={styles.emptyDesc}>Try searching for &quot;MPSC&quot;, &quot;Police&quot;, &quot;TCS&quot;, or &quot;Syllabus&quot;.</p>
               <button
                 type="button"
                 onClick={() => { setActiveCategory('All'); setSearchQuery('') }}
-                style={{ background: 'var(--primary, #EA580C)', color: '#fff', border: 'none', padding: '8px 18px', borderRadius: 8, cursor: 'pointer', fontWeight: 700 }}
+                className={styles.emptyResetBtn}
               >
                 Reset Filters
               </button>
@@ -154,9 +154,9 @@ export default function BlogClientView({ initialPosts = [] }) {
                   <div className={styles.cardBottom}>
                     <div className={styles.authorInfo}>
                       <span className={`material-symbols-outlined ${styles.authorIcon}`}>
-                        {post.author.avatar || 'person'}
+                        {post.author?.avatar || 'edit_note'}
                       </span>
-                      <span>{post.author.name}</span>
+                      <span>{post.author?.name || 'ExamUdaan Blog'}</span>
                     </div>
                     <span className={styles.readMoreLink}>
                       Read Guide →

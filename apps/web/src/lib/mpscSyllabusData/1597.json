@@ -1,0 +1,108 @@
+{
+  "docId": 1597,
+  "examName": "Lecturer, Production Engineering, Government Polytechnic, Maharashtra Polytechnic Teachers’ Services, Group-A",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Related to the Subject",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": "3 hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "I ENGINEERING MATHEMATICS",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Linear Algebra: Matrix algebra, Systems of linear equations, Eigen values and Eigen vectors.",
+            "(2) Calculus: Functions of single variable, Limit, continuity and differentiability, Mean value theorems, Evaluation of definite and improper integrals, Partial derivatives, Total derivative, Maxima and minima, Gradient, Divergence and Curl, Vector identities, Directional derivatives, Line, Surface and Volume integrals, Stokes, Gauss and Greens theorems.",
+            "(3) Differential equations: First order equations (linear and nonlinear), Higher order linear differential equations with constant coefficients, Cauchy’s and Euler’s equations, Initial and boundary value problems, Laplace transforms, Solutions of one dimensional heat and wave equations and Laplace equation.",
+            "(4) Complex variables: Analytic functions, Cauchy's integral theorem, Taylor series.",
+            "(5) Probability and Statistics: Definitions of probability and sampling theorems, Conditional probability, Mean, median, mode and standard deviation, Random variables, Poisson, Normal and Binomial distributions.",
+            "(6) Numerical Methods: Numerical solutions of linear and non-linear algebraic equations, Integration by trapezoidal and Simpson’s rule, single and multi-step methods for differential equations."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "II GENERAL ENGINEERING",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Engineering Materials: Structure and properties correlation; engineering materials (metals, ceramics, polymers and composite) - properties and applications: stress-strain behavior of metals and alloys; iron-carbon phase diagram, heat treatment of metals and alloys, its influence on mechanical properties.",
+            "(2) Applied Mechanics: Engineering mechanics - equivalent force systems, free body concepts, equations of equilibrium; trusses; strength of materials - stress, strain and their relationship; failure theories, Mohr’s circle (stress), deflection of beams, bending and shear stress, Euler’s theory of columns.",
+            "(3) Theory of Machines and Design: Analysis of planar mechanisms, cams and followers; governors and fly wheels; design of bolted, riveted and welded joints; interference/shrink fit joints; design of shafts, keys, spur gears, belt drives, brakes and clutches; pressure vessels.",
+            "(4) Thermal and Fluids Engineering: Fluid mechanics – fluid statics, Bernoulli’s equation, flow through pipes, equations of continuity and momentum, capillary action, contact angle and wetting; thermodynamics – zeroth, first and second law of thermodynamics, thermodynamic system and processes, calculation of work and heat for system and control volumes; air standard cycles; heat transfer – basic application of conduction, convection and radiation."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "III MANUFACTURING PROCESSES - I",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Casting: Types of casting processes and applications; patterns – types and materials; allowances; moulds and cores – materials, making and testing; casting techniques of cast iron, steels and nonferrous metals and alloys; analysis of solidification and microstructure development; design of gating and riser; origin of defects.",
+            "(2) Metal Forming: Stress-strain relations in elastic and plastic deformation; concept of flow stress; hot and cold working – forging, rolling, extrusion and wire drawing; sheet metal working processes – blanking, bending and deep drawing, ideal work and slab analysis; origin of metal working defects.",
+            "(3) Joining of materials: Principles of fusion welding processes (manual metal arc, MIG, TIG, Plasma arc, submerged arc welding processes) - different heat sources (flame, arc, resistive, laser, electron beam), and heat transfer and associated losses, flux application, feeding or filler rod; Principles of solid state welding processes (friction, explosive welding, ultra sonic welding processes); Principles of adhesive, brazing and soldering processes; Origins of welding defects.",
+            "(4) Powder Processing: Production of metal/ceramic powders, compaction and sintering of metals and ceramic powders.",
+            "(5) Polymers and Composites: Plastic processing – injection, compression and blow molding, extrusion, calendaring and thermoforming; molding of composites."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "IV MANUFACTURING PROCESSES-II",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Machine Tools and Machining: Basic machine tools like centre lathe, milling machine, and drilling machine – construction and kinematics; machining processes – turning, taper turning, thread cutting, drilling, boring, milling, gear cutting, thread production, grinding; geometry of single point cutting tools, chip formation, cutting forces, specific cutting energy and power requirements, Merchants analysis; basis of selection of machining parameters; tools materials, tool wear and tool life, economics of machining, thermal aspects of machining, cutting fluids, machine ability; Jigs and fixtures – principles, applications and design.",
+            "(2) Non-traditional Manufacturing: Principles, applications, effect of process parameters on MRR and product quality of non-traditional machining processes- USM, AJM, WJM, AWJM, EDM and Wire cut EDM, LBM, EBM, PAM, CHM, ECM.",
+            "(3) Computer Integrated Manufacturing: Basic concepts of CAD - geometric modeling, CAM – CNC and robotics – configurations, drives and controls, Group Technology and its applications – CAPP, cellular manufacturing and FMS."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "V QUALITY AND RELIABILITY",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Metrology and Inspection: Limits, fits, and tolerances, gauge design, interchangeability, selective assembly; linear, angular, and form measurements (straightness, squareness, flatness, roundness, and cylindricity) by mechanical and optical methods; inspection of screw threads and gears; surface finish measurement by contact and non-contact methods; tolerance analysis in manufacturing and assembly.",
+            "(2) Quality management: Quality – concept and costs; quality assurance; statistical quality control, acceptance sampling, zero defects, six sigma; total quality management; ISO 9000.",
+            "(3) Reliability and Maintenance: Reliability, availability and maintainability; distribution of failure and repair times; determination of MTBF and MTTR, reliability models; determination of system reliability; preventive maintenance and replacement."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "VI INDUSTRIAL ENGINEERING",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Product Design and Development: Principles of good product design, tolerance design; quality and cost considerations; product life cycle; standardization, simplification, diversification, value engineering and analysis, concurrent engineering; comparison of production alternatives.",
+            "(2) Work System Design: Taylor’s scientific management, Gilbreths’s contributions; productivity – concepts and measurements; method study, micro-motion study, principles of motion economy; work measurement – time study, work sampling, standard data, PMTS; ergonomics; job evaluation, merit rating, incentive schemes, and wage administration.",
+            "(3) Facility Design: Facility location factors and evaluation of alternate locations; types of plant layout and their evaluation; computer aided layout design techniques; assembly line balancing; materials handling systems."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "VII OPERATIONS RESEARCH AND OPERATIONS MANAGEMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Operation Research: Linear programming – problem formulation, simplex method, duality and sensitivity analysis; transportation and assignment models; network flow models, constrained optimization and Lagrange multipliers; Markovian queuing models; dynamic programming simulation – manufacturing applications.",
+            "(2) Engineering Economy and costing: Elementary cost accounting method of depreciation; break-even analysis, techniques for evaluation of capital investments, financial statement, time-cost trade-off, resource leveling.",
+            "(3) Production Control: Forecasting technique – causal and time series models, moving average, exponential smoothing, trend and seasonality; aggregate production planning; master production scheduling; MRP and MRP-II; routing, scheduling and priority dispatching; push and pull production system, concept of JIT manufacturing system; logistic distribution and supply chain management inventory – functions, cost classifications, deterministic inventory models, quantity discount; perpetual and periodic inventory control system.",
+            "(4) Project Management – PERT and CPM"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Latest and recent developments in the above topics will also be expected from candidates."
+  ]
+}

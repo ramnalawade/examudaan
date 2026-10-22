@@ -1,0 +1,191 @@
+{
+  "docId": 14466,
+  "examName": "Motor Vehicle Prosecutor, Group-A (Gazetted)",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Motor Vehicle Prosecutor, Group-A (Gazetted)",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "CHAPTER I – PRELIMINARY",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 1–2 (Short title, commencement, application, Definitions)"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "CHAPTER II – OF PUNISHMENTS",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 3–13 (Types of punishment, commutation, fines, solitary confinement, enhanced punishment after previous conviction, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "CHAPTER III – GENERAL EXCEPTIONS",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 14–44 (Acts done by mistake of fact, judicial acts, accidents, acts of children/unsound mind persons, consent, private defence, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "CHAPTER IV – OF ABETMENT, CRIMINAL CONSPIRACY AND ATTEMPT TO COMMIT OFFENCES",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 45–62 (Abetment, abettors, criminal conspiracy, attempt to commit offences)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "CHAPTER VII – OFFENCES AGAINST THE STATE",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 147–158 (Waging war against the Government of India, acts endangering sovereignty/unity/integrity of India, offences relating to prisoners of state/war, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "CHAPTER XII – OF OFFENCES BY OR RELATING TO PUBLIC SERVANTS",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 198–205 (Public servant disobeying law, framing incorrect documents, unlawfully engaging in trade, personating a public servant, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "CHAPTER XIII – OF CONTEMPT OF THE LAWFUL AUTHORITY OF PUBLIC SERVANTS",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 206–226 (Absconding to avoid summons, non-attendance, refusing to answer/sign, false statement on oath, threats to public servants, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "CHAPTER XIV – OF FALSE EVIDENCE AND OFFENCES AGAINST PUBLIC JUSTICE",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 227–269 (Giving/fabricating false evidence, harbouring offenders, false charges, escape from custody, failure to appear on bail, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "CHAPTER XV – OF OFFENCES AFFECTING PUBLIC HEALTH, SAFETY, CONVENIENCE, DECENCY AND MORALS",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 270–297 (Public nuisance, adulteration of food/drugs, rash driving, negligent conduct with fire/explosives/machinery, obscenity, lottery offices, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "CHAPTER XVII – OFFENCES AGAINST PROPERTY",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 303–334 (Theft, extortion, robbery, dacoity, criminal breach of trust, cheating, mischief, criminal trespass and house-trespass, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "CHAPTER XVIII – OF OFFENCES RELATING TO DOCUMENTS AND TO PROPERTY MARKS",
+          "unitTitleMr": null,
+          "topics": [
+            "Sections 335–350 (Forgery, false documents, counterfeit seals/marks, falsification of accounts, property marks, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "CHAPTER XX – REPEAL AND SAVINGS",
+          "unitTitleMr": null,
+          "topics": [
+            "Civil Procedure Code: Order 6 - Pleadings and amendment to pleading at any stage of the proceedings",
+            "Order 8 - Amendments to written Statements",
+            "Order 12 - Notice of admission of Case",
+            "Order 13 - Production, impounding, and return of documents",
+            "Order 17 - Adjournment of civil court proceedings",
+            "Order 21 - Execution of the Decree",
+            "The Motor Vehicles Act, 1988 and New Motor Vehicle Act, 2022 and the rules thereunder",
+            "Grant of Licences for Driving and Renewal",
+            "Types of Licences",
+            "Period of Licence",
+            "International Licence",
+            "Registration of Vehicle – Permanent and Temporary",
+            "Powers and Duties of Authorities under Motor Vehicle Act",
+            "Liability in case the Juvenile is driving the vehicle",
+            "The Central Motor Vehicles Rules, 1989 and The Maharashtra Motor Vehicles Rules, 1989",
+            "The Maharashtra Motor Vehicles Tax Act, 1958 and The Maharashtra Motor Vehicles Tax Rules, 1959",
+            "The Maharashtra Motor Vehicles (Taxation of Passenger) Act, 1958 and The Maharashtra Motor Vehicles (Taxation of Passenger) Rules, 1959",
+            "The Maharashtra Motor Vehicles (Regulation for School Buses), Rules, 2011",
+            "The Motor Vehicles (Driving Regulation), 2017",
+            "Maharashtra Land Revenue Code, 1966",
+            "Section 178 – Notice by Registered Post with Acknowledgement Due (RPAD) to be sent to vehicle owners who have tax/environment tax arrears",
+            "Section 192 – Procedure for sale of an attached/seized vehicle",
+            "Section 193 – Where the written sale notice is to be affixed (location of notice)",
+            "Section 194 – Sale cannot take place earlier than 30 days from the date the notice is affixed",
+            "Section 197 – Sale/auction can be stopped by the authority conducting it if the owner pays the tax/environment tax and interest in full",
+            "Section 330-A – Delegation of powers (basis on which powers were granted to Motor Vehicle Department officers to conduct attachment/auction)",
+            "Maharashtra Realisation of Land Revenue Rules, 1967",
+            "Rule 5 – Prescribed format of the notice (Form No. 1)",
+            "Rule 12(2)(b) – Proclamation and written notice of sale of the attached vehicle (Form No. 6)",
+            "Rule 12(2)(c) – Proclamation and written notice of sale of the seized vehicle (Form No. 7)",
+            "Rule 13 – Estimated value (valuation) of the vehicle to be sold",
+            "The Indian Contract Act, 1872",
+            "Basic principles of contract",
+            "Pledge, Bailment and Agency",
+            "The Transfer of Property Act, 1882"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Chapter 2 – Part A and B",
+          "unitTitleMr": null,
+          "topics": [
+            "The Sale of Goods Act, 1930",
+            "Contract of Sale",
+            "Implied Conditions and Warranties",
+            "Sale by Non Owners and Rights of Unpaid Seller",
+            "Specific Relief Act, 1963",
+            "Sections 8, 12, 23, 38, 40",
+            "Prevention of Corruption Act, 1988"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Chapter III",
+          "unitTitleMr": null,
+          "topics": [
+            "Environment Protection Act, 1986 (as amended up to 2024)",
+            "Concept of Pollution especially with respect to Vehicular Pollution",
+            "Powers and Duties of Authorities",
+            "Relevant Case: M.C. Mehta v. Union of India (Delhi vehicular air pollution), (2001) 3 SCC 756",
+            "The Consumer Protection Act, 2019",
+            "Definition Clause – Consumer, Deficiency in Service and Defective Goods",
+            "Grievance Redressal Machinery under the Act",
+            "Maharashtra Right to Public Services Act, 2015",
+            "Right to Information Act, 2005",
+            "Topics related to Information Technology, General Aptitude and Logical Reasoning",
+            "Note: Wherever Acts/Rules/Regulations are mentioned in syllabus, latest amendments/versions to be considered thereto."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

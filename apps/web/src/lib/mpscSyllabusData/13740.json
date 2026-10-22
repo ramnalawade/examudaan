@@ -1,0 +1,767 @@
+{
+  "docId": 13740,
+  "examName": "Assistant Professor (Periodontology, Oral Pathology and Microbiology, Oral and Maxillofacial Surgery) Government Dental College and Hospital, Directorate of Medical Education and Research, Group-B - Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Periodontology, Oral Pathology and Microbiology, Oral and Maxillofacial Surgery) Government Dental College and Hospital, Directorate of Medical Education and Research, Group-B - Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "SECTION A",
+          "unitTitleMr": null,
+          "topics": [
+            "HUMAN ANATOMY, EMBRYOLOGY, HISTOLOGY AND MEDICAL GENETICS"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "MEDICAL GENETICS",
+          "unitTitleMr": null,
+          "topics": [
+            "HUMAN PHYSIOLOGY"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "SPECIAL SENSES",
+          "unitTitleMr": null,
+          "topics": [
+            "BIO-CHEMISTRY"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "General Aspects of neoplasia",
+          "unitTitleMr": null,
+          "topics": [
+            "Anaemias",
+            "Leukaemias"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Haemorrhagic Disorders Coagulation cascade Coagulation disorders",
+          "unitTitleMr": null,
+          "topics": [
+            "MICROBIOLOGY",
+            "IMMUNOLOGY",
+            "SYSTEMATIC BACTERIOLOGY",
+            "VIROLOGY",
+            "MYCOLOGY",
+            "PARASITOLOGY"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "GENERAL AND DENTAL PHARMACOLOGY AND THERAPEUTICS",
+          "unitTitleMr": null,
+          "topics": [
+            "General principles of pharmacology",
+            "CNS drugs",
+            "General anaesthetics, hypnotics, analgesics, psychotropic drugs",
+            "Autonomic drugs",
+            "Cardiovascular drugs",
+            "Autacoids",
+            "Drugs acting on blood",
+            "G.I.T. Drugs",
+            "Endocrines",
+            "Chemotherapy",
+            "Vitamins",
+            "Pharmacotherapy of emergencies in dental office",
+            "Chelating agents"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "BIOPSY",
+          "unitTitleMr": null,
+          "topics": [
+            "RESEARCH METHODOLOGY AND DENTAL EDUCATION TECHNOLOGY"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Health Information",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic knowledge of Computers, MS Office, Windows 2000, Statistical Programmes"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Research Methodology",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, types of research, designing a written protocol",
+            "Bio-Statistics: Introduction, collection of data, presentation of data, Measures of Central tendency, measures of dispersion, Tests of significance, Sampling and sampling techniques - types, errors, bias, blind trials and calibration",
+            "Innovative Learning and Teaching Methodologies",
+            "SECTION B (Periodontology)"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Introduction",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition of Periodontology, Periodontics, Periodontia, Brief historical background, Scope of Periodontics"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Development of periodontal tissues",
+          "unitTitleMr": null,
+          "topics": [
+            "Micro-structural anatomy and biology of periodontal tissues in detail",
+            "Gingiva, Junctional epithelium in detail, Epithelial-Mesenchymal interaction, Periodontal ligament, Cementum, Alveolar bone"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Defensive mechanisms in the oral cavity",
+          "unitTitleMr": null,
+          "topics": [
+            "Role of Epithelium, Gingival fluid, Saliva and other defensive mechanisms in the oral environment"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Age changes in periodontal structures",
+          "unitTitleMr": null,
+          "topics": [
+            "Age changes in teeth and periodontal structures and their association with periodontal diseases",
+            "Significance in Geriatric dentistry"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Classification of periodontal diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "Need for classification, Scientific basis of classification",
+            "Classification of gingival and periodontal diseases as described in World Workshop 1989",
+            "Gingivitis: Plaque associated, ANUG, steroid hormone influenced, Medication influenced, Desquamative gingivitis, other forms of gingivitis as in nutritional deficiency, bacterial and viral infections etc.",
+            "Periodontitis: Adult periodontitis, Rapidly progressive periodontitis A and B, Juvenile periodontitis (localized, generalized, and post-juvenile), Prepubertal periodontitis, Refractory periodontitis"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Gingival diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "Localized and generalized gingivitis, Papillary, marginal and diffuse gingivitis",
+            "Etiology, pathogenesis, Clinical signs, symptoms and management of:",
+            "i) Plaque associated gingivitis",
+            "ii) Systemically aggravated gingivitis (sex hormones, drugs and systemic diseases)",
+            "iii) ANUG",
+            "iv) Desquamative gingivitis - Gingivitis associated with lichen planus, pemphigoid, pemphigus, and other vesiculobullous lesions",
+            "v) Allergic gingivitis",
+            "vi) Infective gingivitis - Herpetic, bacterial and candidial",
+            "vii) Pericoronitis",
+            "viii) Gingival enlargement (classification and differential diagnosis)"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Epidemiology of periodontal diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition of index, incidence, prevalence, epidemiology, endemic, epidemic, and pandemic",
+            "Classification of indices (Irreversible and reversible)",
+            "Deficiencies of earlier indices used in Periodontics",
+            "Detailed understanding of Silness and Loe Plaque Index, Loe and Silness Gingival Index, CPITN and CPI",
+            "Prevalence of periodontal diseases in India and other countries",
+            "Public health significance"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Extension of inflammation from gingiva",
+          "unitTitleMr": null,
+          "topics": [
+            "Mechanism of spread of inflammation from gingival area to deeper periodontal structures",
+            "Factors that modify the spread"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Pocket",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, signs and symptoms, classification, pathogenesis"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Etiology - Dental Plaque (Biofilm)",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, New concept of biofilm",
+            "Types, composition, bacterial colonization, growth, maturation and disclosing agents",
+            "Role of dental plaque in periodontal diseases",
+            "Plaque microorganisms in detail and bacteria associated with periodontal diseases",
+            "Plaque retentive factors",
+            "Materia alba",
+            "Food debris",
+            "Calculus: Definition, types, composition, attachment, theories of formation, role of calculus in disease",
+            "Food Impaction: Definition, types, etiology, Hirschfeld’s classification, signs, symptoms and sequelae of treatment",
+            "Trauma from occlusion: Definition, types, histopathological changes, role in periodontal disease, measures of management in brief",
+            "Habits: Their periodontal significance, bruxism and parafunctional habits, tongue thrusting, lip biting, occupational habits",
+            "Iatrogenic factors: Conservative dentistry (restorations, contact point, marginal ridge, surface roughness, overhanging restorations), Prosthodontics (interrelationship, bridges, pontics, surface contour), Orthodontics (interrelationship, appliances, plaque retention)",
+            "Systemic diseases: Diabetes, sex hormones, nutrition (Vit. C and proteins), AIDS and periodontium, hemorrhagic diseases, leukemia, clotting factor disorders, PMN disorders"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Host response",
+          "unitTitleMr": null,
+          "topics": [
+            "Mechanism of initiation and progression of periodontal diseases",
+            "Basic concepts about cells, Mast cells, neutrophils, macrophages, lymphocytes, immunoglobulins, complement system, immune mechanisms and cytokines in brief",
+            "Stages in gingivitis - Initial, early, established and advanced",
+            "Periodontal disease activity, continuous paradigm, random burst and asynchronous multiple burst hypothesis"
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Periodontitis",
+          "unitTitleMr": null,
+          "topics": [
+            "Etiology, histopathology, clinical signs and symptoms, diagnosis and treatment of adult periodontitis",
+            "Periodontal abscess: definition, classification, pathogenesis, differential diagnosis and treatment",
+            "Furcation involvement: Glickman’s classification, prognosis and management",
+            "Rapidly progressive periodontitis",
+            "Juvenile periodontitis: Localized and generalized",
+            "Post-juvenile periodontitis",
+            "Periodontitis associated with systemic diseases",
+            "Refractory periodontitis"
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "Diagnosis",
+          "unitTitleMr": null,
+          "topics": [
+            "Routine procedures, methods of probing, types of probes",
+            "Halitosis: Etiology and treatment. Mention advanced diagnostic aids and their role in brief"
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Prognosis",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, types, purpose and factors to be taken into consideration"
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "Periodontal therapy",
+          "unitTitleMr": null,
+          "topics": [
+            "A. General principles of periodontal therapy. Phase I, II, III, IV therapy.",
+            "Definition of periodontal regeneration, repair, new attachment and reattachment.",
+            "B. Plaque control"
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "Mechanical plaque control",
+          "unitTitleMr": null,
+          "topics": [
+            "Toothbrushes, interdental cleaning aids, dentifrices"
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "Chemical plaque control",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification and mechanism of action of each and pocket irrigation"
+          ]
+        },
+        {
+          "unitNumber": 27,
+          "unitTitle": "Pocket eradication procedures",
+          "unitTitleMr": null,
+          "topics": [
+            "Scaling and root planing: Indications, aims and objectives, healing following root planing, hand instruments, sonic, ultrasonic and piezo-electric scalers",
+            "Curettage: Definition, indications, aims and objectives, procedures and healing response",
+            "Flap surgery: Definition, types of flaps, design of flaps, papilla preservation, indications and contraindications, armamentarium, surgical procedure and healing response"
+          ]
+        },
+        {
+          "unitNumber": 28,
+          "unitTitle": "Osseous Surgery",
+          "unitTitleMr": null,
+          "topics": [
+            "Osseous defects in periodontal disease: Definition, classification",
+            "Surgery: resective, additive osseous surgery (osseous grafts with classification of grafts)",
+            "Healing responses",
+            "Other regenerative procedures: root conditioning, guided tissue regeneration"
+          ]
+        },
+        {
+          "unitNumber": 29,
+          "unitTitle": "Mucogingival surgery and periodontal plastic surgeries",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition",
+            "Mucogingival problems: etiology, classification of gingival recession (P.D. Miller Jr. and Sullivan and Atkins)",
+            "Indications and objectives",
+            "Gingival extension procedures: lateral pedicle graft, frenectomy, frenotomy",
+            "Crown lengthening procedures",
+            "Periodontal microsurgery in brief"
+          ]
+        },
+        {
+          "unitNumber": 30,
+          "unitTitle": "Splints",
+          "unitTitleMr": null,
+          "topics": [
+            "Periodontal splints: Purpose and classification, Principles of splinting"
+          ]
+        },
+        {
+          "unitNumber": 31,
+          "unitTitle": "Implants",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, types, scope and biomaterials used",
+            "Periodontal considerations: implant-bone interface, implant-gingiva interface, implant failure, peri-implantitis and management"
+          ]
+        },
+        {
+          "unitNumber": 32,
+          "unitTitle": "Maintenance phase (SPT)",
+          "unitTitleMr": null,
+          "topics": [
+            "Aims, objectives, and principles",
+            "Importance",
+            "Procedures",
+            "Maintenance of implants"
+          ]
+        },
+        {
+          "unitNumber": 33,
+          "unitTitle": "Pharmaco-therapy",
+          "unitTitleMr": null,
+          "topics": [
+            "Periodontal dressings",
+            "Antibiotics and anti-inflammatory drugs",
+            "Local drug delivery systems"
+          ]
+        },
+        {
+          "unitNumber": 34,
+          "unitTitle": "Periodontal management of medically compromised patients",
+          "unitTitleMr": null,
+          "topics": [
+            "Topics concerning periodontal management of medically compromised patients"
+          ]
+        },
+        {
+          "unitNumber": 35,
+          "unitTitle": "Inter-disciplinary care",
+          "unitTitleMr": null,
+          "topics": [
+            "Pulpo-periodontal involvement: Routes of spread of infection, Simon’s classification, Management"
+          ]
+        },
+        {
+          "unitNumber": 36,
+          "unitTitle": "Systemic effects of periodontal diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "Cardiovascular diseases, Low birth weight babies etc. in brief"
+          ]
+        },
+        {
+          "unitNumber": 37,
+          "unitTitle": "Ethics",
+          "unitTitleMr": null,
+          "topics": [
+            "SECTION C (Oral Pathology and Microbiology)"
+          ]
+        },
+        {
+          "unitNumber": 38,
+          "unitTitle": "INTRODUCTION",
+          "unitTitleMr": null,
+          "topics": [
+            "A bird's eye view of the different pathological processes involving the oral cavity and oral cavity involvement in systemic diseases to be brought out. Interrelationship between General Medicine, General Surgery and Oral Pathology to be emphasized."
+          ]
+        },
+        {
+          "unitNumber": 39,
+          "unitTitle": "Developmental disturbances of teeth, jaws and soft tissues of oral and paraoral region",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction to developmental disturbances - Hereditary, Familial mutation, Hormonal etc. causes to be highlighted.",
+            "Developmental disturbances of teeth - Etiopathogenesis, clinical features, radiological features and histopathological features as appropriate (size, shape, number, structure and eruption of teeth).",
+            "Forensic Odontology.",
+            "Developmental disturbances of jaws - size and shape of the jaws.",
+            "Developmental disturbances of oral and paraoral soft tissues - lip and palate (clefts), tongue, gingiva, mouth, salivary glands and face."
+          ]
+        },
+        {
+          "unitNumber": 40,
+          "unitTitle": "Dental Caries",
+          "unitTitleMr": null,
+          "topics": [
+            "Etiopathogenesis, microbiology, clinical features, diagnosis, histopathology, immunology, prevention of dental caries and its sequelae."
+          ]
+        },
+        {
+          "unitNumber": 41,
+          "unitTitle": "Pulp and Periapical Pathology and Osteomyelitis",
+          "unitTitleMr": null,
+          "topics": [
+            "Etiopathogenesis and interrelationship, clinical features, microbiology, histopathology and radiological features of pulp and periapical lesions and osteomyelitis.",
+            "Sequelae of periapical abscess - summary of space infections, systemic complications and significance."
+          ]
+        },
+        {
+          "unitNumber": 42,
+          "unitTitle": "Periodontal Diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "Etiopathogenesis, microbiology, clinical features, histopathology and radiological features of gingivitis, gingival enlargements and periodontitis. Basic immunological mechanisms."
+          ]
+        },
+        {
+          "unitNumber": 43,
+          "unitTitle": "Microbial infections of oral soft tissues",
+          "unitTitleMr": null,
+          "topics": [
+            "Microbiology, defense mechanisms including immunological aspects, oral manifestations, histopathology and laboratory diagnosis of common bacterial, viral and fungal infections.",
+            "Bacterial: Tuberculosis, Syphilis, ANUG and its complications (Cancrum Oris).",
+            "Viral: Herpes Simplex, Varicella zoster, Measles, Mumps and HIV infection.",
+            "Fungal: Candidal infection. Aphthous Ulcers."
+          ]
+        },
+        {
+          "unitNumber": 44,
+          "unitTitle": "Common non-inflammatory diseases involving the jaws",
+          "unitTitleMr": null,
+          "topics": [
+            "Etiopathogenesis, clinical features, radiological and laboratory values in diagnosis of: Fibrous dysplasia, Cherubism, Osteogenesis Imperfecta, Paget's disease, Cleidocranial dysplasia, Rickets, Achondroplasia, Marfan's syndrome and Down's syndrome."
+          ]
+        },
+        {
+          "unitNumber": 45,
+          "unitTitle": "Diseases of TM Joint",
+          "unitTitleMr": null,
+          "topics": [
+            "Ankylosis, summary of different types of arthritis and other developmental malformations, traumatic injuries and myofascial pain dysfunction syndrome."
+          ]
+        },
+        {
+          "unitNumber": 46,
+          "unitTitle": "Cysts of the Oral and Paraoral region",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification, etiopathogenesis, clinical features, histopathology, laboratory and radiological features of Odontogenic cysts, Non-Odontogenic cysts, Pseudocysts of jaws and soft tissue cysts."
+          ]
+        },
+        {
+          "unitNumber": 47,
+          "unitTitle": "Tumours of the Oral Cavity",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification of Odontogenic, Non-Odontogenic and Salivary Gland Tumours.",
+            "Odontogenic tumours - all lesions.",
+            "Non-odontogenic tumours: Benign epithelial/mesenchymal and malignant epithelial/mesenchymal tumours.",
+            "Salivary gland tumours: Benign and malignant epithelial neoplasms.",
+            "Tumours of Disputed Origin: Congenital Epulis and Granular Cell Myoblastoma.",
+            "Metastatic tumours: Tumors metastasizing to and from oral cavity and routes of metastasis."
+          ]
+        },
+        {
+          "unitNumber": 48,
+          "unitTitle": "Traumatic, Reactive and Regressive lesions of Oral Cavity",
+          "unitTitleMr": null,
+          "topics": [
+            "Pyogenic and Giant cell granuloma, exostoses, Fibrous Hyperplasia, Traumatic Ulcer and Traumatic Neuroma.",
+            "Attrition, Abrasion, Erosion, Bruxism, Hypercementosis, Dentinal changes, Pulp calcifications and Resorption of teeth.",
+            "Radiation effects of oral cavity, summary of Physical and Chemical injuries including allergic reactions.",
+            "Healing of Oral wounds and complications - Dry socket."
+          ]
+        },
+        {
+          "unitNumber": 49,
+          "unitTitle": "Non neoplastic Salivary Gland Diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "Sialolithiasis, Sialosis, Sialadenitis, Xerostomia and Ptyalism."
+          ]
+        },
+        {
+          "unitNumber": 50,
+          "unitTitle": "Systemic Diseases involving Oral cavity",
+          "unitTitleMr": null,
+          "topics": [
+            "Brief review and oral manifestations, diagnosis and significance of common Blood, Nutritional, Hormonal and Metabolic diseases."
+          ]
+        },
+        {
+          "unitNumber": 51,
+          "unitTitle": "Mucocutaneous Lesions",
+          "unitTitleMr": null,
+          "topics": [
+            "Etiopathogenesis, clinical features and histopathology of common lesions: Lichen Planus, Lupus Erythematosus, Pemphigus and Pemphigoid lesions, Erythema Multiforme, Psoriasis, Scleroderma, Ectodermal Dysplasia, Epidermolysis bullosa and White sponge nevus."
+          ]
+        },
+        {
+          "unitNumber": 52,
+          "unitTitle": "Diseases of the Nerves",
+          "unitTitleMr": null,
+          "topics": [
+            "Facial neuralgias (Trigeminal and Glossopharyngeal), VII nerve paralysis, Causalgia.",
+            "Psychogenic facial pain and Burning mouth syndrome."
+          ]
+        },
+        {
+          "unitNumber": 53,
+          "unitTitle": "Pigmentation of Oral and Paraoral region and Discolouration of teeth",
+          "unitTitleMr": null,
+          "topics": [
+            "Causes and clinical manifestations."
+          ]
+        },
+        {
+          "unitNumber": 54,
+          "unitTitle": "Diseases of Maxillary Sinus",
+          "unitTitleMr": null,
+          "topics": [
+            "Traumatic injuries to sinus, Sinusitis, Cysts and Tumours involving antrum."
+          ]
+        },
+        {
+          "unitNumber": 55,
+          "unitTitle": "Oral Precancer and Cancer, Biopsy",
+          "unitTitleMr": null,
+          "topics": [
+            "Epidemiology, aetiology, clinical and histopathological features, TNM classification. Recent advances in diagnosis, management and prevention.",
+            "Biopsy: Types of biopsy, value of biopsy, cytology, histochemistry and frozen sections in diagnosis of oral diseases."
+          ]
+        },
+        {
+          "unitNumber": 56,
+          "unitTitle": "Principles of Basic Forensic Odontology",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction, definition, aims and scope.",
+            "Sex and ethnic differences in tooth morphology and histological age estimation.",
+            "Determination of sex and blood groups from buccal mucosa / saliva.",
+            "Dental DNA methods.",
+            "Bite marks, rugae patterns and lip prints.",
+            "Dental importance of poisons and corrosives, overview of forensic medicine and toxicology.",
+            "SECTION D (Oral and Maxillofacial Surgery)"
+          ]
+        },
+        {
+          "unitNumber": 57,
+          "unitTitle": "Diagnosis in oral surgery",
+          "unitTitleMr": null,
+          "topics": [
+            "History taking",
+            "Clinical examination",
+            "Investigations"
+          ]
+        },
+        {
+          "unitNumber": 58,
+          "unitTitle": "Principles of infection control",
+          "unitTitleMr": null,
+          "topics": [
+            "Cross-infection control with particular reference to HIV/AIDS and Hepatitis."
+          ]
+        },
+        {
+          "unitNumber": 59,
+          "unitTitle": "Principles of Oral Surgery - Asepsis",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, measures to prevent introduction of infection during surgery."
+          ]
+        },
+        {
+          "unitNumber": 60,
+          "unitTitle": "Surgery set up and Painless Surgery",
+          "unitTitleMr": null,
+          "topics": [
+            "Anaesthetic considerations (Local, local with IV sedations, general anaesthesia)",
+            "Surgical access (intra-oral and extra-oral incisions, bone removal methods)",
+            "Control of haemorrhage",
+            "Drainage and debridement",
+            "Closure of wounds and suturing",
+            "Post-operative care and follow-up"
+          ]
+        },
+        {
+          "unitNumber": 61,
+          "unitTitle": "Exodontia",
+          "unitTitleMr": null,
+          "topics": [
+            "General considerations, ideal extraction, indications",
+            "Extractions in medically compromised patients",
+            "Methods of extraction (forceps/closed method, trans-alveolar/open method)",
+            "Dental elevators (uses, classification, principles)",
+            "Complications of exodontia and their management"
+          ]
+        },
+        {
+          "unitNumber": 62,
+          "unitTitle": "Impacted teeth",
+          "unitTitleMr": null,
+          "topics": [
+            "Incidence, definition, aetiology",
+            "Impacted mandibular third molar",
+            "Maxillary third molar",
+            "Impacted maxillary canine"
+          ]
+        },
+        {
+          "unitNumber": 63,
+          "unitTitle": "Pre-prosthetic Surgery",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, classification of procedures (corrective procedures, ridge extension, ridge augmentation and reconstruction)"
+          ]
+        },
+        {
+          "unitNumber": 64,
+          "unitTitle": "Diseases of the maxillary sinus",
+          "unitTitleMr": null,
+          "topics": [
+            "Surgical anatomy, sinusitis, Caldwell-Luc procedure, removal of root from sinus, oro-antral fistula"
+          ]
+        },
+        {
+          "unitNumber": 65,
+          "unitTitle": "Disorders of T.M. Joint",
+          "unitTitleMr": null,
+          "topics": [
+            "Applied surgical anatomy, dislocation, ankylosis, myofascial pain dysfunction syndrome, internal derangement, arthritis"
+          ]
+        },
+        {
+          "unitNumber": 66,
+          "unitTitle": "Infections of the Oral cavity",
+          "unitTitleMr": null,
+          "topics": [
+            "Odontogenic infections and spread through facial spaces, dento-alveolar abscess, osteomyelitis, Ludwig's angina"
+          ]
+        },
+        {
+          "unitNumber": 67,
+          "unitTitle": "Benign cystic lesions of the jaws",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, classification, pathogenesis, diagnosis, management"
+          ]
+        },
+        {
+          "unitNumber": 68,
+          "unitTitle": "Tumours of the Oral cavity",
+          "unitTitleMr": null,
+          "topics": [
+            "Non-odontogenic benign tumours, ameloblastoma, carcinoma of oral cavity, TNM classification, management, role of dental surgeons in prevention"
+          ]
+        },
+        {
+          "unitNumber": 69,
+          "unitTitle": "Fractures of the jaws",
+          "unitTitleMr": null,
+          "topics": [
+            "General considerations, mandibular fractures, fractures of the condyle, middle third of the face, alveolar fractures, zygomatic complex, complications"
+          ]
+        },
+        {
+          "unitNumber": 70,
+          "unitTitle": "Salivary gland diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "Diagnosis, sialography, infections, sialolithiasis, salivary fistulae, common tumours"
+          ]
+        },
+        {
+          "unitNumber": 71,
+          "unitTitle": "Jaw deformities",
+          "unitTitleMr": null,
+          "topics": [
+            "Prognathism, retrognathism, open bite, surgical methods"
+          ]
+        },
+        {
+          "unitNumber": 72,
+          "unitTitle": "Neurological disorders",
+          "unitTitleMr": null,
+          "topics": [
+            "Trigeminal neuralgia, facial paralysis, nerve injuries"
+          ]
+        },
+        {
+          "unitNumber": 73,
+          "unitTitle": "Cleft Lip and Palate",
+          "unitTitleMr": null,
+          "topics": [
+            "Aetiology, incidence, classification, role of dental surgeon, closure procedures"
+          ]
+        },
+        {
+          "unitNumber": 74,
+          "unitTitle": "Medical Emergencies in dental practice",
+          "unitTitleMr": null,
+          "topics": [
+            "Primary care of medical emergencies (cardiovascular, respiratory, endocrine, anaphylactic reaction, epilepsy)"
+          ]
+        },
+        {
+          "unitNumber": 75,
+          "unitTitle": "Emergency drugs and injections",
+          "unitTitleMr": null,
+          "topics": [
+            "Applied anatomy, ideal location for intramuscular/IV injections and techniques"
+          ]
+        },
+        {
+          "unitNumber": 76,
+          "unitTitle": "Local Anaesthesia",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction, concept, classification, ideal requirements, mode of action, complications",
+            "Use of vasoconstrictors, mandibular and maxillary nerve block techniques"
+          ]
+        },
+        {
+          "unitNumber": 77,
+          "unitTitle": "General Anaesthesia",
+          "unitTitleMr": null,
+          "topics": [
+            "Concept, indications in dentistry, pre-anaesthetic evaluation and medication, commonly used agents, complications",
+            "IV sedation, cardiopulmonary resuscitation, tracheostomy"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

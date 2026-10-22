@@ -8,7 +8,7 @@ import CareerExplorerClient from './CareerExplorerClient'
 export const metadata = {
   title: 'Career Options After 10th & 12th Guide 2026',
   description:
-    'Comprehensive career guide for students in Maharashtra & India. Explore Science (Engineering, MBBS, BDS, BAMS, BHMS, ISRO), Commerce (CA, Investment Banking, MBA), Arts (IAS, Law, Psychology), and Polytechnic with salary, required subjects, entrance exams & top colleges.',
+    'Explore top career options after 10th & 12th in Science, Commerce, Arts and Polytechnic. Discover entrance exams, salaries, subjects and top college roadmaps.',
   alternates: { canonical: 'https://examudaan.in/career' },
   keywords: [
     'career options after 10th',

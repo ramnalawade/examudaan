@@ -5,6 +5,7 @@
 // ============================================================
 
 import ListingPage from '../../../../components/ListingPage'
+import { fitDescription } from '../../../../lib/seoMetadata'
 
 const ORG_CONFIG = {
   mpsc: {
@@ -101,32 +102,53 @@ function resolveOrgData(rawSlug) {
 }
 
 export async function generateMetadata({ params }) {
-  const { org } = params
+  const resolvedParams = await params
+  const org = resolvedParams?.org
   const data = resolveOrgData(org)
 
+  // Pattern: "{Org} Recruitment 2026 - Latest Govt Jobs & Vacancies", max 60 chars
+  let title = `${data.name} Recruitment 2026 - Latest Govt Jobs`
+  if (title.length > 60) {
+    title = `${data.heading} - Latest Govt Vacancies`
+  }
+  if (title.length > 60) {
+    title = `${data.heading} - Latest Govt Jobs`
+  }
+  if (title.length > 60) {
+    title = `${data.heading}`.slice(0, 60)
+  }
+
+  const description = fitDescription(
+    data.description || `Browse latest official ${data.name} recruitment notifications 2026. Apply online, download notification PDF & check eligibility.`,
+    'Latest vacancies on ExamUdaan.'
+  )
+
+  const canonicalUrl = `https://examudaan.in/jobs/org/${data.slug}`
+
   return {
-    title: data.title,
-    description: data.description,
+    title: { absolute: title },
+    description,
     alternates: {
-      canonical: `https://examudaan.in/jobs/org/${data.slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title: data.title,
-      description: data.description,
-      url: `https://examudaan.in/jobs/org/${data.slug}`,
-      siteName: 'ExamUdaan.in',
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: 'ExamUdaan',
       type: 'website',
     },
     twitter: {
       card: 'summary',
-      title: data.title,
-      description: data.description,
+      title,
+      description,
     },
   }
 }
 
-export default function OrgJobsPage({ params }) {
-  const { org } = params
+export default async function OrgJobsPage({ params }) {
+  const resolvedParams = await params
+  const org = resolvedParams?.org
   const data = resolveOrgData(org)
 
   return (

@@ -1,0 +1,95 @@
+{
+  "docId": 7585,
+  "examName": "Maharashtra Gazetted Civil Services Main Examination",
+  "examNameMr": "महाराष्ट्र राजपत्रित नागरी सेवा मुख्य परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "rajyaseva",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination - Conventional / Descriptive Type",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Question Paper Specific Instructions and Question Paper Structure",
+      "paperTitleMr": "प्रश्नपत्रिका विशिष्ट सूचना आणि प्रश्नपत्रिका संरचना",
+      "totalMarks": 200,
+      "duration": "3 Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Instructions and Paper Format",
+          "unitTitleMr": "सामान्य सूचना आणि पेपर स्वरूप",
+          "topics": [
+            "There are eight questions divided in two sections, out of which five are to be attempted.",
+            "Questions no. 1 and 5 are compulsory. Out of the remaining questions, three are to be attempted choosing at least one question from each section.",
+            "The number of marks carried by a question/sub question is indicated against it.",
+            "Keep in mind the word limit indicated in the question if any."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Response Assessment Guidelines",
+          "unitTitleMr": "प्रतिसाद मूल्यमापन मार्गदर्शक तत्त्वे",
+          "topics": [
+            "Wherever option has been given, only the required number of responses in the serial order attempted shall be assessed.",
+            "Unless struck off, attempt of a question shall be counted even if attempted partly.",
+            "Excess responses shall not be assessed and shall be ignored."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Answering Guidelines",
+          "unitTitleMr": "उत्तरे देण्याची मार्गदर्शक तत्त्वे",
+          "topics": [
+            "Candidates are expected to answer all the sub-questions of a question together.",
+            "If sub-question of a question is attempted elsewhere, the later sub-question shall be overlooked.",
+            "Any page or portion of the page left blank in the Answer Booklet must be clearly struck off."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Notations and Medium Instructions",
+          "unitTitleMr": "संकेत आणि माध्यम सूचना",
+          "topics": [
+            "Unless otherwise mentioned, symbol and notation have their usual standard meanings. Assume suitable data, if necessary and indicate the same clearly.",
+            "Neat sketches may be drawn, wherever required.",
+            "The medium of answer should be mentioned on the answer book as claimed in the application and printed on admission card.",
+            "Candidates will be allowed to use Scientific (Non-programmable type) calculators."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Section A and Section B Structure",
+          "unitTitleMr": "विभाग अ आणि विभाग ब संरचना",
+          "topics": [
+            "Section A consists of Question No. 1 to 4. Question No. 1 is compulsory (solve any five out of seven short questions).",
+            "Question No. 2, 3, and 4 consist of long and short questions.",
+            "Section B consists of Question No. 5 to 8. Question No. 5 is compulsory (solve any five out of seven short questions).",
+            "Question No. 6, 7, and 8 consist of long and short questions."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Question Types Definition",
+          "unitTitleMr": "प्रश्न प्रकार व्याख्या",
+          "topics": [
+            "Long question can be Derivative/Problem/Explain in detail diagram/sketch question justifying the marks assigned to the question.",
+            "Short question can be Definition/short notes justifying the marks assigned to the question."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Time Allowed: Three Hours",
+    "Maximum Marks: 200",
+    "Candidates will be allowed to use Scientific (Non-programmable type) calculators."
+  ]
+}

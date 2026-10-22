@@ -1,0 +1,57 @@
+{
+  "docId": 4790,
+  "examName": "Pharmacist in Government Medical College, Maharashtra Medical Education & Research Service Group - B",
+  "examNameMr": "महाराष्ट्र वैद्यकीय शिक्षण व संशोधन सेवा गट-ब (औषध निर्माण अधिकारी)",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Pharmacist in Government Medical College, Maharashtra Medical Education & Research Service Group - B",
+      "paperTitleMr": "महाराष्ट्र वैद्यकीय शिक्षण व संशोधन सेवा गट-ब - औषध निर्माण अधिकारी परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Part I : Pharmaceutics, Dispensing and Hospital Pharmacy",
+          "unitTitleMr": "भाग I : औषधशास्त्र, वितरण आणि रुग्णालय फार्मसी",
+          "topics": [
+            "Formulations: Types, Preparation, Packaging, labeling and Storage, Various Conventional and prolonged release drug delivery systems, per-oral and parenteral administration, novel routes of drug administration including pulmonary, nasal, ophthalmic, transdermal etc., concepts of drugs stability and Shelf-life.",
+            "Prescription : definition, various parts of prescription, their functions, handling of prescription, prescription charging policy, labeling requirements as per various schedules mentioned in Drugs and Cosmetics Act and its addendum, Pharmacy Act 1948, Drug Price Control Order as per regulatory requirements, Narcotic & Psychotropic substances Act and Rules.",
+            "Posology : Definition, factors affecting dose selection, Calculation of doses for paediatric and geriatric patients.",
+            "Study of various pharmacopoeias, monographs and various quality control tests mentioned in the monographs- I.P., U.S.P., E.P., B.P.",
+            "Sterile Products – their manufacturing and quality Control, Methods of Sterilization and validation thereof, Test for Sterility, Test for pyrogens, concept of asepsis and maintenance of aseptic conditions, Central Sterile Supply Department (CSSD) and its functioning.",
+            "Microbiological Media: Preparation and Sterilization.",
+            "Surgical dressings: Properties, sterilization, standards and tests for sterility.",
+            "Ligatures and Sutures: Absorbable and non-absorbable, preparations, standards, and tests for sterility.",
+            "Hospital and Drug Store : Layout, designs, staff, materials-coding and stocking including storage conditions. Legal requirements, maintenance of various registers. Use of Computers for day to day record keeping. Inventory control concept of EOQ (Economic Order Quantity) & Purchase policy. Drug distribution systems in hospitals - Dispensing to in-patients & out-patients. Safe use of drugs in hospitals.",
+            "Clinical Pharmacy - Drug & poison information services & its management: Patient Counseling, Patient information leaflets, patient medication adherence, drug-drug, drug-food interactions, adverse drug reactions. Use of softwares and databases for monitoring drug interactions, and adverse drug reactions and idiosyncratic reactions."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Part II : Pharmacology and Toxicology",
+          "unitTitleMr": "भाग II : औषधοपचारशास्त्र आणि विषशास्त्र",
+          "topics": [
+            "Concepts of health and disease, causative agents and prevention of diseases like Aids, Tuberculosis. Brief outline of communicable diseases, models of transmission and prevention.",
+            "First aid, emergency treatment of shock, snake bites, burns, poisoning, fractures.",
+            "Pharmacology of following classes of drugs: Antihypertensives, antianginal agents, antihyperlipidemic agents, Cardiotonics, antiallergics, antidiabetics, antimicrobials and antibiotics including the newer generation antibiotics, antiulcer agents, antacid, anti HIV agents, antidepressants.",
+            "Clinical toxicology: Clinical symptoms and management of acute poisoning due to pesticides, opiates, barbiturates, benzodiazepines, alcohol (ethanol & methanol), paracetamol and salicylates, heavy metals- Arsenic, lead, mercury, radiation poisoning."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

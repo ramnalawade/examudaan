@@ -1,0 +1,120 @@
+{
+  "docId": 1185,
+  "examName": "Civil Judge (Junior Division) & Judicial Magistrate (First Class) Main Examination",
+  "examNameMr": "सिव्हिल जज (कनिष्ठ स्तर) व न्यायिक दंडाधिकारी (प्रथम वर्ग) मुख्य परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English/Marathi",
+  "category": "judicial-legal",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (Conventional type) followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper-I",
+      "paperTitleMr": "पेपर-१",
+      "totalMarks": 100,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Civil Procedure Code",
+          "unitTitleMr": "सिव्हिल प्रोसिजर कोड",
+          "topics": [
+            "Civil Procedure Code"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Transfer of Property Act",
+          "unitTitleMr": "ट्रान्सफर ऑफ प्रॉपर्टी ॲक्ट",
+          "topics": [
+            "Transfer of Property Act"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Specific Relief Act",
+          "unitTitleMr": "स्पेसिफिक रिलिफ ॲक्ट",
+          "topics": [
+            "Specific Relief Act"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Law of Contracts, Sale of Goods Act & Partnership Act",
+          "unitTitleMr": "लॉ ऑफ कॉन्ट्रॅक्ट्स, सेल ऑफ गुड्स ॲक्ट तसेच पार्टनरशीप ॲक्ट",
+          "topics": [
+            "Law of Contracts",
+            "Sale of Goods Act",
+            "Partnership Act"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper-II",
+      "paperTitleMr": "पेपर-२",
+      "totalMarks": 100,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Indian Penal Code",
+          "unitTitleMr": "इंडियन पिनल कोड",
+          "topics": [
+            "Indian Penal Code"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Evidence Act",
+          "unitTitleMr": "एव्हिडन्स ॲक्ट",
+          "topics": [
+            "Evidence Act"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Code of Criminal Procedure",
+          "unitTitleMr": "कोड ऑफ क्रिमिनल प्रोसिजर",
+          "topics": [
+            "Code of Criminal Procedure"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Scheduled Castes & Scheduled Tribes (Prevention of Atrocities) Act-1989 And Protection of Civil Rights Act - 1955",
+          "unitTitleMr": "अनुसूचित जाती, अनुसूचित जमाती [अत्याचार प्रतिबंधक] अधिनियम-1989 व नागरी हक्क संरक्षण अधिनियम - 1955",
+          "topics": [
+            "Scheduled Castes & Scheduled Tribes (Prevention of Atrocities) Act-1989",
+            "Protection of Civil Rights Act - 1955"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Essay On Current Legal Topic",
+          "unitTitleMr": "कायदेविषयक तांत्रिक घडामोडीबाबत निबंध",
+          "topics": [
+            "Essay On Current Legal Topic (Approximately 800 Words)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Nature of the paper is Conventional type.",
+    "Medium of examination: Marathi/English.",
+    "Interview (मौखिक व व्यक्तीमत्त्व चाचणी) carries 50 marks."
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "docId": 9490,
+  "examName": "Assistant Professor (Physics), Maharashtra Engineering Teachers Service, Group A - Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Physics), Maharashtra Engineering Teachers Service, Group A - Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Mathematical Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Vector calculus: linear vector space, basis, orthogonality and completeness",
+            "Matrices: similarity transformations, diagonalization, eigen values and eigen vectors",
+            "Linear differential equations: second order linear differential equations and solutions involving special functions",
+            "Complex analysis: Cauchy-Riemann conditions, Cauchy's theorem, singularities, residue theorem and applications",
+            "Laplace and Fourier transforms and their applications"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Classical Mechanics",
+          "unitTitleMr": null,
+          "topics": [
+            "Lagrangian formulation: D'Alembert's principle, Euler-Lagrange equation, Hamilton's principle and Hamilton’s equations of motion, calculus of variations, symmetry and conservation laws",
+            "Central force motion: Kepler Laws",
+            "Small oscillations, coupled oscillations, normal modes and eigen frequencies",
+            "Rigid body dynamics, moment of inertia tensor, orthogonal transformations, Euler angles, Torque free motion of a symmetric top",
+            "Canonical transformations, equations of Canonical transformations",
+            "Poisson brackets and Poisson equation of motion",
+            "Special theory of relativity, Lorentz transformations, relativistic kinematics, mass-energy equivalence"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electromagnetic Theory",
+          "unitTitleMr": null,
+          "topics": [
+            "Solutions of electrostatic and magnetostatic problems including boundary value problems",
+            "Method of images and charge distribution",
+            "Dielectrics and conductors",
+            "Magnetic materials, multipole expansion",
+            "Maxwell's equations",
+            "Scalar and vector potentials: Coulomb and Lorentz gauges",
+            "Electromagnetic waves in free space, non-conducting, and conducting media",
+            "Reflection and transmission at normal and oblique incidences, polarization of electromagnetic waves",
+            "Poynting vector, Poynting theorem, energy and momentum of electromagnetic waves, Maxwell’s stress tensor",
+            "Radiation from a moving charge"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Quantum Mechanics",
+          "unitTitleMr": null,
+          "topics": [
+            "Postulates and development of quantum mechanics",
+            "Uncertainty principle",
+            "Schrodinger equation",
+            "One dimensional potentials: step potential, finite rectangular well, tunneling from a potential barrier, particle in a box, harmonic oscillator",
+            "Two and three dimensional systems and concept of degeneracy",
+            "Hydrogen atom, eigen values and eigen functions",
+            "Angular momentum and spin, Pauli’s spin matrices and Pauli’s spinors",
+            "Addition of angular momenta",
+            "Variational method and WKB approximation",
+            "Time independent perturbation theory",
+            "Elementary scattering theory, Born approximation",
+            "Symmetries in quantum mechanical systems",
+            "Dirac Bra-Ket notation, linear vectors and operators in Hilbert space"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Thermodynamics and Statistical Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Laws of thermodynamics, equipartition theorem, calculations of specific heat of solids and gases",
+            "Concept of macrostates and microstates",
+            "Phase space",
+            "Ensembles, partition function, free energy, calculation of thermodynamic quantities",
+            "Classical and quantum statistics: degenerate Fermi gas",
+            "Black body radiation, and Planck's distribution law",
+            "Stefan's law",
+            "Bose-Einstein condensation",
+            "First and second order phase transitions, phase equilibria, critical point, Liouville's theorem"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Atomic and Molecular Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Spectra of one- and many-electron atoms",
+            "Spin-orbit interaction: LS and jj couplings",
+            "Fine and hyperfine structures",
+            "Zeeman and Stark effects",
+            "Electric dipole transitions and selection rules",
+            "Rotational and vibrational spectra of diatomic molecules",
+            "Electronic transitions in diatomic molecules, Franck-Condon principle",
+            "Raman effect",
+            "EPR, NMR, ESR, X-ray spectra",
+            "Lasers: Einstein coefficients, population inversion, two and three level systems"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Solid State Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Elements of crystallography",
+            "Diffraction methods for structure determination",
+            "Bonding in solids, lattice vibrations and thermal properties of solids",
+            "Free electron theory",
+            "Band theory of solids: nearly free electron and tight binding models",
+            "Metals, semiconductors and insulators",
+            "Conductivity, mobility and the concept of effective mass",
+            "Optical properties of solids",
+            "Kramers-Kronig relation, intra- and inter-band transitions",
+            "Dielectric properties of solid",
+            "Dielectric function, polarizability, ferroelectricity",
+            "Magnetic properties of solids",
+            "Dia, para, ferro, antiferro and ferri-magnetism, domains and magnetic anisotropy",
+            "Superconductivity: Type-I and Type II superconductors, Meissner effect, London equation, BCS Theory, flux quantization"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Electronics",
+          "unitTitleMr": null,
+          "topics": [
+            "Semiconductors in equilibrium: electron and hole statistics in intrinsic and extrinsic semiconductors",
+            "Metal-semiconductor junctions",
+            "Ohmic and rectifying contacts",
+            "PN diodes, bipolar junction transistors",
+            "Insulated gate bipolar transistor (IGBT), field effect transistors",
+            "MOS-FET, negative and positive feedback circuits",
+            "Oscillators, operational amplifiers, active filters",
+            "Basics of digital logic circuits",
+            "Combinational and sequential circuits, flip-flops, timers, counters, registers, A/D and D/A conversion"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Nuclear and Particle Physics",
+          "unitTitleMr": null,
+          "topics": [
+            "Nuclear radii and charge distributions",
+            "Nuclear binding energy, electric and magnetic moments, semi-empirical mass formula",
+            "Nuclear models: liquid drop model, shell model",
+            "Nuclear force and two nucleon problem",
+            "Alpha, beta, gamma decay in nuclei, electromagnetic transitions in nuclei",
+            "Rutherford scattering, nuclear reactions, fission and fusion",
+            "Particle accelerators and detectors",
+            "Elementary particles: photons, baryons, mesons and leptons, the quark model, isospin symmetry and conservation laws"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

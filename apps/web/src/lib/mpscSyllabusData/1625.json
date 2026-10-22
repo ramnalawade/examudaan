@@ -1,0 +1,183 @@
+{
+  "docId": 1625,
+  "examName": "Assistant Professor- Biotechnology, Maharashtra Education Services, Gr-A",
+  "examNameMr": "सहाय्यक प्राध्यापक- बायोटेक्नोलॉजी, महाराष्ट्र एज्युकेशन सर्व्हिसेस, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Biotechnology, Maharashtra Education Services, Gr-A",
+      "paperTitleMr": "सहाय्यक प्राध्यापक- बायोटेक्नोलॉजी, महाराष्ट्र एज्युकेशन सर्व्हिसेस, गट-अ",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Biological Chemistry",
+          "unitTitleMr": "जैविक रसायनशास्त्र",
+          "topics": [
+            "Biomolecules and their structure & function: Carbohydrates, Lipids, Proteins including Peptide hormones, Growth hormones, Kinases, Cytokine receptors",
+            "Protein Structure & Function: Primary, Secondary, Tertiary & Quaternary Structure, Protein folding",
+            "Post translational processing and modifications: Glycosylation, Phosphorylation, acetylation etc.",
+            "Protein degradation: Lysosomal & proteosomal, Enzymes-Activity, Regulation & Kinetics",
+            "Metabolic & Nutritional Disorders: Carbohydrates, Lipids & Nucleic acids",
+            "Metabolomics & Metabolic Engineering: Overview of primary metabolism, Integration of Metabolism, The Metabolome - Metabolic flux, Metabolic flux analysis, Metabolic engineering - Polyketides Synthesis, Xenobiotics",
+            "Phytochemistry: Secondary Metabolism pathways & Importance, Secondary Metabolite: structure, classification, properties & Therapeutic importance"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Molecular Biology",
+          "unitTitleMr": "आण्विक जीवशास्त्र",
+          "topics": [
+            "Genome Structure and Organization in prokaryotes and eukaryotes: Structure and function of chromatin and nucleosome, C value paradox and genome size, Gene families",
+            "DNA Replication: Mechanisms and regulations in prokaryotes and eukaryotes, DNA replication models",
+            "DNA Damage & Repair: Types of DNA damage, DNA repair mechanisms-nucleotide excision repair, mismatch repair, recombination repair, double-strand break repair",
+            "DNA Recombination: Homologous and site-specific recombination, models for homologous recombination-Holliday junction, NHEJ, Proteins involved in recombination",
+            "Mobile DNA elements: Transposons & Retrotransposons",
+            "Gene Expression in Prokaryotes and Eukaryotes: Chromatin remodeling, Regulation of transcription, Posttranscriptional processing and transport of RNA, Non coding RNAs",
+            "Protein Synthesis, Modifications and Transport: Protein synthesis-Mechanism and Regulation, Genetic code, Transport of proteins, Protein turnover and degradation"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Environmental Biotechnology",
+          "unitTitleMr": "पर्यावरणीय जैवतंत्रज्ञान",
+          "topics": [
+            "Global and regional threats to the environment: Pollution-air, soil, and water",
+            "Biotechnology in Remediation: Introduction to bioremediation, Phytoremediation, Bioaugmentation and Biostimulation",
+            "Environmental Laws and Policies- International and National",
+            "Sustainable development: Sustainability in use of bio-resources",
+            "Remote sensing and Environmental Auditing: Environmental Impact Assessment"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Cell Biology",
+          "unitTitleMr": "पेशी जीवशास्त्र",
+          "topics": [
+            "Cell structure and function in plant and animals",
+            "Cell organelles",
+            "Cell membrane-Transport across plasma membrane",
+            "Cytoskeleton-Structure and function",
+            "Extracellular matrix and cell junctions",
+            "Cell signaling-communication between cells and environment, Signalling at cell surface, hormones and receptors, intracellular signalling molecules, Signal transduction and second messengers",
+            "Cell Cycle and its regulation",
+            "Cell differentiation, cell death",
+            "Protooncogens, oncogenes and cell transformation and cancer"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Genetic Engineering",
+          "unitTitleMr": "जनुकीय अभियांत्रिकी",
+          "topics": [
+            "Tools used in genetic engineering: DNA modifying and degrading enzymes, Transformation and Transfection, cDNA and genomic DNA library",
+            "Expression strategies and methods for producing industrially important molecules: Expression vectors in bacteria and eukaryotes, Induced expression-strategies and protocol",
+            "Molecular techniques: PCR - design and optimization, Types of PCR-Inverse, Nested, Reverse Transcription-PCR, Hot Start PCR, Quantitative PCR, DNA amplification of specific sequences from a cDNA library, use in diagnosis of diseases",
+            "DNA sequencing: Maxam-Gilbert method, Sanger's Dideoxy chain termination method, Automated DNA sequencing method, Human genome sequencing, Genome mapping techniques-physical and genetic",
+            "Applications of genetic engineering in human disease diagnosis, agriculture and manufacture of therapeutics, genetically modified organisms",
+            "Biosafety regulations, intellectual property rights"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Immunology",
+          "unitTitleMr": "प्रतिकारशास्त्र",
+          "topics": [
+            "Introduction to immune system",
+            "Types of Immunity: Innate immunity versus Acquired immunity",
+            "Complement system and activation pathways",
+            "Structure of antibody molecules, Antigen-Antibody reactions - Applications in Diagnostics",
+            "Hypersensitivity",
+            "Auto immunity",
+            "Transplant immunology",
+            "Parasitic immunology",
+            "Techniques in molecular immunology: including Hybridoma (Monoclonal antibody), Chimeric antibodies, Phage display",
+            "Vaccine development",
+            "Manufacturing of immuno-diagnostics and Clinical Trials"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Microbiology and Virology",
+          "unitTitleMr": "सूक्ष्मजीवशास्त्र आणि विषाणूशास्त्र",
+          "topics": [
+            "Basics in Microbiology: Bacterial Cell Structure and Function, Control of bacterial growth (Sterilization and disinfection), handling pathogens, safety in microbiology laboratory, Metabolic diversity of bacteria, Extremophiles and their adaptations, Pathogenicity and Virulence of Bacteria",
+            "Techniques in microbiology: Cultivation, Aerobes, anaerobes and microaerophiles, Pure culture techniques, Differential staining techniques and principles, General strategy used for identification of unknown bacteria, Introduction to Bergey's Manual",
+            "Applied microbiology: Pathogenic bacteria and human health, Industrially important microbes, Microbes in food preservation and spoilage",
+            "Virology: Introduction to viruses, Classification of viruses (ICTV system, Baltimore system), Viral replication, Viral Diagnosis, Antivirals including therapeutic agents, Vaccines, Viral infections and Epidemiology, Emerging viral diseases, Animals, Poultry and plant viruses"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Plant Biotechnology",
+          "unitTitleMr": "वनस्पती जैवतंत्रज्ञान",
+          "topics": [
+            "Algal biotechnology: qualitative and quantitative improvement in economically important algae",
+            "Fungal biotechnology: qualitative and quantitative improvement in economically important fungi",
+            "Micropropagation: Advantages over conventional methods, stages of micropropagation (stage 0 to stage 4), organogenesis, somatic embryogenesis and artificial seeds",
+            "In vitro androgenesis and its applications, somatic hybridization, cybridization and their applications",
+            "Transgenic plants: experimental methods of transgenesis, production of neutraceuticals, pharmaceuticals, biopesticides",
+            "Applications of Transgenic / genetically modified plants: biotic and abiotic stress tolerance, production of secondary metabolites, increase in productivity, molecular farming, plantibodies, vaccines, therapeutic proteins",
+            "Agricultural Biotechnology: Crop improvement methods, bioreactors in plant production, Marker assisted selection, Transgenesis for crop improvement"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Animal Biotechnology",
+          "unitTitleMr": "प्राणी जैवतंत्रज्ञान",
+          "topics": [
+            "Introduction to tissue culture: Definition, principle and significance, media formulation, sterilization",
+            "Various systems of animal tissue cultures: Primary culture, Explant culture, Suspension culture",
+            "Cell lines: Definition, establishment and maintenance, normal and established cell lines, cell senescence",
+            "Organ culture: Organ transplants, tissue engineering",
+            "Measurement of cell growth, storage viability and cytotoxicity, Cell hybridization, Transfection studies",
+            "Application of animal cell culture for in vitro testing of drugs, production of viral vaccines and pharmaceutical proteins",
+            "Stem cells: adult, embryonic, induced pluripotent stem cells, identification, purification, characterization",
+            "Transgenic animals: artificial breeding, in vitro fertilization, embryo transfer technology, artificial insemination",
+            "Biosafety issues and Bioethics associated with developing transgenic animals"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Bioprocess Engineering & Fermentation Technology",
+          "unitTitleMr": "बायोप्रॉसेस अभियांत्रिकी आणि फर्मेंटेशन तंत्रज्ञान",
+          "topics": [
+            "Introduction to fermentation and Basic aspects of bioengineering",
+            "Design of Fermenter/ bioreactors: Stirred tank reactor and non-mechanically agitated bioreactors",
+            "Kinetics of operation of bioreactors: Batch, Fed Batch and Continuous processes",
+            "Mass transfer, Aeration and agitation of fermentation broth",
+            "Fermentation Media, Sterilization and monitoring of process variables, Scale Up and Scale Down",
+            "Molecular Engineering: Mutation, Protoplast fusion, parasexual cycle and genetic engineering",
+            "Production and Downstream processing: Primary and secondary metabolites, kinetics of growth and product formation",
+            "Effluent Disposal strategies used for Textile, dye, dairy, paper and pulp industries",
+            "Probiotics, ore leaching, biofuels, Fermentation economics"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Database Management and Intellectual Property Rights",
+          "unitTitleMr": "डेटाबेस व्यवस्थापन आणि बौद्धिक संपदा हक्क",
+          "topics": [
+            "Database Management: Concept of Database, Organization, Characteristics and types of databases relevant to Biotechnology, Data Management and data mining, Source Documentation, Databases (PubMed, PubChem, OMIM, CTR etc.)",
+            "Intellectual Property Rights: Characteristics and Types of Intellectual Properties, Treaties, Conventions, Laws, Acts, agreements pertaining to Biotechnology",
+            "Tools of IPRs-patent processing: Patents prerequisites, Biological Patents (Plant, Animal, Microbial), Process and Product patents, Indian and International scenario, Plant varieties and Plant breeders rights, Industrial Designs"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

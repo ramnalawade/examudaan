@@ -1,0 +1,92 @@
+{
+  "docId": 4392,
+  "examName": "Deputy Director of Health Services, Maharashtra Medical & Health Services, Group A",
+  "examNameMr": "उपसंचालक आरोग्य सेवा, महाराष्ट्र वैद्यकीय आणि आरोग्य सेवा, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Public Health, Clinical Services, Management Skills, Health & Development, and Applied Aspects of Health Care Management",
+      "paperTitleMr": "सार्वजनिक आरोग्य, वैद्यकीय सेवा, व्यवस्थापन कौशल्ये, आरोग्य आणि विकास आणि आरोग्य सेवा व्यवस्थापनाचे उपयोजित पैलू",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "PUBLIC HEALTH",
+          "unitTitleMr": "सार्वजनिक आरोग्य",
+          "topics": [
+            "History of Public Health",
+            "Concept of Health Diseases",
+            "Health status assessment",
+            "Health indicators",
+            "Concept of epidemiology, its applications/bio-statistical application",
+            "Primary Health care /Secondary/Tertiary Health care",
+            "Health administrative system and Panchayat Raj System",
+            "Public Health Acts/ Regulations/Laws, Medico-legal issues in Health",
+            "Control and Management of Epidemics/Outbreaks/Pandemics",
+            "Public health considerations during fairs/festivals/disasters",
+            "Integrated medicine- AYUSH and its implications",
+            "Recent advances, current issues of public health importance at national and international levels. National/International/World Health Days/Week"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "CLINICAL SERVICES",
+          "unitTitleMr": "वैद्यकीय सेवा",
+          "topics": [
+            "Clinical aspects in Medicine, Surgery, Obstetrics & Gynaecology, Anaesthesia, Paediatrics, Pharmacology, Psychology, Orthopaedics, Ophthalmology, ENT, Cardiology, Endocrinology",
+            "Role of Hospital in Health care system, planning considerations and norms in hospital establishment, clinical services establishment Act, spectrum of clinical and support services in hospital quality accreditions for hospitals and laboratories diagnostic and treatment protocols for diseases management in National Health Programmes",
+            "Difference between clinical and epidemiological approach. Technical issues in clinical and laboratory diagnosis and various case definitions and treatment of disease. Role of clinicians in disease surveillance, emergency medical services- emergency medical health lines, handling regular bio-medical equipments and advance diagnostic equipments/ units"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "MANAGEMENT SKILLS",
+          "unitTitleMr": "व्यवस्थापन कौशल्ये",
+          "topics": [
+            "Hospital budgeting, procurement procedures, financial regulations, procedures/ protocols/ documentations in Health finance management",
+            "Duties and responsibilities of the various functionaries at hospital/health centres/staff at Dy. Director's office",
+            "Government service rules- salient features –Human resources Management, Employee Union & Welfare Management",
+            "Proposal writing, reports and other essential documentations",
+            "Planning, co-ordination, implementation of all programmes /Public management in hospitals",
+            "Coping skills",
+            "Interpersonal communication skills",
+            "Group dynamics"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "HEALTH & DEVELOPMENT / TECHNOLOGICAL ADVANCES",
+          "unitTitleMr": "आरोग्य आणि विकास / तांत्रिक प्रगती",
+          "topics": [
+            "Role of health in other development sectors and vice-versa",
+            "Implications of development in non-health sector on health care systems",
+            "Recent technological innovation & its impact on health care (Clinical & Preventive)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "APPLIED ASPECTS OF HEALTH CARE MANAGEMENT",
+          "unitTitleMr": "आरोग्य सेवा व्यवस्थापनाचे उपयोजित पैलू",
+          "topics": [
+            "Problem solving exercise: Clinical case problems diagnostics, treatment and management",
+            "Public Health scenarios - Epidemiology, Bio-statistics, Health Management, Demography"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

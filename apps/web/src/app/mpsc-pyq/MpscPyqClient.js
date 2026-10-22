@@ -11,6 +11,7 @@ import Link from 'next/link'
 import OfficialPdfViewer from '@/components/OfficialPdfViewer'
 import { Pagination } from '@/components/Pagination'
 import { trackCtaClick } from '@/lib/analytics'
+import MpscFeedbackModal, { MpscFeedbackFloatingButton } from '@/components/MpscFeedbackModal'
 
 const SUBJECT_PYQ_CARDS = [
   {
@@ -246,6 +247,23 @@ export default function MpscPyqClient({
   const ITEMS_PER_PAGE = 20
   const workspaceRef = useRef(null)
   const tableSectionRef = useRef(null)
+  const [feedbackModalOpen, setFeedbackModalOpen] = useState(false)
+  const [feedbackCategory, setFeedbackCategory] = useState('missing_papers')
+
+  // Unobtrusive feedback trigger after studying / reading papers
+  useEffect(() => {
+    const storageKey = 'mpsc_pyq_hub_feedback_shown'
+    const alreadyShown = typeof window !== 'undefined' ? sessionStorage.getItem(storageKey) : null
+    if (!alreadyShown) {
+      const timer = setTimeout(() => {
+        setFeedbackModalOpen(true)
+        try {
+          sessionStorage.setItem(storageKey, 'true')
+        } catch (e) {}
+      }, 45000)
+      return () => clearTimeout(timer)
+    }
+  }, [])
 
   // Determine active exam and document type (Question Paper vs Answer Key)
   const [activeExamId, setActiveExamId] = useState(() => {
@@ -830,6 +848,17 @@ export default function MpscPyqClient({
                 <span style={{ fontSize: '12px', fontWeight: 600, color: '#334155', background: '#F1F5F9', padding: '4px 10px', borderRadius: '6px' }}>
                   {activeExam.category}
                 </span>
+                <button
+                  type="button"
+                  className="btn-outline"
+                  onClick={() => {
+                    setFeedbackCategory('error_report')
+                    setFeedbackModalOpen(true)
+                  }}
+                  title="Report wrong key, missing PDF or request paper"
+                >
+                  💬 Report / Request Paper
+                </button>
               </div>
             )}
           </div>
@@ -2155,6 +2184,26 @@ export default function MpscPyqClient({
             ))}
           </div>
         </section>
+
+        {/* Aspirant Feedback Desk Floating Button & Modal */}
+        <MpscFeedbackFloatingButton
+          onClick={() => {
+            setFeedbackCategory('missing_papers')
+            setFeedbackModalOpen(true)
+          }}
+        />
+
+        <MpscFeedbackModal
+          isOpen={feedbackModalOpen}
+          onClose={() => setFeedbackModalOpen(false)}
+          examContext={{
+            title: activeExam ? `${activeExam.paperName || activeExam.title} (${activeExam.year})` : 'MPSC Question Papers & Answer Keys',
+            docType: activeDocType === 'ak' ? 'Final Answer Key' : 'Question Paper',
+            category: activeExam?.category || selectedCategory,
+            year: activeExam?.year || selectedYear,
+          }}
+          defaultCategory={feedbackCategory}
+        />
       </div>
     </div>
   )

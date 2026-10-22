@@ -120,7 +120,7 @@ export default function AlertsClient({ initialAlerts = [] }) {
               {/* Content */}
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
-                  <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)' }}>
+                  <h2 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', margin: 0, display: 'inline', fontFamily: 'inherit' }}>
                     {alert.title}
                     {!alert.read && (
                       <span style={{
@@ -129,7 +129,7 @@ export default function AlertsClient({ initialAlerts = [] }) {
                         marginLeft: 8, verticalAlign: 'middle',
                       }} />
                     )}
-                  </span>
+                  </h2>
                   <span style={{ fontSize: 11, color: 'var(--secondary)', flexShrink: 0 }}>
                     {alert.time}
                   </span>

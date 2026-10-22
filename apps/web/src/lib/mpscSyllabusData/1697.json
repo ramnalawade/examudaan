@@ -1,0 +1,67 @@
+{
+  "docId": 1697,
+  "examName": "Lecturer in Chemistry, Government Polytechnics, Group - A",
+  "examNameMr": "रसायनशास्त्र प्राध्यापक, शासकीय तंत्रसंस्थानी, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2012,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer in Chemistry, Government Polytechnics, Group - A",
+      "paperTitleMr": "रसायनशास्त्र प्राध्यापक, शासकीय तंत्रसंस्थानी, गट-अ",
+      "totalMarks": 200,
+      "duration": "3 hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "PHYSICAL CHEMISTRY",
+          "unitTitleMr": "भौतिक रसायनशास्त्र",
+          "topics": [
+            "Structure: Quantum theory: principles and techniques; applications to a particle in a box, harmonic oscillator, rigid rotor and hydrogen atom; valence bond and molecular orbital theories, Huckel approximation; approximate techniques: variation and perturbation; symmetry, point groups; rotational, vibrational, electronic NMR, and ESR spectroscopy.",
+            "Equilibrium: Kinetic theory of gases; First law of thermodynamics, heat, energy, and work; second law of thermodynamics and entropy; third law and absolute entropy; free energy; partial molar quantities; ideal and non-ideal solutions; phase transformation: phase rule and phase diagrams - one, two, and three component systems; activity, activity coefficient, fugacity, and fugacity coefficient; chemical equilibrium, response of chemical equilibrium to temperature and pressure; colligative properties; Debye-Huckel theory; thermodynamics of electrochemical cells; standard electrode potentials: applications - corrosion and energy conversion; molecular partition function (translational, rotational, vibrational, and electronic).",
+            "Kinetics: Rates of chemical reactions, temperature dependence of chemical reactions; elementary, consecutive, and parallel reactions; steady state approximation; theories of reaction rates - collision and transition state theory, relaxation kinetics, kinetics of photochemical reactions and free radical polymerization, homogeneous catalysis, adsorption isotherms and heterogeneous catalysis."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "INORGANIC CHEMISTRY",
+          "unitTitleMr": "अकार्बनिक रसायनशास्त्र",
+          "topics": [
+            "Main group elements: General characteristics, allotropes, structure and reactions of simple and industrially important compounds: boranes, carboranes, silicones, silicates, boron nitride, borazines and phosphazenes. Hydrides, oxides and oxoacids of pnictogens (N, P), chalcogens (S, Se & Te) and halogens, xenon compounds, pseudo halogens and interhalogen compounds. Shapes of molecules and hard-soft acid base concept. Structure and Bonding (VBT) of B, Al, Si, N, P, S, Cl compounds. Allotropes of carbon: graphite, diamond, C60. Synthesis and reactivity of inorganic polymers of Si and P.",
+            "Transition Elements: General characteristics of d and f block elements; coordination chemistry: structure and isomerism, stability, theories of metal-ligand bonding (CFT and LFT), mechanisms of substitution and electron transfer reactions of coordination complexes. Electronic spectra and magnetic properties of transition metal complexes, lanthanides and actinides. Metal carbonyls, metal-metal bonds and metal atom clusters, metallocenes; transition metal complexes with bonds to hydrogen, alkyls, alkenes and arenes; metal carbenes; use of organometallic compounds as catalysts in organic synthesis. Bioinorganic chemistry of Na, K, Mg, Ca, Fe, Co, Zn, Cu and Mo.",
+            "Solids: Crystal systems and lattices, miller planes, crystal packing, crystal defects; Bragg’s Law, ionic crystals, band theory, metals and semiconductors, Different structures of AX, AX2, ABX3 compounds, spinels.",
+            "Instrumental methods of analysis: Atomic absorption and emission spectroscopy including ICP-AES, UV-visible spectrophotometry, NMR, mass, Mossbauer spectroscopy (Fe and Sn), ESR spectroscopy, chromatography including GC and HPLC and electro-analytical methods (Coulometry, cyclic voltammetry, polarography amperometry, and ion selective electrodes)."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "ORGANIC CHEMISTRY",
+          "unitTitleMr": "सेंद्रिय रसायनशास्त्र",
+          "topics": [
+            "Stereochemistry: Chirality of organic molecules with or without chiral centres. Specification of configuration in compounds having one or more stereogenic centres. Enantiotopic and diastereotopic atoms, groups and faces. Stereoselective and stereospecific synthesis. Conformational analysis of acyclic and cyclic compounds. Geometrical isomerism. Configurational and conformational effects on reactivity and selectivity/specificity.",
+            "Reaction mechanism: Methods of determining reaction mechanisms. Nucleophilic and electrophilic substitutions and additions to multiple bonds. Elimination reactions. Reactive intermediates- carbocations, carbanions, carbenes, nitrenes, arynes, free radicals. Molecular rearrangements involving electron deficient atoms.",
+            "Organic synthesis: Synthesis, reactions, mechanisms and selectivity involving the following- alkenes, alkynes, arenes, alcohols, phenols, aldehydes, ketones, carboxylic acids and their derivatives, halides, nitro compounds and amines. Use of compounds of Mg, Li, Cu, B and Si in organic synthesis. Concepts in multistep synthesis- retrosynthetic analysis, disconnections, synthons, synthetic equivalents, reactivity umpolung, selectivity, protection and deprotection of functional groups.",
+            "Pericyclic reactions: Electrocyclic, cycloaddition and sigmatropic reactions. Orbital correlation, FMO and PMO treatments.",
+            "Photochemistry: Basic principles. Photochemistry of alkenes, carbonyl compounds, and arenes. Photooxidation and photoreduction. Di-π-methane rearrangement, Barton reaction.",
+            "Heterocyclic compounds: Structure, preparation, properties and reactions of furan, pyrrole, thiophene, pyridine, indole and their derivatives.",
+            "Biomolecules: Structure, properties and reactions of mono- and di-saccharides, physicochemical properties of amino acids, chemical synthesis of peptides, structural features of proteins, nucleic acids, steroids, terpenoids, carotenoids, and alkaloids.",
+            "Spectroscopy: Principles and applications of UV-visible, IR, NMR and Mass spectrometry in the determination of structures of organic molecules."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

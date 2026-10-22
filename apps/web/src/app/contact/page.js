@@ -169,7 +169,7 @@ export default function ContactPage() {
               }}>
                 <span className="material-symbols-outlined" style={{ fontSize: 24 }}>{card.icon}</span>
               </div>
-              <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>{card.title}</h3>
+              <h2 style={{ fontSize: 18, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>{card.title}</h2>
               <p style={{ fontSize: 13, color: 'var(--secondary)', marginBottom: 12, flexGrow: 1 }}>{card.subtitle}</p>
               <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--on-surface)', marginBottom: 16, wordBreak: 'break-word' }}>
                 {card.value}

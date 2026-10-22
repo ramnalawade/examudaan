@@ -1,0 +1,83 @@
+{
+  "docId": 9941,
+  "examName": "Law Officer, Group-A, Director General and Inspector General of Police, Home Department Examination",
+  "examNameMr": "विधी अधिकारी, गट-अ, पोलीस महासंचालक आणि पोलीस महानिरीक्षक, गृह विभाग परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "Marathi/English",
+  "category": "judicial-legal",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (200 Marks) followed by Interview (50 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge and Law Subject",
+      "paperTitleMr": "सामान्य ज्ञान व विधी विषयक घटक",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Affairs (National and International)",
+          "unitTitleMr": "जागतिक तसेच भारतातील चालू घडामोडी",
+          "topics": [
+            "Political",
+            "Industrial",
+            "Economic",
+            "Social",
+            "Educational",
+            "Geographical",
+            "Astronomical",
+            "Cultural",
+            "Scientific etc."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test / Mental Ability",
+          "unitTitleMr": "बुद्धीमापन चाचणी",
+          "topics": [
+            "Logical reasoning",
+            "Analytical ability",
+            "Problem solving"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Right to Information Act - 2005",
+          "unitTitleMr": "माहितीचा अधिकार कायदा-२००५",
+          "topics": [
+            "Right to Information Act - 2005"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Law",
+          "unitTitleMr": "विधी विषयक घटक",
+          "topics": [
+            "Bhartiya Nagarik Suraksha Sanhita, 2023 (BNSS)",
+            "Civil Procedure Code",
+            "Bhartiya Sakshya Adhiniyam, 2023",
+            "The Bhartiya Nyay Sanhita, 2023",
+            "Constitution of India",
+            "Maharashtra Police Act",
+            "Limitation Act"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा/कमी करण्यात येतील.",
+    "एखाद्या प्रश्नापैकी एकापेक्षा अधिक उत्तरे दिली असल्यास किंवा ज्या उमेदवाराने उत्तरपत्रिकेत पूर्ण वर्तुळ चिन्हांकित केले नसेल अशा प्रश्नाचे उत्तर चुकीचे समजण्यात येऊन त्या प्रश्नाच्या उत्तराकरीता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा/कमी करण्यात येईल.",
+    "वरीलप्रमाणे कार्यपद्धतीचा अवलंब करताना एकूण अंतिम गुणांची बेरीज अपूर्णांकात आली तरीही ती अपूर्णांकातच राहील व पुढील कार्यवाही त्याच्या आधारे करण्यात येईल.",
+    "एखाद्या प्रश्नाचे उत्तर अनुत्तरित असेल तर, अशा प्रकरणी नकारात्मक गुणांची पध्दत लागू असणार नाही.",
+    "अंतिम गुणवत्ता यादी ही वस्तुनिष्ठ परीक्षेतील व मुलाखतीतील एकत्रित गुणांवर आधारित राहील."
+  ]
+}

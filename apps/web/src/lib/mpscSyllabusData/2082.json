@@ -1,0 +1,41 @@
+{
+  "docId": 2082,
+  "examName": "Maharashtra Gazetted Technical Services Preliminary and Main Competitive Examination",
+  "examNameMr": "महाराष्ट्र राजपत्रित तांत्रिक सेवा पूर्व आणि मुख्य स्पर्धा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2021,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Engineering Aptitude",
+      "paperTitleMr": "सामान्य अभ्यास आणि अभियांत्रिकी अभियोग्यता",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Events and General Science",
+          "unitTitleMr": "चालू घडामोडी आणि सामान्य विज्ञान",
+          "topics": [
+            "Current events of national and international importance",
+            "General Science and Technology - Physics, Chemistry",
+            "Remote Sensing, Aerial and drone photography, GIS and its application",
+            "Information and communication technology",
+            "General mental ability (logical reasoning, analytical ability, problem solving, basic numeracy)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

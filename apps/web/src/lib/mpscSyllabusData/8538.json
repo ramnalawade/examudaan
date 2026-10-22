@@ -1,0 +1,110 @@
+{
+  "docId": 8538,
+  "examName": "Assistant Director / Research Officer / Project Officer, Group-A, Other Backward Bahujan Welfare Department",
+  "examNameMr": "सहायक संचालक/संशोधन अधिकारी/प्रकल्प अधिकारी, गट-अ, इतर मागास बहुजन कल्याण विभाग",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "Marathi",
+  "category": "departmental",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "१) लेखी परीक्षा - २०० गुण २) मुलाखत - ५० गुण",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Social Welfare and Social Welfare Administration etc. Knowledge Based",
+      "paperTitleMr": "समाज कल्याण व समाज कल्याण प्रशासन इत्यादी ज्ञानावर आधारित",
+      "totalMarks": 200,
+      "duration": "एक तास",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी - सर्वसामान्य शब्दसंग्रह, वाक्यरचना, व्याकरण, म्हणी व वाक्यप्रचार यांचा अर्थ आणि उपयोग इ."
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी - Common Vocabulary, Sentence structure, Grammar, use of Idioms and phrases and their meaning etc."
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Social Work Study",
+          "unitTitleMr": "समाज कल्याण अध्ययन"
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Human Needs and Personality Development",
+          "unitTitleMr": "मानवी गरजाrd व व्यक्तित्व विकास"
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Social Welfare Administration",
+          "unitTitleMr": "समाज कल्याण प्रशासन"
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Indian Social Problems, Causes and Remedies",
+          "unitTitleMr": "भारतीय सामाजिक समस्या, कारणे व उपाय"
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Social Legislation, Arthashastra and Laws related to Social Work",
+          "unitTitleMr": "समाजकार्याच्या संबंधित समाजशास्त्र, अर्थशास्त्र व कायदे"
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Fundamental Research",
+          "unitTitleMr": "मुळभूत संशोधन ज्ञान"
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "General Studies",
+          "unitTitleMr": "सामान्य अध्ययन"
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Geography of India with special reference to Maharashtra",
+          "unitTitleMr": "भारताचा विशेषतः महाराष्ट्राचा भूगोल"
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Indian Polity, Welfare State",
+          "unitTitleMr": "भारतीय राज्यव्यवस्था, कल्याणकारी राज्य"
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "National Human Rights Commission and State Human Rights Commission, Commissions",
+          "unitTitleMr": "राष्ट्रीय मानव अधिकार आयोग व राज्य मानव अधिकार आयोग"
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Indian Economy, Economic Development and Planning",
+          "unitTitleMr": "भारतीय अर्थव्यवस्था, आर्थिक विकास व नियोजन"
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "General Science, Health and Nutrition, Environment",
+          "unitTitleMr": "सामान्य विज्ञान, आरोग्य व पोषक आहार, पर्यावरण"
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी"
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा / कमी करण्यात येतील.",
+    "एखाद्या प्रश्नाच्या एकापेक्षा अधिक उत्तरे दिली असल्यास अथवा ज्या उमेदवाराने उत्तरपत्रिकेत पूर्ण वर्तुळ चिन्हांकित केले नसेल अशा प्रश्नाचे उत्तर चुकीचे समजण्यात येऊन त्या प्रश्नाच्या उत्तराकरीता २५% किंवा १/४ एवढे एकूण गुणांमधून वजा/कमी करण्यात येतील.",
+    "वरीलप्रमाणे प्रागुपदाचा अवलंब करताना एकूण अंतिम गुणांची बेरीज अपूर्णांकात आली तरीही तो अपूर्णांकातच राहील व पुढील कार्यवाही त्याच्या आधारे करण्यात येईल.",
+    "एखाद्या प्रश्नाचे उत्तर अनुत्तरीत असेल तर, अशा प्रकरणी नकारात्मक गुणांची पद्धत लागू असणार नाही.",
+    "अंतिम गुणवत्ता यादी ही वस्तुनिष्ठ परीक्षेतील व मुलाखतीतील एकत्रित गुणांवर आधारीत राहील."
+  ]
+}

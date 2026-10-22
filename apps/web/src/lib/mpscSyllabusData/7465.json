@@ -1,0 +1,117 @@
+{
+  "docId": 7465,
+  "examName": "Forest Statistician General State Service, Group-A and Research Officer/Statistical Officer General State Service, Group-B (Planning Department) - Syllabus",
+  "examNameMr": "वन सांख्यिकीशास्त्रज्ञ महाराष्ट्र राजपत्रित सेवा, गट-अ आणि संशोधन अधिकारी / सांख्यिकी अधिकारी महाराष्ट्र राजपत्रित सेवा, गट-ब (नियोजन विभाग) - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Statistics Syllabus",
+      "paperTitleMr": "सांख्यिकी अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Data Collection",
+          "unitTitleMr": "माहिती संकलन",
+          "topics": [
+            "Data Collection methods and sources"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Presentation of Data",
+          "unitTitleMr": "माहितीचे प्रस्तुतीकरण",
+          "topics": [
+            "Tabulation, diagrammatic and graphical representation of data"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Elementary Statistical Methods",
+          "unitTitleMr": "प्राथमिक सांख्यिकीय पद्धती",
+          "topics": [
+            "Measures of central tendency, dispersion, skewness and kurtosis"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Probability",
+          "unitTitleMr": "संभाव्यता",
+          "topics": [
+            "Probability theory, random variables and probability distributions"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Theory of Statistical Inference",
+          "unitTitleMr": "सांख्यिकीय अनुमानाचा सिद्धांत",
+          "topics": [
+            "Estimation theory and testing of hypotheses"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Interpretation of Linear Models",
+          "unitTitleMr": "रৈखिक मॉडेलचे अर्थनिर्णयन",
+          "topics": [
+            "Linear regression, correlation and analysis of variance"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Sampling Methods",
+          "unitTitleMr": "नमुना पद्धती",
+          "topics": [
+            "Simple random sampling, stratified sampling, systematic sampling"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Index Numbers and Time Series",
+          "unitTitleMr": "निर्देशांक आणि कालश्रेणी",
+          "topics": [
+            "Construction of index numbers and analysis of time series data"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Statistical Organizations in India",
+          "unitTitleMr": "भारतातील सांख्यिकीय संस्था",
+          "topics": [
+            "Role and functions of statistical organizations in India"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Vital Statistics in India",
+          "unitTitleMr": "भारतातील जीवित सांख्यिकी",
+          "topics": [
+            "Rates and ratios, mortality and fertility measures"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "National Income Estimation",
+          "unitTitleMr": "राष्ट्रीय उत्पन्न अंदाज",
+          "topics": [
+            "Concepts and methods of national income estimation in India"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

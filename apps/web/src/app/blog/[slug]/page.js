@@ -8,6 +8,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import styles from './blogPost.module.css'
 import { getAllBlogPosts, getBlogPostBySlug, getAllBlogSlugs } from '../../../lib/blogData'
+import BlogEngagementHub from '../../../components/BlogEngagementHub'
+import { fitDescription } from '../../../lib/seoMetadata'
 
 export async function generateStaticParams() {
   const slugs = getAllBlogSlugs()
@@ -21,27 +23,39 @@ export async function generateMetadata({ params }) {
 
   const canonicalUrl = `https://examudaan.in/blog/${post.slug}`
 
+  // Title: max 60 chars, drop brand if needed
+  let title = `${post.title} | ExamUdaan`
+  if (title.length > 60) {
+    title = post.title
+  }
+  if (title.length > 60) {
+    title = post.title.slice(0, 57).trim() + '...'
+  }
+
+  const description = fitDescription(post.excerpt || post.title, 'Read full guide on ExamUdaan.')
+
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: { absolute: title },
+    description,
     keywords: [post.primaryKeyword, ...(post.secondaryKeywords || [])],
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${post.title} — ExamUdaan`,
-      description: post.excerpt,
+      title,
+      description,
       url: canonicalUrl,
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: new Date().toISOString(),
-      authors: [post.author?.name || 'ExamUdaan Academic Mentor'],
+      authors: [post.author?.name || 'ExamUdaan Blog'],
       tags: [post.category, post.primaryKeyword],
+      siteName: 'ExamUdaan',
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
+      title,
+      description,
     },
   }
 }
@@ -56,6 +70,8 @@ export default async function BlogPostPage({ params }) {
   const allPosts = getAllBlogPosts()
   const relatedPosts = allPosts.filter(p => p.slug !== post.slug && (p.category === post.category || p.featured)).slice(0, 3)
 
+  const quickFacts = post.quickFacts || getQuickFactsForPost(post)
+
   // ── Schema.org JSON-LD Structured Data ──
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -65,9 +81,9 @@ export default async function BlogPostPage({ params }) {
     datePublished: post.publishedAt,
     dateModified: new Date().toISOString(), // Signals dynamic continuous freshness to Google
     author: {
-      '@type': 'Person',
-      name: post.author.name,
-      jobTitle: post.author.role,
+      '@type': 'Organization',
+      name: post.author?.name || 'ExamUdaan Blog',
+      url: 'https://examudaan.in',
     },
     publisher: {
       '@type': 'Organization',
@@ -148,13 +164,13 @@ export default async function BlogPostPage({ params }) {
             <span>›</span>
             <Link href="/blog">Blog & Study Guides</Link>
             <span>›</span>
-            <span style={{ color: 'var(--on-surface, #1E293B)', fontWeight: 600 }}>{post.category}</span>
+            <span className={styles.breadcrumbCurrent}>{post.category}</span>
           </nav>
 
           <div className={styles.metaRowTop}>
             <span className={styles.categoryBadge}>{post.category}</span>
             <span className={styles.freshnessBadge}>
-              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>verified</span>
+              <span className="material-symbols-outlined">verified</span>
               <span>Updated for 2026 Examination Cycle</span>
             </span>
           </div>
@@ -165,11 +181,11 @@ export default async function BlogPostPage({ params }) {
           <div className={styles.authorBar}>
             <div className={styles.authorLeft}>
               <div className={styles.authorAvatar}>
-                <span className="material-symbols-outlined">{post.author.avatar || 'person'}</span>
+                <span className="material-symbols-outlined">{post.author?.avatar || 'edit_note'}</span>
               </div>
               <div>
-                <div className={styles.authorName}>{post.author.name}</div>
-                <div className={styles.authorRole}>{post.author.role}</div>
+                <div className={styles.authorName}>{post.author?.name || 'ExamUdaan Blog'}</div>
+                <div className={styles.authorRole}>{post.author?.role || 'Internal Blog Editor'}</div>
               </div>
             </div>
 
@@ -179,6 +195,56 @@ export default async function BlogPostPage({ params }) {
               <span>{new Date(post.publishedAt).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' })}</span>
             </div>
           </div>
+
+          {/* ── Executive Quick Facts Matrix Bar ── */}
+          {quickFacts && (
+            <div className={styles.quickFactsBar}>
+              <div className={styles.quickFactsTitleRow}>
+                <h3 className={styles.quickFactsHeading}>
+                  <span className={`material-symbols-outlined ${styles.quickFactsHeadingIcon}`}>speed</span>
+                  <span>Executive Quick Facts &amp; Salary Matrix</span>
+                </h3>
+              </div>
+              <div className={styles.quickFactsGrid}>
+                {quickFacts.payScale && (
+                  <div className={styles.quickFactCard}>
+                    <span className={styles.quickFactLabel}>7th Pay Level</span>
+                    <span className={styles.quickFactValue}>{quickFacts.payScale}</span>
+                  </div>
+                )}
+                {quickFacts.inHandSalary && (
+                  <div className={styles.quickFactCard}>
+                    <span className={styles.quickFactLabel}>Est. In-Hand Pay</span>
+                    <span className={styles.quickFactValue}>{quickFacts.inHandSalary}</span>
+                  </div>
+                )}
+                {quickFacts.examStage && (
+                  <div className={styles.quickFactCard}>
+                    <span className={styles.quickFactLabel}>Exam Format</span>
+                    <span className={styles.quickFactValue}>{quickFacts.examStage}</span>
+                  </div>
+                )}
+                {quickFacts.negativeMarking && (
+                  <div className={styles.quickFactCard}>
+                    <span className={styles.quickFactLabel}>Negative Marking</span>
+                    <span className={styles.quickFactValue}>{quickFacts.negativeMarking}</span>
+                  </div>
+                )}
+                {quickFacts.ageLimit && (
+                  <div className={styles.quickFactCard}>
+                    <span className={styles.quickFactLabel}>Age Criteria</span>
+                    <span className={styles.quickFactValue}>{quickFacts.ageLimit}</span>
+                  </div>
+                )}
+                {quickFacts.qualification && (
+                  <div className={styles.quickFactCard}>
+                    <span className={styles.quickFactLabel}>Min. Qualification</span>
+                    <span className={styles.quickFactValue}>{quickFacts.qualification}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
@@ -187,7 +253,7 @@ export default async function BlogPostPage({ params }) {
         {/* Sticky Desktop TOC & Action Widget */}
         <aside className={styles.sidebarTOC}>
           <div className={styles.tocTitle}>
-            <span className="material-symbols-outlined" style={{ fontSize: 18, color: 'var(--primary)' }}>toc</span>
+            <span className={`material-symbols-outlined ${styles.tocIcon}`}>toc</span>
             <span>Table of Contents</span>
           </div>
           <ul className={styles.tocList}>
@@ -198,10 +264,15 @@ export default async function BlogPostPage({ params }) {
                 </a>
               </li>
             ))}
+            <li>
+              <a href="#interactive-prep-hub" className={styles.tocLink}>
+                {post.sections.length + 1}. Practice Hub & 10-Min Study Sprint
+              </a>
+            </li>
             {post.faqs && post.faqs.length > 0 && (
               <li>
                 <a href="#frequently-asked-questions" className={styles.tocLink}>
-                  {post.sections.length + 1}. Frequently Asked Questions
+                  {post.sections.length + 2}. Frequently Asked Questions
                 </a>
               </li>
             )}
@@ -211,7 +282,7 @@ export default async function BlogPostPage({ params }) {
           {post.relatedTool && (
             <div className={styles.sidebarPromo}>
               <div className={styles.promoTitle}>
-                <span className="material-symbols-outlined" style={{ fontSize: 16 }}>bolt</span>
+                <span className={`material-symbols-outlined ${styles.promoIcon}`}>bolt</span>
                 <span>Active Simulator</span>
               </div>
               <p className={styles.promoText}>{post.relatedTool.title}</p>
@@ -244,10 +315,20 @@ export default async function BlogPostPage({ params }) {
               </div>
               <Link href={post.relatedTool.link} className={styles.toolActionBtn}>
                 <span>Practice Now</span>
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
+                <span className={`material-symbols-outlined ${styles.btnArrowIcon}`}>arrow_forward</span>
               </Link>
             </div>
           )}
+
+          {/* ── Contextual Practice Hub & 10-Minute Study Sprint ── */}
+          <div id="interactive-prep-hub">
+            <BlogEngagementHub
+              postSlug={post.slug}
+              category={post.category}
+              primaryKeyword={post.primaryKeyword}
+              relatedResources={post.relatedResources}
+            />
+          </div>
 
           {/* FAQ Section */}
           {post.faqs && post.faqs.length > 0 && (
@@ -281,7 +362,7 @@ export default async function BlogPostPage({ params }) {
                 rel="noopener noreferrer"
                 className={styles.whatsappShareBtn}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: 18 }}>chat</span>
+                <span className={`material-symbols-outlined ${styles.whatsappIcon}`}>chat</span>
                 <span>Share on WhatsApp</span>
               </a>
             </div>
@@ -289,36 +370,26 @@ export default async function BlogPostPage({ params }) {
 
           {/* ── Related Reading Grid ── */}
           {relatedPosts.length > 0 && (
-            <div style={{ marginTop: 60 }}>
-              <h3 style={{ fontFamily: 'var(--font-outfit)', fontSize: 22, fontWeight: 800, color: 'var(--on-surface, #1E293B)', margin: '0 0 20px' }}>
+            <div className={styles.furtherReadingWrapper}>
+              <h3 className={styles.furtherReadingTitle}>
                 Recommended Further Reading
               </h3>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+              <div className={styles.relatedGrid}>
                 {relatedPosts.map(rel => (
                   <Link
                     key={rel.slug}
                     href={`/blog/${rel.slug}`}
-                    style={{
-                      background: 'var(--surface-container-lowest, #FFFFFF)',
-                      border: '1.5px solid var(--outline-variant, #E2E8F0)',
-                      borderRadius: 14,
-                      padding: '18px',
-                      textDecoration: 'none',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                      transition: 'border-color 0.15s, transform 0.15s',
-                    }}
+                    className={styles.relatedCard}
                   >
                     <div>
-                      <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--primary, #EA580C)', textTransform: 'uppercase' }}>
+                      <span className={styles.relatedCategory}>
                         {rel.category}
                       </span>
-                      <h4 style={{ fontSize: 15, fontWeight: 700, color: 'var(--on-surface, #1E293B)', margin: '8px 0 0', lineHeight: 1.4 }}>
+                      <h4 className={styles.relatedTitle}>
                         {rel.title}
                       </h4>
                     </div>
-                    <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--primary, #EA580C)', marginTop: 14 }}>
+                    <span className={styles.relatedLink}>
                       Read Guide →
                     </span>
                   </Link>
@@ -330,6 +401,55 @@ export default async function BlogPostPage({ params }) {
       </div>
     </article>
   )
+}
+
+// ── Smart Quick Facts Fallback Generator ──
+function getQuickFactsForPost(post) {
+  const kw = (post.primaryKeyword || '').toLowerCase()
+  const title = (post.title || '').toLowerCase()
+
+  if (kw.includes('police') || title.includes('police')) {
+    return {
+      payScale: 'Level S-6 (₹21,700 – ₹69,100) / S-14 (PSI)',
+      inHandSalary: '₹34,000 – ₹38,000 / month (₹58,000 for PSI)',
+      examStage: 'Physical Test (50 Marks) + Written (100 Marks)',
+      negativeMarking: 'Zero Negative Marking (Constable) / -0.25 (PSI)',
+      ageLimit: '18 to 28 Yrs (Open) / Up to 33 Yrs (Reserved)',
+      qualification: '12th Pass (HSC) / Degree for PSI',
+    }
+  }
+
+  if (kw.includes('talathi') || title.includes('talathi') || kw.includes('clerk') || kw.includes('tcs')) {
+    return {
+      payScale: 'Level S-8 (₹25,500 – ₹81,100) / S-6 (Clerk)',
+      inHandSalary: '₹38,000 – ₹42,000 / month',
+      examStage: 'Single CBT Exam (100 Questions | 200 Marks)',
+      negativeMarking: '0 Negative Penalty (Normalized Score)',
+      ageLimit: '18 to 38 Yrs (Open) / Up to 43 Yrs (OBC/SC/ST)',
+      qualification: 'Graduate in any discipline + MS-CIT',
+    }
+  }
+
+  if (title.includes('class 1') || title.includes('deputy collector') || title.includes('tehsildar')) {
+    return {
+      payScale: 'Level S-20 (₹56,100 – ₹1,77,500)',
+      inHandSalary: '₹88,000 – ₹1,08,000 / month',
+      examStage: 'Prelims (400M) + Mains (1750M) + Interview (275M)',
+      negativeMarking: '-0.25 (1/4th Penalty in Prelims)',
+      ageLimit: '19 to 38 Yrs (Open) / Up to 43 Yrs (OBC/SC/ST)',
+      qualification: 'Bachelor’s Degree in any faculty',
+    }
+  }
+
+  // Default MPSC State Services / Combined
+  return {
+    payScale: 'Level S-14 (₹38,600 – ₹1,22,800) to S-20',
+    inHandSalary: '₹58,000 – ₹95,000 / month',
+    examStage: 'Prelims (100 Qs / 60 Min) + Mains Examination',
+    negativeMarking: '-0.25 (1/4th Penalty in Prelims)',
+    ageLimit: '19 to 38 Yrs (Open) / Up to 43 Yrs (OBC/SC/ST)',
+    qualification: 'Bachelor’s Degree in any discipline',
+  }
 }
 
 // ---- Lightweight Markdown to HTML Renderer ----

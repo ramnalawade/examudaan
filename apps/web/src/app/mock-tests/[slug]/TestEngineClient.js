@@ -14,6 +14,7 @@ import {
   trackMockTestAnswerReview,
 } from '@/lib/analytics'
 import { getSyllabusForMockTest } from '@/lib/syllabusData'
+import MpscFeedbackModal from '@/components/MpscFeedbackModal'
 import styles from './testEngine.module.css'
 
 export default function TestEngineClient({ test }) {
@@ -26,6 +27,33 @@ export default function TestEngineClient({ test }) {
   const [paletteFilter, setPaletteFilter] = useState('all') // 'all' | section.id
   const matchedSyllabus = useMemo(() => getSyllabusForMockTest(test), [test])
   const [result, setResult] = useState(null) // evaluation result metrics
+  const [feedbackModalOpen, setFeedbackModalOpen] = useState(false)
+
+  // ── Personalized Roadmap & Lead Capture State ──
+  const [candidateName, setCandidateName] = useState('')
+  const [candidatePhone, setCandidatePhone] = useState('')
+  const [targetExam, setTargetExam] = useState(test?.exam || 'MPSC State Services')
+  const [isSavingLead, setIsSavingLead] = useState(false)
+  const [hasSavedLead, setHasSavedLead] = useState(false)
+  const [roadmapData, setRoadmapData] = useState(null)
+  const [leadError, setLeadError] = useState('')
+
+  // Automatically prompt feedback modal after completing test
+  useEffect(() => {
+    if (phase === 'submitted' && test) {
+      const storageKey = `mpsc_feedback_shown_${test.slug || 'mpsc'}`
+      const alreadyShown = typeof window !== 'undefined' ? sessionStorage.getItem(storageKey) : null
+      if (!alreadyShown) {
+        const timer = setTimeout(() => {
+          setFeedbackModalOpen(true)
+          try {
+            sessionStorage.setItem(storageKey, 'true')
+          } catch (e) {}
+        }, 1600)
+        return () => clearTimeout(timer)
+      }
+    }
+  }, [phase, test])
 
   // Track mock test page view on mount
   useEffect(() => {
@@ -182,7 +210,78 @@ export default function TestEngineClient({ test }) {
       percentage: percent,
       rank: stateRank ? `#${stateRank}` : '',
     })
+
+    // Auto-record attempt in database and pre-fetch personalized roadmap
+    try {
+      fetch('/api/mock-tests/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          test_slug: test.slug,
+          test_title: test.title,
+          score: parseFloat(marksEarned.toFixed(2)),
+          max_marks: maxMarks,
+          percentage: percent,
+          accuracy: (correct + wrong > 0) ? Math.round((correct / (correct + wrong)) * 100) : 0,
+          section_breakdown: sectionStats,
+          target_exam: test.exam || 'MPSC State Services',
+        }),
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data?.roadmap) {
+            setRoadmapData(data.roadmap)
+          }
+        })
+        .catch(err => console.warn('[mock-tests] Auto-submit background ping error:', err))
+    } catch (e) {}
   }, [phase, answers, test])
+
+  // Lead capture submission handler
+  const handleSaveScorecard = async (e) => {
+    if (e && typeof e.preventDefault === 'function') {
+      e.preventDefault()
+    }
+    const cleanPhone = String(candidatePhone || '').trim().replace(/[^\d]/g, '')
+    if (cleanPhone.length < 10) {
+      setLeadError('Please enter a valid 10-digit mobile / WhatsApp number')
+      return
+    }
+    setLeadError('')
+    setIsSavingLead(true)
+
+    try {
+      const res = await fetch('/api/mock-tests/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          test_slug: test.slug,
+          test_title: test.title,
+          candidate_name: candidateName,
+          candidate_phone: cleanPhone,
+          target_exam: targetExam,
+          score: result?.marksEarned || 0,
+          max_marks: result?.maxMarks || 100,
+          percentage: result?.percent || 0,
+          accuracy: (result?.correct + result?.wrong > 0)
+            ? Math.round((result.correct / (result.correct + result.wrong)) * 100)
+            : 0,
+          section_breakdown: result?.sectionStats || [],
+        }),
+      })
+
+      const data = await res.json()
+      if (data?.roadmap) {
+        setRoadmapData(data.roadmap)
+      }
+      setHasSavedLead(true)
+    } catch (err) {
+      console.error('Failed to save lead scorecard:', err)
+      setHasSavedLead(true) // Still show roadmap even if network issue
+    } finally {
+      setIsSavingLead(false)
+    }
+  }
 
   if (!test) return null
 
@@ -335,6 +434,200 @@ export default function TestEngineClient({ test }) {
                 <span className={styles.rankBadge}>Top {result.percentile}%</span>
                 <span className={styles.stateRankText}>State Rank #{result.stateRank}</span>
               </div>
+            </div>
+
+            {/* ── Personalized Preparation Roadmap & Save Scorecard ── */}
+            <div className={styles.roadmapLeadCard}>
+              <div className={styles.roadmapLeadHeader}>
+                <div className={styles.roadmapLeadBadge}>
+                  <span className="material-symbols-outlined">psychology</span>
+                  <span>Free Personalized AI Exam Engine</span>
+                </div>
+                <h3 className={styles.roadmapLeadTitle}>
+                  {hasSavedLead
+                    ? '🎯 Your Personalized Preparation Blueprint'
+                    : 'Unlock Your Personalized Exam Roadmap & Save Scorecard'}
+                </h3>
+                <p className={styles.roadmapLeadDesc}>
+                  {hasSavedLead
+                    ? `Based on your ${result.percent}% score in ${test.title}, here are your diagnostic weak areas, targeted syllabus links, matching live jobs, and curated AI tools.`
+                    : 'Save this scorecard to your phone to diagnose your weak subjects, track your rank progress across tests, and get curated syllabus, job alerts, and AI tools tailored to your exam.'}
+                </p>
+
+                <div className={styles.roadmapValuePills}>
+                  <span className={styles.roadmapValuePillItem}>
+                    <span className="material-symbols-outlined">menu_book</span>
+                    <span>Targeted Weak-Topic Syllabus &amp; PYQs</span>
+                  </span>
+                  <span className={styles.roadmapValuePillItem}>
+                    <span className="material-symbols-outlined">work</span>
+                    <span>Live Eligible Govt Job Alerts</span>
+                  </span>
+                  <span className={styles.roadmapValuePillItem}>
+                    <span className="material-symbols-outlined">smart_toy</span>
+                    <span>Curated AI Study Tools</span>
+                  </span>
+                  <span className={styles.roadmapValuePillItem}>
+                    <span className="material-symbols-outlined">chat</span>
+                    <span>WhatsApp Scorecard &amp; Rank Updates</span>
+                  </span>
+                </div>
+              </div>
+
+              {/* Form (If not saved yet) */}
+              {!hasSavedLead ? (
+                <div className={styles.leadFormContainer}>
+                  <form onSubmit={handleSaveScorecard}>
+                    <div className={styles.leadFormInputs}>
+                      <input
+                        type="text"
+                        placeholder="Your Full Name"
+                        value={candidateName}
+                        onChange={(e) => setCandidateName(e.target.value)}
+                        className={styles.leadInput}
+                        required
+                      />
+                      <input
+                        type="tel"
+                        placeholder="WhatsApp Number (10 Digits)"
+                        value={candidatePhone}
+                        onChange={(e) => setCandidatePhone(e.target.value)}
+                        className={styles.leadInput}
+                        maxLength={15}
+                        required
+                      />
+                      <select
+                        value={targetExam}
+                        onChange={(e) => setTargetExam(e.target.value)}
+                        className={styles.leadSelect}
+                        aria-label="Target Exam"
+                      >
+                        <option value="MPSC State Services">MPSC State Services (Rajyaseva)</option>
+                        <option value="MPSC Combined Group B & C">MPSC Combined (Group B &amp; C)</option>
+                        <option value="Maharashtra Police Bharti">Maharashtra Police Bharti</option>
+                        <option value="Maharashtra Talathi Bharti">Maharashtra Talathi Bharti</option>
+                        <option value="Banking (IBPS PO / Clerk / SBI)">Banking (IBPS / SBI / RBI)</option>
+                        <option value="SSC CGL / CHSL">SSC (CGL / CHSL / MTS)</option>
+                        <option value="UPSC Civil Services">UPSC Civil Services (IAS / IPS)</option>
+                        <option value="Railway (RRB NTPC / Group D)">Railway Recruitment (RRB)</option>
+                      </select>
+                      <button
+                        type="submit"
+                        disabled={isSavingLead}
+                        className={styles.leadSubmitBtn}
+                      >
+                        <span className="material-symbols-outlined">send</span>
+                        <span>{isSavingLead ? 'Saving...' : 'Save & Unlock Roadmap 🎯'}</span>
+                      </button>
+                    </div>
+                    {leadError && (
+                      <div className={styles.leadErrorText}>
+                        <span className="material-symbols-outlined">error</span>
+                        <span>{leadError}</span>
+                      </div>
+                    )}
+                    <div className={styles.leadPrivacyNotice}>
+                      <span className="material-symbols-outlined">verified_user</span>
+                      <span>100% Free &amp; Spam-Free. We only send syllabus breakdowns and matching recruitment notifications.</span>
+                    </div>
+                  </form>
+                </div>
+              ) : (
+                /* Unlocked Personalized Results Area */
+                <div className={styles.roadmapUnlockedContent}>
+                  {roadmapData?.diagnosticMessage && (
+                    <div className={styles.diagnosticBox}>
+                      <span className={`material-symbols-outlined ${styles.diagnosticIcon}`}>
+                        error_outline
+                      </span>
+                      <div className={styles.diagnosticText}>
+                        <strong>Diagnostic Weakness Analysis: </strong>
+                        {roadmapData.diagnosticMessage}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className={styles.recGrid}>
+                    {roadmapData?.syllabusLink && (
+                      <Link href={roadmapData.syllabusLink.path} className={styles.recCard}>
+                        <div>
+                          <div className={styles.recCardTop}>
+                            <span className={`material-symbols-outlined ${styles.recCardIcon}`}>menu_book</span>
+                            <span className={styles.recCardTitle}>Targeted Syllabus &amp; PYQ Papers</span>
+                          </div>
+                          <p className={styles.recCardDesc}>{roadmapData.syllabusLink.title}</p>
+                        </div>
+                        <span className={styles.recCardAction}>
+                          <span>Open Syllabus Tracker</span>
+                          <span className="material-symbols-outlined">arrow_forward</span>
+                        </span>
+                      </Link>
+                    )}
+
+                    {roadmapData?.jobsLink && (
+                      <Link href={roadmapData.jobsLink.path} className={styles.recCard}>
+                        <div>
+                          <div className={styles.recCardTop}>
+                            <span className={`material-symbols-outlined ${styles.recCardIcon}`}>work</span>
+                            <span className={styles.recCardTitle}>Live Government Job Matches</span>
+                          </div>
+                          <p className={styles.recCardDesc}>{roadmapData.jobsLink.title}</p>
+                        </div>
+                        <span className={styles.recCardAction}>
+                          <span>View Open Vacancies</span>
+                          <span className="material-symbols-outlined">arrow_forward</span>
+                        </span>
+                      </Link>
+                    )}
+                  </div>
+
+                  {/* AI Tools for Weak Topics */}
+                  {roadmapData?.aiTools && roadmapData.aiTools.length > 0 && (
+                    <div className={styles.aiRecSection}>
+                      <div className={styles.aiRecSectionTitle}>
+                        <span className="material-symbols-outlined">smart_toy</span>
+                        <span>Curated AI Study Tools to Fix Your Bottlenecks:</span>
+                      </div>
+                      <div className={styles.aiRecGrid}>
+                        {roadmapData.aiTools.map((tool, i) => (
+                          <Link key={i} href={tool.path} className={styles.aiRecCard}>
+                            <div>
+                              <div className={styles.aiRecCardHead}>
+                                <span className="material-symbols-outlined">{tool.icon || 'auto_awesome'}</span>
+                                <span className={styles.aiRecCardName}>{tool.name}</span>
+                              </div>
+                              <p className={styles.aiRecCardBenefit}>{tool.benefit}</p>
+                            </div>
+                            <span className={styles.aiRecCardLink}>
+                              <span>View 10-Min Masterclass &amp; Prompts</span>
+                              <span className="material-symbols-outlined">arrow_forward</span>
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* WhatsApp Share Bar */}
+                  <div className={styles.whatsappShareBar}>
+                    <div className={styles.saveConfirmedNote}>
+                      <span className="material-symbols-outlined">check_circle</span>
+                      <span>Scorecard &amp; Personalized Roadmap Saved Successfully!</span>
+                    </div>
+                    <a
+                      href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+                        `🚨 I scored ${result.percent}% on ExamUdaan's official mock test for ${test.title}! State Rank: #${result.stateRank}. Can you beat my score? Check your rank here: https://examudaan.in/mock-tests/${test.slug}`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.whatsappShareBtn}
+                    >
+                      <span className="material-symbols-outlined">share</span>
+                      <span>Share Scorecard on WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Category Cutoff Gauge */}
@@ -514,9 +807,28 @@ export default function TestEngineClient({ test }) {
                   📖 {matchedSyllabus.name} अभ्यासक्रम →
                 </Link>
               )}
+              <button
+                type="button"
+                className={styles.feedbackTriggerBtn}
+                onClick={() => setFeedbackModalOpen(true)}
+              >
+                📝 Feedback & Report (अभिप्राय / त्रुटी)
+              </button>
               <Link href="/mock-tests" className="btn-primary">Browse All Mock Tests →</Link>
             </div>
           </div>
+          <MpscFeedbackModal
+            isOpen={feedbackModalOpen}
+            onClose={() => setFeedbackModalOpen(false)}
+            examContext={{
+              title: test.title,
+              type: 'mock_test',
+              slug: test.slug,
+              score: result ? `${result.marksEarned}/${result.maxMarks} (${result.percent}%)` : null,
+              rank: result?.stateRank ? `#${result.stateRank}` : null,
+            }}
+            defaultCategory="general_feedback"
+          />
         </div>
       </main>
     )

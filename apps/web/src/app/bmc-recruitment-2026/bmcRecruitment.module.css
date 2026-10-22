@@ -1,0 +1,315 @@
+/* ============================================================
+   bmcRecruitment.module.css — BMC / MCGM Recruitment 2026 Hub
+   ExamUdaan.in | Zero inline styles, fully mobile responsive
+   ============================================================ */
+
+.pageWrapper {
+  background: #fffbf5;
+  min-height: 100vh;
+  padding-bottom: 72px;
+}
+
+.hero {
+  background: linear-gradient(180deg, #eff6ff 0%, #fffbf5 100%);
+  padding: 40px 0 32px;
+  border-bottom: 1px solid #bfdbfe;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.pillBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pillBadgeSuccess {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.updatedDate {
+  font-size: 13px;
+  color: #78716c;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.heroTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1c1917;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.heroTitleHighlight {
+  color: #2563eb;
+  border-bottom: 3px solid #93c5fd;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  color: #57534e;
+  line-height: 1.6;
+  max-width: 860px;
+  margin: 0 0 24px;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btnPrimaryPortal {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btnPrimaryPortal:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  background: #ffffff;
+  color: #1c1917;
+  border: 1px solid #bfdbfe;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s;
+}
+
+.btnSecondary:hover {
+  background: #eff6ff;
+}
+
+.section {
+  padding: 40px 0 20px;
+}
+
+.sectionHeader {
+  margin-bottom: 24px;
+}
+
+.sectionTag {
+  font-size: 12px;
+  font-weight: 800;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.sectionTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1c1917;
+  margin: 0 0 8px;
+}
+
+.sectionDesc {
+  font-size: 15px;
+  color: #78716c;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Cadres Grid */
+.cadresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.cadreCard {
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.cadreRole {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1917;
+  margin: 0 0 6px;
+}
+
+.cadreRoleMr {
+  font-size: 13px;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cadreDetailRow {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 8px;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #57534e;
+}
+
+.cadreVal {
+  font-weight: 700;
+  color: #1c1917;
+}
+
+/* Vacancy Table */
+.tableCard {
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  margin-bottom: 32px;
+}
+
+.tableResponsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.dataTable th {
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  padding: 14px 16px;
+  border-bottom: 2px solid #93c5fd;
+  white-space: nowrap;
+}
+
+.dataTable td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #44403c;
+}
+
+.dataTable tr:last-child td {
+  border-bottom: none;
+}
+
+.badgePay {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* FAQ Accordion */
+.faqGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.faqQuestion {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1917;
+  margin: 0 0 8px;
+}
+
+.faqAnswer {
+  font-size: 14px;
+  color: #57534e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cadresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 26px;
+  }
+  .cadresGrid {
+    grid-template-columns: 1fr;
+  }
+  .actionRow {
+    flex-direction: column;
+  }
+  .btnPrimaryPortal, .btnSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

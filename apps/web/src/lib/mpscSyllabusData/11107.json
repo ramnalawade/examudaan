@@ -1,0 +1,80 @@
+{
+  "docId": 11107,
+  "examName": "Assistant Professor (English), Maharashtra Engineering Teachers' Service, Group-A Higher and Technical Education Department",
+  "examNameMr": "सहायक प्राध्यापक (इंग्रजी), महाराष्ट्र अभियांत्रिकी शिक्षक सेवा, गट-अ उच्च आणि तंत्रशिक्षण विभाग",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "English",
+      "paperTitleMr": "इंग्रजी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "English in India and Indian Literature in English",
+          "unitTitleMr": "भारतातील इंग्रजी आणि इंग्रजीतील भारतीय साहित्य",
+          "topics": [
+            "English in India: History and Evolution, Development of English Education in India, English in Post-Independence India, English in Contemporary India, Creative Writing in India, Indian Knowledge System and Ancient Indian Literature",
+            "Indian Literature in English: Poetry, Novel, Fiction, Short Stories, Drama, Creative Non-fiction with focus on 19th to 21st Century Literature, extending to some degree, the larger Indian Subcontinent"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "History of English Literature and English Literary Studies and Latin-American and European Literature in English",
+          "unitTitleMr": "इंग्रजी साहित्याचा इतिहास आणि इंग्रजी साहित्य अभ्यास आणि लॅटिन अमेरिकन आणि युरोपियन साहित्य इंग्रजीमध्ये",
+          "topics": [
+            "History of English Literature and English Literary Studies: Drama (Ancient to Medieval Drama including Greek, Roman and English Drama, Renaissance and Restoration Drama, Victorian and Modern Drama, World Drama)",
+            "Poetry (Old English and Medieval Poetry, The Renaissance and Early Modern Poetry, The Romantic Era, Modernist and Postmodernist Poetry, Contemporary and Global English Poetry)",
+            "Fiction (The Rise of English Fiction, The Victorian Novel, Modernist Fiction, Postcolonial and Global Fiction, Contemporary Multicultural Fiction)",
+            "Non-Fictional Prose (Early Beginnings- Renaissance and Reformation, The Enlightenment and Augustan Age, Romantic and Victorian, Modernist and Postcolonial, Contemporary and Global)",
+            "Latin-American and European Literature in English: Poetry, Fiction, Short Stories, Drama, Creative non-fiction with focus on 19th to 21st Century Literature"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Literary Criticism and Theory",
+          "unitTitleMr": "साहित्यिक टीका आणि उपपत्ती",
+          "topics": [
+            "Literary Criticism: Classical Literary Criticism, Medieval and Renaissance, Neoclassical and Enlightenment, Romantic and Victorian, Modern and Contemporary Criticism",
+            "Literary Theory: Structuralism and Semiotics, Post-Structuralism and Deconstruction, Psychoanalytic and Marxist Criticism, Postmodernism and Postcolonialism, Feminism and Contemporary",
+            "Cultural Studies: Foundations and Early Influences, Emergence of Cultural Studies as a Discipline, Globalization and Cultural Hybridity, Cultural Studies in the Digital Era, Future Directions and Challenges",
+            "Translation Studies: Key Concepts in Translation, Classical and Linguistic Translation Studies, Modern Approaches in Translation Studies, Literary, Scientific and Technical Translation, Audio-Visual Translation, Ethics in Translation, Culture and Translation"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Research Methodology and ICT (Information and Communication Technology)",
+          "unitTitleMr": "संशोधन पद्धती आणि माहिती व संप्रेषण तंत्रज्ञान (ICT)",
+          "topics": [
+            "Research Methodology: Definition, Purpose, and Scope of Research, Types of Research, Research Design, Methods of Data Collection, Hypothesis, Data Analysis, Report Writing, Research Ethics and Plagiarism, Research in English Language, Research in English Literature",
+            "ICT (Information and Communication Technology): Basics of ICT- Definition and importance in Education, Hardware and software essentials, Operating systems (Windows, Linux), basic computer skills, ICT Tools in Language Learning, Online Resources, ICT Pedagogy"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Usage in English, Grammar, and Soft Skills",
+          "unitTitleMr": "इंग्रजीचा वापर, व्याकरण आणि सॉफ्ट स्किल्स",
+          "topics": [
+            "Usage in English: Sentence Structure, Sentence Transformation, Error Spotting and Correction, Vocabulary Usage, Functional Use of English- Conversational English, Business Communication, Academic English, English for Specific Purposes (ESP), Common Errors",
+            "Grammar: Parts of Speech, Tenses, Voice and Narration, Clauses and Phrases, Modals and Auxiliaries, Sentence Analysis",
+            "Soft Skills: Introspective, Listening and Reading, Presentation, Group Discussion, Goal Setting, Interview, Time Management, Stress Management, Anger Management, Negotiation, Conflict Resolution, Problem Solving, Leadership, Team Management"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

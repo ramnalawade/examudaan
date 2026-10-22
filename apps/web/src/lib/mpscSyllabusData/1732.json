@@ -1,0 +1,113 @@
+{
+  "docId": 1732,
+  "examName": "Maharashtra Medical Education & Research Service Group – B (Pharmacist)",
+  "examNameMr": "महाराष्ट्र वैद्यकीय शिक्षण व संशोधन सेवा गट-ब (फार्मासिस्ट)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Pharmacist Examination",
+      "paperTitleMr": "फार्मासिस्ट परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "1. Formulations: Types, Preparation, Packaging, labeling and Storage, Various",
+          "unitTitleMr": null,
+          "topics": [
+            "Conventional and prolonged release drug delivery systems, per-oral and parenteral administration, novel routes of drug administration including pulmonary, nasal, ophthalmic, transdermal etc., concepts of drugs stability and Shelf-life."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "2. Prescription : definition, various parts of prescription, their functions, handling of",
+          "unitTitleMr": null,
+          "topics": [
+            "prescription, prescription charging policy, labeling requirements as per various schedules mentioned in Drugs and Cosmetics Act and its addendum, Pharmacy Act 1948, Drug Price Control Order as per regulatory requirements, Narcotic & Psychotropic substances Act and Rules."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "3. Posology : Definition, factors affecting dose selection, Calculation of doses for",
+          "unitTitleMr": null,
+          "topics": [
+            "paediatric and geriatric patients."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "4. Study of various pharmacopoeias, monographs and various quality control tests",
+          "unitTitleMr": null,
+          "topics": [
+            "mentioned in the monographs- I.P., U.S.P., E.P., B.P."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "5. Sterile Products –their manufacturing and quality Control, Methods of Sterlization",
+          "unitTitleMr": null,
+          "topics": [
+            "and validation thereof, Test for Sterility, Test for pyrogens, concept of asepsis and maintenance of aseptic conditions, Central Sterile Supply Department (CSSD) and its functioning.",
+            "Microbiological Media : Preparation and Sterilization.",
+            "Surgical dressings : Properties, sterilization, standards and tests for sterility.",
+            "Ligatures and Sutures : Absorbable and non-absorbable, preparations, standards, and tests for sterility."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "6. Hospital and Drug Store : Layout, designs. staff, materials-coding and stocking",
+          "unitTitleMr": null,
+          "topics": [
+            "including storage conditions. Legal requirements, maintenance of various registers. Use of Computers for day to day record keeping. Inventory control concept of EOQ (Economic Order Quantity ) & Purchase policy. Drug distribution systems in hospitals- Dispensing to in-patients & out-patients. Safe use of drugs in hospitals."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "7. Clinical Pharmacy - Drug & poison information services & its management:",
+          "unitTitleMr": null,
+          "topics": [
+            "Patient Counseling, Patient information leaflets, patient medication adherence, drug-drug, drug-food interactions, adverse drug reactions. Use of softwares and databases for monitoring drug interactions, and adverse drug reactions and idiosyncratic reactions."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "1. Concepts of health and disease, causative agents and prevention of diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "like Aids, Tuberculosis. Brief outline of communicable diseases, models of transmission and prevention."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "2. First aid, emergency treatment of shock, snake bites, burns, poisoning, fractures.",
+          "unitTitleMr": null,
+          "topics": [
+            "First aid, emergency treatment of shock, snake bites, burns, poisoning, fractures."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "3. Pharmacology of following classes of drugs",
+          "unitTitleMr": null,
+          "topics": [
+            "Antihypertensives, antianginal agents, antihyperlipidemic agents, Cardiotonics, antiallergics, antidiabetics, antimicrobials and antibiotics including the newer generation antibiotics, antiulcer agents, antacid, anti HIV agents, antidepressants.",
+            "Clinical toxicology: Clinical symptoms and management of acute poisoning due to pesticides, opiates, barbiturates, benzodiazepines, alcohol (ethanol & methanol), paracetamol and salicylates, heavy metals- Arsenic, lead, mercury, radiation poisoning."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

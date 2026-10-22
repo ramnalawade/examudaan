@@ -1,0 +1,90 @@
+{
+  "docId": 1591,
+  "examName": "Assistant Commissioner of Labour, Maharashtra Labour Services, Gr.-A.",
+  "examNameMr": "सहायक कामगार आयुक्त, महाराष्ट्र कामगार सेवा, गट-अ.",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "departmental",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge",
+      "paperTitleMr": "सामान्य ज्ञान",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Knowledge",
+          "unitTitleMr": "सामान्य ज्ञान",
+          "topics": [
+            "आधुनिक भारताचा विशेषतः – महाराष्ट्राचा इतिहास",
+            "भारताचा विशेषतः – महाराष्ट्राचा भूगोल",
+            "भारतीय राज्य व्यवस्थेत :- राज्य प्रशासन व स्थानिक प्रशासन (ग्रामीण तसेच शहरी) यांची रचना, अधिकार व कार्य.",
+            "भारतीय अर्थव्यवस्था",
+            "सामान्य विज्ञान",
+            "जागतिक तसेच भारतातील चालू घडामोडी",
+            "बुद्धिमापन चाचणी :- उमेदवार किती लवकर व अचूकपणे विचार करू शकतो याचा अंदाज घेण्याच्या दृष्टीने या चाचणीमध्ये प्रश्न असतील."
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Topics Related to the Educational qualification",
+      "paperTitleMr": "शैक्षणिक पात्रतेशी संबंधित विषय",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Social conditions, related to Public & Labour Studies",
+          "unitTitleMr": "सार्वजनिक आणि कामगार अभ्यासाशी संबंधित सामाजिक परिस्थिती",
+          "topics": [
+            "Labour and Industrial Economics",
+            "Industrial, Rural sociology",
+            "Trade Unionism in India",
+            "Understanding Human Behaviour",
+            "Labour and Industry related Legislations, Policy, etc.",
+            "Labour Statistics"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Various Acts/Laws related to Labour and Industries/Domestic",
+          "unitTitleMr": "कामगार आणि उद्योग/घरगुती संबंधित विविध अधिनियम/कायदे",
+          "topics": [
+            "Arbitration Act (Between employer and employee)",
+            "Labour working in unorganised sector",
+            "Women and child protection laws (Related with organised and unorganised sector, domestic, etc.)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Other Acts",
+          "unitTitleMr": "इतर अधिनियम",
+          "topics": [
+            "Right to Information Act",
+            "Protection of Human rights Act",
+            "Minimum Wages Act"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "सहायक कामगार आयुक्त, महाराष्ट्र कामगार सेवा, गट-अ व सरकारी कामगार अधिकारी, महाराष्ट्र कामगार सेवा, गट-ब या दोन्ही पदांच्या परीक्षा एकत्रित घेण्यात येणार आहे."
+  ]
+}

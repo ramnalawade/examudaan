@@ -7,8 +7,10 @@ import Link from 'next/link'
 import { SITE_CONFIG } from '../../lib/constants'
 
 export const metadata = {
-  title: 'Disclaimer \u2014 Non-Affiliation Policy | ExamUdaan',
-  description: 'ExamUdaan.in is an independent recruitment aggregation platform and is NOT affiliated with any central or state government organization or recruiting commission.',
+  title: {
+    absolute: 'Disclaimer — Non-Affiliation Policy | ExamUdaan',
+  },
+  description: 'ExamUdaan.in is an independent recruitment aggregator and is NOT affiliated with any central or state government body or recruiting commission.',
   keywords: ['ExamUdaan disclaimer', 'non-affiliation', 'independent exam portal', 'not government website'],
   alternates: {
     canonical: 'https://examudaan.in/disclaimer',

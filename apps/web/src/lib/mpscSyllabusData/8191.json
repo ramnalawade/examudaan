@@ -1,0 +1,49 @@
+{
+  "docId": 8191,
+  "examName": "Media Laws and Acts Examination",
+  "examNameMr": "मीडिया कायदे आणि अधिनियम परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "departmental",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Media Laws and Acts",
+      "paperTitleMr": "मीडिया कायदे आणि अधिनियम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Media Laws and Acts",
+          "unitTitleMr": "मीडिया कायदे आणि अधिनियम",
+          "topics": [
+            "Defamation Act",
+            "Sedition IPC Act",
+            "Contempt of Courts Act",
+            "Official Secrets Act",
+            "Press and Registration of Books Act 1867",
+            "Working Journalists and other Newspaper Employees (Conditions of Service) and Miscellaneous Provisions Act 1955",
+            "Right to Information Act 2005",
+            "Copyright Act 1957",
+            "IPR Act",
+            "Cable TV Network (Regulation) Act",
+            "IT Act",
+            "Press Council Act and Other Acts",
+            "Media Ethics"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

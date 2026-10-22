@@ -1,0 +1,317 @@
+/* ============================================================
+   applyOnline.module.css — Talathi Bharti Apply Online Guide
+   ExamUdaan.in | Zero inline styles, fully mobile responsive
+   ============================================================ */
+
+.pageWrapper {
+  background: #fffbf5;
+  min-height: 100vh;
+  padding-bottom: 72px;
+}
+
+.hero {
+  background: linear-gradient(180deg, #f0fdf4 0%, #fffbf5 100%);
+  padding: 40px 0 32px;
+  border-bottom: 1px solid #bbf7d0;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.pillBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pillBadgeOrange {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #ea580c;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.updatedDate {
+  font-size: 13px;
+  color: #78716c;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.heroTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1c1917;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.heroTitleHighlight {
+  color: #16a34a;
+  border-bottom: 3px solid #86efac;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  color: #57534e;
+  line-height: 1.6;
+  max-width: 860px;
+  margin: 0 0 24px;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btnPrimaryPortal {
+  background: #16a34a;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btnPrimaryPortal:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  background: #ffffff;
+  color: #1c1917;
+  border: 1px solid #bbf7d0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s;
+}
+
+.btnSecondary:hover {
+  background: #f0fdf4;
+}
+
+.section {
+  padding: 40px 0 20px;
+}
+
+.sectionHeader {
+  margin-bottom: 24px;
+}
+
+.sectionTag {
+  font-size: 12px;
+  font-weight: 800;
+  color: #16a34a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.sectionTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1c1917;
+  margin: 0 0 8px;
+}
+
+.sectionDesc {
+  font-size: 15px;
+  color: #78716c;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Steps Flow */
+.flowList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.flowItem {
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.flowNumber {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+  color: #16a34a;
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flowContent {
+  flex: 1;
+}
+
+.flowTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1c1917;
+  margin: 0 0 6px;
+}
+
+.flowText {
+  font-size: 14px;
+  color: #57534e;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Specifications Table */
+.specTableCard {
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  margin-bottom: 32px;
+}
+
+.tableResponsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.specTable th {
+  background: #f0fdf4;
+  color: #166534;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  padding: 14px 16px;
+  border-bottom: 2px solid #86efac;
+  white-space: nowrap;
+}
+
+.specTable td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #44403c;
+}
+
+.specTable tr:last-child td {
+  border-bottom: none;
+}
+
+.badgeFee {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* FAQ Accordion */
+.faqGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqItem {
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.faqQuestion {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1917;
+  margin: 0 0 8px;
+}
+
+.faqAnswer {
+  font-size: 14px;
+  color: #57534e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 26px;
+  }
+  .flowItem {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .actionRow {
+    flex-direction: column;
+  }
+  .btnPrimaryPortal, .btnSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

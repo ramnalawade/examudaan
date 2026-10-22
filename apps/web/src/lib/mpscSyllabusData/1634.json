@@ -1,0 +1,63 @@
+{
+  "docId": 1634,
+  "examName": "Assistant Professor- Human Resource, Maharashtra Education Services, Group-A (Collegiate Branch)",
+  "examNameMr": "सहाय्यक प्राध्यापक - मानवी संसाधन, महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Human Resource, Maharashtra Education Services, Group-A (Collegiate Branch)",
+      "paperTitleMr": "सहाय्यक प्राध्यापक - मानवी संसाधन, महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा)",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Human Resource Management and Perspectives",
+          "unitTitleMr": "मानवी संसाधन व्यवस्थापन आणि दृष्टिकोन",
+          "topics": [
+            "Concepts and perspectives in HRM",
+            "HRM in changing environment",
+            "Human resource planning: Objectives, Process and Techniques",
+            "Job analysis and Job description",
+            "Selecting human resources",
+            "Induction, Training and Development",
+            "Exit policy and implications",
+            "Performance appraisal and evaluation",
+            "Potential assessment",
+            "Job evaluation",
+            "Wage determination",
+            "Industrial Relations and Trade Unions",
+            "Dispute resolution and Grievance management",
+            "Labour Welfare and Social security measures",
+            "Human Resource Management (HRM): Significance, Objectives, Functions, A diagnostic model, External and Internal environment, Forces and Influences, Organizing HRM function",
+            "Recruitment and Selection: Sources of recruits, Recruiting methods, Selection procedure, Selection tests, Placement and Follow-up",
+            "Performance Appraisal System: Importance and Objectives, Techniques of appraisal system, New trends in appraisal system",
+            "Development of Personnel: Objectives, Determining Needs, Methods of Training & Development programmes, Evaluation",
+            "Career Planning and Development: Concept of career, Career planning and development methods",
+            "Compensation and Benefits: Job evaluation techniques, Wage and salary administration, Fringe Benefits, Human resource records and audit",
+            "Employee Discipline: Importance, causes and forms, Disciplinary action, Domestic enquiry",
+            "Grievance Management: Importance, Process and Practices, Employee Welfare and Social Security Measures",
+            "Industrial Relations: Importance, Industrial conflicts, Causes, Dispute settlement machinery",
+            "Trade Unions: Importance of Unionism, Union leadership, National Trade Union Movement",
+            "Collective Bargaining: Concept, Process, Pre-requisites, New trends in collective bargaining",
+            "Industrial Democracy and Employee Participation: Need for industrial democracy, Pre-requisites for industrial democracy, Employee Participation: Objectives, Forms of Employee Participation",
+            "Future of Human Resource Management"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

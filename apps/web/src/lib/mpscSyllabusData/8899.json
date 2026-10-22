@@ -1,0 +1,181 @@
+{
+  "docId": 8899,
+  "examName": "Assistant Draftsman-cum-Under Secretary, Group-A, Law and Judiciary Department - Syllabus",
+  "examNameMr": "सहाय्यक ड्राफ्ट्समन-कम-अंडर सेक्रेटरी, गट-अ, कायदा आणि न्याय विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Law and Legislative Drafting",
+      "paperTitleMr": "कायदा आणि कायदेविषयक मसुदा तयार करणे",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Constitution of India",
+          "unitTitleMr": "भारताचे संविधान",
+          "topics": [
+            "Constitution of India"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Bharatiya Nyaya Sanhita - 2023",
+          "unitTitleMr": "भारतीय न्याय संहिता - २०२३",
+          "topics": [
+            "Bharatiya Nyaya Sanhita - 2023"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Bharatiya Nagarik Suraksha Sanhita - 2023",
+          "unitTitleMr": "भारतीय नागरिक सुरक्षा संहिता - २०२३",
+          "topics": [
+            "Bharatiya Nagarik Suraksha Sanhita - 2023"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Bharatiya Sakshya Adhiniyam - 2023",
+          "unitTitleMr": "भारतीय साक्ष अधिनियम - २०२३",
+          "topics": [
+            "Bharatiya Sakshya Adhiniyam - 2023"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Interpretation of Statute",
+          "unitTitleMr": "कायद्याचा अर्थ लावणे",
+          "topics": [
+            "Interpretation of Statute"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Transfer of Property Act, 1882 and Sale of Goods Act, 1930",
+          "unitTitleMr": "मालमत्ता हस्तांतरण कायदा, १८८२ आणि वस्तू विक्री कायदा, १९३०",
+          "topics": [
+            "Transfer of Property Act, 1882",
+            "Sale of Goods Act, 1930"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Indian Contract Act, 1872",
+          "unitTitleMr": "भारतीय करार कायदा, १८७२",
+          "topics": [
+            "Indian Contract Act, 1872"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Legislative Drafting",
+          "unitTitleMr": "कायदेविषयक मसुदा तयार करणे",
+          "topics": [
+            "The basic of legislative drafting",
+            "Legislative Drafting – Meaning and Concept",
+            "Drafting and legislative Counsel/Draftsman",
+            "Legislative expression",
+            "Legislation Meaning and Concept",
+            "Types of legislation",
+            "Classification of legislation (Bills and Acts)",
+            "Structure and format of Bills and Acts",
+            "Conventional structure of Bills and Acts",
+            "Legal History of Legislative Drafting",
+            "Historical development of legislative drafting",
+            "Theoretical foundations of drafting",
+            "Principle characteristics of drafting",
+            "Drafting objectives",
+            "Preparation of legislative scheme",
+            "Clear concept of the legislative proposals; Preparation of conceptual outline",
+            "Check the existing law",
+            "Importance and preparation of skeleton legislation and legislative scheme",
+            "Basic Techniques of Legislative Drafting",
+            "Style",
+            "Simplicity of Language",
+            "Over Drafting",
+            "Vagueness",
+            "Structure and style",
+            "Grammar and punctuation marks",
+            "Importance of Grammar in drafting",
+            "Grammatical Terms",
+            "Common Grammatical mistakes to be avoided",
+            "Punctuation and use of capital letters",
+            "The components of legislative sentences",
+            "Principal subject",
+            "Principal predicate",
+            "Predicate modifiers",
+            "Main parts of Legislation",
+            "Common Phrases and their significance",
+            "Structure of Legislative text",
+            "General considerations",
+            "Drafting sections",
+            "Drafting sentences in sections",
+            "Paragraphing",
+            "Numbering",
+            "Ordering and linking sentences in a section",
+            "Linking sections",
+            "Incorporation by reference",
+            "Grouping Section",
+            "Organisation of Legislative text",
+            "Preparing an outline",
+            "Factors influencing an outline for a Bill",
+            "Legislative styles",
+            "Developing good legislative style",
+            "Gender-neutral drafting",
+            "Some additional matters of style",
+            "Interpretation Acts and Rules",
+            "Importance of Interpretation Acts",
+            "Application of Interpretation Acts",
+            "Using Interpretation Acts to facilitate drafting",
+            "Judicial approaches to interpretation",
+            "Interpretive assumptions and presumptions",
+            "Aids to interpretation",
+            "Drafting Constitutions",
+            "The Constitution and the legislative counsel/draftsman",
+            "Particular Constitutional constraints",
+            "Drafting under a Bill of rights",
+            "International standards"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Maharashtra Official Language Act, 1964",
+          "unitTitleMr": "महाराष्ट्र अधिकृत भाषा अधिनियम, १९६४",
+          "topics": [
+            "Maharashtra Official Language Act, 1964"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Maharashtra General Clauses Act",
+          "unitTitleMr": "महाराष्ट्र जनरल क्लॉज कायदा",
+          "topics": [
+            "Maharashtra General Clauses Act"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Maharashtra Civil Services (Discipline and Appeal) Rules, 1979",
+          "unitTitleMr": "महाराष्ट्र नागरी सेवा (शिस्त आणि अपील) नियम, १९७९",
+          "topics": [
+            "Maharashtra Civil Services (Discipline and Appeal) Rules, 1979"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,157 @@
+{
+  "docId": 11411,
+  "examName": "Assistant Professor (Marketing), Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (विपणन), महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Marketing), Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": "सहाय्यक प्राध्यापक (विपणन), महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Basics of Marketing",
+          "unitTitleMr": "विपणनाची मूलभूत तत्त्वे",
+          "topics": [
+            "Marketing - Definition, Evolution, core concepts, Marketing v/s Selling, Role of a Marketing Manager in the current scenario, Marketing Environment – Internal and External Environment",
+            "Marketing Mix elements; Marketing Process",
+            "Market segmentation, Meaning, its benefits, Bases for segmenting Consumer market and Industrial market, Market Targeting, Patterns of Targeting, Product positioning concept, Positioning strategies",
+            "Concept, Levels of Products – core benefit, basic product, expected product, augmented product and potential product, Product Life Cycle - concept, stages",
+            "Pricing: Meaning, Objectives, Pricing Strategies - Skimming pricing, Penetration pricing and psychological pricing",
+            "Place - Need and importance of distribution, Factors influencing selection of distribution channel, Channels of Distribution",
+            "Elements of Promotional Mix - Advertising, Publicity, Public Relations, Sales Promotion, Personal Selling and Direct Marketing",
+            "Green Marketing - Meaning, Importance, Use of Information Technology in marketing practices – Virtual marketing, E-buying behavior",
+            "Digital Marketing - Meaning and Importance"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Marketing Research",
+          "unitTitleMr": "विपणन संशोधन",
+          "topics": [
+            "Introduction to Marketing Research - Importance of marketing research in business decision-making",
+            "Overview of Marketing Research - Evolution, purpose, and scope, Ethics in Marketing Research: Transparency and data privacy concerns",
+            "Current Trends: Rise of AI, Big Data Analytics",
+            "Problem Formulation - Identifying and defining the research problem",
+            "Research Design - Exploratory, descriptive, and causal research approaches, Real-time data collection and crowdsourced research methods",
+            "Qualitative Research Techniques - In-depth interviews, focus groups, ethnographic research",
+            "Emerging Tools - Online communities and AI-assisted sentiment analysis, social media and neuro-marketing techniques",
+            "Research Tools & Techniques - Factor Analysis, Multi-Dimensional Scaling (MDS), Conjoint Analysis, Discriminant Analysis, Cluster Analysis, Automation in data processing, predictive analytics, use of visualization tools like Tableau and Power BI",
+            "Applications of Marketing Research - Segmenting and Positioning, New Product Development, Pricing Research, Media Research, Application of machine learning for forecasting and scenario analysis"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Product Management",
+          "unitTitleMr": "उत्पादन व्यवस्थापन",
+          "topics": [
+            "Introduction to Product Management: Product Concept, Types of Products, Product Line, Line Extension Product Mix Decisions",
+            "Developing product strategies aligned with business goals, conducting market research to identify target markets, Conducting competitive analysis and positioning",
+            "Product Life Cycle - Identify the phases in the Product Life Cycle, Managing products throughout their lifecycle, Growth strategies and expansion opportunities, Ansoff Matrix",
+            "New Product Decisions: Types of New Products, New Product Development Process, Design Thinking process, Adoption of New Products",
+            "Packaging - Purpose, Types and new trends in packaging",
+            "Pricing Decisions: Factors influencing pricing decisions, pricing strategies, Setting the Price and Managing the price Change, Pricing considerations for different markets and customer segments"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Consumer Behaviour",
+          "unitTitleMr": "उपभोक्ता वर्तन",
+          "topics": [
+            "Foundations of Consumer Behavior - Definition and importance of consumer behaviour, Historical Evolution of Consumer Behavior Theories, Consumer Behavior in a Digital-First World, Behavioural Segmentation i.e. Psychographics, Geographics, and Technographics",
+            "Psychological Factors Influencing Consumer Behavior - Consumer Perception, Learning, and Memory in Marketing, Motivation and Personality Theories, Emotions",
+            "Social, Cultural and Environmental Influences - Influence of Social Groups, Family, and Reference Groups, Role of Culture, Subculture, and Social Class, Impact of social media and Influencers on Consumer Behavior, Building Brand Loyalty in a Competitive Market",
+            "Consumer Decision-Making Process - Problem Recognition and Information Search, Evaluation of Alternatives and Purchase Decision, Post-Purchase Behavior and Customer Satisfaction, Role of Digital Touchpoints in Consumer Journey",
+            "Digital Transformation in Consumer Behavior - Consumer behaviour in E-commerce, Mobile Commerce, and Social Commerce, Personalization using AI and Machine Learning, Role of Augmented Reality (AR) and Virtual Reality (VR) in Consumer Experience, Data Privacy and Ethical Issues in Consumer Behavior, Customer Retention Strategies in Digital Marketing",
+            "Consumer Analytics - Tools for Consumer Data Collection: Surveys, Focus Groups, Social Listening, Predictive Analytics and Big Data in Understanding Consumer Trends",
+            "Emerging Trends in Consumer Behavior - Role of Virtual Influencers in Shaping Consumer Preferences, Consumer Behavior in Gen Z and Millennial Markets"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Customer Relationship Management",
+          "unitTitleMr": "ग्राहक संबंध व्यवस्थापन (CRM)",
+          "topics": [
+            "Introduction to CRM: Definition and Evolution of CRM, Types of CRM: Operational, Analytical, Collaborative, Importance of CRM in the Digital Age, Role of CRM in Customer Lifecycle",
+            "Customer-Centric Business Strategies: Understanding Customer Needs and Expectations, Building Customer Loyalty and Retention Strategies, Creating Value through Personalized Experiences",
+            "Technology in CRM - Overview of CRM Tools and Platforms (e.g., Salesforce, HubSpot), Role of Big Data and Analytics in CRM, AI and Machine Learning in CRM - Predictive Analytics and Chatbots, Customer Data Privacy and Ethical Considerations",
+            "Customer Segmentation and Analytics - Methods for Customer Segmentation (Demographic, Behavioural, Psychographic), Analyzing Customer Data for Insights, Key Metrics: Customer Lifetime Value (CLV), Customer Satisfaction (CSAT), Net Promoter Score (NPS), Real-Life Application of Customer Insights",
+            "Current Trends in CRM - Omni-channel CRM and Integration, Mobile CRM and Social CRM, Role of IoT in Enhancing Customer Experiences, Gamification in CRM Strategies",
+            "Implementing and Managing CRM - CRM Implementation Challenges and Solutions, Aligning CRM with Organizational Goals, Training and Change Management for CRM Systems, Measuring CRM Effectiveness: KPIs and ROI",
+            "CRM in Industry Contexts - CRM in Retail, Banking, Healthcare, and Hospitality, B2B vs. B2C CRM Strategies, Role of CRM in E-commerce and Digital Marketing",
+            "Future of CRM - Emerging Technologies in CRM - Blockchain, Metaverse, Hyper-Personalization and Predictive Engagement, Sustainable and Ethical CRM Practices"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Sales Management",
+          "unitTitleMr": "विक्री व्यवस्थापन",
+          "topics": [
+            "Introduction to Sales Management - Role and Importance of Sales Management, Types of Sales Organizations: B2B, B2C, D2C, Key Skills of a Sales Manager",
+            "Sales Planning and Strategy - Sales Forecasting Techniques, Territory Management and Sales Quotas, Designing and Managing Sales Budgets",
+            "Managing the Sales Team - Recruitment and Selection of Sales Professionals, Training and Development Programs, Performance Appraisal and Motivation, Sales Compensation Plans",
+            "Sales Approaches - Consultative Selling, Solution Selling, SPIN Selling (Situation, Problem, Implication, Need), Challenger Sales Model",
+            "Sales Technology and Tools - Sales Force Automation Tools, AI in Sales: Chatbots, Predictive Analytics, Digital Sales Platforms, E-commerce and Social platform Selling",
+            "Legal and Ethical Issues in Sales - Ethical Selling Practices, Regulatory Compliance (GDPR, Consumer Protection Laws), Managing Conflicts of Interest",
+            "Emerging Trends in Sales Management - Behavioural Sales Insights, Virtual Reality (VR) in Sales, Influencer Marketing in Sales Demonstrations, Sales in the Metaverse"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Services Marketing",
+          "unitTitleMr": "सेवा विपणन",
+          "topics": [
+            "Service Industry - Growth in services sector, Nature of Services, Marketing Mix for Services, Importance of Services Marketing",
+            "Unique Characteristics of services - Intangibility, Inseparability, Heterogeneity, Perishability of services. Demand variation and capacity constraints, measures to respond to changes in demand",
+            "Strategies to manage Perishability, Intangibility, Inseparability and Heterogeneity. Consumer Behavior in services",
+            "Designing the service enterprise - New service development, developing a Service blueprint, Segmentation, Targeting and Positioning of Services, Customer profiling and segmentation for personalized services, Use of big data and predictive analytics in service personalization",
+            "Pricing strategies in services - Factors involved in pricing a service product, pricing strategies for services. Revenue Management Strategies in services",
+            "Integrated Service Marketing Communication - Advertising and sales promotion in services, Digital Marketing, Physical evidences in services - Importance of physical evidences in services, Tangibilizing through physical evidences, Branding Services, Integrating physical and digital touch points",
+            "Distribution in Services - Strategies and challenges in distribution of services. Methods of service delivery, Franchising, Digital-first service strategies (e.g., app-based and on-demand services), Growth of self-service kiosks, apps, and portals in various industries",
+            "Blending online and offline service delivery to meet diverse customer needs",
+            "Service Quality - Service quality models, measuring service quality, continuous quality improvement, Quality Model, Diagnosing Service Quality Failures, Service guarantee and service recovery. Use of advanced analytics in measuring service performance, Incorporating real-time feedback mechanisms",
+            "Employees and customer’s role in service delivery - Managing the service encounter, service encounter triad, managing customer expectations and attitude, contact person selection and training, monitoring and measuring customer satisfaction, Servicescape Model, Impacts of automation on customer satisfaction and service efficiency",
+            "Customer Experience Management - Creating seamless omni-channel service experiences, Journey mapping for enhanced customer satisfaction, Leveraging Voice of Customer (VoC) programs for continuous improvement, the role of AI and chatbots in enhancing customer service experiences. Co-creating experiences with customers"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Integrated Marketing Communication",
+          "unitTitleMr": "त्मंकृत विपणन संप्रेषण (IMC)",
+          "topics": [
+            "Importance of IMC, Introduction to IMC tools – Advertising, sales promotion, publicity, public relations, Personal Selling and event sponsorship. IMC Planning process - AIDA model, Hierarchy of effect model, Innovation adoption model, Information processing model, The Foote, Cone and Belding (FCB) Model",
+            "Planning for Marketing Communication - Objectives and Budgeting for Promotional Programmes, Setting communication objectives, DAGMAR approach for setting ad objectives, Budgeting - Factors influencing Marketing communication budget, 5 Ms of Advertisement, Media Plan, Advertising message, Types of appeals and execution styles",
+            "Media planning and selection decisions - Meaning and Role of Media Planning, Steps in media planning, Developing and Implementing Media Strategies. Print and outdoor media, Newspapers, Magazines, Out-of-home Advertising, Directory Advertising, Broadcast and Internet Media, Radio, Television and Internet Advertising, Email Advertising",
+            "Public Relations, Publicity and Corporate Advertising - Definition of Public Relations, Publicity and Corporate Advertising, Difference between public relations and advertising",
+            "Digital Media & Artificial Intelligence in Advertising - Evolution and convergence of digital media, E-commerce and digital media strategies, Social media advertising, Mobile advertising, AI and Automation in IMC, Chatbots and virtual assistants in customer interaction, Automation tools for email marketing and social media campaigns, Role of immersive experiences (e.g., AR/VR)",
+            "Evaluation of Advertising - Evaluating Advertising Effectiveness through Pre-tests, Post-test, Recognition Test, Recall Test",
+            "Advertising Laws & Ethics - Overview of advertising laws and ethical considerations, intellectual property rights, role of ASCI, consumer privacy concerns in digital campaigns"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Retail Management and Distribution",
+          "unitTitleMr": "किरकोळ व्यवस्थापन आणि वितरण",
+          "topics": [
+            "Overview of Retailing - Evolution of Retail Management, Types of Retail Formats, Functions of retailers"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

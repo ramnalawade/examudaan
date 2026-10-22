@@ -1,0 +1,70 @@
+{
+  "docId": 1742,
+  "examName": "Statistical Assistant, Maharashtra Public Service Commission, Gr.-C",
+  "examNameMr": "सांख्यिकी सहायक, महाराष्ट्र लोकसेवा आयोग, गट-क",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "group-c",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (200 marks) followed by Interview (50 marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies, Aptitude Test and Statistics",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धीमापन चाचणी आणि सांख्यिकी",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Studies",
+          "unitTitleMr": "सामान्य अध्ययन",
+          "topics": [
+            "History of India with special reference to Maharashtra",
+            "Geography of India with special reference to Maharashtra",
+            "Indian Constitution, State Administration and Local Government (Rural and Urban) - Structure, Powers and Functions",
+            "Indian Economy",
+            "General Science",
+            "National and International Current Affairs"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence/Aptitude Test",
+          "unitTitleMr": "बुद्धीमापन चाचणी",
+          "topics": [
+            "Tests to measure how quickly and accurately a candidate can think"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Statistics",
+          "unitTitleMr": "सांख्यिकी",
+          "topics": [
+            "Data Collection: Type of data, Quantitative and Qualitative data, Data for univariate and multivariate cases, Sources of data collection - Primary and Secondary Sources.",
+            "Presentation of Data: Preparation of frequency tables (Univariate, Bivariate and Multivariate), Diagrammatic and Graphical presentation of data and its interpretation (Histogram, Ogives, Frequency Curve).",
+            "Elementary Statistical Methods: Measures of Central tendency, Measures of Dispersion, Concepts of skewness and Kurtosis, Correlation and Regression.",
+            "Probability: Concept of probability, Elementary laws of probability, Conditional probability, Bayes Theorem, Theory of Expectations, Theoretical Probability Distributions.",
+            "Theory of Statistical Inference: Theory of Estimation and Hypothesis Testing.",
+            "Interpretation of Linear Models: Models with one and more explanatory variables, Significance of regression coefficients, Goodness of fit.",
+            "Sampling Methods: Simple Random Sampling, Stratified Random Sampling, Systematic Sampling, Cluster Sampling, Multistage Sampling, use of auxiliary information.",
+            "Index Numbers and Time Series: Index Numbers types and construction, Time Series Analysis components and fitting of trend.",
+            "Statistical Organizations in India: Central Statistical Organization, National Sample Survey Organization, State Directorate of Economics and Statistics, RBI, RGI, and various types of data collected.",
+            "Vital Statistics in India: Birth Rates, Death Rates, Reproduction Rates, Infant Mortality rate, Life tables.",
+            "National Income Estimation: Methods and concepts including GDP, NDP, GNP, NNP."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Latest and recent developments in the above topics will also be expected from candidates."
+  ]
+}

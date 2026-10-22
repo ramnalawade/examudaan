@@ -1,0 +1,166 @@
+{
+  "docId": 1645,
+  "examName": "Assistant Professor- Urdu, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": "सहायक प्राध्यापक - उर्दू, महाराष्ट्र शिक्षण सेवा, गट-अ (कॉलेजिएट शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Urdu, Maharashtra Education Services, Group - A (Collegiate Branch)",
+      "paperTitleMr": "सहायक प्राध्यापक - उर्दू, महाराष्ट्र शिक्षण सेवा, गट-अ (कॉलेजिएट शाखा)",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Origin and Development of Urdu Language",
+          "unitTitleMr": "उर्दू भाषेची उत्पत्ती आणि विकास",
+          "topics": [
+            "Various theories regarding Origin of Urdu.",
+            "Influence of Marathi on Urdu Language and Literature",
+            "Indo-Aryan family of language (old, middle, modern).",
+            "Changing status of Urdu in the sub continent in Twentieth Century with reference to Linguistic Reorganisation of States Commission Report, Gujral Committee Report, and Sardar Jafri Committee Report."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Dakhni Urdu",
+          "unitTitleMr": "दखनी उर्दू",
+          "topics": [
+            "Origin and Development of Dakhni Language",
+            "Linguistic Characteristics of Dakhni URDU.",
+            "Socio-Cultural study of Dakhni Language and Literature."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Study of Selected Literary Genres (Classical & Modern)",
+          "unitTitleMr": "निवडक साहित्यिक प्रकारांचा अभ्यास (शास्त्रीय आणि आधुनिक)",
+          "topics": [
+            "Urdu Masnavi : Definition and Development.",
+            "Urdu Ghazal : Definition and Development.",
+            "Dastan : Definition and Development.",
+            "Short Story: Definition and Development.",
+            "Definition of Rubai and its importance."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Study of Literary Movements and Trends",
+          "unitTitleMr": "साहित्यिक चळवळी आणि प्रवृत्तींचा अभ्यास",
+          "topics": [
+            "Difference in Literary movement and trend.",
+            "Sir Sayed Ahmed’s Aligarh movement.",
+            "Romantic movement in Urdu.",
+            "Progressive writers' movement in Urdu.",
+            "Modern trends in Urdu Literature."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Study of Urdu Criticism",
+          "unitTitleMr": "उर्दू समीक्षेचा अभ्यास",
+          "topics": [
+            "Altaf Husain Hali - Muqadamma-e- Shair O Shairi.",
+            "Kaleemuddin Ahmed - Urdu Tanqid Per Ek Nazar.",
+            "Ismat Javed - Fikar Payema.",
+            "Shamsur Raheman Farooqui - Shair-e-Shor Angez, Vol.II (PP 37 to PP 88)."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Classical Prose",
+          "unitTitleMr": "शास्त्रीय गद्य",
+          "topics": [
+            "Bagh-O-Bahaar by Meer Amman",
+            "Fasan-e-Ajayeb by Rajab Ali Baig Suroor"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Novel",
+          "unitTitleMr": "कादंबरी",
+          "topics": [
+            "Omrao Jan Ada by Mirza Hadi Ruswa",
+            "Aakhire Shab Ke Ham by Quratulain Hyder Safar",
+            "Maidan-e-Amal by Prem Chand, Published by Maktaba Jamia Ltd., New Delhi"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Short Stories",
+          "unitTitleMr": "लघुकथा",
+          "topics": [
+            "Urdu ke terah Afsane by Ather Parvez: Short story as a genre (Art of Short story, History and gradual development of Urdu Short story with reference to the book prescribed above i.e. 'Urdu ke terah Afsane')",
+            "Critical analysis of Short-stories from the book prescribed above i.e. 'Urdu ke terah Afsane'"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Drama",
+          "unitTitleMr": "नाटक",
+          "topics": [
+            "Anarkali by Imtiyaz Ali Taj",
+            "Khana Jungi by Prof Mujeeb",
+            "Aagra Bazar by Habib Tanveer"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Classical Poetry",
+          "unitTitleMr": "शास्त्रीय कविता",
+          "topics": [
+            "Sehar-ul-Bayan by Meer Hasan",
+            "Gulzar-e-Naseem by Pandit Daya Shankar Naseem",
+            "Zahere-Ishque by Nawab Mirza Shaoque Lucknowi",
+            "Intekhab-e-Wali Edited by Zaheeruddin Madani",
+            "Diwan-e-Ghalib Published by Ghalib Institute, New Delhi"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Marsiya",
+          "unitTitleMr": "मर्सिया",
+          "topics": [
+            "Marsiya Ghalib by Hali",
+            "Jab qata ki musafate shab aftabne by Mirza Dabeer"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Quasida",
+          "unitTitleMr": "कसिदा",
+          "topics": [
+            "Dar Madhae Bahadur Shah Zafar by Sauda",
+            "Simte Kashi Se Chala Janib- e - Mathura by Mohasin Kakorvi Badal"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Nazam",
+          "unitTitleMr": "नझम",
+          "topics": [
+            "Khizar-e-Rah by Mohd.Iqbal",
+            "Maozu-e-Sukhan by Faiz Ahmed Faiz",
+            "Ek Ladka by Akhtarul Iman",
+            "Ajanta by Sikandar Ali Wajad"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

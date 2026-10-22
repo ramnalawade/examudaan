@@ -1,0 +1,72 @@
+{
+  "docId": 1592,
+  "examName": "Assistant Section Officer, Gr.-B (Non-gazetted) Main Exam",
+  "examNameMr": "सहाय्यक कक्ष अधिकारी, गट-अ/ब मुख्य परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper 1",
+      "paperTitleMr": "पेपर १",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi and English",
+          "unitTitleMr": "मराठी आणि इंग्रजी",
+          "topics": [
+            "Common Vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Use of Idioms and phrases & their meaning",
+            "Comprehension of passage"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper 2",
+      "paperTitleMr": "पेपर २",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Intelligence and Test of Reasoning",
+          "unitTitleMr": "सामान्य बुद्धिमत्ता आणि तर्क चाचणी",
+          "topics": [
+            "Logical reasoning",
+            "Analytical reasoning",
+            "Problem solving",
+            "Data interpretation"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Current Affairs",
+          "unitTitleMr": "चालू घडामोडी",
+          "topics": [
+            "State, National and International current events"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

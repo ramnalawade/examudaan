@@ -12,6 +12,7 @@ import JobDetailTitle from '../../../components/JobDetailTitle'
 import { AdmitCardDownloadSteps, AdmitCardDocsToCarry } from '../../../components/DetailActionSteps'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
+import { buildAdmitCardMetadata } from '../../../lib/seoMetadata'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
 export const revalidate = 300
@@ -99,25 +100,7 @@ export async function generateMetadata({ params }) {
   const data = await getAdmitCardData(resolvedParams.slug)
   if (!data) return { title: { absolute: 'Admit Card | ExamUdaan' } }
   const { en } = data
-
-  let rawTitle = en.seo_metadata?.meta_title || `${en.title} Admit Card`
-  let cleanBase = rawTitle.replace(/\s*\|\s*ExamUdaan(\.in)?\s*$/i, '').trim()
-  if (cleanBase.length > 44) {
-    cleanBase = cleanBase.slice(0, 41).trim() + '...'
-  }
-  const metaTitle = cleanBase ? `${cleanBase} | ExamUdaan` : 'Admit Card | ExamUdaan'
-
-  const rawUrl2 = process.env.NEXT_PUBLIC_SITE_URL || 'https://examudaan.in'
-  const siteUrl2 = (rawUrl2 && !rawUrl2.includes('localhost')) ? rawUrl2 : 'https://examudaan.in'
-  const targetSection = TYPE_TO_PATH[en.notification_type] || '/admit-cards'
-  const canonicalSlug = en.slug || resolvedParams.slug
-  const canonicalUrl = `${siteUrl2}${targetSection}/${canonicalSlug}`
-  return {
-    title: { absolute: metaTitle },
-    description: `Download ${en.title} admit card / hall ticket from ${en.org_name}. Exam date: ${formatDate(en.exam_date)}. Check exam centers and download steps.`.slice(0, 160),
-    alternates: { canonical: canonicalUrl },
-    openGraph: { title: metaTitle, url: canonicalUrl, type: 'article', siteName: 'ExamUdaan.in' },
-  }
+  return buildAdmitCardMetadata(en, resolvedParams.slug)
 }
 
 export default async function AdmitCardDetailPage({ params }) {

@@ -227,9 +227,9 @@ export default function CareerExplorerClient() {
                         <span className={styles.badgeCategory}>
                           {streamMeta?.icon} {streamMeta?.shortName}
                         </span>
-                        <h3 className={styles.cardTitle} style={{ marginTop: '8px' }}>
+                        <h2 className={styles.cardTitle} style={{ marginTop: '8px' }}>
                           {career.title}
-                        </h3>
+                        </h2>
                         <p className={styles.cardRole}>{career.role}</p>
                       </div>
                     </div>

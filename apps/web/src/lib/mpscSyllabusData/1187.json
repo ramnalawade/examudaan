@@ -1,0 +1,89 @@
+{
+  "docId": 1187,
+  "examName": "Maharashtra Pharmaceutical Examination",
+  "examNameMr": "महाराष्ट्र औषधशास्त्र परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2018,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Physiology, Pharmacology, Microbiology, Biochemistry, Regulations and General Knowledge",
+      "paperTitleMr": "शरीरक्रियाशास्त्र,औषधशास्त्र,सूक्ष्मजीवशास्त्र,जैवरासायनिक,नियम आणि सामान्य ज्ञान",
+      "totalMarks": 100,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Physiology, Pathophysiology, Pharmacology and Toxicology",
+          "unitTitleMr": "शरीरक्रियाशास्त्र, पॅथोफिजिओलॉजी, फार्माकोलॉजी आणि टॉक्सिकोोलॉजी",
+          "topics": [
+            "Physiology: Whole human blood (I.P.), Composition and function of Blood elements, Coagulation of blood, Blood groups, Blood components, manufacturing and storage, Blood bank operation, requirement and standards",
+            "Pathophysiology: STD, AIDS, Hypersensitivity, Hepatitis and HBSAg",
+            "Pharmacology: Chemistry, SAR, Factors modifying drug action, and mechanism of drugs belonging to Coagulation and hematinics, Anti-hypertensives, CHF, Angina, arrhythmia, diuretics, CNS drugs, Chemotherapeutic agents, Anti-diabetics, contraceptives, endocrine and Hormones, uterine drugs, Respiratory drugs, GIT drugs, Autocoids, Immuno-stimulants and immuno-suppressants, Introduction to drug design and combinatorial chemistry",
+            "Toxicology: Classification of poison, chelating agents, heavy metal, insecticide poisoning, antidotes, Sign, symptoms and management of CNS drug poisons, Genotoxicity, carcinogenicity, teratogenicity, mutagenicity"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Microbiology",
+          "unitTitleMr": "सूक्ष्मजीवशास्त्र",
+          "topics": [
+            "Sterilization principles and procedures, Aseptic techniques, Disinfections, pyrogen and pyrogen testing",
+            "Assay of antibiotics and vitamins",
+            "Biochemical, serological, virological techniques",
+            "BoD, different media",
+            "Microbial drugs, drug resistance, microbial limit test, Pathogenic organism of common occurrence"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Biochemistry and Chemistry of drugs / Pharmaceuticals",
+          "unitTitleMr": "जैव रसायनशास्त्र आणि औषधांचे रसायनशास्त्र / फार्मास्युटिकल्स",
+          "topics": [
+            "Biochemistry: Metabolism of carbohydrates, proteins and lipids, DNA, RNA, nucleic acid and components, Enzymes, Recombinant technology and its applications, Immunological products – vaccines, sera",
+            "Chemistry: Isomers, tautomers, fermentation, synthesis of antibiotics, diazo reaction, chemistry of steroids",
+            "Pre-formulation studies, Pharmaceuticals, Industrial Pharmacy, Cosmetic science",
+            "Principal and application of analysis using spectroscopy, chromatography, quality assurance and quality management system",
+            "Pharmacy Practice: Community pharmacy, hospital pharmacy and drug distribution"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Regulations related to drugs and General knowledge related to Pharmaceuticals",
+          "unitTitleMr": "औषधांशी संबंधित नियम आणि औषधांशी संबंधित सामान्य ज्ञान",
+          "topics": [
+            "Drugs and cosmetic Act 1940 and rules 1945",
+            "Drugs and Magic Remedies and Objectionable Advertisement Act 1954 and Rules",
+            "Narcotic Drugs and Psychotropic Substances Act 1985",
+            "Drugs Price Control Order 2013 and NPPA",
+            "Poisons Act 1919 and Maharashtra poison rules 1970",
+            "The Pharmacy Act 1948",
+            "Intellectual property rights, Consumer protection Act, Right to information Act",
+            "National health programs, WHO-GMP certification, IPC and Adverse Drug Reactions"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धीमत्ता चाचणी",
+          "topics": [
+            "Questions to test how far candidates can think quickly and accurately"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever Acts/Rule/Regulations are mentioned in syllabus, latest amendments/versions to be considered."
+  ]
+}

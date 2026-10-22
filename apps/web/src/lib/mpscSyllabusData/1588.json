@@ -1,0 +1,28 @@
+{
+  "docId": 1588,
+  "examName": "Higher Grade Stenographer (Marathi and English), Gr-B / Lower Grade Stenographer (Marathi and English), Gr-B / Steno-Typist (Marathi and English), Gr-C",
+  "examNameMr": "उच्च श्रेणी लघुलेखक (मराठी व इंग्रजी), गट-ब / নিম্ন श्रेणी लघुलेखक (मराठी व इंग्रजी), गट-ब / लघुलेखक (टंकलेखक) (मराठी व इंग्रजी), गट-क",
+  "conductingBody": "MPSC",
+  "year": 2018,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Stenographer / Steno-Typist Examination",
+      "paperTitleMr": "लघुलेखक / लघुलेखक (टंकलेखक) परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

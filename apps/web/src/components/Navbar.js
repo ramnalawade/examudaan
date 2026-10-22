@@ -14,6 +14,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useLanguage } from '../context/LanguageContext'
 import { apiFetch } from '../lib/apiClient'
 import VoiceSearchButton from './VoiceSearchButton'
+import { triggerOmniSearch } from './OmniSearchModal'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -68,13 +69,19 @@ export default function Navbar() {
     { href: '/jobs', label: t('nav.jobs', 'Jobs'), icon: 'work' },
     { href: '/current-affairs', label: t('nav.current_affairs', 'Current Affairs'), icon: 'newspaper', badge: 'Daily', badgeBg: '#16a34a' },
     { href: '/question-papers', label: t('nav.question_papers', 'Question Papers'), icon: 'description', badge: 'MPSC', badgeBg: '#ea580c' },
-    { href: '/answer-keys', label: t('nav.answer_keys', 'Answer Keys'), icon: 'key', badge: 'Keys', badgeBg: '#059669' },
+    { href: '/blog', label: t('nav.blog', 'Blog & Guides'), icon: 'article', badge: 'New', badgeBg: '#ea580c' },
     { href: '/syllabus', label: t('nav.syllabus', 'Syllabus'), icon: 'menu_book' },
     { href: '/mock-tests', label: t('nav.mock_tests', 'Mock Tests'), icon: 'quiz', badge: 'Free', badgeBg: '#9a3412' },
   ]
 
   const MORE_NAV_ITEMS = [
+    { href: '/answer-keys', label: t('nav.answer_keys', 'Answer Keys'), icon: 'key', badge: 'Keys', desc: 'Official provisional & final answer keys for all exams' },
     { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', 'MPSC Papers (2024-26)'), icon: 'description', badge: '429 PDFs', desc: 'Official MPSC question papers & final answer keys from mpsc.gov.in' },
+    { href: '/police-bharti-question-papers', label: 'Police Bharti Papers', icon: 'local_police', badge: 'Solved', desc: 'Unit-wise Maharashtra Police Constable question papers & answer keys' },
+    { href: '/talathi-question-papers', label: 'Talathi Question Papers', icon: 'assignment', badge: 'TCS', desc: 'TCS shift-wise solved Talathi Bharti question papers with answer keys' },
+    { href: '/syllabus', label: 'All Exam Syllabi', icon: 'menu_book', badge: '17+ Exams', desc: 'Topic-wise syllabus, papers & pattern for MPSC, Police, UPSC & SSC' },
+    { href: '/syllabus#mpsc-catalog', label: 'MPSC 343 Official Papers', icon: 'account_balance', badge: '343 PDFs', desc: 'Browse all 343 official MPSC syllabus notifications with interactive breakdowns' },
+    { href: '/mpsc-syllabus/1181', label: 'MPSC Rajyaseva Syllabus (Eng/Mar)', icon: 'auto_stories', badge: 'Interactive', desc: 'MPSC State Services Main Exam papers, units & topics' },
     { href: '/admit-cards', label: t('nav.admit_cards', 'Admit Cards'), icon: 'badge', desc: 'Hall tickets & exam venue notices for all exams' },
     { href: '/results', label: t('nav.results', 'Results & Merits'), icon: 'workspace_premium', desc: 'Official merit lists, selection lists & marksheets' },
     { href: '/pyq', label: t('nav.pyq', '15-Yr PYQ Bank'), icon: 'history_edu', badge: 'Hot', desc: 'Interactive chapter-wise previous year question papers' },
@@ -88,9 +95,8 @@ export default function Navbar() {
     { href: '/salary-calculator', label: t('nav.salary', 'Salary Calculator'), icon: 'payments', desc: '7th Pay Commission in-hand salary matrix' },
     { href: '/alerts', label: t('nav.alerts', 'Telegram Job Alerts'), icon: 'send', badge: 'Free', desc: 'Instant official exam alerts directly on Telegram' },
     //{ href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),         icon: 'policy',                                desc: 'Scholarship, employment & training schemes' },
-    { href: '/blog', label: t('nav.blog', 'Exam Blog & Guides'), icon: 'menu_book', badge: 'Guides', desc: 'In-depth exam blueprints, 90-day plans & PYQ trends' },
     { href: '/youtube', label: t('nav.youtube', 'YouTube Classes'), icon: 'play_circle', desc: 'Free lectures, strategy & exam updates' },
-    { href: '/ai-tools', label: t('nav.ai_tools', 'AI Study Tools'), icon: 'smart_toy', desc: '114+ curated AI study aids' },
+    { href: '/ai-tools', label: t('nav.ai_tools', 'AI Study Tools'), icon: 'smart_toy', desc: '124+ curated AI study aids' },
     { href: '/ai-academy', label: t('nav.ai_academy', 'AI Academy'), icon: 'school', badge: 'New', desc: 'Master AI skills, prompts & workflows' },
     { href: '/mock-interview', label: t('nav.mock_interview', 'Mock Interview AI'), icon: 'mic', badge: 'AI', desc: 'Real-time AI voice/chat board mock interview' },
     { href: '/ai-news', label: t('nav.ai_news', 'AI News Feed'), icon: 'feed', badge: 'Live', desc: 'Real-time AI research & tech updates' },
@@ -100,10 +106,15 @@ export default function Navbar() {
     { href: '/', label: t('nav.home', 'Home'), icon: 'home' },
     { href: '/jobs', label: t('nav.jobs', 'Jobs'), icon: 'work' },
     { href: '/current-affairs', label: t('nav.current_affairs', 'Current Affairs'), icon: 'newspaper', badge: 'Daily' },
+    { href: '/blog', label: t('nav.blog', 'Blog & Guides'), icon: 'article', badge: 'New' },
     { href: '/question-papers', label: t('nav.question_papers', 'Question Papers'), icon: 'description', badge: 'MPSC' },
-    { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', 'MPSC Papers (24-26)'), icon: 'description', badge: '209' },
     { href: '/answer-keys', label: t('nav.answer_keys', 'Answer Keys'), icon: 'key', badge: 'Keys' },
+    { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', 'MPSC Papers & Keys'), icon: 'description', badge: '841' },
+    { href: '/police-bharti-question-papers', label: 'Police Papers & Keys', icon: 'local_police', badge: 'Solved' },
+    { href: '/talathi-question-papers', label: 'Talathi TCS Papers', icon: 'assignment', badge: 'TCS' },
     { href: '/syllabus', label: t('nav.syllabus', 'Syllabus'), icon: 'menu_book' },
+    { href: '/syllabus#mpsc-catalog', label: 'MPSC 343 Official Papers', icon: 'account_balance', badge: '343 PDFs' },
+    { href: '/mpsc-syllabus/1181', label: 'MPSC Rajyaseva Syllabus', icon: 'auto_stories', badge: 'Interactive' },
     { href: '/mock-tests', label: t('nav.mock_tests', 'Mock Tests'), icon: 'quiz', badge: 'Free' },
     { href: '/pyq', label: t('nav.pyq', '15-Yr PYQ Bank'), icon: 'history_edu', badge: 'Hot' },
     { href: '/daily-quiz', label: t('nav.daily_quiz', 'Daily Quiz'), icon: 'local_fire_department', badge: '5 Min' },
@@ -336,8 +347,36 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* ---- Right: Voice Search + Language Toggle + Auth ---- */}
+        {/* ---- Right: Omni Search + Voice Search + Language Toggle + Auth ---- */}
         <div className="navbar-actions">
+
+          {/* Omni Search Big Launcher (Cmd+K / Ctrl+K) */}
+          <button
+            type="button"
+            className="omni-search-trigger"
+            onClick={() => triggerOmniSearch()}
+            aria-label="Open Omni Search (Press Cmd+K or Ctrl+K)"
+            title="Search entire portal (Cmd+K / Ctrl+K)"
+            id="nav-omni-search-btn"
+          >
+            <div className="omni-search-left">
+              <span className="material-symbols-outlined omni-search-icon">search</span>
+              <span className="omni-search-text">Search 1,600+ Exams, Syllabus...</span>
+            </div>
+            <kbd className="omni-search-kbd">⌘K</kbd>
+          </button>
+
+          <button
+            type="button"
+            className="omni-search-mobile-btn"
+            onClick={() => triggerOmniSearch()}
+            aria-label="Open Omni Search"
+            title="Search portal"
+            id="nav-omni-search-mobile-btn"
+          >
+            <span className="material-symbols-outlined omni-search-mobile-icon">search</span>
+            <span>Search</span>
+          </button>
 
           {/* Voice search button — uses Web Speech API, shows only on supported browsers */}
           <VoiceSearchButton
@@ -540,6 +579,25 @@ export default function Navbar() {
             zIndex: 49,
           }}
         >
+          {/* Mobile Drawer Top Search Box */}
+          <div className="mobile-menu-search-box">
+            <button
+              type="button"
+              className="mobile-menu-search-btn"
+              onClick={() => {
+                setMenuOpen(false)
+                triggerOmniSearch()
+              }}
+              aria-label="Search ExamUdaan"
+            >
+              <div className="mobile-menu-search-left">
+                <span className="material-symbols-outlined mobile-menu-search-icon">search</span>
+                <span>Search 1,600+ Govt Jobs, Syllabus...</span>
+              </div>
+              <span className="mobile-menu-search-kbd">⌘K</span>
+            </button>
+          </div>
+
           {MOBILE_NAV_ITEMS.map(({ href, label, icon, badge }) => {
             const isActive = href === '/'
               ? pathname === '/'

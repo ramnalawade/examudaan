@@ -1,0 +1,45 @@
+{
+  "docId": 1198,
+  "examName": "Maharashtra Engineering Services, Group-A & B Combined (Pre) Examination",
+  "examNameMr": "महाराष्ट्र अभियांत्रिकी सेवा, गट-अ आणि गट-ब संयुक्त (पूर्व) परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Maharashtra Engineering Services Combined (Pre) Examination",
+      "paperTitleMr": "महाराष्ट्र अभियांत्रिकी सेवा संयुक्त (पूर्व) परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Studies and Engineering Aptitude",
+          "unitTitleMr": "सामान्य अभ्यास आणि अभियांत्रिकी अभियोग्यता",
+          "topics": [
+            "General Science",
+            "Current Events of National and International Importance",
+            "History of India and Indian National Movement",
+            "Indian and World Geography",
+            "Indian Polity and Governance",
+            "Economic and Social Development",
+            "General Aptitude Test"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Negative marking is applicable as per the MPSC standard rules."
+  ]
+}

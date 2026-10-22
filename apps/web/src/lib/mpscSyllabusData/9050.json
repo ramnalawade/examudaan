@@ -1,0 +1,103 @@
+{
+  "docId": 9050,
+  "examName": "Assistant Forest Statistician, Group-B",
+  "examNameMr": "सहाय्यक वन सांख्यिकीज्ञ, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Forest Statistician-Group B",
+      "paperTitleMr": "सहाय्यक वन सांख्यिकीज्ञ-गट ब",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Elementary Statistical Methods",
+          "unitTitleMr": null,
+          "topics": [
+            "Elementary Statistical Methods"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Probability",
+          "unitTitleMr": null,
+          "topics": [
+            "Probability"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Theory of Statistical Inference",
+          "unitTitleMr": null,
+          "topics": [
+            "Theory of Statistical Inference"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Interpretation of Linear Models",
+          "unitTitleMr": null,
+          "topics": [
+            "Interpretation of Linear Models"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Sampling Methods",
+          "unitTitleMr": null,
+          "topics": [
+            "Sampling Methods"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Index Numbers and Time Series",
+          "unitTitleMr": null,
+          "topics": [
+            "Index Numbers and Time Series"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Statistical Organizations in India",
+          "unitTitleMr": null,
+          "topics": [
+            "Statistical Organizations in India"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "National Income Estimation",
+          "unitTitleMr": null,
+          "topics": [
+            "National Income Estimation"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Information Technology",
+          "unitTitleMr": null,
+          "topics": [
+            "Information Technology"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Latest and recent developments in the above topics will also be expected from candidates."
+  ]
+}

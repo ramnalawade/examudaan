@@ -1,0 +1,85 @@
+{
+  "docId": 1204,
+  "examName": "Higher Grade Stenographer (Marathi & English), Lower Grade Stenographer (Marathi & English), Steno-typist (Marathi & English), Gr-B & Gr-C",
+  "examNameMr": "उच्च श्रेणी लघुलेखक (मराठी) व (इंग्रजी), गट-ब (अराजपत्रित), निम्न श्रेणी लघुलेखक (मराठी) व (इंग्रजी), गट-ब (अराजपत्रित), लघुंकलेखक (इंग्रजी) व (मराठी), गट-क",
+  "conductingBody": "MPSC",
+  "year": 2018,
+  "language": "Marathi",
+  "category": "group-b",
+  "totalMarks": 200,
+  "mainsMarks": 100,
+  "interviewMarks": 25,
+  "examPattern": "लेखी परीक्षा - १०० गुण, लघुलेखन-टंकलेखन - ७५ गुण, मुलाखत - २५ गुण",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi & Intelligence Test",
+      "paperTitleMr": "मराठी, बुद्धिमापन चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "topics": [
+            "सर्वसामान्य शब्दसंग्रह",
+            "वाक्यरचना",
+            "व्याकरण",
+            "म्हणी व वाक्प्रचार यांचा अर्थ, वाक्यात उपयोग",
+            "उताऱ्यावरील प्रश्नांची उत्तरे"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमापन चाचणी",
+          "topics": [
+            "उमेदवार किती लवकर व अचूकपणे विचार करू शकतो याचा अंदाज घेण्याच्या दृष्टीने सदर प्रश्न विचारण्यात येतील."
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "English & Intelligence Test",
+      "paperTitleMr": "इंग्रजी, बुद्धिमापन चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी",
+          "topics": [
+            "Common vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Use of Idioms & Phrases and their meaning",
+            "Comprehension of passage"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमापन चाचणी",
+          "topics": [
+            "उमेदवार किती लवकर व अचूकपणे विचार करू शकतो याचा अंदाज घेण्याच्या दृष्टीने सदर प्रश्न विचारण्यात येतील."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "लघुलेखन-टंकलेखन चाचणीच्या ७५ गुणांपैकी किमान ३१ गुण मिळविणे आवश्यक राहील.",
+    "३१ पेक्षा कमी गुण प्राप्त करणाऱ्या उमेदवाराची मुलाखत घेण्यात येणार नाही.",
+    "लघुलेखन-टंकलेखन व मुलाखत यांच्या एकुण १०० गुणांपैकी किमान ४१% गुण मिळविणे आवश्यक राहील."
+  ]
+}

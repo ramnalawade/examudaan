@@ -9,6 +9,7 @@ import Link from 'next/link'
 import styles from '../careerDetail.module.css'
 import { CAREER_PATHS, STREAMS, getCareerBySlug, getAllCareerSlugs } from '@/lib/careerGuideData'
 import PrintButton from './PrintButton'
+import { fitDescription } from '@/lib/seoMetadata'
 
 // Statically pre-render all 40 career paths at build time
 export async function generateStaticParams() {
@@ -24,17 +25,34 @@ export async function generateMetadata({ params }) {
 
   if (!career) {
     return {
-      title: 'Career Dossier Not Found | ExamUdaan.in',
-      description: 'The requested career guidance dossier could not be found.'
+      title: { absolute: 'Career Guide 2026 | ExamUdaan' },
+      description: 'Find career roadmap, salary structure and exam guidance on ExamUdaan.',
     }
   }
 
   const streamMeta = STREAMS.find(s => s.id === career.streamId)
   const examNames = career.entranceExams.map(e => e.name).join(', ')
 
+  // Title: max 60 chars
+  let title = `${career.title} Career Guide 2026 - Salary & Exams`
+  if (title.length > 60) {
+    title = `${career.title} Career Guide 2026 | ExamUdaan`
+  }
+  if (title.length > 60) {
+    title = `${career.title} Career Guide 2026`
+  }
+  if (title.length > 60) {
+    title = `${career.title} Career Guide`.slice(0, 60)
+  }
+
+  const description = fitDescription(
+    `Complete career guide for ${career.title} after 10th & 12th. Eligibility: ${career.min12thStream}. Key entrance exams: ${examNames}.`,
+    'Syllabus, salary ladder & top colleges on ExamUdaan.'
+  )
+
   return {
-    title: `${career.title} Career Guide 2026`,
-    description: `Complete career guide for ${career.title} after 10th & 12th ${streamMeta?.shortName || ''}. Eligibility: ${career.min12thStream}. Key entrance exams: ${examNames}. Syllabus portion, realistic salary ladder, top colleges in Maharashtra & India.`,
+    title: { absolute: title },
+    description,
     keywords: [
       career.title,
       career.role,
@@ -50,17 +68,17 @@ export async function generateMetadata({ params }) {
       canonical: `https://examudaan.in/career/${career.id}`
     },
     openGraph: {
-      title: `${career.title} — Career Roadmap & Exam Guide 2026`,
-      description: `In-depth educational roadmap, entrance exams (${examNames}), salary ladder, and future AI demand for ${career.title}.`,
+      title,
+      description,
       url: `https://examudaan.in/career/${career.id}`,
-      siteName: 'ExamUdaan.in',
+      siteName: 'ExamUdaan',
       type: 'article',
       locale: 'en_IN'
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${career.title} — Career Roadmap & Exam Guide 2026`,
-      description: `In-depth roadmap, syllabus portion, exam dates & salary ladder for ${career.title}.`
+      title,
+      description,
     }
   }
 }

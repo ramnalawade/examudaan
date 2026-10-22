@@ -153,6 +153,11 @@ function ExamCard({ exam }) {
   ).length
   const hasDownloadedPapers = downloadedPdfsCount > 0
 
+  const latestPaperYear = exam.officialPdfs?.[0]?.year || exam.pyqLinks?.[0]?.year
+  const latestPaperUrl = exam.officialPdfs?.[0]?.url || exam.pyqLinks?.[0]?.paperUrl
+  const isDirectPdf = latestPaperUrl?.endsWith('.pdf') || latestPaperUrl?.startsWith('/downloads/') || latestPaperUrl?.startsWith('/question-papers/')
+  const hasSpecificPaper = !!(latestPaperYear && latestPaperUrl)
+
   // Clean format for stages to avoid card blowout
   const stagesSummary = useMemo(() => {
     if (!exam.stages || exam.stages.length === 0) return 'Written Exam'
@@ -165,19 +170,23 @@ function ExamCard({ exam }) {
   }, [exam.stages])
 
   return (
-    <div className={styles.examCard} style={{ '--exam-accent': exam.color || '#ea580c' }}>
+    <div className={styles.examCard}>
       {/* Color accent bar */}
       <div className={styles.examCardBar} />
 
       {/* Header */}
       <div className={styles.examCardHeader}>
-        <div className={styles.examIconWrap}>
+        <Link href={`/syllabus/${exam.slug}`} className={styles.examIconWrap} aria-label={exam.nameEn}>
           <span className={`material-symbols-outlined ${styles.examIcon}`}>
             {exam.logo || 'school'}
           </span>
-        </div>
+        </Link>
         <div className={styles.examTitleBox}>
-          <h3 className={styles.examName}>{exam.nameEn}</h3>
+          <h3 className={styles.examName}>
+            <Link href={`/syllabus/${exam.slug}`} className={styles.examNameLink}>
+              {exam.nameEn}
+            </Link>
+          </h3>
           <p className={styles.examBody}>{exam.conductingBody}</p>
         </div>
         <span className={styles.examLevel} data-level={exam.examLevel}>
@@ -188,10 +197,23 @@ function ExamCard({ exam }) {
       {/* Target Posts Pills (Always 1 row) */}
       <div className={styles.examPosts}>
         {exam.targetPosts?.slice(0, 3).map(p => (
-          <span key={p} className={styles.postPill}>{p}</span>
+          <Link
+            key={p}
+            href={`/jobs?q=${encodeURIComponent(p)}`}
+            className={styles.postPill}
+            title={`View active ${p} recruitment notifications`}
+          >
+            {p}
+          </Link>
         ))}
         {exam.targetPosts?.length > 3 && (
-          <span className={styles.postPillMore}>+{exam.targetPosts.length - 3} more</span>
+          <Link
+            href={`/syllabus/${exam.slug}#syllabus`}
+            className={styles.postPillMore}
+            title={`View all ${exam.targetPosts.length} posts and syllabus details`}
+          >
+            +{exam.targetPosts.length - 3} more
+          </Link>
         )}
       </div>
 
@@ -222,10 +244,14 @@ function ExamCard({ exam }) {
       <div className={styles.cardBottomArea}>
         {/* Resource Stats Strip */}
         <div className={styles.statsStrip}>
-          <span className={styles.statChip}>
+          <Link
+            href={`/syllabus/${exam.slug}#syllabus`}
+            className={`${styles.statChip} ${styles.statChipClickable}`}
+            title={`View ${totalPapers > 0 ? `${totalPapers} Papers & Complete Blueprint` : 'Exam Syllabus'}`}
+          >
             <span className={`material-symbols-outlined ${styles.statIconOrange}`}>menu_book</span>
-            {totalPapers > 0 ? `${totalPapers} Papers` : 'Syllabus'}
-          </span>
+            <span>{totalPapers > 0 ? `${totalPapers} Papers` : 'Syllabus'}</span>
+          </Link>
           <span className={styles.statDot}>•</span>
           {hasDownloadedPapers ? (
             <a
@@ -242,17 +268,45 @@ function ExamCard({ exam }) {
             </a>
           ) : (
             <Link
-              href={`/syllabus/${exam.slug}#pyq`}
+              href={exam.pyqLinks?.length ? `/syllabus/${exam.slug}#pyq` : `/syllabus/${exam.slug}#syllabus`}
               className={`${styles.statChip} ${styles.statChipClickable}`}
-              title={`View ${exam.pyqLinks?.length || 0} previous year papers for ${exam.shortName || exam.nameEn}`}
+              title={exam.pyqLinks?.length ? `View ${exam.pyqLinks.length} previous year papers for ${exam.shortName || exam.nameEn}` : `Open interactive topic tracker for ${exam.shortName || exam.nameEn}`}
             >
               <span className={`material-symbols-outlined ${styles.statIconBlue}`}>
-                history_edu
+                {exam.pyqLinks?.length ? 'history_edu' : 'checklist'}
               </span>
               <span>{exam.pyqLinks?.length ? `${exam.pyqLinks.length} PYQ Papers` : 'Topic Tracker'}</span>
             </Link>
           )}
-          <span className={styles.cycleBadge}>2026 Cycle</span>
+
+          {/* 2026 Cycle / Year's Paper Badge — Clickable */}
+          {hasSpecificPaper ? (
+            <a
+              href={latestPaperUrl}
+              target={isDirectPdf ? "_blank" : undefined}
+              rel={isDirectPdf ? "noopener noreferrer" : undefined}
+              className={`${styles.cycleBadge} ${styles.cycleBadgeClickable}`}
+              title={`Open ${latestPaperYear} Question Paper`}
+            >
+              {latestPaperYear === 2026 ? '2026 Cycle ↗' : `${latestPaperYear} Paper ↗`}
+            </a>
+          ) : latestPaperYear ? (
+            <Link
+              href={`/syllabus/${exam.slug}#pyq`}
+              className={`${styles.cycleBadge} ${styles.cycleBadgeClickable}`}
+              title={`View ${latestPaperYear} Question Papers & Answer Keys`}
+            >
+              {latestPaperYear === 2026 ? '2026 Cycle' : `${latestPaperYear} Paper`}
+            </Link>
+          ) : (
+            <Link
+              href={`/syllabus/${exam.slug}#syllabus`}
+              className={`${styles.cycleBadge} ${styles.cycleBadgeClickable}`}
+              title="View 2026 Examination Cycle & Complete Syllabus"
+            >
+              2026 Cycle
+            </Link>
+          )}
         </div>
 
         {/* Action Row — Clean & Single Primary CTA */}

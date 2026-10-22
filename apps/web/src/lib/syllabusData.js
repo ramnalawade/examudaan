@@ -740,7 +740,7 @@ export const SYLLABUS_EXAMS = [
       { year: 2024, exam: "Written Examination", label: "Maharashtra Police Bharti 2024 Paper & Answer Key", paperUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", answerKeyUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", url: "https://mahapolice.gov.in" },
       { year: 2023, exam: "Written Examination", label: "Maharashtra Police Bharti 2023 Paper & Answer Key", paperUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", answerKeyUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", url: "https://mahapolice.gov.in" },
       { year: 2022, exam: "Written Examination", label: "Maharashtra Police Bharti 2022 Paper & Answer Key", paperUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", answerKeyUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", url: "https://mahapolice.gov.in" },
-      { year: 2021, exam: "Written Examination (Nagpur/Mumbai)", label: "Maharashtra Police Bharti 2021 Paper & Answer Key", paperUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", answerKeyUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", url: "https://mahapolice.gov.in" },
+      { year: 2021, exam: "Written Examination", label: "Maharashtra Police Bharti 2021 Paper & Answer Key", paperUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", answerKeyUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", url: "https://mahapolice.gov.in" },
       { year: 2019, exam: "Written Examination", label: "Maharashtra Police Bharti 2019 Paper & Answer Key", paperUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", answerKeyUrl: "https://mahapolice.gov.in/citizen/recruitment.htm", url: "https://mahapolice.gov.in" },
     ],
     books: [
@@ -1419,11 +1419,13 @@ export const SYLLABUS_EXAMS = [
               { name: "इंग्रजी भाषा (15 प्रश्न / 30 गुण)", subtopics: ["Tenses, Prepositions, Conjunctions, Active/Passive Voice, Vocabulary, Error Detection"] },
               { name: "सामान्य ज्ञान (15 प्रश्न / 30 गुण)", subtopics: ["महाराष्ट्राचा भूगोल, इतिहास, आरोग्य क्षेत्रातील शासकीय योजना (आयुष्मान भारत, महात्मा फुले जन आरोग्य योजना), राष्ट्रीय आरोग्य अभियान (NHM)"] },
               { name: "बौद्धिक चाचणी (15 प्रश्न / 30 गुण)", subtopics: ["संख्या मालिका, सांकेतिक भाषा, नातेसंबंध, तर्कसंगत विचार, वेन आकृती"] },
-              { name: "तांत्रिक व पदनिहाय विषय (40 प्रश्न / 80 गुण)", subtopics: [
-                "Staff Nurse: Anatomy & Physiology, Fundamentals of Nursing, Pharmacology, Community Health, Midwifery & Obstetrical Nursing",
-                "Pharmacist: Pharmaceutics, Pharmacology, Pharmacognosy, Pharmaceutical Jurisprudence, Hospital Pharmacy",
-                "Lab Technician: Clinical Biochemistry, Microbiology, Hematology, Pathology & Blood Banking"
-              ]}
+              {
+                name: "तांत्रिक व पदनिहाय विषय (40 प्रश्न / 80 गुण)", subtopics: [
+                  "Staff Nurse: Anatomy & Physiology, Fundamentals of Nursing, Pharmacology, Community Health, Midwifery & Obstetrical Nursing",
+                  "Pharmacist: Pharmaceutics, Pharmacology, Pharmacognosy, Pharmaceutical Jurisprudence, Hospital Pharmacy",
+                  "Lab Technician: Clinical Biochemistry, Microbiology, Hematology, Pathology & Blood Banking"
+                ]
+              }
             ]
           }
         ]
@@ -2393,9 +2395,24 @@ export const SYLLABUS_EXAMS = [
   },
 ]
 
+// Defensive Aliases: Map legacy or previously broadcasted syllabus slugs to real canonical exams
+export const SYLLABUS_SLUG_ALIASES = {
+  'mpsc-combined-group-b-c': 'mpsc-combined',
+  'maharashtra-police-bharti': 'maharashtra-police',
+  'police-bharti': 'maharashtra-police',
+  'talathi-bharti': 'maharashtra-talathi',
+  'vanrakshak-forest-guard': 'maharashtra-forest',
+  'zp-recruitment': 'maharashtra-zp',
+  'arogya-sevak': 'maharashtra-arogya-vibhag',
+  'mpsc-civil-judge': 'mpsc-state-services',
+  'tet-mahatet': 'mpsc-state-services',
+}
+
 // Helper: get exam by slug with verified downloadable officialPdfs only
 export function getExamBySlug(slug) {
-  const exam = SYLLABUS_EXAMS.find(e => e.slug === slug)
+  if (!slug) return null
+  const resolvedSlug = SYLLABUS_SLUG_ALIASES[slug] || slug
+  const exam = SYLLABUS_EXAMS.find(e => e.slug === resolvedSlug)
   if (!exam) return null
 
   // Only keep papers that actually exist in local /downloads/ or /question-papers/
@@ -2484,13 +2501,17 @@ export function getSyllabusForJob(job) {
   if (text.includes('zp') || text.includes('जिल्हा परिषद') || text.includes('zilla parishad')) {
     return { slug: 'maharashtra-zp', name: 'महाराष्ट्र जिल्हा परिषद भरती', path: '/syllabus/maharashtra-zp' }
   }
-  if (text.includes('गट क') || text.includes('गट-क') || text.includes('group c') || text.includes('clerk') || text.includes('लिपिक')) {
-    return { slug: 'mpsc-group-c', name: 'MPSC गट-क संयुक्त परीक्षा', path: '/syllabus/mpsc-group-c' }
-  }
-  if (text.includes('psi') || text.includes('sti') || text.includes('aso') || text.includes('गट ब') || text.includes('गट-ब') || text.includes('संयुक्त')) {
-    return { slug: 'mpsc-combined', name: 'MPSC संयुक्त पूर्व परीक्षा (गट-ब व क)', path: '/syllabus/mpsc-combined' }
-  }
-  if (text.includes('rajyaseva') || text.includes('राज्यसेवा') || text.includes('mpsc') || text.includes('civil services')) {
+  const isMpsc = (job.org_acronym === 'MPSC' || job.is_mpsc === true || text.includes('mpsc') || text.includes('महाराष्ट्र लोकसेवा'))
+  if (isMpsc) {
+    if (text.includes('गट क') || text.includes('गट-क') || text.includes('group c') || text.includes('clerk') || text.includes('लिपिक')) {
+      return { slug: 'mpsc-group-c', name: 'MPSC गट-क संयुक्त परीक्षा', path: '/syllabus/mpsc-group-c' }
+    }
+    if (text.includes('psi') || text.includes('sti') || text.includes('aso') || text.includes('गट ब') || text.includes('गट-ब') || text.includes('संयुक्त')) {
+      return { slug: 'mpsc-combined', name: 'MPSC संयुक्त पूर्व परीक्षा (गट-ब व क)', path: '/syllabus/mpsc-combined' }
+    }
+    if (text.includes('rajyaseva') || text.includes('राज्यसेवा') || text.includes('civil services')) {
+      return { slug: 'mpsc-state-services', name: 'MPSC राज्यसेवा (नागरी सेवा)', path: '/syllabus/mpsc-state-services' }
+    }
     return { slug: 'mpsc-state-services', name: 'MPSC राज्यसेवा (नागरी सेवा)', path: '/syllabus/mpsc-state-services' }
   }
   if (text.includes('ssc') || text.includes('cgl') || text.includes('chsl') || text.includes('mts')) {
@@ -2502,7 +2523,11 @@ export function getSyllabusForJob(job) {
   return null
 }
 
-// All exam slugs for static generation
-export const ALL_EXAM_SLUGS = SYLLABUS_EXAMS.map(e => e.slug)
+// All exam slugs for static generation (includes canonical slugs & aliases)
+export const ALL_EXAM_SLUGS = Array.from(new Set([
+  ...SYLLABUS_EXAMS.map(e => e.slug),
+  ...Object.keys(SYLLABUS_SLUG_ALIASES)
+]))
+
 
 

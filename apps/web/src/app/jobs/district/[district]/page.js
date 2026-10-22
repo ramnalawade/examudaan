@@ -18,6 +18,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import DistrictJobsClient from './DistrictJobsClient'
+import { fitDescription } from '@/lib/seoMetadata'
 
 // ── District catalogue ────────────────────────────────────────
 // Each entry defines: slug (URL param), display name, popular local exams,
@@ -139,22 +140,43 @@ export async function generateMetadata({ params }) {
   const district = DISTRICT_MAP[resolvedParams.district]
   if (!district) return {}
 
-  const title = `${district.name} Govt Jobs 2026`
-  const description = `Latest government job vacancies in ${district.name} district (${district.region}). ${district.popular.join(', ')} and more — direct official links, no clickbait.`
+  // Pattern: "Jobs in {District} 2026 - Latest Govt Recruitment Vacancies", max 60 chars
+  let title = `Jobs in ${district.name} 2026 - Latest Govt Recruitment`
+  if (title.length > 60) {
+    title = `Jobs in ${district.name} 2026 - Latest Govt Jobs`
+  }
+  if (title.length > 60) {
+    title = `${district.name} Govt Jobs 2026 - Vacancies`
+  }
+  if (title.length > 60) {
+    title = `${district.name} Govt Jobs 2026`.slice(0, 60)
+  }
+
+  const description = fitDescription(
+    `Latest government job vacancies in ${district.name} district (${district.region}). ${district.popular.join(', ')} — direct official recruitment links.`,
+    'Apply online on ExamUdaan.'
+  )
+
+  const canonicalUrl = `https://examudaan.in/jobs/district/${district.slug}`
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
-      canonical: `https://examudaan.in/jobs/district/${district.slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${title} | ExamUdaan`,
+      title,
       description,
-      url: `https://examudaan.in/jobs/district/${district.slug}`,
-      siteName: 'ExamUdaan.in',
+      url: canonicalUrl,
+      siteName: 'ExamUdaan',
       locale: 'en_IN',
       type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
     },
   }
 }

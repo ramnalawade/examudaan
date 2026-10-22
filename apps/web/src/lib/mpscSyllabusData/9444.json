@@ -1,0 +1,64 @@
+{
+  "docId": 9444,
+  "examName": "Maharashtra Group B (Non-Gazetted) Services Combined Preliminary Examination",
+  "examNameMr": "महाराष्ट्र गट-ब (अराजपत्रित) सेवा संयुक्त पूर्व परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "Marathi",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Aptitude Test",
+      "paperTitleMr": "सामान्य क्षमता चाचणी व बुद्धिमत्ता",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "History and Geography",
+          "unitTitleMr": "इतिहास व भूगोल",
+          "topics": [
+            "Modern India with special reference to Maharashtra",
+            "Geography of Maharashtra with special study"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Economy and Planning",
+          "unitTitleMr": "अर्थव्यवस्था व नियोजन",
+          "topics": [
+            "National Income, Agriculture, Industry, Foreign Trade, Banking, Population, Poverty and Unemployment, Currency and Fiscal Policy",
+            "Budget, Accounts, Auditing"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Science",
+          "unitTitleMr": "सामान्य विज्ञान",
+          "topics": [
+            "Physics, Chemistry, Zoology, Botany, Hygiene"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Arithmetic and Reasoning",
+          "unitTitleMr": "अंकगणित व बुद्धिमत्ता",
+          "topics": [
+            "Addition, Subtraction, Multiplication, Division, Decimals, Fractions and Percentages",
+            "Logical reasoning and mental ability tests for accuracy and speed"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,65 @@
+{
+  "docId": 1805,
+  "examName": "Maharashtra Agriculture Services, Group-A & B (Pre) & (Main)",
+  "examNameMr": "महाराष्ट्र कृषि सेवा, गट-अ व गट-ब (पूर्व) व (मुख्य) परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 400,
+  "mainsMarks": 400,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Agriculture Science",
+      "paperTitleMr": "कृषी विज्ञान",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Principles of Agronomy",
+          "unitTitleMr": "सस्यशास्त्र तत्त्वे",
+          "topics": [
+            "Agronomy : Its definition, Scope, and role of Agronomist in agriculture.",
+            "Classification of Crops : Agriculture seasons in India and in Maharashtra. Factors affecting crop production.",
+            "Tillage : Factors affecting tillage, type of tillage operations, tillage implements. Effects of tillage on soil and crop growth. Modern concepts of tillage.",
+            "Seed : Qualities of good seed, types of seed, seed testing and seed treatment, different methods of sowing, optimum plant population and geometry. Classification of Seeds.",
+            "Cropping systems : Types of cropping systems, crop rotations, relay cropping.",
+            "Weeds : Definition, methods of weed control, integrated weed management concept."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Agriculture Meteorology",
+          "unitTitleMr": "कृषी हवामानशास्त्र",
+          "topics": [
+            "Definition of meteorology, weather and climate elements of weather.",
+            "Temperature measurement, factors affecting temperature.",
+            "Solar radiation, significance of solar radiation in agriculture, factors affecting and measurement of solar radiation.",
+            "Atmosphere pressure its measurement, variation of pressure with height, hydrological cycle.",
+            "Drought climatology, classification of drought, weather forecasting in agriculture, its classification, techniques and forecasting network in India."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Irrigation Water Management",
+          "unitTitleMr": "सिंचन पाणी व्यवस्थापन",
+          "topics": [
+            "Soil water: Sources of water, absorption and movement of water in soil, soil moisture constants, forms of soil water, factors affecting available soil moisture.",
+            "Absorption of soil moisture by plant, factors affecting absorption, evaporation, transpiration, consumptive use and effective rainfall.",
+            "Irrigation: Water requirement, irrigation requirement of crops, factors affecting water requirement, scheduling of irrigation, depth of irrigation, measurement of irrigation, water use efficiency.",
+            "Drainage : Importance of drainage, types of drainage, effect of bad drainage on soil and crop growth."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}
