@@ -5,6 +5,7 @@
 // ============================================================
 
 import { NextResponse } from 'next/server'
+import { withValidation, schemas } from '../../../lib/validate'
 
 const YOUTUBE_API_BASE = 'https://www.googleapis.com/youtube/v3'
 const API_KEY = process.env.YOUTUBE_API_KEY
@@ -14,13 +15,13 @@ const API_KEY = process.env.YOUTUBE_API_KEY
  * GET /api/youtube?q=MPSC+2026&maxResults=12
  * GET /api/youtube?playlistId=PLxxxxxx&maxResults=12
  */
-export async function GET(request) {
-  const { searchParams } = new URL(request.url)
-  const channelId  = searchParams.get('channelId')
-  const q          = searchParams.get('q')
-  const playlistId = searchParams.get('playlistId')
-  const maxResults = parseInt(searchParams.get('maxResults') || '12', 10)
-  const pageToken  = searchParams.get('pageToken') || ''
+async function youtubeHandler(request) {
+  const validated = request.validatedBody || {}
+  const channelId  = validated.channelId
+  const q          = validated.q
+  const playlistId = validated.playlistId
+  const maxResults = parseInt(validated.maxResults || '12', 10)
+  const pageToken  = validated.pageToken || ''
 
   // If no API key configured, return demo data so UI still renders
   if (!API_KEY) {
@@ -128,3 +129,5 @@ function getDemoVideos() {
     },
   ]
 }
+
+export const GET = withValidation(schemas.youtubeProxy, youtubeHandler)

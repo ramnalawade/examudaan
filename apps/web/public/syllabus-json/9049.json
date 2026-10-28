@@ -1,0 +1,52 @@
+{
+  "docId": 9049,
+  "examName": "Legal Advisor, Group-A, Director General and Inspector General of Police, Home Department",
+  "examNameMr": "विधी सल्लागार, गट-अ, पोलीस महासंचालक आणि पोलीस महानिरीक्षक, गृह विभाग",
+  "conductingBody": "Maharashtra Public Service Commission",
+  "year": 2024,
+  "language": "Bilingual",
+  "category": "judicial-legal",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (200 Marks) followed by Interview (50 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge and Law Subject",
+      "paperTitleMr": "सामान्य ज्ञान व विधी विषयक घटक",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current affairs - World and India (Political, Industrial, Economic, Social, Educational, Geographical, Astronomical, Cultural, Scientific, etc.)",
+          "unitTitleMr": "जागतिक तसेच भारतातील चालू घडामोडी - राजकीय, औद्योगिक, आर्थिक, सामाजिक, शैक्षणिक, भौगोलिक, खगोलशास्त्रिय, सांस्कृतिक, वैज्ञानिक इत्यादी"
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमापन चाचणी"
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Right to Information Act - 2005",
+          "unitTitleMr": "माहितीचा अधिकार कायदा-२००५"
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Law: Bhartiya Nagarik Suraksha Sanhita, 2023 (BNSS), Civil Procedure Code, Bhartiya Sakshya Adhiniyam, 2023, The Bhartiya Nyay Sanhita, 2023, Constitution of India, Maharashtra Police Act, Limitation Act",
+          "unitTitleMr": "कायदा: भारतीय नागरिक सुरक्षा संहिता, २०२३, दिवाणी प्रक्रिया संहिता, भारतीय साक्ष अधिनियम, २०२३, भारतीय न्याय संहिता, २०२३, भारताचे संविधान, महाराष्ट्र पोलीस कायदा, मर्यादा कायदा"
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा / कमी करण्यात येतील.",
+    "अंतिम गुणवत्ता यादी ही वस्तुनिष्ठ परीक्षेतील व मुलाखतीतील एकत्रित गुणांच्या आधारावर राहील."
+  ]
+}

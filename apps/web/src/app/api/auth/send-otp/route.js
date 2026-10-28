@@ -15,12 +15,33 @@ import { query as pgQuery } from '../../../../lib/pgdb'
 import { ok, badRequest, serverError } from '../../../../lib/apiResponse'
 import { withValidation, schemas } from '../../../../lib/validate'
 import { generateOTP } from '../../../../lib/helpers'
+import { verifyTurnstileToken } from '../../../../lib/turnstile'
 
 const OTP_EXPIRY_MINUTES = 10
 const MAX_OTP_PER_HOUR   = 5
 
 async function handler(req) {
-  const { identifier, channel } = req.validatedBody
+  const {
+    identifier,
+    channel,
+    'cf-turnstile-response': turnstileTokenAlt,
+    turnstileToken,
+  } = req.validatedBody
+
+  // Verify Turnstile bot protection if token provided
+  const token = turnstileTokenAlt || turnstileToken
+  if (token) {
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || null
+    const turnstileCheck = await verifyTurnstileToken({
+      token,
+      action: 'send_otp',
+      clientIp,
+    })
+    if (!turnstileCheck.success) {
+      return badRequest(turnstileCheck.reason || 'Bot verification check failed. Please refresh.')
+    }
+  }
+
 
   try {
     // --- Rate limiting: max 5 OTPs per hour per identifier ---

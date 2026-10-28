@@ -203,9 +203,9 @@ export const CAREER_COMPARISON_BLOGS = [
     coverColor: 'linear-gradient(135deg, #7c2d12 0%, #ea580c 100%)',
     badge: 'Rajyaseva Top Posts',
     relatedTool: {
-      title: 'View 841 Official MPSC Question Papers & Keys',
+      title: 'View 1,284 Official MPSC Question Papers & Keys',
       link: '/mpsc-pyq',
-      badge: '2021–2026 Archive'
+      badge: '2009–2026 Archive'
     },
     sections: [
       {

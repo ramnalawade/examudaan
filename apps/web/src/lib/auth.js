@@ -168,3 +168,26 @@ export function withOptionalAuth(handler) {
     return handler(req, ctx, user)
   }
 }
+
+// ---- withAdminAuth HOC ----
+
+/**
+ * Higher-order function that protects admin-only route handlers.
+ * Builds on withAuth: verifies JWT AND checks is_admin flag or role === 'admin'.
+ *
+ * Usage:
+ *   export const GET = withAdminAuth(async (req, ctx, user) => { ... })
+ *
+ * @param {Function} handler — async (req, ctx, user) => NextResponse
+ * @returns {Function} Next.js route handler
+ */
+export function withAdminAuth(handler) {
+  // First apply withAuth to verify JWT and handle token refresh
+  return withAuth(async (req, ctx, user) => {
+    // Then enforce admin-level role check
+    if (!user || (!user.is_admin && user.role !== 'admin')) {
+      return unauthorized('Admin credentials required')
+    }
+    return handler(req, ctx, user)
+  })
+}

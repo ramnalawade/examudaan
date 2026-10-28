@@ -177,6 +177,35 @@
   border-radius: 14px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.patternCard:hover {
+  transform: translateY(-2px);
+  border-color: #16a34a;
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.15);
+}
+
+.patternCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.patternArrowIcon {
+  font-size: 18px;
+  font-weight: 700;
+  color: #16a34a;
+  transition: transform 0.15s ease;
+}
+
+.patternCard:hover .patternArrowIcon {
+  transform: translateX(4px);
 }
 
 .patternSubject {
@@ -208,6 +237,18 @@
   font-weight: 800;
   color: #16a34a;
   font-size: 16px;
+}
+
+.patternCardCta {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed #bbf7d0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* Question Papers Table & Cards */

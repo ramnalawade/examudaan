@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/syllabus/SyllabusListingClient.js — Interactive Syllabus Catalog
 // ExamUdaan.in — Dynamic filters, search, and aligned card matrix
 // ============================================================
@@ -256,7 +256,7 @@ function ExamCard({ exam }) {
           {hasDownloadedPapers ? (
             <a
               href={exam.officialPdfs?.[0]?.url || `/syllabus/${exam.slug}#pyq`}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               className={`${styles.statChip} ${styles.statChipClickable}`}
               title={`Open ${exam.shortName || exam.nameEn} Question Paper in PDF format`}
@@ -316,7 +316,7 @@ function ExamCard({ exam }) {
               <>
                 <a
                   href={exam.officialPdfs?.[0]?.url || `/syllabus/${exam.slug}#pyq`}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   rel="noopener noreferrer"
                   className={styles.quickPill}
                   title="Open official question paper PDF directly in new tab"

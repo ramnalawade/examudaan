@@ -1,0 +1,750 @@
+{
+  "docId": 13741,
+  "examName": "Assistant Professor (Prosthodontics, Crown and Bridge and Orthodontics and Dentofacial Orthopedics and Conservative Dentistry and Endodontics)",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Prosthodontics, Crown and Bridge and Orthodontics and Dentofacial Orthopedics and Conservative Dentistry and Endodontics)",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "SECTION A",
+          "unitTitleMr": null,
+          "topics": [
+            "HUMAN ANATOMY, EMBRYOLOGY, HISTOLOGY AND MEDICAL GENETICS"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "MEDICAL GENETICS",
+          "unitTitleMr": null,
+          "topics": [
+            "HUMAN PHYSIOLOGY"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "SPECIAL SENSES",
+          "unitTitleMr": null,
+          "topics": [
+            "BIO-CHEMISTRY"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "General Aspects of neoplasia",
+          "unitTitleMr": null,
+          "topics": [
+            "Anaemias",
+            "Leukaemias"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Haemorrhagic Disorders Coagulation cascade Coagulation disorders",
+          "unitTitleMr": null,
+          "topics": [
+            "MICROBIOLOGY",
+            "IMMUNOLOGY",
+            "SYSTEMATIC BACTERIOLOGY",
+            "VIROLOGY",
+            "MYCOLOGY",
+            "PARASITOLOGY"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "GENERAL AND DENTAL PHARMACOLOGY AND THERAPEUTICS",
+          "unitTitleMr": null,
+          "topics": [
+            "General principles of pharmacology",
+            "CNS drugs",
+            "General anaesthetics, hypnotics, analgesics, psychotropic drugs, anti-",
+            "Autonomic drugs",
+            "Cardiovascular drugs",
+            "Autocoids",
+            "Drugs acting on blood",
+            "G.I.T. Drugs",
+            "Endocrines",
+            "Chemotherapy",
+            "Vitamins",
+            "Pharmacotherapy of emergencies in dental office",
+            "Chelating agents"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "BIOPSY",
+          "unitTitleMr": null,
+          "topics": [
+            "RESEARCH METHODOLOGY AND DENTAL EDUCATION TECHNOLOGY"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Health Information: Basic knowledge of Computers, MS Office",
+          "unitTitleMr": null,
+          "topics": [
+            "Windows 2000, Statistical Programmes"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Research Methodology: Definition, types of research, designing",
+          "unitTitleMr": null,
+          "topics": [
+            "A written protocol",
+            "Bio-Statistics: Introduction, collection of data, presentation of data",
+            "Measures of Central tendency, measures of dispersion, Tests of significance",
+            "Sampling and sampling techniques- types, errors, bias, blind trials and calibration",
+            "Innovative Learning and Teaching Methodologies",
+            "SECTION B (Prosthodontics, Crown and Bridge)",
+            "Complete Dentures",
+            "Applied Anatomy and Physiology"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Residual ridge resorption",
+          "unitTitleMr": null,
+          "topics": [
+            "Communicating with the patient"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Instructing the patient",
+          "unitTitleMr": null,
+          "topics": [
+            "Diagnosis and treatment planning for patients"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "With no teeth remaining",
+          "unitTitleMr": null,
+          "topics": [
+            "Systemic status",
+            "Local factor",
+            "The geriatric patient",
+            "Diagnostic procedures",
+            "Articulators- discussion",
+            "Improving the patient’s denture foundation and ridge relation -an overview"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Post operative procedure",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of Retention, Support and Stability",
+            "Impressions - detail"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Biologic considerations for maxillary and mandibular impression including anatomy landmark and their interpretation",
+          "unitTitleMr": null,
+          "topics": [
+            "Impression interpretation"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Maxillary and mandibular impression procedures",
+          "unitTitleMr": null,
+          "topics": [
+            "Preliminary impressions",
+            "Final impressions"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Laboratory procedures involved with impression making (Beading & Boxing, and cast preparation)",
+          "unitTitleMr": null,
+          "topics": [
+            "Record bases and occlusion rims- in detail"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Concept of occlusion- discuss in brief",
+          "unitTitleMr": null,
+          "topics": [
+            "Relating the patient to the articulator"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Face bow transfer procedure - discuss in brief",
+          "unitTitleMr": null,
+          "topics": [
+            "Recording maxillo mandibular relation"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Lateral relation records",
+          "unitTitleMr": null,
+          "topics": [
+            "Tooth selection and arrangement"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Esthetic and functional harmony",
+          "unitTitleMr": null,
+          "topics": [
+            "Relating inclination of teeth to concept of occlusion- in brief"
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Balanced occlusal concept",
+          "unitTitleMr": null,
+          "topics": [
+            "Trial dentures",
+            "Laboratory procedures"
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "Plaster cast for clinical denture remount procedure",
+          "unitTitleMr": null,
+          "topics": [
+            "Denture insertion"
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Selective grinding procedures",
+          "unitTitleMr": null,
+          "topics": [
+            "Treating problems with associated denture use",
+            "Treating abused tissues",
+            "Relining and rebasing of dentures",
+            "Immediate complete dentures construction procedure"
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "The single complete denture",
+          "unitTitleMr": null,
+          "topics": [
+            "Overdentures denture"
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "Dental implants in complete denture",
+          "unitTitleMr": null,
+          "topics": [
+            "Note: Topics to be covered in appropriate order"
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "Ethics",
+          "unitTitleMr": null,
+          "topics": [
+            "Removable Flexible Dentures"
+          ]
+        },
+        {
+          "unitNumber": 27,
+          "unitTitle": "Components of a removable partial denture",
+          "unitTitleMr": null,
+          "topics": [
+            "Major connectors",
+            "Minor connectors",
+            "Rest and rest seats"
+          ]
+        },
+        {
+          "unitNumber": 28,
+          "unitTitle": "Components of a Removable Partial Denture",
+          "unitTitleMr": null,
+          "topics": [
+            "Direct retainers",
+            "Indirect retainers",
+            "Tooth replacement"
+          ]
+        },
+        {
+          "unitNumber": 29,
+          "unitTitle": "Survey and design",
+          "unitTitleMr": null,
+          "topics": [
+            "Surveyors",
+            "Surveying",
+            "Designing"
+          ]
+        },
+        {
+          "unitNumber": 30,
+          "unitTitle": "Removable Partial Dentures opposing Complete denture",
+          "unitTitleMr": null,
+          "topics": [
+            "Note: Topics to be covered in appropriate order"
+          ]
+        },
+        {
+          "unitNumber": 31,
+          "unitTitle": "Maintenance Phase",
+          "unitTitleMr": null,
+          "topics": [
+            "Fixed Partial Dentures",
+            "Topics To Be Covered In Detail"
+          ]
+        },
+        {
+          "unitNumber": 32,
+          "unitTitle": "Finishing and Cementation",
+          "unitTitleMr": null,
+          "topics": [
+            "Topics To Be Covered In Brief"
+          ]
+        },
+        {
+          "unitNumber": 33,
+          "unitTitle": "Resin - Bonded Fixed Partials Denture",
+          "unitTitleMr": null,
+          "topics": [
+            "Note: Topics to be covered in appropriate order"
+          ]
+        },
+        {
+          "unitNumber": 34,
+          "unitTitle": "Maintenance Phase",
+          "unitTitleMr": null,
+          "topics": [
+            "SECTION C (Orthodontics and Dentofacial Orthopedics)"
+          ]
+        },
+        {
+          "unitNumber": 35,
+          "unitTitle": "Introduction, Definition, Historical Background, Aims And Objectives Of Orthodontics And Need For Orthodontics Care",
+          "unitTitleMr": null,
+          "topics": [
+            "Orthodontic Care Fundamentals"
+          ]
+        },
+        {
+          "unitNumber": 36,
+          "unitTitle": "Growth And Development: In General",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition",
+            "Growth spurts and Differential growth",
+            "Factors influencing growth and Development",
+            "Methods of measuring growth",
+            "Growth theories",
+            "Genetic and epigenetic factors in growth",
+            "Cephalocaudal gradient in growth"
+          ]
+        },
+        {
+          "unitNumber": 37,
+          "unitTitle": "Morphologic Development Of Craniofacial Structures",
+          "unitTitleMr": null,
+          "topics": [
+            "Methods of bone growth",
+            "Prenatal growth of craniofacial structures",
+            "Postnatal growth and development of cranial base, maxilla, mandible, dental arches and occlusion"
+          ]
+        },
+        {
+          "unitNumber": 38,
+          "unitTitle": "Functional Development Of Dental Arches And Occlusion",
+          "unitTitleMr": null,
+          "topics": [
+            "Factors influencing functional development of dental arches and occlusion",
+            "Forces of occlusion",
+            "Wolfe's law of transformation of bone",
+            "Trajectories of forces"
+          ]
+        },
+        {
+          "unitNumber": 39,
+          "unitTitle": "Malocclusion - In General",
+          "unitTitleMr": null,
+          "topics": [
+            "Concept of normal occlusion",
+            "Definition of malocclusion",
+            "Description of different types of dental, skeletal and functional malocclusion"
+          ]
+        },
+        {
+          "unitNumber": 40,
+          "unitTitle": "Classification of Malocclusion",
+          "unitTitleMr": null,
+          "topics": [
+            "Angle's, Simon's, Lischer's and Ackerman and Proffitt's classifications"
+          ]
+        },
+        {
+          "unitNumber": 41,
+          "unitTitle": "Etiology Of Malocclusion",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, importance, classification, local and general etiological factors",
+            "Etiology of specific malocclusions"
+          ]
+        },
+        {
+          "unitNumber": 42,
+          "unitTitle": "Diagnosis And Diagnostic Aids",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, Importance and classification of diagnostic aids",
+            "Case history and clinical examination",
+            "Study Models",
+            "Intraoral X-rays and panoramic radiographs",
+            "Cephalometrics"
+          ]
+        },
+        {
+          "unitNumber": 43,
+          "unitTitle": "Analysis- Steiner's, Down's, Tweed's, Ricket's-E- line",
+          "unitTitleMr": null,
+          "topics": [
+            "Electromyography and its uses",
+            "Wrist X-rays and its importance"
+          ]
+        },
+        {
+          "unitNumber": 44,
+          "unitTitle": "Biomechanical Principles In Orthodontic Tooth Movement",
+          "unitTitleMr": null,
+          "topics": [
+            "Different types of tooth movements",
+            "Tissue response to orthodontic force",
+            "Age factor in orthodontic tooth movement"
+          ]
+        },
+        {
+          "unitNumber": 45,
+          "unitTitle": "Preventive Orthodontics",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition and procedures"
+          ]
+        },
+        {
+          "unitNumber": 46,
+          "unitTitle": "Interceptive Orthodontics",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition and procedures",
+            "Serial extractions",
+            "Role of muscle exercises"
+          ]
+        },
+        {
+          "unitNumber": 47,
+          "unitTitle": "Corrective Orthodontics",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition and treatment planning",
+            "Model analysis",
+            "Methods of gaining space",
+            "Extractions in Orthodontics"
+          ]
+        },
+        {
+          "unitNumber": 48,
+          "unitTitle": "Orthodontic Appliances: General",
+          "unitTitleMr": null,
+          "topics": [
+            "Requisites for appliances",
+            "Classification and indications",
+            "Methods of force application",
+            "Materials used",
+            "Acid etching and direct bonding"
+          ]
+        },
+        {
+          "unitNumber": 49,
+          "unitTitle": "Ethics",
+          "unitTitleMr": null,
+          "topics": [
+            "REMOVABLE ORTHODONTIC APPLIANCES",
+            "Components, clasps, labial bows, springs",
+            "Expansion appliances",
+            "FIXED ORTHODONTIC APPLIANCES"
+          ]
+        },
+        {
+          "unitNumber": 50,
+          "unitTitle": "Basic principles of different techniques: Edgewise, Begg's, straight wire",
+          "unitTitleMr": null,
+          "topics": [
+            "EXTRAORAL APPLIANCES"
+          ]
+        },
+        {
+          "unitNumber": 51,
+          "unitTitle": "Reverse pull headgears",
+          "unitTitleMr": null,
+          "topics": [
+            "MYOFUNCTIONAL APPLIANCES"
+          ]
+        },
+        {
+          "unitNumber": 52,
+          "unitTitle": "Functional appliances",
+          "unitTitleMr": null,
+          "topics": [
+            "Activator, Oral screens, Frankel's function regulator, bionator, twin blocks, lip bumper",
+            "Inclined planes"
+          ]
+        },
+        {
+          "unitNumber": 53,
+          "unitTitle": "Principles Of Surgical Orthodontics",
+          "unitTitleMr": null,
+          "topics": [
+            "Mandibular and Maxillary Prognathism/Retrognathism",
+            "Anterior open bite and deep bite",
+            "Cross bite"
+          ]
+        },
+        {
+          "unitNumber": 54,
+          "unitTitle": "Retention And Relapse",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, Need, Causes of relapse, Methods, Devices, Duration, Theories",
+            "SECTION D (Conservative Dentistry and Endodontics)",
+            "INTRODUCTION"
+          ]
+        },
+        {
+          "unitNumber": 55,
+          "unitTitle": "Principles Of Cavity Preparation",
+          "unitTitleMr": null,
+          "topics": [
+            "Steps, nomenclature, classification, floors, and angles of cavities"
+          ]
+        },
+        {
+          "unitNumber": 56,
+          "unitTitle": "Dental Caries",
+          "unitTitleMr": null,
+          "topics": [
+            "Aetiology, classification, clinical features, morphological features, microscopic features, clinical diagnosis"
+          ]
+        },
+        {
+          "unitNumber": 57,
+          "unitTitle": "Treatment Planning For Operative Dentistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Clinical examination, radiographic examination, vitality tests, diagnosis, case sheet"
+          ]
+        },
+        {
+          "unitNumber": 58,
+          "unitTitle": "Gnathological Concepts Of Restoration",
+          "unitTitleMr": null,
+          "topics": [
+            "Physiology of occlusion, mandibular movements, occlusal analysis and rehabilitation"
+          ]
+        },
+        {
+          "unitNumber": 59,
+          "unitTitle": "Armamentarium For Cavity Preparation",
+          "unitTitleMr": null,
+          "topics": [
+            "Instruments, rotary cutting, sterilization, and basic instrument setup"
+          ]
+        },
+        {
+          "unitNumber": 60,
+          "unitTitle": "Control of Operating Field",
+          "unitTitleMr": null,
+          "topics": [
+            "Light source, sterilization, moisture control, rubber dam, cotton rolls"
+          ]
+        },
+        {
+          "unitNumber": 61,
+          "unitTitle": "Amalgam Restoration",
+          "unitTitleMr": null,
+          "topics": [
+            "Indications, properties, cavity preparation for Class I, II, III, V, failure of amalgam"
+          ]
+        },
+        {
+          "unitNumber": 62,
+          "unitTitle": "Pulp Protection",
+          "unitTitleMr": null,
+          "topics": [
+            "Liners, varnishes, bases, cements"
+          ]
+        },
+        {
+          "unitNumber": 63,
+          "unitTitle": "Anterior Restorations",
+          "unitTitleMr": null,
+          "topics": [
+            "Selection, materials, silicate, glass ionomers, composites, bonding agents"
+          ]
+        },
+        {
+          "unitNumber": 64,
+          "unitTitle": "Direct Filling Gold Restorations",
+          "unitTitleMr": null,
+          "topics": [
+            "Types, indications, limitations, annealing, condensation"
+          ]
+        },
+        {
+          "unitNumber": 65,
+          "unitTitle": "Preventive Measures In Restorative Practice",
+          "unitTitleMr": null,
+          "topics": [
+            "Plaque control, sealants, dietary measures, periodontal health"
+          ]
+        },
+        {
+          "unitNumber": 66,
+          "unitTitle": "Pin Amalgam Restoration",
+          "unitTitleMr": null,
+          "topics": [
+            "Indications, contraindications, advantages, disadvantages, placement methods"
+          ]
+        },
+        {
+          "unitNumber": 67,
+          "unitTitle": "Cast Restorations",
+          "unitTitleMr": null,
+          "topics": [
+            "Indications, cavity preparation for inlays, wax pattern, casting procedures and defects"
+          ]
+        },
+        {
+          "unitNumber": 68,
+          "unitTitle": "Differences between Amalgam And Inlay Cavity Preparation",
+          "unitTitleMr": null,
+          "topics": [
+            "Bevels used for cast restoration"
+          ]
+        },
+        {
+          "unitNumber": 69,
+          "unitTitle": "Biological Considerations",
+          "unitTitleMr": null,
+          "topics": [
+            "Evaluation and adverse effects of dental materials and cements"
+          ]
+        },
+        {
+          "unitNumber": 70,
+          "unitTitle": "Periapical diseases",
+          "unitTitleMr": null,
+          "topics": [
+            "Abscess, granuloma, cysts, condensing osteitis, resorption"
+          ]
+        },
+        {
+          "unitNumber": 71,
+          "unitTitle": "Rationale of endodontic treatment",
+          "unitTitleMr": null,
+          "topics": [
+            "Case selection, indications, contraindications for root canal treatment"
+          ]
+        },
+        {
+          "unitNumber": 72,
+          "unitTitle": "Principles of root canal treatment",
+          "unitTitleMr": null,
+          "topics": [
+            "Mouth preparation, instruments, standardization, color coding, sterilization, rubber dam"
+          ]
+        },
+        {
+          "unitNumber": 73,
+          "unitTitle": "Anatomy of the pulp cavity",
+          "unitTitleMr": null,
+          "topics": [
+            "Root canals, apical foramen, anomalies, access cavity preparation"
+          ]
+        },
+        {
+          "unitNumber": 74,
+          "unitTitle": "Preparation of root canal space",
+          "unitTitleMr": null,
+          "topics": [
+            "Working length determination, cleaning, shaping, irrigating solutions"
+          ]
+        },
+        {
+          "unitNumber": 75,
+          "unitTitle": "Disinfection of root canal space",
+          "unitTitleMr": null,
+          "topics": [
+            "Intracanal medicaments, pastes, bacteriological examinations"
+          ]
+        },
+        {
+          "unitNumber": 76,
+          "unitTitle": "Problems during cleaning and shaping",
+          "unitTitleMr": null,
+          "topics": [
+            "Perforation, broken instruments, management of curved canals"
+          ]
+        },
+        {
+          "unitNumber": 77,
+          "unitTitle": "Obturation of the root canal system",
+          "unitTitleMr": null,
+          "topics": [
+            "Requirements, gutta percha, healing, failures"
+          ]
+        },
+        {
+          "unitNumber": 78,
+          "unitTitle": "Traumatised teeth",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification of fractured teeth, management of fractured and luxated teeth"
+          ]
+        },
+        {
+          "unitNumber": 79,
+          "unitTitle": "Endodontic surgeries",
+          "unitTitleMr": null,
+          "topics": [
+            "Indications, contraindications, apicectomy, retrograde filling, hemisection, reimplantation"
+          ]
+        },
+        {
+          "unitNumber": 80,
+          "unitTitle": "Ethics",
+          "unitTitleMr": null,
+          "topics": [
+            "Note: Syllabus as per B.D.S. course regulation notified by Dental Council of India"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,105 @@
+{
+  "docId": 1686,
+  "examName": "House Master, General State Service, Gr-B",
+  "examNameMr": "गृह मास्टर, महाराष्ट्र राज्य सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2010,
+  "language": "Marathi",
+  "category": "rajyaseva",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "House Master, General State Service, Gr-B Examination",
+      "paperTitleMr": "गृह मास्टर, महाराष्ट्र राज्य सेवा, गट-ब परीक्षा",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Teaching Aptitude, Research Aptitude, Reading Comprehension, Communication, Information Technology, Environment, Higher Education System and Social Work",
+          "unitTitleMr": "अध्यापन अभियोग्यता, संशोधन अभियोग्यता, वाचन आकलन, संप्रेषण, माहिती व तंत्रज्ञान, पर्यावरण, उच्च शिक्षण पद्धती आणि समाजकार्य",
+          "topics": [
+            "Teaching: Nature, objectives, characteristics and basic requirements",
+            "Characteristics of adolescent and adult learners",
+            "Factors affecting teaching",
+            "Methods of teaching and teaching aids",
+            "Evaluation systems",
+            "Research: Meaning, characteristics and types",
+            "Steps of research and methods of research",
+            "Research ethics, thesis, articles, workshops, seminars and conferences",
+            "Paper writing, characteristics and formatting",
+            "Reading comprehension: Passages and related questions",
+            "Communication: Nature, characteristics, types, barriers and effective communication",
+            "Sources, acquisition and interpretation of data",
+            "Quantitative and qualitative data",
+            "Graphical representation and mapping of data",
+            "Information and Communication Technology (ICT): Meaning, advantages, disadvantages and usage",
+            "General abbreviations and terminology",
+            "Basic of Internet and E-mail",
+            "People and Environment: Interaction, sources of pollution",
+            "Pollution units and their impact on human life",
+            "Exploitation of natural and energy resources",
+            "Natural hazards and mitigation measures",
+            "Higher Education System: Governance, polity and administration",
+            "Structure of higher learning and research institutions in India",
+            "Formal and distance education, professional/technical and general education",
+            "Value education, governance, polity and administration",
+            "Home Science: Food and Nutrition Science, Dietetics, Biochemistry, Microbiology",
+            "Social Work: Human growth and development, Personality development and socialization",
+            "Concept of Indian social problems and analysis of causative factors",
+            "Interventions in social problems at micro and macro levels",
+            "Role of social workers in problem identification and policy development",
+            "Family demography and social changes in India",
+            "Problems of family, women, youth, elderly and children",
+            "Social legislation for family, women and children",
+            "Government and non-government organizations at national and international levels",
+            "Intervention through social work for special groups"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Administrative Rules and Facilities",
+          "unitTitleMr": "प्रशासकीय नियम व सुविधांचे ज्ञान",
+          "topics": [
+            "Objectives of Government Hostel",
+            "Administrative responsibilities and hostel management",
+            "Financial matters, budget planning and financial rules",
+            "Basic amenities: Accommodation, food, stationery, library, recreation",
+            "Supervision of academic progress, mess management and discipline",
+            "Parental role: Acceptance, counseling, mental health and confidence building",
+            "Mental and intellectual development, extracurricular activities",
+            "New schemes implementation, personality development and cost reduction",
+            "Administrative skills: Management, communication, teamwork and teaching methods"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Studies and Current Affairs",
+          "unitTitleMr": "सामान्य अध्ययन - चालू घडामोडी",
+          "topics": [
+            "Current events of national and international importance",
+            "Political, industrial, economic, social, educational, geographical, demographic and cultural aspects"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "General Studies - Aptitude Test",
+          "unitTitleMr": "सामान्य अध्ययन - बुद्धीमापन विषयक प्रश्न",
+          "topics": [
+            "Logical reasoning, analytical ability and mental aptitude",
+            "Problem-solving and decision-making questions"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

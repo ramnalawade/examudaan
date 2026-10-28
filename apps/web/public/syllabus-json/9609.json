@@ -1,0 +1,118 @@
+{
+  "docId": 9609,
+  "examName": "MPSC Engineering Services Examination Syllabus - General Studies, General Engineering, Construction Machinery, Hydraulic Gates, Lift Irrigation, Road Construction",
+  "examNameMr": "महाराष्ट्र राजपत्रित तांत्रिक सेवा परीक्षा अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Current Affairs, Acts, and General Engineering",
+      "paperTitleMr": "चालू घडामोडी, कायदे आणि सामान्य अभियांत्रिकी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Affairs (Indian and Global)",
+          "unitTitleMr": "चालू घडामोडी (भारतीय आणि जागतिक)",
+          "topics": [
+            "Scientific, Political, Industrial, Economic, Social, Educational, Geographical, Astronomical, Cultural etc."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Acts and Labour Laws",
+          "unitTitleMr": "कायदे आणि कामगार कायदे",
+          "topics": [
+            "Right To Information Act-2005",
+            "Maharashtra Right To Services Act-2015",
+            "Various Labour Laws and acts like Industrial dispute Act, Factory Act, Industrial Safety Act, Minimum Wages Act etc."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Engineering",
+          "unitTitleMr": "सामान्य अभियांत्रिकी",
+          "topics": [
+            "Engineering Materials: Basic Crystallography, Alloys and Phase diagrams, Heat Treatment, Ferrous and Non Ferrous Metals, Non metallic materials, Basics of Nano-materials, Mechanical Properties and Testing, Corrosion prevention and control",
+            "Manufacturing, Industrial and Maintenance Engineering: Metal casting-Metal forming, Metal Joining, Machining and machine tool operations, Limits, fits and tolerances, Metrology and inspection, computer Integrated manufacturing, FMS, Production planning and Control, Inventory control and operations research - CPM-PERT",
+            "IC Engines, Refrigeration and Air conditioning: SI and CI Engines, Engine Systems and Components, Performance characteristics and testing of IC Engines; Fuels; Emissions and Emission Control",
+            "Applied Thermodynamics: Thermodynamic systems and processes, properties of pure substance, Zeroth, First and Second Laws of Thermodynamics; Entropy, Irreversibility and availability",
+            "Turbo Machinery: Reciprocating and Rotary pumps, Pelton wheel, Kaplan and Francis Turbines, velocity diagrams, Impulse and Reaction principles, Steam and Gas Turbines",
+            "Fluid Mechanics: Basic Concepts and Properties of Fluids, Manometry, Fluid Statics, Buoyancy, Equations of Motion, Bernoulli's equation and applications",
+            "Engineering Mechanics: Analysis of System of Forces, Friction, Centroid and Centre of Gravity, Dynamics; Stresses and Strains",
+            "Mechanisms and Machines: Types of Kinematics Pair, Mobility, Inversions, Kinematic Analysis, Velocity and Acceleration Analysis of Planar Mechanisms",
+            "Design of Machine Elements: Design for static and dynamic loading; failure theories; fatigue strength and the S-N diagram",
+            "Renewable Sources of Energy: Solar Radiation, Solar Thermal Energy collection, Solar Thermal Energy Storage, Applications - heating, cooling and Power Generation"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Construction Machinery",
+          "unitTitleMr": "बांधकाम यंत्रसामग्री",
+          "topics": [
+            "Details of construction machineries used for construction of Earthen Dams, M.I. Tanks Canal cleaning and various types of Irrigation Tank cleaning and rebuilding works",
+            "Construction, Capacity, Utility and Use of allied equipments of construction machinery",
+            "Calculation of requirement of construction machineries for the specific work",
+            "Operation, Maintenance and Repairs of all types of construction machinery",
+            "Details of the fuels, lubricants, tyres, batteries and other allied spare parts required for construction machineries"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Hydraulic Gates and Hoists",
+          "unitTitleMr": "जलविद्युत दरवाजे आणि हॉइस्ट",
+          "topics": [
+            "Purpose and types of various Hydraulic Gates, Hoists and Cranes used in Irrigation Dams, Hydro Power Houses, Lift Irrigation Schemes",
+            "Construction details of the various types of Hydraulic Gates, Hoists and Cranes",
+            "Design of the all types of Hoists and Cranes required for the operation of Hydraulic gates",
+            "Details of various materials and equipments used in Manufacturing of Hydraulic Gates, Hoists and Cranes",
+            "Manufacturing, Erection Testing and Commissioning of the Hydraulic Gates, Hoists and Cranes",
+            "Operation, Maintenance and Repairs of the Hydraulic Gates, Hoists and Cranes"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Lift Irrigation Schemes",
+          "unitTitleMr": "उपसा सिंचन योजना",
+          "topics": [
+            "Layout and construction of the Lift Irrigation Scheme",
+            "Types of pumps and motors along with their construction details operation, maintenance repairs and testing used in the L.I.S",
+            "Selection of type of pump with its capacity for the specific requirement of any L.I.S",
+            "Types of valves along with their construction details operation, maintenance repairs used in L.I.S. and Dams",
+            "Various types of allied equipments such as starters, Air Vessels, Manifolds, reducers etc. used in the L.I.S"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Road Construction Machinery and Boring",
+          "unitTitleMr": "रस्ते बांधकाम यंत्रसामग्री आणि बोअरिंग",
+          "topics": [
+            "Types of Road Construction Machineries used for Construction of National and State Highway and Rural Roads",
+            "Construction details Capacity, utility of the allied equipments and Road Construction Machinery",
+            "Operation, maintenance and repairs of all types of Road Construction Machinery",
+            "Details of the Fuels, Lubricants, tyres, batteries and other allied spares or parts required for Road Construction Machinery",
+            "Purpose of boring in the field of various projects",
+            "Types of Boring machines, their construction and capacities",
+            "Operation, Maintenance and Repairs of Boring Machines",
+            "Various types of Boring techniques such as NX, BX Core etc"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "The syllabus covers General Studies, Labour Acts, and core Mechanical/Civil Engineering sub-sectors relevant to MPSC examinations."
+  ]
+}

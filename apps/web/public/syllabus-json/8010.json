@@ -1,0 +1,97 @@
+{
+  "docId": 8010,
+  "examName": "Maharashtra Forest Service Main Examination",
+  "examNameMr": "महाराष्ट्र वन सेवा मुख्य परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination (Conventional)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Question Paper Structure and Specific Instructions",
+      "paperTitleMr": "प्रश्नपत्रिका रचना आणि विशिष्ट सूचना",
+      "totalMarks": 200,
+      "duration": "3 Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Instructions and Question Selection",
+          "unitTitleMr": null,
+          "topics": [
+            "There are eight questions divided in two sections, out of which five are to be attempted.",
+            "Question No. 1 and 5 are compulsory. Out of the remaining questions, three are to be attempted choosing at least one question from each section.",
+            "The number of marks carried by a question/sub question is indicated against it.",
+            "Keep in mind the word limit indicated in the question if any."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Assessment Guidelines",
+          "unitTitleMr": null,
+          "topics": [
+            "Wherever option has been given, only the required number of responses in the serial order attempted shall be assessed.",
+            "Unless struck off, attempt of a question shall be counted even if attempted partly.",
+            "Excess responses shall not be assessed and shall be ignored."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Answer Booklet Instructions",
+          "unitTitleMr": null,
+          "topics": [
+            "Candidates are expected to answer all the sub-questions of a question together.",
+            "If sub-question of a question is attempted elsewhere, the later sub-question shall be overlooked.",
+            "Any page or portion of the page left blank in the Answer Booklet must be clearly struck off."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Technical Notations and Medium",
+          "unitTitleMr": null,
+          "topics": [
+            "Unless otherwise mentioned, symbol and notation have their usual standard meanings.",
+            "Assume suitable data, if necessary and indicate the same clearly.",
+            "Neat sketches may be drawn, wherever required.",
+            "The medium of answer should be mentioned on the answer book as claimed in the application and printed on admission card."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Section-A Question Pattern",
+          "unitTitleMr": null,
+          "topics": [
+            "Question No. 1: Solve any five out of seven short questions (40 Marks)",
+            "Question No. 2: Long and short questions (40 Marks)",
+            "Question No. 3: Long and short questions (40 Marks)",
+            "Question No. 4: Long and short questions (40 Marks)"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Section-B Question Pattern",
+          "unitTitleMr": null,
+          "topics": [
+            "Question No. 5: Solve any five out of seven short questions (40 Marks)",
+            "Question No. 6: Long and short questions (40 Marks)",
+            "Question No. 7: Long and short questions (40 Marks)",
+            "Question No. 8: Long and short questions (40 Marks)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Candidates will be allowed the use of Scientific (Non-programmable type) calculators wherever necessary.",
+    "Long question can be Derivative/Problem/Explain in detail diagram/sketch question.",
+    "Short question can be Definition/short notes justifying the marks assigned."
+  ]
+}

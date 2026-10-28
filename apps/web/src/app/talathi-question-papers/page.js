@@ -213,38 +213,62 @@ export default function TalathiQuestionPapersPage() {
           </div>
 
           <div className={styles.patternGrid}>
-            <div className={styles.patternCard}>
-              <h3 className={styles.patternSubject}>Marathi Language</h3>
+            <Link href="/pyq/marathi" className={styles.patternCard} title="Solve Marathi PYQs">
+              <div className={styles.patternCardHeader}>
+                <h3 className={styles.patternSubject}>Marathi Language</h3>
+                <span className={styles.patternArrowIcon}>→</span>
+              </div>
               <div className={styles.patternSubjectMr}>मराठी व्याकरण, शब्दसंग्रह व उतारे</div>
               <div className={styles.patternMarksRow}>
                 <span>25 Qs / 50 Marks</span>
                 <span className={styles.patternMarksVal}>25% Weight</span>
               </div>
-            </div>
-            <div className={styles.patternCard}>
-              <h3 className={styles.patternSubject}>English Language</h3>
+              <div className={styles.patternCardCta}>
+                <span>Solve Subject PYQs →</span>
+              </div>
+            </Link>
+            <Link href="/pyq/english" className={styles.patternCard} title="Solve English PYQs">
+              <div className={styles.patternCardHeader}>
+                <h3 className={styles.patternSubject}>English Language</h3>
+                <span className={styles.patternArrowIcon}>→</span>
+              </div>
               <div className={styles.patternSubjectMr}>Grammar, Vocab & Comprehension</div>
               <div className={styles.patternMarksRow}>
                 <span>25 Qs / 50 Marks</span>
                 <span className={styles.patternMarksVal}>25% Weight</span>
               </div>
-            </div>
-            <div className={styles.patternCard}>
-              <h3 className={styles.patternSubject}>General Knowledge</h3>
+              <div className={styles.patternCardCta}>
+                <span>Solve Subject PYQs →</span>
+              </div>
+            </Link>
+            <Link href="/pyq/polity" className={styles.patternCard} title="Solve General Knowledge PYQs">
+              <div className={styles.patternCardHeader}>
+                <h3 className={styles.patternSubject}>General Knowledge</h3>
+                <span className={styles.patternArrowIcon}>→</span>
+              </div>
               <div className={styles.patternSubjectMr}>सामान्य ज्ञान व चालू घडामोडी</div>
               <div className={styles.patternMarksRow}>
                 <span>25 Qs / 50 Marks</span>
                 <span className={styles.patternMarksVal}>25% Weight</span>
               </div>
-            </div>
-            <div className={styles.patternCard}>
-              <h3 className={styles.patternSubject}>Intellectual & Maths</h3>
+              <div className={styles.patternCardCta}>
+                <span>Solve Subject PYQs →</span>
+              </div>
+            </Link>
+            <Link href="/pyq/reasoning" className={styles.patternCard} title="Solve Intellectual & Maths PYQs">
+              <div className={styles.patternCardHeader}>
+                <h3 className={styles.patternSubject}>Intellectual & Maths</h3>
+                <span className={styles.patternArrowIcon}>→</span>
+              </div>
               <div className={styles.patternSubjectMr}>बौद्धिक चाचणी व अंकगणित</div>
               <div className={styles.patternMarksRow}>
                 <span>25 Qs / 50 Marks</span>
                 <span className={styles.patternMarksVal}>25% Weight</span>
               </div>
-            </div>
+              <div className={styles.patternCardCta}>
+                <span>Solve Subject PYQs →</span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -285,12 +309,12 @@ export default function TalathiQuestionPapersPage() {
                       <td>{p.pattern}</td>
                       <td>
                         <Link href="/question-papers" className={styles.btnDownloadPaper}>
-                          <span className="material-symbols-outlined">visibility</span> Read Paper
+                          <span className="material-symbols-outlined">visibility</span> View Paper
                         </Link>
                       </td>
                       <td>
                         <Link href="/answer-keys" className={styles.btnDownloadKey}>
-                          <span className="material-symbols-outlined">task_alt</span> Verified Key
+                          <span className="material-symbols-outlined">key</span> View Answer Key
                         </Link>
                       </td>
                     </tr>
@@ -320,10 +344,10 @@ export default function TalathiQuestionPapersPage() {
                   </div>
                   <div className={styles.mobileActionRow}>
                     <Link href="/question-papers" className={styles.mobileBtnPaper}>
-                      <span className="material-symbols-outlined">visibility</span> Read Paper
+                      <span className="material-symbols-outlined">visibility</span> View Paper
                     </Link>
                     <Link href="/answer-keys" className={styles.mobileBtnKey}>
-                      <span className="material-symbols-outlined">task_alt</span> Verified Key
+                      <span className="material-symbols-outlined">key</span> View Answer Key
                     </Link>
                   </div>
                 </div>

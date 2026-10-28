@@ -1,0 +1,123 @@
+{
+  "docId": 10535,
+  "examName": "MPSC Engineering Services Examination - Metallurgy Engineering",
+  "examNameMr": "महाराष्ट्र अभियांत्रिकी सेवा परीक्षा - धातुशास्त्र अभियांत्रिकी",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Metallurgy Engineering",
+      "paperTitleMr": "धातुशास्त्र अभियांत्रिकी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Section 1: Engineering Mathematics",
+          "unitTitleMr": "विभाग १: अभियांत्रिकी गणित",
+          "topics": [
+            "Linear Algebra: Matrices and Determinants, Systems of linear equations, Eigen values and Eigen vectors",
+            "Calculus: Limit, Continuity and Differentiability; Partial derivatives; Maxima and minima; Sequences and series; Test for convergence; Fourier series",
+            "Vector Calculus: Gradient; Divergence and Curl; Line, Surface and volume integrals; Stokes, Gauss and Green’s theorems",
+            "Differential Equations: Linear and non-linear first order ODEs; Higher order linear ODEs with constant coefficients; Cauchy’s and Euler’s equations; Laplace transforms; PDEs –Laplace, one dimensional heat and wave equations",
+            "Probability and Statistics: Definitions of probability and sampling theorems, conditional probability, Mean, median, mode and standard deviation; Random variables; Poisson, normal and binomial distributions; Analysis of experimental data; linear least squares method",
+            "Numerical Methods: Solutions of linear and non-linear algebraic equations (Bisection, Secant, Newton-Raphson methods); integration by trapezoidal and Simpson’s rule; single and multi-step methods for differential equations"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Section 2: Metallurgical Thermodynamics and kinetics",
+          "unitTitleMr": "विभाग २: धातuvigyan (धातुशास्त्रातील) थर्मोडायनॅमिक्स आणि गतिशास्त्र",
+          "topics": [
+            "Laws of Thermodynamics: First law – energy conservation, Second law - entropy; Enthalpy, Gibbs and Helmholtz free energy; Maxwell’s relations; Chemical potential; Applications to metallurgical systems, solutions, ideal and regular solutions; Gibbs phase rule, phase equilibria, binary phase diagram and lever rule, free-energy vs. composition diagrams; Equilibrium constant, Activity, Ellingham and phase stability diagrams; Thermodynamics of point defects, surfaces and interfaces, adsorption and segregation phenomena",
+            "Electrochemistry: Single electrode potential, Electrochemical cells, Nernst equation, Potential-pH diagrams",
+            "Kinetics: First order reactions, reaction rate constant, Arrhenius relation, heterogeneous reactions, oxidation kinetics"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Section 3: Transport Phenomena",
+          "unitTitleMr": "विभाग ३: ट्रान्सपोर्ट फेनोमेना",
+          "topics": [
+            "Momentum Transfer: Concept of viscosity, shell balances, Bernoulli’s equation, mechanical energy balance equation, flow past plane surfaces and through pipes",
+            "Heat transfer: Conduction, Fourier’s Law, 1-D steady state conduction",
+            "Convection: Heat transfer coefficient relations for forced convection",
+            "Radiation: Black body radiation, Stefan-Boltzman Law, Kirchhoff’s Law",
+            "Mass Transfer: Diffusion and Fick’s laws, Mass transfer coefficients",
+            "Dimensional analysis: Buckingham Pi theorem, Significance of dimensionless numbers",
+            "Electrochemical kinetics: Polarization"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Section 4: Mineral Processing and Extractive Metallurgy",
+          "unitTitleMr": "विभाग ४: खनिज प्रक्रिया आणि एक्सट्रॅक्टिव्ह मेटलर्जी",
+          "topics": [
+            "Unit operations: Comminution techniques, Size classification, Flotation, Gravity and other methods of mineral beneficiation",
+            "Agglomeration: Sintering, pelletizing and briquetting",
+            "Metallurgical processes: Material and Energy balances",
+            "Principles and processes for the extraction of non-ferrous metals – Metallothermic and carbothermic reduction, application of Ellingham diagrams and solubility product for multicomponent system",
+            "Electrometallurgy and Pyrometallurgy processes, Rare Earth extraction metals",
+            "Iron and steel making: Material and heat balance in blast furnace; Structure and properties of slags and molten salts – basicity of slags - sulphide and phosphate capacity of slags; Production of metallurgical coke",
+            "Other methods of iron making (COREX, MIDRE)",
+            "Primary Steel Making: Basic oxygen furnace, process dynamics, oxidation reactions, electric arc furnace",
+            "Secondary steel making: Ladle process – deoxidation, argon stirring, desulphurization, inclusion shape control, principles of degassing methods; Alloy steels and stainless steel manufacturing",
+            "Continuous Casting: Fluid flow in the tundish and mould, heat transfer in the mould, segregation, inclusion control"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Section 5: Physical Metallurgy",
+          "unitTitleMr": "विभाग ५: फिजिकल मेटलर्जी",
+          "topics": [
+            "Chemical Bonding: Ionic, covalent, metallic, and secondary bonding in materials, Crystal structure of solids – metals and alloys, ionic and covalent solids, and polymers",
+            "Characterization Techniques: X-ray Diffraction – Bragg’s law, optical metallography, principles of SEM and TEM imaging. Mechanical testing",
+            "Crystal Imperfections: Point, line and surface defects; Coherent, semi-coherent and incoherent interfaces",
+            "Diffusion in solids: Diffusion equation, steady state and error function solutions; Examples- homogenization and carburization; Kirkendall effect; Uphill diffusion; Atomic models for interstitial and substitutional diffusion; Pipe diffusion and grain boundary diffusion",
+            "Phase Transformation: Driving force, Homogeneous and heterogeneous nucleation, Growth Kinetics Solidification in isomorphous, eutectic and peritectic systems, cast structures and macrosegregation, dendritic solidification and constitutional supercooling, coring and microsegregation",
+            "Solid State Transformations: Precipitation, spinoidal decomposition, ordering, massive transformation, discontinuous precipitation, eutectoid transformation, diffusionless transformations; Precipitate coarsening, Gibbs-Thomson effect",
+            "Heat Treatment: Principles of heat treatment of steels, TTT and CCT diagrams; Surface hardening treatments; Recovery, recrystallization and grain growth; Heat treatment of Alloys steels, HSS, cast iron and nonferrous alloys",
+            "Materials Science: Electronic, magnetic and optical properties of materials",
+            "Corrosion: Basic forms of corrosion and its prevention"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Section 6: Mechanical Metallurgy and Non Destructive testing",
+          "unitTitleMr": "विभाग ६: मेकॅनिकल मेटलर्जी आणि नॉन डिस्ट्रक्टिव्ह टेस्टिंग",
+          "topics": [
+            "Strength of Materials: Strain tensor and stress tensor, Representation by Mohr’s circle, elasticity, stiffness and compliance tensor, Yield point, Plastic deformation by slip and twinning",
+            "Dislocation theory: Edge, screw and mixed dislocations, source and multiplication of dislocations, stress fields around dislocations; Partial dislocations, dislocation interactions and reactions",
+            "Strengthening mechanisms: Work/strain hardening, strengthening due to grain boundaries, solid solution, precipitation and dispersion",
+            "Fracture: Fracture behaviour, Griffith theory, linear elastic fracture mechanics, fracture toughness, fractography, ductile to brittle transition",
+            "Fatigue: Cyclic stress strain behaviour - low and high cycle fatigue, crack growth. Mechanisms of high temperature deformation and failure; creep and stress rupture, stress exponent and activation energy",
+            "Non-destructive Testing (NDT): Dye-penetrant, ultrasonic, radiography, eddy current, acoustic emission and magnetic particle inspection methods"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Section 7: Manufacturing Processes",
+          "unitTitleMr": "विभाग ७: मॅन्युफॅक्चरिंग प्रोसेसिस",
+          "topics": [
+            "Metal casting: Mould design involving feeding, gating and risering, casting practices, casting defects",
+            "Secondary operations: Metal forming – fundamentals of metal forming processes of rolling, forging, extrusion, wire drawing and sheet metal forming, defects in forming",
+            "Metal joining: Principles of soldering, brazing and welding, welding metallurgy, defects in welded joints in steels and aluminium alloys",
+            "Powder Metallurgy: Production of powders and properties, compaction and sintering and advanced sintering processes"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

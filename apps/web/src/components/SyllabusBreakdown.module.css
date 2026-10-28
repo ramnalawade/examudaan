@@ -1,0 +1,96 @@
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aiBadge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--accent-light);
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+.subjectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subjectCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.subjectHeaderBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.subjectHeaderBtnExpanded {
+  background: var(--bg-tint);
+}
+
+.subjectName {
+  font-weight: 600;
+  color: var(--text-heading);
+  font-size: 14px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.weightageBadge {
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+}
+
+.arrowIcon {
+  color: var(--text-muted);
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.arrowIconRotated {
+  transform: rotate(180deg);
+}
+
+.topicsContainer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.topicsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.topicPill {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: var(--bg-tint);
+  color: var(--text-body);
+  border: 1px solid var(--border);
+}
+

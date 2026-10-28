@@ -1,0 +1,128 @@
+{
+  "docId": 1601,
+  "examName": "Assistant Commissioner / Ward Officer, MCGM, Gr-A",
+  "examNameMr": "सहायक आयुक्त (विभाग अधिकारी) बृहन्मुंबई महानगरपालिका",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "English",
+  "category": "group-a",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 100,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Commissioner / Ward Officer, MCGM, Gr-A",
+      "paperTitleMr": "सहायक आयुक्त (विभाग अधिकारी) बृहन्मुंबई महानगरपालिका",
+      "totalMarks": 200,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Administration and Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of Administration",
+            "organizational structures with special reference to Municipal Corporations",
+            "The Bombay Provincial Municipal Corporations Act, 1948",
+            "74th Amendments to Indian Constitution",
+            "Areas of interface between the Government & the Municipal Corporations",
+            "Local Self Government",
+            "Concept of development administration",
+            "key concepts of Management-planning, organizing, authority, delegation, control, Human Relations",
+            "Responsive administration",
+            "E-Governance"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Personnel & Financial Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Manpower planning",
+            "Recruitment and selection",
+            "Performance appraisal",
+            "Conduct rules & disciplinary proceedings",
+            "Training & development",
+            "Motivation",
+            "Leadership & Team Building",
+            "Budget",
+            "Budgetary process with special reference to Municipal Corporations",
+            "Performance budgeting",
+            "Zero-base budgeting",
+            "Audit",
+            "SAP system and its uses"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Project Planning & Appraisal",
+          "unitTitleMr": null,
+          "topics": [
+            "Project formulation & assessment",
+            "CPM & PERT operating requirement & cost viability of the project",
+            "PPP & BOT projects",
+            "Public Transport",
+            "Different authorities in planning and appraisal for Mumbai Metropolitan Area"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Disaster Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles and Techniques – Type of Disaster",
+            "Vulnerability of Mumbai to Natural & Manmade disaster",
+            "History and case study of disasters in Mumbai in last 25 year",
+            "Methods of disaster mitigation in context of Mumbai"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Urban Development",
+          "unitTitleMr": null,
+          "topics": [
+            "Socio-cultural background of Mumbai city",
+            "Industrial Development",
+            "urbanization",
+            "Management of resources for urban life",
+            "slums and slum dwellers",
+            "Town Planning and development",
+            "Environmental, Public Health etc.",
+            "specific problems of Mumbai & their remedies",
+            "Acts and Rules relating to them",
+            "SRA schemes",
+            "Human Development Index",
+            "JNNURM",
+            "sound pollution and related case studies & court cases",
+            "Encroachments on roads and footpaths and actions taken by BMC",
+            "FSI",
+            "CRZ",
+            "Illegal construction and regularisable construction"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Basic Principles of Law & Judiciary",
+          "unitTitleMr": null,
+          "topics": [
+            "Fundamental rights",
+            "Personal Laws",
+            "Equity & Jurisprudence",
+            "RTI",
+            "Human Rights",
+            "Principles of Natural Justice"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Negative marking: One-third marks will be deducted for every three wrong answers."
+  ]
+}

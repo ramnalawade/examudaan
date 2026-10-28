@@ -1,0 +1,156 @@
+{
+  "docId": 1632,
+  "examName": "Syllabus for the post of Assistant Professor- Electronics & Telecommunication Engineering, Government Engineering College, Maharashtra Engineering College Teachers Service, Group - A",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Syllabus for the post of Assistant Professor- Electronics & Telecommunication Engineering",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Part-I",
+          "unitTitleMr": null,
+          "topics": [
+            "Electronic Transport in semiconductor, PN Junction, Diode equation and diode equivalent circuit.",
+            "Breakdown in diodes. Zener diodes, Tunnel diode, Semiconductor diodes, characteristics and equivalent circuits of BJT, JFET, MOSFET, IC fabrication-crystal growth, epitaxy, oxidation, lithography, doping, etching, isolation methods, metalization, bonding. Thin film active and passive devices."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Part-II",
+          "unitTitleMr": null,
+          "topics": [
+            "Superposition, Thevenin, Norton and maximum Power Transfer Theorems.",
+            "Network elements, Network graphs, Nodal and Mesh analysis, Zero and Poles, Bode Plots, Laplace, Fourier and Z-transforms.",
+            "Time and frequency domain responses. Image impedance and passive filters. Two-port Network Parameters.",
+            "Transfer functions, Signal representation. State variable method of circuit analysis. AC circuit analysis, Transient analysis."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Part-III",
+          "unitTitleMr": null,
+          "topics": [
+            "Rectifiers, Voltage regulated ICs and regulated power supply, Biasing of Bipolar junction transistors and JFET.",
+            "Single stage amplifiers, Multistage amplifiers. Feedback in amplifiers, oscillators, function generators, multivibrators, Operational Amplifiers (OPAMP)-characteristics and Applications, Computational Applications, Integrator, Differentiator, Wave-shaping circuits, F to V and V to F converters.",
+            "Active filters, Schmitt trigger, Phase locked loop."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Part-IV",
+          "unitTitleMr": null,
+          "topics": [
+            "Logic families, flip-flops, Gates, Boolean algebra and minimization techniques, Multivibrators and clock circuits.",
+            "Counters-Ring, Ripple, Synchronous, Asynchronous, Up and down shift registers, multiplexers and demultiplexers, Arithmetic circuits, Memories, A/D and D/A converters."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Part-V",
+          "unitTitleMr": null,
+          "topics": [
+            "Architecture of 8085 and 8086 Microprocessors, Addressing modes, 8085 instruction set, 8085 interrupts.",
+            "Programming, Memory and I/O interfacing, Interfacing 8155, 8255, 8279, 8253, 8257, 8259, 8251 with 8085 Microprocessors.",
+            "Serial communication protocols, Introduction of Microcontrollers (8 bit)-8031/8051 and 8048."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Part-VI",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction of High-level Programming Language, Introduction of data in C, Operators and its precedence, Various data types in C, Storage classes in C, Decision-making and forming loop in program, Handling character.",
+            "Arrays in C, Structure and union, User defined function, Pointers in C, Advanced pointer, Pointer to structures, pointer to functions.",
+            "Dynamic data structure, file handling in C, Command line argument, Graphics-video modes, video adapters, Drawing various objects on screen.",
+            "Interfacing to external hardware via serial/parallel port using C, Applying C to electronic circuit problems. Introduction to object-oriented Programming and C++.",
+            "Introduction of FORTRAN language, programming discipline, statements to write a program, intrinsic functions, integer-type data, type statement, IF selection.",
+            "Data validation, Format-directed input and output. Repetition program structure, subscripted variables and DO loops, Array, Fortran Subprogram."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Part-VII",
+          "unitTitleMr": null,
+          "topics": [
+            "Maxwell’s equations, Time varying fields, Wave equation and its solution, Rectangular waveguide, Propagation of wave in ionosphere.",
+            "Poynting vector, Antenna parameters, Half-wave antenna vector, Transmission lines. Characteristic of Impedance matching, Smith chart.",
+            "Microwave components-T, Magic-T, Tuner, Circulator isolator, Direction couplers.",
+            "Sources-Reflex Klystron, Principle of operation of Magnetron, Solid State Microwave devices; Basic Theory of Gunn, GaAs FET, Crystal Detector and PIN diode for detection of microwaves."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Part-VIII",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic principles of amplitude, frequency and phase modulation, Demodulation, Intermediate frequency and principle of superheterodyne receiver.",
+            "Spectral analysis and signal transmission through linear systems, Random signals and noise, Noise temperature and noise figure.",
+            "Basic concepts of information theory, Digital modulation and Demodulation PM, PCM, ASK, FSK, PSK.",
+            "Time-division Multiplexing, Frequency-Division Multiplexing, Data Communications-Circuits, Codes and Modems; Basic concepts of signal processing and digital filters."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Part-IX (a)",
+          "unitTitleMr": null,
+          "topics": [
+            "Characteristics of solid state power devices-SCR, Triac, UJT, Triggering circuits, converters, choppers, inverters.",
+            "AC regulators, speed control of a.c. and d.c. motors. Stepper and synchronous motors.",
+            "Three phase controlled rectifier; Switch mode power supply; Uninterrupted power supply."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Part-IX (b)",
+          "unitTitleMr": null,
+          "topics": [
+            "Optical sources-LED, Spontaneous emission, Stimulated emission, Semiconductor Diode LASER.",
+            "Photodetectors-p-n photodiode, PIN photodiode, Phototransistors, Optocouplers, Solar cells, Display devices.",
+            "Optical Fibres-Light propagation in fibre, Types of fibre, Characteristic parameters, Modes, Fibre splicing.",
+            "Fibre optic communication system-coupling to and from the fibre, Modulation, Multiplexing and coding, Repeaters, Bandwidth and Rise time budgets."
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Part-X (a)",
+          "unitTitleMr": null,
+          "topics": [
+            "Transducers-Resistance, Inductance Capacitance, Piezoelectric, Thermoelectric, Hall effect, Photoelectric, Tachogenerators.",
+            "Measurement of displacement, velocity, acceleration, force, torque, strain, speed and sound temperature, pressure, flow, humidity, thickness, pH, position.",
+            "Measuring Equipment-Measurement of R, L and C, Bridge and Potentiometers voltage, current, power, energy, frequency/time, phase, DVMs, DMMs, CRO, Digital storage oscilloscope, probes, Logic State Analyser, Spectrum Analyzer, Recorder.",
+            "Noise and Interference in instrumentation, Instrumentation amplifiers, Radio Telemetry.",
+            "Analytical Instruments-Biomedical instruments-ECG, blood pressure measurements, spectrophotometers, Electron Microscope, X-ray diffractometer."
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Part-X (b)",
+          "unitTitleMr": null,
+          "topics": [
+            "Open-loop and close-loop control system, Error amplifier, on-off controller, Proportional (P), Proportional-Integral (PI), Proportional-Derivative (PD), PID controllers.",
+            "Dynamic Behaviour of control systems-servomechanism, characteristics parameters of control systems-Accuracy, Sensitivity, Disturbances, Transient response, Stability.",
+            "Routh-Hurwitz criterion, Bode plots, Nyquist criterion, Controlling speed, Temperature and position using analog/digital control circuits."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

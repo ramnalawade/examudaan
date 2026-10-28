@@ -1,0 +1,73 @@
+{
+  "docId": 6636,
+  "examName": "Agricultural Engineering & Geology Syllabus",
+  "examNameMr": "कृषी अभियांत्रिकी आणि भूशास्त्र अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Agricultural Engineering and Geology",
+      "paperTitleMr": "कृषी अभियांत्रिकी आणि भूशास्त्र",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "AGRICULTURE",
+          "unitTitleMr": "कृषी",
+          "topics": [
+            "Ecology and its relevance to man, natural resources, their sustainable management and conservation.",
+            "Physical and social environment as factors of crop distribution and production.",
+            "Climatic elements as factors of crop growth.",
+            "Cropping pattern in different agro-climatic zones of Maharashtra. Concepts of multiple cropping, multistorey, relay and intercropping, and their importance in relation to food production.",
+            "Package of practices for production of important cereals, pulses, oil seeds, fibres, sugar, commercial and fodder crops grown during Kharif and Rabi seasons.",
+            "Important features, scope and propagation of various types of forestry plantations such as extension, social forestry, agro-forestry, and natural forests.",
+            "Weeds, their characteristics, dissemination and association with various crops, their multiplication, and cultural, biological and chemical control of weeds.",
+            "Modern classification of Indian soils, Mineral and organic constituents of soils.",
+            "Essential plant nutrients and other beneficial elements in soils and plants. Principles of soil fertility and its evaluation for judicious fertilizer use, integrated nutrient management.",
+            "Problem soils and their reclamation methods.",
+            "Soil conservation planning on watershed basis. Dry land agriculture and its problems. Technology of stabilising agriculture production in rain fed agriculture area.",
+            "Water-use efficiency in relation to crop production, criteria for scheduling irrigations. Drip and sprinkler irrigation. Drainage of water-logged soils, quality of irrigation water.",
+            "Farm management, scope, important and characteristics, farm planning. Marketing and pricing of agricultural inputs and outputs, price fluctuations and their cost. Types and systems of farming and factors affecting them.",
+            "Agricultural extension, its importance and role. Farm mechanization and its role in agricultural production and rural employment. Lab-to-land programmes.",
+            "Cell Theory, cell structure, cell organelles and their function, cell division, nucleic acids-structure and function, gene structure and function.",
+            "Chromosome structure, chromosomal aberrations, linkage and cross-over, and their significance in recombination breeding. Heritability, sterility and incompatibility, classification and their application in crop improvement.",
+            "History of plant breeding. Modes of reproduction, selfing and crossing techniques. Pure-line selection, pedigree, mass and recurrent selections, combining ability, its significance in plant breeding.",
+            "Hybrid vigour and its exploitation, backcross method of breeding, breeding for disease and pest resistance, role of inter-specific and inter-generic hybridization. Role of biotechnology in plant breeding. Improved varieties, hybrids, composites of various crop plants.",
+            "Physiology and its significance in agriculture. Absorption and translocation of water, transpiration and water economy. Photosynthesis-modern concepts and factors affecting the process, aerobic and non-aerobic respiration, C3, C4 and CAM mechanisms.",
+            "Growth and development, photo-periodism and vernalization. Auxins, hormones, and other plant regulators and their mechanism of action and importance in agriculture. Physiology of seed development and germination, dormancy.",
+            "Climatic requirements, cultivation and package of practices of major fruits, vegetable crops and flower plants. Preservation of important fruits and vegetable products.",
+            "Diseases and Insect pests of field, vegetables, orchard and plantation crops of India. Principles of control of plant pests and diseases. Biological control of pests and diseases. Integrated pest and disease management. Epidemiology and forecasting. Pesticides, their formulations and modes of action. Compatibility with rhizobial inoculants. Storage pests and diseases of cereals and pulses, and their control."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Soil and Water Conservation",
+          "unitTitleMr": "माती आणि पाणी संधारण",
+          "topics": [
+            "Scope of soil and water conservation. Mechanics and types of erosion, their causes.",
+            "Rainfall, runoff and sedimentation relationships and their measurement.",
+            "Soil erosion control measures - biological and engineering including stream bank protection, vegetative barriers, contour bunds, contour trenches, contour ditches, terraces, outlets and grassed waterways.",
+            "Gully control structures - temporary and permanent - design of permanent soil conservation structures such as chute, drop and drop inlet spillways.",
+            "Design of farm ponds and percolation ponds. Principles of flood control-flood routing.",
+            "Watershed Management - investigation, planning and implementation - selection of priority areas and watershed work plan, water harvesting and moisture conservation.",
+            "Land development - leveling, estimation of earth volumes and costing.",
+            "Wind Erosion process - design for shelter belts and wind brakes and their management."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

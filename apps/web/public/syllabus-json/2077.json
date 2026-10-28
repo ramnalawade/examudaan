@@ -1,0 +1,87 @@
+{
+  "docId": 2077,
+  "examName": "Maharashtra Gazetted Technical Services Main Competitive Examination- Agriculture Services",
+  "examNameMr": "महाराष्ट्र राजपत्रित तांत्रिक सेवा मुख्य परीक्षा - कृषी सेवा",
+  "conductingBody": "MPSC",
+  "year": 2021,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "AGRICULTURE SCIENCE (Code No. 015)",
+      "paperTitleMr": "कृषी विज्ञान (संकेतांक - ०१५)",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "AGRONOMY",
+          "unitTitleMr": "सस्यशास्त्र",
+          "topics": [
+            "Principles of Agronomy: Definition, Scope, and role of Agronomist in agriculture.",
+            "Classification of Crops: Agriculture seasons in India and in Maharashtra. Factors affecting crop production.",
+            "Tillage: Factors affecting tillage, type of tillage operations, tillage implements. Effects of tillage on soil and crop growth. Modern concepts of tillage.",
+            "Seed: Qualities of good seed, types of seed, seed testing and seed treatment, different methods of sowing, optimum plant population and geometry. Classification of Seeds.",
+            "Cropping systems: Types of cropping systems, crop rotations, relay cropping.",
+            "Weeds: Definition, methods of weed control, integrated weed management concept.",
+            "Agriculture meteorology: Definition of meteorology, weather and climate elements of weather.",
+            "Forage crops: Cowpea, Maize, Jowar, Napier, Rhodes, Paragrass, Subabhul, Shevari (Sesbania ogyptica), stylo, Cluster bean, Marvel, Dinanath, Anjan (Chenclarus ciliaris)."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "FIELD CROPS",
+          "unitTitleMr": "पीके",
+          "topics": [
+            "Green manuring crops: Sannhemp, Dhaincha, Glyricedia.",
+            "Field crops (Rabi crops, including forage, oilseeds and commercial crops): Rabi Crops - Their importance, history, distribution and production, growth pattern and critical stages, yield parameters and measures to improve the same.",
+            "Soil and climatic requirements, varieties, seed and sowing nutritional requirement and manure and fertilizer application schedule, water and irrigation needs, management of weeds and plant protection measures.",
+            "Summer crops: Rice, Groundnut, Greengram.",
+            "Rainfed Agriculture: Agroclimatic zones of Maharashtra, Techniques of soil and water conservation, moisture conservation, crop residue management, mulches, minimum tillage, zero tillage, harvesting and recycling of runoff water, Drought resistant crops, contingency planning.",
+            "Farming System and Sustainable Agriculture: Definition, sustainable agriculture, resource management, components of farming system, effect of preceding and associated crops."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "SOIL SCIENCE",
+          "unitTitleMr": "मृदशास्त्र",
+          "topics": [
+            "Definition of Soil, Weathering of rocks and minerals, physical and chemical properties of soil.",
+            "Soil structure: definition, types and its importance in crop production.",
+            "Soil texture, classes, ion exchange, soil solution, organic matter, soil moisture, Alkaline and Acid soils.",
+            "Quality of irrigation water, soil survey, soil fertility and soil productivity.",
+            "Soil water movement, infiltration, percolation, evaporation and evapotranspiration, essential plant nutrients, organic manures, fertilizers, Integrated Nutrient Management.",
+            "Eco-friendly farming, Nutrient management in problem soils, preparation of compost, vermicompost, Organic farming, its merits and demerits, mixed, Complex and Compound fertilizers, micro nutrients, liquid fertilizers, Bio-fertilizer, Soil pollution by agro-chemicals."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "AGRICULTURAL ENGINEERING",
+          "unitTitleMr": "कृषी अभियांत्रिकी",
+          "topics": [
+            "Farm Machinery and Power: Sources of Farm Power, I.C. engines, Tractors classification and maintenance, Tillage implements, Seed cum fertilizer drills, Plant protection equipment.",
+            "Agricultural Process Engineering: Changes in food grains during storage, storage structures, pre-cooling, freezing, refrigeration, cold storage, moisture content determination, drying, processing equipment, material handling equipment.",
+            "Soil and Water conservation, Watershed Management: Principles of watershed management, surveying, leveling, measurement of distances and area, runoff estimation, soil and water conservation structures, erosion control.",
+            "Micro Irrigation and Drainage Engineering: Definition and concept of micro-irrigation, pump selection, maintenance, permeability and hydraulic conductivity of soils, drainage design and layouts.",
+            "Farm Structures: Building materials, location and management of farmstead, silo, dairy barns, poultry houses, farm fencing, green house technology."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [
+    "Agriculture (Code No. 101)",
+    "Agricultural Engineering (Code No. 102)"
+  ],
+  "importantNotes": [
+    "Candidates must choose any one subject out of Agriculture (Code No. 101) or Agricultural Engineering (Code No. 102)."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "docId": 9445,
+  "examName": "Maharashtra Group-C Services Combined Preliminary Examination",
+  "examNameMr": "महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "group-c",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Aptitude Test",
+      "paperTitleMr": "सामान्य क्षमता चाचणी व बौद्धिक चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "History and Geography",
+          "unitTitleMr": "इतिहास व भूगोल",
+          "topics": [
+            "Modern History of India with special reference to Maharashtra",
+            "Geography of Maharashtra with special study"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Economics and Governance",
+          "unitTitleMr": "अर्थव्यवस्था व प्रशासन",
+          "topics": [
+            "National Income, Agriculture, Industry, Foreign Trade, Banking, Population, Poverty and Unemployment, Currency and Fiscal Policy",
+            "Budget, Accounts, Auditing"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Science and Current Affairs",
+          "unitTitleMr": "सामान्य विज्ञान व चालू घडामोडी",
+          "topics": [
+            "Global and India including Maharashtra current events",
+            "Physics, Chemistry, Zoology, Botany, Hygiene"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी",
+          "topics": [
+            "Addition, Subtraction, Multiplication, Division, Decimals, Fractions and Percentage",
+            "Test to measure how quickly and accurately the candidate can think"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

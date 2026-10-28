@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { CURRENT_AFFAIRS } from '@/lib/currentAffairsData'
 import { query } from '@/lib/pgdb'
+import { withValidation, schemas } from '@/lib/validate'
 
 // Helper to clean HTML & XML entities
 function cleanText(str) {
@@ -165,7 +166,7 @@ function parseRss(xmlText, defaultSource = 'Govt Press Release') {
 /**
  * GET /api/current-affairs?category=...&exam=...&search=...&page=...&limit=...
  */
-export async function GET(request) {
+async function currentAffairsHandler(request) {
   const { searchParams } = new URL(request.url)
   const category = searchParams.get('category') || 'All'
   const exam = searchParams.get('exam') || 'All'
@@ -339,3 +340,5 @@ export async function GET(request) {
   }
   return response
 }
+
+export const GET = withValidation(schemas.currentAffairsQuery, currentAffairsHandler)

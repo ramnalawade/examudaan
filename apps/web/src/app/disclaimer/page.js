@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/disclaimer/page.js — Disclaimer & Government Non-Affiliation
 // Clear disclosure regarding non-affiliation, external PDF gazettes & data accuracy
 // ============================================================
@@ -187,7 +187,7 @@ export default function DisclaimerPage() {
               <a
                 key={i}
                 href={portal.url}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 style={{
                   display: 'flex',

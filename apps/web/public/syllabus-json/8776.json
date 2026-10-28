@@ -1,0 +1,103 @@
+{
+  "docId": 8776,
+  "examName": "Superintendent and other corresponding posts, General State Service, Group-B (Administrative Branch)",
+  "examNameMr": "अधीक्षक व तत्सम पदे, सामान्य राज्य सेवा, गट ब (प्रशासन शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "Marathi/English",
+  "category": "group-b",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (200 marks) followed by Interview (50 marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge, Intelligence Test and Departmental Related Components",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धिमापन चाचणी व विभागाशी संबंधित घटक",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi - Common Vocabulary, sentence structure, grammar, idioms and phrases and their meaning, etc.",
+          "unitTitleMr": "मराठी - सर्वसामान्य शब्दसंग्रह, वाक्यरचना, व्याकरण, म्हणी व वाक्प्रचार यांचा अर्थ आणि उपयोग इ."
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English - Common Vocabulary, Sentence structure, Grammar, use of Idioms and phrases and their meaning etc.",
+          "unitTitleMr": "इंग्रजी - Common Vocabulary, Sentence structure, Grammar, use of Idioms and phrases and their meaning etc."
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "History of Maharashtra - Modern India with special reference to History of Maharashtra, etc.",
+          "unitTitleMr": "महाराष्ट्राचा इतिहास - आधुनिक भारताचा विशेषतः महाराष्ट्राचा इतिहास, इत्यादी"
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Geography - With special study of Geography of Maharashtra - Earth, world divisions, climate, latitude-longitude, types of soils in Maharashtra, rainfall, major crops, cities, rivers, industries, etc.",
+          "unitTitleMr": "भूगोल - महाराष्ट्राच्या भूगोलाचा विशेष अभ्यासासह - पृथ्वी, जगातील विभाग, हवामान, अक्षांश-रेखांश, महाराष्ट्रातील जमिनीचे प्रकार, पर्जन्यमान, प्रमुख पिके, शहरे, नद्या, उद्योगधंदे, इत्यादी."
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Right to Information Act 2005 (with amendments)",
+          "unitTitleMr": "माहितीचा अधिकार कायदा २००५ (सुधारणांसह)"
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Human Rights and Responsibilities",
+          "unitTitleMr": "मानवी हक्क व जबाबदाऱ्या"
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Computer and Information Technology",
+          "unitTitleMr": "संगणक व माहिती तंत्रज्ञान"
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Indian Constitution",
+          "unitTitleMr": "भारतीय राज्यघटना"
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Current Affairs - Statewide and National - Political, Industrial, Economic, Social, Educational, Geographical, Astronomical, Cultural, Scientific, etc.",
+          "unitTitleMr": "जागतिक तसेच भारतातील चालू घडामोडी - राजकीय, औद्योगिक, आर्थिक, सामाजिक, शैक्षणिक, भौगोलिक, खगोलशास्त्रिय, सांस्कृतिक, वैज्ञानिक, इत्यादी"
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Intelligence Test - The question will be tested to estimate how fast and accurately the candidate can think.",
+          "unitTitleMr": "बुद्धिमापन विषयक प्रश्न - उमेदवार किती लवकर व अचूकपणे विचार करू शकतो याचा अंदाज घेण्याच्या दृष्टीने सदर प्रश्न विचारण्यात येतील."
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Rules and Orders applicable in relation to administrative work",
+          "unitTitleMr": "प्रशासकीय कामकाजाच्या संदर्भात लागू होणारे नियम व आदेश",
+          "subTopics": [
+            "Maharashtra Civil Services (General Conditions of Service) Rules, 1981",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules, 1979",
+            "Maharashtra Civil Services (Leave) Rules, 1981",
+            "Maharashtra Public Service Commission Act, 2014",
+            "Maharashtra Civil Services (Regulation of Transfers of Government Servants and Prevention of Delay in Discharge of Official Duties) Act, 2005",
+            "(1) Right of Children to Free and Compulsory Education Act, 2009 and (2) Maharashtra Right of Children to Free and Compulsory Education Rules, 2011",
+            "Maharashtra Self-Financed Schools (Establishment and Regulation) Act, 2012",
+            "National Education Policy 2020",
+            "(1) Maharashtra Private Schools Employees (Conditions of Service) Regulation Act, 1977 and (2) Maharashtra Private Schools Employees (Conditions of Service) Rules, 1981",
+            "Various welfare schemes for students in School Education Department",
+            "Secondary School Code"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Negative marking: 25% or 1/4th of the total marks will be deducted for each incorrect answer.",
+    "If more than one answer is given or if no circle is darkened in the OMR sheet, it will be treated as wrong and 25% or 1/4th of the total marks will be deducted.",
+    "If the sum of total final marks comes to a fraction, it will remain as a fraction and further processing will be done on that basis.",
+    "If a question is left unanswered, negative marking rule will not apply.",
+    "Final merit list will be based on the combined marks of objective test and interview."
+  ]
+}

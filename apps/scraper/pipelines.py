@@ -817,7 +817,7 @@ class CrawlSummaryEmailPipeline:
         BREVO_API_KEY        — Brevo v3 API key
         BREVO_SENDER_EMAIL   — verified sender in Brevo (default: noreply@examudaan.in)
         BREVO_SENDER_NAME    — sender display name (default: ExamUdaan Scraper)
-        BREVO_RECIPIENT_EMAIL — where to send the report (default: ramnalawade1986@gmail.com)
+        BREVO_RECIPIENT_EMAIL — where to send the report (default: virajnalawade2010@gmail.com)
 
     The pipeline is silently disabled if BREVO_API_KEY is not set.
     """
@@ -836,7 +836,7 @@ class CrawlSummaryEmailPipeline:
         self.api_key        = os.getenv("BREVO_API_KEY", "")
         self.sender_email   = os.getenv("BREVO_SENDER_EMAIL", "noreply@examudaan.in")
         self.sender_name    = os.getenv("BREVO_SENDER_NAME", "ExamUdaan Scraper")
-        self.recipient_email = os.getenv("BREVO_RECIPIENT_EMAIL", "ramnalawade1986@gmail.com")
+        self.recipient_email = os.getenv("BREVO_RECIPIENT_EMAIL", "virajnalawade2010@gmail.com")
 
         # Disabled by default: we send ONE consolidated email at end of day / run instead of per spider
         if os.getenv("ENABLE_PER_SPIDER_EMAIL", "false").lower() not in ("true", "1"):

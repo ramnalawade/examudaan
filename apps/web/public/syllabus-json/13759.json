@@ -1,0 +1,40 @@
+{
+  "docId": 13759,
+  "examName": "Chief Administrative Officer, Group-A, Administrative Officer, Group-A, Administrative Officer, Group-B, Assistant Administrative Officer, Group-B",
+  "examNameMr": "मुख्य प्रशासकीय अधिकारी, गट-अ, प्रशासकीय अधिकारी, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "English",
+  "category": "departmental",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General English",
+      "paperTitleMr": "सामान्य इंग्रजी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "English Language Skills",
+          "unitTitleMr": "इंग्रजी भाषा कौशल्ये",
+          "topics": [
+            "Common Vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Use of Idioms and phrases and their meaning"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

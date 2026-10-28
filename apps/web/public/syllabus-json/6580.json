@@ -1,0 +1,218 @@
+{
+  "docId": 6580,
+  "examName": "General Knowledge (Faculty of Science & Engineering) & Electrical & Mechanical Engineering",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge (Faculty of Science & Engineering)",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Scientific Knowledge",
+          "unitTitleMr": null,
+          "topics": [
+            "Nature of Science",
+            "Pre-suppositions of Science",
+            "Scientific method"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Modernisation and Science",
+          "unitTitleMr": null,
+          "topics": [
+            "What is Modernisation (Definition of Modernisation)",
+            "Type and Nature of Modernisation",
+            "Modernisation and Indian Society (Problems and remedies)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Scientific and Technological Developments",
+          "unitTitleMr": null,
+          "topics": [
+            "Scientific and Technological Developments (The World over, particularly in India)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Effects of Technological Developments",
+          "unitTitleMr": null,
+          "topics": [
+            "Effects of Technological Developments on Urban and Rural Life"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Various Indian Problems And Their Scientific Solutions",
+          "unitTitleMr": null,
+          "topics": [
+            "Energy problem",
+            "Food grains problem",
+            "Population problem",
+            "Environment Problem",
+            "Educational problem",
+            "Housing problem",
+            "Transport problem",
+            "Communication problem",
+            "Public Health problem"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Electrical & Mechanical Engineering",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Basic Electrical Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Electric and magnetic fields",
+            "Fields in dielectrics, conductors and magnetic materials",
+            "Conductors, Semiconductors and Insulators",
+            "Super-conductivity",
+            "Insulators for electrical and electronic applications",
+            "Magnetic materials, measurement of current, Voltage, power, Power-factor and energy",
+            "Indicating instruments",
+            "Measurement of resistance, inductance, capacitance and frequency",
+            "Bridge measurements",
+            "Electronic measuring instruments",
+            "Digital voltmeter and frequency counter",
+            "Transducers and their applications to the measurement of non-electrical quantities like temperature, pressure, flow-rate displacement, acceleration, noise level, etc.",
+            "Data acquisition systems"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Transformers",
+          "unitTitleMr": null,
+          "topics": [
+            "Magnetic Circuits-Analysis and Design of Power transformers",
+            "Construction and testing",
+            "Equivalent circuits",
+            "Losses and efficiency",
+            "Regulation",
+            "Auto-transformer",
+            "3-phase transformer",
+            "Parallel operation"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Rotating Machines",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic concepts in rotating machines",
+            "EMF, torque, basic machine types",
+            "D.C. Machines",
+            "Synchronous Machines",
+            "Induction Machines",
+            "Single-phase synchronous and induction motors",
+            "Construction and operation",
+            "Characteristics and performance analysis",
+            "Testing, losses and efficiency",
+            "Starting and speed control"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Power Stations",
+          "unitTitleMr": null,
+          "topics": [
+            "Types of Power Stations, Hydro, Thermal and Nuclear Stations",
+            "Pumped storage plants",
+            "Prime movers",
+            "Non-conventional power plants",
+            "Economics and operating factors",
+            "Electrical Energy Tariffs"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Power transmission lines",
+          "unitTitleMr": null,
+          "topics": [
+            "Modeling and performance characteristics",
+            "Voltage control",
+            "Load flow studies",
+            "Optimal power system operation",
+            "Load frequency control",
+            "Symmetrical short circuit analysis",
+            "Fault analysis",
+            "Transient and steady-state stability of power systems",
+            "Power system Transients",
+            "HVDC transmission",
+            "Substations",
+            "Power and control cables",
+            "Gas Insulated Switchgear"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Power system Control and Protection",
+          "unitTitleMr": null,
+          "topics": [
+            "SCADA System",
+            "Circuit breakers",
+            "Relays, Digital and Numerical Protection",
+            "A/D and D/A Converters",
+            "Programmable Logic Control System"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Power Station Auxiliary Equipments",
+          "unitTitleMr": null,
+          "topics": [
+            "Lifts",
+            "Pumps",
+            "Fire Fighting Equipments",
+            "Earth mat",
+            "D.C. Battery System",
+            "UPS system of Power Station"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Power Electronics",
+          "unitTitleMr": null,
+          "topics": [
+            "Power semi-conductor devices",
+            "Thyristor",
+            "Power transistor",
+            "AC to DC Converters",
+            "1-phase and 3-phase DC to DC Converters",
+            "AC regulators",
+            "Inverters",
+            "Single-phase and 3-phase"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -7,6 +7,7 @@ import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { MOCK_TESTS } from '@/lib/mockTestsData'
 import { trackMockTestStart } from '@/lib/analytics'
+import { MPSC_TOTAL_QUESTION_PAPERS, MPSC_ARCHIVE_YEARS_SPAN } from '@/lib/platformStats'
 import styles from './mockTests.module.css'
 
 const EXAM_FILTERS = ['All', 'MPSC', 'Police Bharti', 'Talathi Bharti', 'SSC', 'IBPS', 'Banking', 'UPSC']
@@ -45,13 +46,13 @@ export default function MockTestsPage() {
             <h1>Government Exam Authentic Mock Tests 2026</h1>
             <p>
               Real 100-question blueprints for Maharashtra Talathi, Police Bharti, MPSC Combined, and SSC CGL.
-              Experience authentic TCS / MPSC pattern computer-based tests with <strong>official section weightages, negative marking, category cutoffs, and simulated state rank</strong>. No login required.
+              Experience authentic TCS / MPSC pattern computer-based tests with <strong>official section weightages, negative marking, category cutoffs, and simulated state percentile band</strong>. No login required.
             </p>
             <div className={styles.heroStats}>
               <div className={styles.stat}><strong>{fullMocksCount}</strong><span>100-Q Full Mocks</span></div>
               <div className={styles.stat}><strong>{totalQuestions}+</strong><span>Real Exam MCQs</span></div>
               <div className={styles.stat}><strong>{sectionalCount}</strong><span>Sectional Speed Drills</span></div>
-              <div className={styles.stat}><strong>100% Free</strong><span>State Rank Analysis</span></div>
+              <div className={styles.stat}><strong>100% Free</strong><span>State Percentile Band</span></div>
             </div>
           </div>
         </div>
@@ -138,8 +139,8 @@ export default function MockTestsPage() {
             <div className={styles.stepArrow}>→</div>
             <div className={styles.step}>
               <div className={styles.stepNum}>3</div>
-              <h3>State Rank & Cutoffs</h3>
-              <p>Measure your score against official category cutoffs (Open, OBC, SC/ST) and simulated rank among 50,000 aspirants.</p>
+              <h3>State Percentile & Merit Band</h3>
+              <p>Measure your score against official category cutoffs (Open, OBC, SC/ST) and projected percentile band based on historic candidate cohorts.</p>
             </div>
             <div className={styles.stepArrow}>→</div>
             <div className={styles.step}>
@@ -158,143 +159,103 @@ export default function MockTestsPage() {
             <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               Complete Preparation Ecosystem
             </span>
-            <h2 style={{ fontFamily: 'var(--font-outfit)', fontSize: '24px', fontWeight: 800, color: 'var(--on-surface)', margin: '6px 0 8px' }}>
+            <h2 className={styles.ecosystemTitle}>
               Master Real Exams with Official Past Papers & Cutoffs
             </h2>
-            <p style={{ fontSize: '14px', color: 'var(--secondary)', margin: 0 }}>
+            <p className={styles.ecosystemSubtitle}>
               Before and after taking mock tests, study the authentic question papers, analyze historical category benchmarks, and practice topic-wise MCQs.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+          <div className={styles.ecosystemGrid}>
             <Link
               href="/mpsc-pyq"
-              style={{
-                background: '#fff',
-                border: '1.5px solid #fed7aa',
-                borderRadius: '12px',
-                padding: '18px',
-                textDecoration: 'none',
-                boxShadow: '0 2px 8px rgba(234,88,12,0.06)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}
+              className={styles.ecosystemCardMpsc}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '24px' }}>📄</span>
-                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#fff7ed', color: '#ea580c', border: '1px solid #fed7aa', padding: '2px 8px', borderRadius: '999px' }}>
-                    841 Official Papers
+                <div className={styles.cardTopRow}>
+                  <span className={styles.cardTopEmoji}>📄</span>
+                  <span className={styles.cardBadgeMpsc}>
+                    {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} Official Papers
                   </span>
                 </div>
-                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-outfit)' }}>
+                <h3 className={styles.cardTitle}>
                   MPSC Question Papers & Keys
                 </h3>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.45 }}>
-                  Download & read official 2021–2026 MPSC question papers and answer keys directly in browser.
+                <p className={styles.cardDesc}>
+                  Download & read official {MPSC_ARCHIVE_YEARS_SPAN} MPSC question papers and answer keys directly in browser.
                 </p>
               </div>
-              <span style={{ marginTop: '12px', fontSize: '12.5px', fontWeight: 700, color: '#ea580c', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <span className={styles.cardLinkMpsc}>
                 Open Official Papers →
               </span>
             </Link>
 
             <Link
               href="/pyq"
-              style={{
-                background: '#fff',
-                border: '1px solid var(--outline-variant)',
-                borderRadius: '12px',
-                padding: '18px',
-                textDecoration: 'none',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}
+              className={styles.ecosystemCard}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '24px' }}>🎯</span>
-                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#ecfdf5', color: '#047857', border: '1px solid #a7f3d0', padding: '2px 8px', borderRadius: '999px' }}>
+                <div className={styles.cardTopRow}>
+                  <span className={styles.cardTopEmoji}>🎯</span>
+                  <span className={styles.cardBadgeGreen}>
                     9,000+ MCQs
                   </span>
                 </div>
-                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-outfit)' }}>
+                <h3 className={styles.cardTitle}>
                   15-Year Topic PYQ Bank
                 </h3>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.45 }}>
+                <p className={styles.cardDesc}>
                   Practice topic-wise previous year questions across Polity, Geography, History, Science, and Marathi.
                 </p>
               </div>
-              <span style={{ marginTop: '12px', fontSize: '12.5px', fontWeight: 700, color: '#047857', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <span className={styles.cardLinkGreen}>
                 Practice Topic-wise →
               </span>
             </Link>
 
             <Link
               href="/cutoffs"
-              style={{
-                background: '#fff',
-                border: '1px solid var(--outline-variant)',
-                borderRadius: '12px',
-                padding: '18px',
-                textDecoration: 'none',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}
+              className={styles.ecosystemCard}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '24px' }}>📊</span>
-                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#f5f3ff', color: '#6d28d9', border: '1px solid #ddd6fe', padding: '2px 8px', borderRadius: '999px' }}>
+                <div className={styles.cardTopRow}>
+                  <span className={styles.cardTopEmoji}>📊</span>
+                  <span className={styles.cardBadgePurple}>
                     10-Yr Benchmark
                   </span>
                 </div>
-                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-outfit)' }}>
+                <h3 className={styles.cardTitle}>
                   Historical Cutoff Marks
                 </h3>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.45 }}>
+                <p className={styles.cardDesc}>
                   Compare your mock test scores against Open, OBC, EWS, SC, and ST official cutoffs.
                 </p>
               </div>
-              <span style={{ marginTop: '12px', fontSize: '12.5px', fontWeight: 700, color: '#6d28d9', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <span className={styles.cardLinkPurple}>
                 View Cutoff Marks →
               </span>
             </Link>
 
             <Link
               href="/syllabus"
-              style={{
-                background: '#fff',
-                border: '1px solid var(--outline-variant)',
-                borderRadius: '12px',
-                padding: '18px',
-                textDecoration: 'none',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}
+              className={styles.ecosystemCard}
             >
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span style={{ fontSize: '24px' }}>📚</span>
-                  <span style={{ fontSize: '11px', fontWeight: 700, background: '#eff6ff', color: '#1d4ed8', border: '1px solid #bfdbfe', padding: '2px 8px', borderRadius: '999px' }}>
+                <div className={styles.cardTopRow}>
+                  <span className={styles.cardTopEmoji}>📚</span>
+                  <span className={styles.cardBadgeBlue}>
                     17 Exams
                   </span>
                 </div>
-                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a', margin: '0 0 6px', fontFamily: 'var(--font-outfit)' }}>
+                <h3 className={styles.cardTitle}>
                   Detailed Syllabus & Schemes
                 </h3>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0, lineHeight: 1.45 }}>
+                <p className={styles.cardDesc}>
                   Subject weightage, marking scheme, and sectional breakdowns for Maharashtra and Central exams.
                 </p>
               </div>
-              <span style={{ marginTop: '12px', fontSize: '12.5px', fontWeight: 700, color: '#1d4ed8', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <span className={styles.cardLinkBlue}>
                 View Full Syllabus →
               </span>
             </Link>

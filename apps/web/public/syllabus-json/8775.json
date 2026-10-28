@@ -1,0 +1,61 @@
+{
+  "docId": 8775,
+  "examName": "Residential Medical Officer, Directorate of Ayush, Group B, Medical Education and Drugs Department - Syllabus",
+  "examNameMr": "निवासी वैद्यकीय अधिकारी, आयुुष् संचालनालय, गट-ब, वैद्यकीय शिक्षण आणि औषधी द्रव्ये विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Residential Medical Officer, Directorate of Ayush, Group B",
+      "paperTitleMr": "निवासी वैद्यकीय अधिकारी, आयुुष् संचालनालय, गट-ब",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Syllabus related with Ayurved subjects",
+          "unitTitleMr": "आयुर्वेद विषयाशी संबंधित अभ्यासक्रम",
+          "topics": [
+            "Panchkarma Therapies",
+            "Management and treatment protocol of Shalya tantra, Shalakya tantra, Prasuti tantra and Stri Rog operation theatre",
+            "Management of labour room and maternity ward",
+            "Management of neonatal unit and immunization",
+            "Emergency management",
+            "Swasthvritta and National health programs",
+            "Yoga Therapies",
+            "Management of Rognidan Laboratory and Laboratory investigations",
+            "General principles of Ayurveda"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Acts and regulations for hospital management, Administration and related Duties and responsibilities of RMO and subordinate medical officer",
+          "unitTitleMr": "रुग्णालय व्यवस्थापनासाठी कायदे आणि नियम, प्रशासन आणि निवासी वैद्यकीय अधिकाऱ्यांची संबंधित कर्तव्ये आणि जबाबदाऱ्या",
+          "topics": [
+            "Acts and regulations for hospital management, Administration and related Duties and responsibilities of RMO and subordinate medical officer"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Procurement, storage and distribution of medicines",
+          "unitTitleMr": "औषधांची खरेदी, साठवणूक आणि वितरण",
+          "topics": [
+            "Procurement, storage and distribution of medicines"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // cutoffs/page.js — 10-Year Category-wise Cutoff Trend Analyzer
 // ExamUdaan.in | Benchmark Cutoffs for MPSC, Police, Talathi & Central
 // ZERO INLINE STYLES POLICY COMPLIANT
@@ -1217,7 +1217,7 @@ export default function CutoffsPage() {
             <div className={styles.channelBtnRow}>
               <a
                 href="https://t.me/examudaan"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 className={styles.channelBtnTelegram}
               >
@@ -1226,7 +1226,7 @@ export default function CutoffsPage() {
               </a>
               <a
                 href="https://whatsapp.com/channel/examudaan"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 className={styles.channelBtnWhatsapp}
               >

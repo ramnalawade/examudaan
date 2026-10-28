@@ -434,12 +434,241 @@
   transform: translateY(-1px);
 }
 
-/* ── Iframe Container ────────────────────────── */
+/* ── Iframe Container & Subheader ──────────────── */
 .iframeBox {
+  position: relative;
   background: #1E293B;
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 520px;
+}
+
+.viewerSubHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: #0F172A;
+  color: #E2E8F0;
+  border-bottom: 1px solid #334155;
+  font-size: 13px;
+  gap: 12px;
+}
+
+.viewerSubHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viewerBookIcon {
+  font-size: 16px;
+  color: #38BDF8;
+  flex-shrink: 0;
+}
+
+.viewerSubHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.viewerFullscreenLink {
+  color: #38BDF8;
+  font-size: 12px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.viewerFullscreenLink:hover {
+  color: #7DD3FC;
+  text-decoration: underline;
+}
+
+.viewerFullscreenLink span {
+  font-size: 14px;
+}
+
+/* ── Central Loading State (Loading in ExamUdaan) ── */
+.loadingOverlay {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 24px;
+  animation: fadeInOverlay 0.2s ease-in-out;
+}
+
+.loaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 460px;
+  width: 100%;
+}
+
+.loaderSpinnerWrapper {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loaderSpinner {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 4px solid rgba(234, 88, 12, 0.18);
+  border-top-color: #EA580C;
+  border-right-color: #F59E0B;
+  animation: spinLoader 0.9s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+.loaderPulseDot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #EA580C 0%, #F59E0B 100%);
+  box-shadow: 0 0 18px rgba(234, 88, 12, 0.7);
+  animation: pulseLoader 1.4s ease-in-out infinite;
+}
+
+.loaderTitle {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 21px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.loaderSubtitle {
+  font-size: 13px;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  max-width: 380px;
+}
+
+.loaderProgressBar {
+  width: 220px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loaderProgressIndicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(90deg, #EA580C, #F59E0B, #EA580C);
+  border-radius: 999px;
+  animation: shimmerBar 1.4s ease-in-out infinite;
+}
+
+.loaderSlowHint {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  color: #E2E8F0;
+  animation: fadeInOverlay 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.loaderActionRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loaderDirectBtn {
+  background: #EA580C;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.3);
+}
+
+.loaderDirectBtn:hover {
+  background: #C2410C;
+  transform: translateY(-1px);
+}
+
+.loaderRetryBtn {
+  background: #334155;
+  color: #F1F5F9;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.loaderRetryBtn:hover {
+  background: #475569;
+  color: #FFFFFF;
+}
+
+@keyframes spinLoader {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseLoader {
+  0%, 100% { transform: scale(0.85); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes shimmerBar {
+  0% { left: -50%; }
+  100% { left: 100%; }
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .pdfIframe {

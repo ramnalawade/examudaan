@@ -1,0 +1,210 @@
+{
+  "docId": 1693,
+  "examName": "Town Planner, Group-B in Town Planning and Valuation Department",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2008,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Town Planner, Group-B in Town Planning and Valuation Department",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "01. Theoretical Aspects of Planning",
+          "unitTitleMr": null,
+          "topics": [
+            "A) Theories governing the Urban Land use Planning",
+            "B) Public Interest as an Urban land determinant, Health & Safety as an Urban land determinant.",
+            "C) Demographic Projections & methods",
+            "D) Transportation studies like Origin & Destination.",
+            "E) Industrial Location & Impact assessment.",
+            "F) Environmental study & EIA (Environmental Impact Assessment)",
+            "G) Plan preparation."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "02. Preparation of Regional Plan",
+          "unitTitleMr": null,
+          "topics": [
+            "A) Need & contents of regional plan.",
+            "B) Regional Delimitation.",
+            "C) Surveys necessary for Regional Plan.",
+            "D) Analysis & projection.",
+            "E) Alternative plans.",
+            "F) Implementation.",
+            "G) Necessary steps for starting & ending the process of Regional Planning.",
+            "H) Major plans required in the document.",
+            "I) Relation with the state plan & Surroundings."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "03. Development Plan",
+          "unitTitleMr": null,
+          "topics": [
+            "A) Legal & administrative Processes to start the D.P.",
+            "B) Surveys, types, duration, etc.",
+            "C) Analysis & projections.",
+            "D) Planning alternatives goals & objectives & public participation.",
+            "E) Implementation & financial aspects.",
+            "F) Necessary steps for ending the D.P.",
+            "G) Major plans needed in the documents.",
+            "H) Relation with R.P.",
+            "I) Contents of D.P. (Section 22)",
+            "J) Modifications (section 37) purchase notice (section 49) & appeal (section 47)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "04. Town Planning Schemes",
+          "unitTitleMr": null,
+          "topics": [
+            "A) Legal Provisions",
+            "B) Need for T.P. Schemes",
+            "C) Terms & concepts",
+            "D) Rational behind charging of incremental / betterment contribution",
+            "E) Relation with D.P."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "05. Layout of Lands & Village Plans",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) Layout of Lands: (i) Need for layouts (ii) Acts & bylaws (iii) Main planning principles (iv) Traffic, Circulation, road patterns (v) Landscaping (vi) Amenities & services.",
+            "(B) Village Plans: (i) Legal provisions (ii) Surveys (iii) Analysis & Projections (iv) Plans (v) implementation."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "06. Development Control",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) D.C. Control Rules",
+            "(B) Development charge & concepts behind it.",
+            "(C) Provisions of appeal",
+            "(D) Factors to be considered while granting development permissions."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "07. Acts and Rules",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) MRTP Act 66 (with latest amendments & modifications)",
+            "(B) LA Act 1894",
+            "(C) ULC 1976 (if in existence)",
+            "(D) Bombay Provisional Municipal Corporation Act. 1949.",
+            "(E) Maharashtra Municipal Council Act, 1965",
+            "(F) Grampanchayat Act.",
+            "(G) MLR Code 1965",
+            "(H) Bombay Stamp Act 1958",
+            "(I) Constitutional Amendments Regarding Town Planning"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "08. Theoretical Aspects of Valuation",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) Definition of Valuation",
+            "(B) Various purpose of Valuation",
+            "(C) Special characteristics of landed property",
+            "(D) Supply of landed property & factors affecting it",
+            "(E) Demand for landed property & factors affecting it",
+            "(F) Interests in landed property.",
+            "(G) Market Value",
+            "(H) Statutory valuation & non-statutory valuations",
+            "(I) Capital value",
+            "(J) Rental Value"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "09. Valuation of Land & Buildings",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) The direct comparison or comparative method: (i) Circumstances when to be used, (ii) Points to be considered.",
+            "(B) The contractors method & its weaknesses.",
+            "(C) The Profit method: (i) Gross Profit (ii) Net Profit (iii) Deductions",
+            "(D) The Residual method: (i) Circumstances when to be used, (ii) Latent value (iii) Cost of development",
+            "(E) The Investment Method: (i) Investment (ii) Year's Purchase (iii) Estimation of Gross income, Outgoing & Net income. (iv) Rates of Interest: (a) Remunerative Rate of Interest & factors on which it is dependent, (b) Accumulative rate of interest. (v) Advantages of Investment in landed property. (vi) Disadvantages of Investment in landed property. (vii) Yields & its relationship with price. (viii) Factors governing investment."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "10. Rental Value and its Estimation",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) Rent",
+            "(B) Demand factors affecting rental value",
+            "(C) Supply factors affecting rental value",
+            "(D) Methods of estimating rental value",
+            "(E) Outgoing",
+            "(F) Sinking fund",
+            "(G) Rating"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "11. Types of Landed Property",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) Residential Property",
+            "(B) Industrial property",
+            "(C) Commercial Property - Goodwill",
+            "(D) Agriculture Property",
+            "(E) Leasehold Property: Various types of Rent -- Ground Rent, Rack Rent, Gross Rent, Net Rent, Rising Rent, Virtual Rent, Premium.",
+            "(F) Non-Agricultural Assessment."
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "12. Valuation Tables",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) Meaning & Utility.",
+            "(B) Amount of Re.1/-",
+            "(C) Present value of Re.1/-",
+            "(D) Amount of Re. 1/- p.a.",
+            "(E) Annual Sinking Fund",
+            "(F) Present value of Re.1/- p.a.",
+            "(G) Single rate tables & Dual rate tables.",
+            "(H) Annuity of Re.1/-"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "13. Acquisition of Land and Buildings",
+          "unitTitleMr": null,
+          "topics": [
+            "(A) Need for compulsory acquisition",
+            "(B) Procedure of Land Acquisition under L.A. Act 1894.",
+            "(C) Functions of Land Acquisition Officer",
+            "(D) Factors to be taken into account while estimating the compensation",
+            "(E) Factors which are not to be taken into account while estimating the compensation.",
+            "(F) Urgency Clause",
+            "(G) Withdrawal of acquisition.",
+            "(H) Various other Acts in Maharashtra for acquisition & method of estimating compensation under those Acts."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

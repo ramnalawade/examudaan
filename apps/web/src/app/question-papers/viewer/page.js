@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/question-papers/viewer/page.js — Legacy Query String Handler & 301 Redirect
 // Automatically upgrades legacy URLs (?pdf=/downloads/mpsc/...) to clean human-readable paths.
 // ZERO INLINE STYLES POLICY: Fallback render uses viewer.module.css
@@ -56,7 +56,7 @@ export default async function LegacyPaperViewerPage({ searchParams }) {
 
         <a
           href="https://mpsc.gov.in"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           rel="noopener noreferrer"
           className={styles.sourceBadge}
         >

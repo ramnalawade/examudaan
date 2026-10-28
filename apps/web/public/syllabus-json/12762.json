@@ -1,0 +1,74 @@
+{
+  "docId": 12762,
+  "examName": "Veterinary Officer, Maharashtra Veterinary Services, Group-A, Main Examination - Question Paper Structure",
+  "examNameMr": "पशुवैद्यक अधिकारी, महाराष्ट्र पशुवैद्यक सेवा, गट-अ, मुख्य परीक्षा - प्रश्नपत्रिका रचना",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Conventional Type",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper I and II",
+      "paperTitleMr": "पेपर १ आणि २",
+      "totalMarks": 200,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Instructions",
+          "unitTitleMr": "सामान्य सूचना",
+          "topics": [
+            "Attempt any FOUR questions from Question No. 1 to 5.",
+            "Attempt either Question No. 6 or Question No. 7.",
+            "Attempt all questions from Question No. 8, 9 and 10.",
+            "The number of marks carried by a question/ sub question is indicated against it.",
+            "Keep in mind the word limit indicated in the question if any."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Question Paper Specific Instructions",
+          "unitTitleMr": "प्रश्नपत्रिका विशिष्ट सूचना",
+          "topics": [
+            "Wherever option has been given, only the required number of responses in the serial order attempted shall be assessed.",
+            "Candidates are expected to answer all the sub-questions of a question together.",
+            "Any page or portion of the page left blank in the Answer Booklet must be clearly struck off.",
+            "Unless otherwise mentioned, symbol and notation have their usual standard meanings. Assume suitable data, if necessary.",
+            "Neat sketches may be drawn, wherever required.",
+            "The medium of answer should be mentioned on the answer-book as claimed in the application."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Syllabus Questions and Structure",
+          "unitTitleMr": "अभ्यासक्रम प्रश्न आणि रचना",
+          "topics": [
+            "Question No.1: Biostatistics and Computer Application, Blood, Cardiovascular, Nervous and Muscular Systems, Principles of Animal Nutrition and Feed Technology",
+            "Question No.2: Wildlife Nutrition, Ruminant Nutrition",
+            "Question No.3: Digestive and Respiratory Systems, Animal Welfare",
+            "Question No.4: Milk and Milk Products Technology, Excretory and Endocrine Systems",
+            "Question No.5: Abattoir Practices and Animal Byproducts Technology, Laboratory or Rabbit or Pet Animal Production Management",
+            "Question No.6: Animal Breeding and Management",
+            "Question No.7: Livestock Economics and Marketing, Methods of conservation",
+            "Question No.8: Principles of Animal and Population Genetics, Reproduction, Lactation, Growth and Environmental Physiology",
+            "Question No.9: Non-Ruminant Nutrition, General Livestock Management",
+            "Question No.10: Fodder Production and Conservation, Zoo Animals Production Management"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Word Limit for Short Q (5 marks)-100 words, Short Q (10 marks)-150 words",
+    "Long Q (15 Marks)- 200 words, Long Q (20 Marks)- 250 words"
+  ]
+}

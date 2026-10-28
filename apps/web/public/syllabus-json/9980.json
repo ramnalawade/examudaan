@@ -1,0 +1,41 @@
+{
+  "docId": 9980,
+  "examName": "Corrigendum regarding State Services Examination - Revised Syllabus",
+  "examNameMr": "महाराष्ट्र राजपत्रित नागरी सेवा संयुक्त परीक्षेमध्ये समाविष्ट असणारी राज्य सेवा मुख्य परीक्षा सन २०२५ पासून पारंपरिक/वर्णनात्मक स्वरूपात घेण्यात येणार आहे - शुद्धीपत्रक",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "Marathi",
+  "category": "rajyaseva",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 8,
+      "paperTitle": "Optional Subject Paper 1 (Corrigendum)",
+      "paperTitleMr": "पेपर क्रमांक ८ करिता देण्यात आलेल्या वैकल्पिक विषयांच्या यादीतील अनुक्रमांक ४ वरील जीवशास्त्र हा विषय वनस्पतीशास्त्र असा वाचण्यात यावा.",
+      "totalMarks": 100,
+      "duration": "3 Hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    },
+    {
+      "paperNumber": 9,
+      "paperTitle": "Optional Subject Paper 2 (Corrigendum)",
+      "paperTitleMr": "पेपर क्रमांक ९ करिता देण्यात आलेल्या वैकल्पिक विषयांच्या यादीतील अनुक्रमांक ४ वरील जीवशास्त्र हा विषय वनस्पतीशास्त्र असा वाचण्यात यावा.",
+      "totalMarks": 100,
+      "duration": "3 Hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "सदर मराठीतील अभ्यासक्रमातील पेपर क्रमांक ८ व ९ करिता देण्यात आलेल्या वैकल्पिक विषयांच्या यादीतील अनुक्रमांक ४ वरील जीवशास्त्र हा विषय वनस्पतीशास्त्र असा वाचण्यात यावा."
+  ]
+}

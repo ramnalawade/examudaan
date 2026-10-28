@@ -1,0 +1,121 @@
+{
+  "docId": 6582,
+  "examName": "Executive Engineer (Electrical), Group-A, Public Works Department",
+  "examNameMr": "कार्यकारी अभियंता (विद्युत), गट-अ, सार्वजनिक बांधकाम विभाग",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Electrical Engineering",
+      "paperTitleMr": "विद्युत अभियांत्रिकी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Energy Scenario",
+          "unitTitleMr": "ऊर्जा परिदृश्य",
+          "topics": [
+            "Commercial and Non-commercial energy, primary energy resources, commercial energy production, final energy consumption, Indian and Maharashtra energy scenario, Sectoral energy consumption (domestic, industrial and other sectors)",
+            "Energy conservation Act 2001 and its features, notifications under the Act, Schemes of Bureau of Energy Efficiency including Designated consumers, State Designated Agencies, Electricity Act 2003, Safety regulation 2010, Integrated energy policy, National action plan on climate change",
+            "National solar mission, Photovoltaic systems-Isolated and grid connected",
+            "Introduction to wind power generation"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Electric Circuits",
+          "unitTitleMr": "विद्युत सर्किट",
+          "topics": [
+            "Network graph, KCL, KVL, node and mesh analysis, sinusoidal steady-state analysis, basic filter concepts",
+            "Ideal current and voltage sources, Thevenin's, Norton's and Superposition and Maximum Power Transfer theorems",
+            "Three phase circuits and three phase loads, balanced and unbalanced conditions"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electrical Machines",
+          "unitTitleMr": "विद्युत यंत्रसामग्री",
+          "topics": [
+            "Single phase transformer - equivalent circuit, phasor diagram, tests, regulation and efficiency",
+            "Three phase transformers - connections, parallel operation; auto-transformer; energy conversion principles",
+            "DC machines - types, windings, generator characteristics, armature reaction and commutation, starting, braking and speed control of motors",
+            "Three phase induction motors - principles, types, performance characteristics, starting, braking and speed control; single phase induction motors",
+            "Synchronous machines - performance, regulation and parallel operation of generators, motor starting, characteristics and applications",
+            "Servo and stepper motors"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Power Systems and Power Conditioning",
+          "unitTitleMr": "विद्युत प्रणाली आणि पॉवर कंडिशनिंग",
+          "topics": [
+            "Basic power generation concepts; transmission line models and performance; cable performance, insulation; corona and radio interference; distribution systems; per-unit quantities",
+            "Bus impedance and admittance matrices; load flow; voltage control; power factor correction; economic operation",
+            "Symmetrical components; fault analysis of symmetrical and unsymmetrical systems",
+            "Principles of over-current, differential and distance protection; solid state relays and digital protection; circuit breakers; ratings and capacity, HVDC systems",
+            "AC-DC, DC-DC, DC-AC, AC-AC power converter topologies and devices generally used, power factor and power measurement in non sinusoidal circuits, Sources of harmonics and its mitigation, Power quality problems such as sag, swell, unbalance and their mitigation"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Electrical Measurements",
+          "unitTitleMr": "विद्युत मोजमाप",
+          "topics": [
+            "Bridges and potentiometers; PMMC, moving iron, dynamometer and induction type instruments",
+            "Analog and digital measurement of voltage, current, power, energy, and power factor",
+            "Power analysers, Energy managers; instrument transformers; digital voltmeters and multimeters",
+            "Megger, earth tester and low and high resistance meters and their specifications"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "L.T. Distribution System",
+          "unitTitleMr": "एल.टी. वितरण प्रणाली",
+          "topics": [
+            "Typical layout of a 33/22/11/0.433 kv substation, component selection for indoor and outdoor installations, commissioning, LT panel design, RMU, Compact substation",
+            "Selection of busbars, mcbs, LT breakers, isolators, relays, CTs, ELCB, RCCB",
+            "Cable and wire types, sizing and erection for different locations, Earthing types and design, Lightning arrestor technologies, selection, Related Indian standards",
+            "Cable fault locaters and cable jointing"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Industrial Systems",
+          "unitTitleMr": "औद्योगिक प्रणाली",
+          "topics": [
+            "HVAC and Refrigeration System; Refrigerants, coefficient of performance, capacity, factors affecting Refrigeration and Air conditioning system performance and savings opportunities",
+            "Vapor absorption refrigeration system: Working principle, types and comparison with vapor compression system and saving potential, heat pumps and their applications, section on ventilation system, ice bank system, performance assessment of window and split room air conditioners, Star labeled pumps, cold storage refrigeration, humidification system",
+            "Fans and blowers: Types, performance evaluation, efficient system operation, flow control strategies and energy conservation opportunities. Pressure drop calculation",
+            "Pumps and Pumping System: Types, performance evaluation, efficient system operation, flow control strategies and energy conservation opportunities",
+            "Energy conservation in boiler feed water pump, lift irrigation schemes, pumping systems for municipal drinking water and sewerage, agriculture pump sets, Sizing of pumps",
+            "Lighting System: Light source, choice of lighting, luminance requirements, and energy conservation avenues. Light Emitting Diodes (LEDs), metal halides, fluorescent tube lights, Compact fluorescent lamps (CFL), labeling scheme, high efficiency street lighting, electronic ballast, occupancy sensors, energy efficient lighting controls",
+            "Lighting system design for different installations",
+            "Lifts: Preliminary knowledge of lift act and rules, safety equipments and parts in lift and their applications"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Power Back up",
+          "unitTitleMr": "पॉवर बॅकअप",
+          "topics": [
+            "DG, UPS and Battery, Different technologies, specifications, sizing calculations",
+            "Maintenance and testing of batteries, Testing and commissioning"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

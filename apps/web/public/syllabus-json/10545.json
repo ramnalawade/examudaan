@@ -1,0 +1,199 @@
+{
+  "docId": 10545,
+  "examName": "Home Science Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "other",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Food Science, Nutrition, Textiles, Resource Management, and Community Development",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "UNIT-I: FOOD SCIENCE AND FOOD SERVICE MANAGEMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "Functions of Food, Classification of foods based on nutrients, Food groups, Experimental study of Foods–Cereals, Pulses and Legumes, Vegetables and Fruits, Animal Foods, Fats and Oils, Spices and Condiments, Sugar and Sugar Products, Beverages.",
+            "Properties of food–physical and chemical properties.",
+            "Quality evaluation of foods-objective and subjective.",
+            "Effects of cooking on nutritional components, Food processing techniques and their effect on nutritional components and other physical parameters, food preservation and application.",
+            "Food pigments and additives, Leavening agents.",
+            "Food standards, food safety and quality control, HACCP, food packaging and innovations in food packaging.",
+            "Perspectives of food service-Food Service Industry-Types of catering, menu planning, food cost analysis, Sanitation and Safety.",
+            "New product development-Nanotechnology.",
+            "Food service management of institutional level-hospitals, educational institutions, social and special institutions.",
+            "Research methods in Food Science and Food Service management."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "UNIT-II: NUTRITION AND DIETETICS",
+          "unitTitleMr": null,
+          "topics": [
+            "Balanced diet, food pyramid, macro and micro nutrients, functional foods and nutraceuticals.",
+            "Nutrients-role of nutrients in the body, nutrient deficiencies and requirements for Indians.",
+            "Public health nutrition.",
+            "Nutrition through life span-physiological changes, growth and development from conception to adolescence, nutritional needs and dietary guidelines for adequate nutrition through life cycle, nutrition concerns, wellness and fitness.",
+            "Community nutrition, sports nutrition, nutrition in emergencies and disasters.",
+            "Nutritional assessment-methods and techniques.",
+            "Nutritional intervention-National Nutrition Policies and Programmes, food and nutrition security.",
+            "Clinical and therapeutic nutrition.",
+            "Diet counseling and management.",
+            "Research methods in nutrition."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Unit-III: TEXTILES",
+          "unitTitleMr": null,
+          "topics": [
+            "Textile terminologies-fibre, yarn, weave, fabric etc., classification of fibers, yarns and weaves, Identification of fibres and weaves.",
+            "Manufacturing process of natural and manmade fibres, properties and their end uses. Yarn-Classification- simple, ply and specialty yarn, yarn number, blending.",
+            "Different methods of fabric construction-Weaving, knitted and non-woven fabrics, their properties and end uses.",
+            "Textile finishes-classification, processing and purpose of finishes, eco-friendly finishes with enzymes, UV protective finishes, role of Nano technology in textile finishing.",
+            "Dyeing and printing-classification, method of block printing, tie and dye, batik, roller printing, screen printing, discharge, heat transfer printing and digitized printing.",
+            "Traditional textiles of India-embroidered textiles, printed textiles, woven textiles, dyed textiles of various regions in India. Identification on the basis of fibre content, technique, motif, colour and designs.",
+            "Textile Testing and quality control-need of testing, sampling method, techniques of testing fibres, yarn, fabrics and garments. Testing of colour-fastness, shrinkage, pilling and GSM of fabrics.",
+            "Textile and environment- eco-friendly textiles, medical textiles, agro and geo textiles, protective textiles, sports textiles, banned dyes, contamination and effluent treatment, Eco-label and eco marks.",
+            "Recent developments in textiles and apparels- Nano textiles, technical textiles, occupational clothing, zero waste designing, up cycling and recycling.",
+            "Research methods in textiles."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "UNIT-IV: APPAREL DESIGNING",
+          "unitTitleMr": null,
+          "topics": [
+            "Body measurements-procedure, need, figure types and anthropometry.",
+            "Equipment and tools used for manufacturing garments-advancements and attachments used for sewing machine. Types of machines used and their parts.",
+            "Elements and principles of design and its application to apparel. Illustrations and parts of garments.",
+            "Fashion-Terminologies, History of Fashion, fashion cycle, fashion theories, fashion adoption, fashion forecasting and factors affecting fashion.",
+            "Pattern making-drafting, draping and flat pattern making techniques, pattern alteration and dart manipulation techniques.",
+            "Apparel manufacturing-terminology used, seams, techniques and machines used, process of fabric to apparel manufacture.",
+            "Apparel Quality testing-Quality standards and specification, Quality parameters and defects of fabrics and garments.",
+            "Care and maintenance of clothing-principles of washing, laundry agents, storage techniques, case labels and symbols.",
+            "Selection of clothing for different age groups, Selection of fabrics for different garments.",
+            "Research methods in apparel designing."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "UNIT-V: RESOURCE MANAGEMENT AND CONSUMER ISSUES",
+          "unitTitleMr": null,
+          "topics": [
+            "Management - Significance and Scope of Resource Management, Concept and philosophy of management, determinants of management, Systems approach in Management. Motivating factors and motivation theories. Functions of management- planning, supervision, controlling, organizing, evaluation. Family life cycle-stages and management of resources in the different stages.",
+            "Decision making-Types of Decisions, Steps of Decision Making Process, Techniques, Conflicts in decision making- methods to resolve conflicts.",
+            "Resources- classification, characteristics, factors affecting use of resources, management of time, management of energy, fatigue and its management, management of money- Budget, family savings and investment, tax implications. Management of space.",
+            "Management of natural resources-land, forest, water, air, rain water harvesting, solid waste management, resource conservation, concept of sustainable development, SDGs.",
+            "Work simplification- Importance, principles and techniques, Mundell’s classes of change. Fundamentals of work physiology, muscular efforts, energy consumption, body size and movements, physical fitness, measurements using different techniques.",
+            "Ergonomics - significance, scope, anthropometry, man-machine-environment relationship, factors affecting physiological cost of work, body mechanics, functional design of work place, time and motion study, energy studies.",
+            "Consumer- role, rights and responsibilities, consumer behavior, consumer problems, education and empowerment.",
+            "Consumer protection- consumer organization, cooperatives, alternative redressal, standardization, standard marks, quality control, buying aids, consumer legislation.",
+            "Entrepreneurship-concept, process, barriers, entrepreneurial motivation, challenges, enterprise setting, project planning and appraisal, enterprise management.",
+            "Research methods in Resource Management and Consumer Issues."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "UNIT-VI: HOUSING AND INTERIOR DESIGN",
+          "unitTitleMr": null,
+          "topics": [
+            "Design fundamentals–elements of art, principles of design, principles of composition.",
+            "Colour–Types, dimensions of colour, psychological effects of colour, colour schemes, factors affecting use of colour.",
+            "Space planning and design-housing need and importance, principles of planning spaces, types of house plans, economy in construction, planning for different income groups.",
+            "Government and Private institutions supporting housing in India-Nature, Procedure, Institutes promoting indigenous law.",
+            "Building regulations-norms and standards, zoning, housing for special groups and areas, housing finance.",
+            "Housing and environment-building materials-impact on environment, green rating systems, energy efficiency in buildings, energy auditing, indices of indoor comfort.",
+            "Energy as a resource-conventional and non-conventional sources, renewable/non-renewable energy, energy management, national efforts on energy conservation, Carbon footprint.",
+            "Ergonomics in Kitchen Designs- significance, scope, Styles of kitchen, Work- preparation, cooking, washing, storage, serving, etc. Worker-Height, elbow level, comfortable reaching levels (horizontal and vertical) of homemaker, sequence of work center arrangements and work triangle.",
+            "Furniture and furnishing-historical perspectives, architectural styles, contemporary trends, wall finishes, window and window treatments.",
+            "Research methods in housing and interior design."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "UNIT-VII: CHILD/HUMAN DEVELOPMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of growth and development, care during pregnancy, pre-natal and neonatal development.",
+            "Theories of human development and behavior.",
+            "Early childhood care and education –activities to promote holistic development.",
+            "Influence of family, peers, school, community and culture on personality development.",
+            "Children and persons with special needs, care and support, special education, prevention of disabilities, rehabilitation.",
+            "Children at risk-child labour, street children, children of destitute, orphans, child abuse and trafficking.",
+            "Adolescence and youth: changes, challenges and programs to promote optimal development.",
+            "Adulthood, characteristics, changing roles and responsibilities in early and middle adulthood.",
+            "Aging-physical and psychological changes, need and care.",
+            "Research methods in Child/Human Development."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "UNIT-VIII: FAMILY STUDIES",
+          "unitTitleMr": null,
+          "topics": [
+            "Dynamics of marriage and family relationships.",
+            "Family welfare-approaches, programmes and challenges, role in national development.",
+            "Domestic violence, marital disharmony, conflict, resolution of conflict.",
+            "Parent education, positive parenting, community education.",
+            "Family disorganization, single parent families.",
+            "Family studies-family in crisis, family therapy, initiatives for child development.",
+            "Human rights, rights of children, rights of women, status of women, gender roles.",
+            "Counseling History, Importance, process, counseling across life span and for care givers.",
+            "Health and well-being across life span development.",
+            "Research methods in Family Studies."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "UNIT-IX: COMMUNICATION FOR DEVELOPMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "Basics of communication- nature, characteristics, functions, process, models, elements, principles, barriers, perception, persuasion and empathy, types of communication, levels (settings) of communication transactions, process of listening.",
+            "Communication systems and communication theories- human interaction theories, mass communication theories, message design theories, communication systems, culture and communication.",
+            "Concept of development- theories, models, measurement and indicators of development.",
+            "Concept of development- communication models and approaches, diffusion and innovation, mass media, social marketing.",
+            "Role of communication in development- need and importance, development journalism, writing for development-print, radio, television and internet.",
+            "Concerns of development communication- gender, health, environment, sustainability, human rights, population, literacy, rural and tribal development.",
+            "Advocacy and behavior change communication- concept, theories, models, approaches, application and challenges.",
+            "Traditional, modern and new media for development-folk forms of songs, art, dance, theatre, puppetry, advertisement, cinema, ICTs for development-community radio, participatory video, social media and mobile phones.",
+            "Organisation/agencies/institutes working for development communication-international/national/state and local.",
+            "Research methods in Communication for Development."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "UNIT-X: EXTENSION MANAGEMENT AND COMMUNITY DEVELOPMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "Historical perspectives of extension–genesis of extension education and extension systems in India and other countries, objectives of extension education and extension service, philosophy and principles of extension programme development.",
+            "Programme management-need assessment, situation analysis, planning, organization, implementation, monitoring and evaluation.",
+            "Extension methods and materials- interpersonal, small and large group methods, audio visual aids-need, importance, planning, classification, preparation and field testing, use and evaluation of audio-visual materials.",
+            "Curriculum development and planning for extension education and development activities, Bloom’s taxonomy of educational objectives and learning.",
+            "Non-Formal, adult and lifelong education-historical perspectives, concept, theories, approaches, scope, methods and materials used, challenges of implementation and evaluation, issues to be addressed.",
+            "Training, skill development and capacity building for human resource development- methods of training, entrepreneurship development.",
+            "Community development- perspectives, approaches, community organization, leadership, support structures for community development, Panchyati Raj Institutions, NGOs and community based organisations.",
+            "People’s participation and stakeholders’ perspectives, Participatory Learning and Action- methods and techniques.",
+            "Development programmes in India for urban, rural and tribal population groups- programmes for nutrition, health, education, wage and self-employment, women’s development, skill development, sanitation and infrastructure.",
+            "Research methods in Extension Management and Community Development."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

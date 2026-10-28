@@ -1,0 +1,126 @@
+{
+  "docId": 10537,
+  "examName": "Engineering Services Examination",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Engineering Mathematics and General Engineering",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Section 1: Engineering Mathematics",
+          "unitTitleMr": null,
+          "topics": [
+            "Matrix algebra, Systems of linear equations, Eigen values and Eigen vectors",
+            "Functions of single variable, Limit, continuity and differentiability, Mean value theorems",
+            "Evaluation of definite and improper integrals, Partial derivatives, Total derivative, Maxima and minima",
+            "Gradient, Divergence and Curl, Vector identities, Directional derivatives, Line, Surface and Volume integrals, Stokes, Gauss and Green's theorems",
+            "First order equations (linear and nonlinear), Higher order linear differential equations with constant coefficients, Cauchy's and Euler's equations",
+            "Initial and boundary value problems, Laplace transforms",
+            "Analytic functions, Cauchy's integral theorem, Taylor series",
+            "Definitions of probability and sampling theorems, Conditional probability, Mean, median, mode and standard deviation",
+            "Linear regression, Random variables, Poisson, normal, binomial and exponential distributions",
+            "Numerical solutions of linear and nonlinear algebraic equations, Integration by trapezoidal and Simpson's rules, Single and multi-step methods for differential equations"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Section 2: General Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Structure, physical and mechanical properties, and applications of common engineering materials",
+            "Iron-carbon equilibrium phase diagram, Heat treatment of metals and alloys",
+            "Stress-strain behavior of metals and alloys",
+            "Engineering mechanics, equivalent force systems, free body concepts, equations of equilibrium, Trusses",
+            "Strength of materials, stress, strain and their relationship, Failure theories, Mohr's circle",
+            "Deflection of beams, bending and shear stresses, Euler's theory of columns, Thick and thin cylinders, Torsion",
+            "Analysis of planar mechanisms, cams and followers, Governors and fly wheels",
+            "Design of bolted, riveted and welded joints, Interference/shrink fit joints, Friction and lubrication",
+            "Design of shafts, keys, couplings, spur gears, belt drives, brakes and clutches, Pressure vessels",
+            "Fluid mechanics, fluid statics, Bernoulli's equation, flow through pipes, laminar and turbulent flows",
+            "Thermodynamics, laws of thermodynamics, thermodynamic systems and processes, work and heat calculations",
+            "Heat transfer, conduction, convection and radiation"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Section 3: Manufacturing Processes I",
+          "unitTitleMr": null,
+          "topics": [
+            "Types of casting processes and applications, Sand casting, molds and cores, design of gating system and riser",
+            "Casting techniques of cast iron, steels, and nonferrous metals and alloys",
+            "Pressure die casting, Centrifugal casting, Investment casting, Shell mold casting, Casting defects and inspection",
+            "Stress-strain relations in elastic and plastic deformation, von Mises and Tresca yield criteria",
+            "Hot, warm and cold working, Bulk forming processes, Sheet metal working processes",
+            "Classification of joining processes, Principles of fusion welding processes",
+            "Arc welding processes, Solid state welding processes, Welding defects, Adhesive joining, brazing and soldering",
+            "Production, compaction and sintering of metal and ceramic powders",
+            "Polymer processing, injection, compression and blow molding, extrusion, calendaring and thermoforming"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Section 4: Manufacturing Processes II",
+          "unitTitleMr": null,
+          "topics": [
+            "Orthogonal and oblique machining, Single point cutting tool, Chip formation, cutting forces, Merchant's analysis",
+            "Machining parameters, material removal rate, tool wear and tool life, Economics of machining",
+            "Machining processes, turning, drilling, boring, milling, gear cutting, Finishing processes",
+            "Lathe, milling, drilling and shaping machines, Jigs and fixtures",
+            "Advanced Manufacturing, USM, AJM, WJM, AWJM, EDM, Wire EDM, LBM, EBM, PAM, CHM, ECM",
+            "Additive manufacturing techniques, Computer Integrated Manufacturing, CAD, CAM, CNC, Industrial Robots"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Section 5: Quality and Reliability",
+          "unitTitleMr": null,
+          "topics": [
+            "Metrology and Inspection, Accuracy and precision, Limits, fits and tolerances, Gauge design",
+            "Linear, angular, and form measurements, Inspection of screw threads and gears, Surface roughness measurement",
+            "Quality Management, Statistical quality control, control charts, acceptance sampling, Six sigma, TQM",
+            "Reliability and maintenance, MTBF and MTTR, Reliability models, Preventive and predictive maintenance"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Section 6: Industrial Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Product Design and Development, product life cycle, Value engineering and analysis, Concurrent engineering",
+            "Work System Design, scientific management, Productivity concepts, Method study, Work measurement, Ergonomics",
+            "Facility Design, plant layout, Computer aided layout design techniques, Materials handling systems"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Section 7: Operations Research and Operations management",
+          "unitTitleMr": null,
+          "topics": [
+            "Operation Research, Linear programming, simplex method, Transportation and assignment models, Queuing models",
+            "Engineering Economy and Costing, Break-even analysis, capital investments, Financial statements",
+            "Production control, Forecasting techniques, Aggregate production planning, MRP, ERP, Supply chain management",
+            "Project management, Scheduling techniques, Gantt chart, CPM, PERT and GERT"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

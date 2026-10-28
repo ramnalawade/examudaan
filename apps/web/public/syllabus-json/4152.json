@@ -1,0 +1,48 @@
+{
+  "docId": 4152,
+  "examName": "Administrative Officer, General State Services, Group B in the Directorate of Medical Education and Research",
+  "examNameMr": "महाराष्ट्र नागरी सेवा (सेवेच्या सर्वसाधारण शर्ती) नियम,",
+  "conductingBody": "MPSC",
+  "year": 2021,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Administrative Officer, General State Services, Group B",
+      "paperTitleMr": "महाराष्ट्र नागरी सेवा (सेवेच्या सर्वसाधारण शर्ती) नियम,",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Administrative and Service Rules",
+          "unitTitleMr": "महाराष्ट्र नागरी सेवा नियम व प्रशासकीय बाबी",
+          "topics": [
+            "Maharashtra Civil Services (General Conditions of Service) Rules",
+            "Maharashtra Civil Services (Pay) Rules",
+            "Maharashtra Civil Services (Joining Time, Foreign Service, Suspension, Dismissal and Removal from Service) Rules",
+            "Maharashtra Civil Services (Leave) Rules",
+            "Maharashtra Civil Services (Pension) Rules",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules / Departmental Enquiry Handbook",
+            "Maharashtra Civil Services (Conduct) Rules",
+            "Accounts related matters",
+            "Seniority list related matters",
+            "Office procedures",
+            "Administrative matters",
+            "Judicial/Legal matters"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

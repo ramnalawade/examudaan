@@ -1,22 +1,15 @@
 // ============================================================
 // app/api/admin/settings/route.js — Site Feature Toggle API
+// ExamUdaan | Protected via withAdminAuth
 // GET  → returns all site_settings rows
 // POST → upserts a key/value toggle (admin only)
 // Table: site_settings (key TEXT PK, value TEXT, label TEXT, updated_at TIMESTAMPTZ)
 // ============================================================
 
-import { NextResponse }       from 'next/server'
-import { query }              from '../../../../lib/pgdb'
-import { verifyAccessToken }  from '../../../../lib/auth'
+import { NextResponse } from 'next/server'
+import { query } from '../../../../lib/pgdb'
+import { withAdminAuth } from '../../../../lib/auth'
 
-// Extract and verify the Bearer token from the request, returning user or null
-function getAdminUser(request) {
-  const auth  = request.headers.get('authorization') || ''
-  const token = auth.replace(/^Bearer\s+/i, '').trim()
-  if (!token) return null
-  const decoded = verifyAccessToken(token)
-  return decoded?.data || null
-}
 async function ensureTable() {
   await query(`
     CREATE TABLE IF NOT EXISTS site_settings (
@@ -29,17 +22,11 @@ async function ensureTable() {
 }
 
 // GET /api/admin/settings — returns all feature toggle key/value pairs
-export async function GET(request) {
+async function getHandler(request, ctx, user) {
   try {
-    const user = getAdminUser(request)
-    if (!user || (!user.is_admin && user.role !== 'admin')) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-
     await ensureTable()
     const rows = await query('SELECT key, value, label, updated_at FROM site_settings ORDER BY key')
-
-    return NextResponse.json({ settings: rows.rows || [] })
+    return NextResponse.json({ settings: rows || [] })
   } catch (err) {
     console.error('[admin/settings GET]', err)
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
@@ -48,13 +35,8 @@ export async function GET(request) {
 
 // POST /api/admin/settings — upsert a single setting
 // Body: { key: string, value: string }
-export async function POST(request) {
+async function postHandler(request, ctx, user) {
   try {
-    const user = getAdminUser(request)
-    if (!user || (!user.is_admin && user.role !== 'admin')) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-
     const body = await request.json()
     const { key, value } = body
 
@@ -78,3 +60,6 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
   }
 }
+
+export const GET = withAdminAuth(getHandler)
+export const POST = withAdminAuth(postHandler)

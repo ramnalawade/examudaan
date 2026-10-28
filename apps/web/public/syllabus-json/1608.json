@@ -1,0 +1,187 @@
+{
+  "docId": 1608,
+  "examName": "Assistant Director, Town Planning, Town Planning and Valuation Department, Gr-A (Gazetted) Under Urban Development Department",
+  "examNameMr": "सहाय्यक संचालक, नगर रचना, नगर रचना व मूल्यनिर्धारण विभाग, वर्ग-अ (राजपत्रित) नगर विकास विभाग",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Director, Town Planning, Town Planning and Valuation Department, Gr-A (Gazetted) Under Urban Development Department",
+      "paperTitleMr": "सहाय्यक संचालक, नगर रचना, नगर रचना व मूल्यनिर्धारण विभाग, वर्ग-अ (राजपत्रित) नगर विकास विभाग",
+      "totalMarks": 200,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Faculty of Science & Engineering",
+          "unitTitleMr": "विज्ञान आणि अभियांत्रिकी विद्याशाखा",
+          "topics": [
+            "Scientific Knowledge: Nature of Science, Pre-suppositions of Science, Scientific method.",
+            "Modernisation and Science: What is Modernisation (Definition of Modernisation), Type and Nature of Modernisation, Modernisation and Indian Society (Problems and remedies)",
+            "Scientific and Technological Developments (The World over, particularly in India)",
+            "Effects of Technological Developments on Urban and Rural Life",
+            "Various Indian Problems And Their Scientific Solutions: For Example - Energy problem, Foodgrains problem, Population problem, Environment Problem, Educational problem, Housing problem, Transport problem, Communication problem, Public Health problem etc."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Theoretical Aspects of Planning",
+          "unitTitleMr": "नियोजनाचे सैद्धांतिक पैलू",
+          "topics": [
+            "Theories governing the Urban Land use Planning, Site Planning, Neighbourhood Planning, Hierarchy of Central Places, zoning, Development Control regulations.",
+            "Economic Aspects of Planning.",
+            "Demographic projections & methods",
+            "Transportation studies, Origin & Destination, Traffic volume survey, modal split.",
+            "Industrial Location & Impact assessment",
+            "Environmental study & E.I.A. (Environmental Impact Assessment)",
+            "Plan Preparation",
+            "Study of Urbanization Trends at National and State level."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Preparation of Regional Plan",
+          "unitTitleMr": "प्रादेशिक आराखडा तयार करणे",
+          "topics": [
+            "Need & contents of regional plan",
+            "Regional Delimitation",
+            "Surveys necessary for Regional plan",
+            "Analysis & projection",
+            "Alternative plans",
+            "Implementation",
+            "Necessary steps for starting and ending the process of Regional Planning",
+            "Relation with the state plan and surroundings",
+            "Metropolitan Area Plans as per 74th Constitutional Amendment",
+            "Special Township Projects"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Development Plans",
+          "unitTitleMr": "विकास आराखडे",
+          "topics": [
+            "Legal and administrative processes to initiate preparation of Development Plans",
+            "Types of Surveys, durations etc.",
+            "Analysis and projections",
+            "Planning alternatives goals and objectives & Public Participation",
+            "Financial aspects and implementation",
+            "Major plans and reports needed for Development Plans",
+            "Relation with R.P.",
+            "Contents of D.P. (Section 22) – including reservation of sites and Development Control regulations",
+            "Modifications (Section 37) purchase notice (Section 49), Notice under Section 127 and appeal (Section 47)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Town Planning Schemes",
+          "unitTitleMr": "नगर रचना योजना",
+          "topics": [
+            "Legal Provisions",
+            "Need for T.P. schemes",
+            "Terms and concepts – Arbitrator, Tribunal of Appeal, Original Plot, Final Plot, Incremental Contribution",
+            "Rational behind charging of incremental contribution",
+            "Relation with D.P. & R.P."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Development Control",
+          "unitTitleMr": "विकास नियंत्रण",
+          "topics": [
+            "D.C. Regulations",
+            "Development charge and concept behind it",
+            "Provisions of appeal",
+            "Factors to be considered while granting development permission.",
+            "Provisions for Action against unauthorised Development",
+            "Revocation of Development Permission"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Acts & Rules",
+          "unitTitleMr": "अधिनियम आणि नियम",
+          "topics": [
+            "MRTP Act 1966 (with latest amendments)",
+            "L.A. Act 1894",
+            "Bombay Provincial Municipal Corporation Act 1949",
+            "Maharashtra Municipal Council Act, 1965",
+            "MLR Code 1965",
+            "Bombay Stamp Act 1958",
+            "Constitutional Amendments Regarding Town Planning",
+            "Special Economic Zones Act 2005"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Theoretical Aspects of Land Valuation",
+          "unitTitleMr": "जमीन मूल्यमापनाचे सैद्धांतिक पैलू",
+          "topics": [
+            "Definition",
+            "Various purposes of Valuation",
+            "Special characteristics of landed property",
+            "Supply of landed property and factors affecting it",
+            "Demand for landed property and factors affecting it",
+            "Interests in landed property",
+            "Market Value",
+            "Statutory valuations and non-statutory valuations"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Valuation of Lands and Buildings",
+          "unitTitleMr": "जमीन आणि इमारतींचे मूल्यमापन",
+          "topics": [
+            "The Direct comparison or Comparative method",
+            "The Contractors method and its weaknesses",
+            "The Profit Method",
+            "The Residual method (When to be used, Latent value, Cost of Development)",
+            "Income Capitalization method (Investment, Year’s Purchase – Single Interest Y.P. and Double Interest Y.P., Estimation of Gross income, outgoings and Net income, Rates of Interest for years purchase, Advantages and Disadvantages of Investment in landed property, Yield and its relationship with price, Factors governing investment)",
+            "Valuation of leasehold properties- Apportionment of interest of lessor and lessee"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Rental Value and its Estimation",
+          "unitTitleMr": "भाडे मूल्य आणि त्याचे अंदाज",
+          "topics": [
+            "Rent",
+            "Demand factors affecting rental value",
+            "Supply factors affecting rental value",
+            "Methods of estimating rental value",
+            "Outgoings",
+            "Sinking Fund",
+            "Rating"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Acquisition of Land and Building",
+          "unitTitleMr": "जमीन आणि इमारत अधिग्रहण",
+          "topics": [
+            "Need of compulsory acquisition - Eminent Domain",
+            "Procedure of Land Acquisition under L.A. Act 1894",
+            "Functions of Land Acquisition Officer",
+            "Factors to be taken into account while estimating the compensation",
+            "Factors which are not to be taken into account while estimating the compensation",
+            "Urgency Clause",
+            "Withdrawal of acquisition",
+            "Latest proposed Amendments",
+            "Various other Acts in Maharashtra for acquisition and method of estimating compensation under those Acts"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

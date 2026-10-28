@@ -89,6 +89,8 @@ export const schemas = {
     identifier: Joi.string().trim().required()
       .messages({ 'string.empty': 'Email or phone number is required' }),
     channel: Joi.string().valid('email', 'sms', 'whatsapp').default('email'),
+    'cf-turnstile-response': Joi.string().max(2048).allow('', null).optional(),
+    turnstileToken: Joi.string().max(2048).allow('', null).optional(),
   }),
 
   // Auth: Verify OTP
@@ -117,6 +119,8 @@ export const schemas = {
     via_email: Joi.boolean().default(true),
     via_whatsapp: Joi.boolean().default(false),
     via_sms: Joi.boolean().default(false),
+    'cf-turnstile-response': Joi.string().max(2048).allow('', null).optional(),
+    turnstileToken: Joi.string().max(2048).allow('', null).optional(),
   }).or('email', 'phone'),  // at least one of email/phone required
 
   // Posts list / search
@@ -169,6 +173,117 @@ export const schemas = {
     razorpay_payment_id: Joi.string().required(),
     razorpay_signature: Joi.string().required(),
     plan: Joi.string().valid('basic', 'smart', 'pro').required(),
+  }),
+
+  // Payment order creation
+  createPaymentOrder: Joi.object({
+    plan: Joi.string().valid('basic', 'smart', 'pro').required(),
+  }),
+
+  // AI Exam Assistant query
+  askAssistant: Joi.object({
+    prompt: Joi.string().trim().min(1).max(2000).allow('', null).optional(),
+    question: Joi.string().trim().min(1).max(2000).allow('', null).optional(),
+    examSlug: Joi.string().trim().max(100).allow('', null).optional(),
+    exam_slug: Joi.string().trim().max(100).allow('', null).optional(),
+    history: Joi.array().items(Joi.object()).max(30).optional(),
+  }).or('prompt', 'question'),
+
+  // Feedback submission
+  submitFeedback: Joi.object({
+    category: Joi.string().trim().max(50).default('general'),
+    subject: Joi.string().trim().max(200).allow('', null).optional(),
+    description: Joi.string().trim().min(3).max(5000).required(),
+    organization: Joi.string().trim().max(100).allow('', null).optional(),
+    sourceUrl: Joi.string().trim().max(500).allow('', null).optional(),
+    name: Joi.string().trim().max(100).allow('', null).optional(),
+    contact: Joi.string().trim().max(100).allow('', null).optional(),
+    rating: Joi.number().integer().min(1).max(5).default(5),
+    'cf-turnstile-response': Joi.string().max(2048).allow('', null).optional(),
+    turnstileToken: Joi.string().max(2048).allow('', null).optional(),
+    metadata: Joi.object().optional(),
+  }),
+
+  // Omni Search query
+  omniSearch: Joi.object({
+    q: Joi.string().trim().max(200).allow('', null).optional(),
+    category: Joi.string().trim().max(50).default('all'),
+    limit: Joi.number().integer().min(1).max(50).default(20),
+  }),
+
+  // Semantic Search query
+  semanticSearch: Joi.object({
+    q: Joi.string().trim().min(3).max(200).required(),
+    limit: Joi.number().integer().min(1).max(20).default(10),
+  }),
+
+  // YouTube Proxy query
+  youtubeProxy: Joi.object({
+    channelId: Joi.string().trim().max(100).allow('', null).optional(),
+    playlistId: Joi.string().trim().max(100).allow('', null).optional(),
+    q: Joi.string().trim().max(200).allow('', null).optional(),
+    maxResults: Joi.number().integer().min(1).max(50).default(12),
+    pageToken: Joi.string().trim().max(100).allow('', null).optional(),
+  }).or('channelId', 'playlistId', 'q'),
+
+  // PYQ question bank query
+  pyqQuery: Joi.object({
+    id: Joi.number().integer().positive().allow(null, '').optional(),
+    q: Joi.string().trim().max(300).allow('', null).optional(),
+    subject: Joi.string().trim().max(100).allow('', null).optional(),
+    exam: Joi.string().trim().max(100).allow('', null).optional(),
+    year: Joi.number().integer().min(2000).max(2030).allow(null, '').optional(),
+    paper: Joi.string().trim().max(200).allow('', null).optional(),
+    limit: Joi.number().integer().min(1).max(500).default(50),
+    offset: Joi.number().integer().min(0).default(0),
+  }),
+
+  // PYQ analytics query
+  pyqAnalytics: Joi.object({
+    cadre: Joi.string().trim().max(50).default('all'),
+    subject: Joi.string().trim().max(100).default('all'),
+    topic: Joi.string().trim().max(200).allow('', null).optional(),
+    page: Joi.number().integer().min(1).default(1),
+    limit: Joi.number().integer().min(1).max(20).default(5),
+  }),
+
+  // Mock test submission
+  mockTestSubmit: Joi.object({
+    test_slug: Joi.string().trim().max(200).required(),
+    test_title: Joi.string().trim().max(500).allow('', null).optional(),
+    score: Joi.number().required(),
+    max_marks: Joi.number().required(),
+    percentage: Joi.number().min(0).max(100).required(),
+    accuracy: Joi.number().min(0).max(100).allow(null).optional(),
+    time_taken_seconds: Joi.number().integer().min(0).default(0),
+    section_breakdown: Joi.array().items(Joi.object()).default([]),
+    candidate_name: Joi.string().trim().max(200).allow('', null).optional(),
+    candidate_phone: Joi.string().trim().max(20).allow('', null).optional(),
+    candidate_email: Joi.string().email().trim().lowercase().allow('', null).optional(),
+    target_exam: Joi.string().trim().max(100).allow('', null).optional(),
+  }),
+
+  // AI News query
+  aiNewsQuery: Joi.object({
+    limit: Joi.number().integer().min(1).max(50).default(20),
+    page: Joi.number().integer().min(1).default(1),
+    category: Joi.string().trim().max(50).allow('', null).optional(),
+  }),
+
+  // Current affairs query
+  currentAffairsQuery: Joi.object({
+    date: Joi.string().isoDate().allow('', null).optional(),
+    limit: Joi.number().integer().min(1).max(100).default(30),
+    page: Joi.number().integer().min(1).default(1),
+  }),
+
+  // MPSC notifications / solutions query
+  mpscQuery: Joi.object({
+    page: Joi.number().integer().min(1).default(1),
+    limit: Joi.number().integer().min(1).max(50).default(20),
+    q: Joi.string().trim().max(200).allow('', null).optional(),
+    year: Joi.number().integer().min(2000).max(2030).allow(null, '').optional(),
+    cadre: Joi.string().trim().max(100).allow('', null).optional(),
   }),
 
 }

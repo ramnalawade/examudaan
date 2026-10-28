@@ -1,0 +1,68 @@
+{
+  "docId": 1664,
+  "examName": "Deputy Engineer (Electrical & Mechanical), Maharashtra Engineering Services, Group-A",
+  "examNameMr": "उपअभियंता (विद्युत आणि यांत्रिक), महाराष्ट्र अभियांत्रिकी सेवा, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Screening Test for Deputy Engineer (Electrical & Mechanical)",
+      "paperTitleMr": "उपअभियंता (विद्युत आणि यांत्रिक) पदासाठी पूर्व परीक्षा / चाळणी परीक्षा",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "topics": [
+            "सर्वसामान्य शब्दसमूह, वाक्यरचना, व्याकरण, म्हणी व वाक्यप्रचार यांचा अर्थ व उपयोग तसेच उताऱ्यावरील प्रश्नांची उत्तरे"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "General Knowledge (Faculty of Science & Engineering)",
+          "unitTitleMr": "सामान्य ज्ञान (विज्ञान आणि अभियांत्रिकी शाखा)",
+          "topics": [
+            "Scientific Knowledge: Nature of Science, Pre-suppositions of Science, Scientific method.",
+            "Modernisation and Science: What is Modernisation (Definition of Modernisation), Type and Nature of Modernisation, Modernisation and Indian Society (Problems and remedies)",
+            "Scientific and Technological Developments (The World over, particularly in India)",
+            "Effects of Technological Developments on Urban and Rural Life",
+            "Various Indian Problems And Their Scientific Solutions: For Example - Energy problem, Foodgrains problem, Population problem, Environment Problem, Educational problem, Housing problem, Transport problem, Communication problem, Public Health problem etc."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electrical & Mechanical Engineering",
+          "unitTitleMr": "विद्युत आणि यांत्रिक अभियांत्रिकी",
+          "topics": [
+            "(1) Basic Electrical Engineering: Electric and magnetic fields. Fields in dielectrics, conductors and magnetic materials. Conductors, Semiconductors and Insulators. Super-conductivity. Insulators for electrical and electronic applications. Magnetic materials. measurement of current. Voltage, power, Power-factor and energy. Indicating instruments. Measurement of resistance, inductance, capacitance and frequency. Bridge measurements. Electronic measuring instruments. Digital voltmeter and frequency counter. Transducers and their applications to the measurement of non-electrical quantities like temperature, pressure, flow-rate displacement, acceleration, noise level, etc. Data acquisition systems.",
+            "(2) Transformers: Magnetic Circuits-Analysis and Design of Power transformers. Construction and testing. Equivalent circuits. Losses and efficiency. Regulation. Auto-transformer. 3-phase transformer. Parallel operation.",
+            "(3) Rotating Machines: Basic concepts in rotating machines. EMF, torque, basic machine types. D.C. Machines. Synchronous Machines. Induction Machines. Single-phase synchronous and induction motors Construction and operation, Characteristics and performance analysis, Testing, losses and efficiency. Starting and speed control.",
+            "(4) Power Stations: Types of Power Stations, Hydro, Thermal and Nuclear Stations. Pumped storage plants. Prime movers, Non-conventional power plants, Economics and operating factors. Electrical Energy Tariffs.",
+            "(5) Power transmission lines: Modeling and performance characteristics. Voltage control. Load flow studies. Optimal power system operation. Load frequency control. Symmetrical short circuit analysis. Fault analysis. Transient and steady-state stability of power systems. Power system Transients. HVDC transmission. Substations. Power and control cables. Gas Insulated Switchgear.",
+            "(6) Power system Control and Protection: SCADA System, Circuit breakers. Relays, Digital and Numerical Protection. A/D and D/A Converters. Programmable Logic Control System.",
+            "(7) Power Station Auxiliary Equipments: Lifts, Pumps, Fire Fighting Equipments, Earth mat, D.C. Battery System, UPS system of Power Station.",
+            "(8) Power Electronics: Power semi-conductor devices. Thyristor. Power transistor, AC to DC Converters; 1-phase and 3-phase DC to DC Converters; AC regulators. Inverters; Single-phase and 3-phase."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Standard: Degree",
+    "Total Questions: 150",
+    "Medium: English (except Marathi section)"
+  ]
+}

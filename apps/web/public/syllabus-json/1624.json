@@ -1,0 +1,277 @@
+{
+  "docId": 1624,
+  "examName": "Syllabus for the post of Assistant Professor- Automobile, Government Engineering College, Maharashtra Engineering College Teachers Service, Group - A",
+  "examNameMr": "सहाय्यक प्राध्यापक - ऑटोमोबाइल पदासाठी अभ्यासक्रम, शासकीय अभियांत्रिकी महाविद्यालय, महाराष्ट्र अभियांत्रिकी महाविद्यालय शिक्षक सेवा, गट - अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Automobile Engineering",
+      "paperTitleMr": "ऑटोमोबाइल अभियांत्रिकी",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Applied Thermodynamics",
+          "unitTitleMr": "उपयोजित थर्मोडायनॅमिक्स",
+          "topics": [
+            "Thermodynamic Concepts",
+            "First Law of Thermodynamics",
+            "One dimensional Flow of Compressible Fluid",
+            "Second Law of Thermodynamics",
+            "Availability",
+            "Properties of Steam"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Strength of Materials",
+          "unitTitleMr": "स्ट्रेंथ ऑफ मटेरिअल्स",
+          "topics": [
+            "Simple Stress and Strain",
+            "S. F. and B. M. in Beams",
+            "Simple Theory of Bending",
+            "Shear Stress in Beams",
+            "Simple Theory of Torsion",
+            "Bending moment combined with Torsion and Axial Loads",
+            "Principal Stresses",
+            "Deflection of Beams",
+            "Strain Energy",
+            "Theories of failure"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Material Science",
+          "unitTitleMr": "मटेरिअल सायन्स",
+          "topics": [
+            "Strain Hardening",
+            "Constitution of Alloys",
+            "Iron-Carbon Equilibrium Diagram",
+            "Heat-Treatment of Steels",
+            "Cast Irons",
+            "Introduction to International Standards/Codes",
+            "Non-Ferrous Metals and Alloys",
+            "Fatigue Failure",
+            "Creep",
+            "Alloy Steels",
+            "Strengthening mechanism",
+            "Powder Metallurgy"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Heat Transfer",
+          "unitTitleMr": "हिट ट्रान्सफर",
+          "topics": [
+            "Conduction, convection & radiation",
+            "Emissivity",
+            "Heat exchangers",
+            "Mass transfer (mechanism, fick's law of diffusion, isothermal evaporation of water into air, convective mass transfer)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Machine design & vibration",
+          "unitTitleMr": "मशीन डिझाईन आणि व्हायब्रेशन",
+          "topics": [
+            "Design consideration in castings & forgings",
+            "Theories of failure",
+            "Design for static loadings",
+            "Design against fluctuating loads",
+            "Design of shafts",
+            "Design of springs",
+            "Design of belts",
+            "Free un-damped single degree of freedom vibration system",
+            "Free damped single degree of freedom vibration system",
+            "Free un-damped multi degree of freedom vibration system",
+            "Forced single degree of freedom vibration system",
+            "Vibration measuring system",
+            "Rotor dynamics",
+            "Balancing"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Theory of Machines",
+          "unitTitleMr": "थिअरी ऑफ मशिनरीज",
+          "topics": [
+            "Basic Kinematics",
+            "Special Mechanisms",
+            "Velocity Analysis of mechanisms",
+            "Acceleration analysis of Mechanism",
+            "Static and dynamic force analysis",
+            "Flexible connector mechanisms",
+            "Spur gear mechanism",
+            "Gear Trains",
+            "Cam Mechanism",
+            "Clutches, brakes dynamometer, cam & follower",
+            "Governors",
+            "Gyroscope",
+            "Static and dynamic balancing of single rotor & multi rotor system",
+            "In-line engines",
+            "Radial Engines",
+            "V-Engines",
+            "Classification of Vibrations",
+            "Free Un-damped Multi degree of freedom vibratory systems",
+            "Forced single degree of freedom vibratory system"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Internal Combustion Engines",
+          "unitTitleMr": "इंटरनल कंबशन इंजिन्स",
+          "topics": [
+            "Classification of I.C. Engines",
+            "Cycle Analysis of I.C. Engines",
+            "S.I. Engines",
+            "C.I. Engines",
+            "Supercharging/Turbo charging",
+            "Performance Characteristics of S.I. & C.I. Engines",
+            "Air Pollution due to I.C. Engines",
+            "Fuels of I.C. Engines",
+            "Engine Lubrication",
+            "Engine Cooling",
+            "Introduction to CNG, LPG, Stratified Charge and Wankel engines",
+            "Recent Developments in I.C. Engines"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Vehicle Dynamics",
+          "unitTitleMr": "व्हेहिकल डायनॅमिक्स",
+          "topics": [
+            "Fundamentals of Vehicle Dynamics",
+            "Road loads, aerodynamic drag, lift, rolling",
+            "Steering Geometry parameters",
+            "Cornering force, cornering power",
+            "Recent trends in Vehicle dynamics",
+            "Vehicle sensors",
+            "Central tyre inflation systems"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Fluid Mechanics",
+          "unitTitleMr": "फ्लुइड मेकॅनिक्स",
+          "topics": [
+            "Fluid Kinematics",
+            "Fluid Dynamics",
+            "Real fluid flows",
+            "Boundary Layer Flows",
+            "Compressible Fluid flow",
+            "Hydraulic Machinery (Turbines, Pumps, compressors)"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Measurement & Metrology",
+          "unitTitleMr": "मेजरमेंट आणि मेट्रोलॉजी",
+          "topics": [
+            "Static characteristics",
+            "Displacement measurement",
+            "Strain measurement",
+            "Measurement of angular velocity",
+            "Pressure measurement",
+            "Temperature measurement",
+            "Vacuum measurement",
+            "Acceleration measurement",
+            "Metrology"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "CAD/CAM",
+          "unitTitleMr": "कॅड / कॅम",
+          "topics": [
+            "Introduction & Elements Of Interactive Computer Graphics",
+            "Techniques For Geometric Modeling",
+            "Transformation, manipulation & data storage",
+            "NC & CNC Technology",
+            "Group Technology",
+            "CAPP, and CAQC",
+            "Computer Integrated Manufacturing & Technology Driven Practices"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Vehicle Systems",
+          "unitTitleMr": "व्हेहिकल सिस्टीम्स",
+          "topics": [
+            "Types of Clutches used in Automobiles",
+            "Braking system",
+            "Steering System",
+            "Suspension systems",
+            "Drive line",
+            "Final Drive and Rear axles",
+            "Wheels and Tyres",
+            "Recent trends in Automobile Systems"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Chasis And Body Engineering",
+          "unitTitleMr": "चेसिस अँड बॉडी इंजिनिअरिंग",
+          "topics": [
+            "Classification of motor Vehicles",
+            "Location of power plant",
+            "Vehicle Body Materials",
+            "Visibility and blind area",
+            "Driver’s seat design requirements",
+            "Latest trends in Design, Manufacturing and Materials"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Finite Element Analysis",
+          "unitTitleMr": "फिनाइट एलिमेंट अनालिसिस",
+          "topics": [
+            "Introductory Concepts: Introduction to FEM",
+            "Brief History",
+            "General FEM procedure",
+            "Applications of FEM in various fields",
+            "Advantages and disadvantages of FEM Differential Equations",
+            "Approximate solution of differential equations in fields",
+            "Matrix Algebra",
+            "FEM Procedure",
+            "Minimization of a functional",
+            "Principle of minimum total potential",
+            "Piecewise Rayleigh-Ritz method",
+            "Example problems in one-D Isoperimetric",
+            "Algorithms for solution of equations dimensional structural analysis",
+            "Two dimensional finite element formulations",
+            "Finite element formulation of dynamics"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Vehicle Testing And Maintanence",
+          "unitTitleMr": "व्हेहिकल टेस्टिंग अँड मेंटेनन्स",
+          "topics": [
+            "Engine tuning and vehicle care",
+            "Engine diagnostics and testing",
+            "Engine overhaul",
+            "Diagnosis of various engine faults",
+            "Inspection, service and troubleshooting of ignition system, starter motor and alternator",
+            "Latest diagnostics equipment",
+            "Wheel balancing and alignment",
+            "On Board diagnostics"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/alerts/page.js — Job Alerts / Notifications (Server Component)
 // Fast initial paint, pre-rendered semantic HTML, 5-min ISR cache
 // ============================================================
@@ -189,7 +189,7 @@ export default async function AlertsPage() {
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           <a
             href="https://t.me/examudaanjobs"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             rel="noopener noreferrer"
             className="btn-primary"
             style={{ background: 'white', color: '#0369a1', flexShrink: 0, fontWeight: 700, padding: '8px 16px', borderRadius: 8, textDecoration: 'none' }}
@@ -198,7 +198,7 @@ export default async function AlertsPage() {
           </a>
           <a
             href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             rel="noopener noreferrer"
             style={{ background: 'rgba(255,255,255,0.15)', color: 'white', border: '1px solid rgba(255,255,255,0.4)', padding: '8px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4 }}
           >

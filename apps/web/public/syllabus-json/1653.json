@@ -1,0 +1,118 @@
+{
+  "docId": 1653,
+  "examName": "Syllabus of the Screening Test for the Post of Assistant Public Prosecutor Group-A",
+  "examNameMr": "सहाय्यक लोकअभियोक्ता गट-अ पदाच्या चाचणी परीक्षेचा अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2021,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Criminal Procedure Code, Indian Evidence Act & Appeal/Revision Proposal",
+      "paperTitleMr": "फौजदारी प्रक्रिया संहिता, भारतीय पुरावा कायदा आणि अपीलीय/पुनरावलोकन प्रस्ताव",
+      "totalMarks": 100,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Criminal Procedure Code, 1973",
+          "unitTitleMr": "फौजदारी प्रक्रिया संहिता, १९७३",
+          "topics": [
+            "Sec. 2, 4, 6 to 40",
+            "Sec. 41, 50 to 54, 64 to 68, 70 to 81, 82, 83",
+            "Sec. 91 to 105, 151, 154 to 164, 169, 170, 174",
+            "Sec. 177 to 184, 190, 195, 197, 211, 224, 239, 258, 260, 267",
+            "Sec. 306, 321, 323, 328, 329, 376 to 389, 397"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Indian Evidence Act, 1872",
+          "unitTitleMr": "भारतीय पुरावा कायदा, १८७२",
+          "topics": [
+            "Sec. 5 to 31, 32, 34, 35, 40, 45 to 50, 53, 54, 56 to 58",
+            "Sec. 59, 60, 61 to 74, 76, 79, 86, 87 to 90",
+            "Sec. 101 to 114(A), 115, 133, 135 to 159"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "To Prepare Appeal/Revision Proposal on given facts",
+          "unitTitleMr": "दिलेल्या तथ्यांवर आधारित अपील/पुनरावलोकन प्रस्ताव तयार करणे",
+          "topics": [
+            "Drafting appeal proposals based on facts",
+            "Drafting revision proposals based on facts"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Indian Penal Code and Minor Acts",
+      "paperTitleMr": "भारतीय दंड संहिता आणि इतर कायदे",
+      "totalMarks": 100,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Indian Penal Code",
+          "unitTitleMr": "भारतीय दंड संहिता",
+          "topics": [
+            "Sec. 6 to 52(A), 53, 60 to 67, 71, 72, 76 to 90, 96 to 106",
+            "Sec. 109, 114, 120, 120(A), 120(B), 141, 153(A), 191 to 212, 216",
+            "Sec. 255, 264 to 267, 295, 295(A), 299 to 309, 312 to 318, 319 to 338",
+            "Sec. 341 to 344, 353 to 355, 359 to 366(A), 375 to 377, 378, 398",
+            "Sec. 403 to 420, 425 to 427, 441 to 461, 463 to 471, 489 A B C D, 498(A), 506, 511"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Special and Minor Acts",
+          "unitTitleMr": "विशेष आणि इतर कायदे",
+          "topics": [
+            "Bombay Prohibition Act",
+            "Indian Forest Act 1927",
+            "Public Gambling Act 1867 (Bom. Prevention of Gambling Act)",
+            "Protection of Civil Rights Act 1955",
+            "Prevention of Atrocities (SC & ST) Act 1989",
+            "Prevention of Immoral Traffic Act",
+            "Prevention of Cruelty to Animals Act 1960",
+            "Maharashtra (Urban Areas) Protection & Preservation of Trees Act 1975",
+            "Indian Arms Act 1959",
+            "Prevention of Adulteration (Food & Drugs) Act",
+            "Explosive Substances Act 1908 & Explosive Act",
+            "Essential Commodities Act 1955",
+            "Bombay Police Act",
+            "Motor Vehicle Act & Rules",
+            "Juvenile Justice Act",
+            "Child Marriage Restraint Act",
+            "Mental Health Act",
+            "Wild Life Protection Act",
+            "Pre-Natal Diagnostic Act"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Essay on Recent Development in Criminal Law",
+          "unitTitleMr": "फौजदारी कायद्यातील अलीकडील विकासावर निबंध",
+          "topics": [
+            "Essay writing on recent developments and amendments in criminal law"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

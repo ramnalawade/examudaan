@@ -70,6 +70,24 @@ export default function MpscSyllabusCatalogPage() {
           </div>
 
           <div className={styles.hubGrid}>
+            {/* 0. Interactive Syllabus-to-PYQ Checklist */}
+            <Link href="/mpsc/syllabus-tracker" className={styles.hubCard} style={{ borderColor: '#EA580C', background: '#FFFBF5' }}>
+              <div className={styles.hubCardHeader}>
+                <div className={styles.hubCardIcon}>
+                  <span className="material-symbols-outlined" style={{ color: '#EA580C' }}>checklist_rtl</span>
+                </div>
+                <span className={`${styles.hubBadge} ${styles.badgeOrange}`}>New Interactive Tracker</span>
+              </div>
+              <h3 className={styles.hubCardTitle}>Interactive Syllabus-to-PYQ Tracker</h3>
+              <p className={styles.hubCardDesc}>
+                Track your topic progress, view real-time solved question density (10,392 PYQs), and compare revised vs old pattern.
+              </p>
+              <span className={styles.hubCardCta}>
+                <span>Launch Interactive Checklist</span>
+                <span className="material-symbols-outlined">arrow_forward</span>
+              </span>
+            </Link>
+
             {/* 1. MPSC Papers & Keys */}
             <Link href="/mpsc-pyq" className={styles.hubCard}>
               <div className={styles.hubCardHeader}>

@@ -1,0 +1,78 @@
+{
+  "docId": 6501,
+  "examName": "Assistant (Legal) Group-B (Non-Gazetted)",
+  "examNameMr": "सहायक (विधी) गट-ब (अराजपत्रित)",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant (Legal) Law Syllabus",
+      "paperTitleMr": "सहायक (विधी) विधी अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Fundamental laws",
+          "unitTitleMr": "मुलभूत कायदे",
+          "topics": [
+            "Constitutional law",
+            "Protection of Human Rights Act",
+            "Administrative Law",
+            "Transfer of Property",
+            "Specific Relief",
+            "Indian Penal Code",
+            "Land Acquisition Act",
+            "Maharashtra Land Revenue Code",
+            "Contract Act",
+            "Prevention of Corruption Act",
+            "Motor Vehicles Act",
+            "Indian Forests Act",
+            "Wildlife Protection Act",
+            "Prevention of Immoral Traffic Act",
+            "Prenatal Diagnostic Act",
+            "Environment Protection Act",
+            "Air and Water Act"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Procedural Law",
+          "unitTitleMr": "प्रक्रियात्मक कायदे",
+          "topics": [
+            "Civil Procedure Code",
+            "Criminal Procedure Code",
+            "Evidence Act",
+            "High Court (Original Side) Rules",
+            "High Court (Appellate Side) Rules",
+            "Limitation Act",
+            "Presidency Small Causes Act",
+            "Notaries Act"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Situational Laws (Recent case laws and trends)",
+          "unitTitleMr": "स्थितिक कायदे (अलीकडील खटले आणि प्रवृत्ती)",
+          "topics": [
+            "Recent cases decided by the Supreme Court of public importance",
+            "Public Interest Litigation, Legal Aid, Lok Adalat",
+            "Recent legislations relating to women, children and weaker sections"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

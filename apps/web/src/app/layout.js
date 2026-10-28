@@ -8,13 +8,20 @@ import '../styles/globals.css'
 import NavigationChrome from '../components/NavigationChrome'
 import Script from 'next/script'
 import { LanguageProvider } from '../context/LanguageContext'
-import { Inter, Mukta } from 'next/font/google'
+import { Inter, Mukta, Outfit } from 'next/font/google'
 
 // Self-hosted Next.js Google Fonts — inlined CSS, zero render-blocking requests
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  fallback: ['system-ui', '-apple-system', 'sans-serif'],
+})
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
   fallback: ['system-ui', '-apple-system', 'sans-serif'],
 })
 
@@ -91,7 +98,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${mukta.variable}`}>
+    <html lang="en" className={`${inter.variable} ${outfit.variable} ${mukta.variable}`}>
       <head>
         {/* Preconnect to fonts origins for high-speed handshake */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -1,0 +1,168 @@
+{
+  "docId": 11400,
+  "examName": "Assistant Professor (Geography) Maharashtra Education Service, Group-A & Lecturer (Geography) Maharashtra Education Service, Group-B (Collegiate Branch), Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (भूगोल) महाराष्ट्र शिक्षण सेवा, गट-अ आणि व्याख्याता (भूगोल) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा), उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Geography Syllabus",
+      "paperTitleMr": "भूगोल अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Geomorphology",
+          "unitTitleMr": "भूपृष्ठशास्त्र",
+          "topics": [
+            "Interior of the earth, Continental Drift, Plate Tectonics, Endogenetic and Exogenetic forces",
+            "Denudation and Weathering, Geomorphic Cycle (Davis and Penck), Theories and Process of Slope Development",
+            "Earth Movements (seismicity, folding, faulting and vulcanicity), Land form",
+            "Occurrence and Causes of Geomorphic Hazards (earthquakes, volcanoes, landslides and avalanches)",
+            "Applied Geomorphology (Hydrology, Urbanization, Hazard management and Regional planning)"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Climatology",
+          "unitTitleMr": "हवामानशास्त्र",
+          "topics": [
+            "Composition and Structure of Atmosphere",
+            "Insolation, Heat Budget of Earth, Temperature, Pressure and Winds",
+            "Atmospheric Circulation (air-masses, fronts and upper air circulation, cyclones and anticyclones) (tropical and temperate)",
+            "Types of Precipitation, Climatic Classification of Koppen & Thornthwaite",
+            "ENSO Events (El Nino, La Nina and Southern Oscillations)",
+            "Meteorological Hazards and Disasters (Cyclones, Thunderstorms, Tornadoes, Hailstorms, Heat and Cold waves, Drought and Cloudburst, Glacial Lake Outburst (GLOF))",
+            "Climate Change: Evidences and Causes of Climatic Change in the past, Urban climate, Human impact on Global Climate"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Oceanography",
+          "unitTitleMr": "समुद्रविज्ञान",
+          "topics": [
+            "Relief of Oceans, Composition: Temperature, Density and Salinity",
+            "Circulation: Warm and Cold Currents, Waves, Tides, Sea Level Changes",
+            "Ocean Deposits, Coral reefs and coral bleaching",
+            "Hazards: Tsunami and Cyclone, Laws of Marine pollution"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Geography of Environment",
+          "unitTitleMr": "पर्यावरण भूगोल",
+          "topics": [
+            "Components: Ecosystem (Geographic Classification) and Human Ecology",
+            "Functions: Trophic Levels, Energy Flows, Cycles (geo-chemical, carbon, nitrogen and oxygen), Food Chain, Food Web and Ecological Pyramid",
+            "Human Interaction and Impacts, Environmental Ethics and Deep Ecology",
+            "Environmental Hazards and Disasters (Global Warming, Urban Heat Island, Atmospheric Pollution, Water Pollution, Land Degradation)",
+            "Environmental Policies, International Treaties, International Programmes and Policies (Brundtland Commission, Kyoto Protocol, Agenda 21, Sustainable Development Goals, Paris Agreement)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Population and Settlement Geography",
+          "unitTitleMr": "लोकसंख्या आणि वस्ती भूगोल",
+          "topics": [
+            "Sources of population data (census, sample surveys and vital statistics, data reliability and errors)",
+            "World Population Distribution (measures, patterns and determinants), World Population Growth (prehistoric to modern period)",
+            "Concept of Over, Under and Optimum population, Demographic Transition, Theories of Population Growth (Malthus, Sadler, and Ricardo)",
+            "Fertility and Mortality Analysis (indices, determinants, and world patterns)",
+            "Migration (types, causes and consequences and models), Population Composition and Characteristics (age, sex, rural-urban, occupational structure, and educational levels)",
+            "Population Policies in Developed and Developing Countries",
+            "Rural Settlements (types, patterns and distribution), Contemporary Problems of Rural Settlements with special reference to India (rural-urban migration, land use changes, land acquisition and transactions)",
+            "Theories of Origin of Towns (Gordon Childe, Henri Pirenne, Lewis Mumford)",
+            "Characteristics and Processes of Urbanization in Developed and Developing Countries",
+            "Urban Systems (the law of the primate city and rank size rule), Central Place Theories (Christaller and Losch)",
+            "Internal Structure of the City, Models of Urban Land Use (Burgess, Harris and Ullman and Hoyt)",
+            "Concepts of Megacities, Global Cities and Edge Cities, Changing Urban Forms, Functional classification of Towns",
+            "Social Segregation in the City, Urban Social Area Analysis, Manifestation of Poverty in the City (slums, informal sector growth, crime and social exclusion)"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Geography of Economic Activities and Regional Development",
+          "unitTitleMr": "आर्थिक क्रियांचे भूगोल आणि प्रादेशिक विकास",
+          "topics": [
+            "Factors affecting spatial organisation of economic activities (primary, secondary, tertiary and quaternary)",
+            "Natural Resources (classification, distribution and associated problems), Natural Resources Management",
+            "World Energy Crises in Developed and Developing Countries, Water crisis with special reference to India",
+            "Agricultural Geography: Land capability classification and Land Use Planning, Cropping Pattern, Crop diversification, Von Thunen's Model",
+            "Agricultural Productivity, Agro-Forestry, Agricultural Systems of the World",
+            "Industrial Geography: Classification of Industries, Factors and Theories of Industrial Location (A. Weber, E. M. Hoover, August Losch, A. Pred, D. M. Smith)",
+            "World Industrial Regions, Impact of Globalisation, Tourism Industry, ICT and Knowledge Production Industries",
+            "Geography of Transport and Trade: Theories and Models of spatial interaction, Spatial Flow Models, World Trade Organisation, Globalisation and Liberalisation, Ports and Regional Cooperation",
+            "Regional Development: Typology of Regions, World Regional Disparities, Theories of Regional Development (Hirschman, Myrdal, Friedman, Dependency theory), Regional Development and Social Movements in India"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Cultural, Social and Political Geography",
+          "unitTitleMr": "सांस्कृतिक, सामाजिक आणि राजकीय भूगोल",
+          "topics": [
+            "Concept of Culture, Cultural Complexes, Areas and Region, Cultural Heritage, Cultural Ecology, Cultural Convergence",
+            "Social Structure and Processes, Social Well-being and Quality of Life, Social Exclusion",
+            "Spatial distribution of social groups in India (Tribe, Caste, Religion and Language), Major Tribes and their problems",
+            "Environment and Human Health, Diseases Ecology, Nutritional Status, Health Care Planning and Policies in India, Medical Tourism",
+            "Political Geography: Boundaries, Frontiers and Related issues, Heartland and Rimland Theories",
+            "Geography of Federalism, Electoral Reforms in India, Determinants of Electoral Behaviour",
+            "Geopolitics of Climate Change, World Resources, and Indian Ocean, Regional Organisations (SAARC, ASEAN, OPEC, EU)"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Geographic Thought",
+          "unitTitleMr": "भौगोलिक विचार",
+          "topics": [
+            "Contributions of Greek, Roman, Arab, Chinese and Indian Scholars",
+            "Contributions of Geographers (Bernhardus Varenius, Immanuel Kant, Alexander von Humboldt, Carl Ritter, Schaefer & Hartshorne)",
+            "Impact of Darwinian Theory on Geographical Thought, Contemporary trends in Indian Geography",
+            "Major Geographic Traditions, Dualisms in Geographic Studies, Paradigm Shift",
+            "Perspectives in Geography (Positivism, Behaviouralism, Humanism, Structuralism, Feminism and Postmodernism)"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Geographical Techniques",
+          "unitTitleMr": "भौगोलिक तंत्रे",
+          "topics": [
+            "Sources of Geographic Information and Data, Types of Maps, Techniques of Map Making, Data Representation on Maps",
+            "GIS Database (raster and vector data formats and attribute data formats), Functions of GIS, Digital Elevation Model (DEM), Georeferencing, GIS Applications",
+            "Basics of Remote Sensing, Sensors and Platforms, Resolution, Aerial Photographs, Digital Image Processing, GPS Components and Applications",
+            "Applications of Measures of Central Tendency, Dispersion and Inequalities, Sampling and Hypothesis Testing (chi square, t-test, ANOVA)",
+            "Time Series Analysis, Correlation and Regression Analysis, Measurement of Indices, Principal Component Analysis and Cluster Analysis",
+            "Morphometric Analysis: Ordering of Streams, Bifurcation Ratio, Drainage Density, Basin Circularity Ratio, Profiles, Slope Analysis"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Geography of India",
+          "unitTitleMr": "भारताचा भूगोल",
+          "topics": [
+            "Major Physiographic Regions, Drainage System (Himalayan and Peninsular), Climate, Indian Monsoon, Jet Streams and Himalayan Cryosphere",
+            "Types and Distribution of Natural Resources (Soil, Vegetation, Water, Mineral and Marine)",
+            "Population Characteristics, Growth, Composition, Determinants and Population Policies in India",
+            "Agriculture: Production, Productivity, Crop Regions, Agro-Climatic Zones, Green Revolution, Livestock resources, Food Security and Public Distribution System",
+            "Industrial Development since Independence, Industrial Regions and Policies",
+            "Development and Patterns of Transport Networks, Internal and External Trade, Growing Importance of ports",
+            "Regional Development Planning in India, Globalisation and its impact on Indian Economy",
+            "Natural Disasters in India (Earthquake, Drought, Flood, Cyclone, Tsunami, Himalayan High land Hazards)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

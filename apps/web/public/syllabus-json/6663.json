@@ -1,0 +1,28 @@
+{
+  "docId": 6663,
+  "examName": "Departmental Limited Competitive Examination for recruitments to the posts of Superintendent/ Inspector, Certified School and Institution/ Organization and Method Officer/ Lecturer/ District Women and Child Development Officer/ Statistical Officer Group-B (Gazetted) and Child Development Project Officer (Rural)",
+  "examNameMr": "विभागीय मर्यादित स्पर्धा परीक्षा - अधीक्षक/निरीक्षक, प्रमाणित शाळा व संस्था, संघटना व पद्धती अधिकारी, व्याख्याता, जिल्हा महिला व बालविकास अधिकारी, सांख्यिकी अधिकारी, गट-ब (राजपत्रित) आणि बालविकास प्रकल्प अधिकारी (ग्रामीण)",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "departmental",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Departmental Limited Competitive Examination",
+      "paperTitleMr": "विभागीय मर्यादित स्पर्धा परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

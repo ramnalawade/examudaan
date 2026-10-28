@@ -4,7 +4,7 @@
 // ============================================================
 
 import { ok } from '../../../lib/apiResponse'
-import { getPlatformStats } from '../../../lib/platformStats'
+import { getPlatformStats } from '../../../lib/serverStats'
 
 export const revalidate = 300 // ISR cache 5 minutes
 

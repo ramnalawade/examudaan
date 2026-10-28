@@ -6,13 +6,14 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { MPSC_TOTAL_QUESTION_PAPERS, MPSC_ARCHIVE_YEARS_SPAN, MPSC_TOTAL_ARCHIVE_FOLDERS } from '@/lib/platformStats'
 import styles from '@/components/examHub.module.css'
 
 export const metadata = {
   title: {
     absolute: 'MPSC Exam Date 2026 — Official Calendar & Schedule | ExamUdaan',
   },
-  description: 'Official MPSC Exam Dates 2026: Rajyaseva, Combined Group B & C Prelims/Mains timetable, notification schedule, 841+ PYQ papers & answer key links.',
+  description: 'Official MPSC Exam Dates 2026: Rajyaseva, Combined Group B & C Prelims/Mains timetable, notification schedule, 1,284+ PYQ papers & answer key links.',
   keywords: [
     'mpsc exam date 2026', 'mpsc timetable 2026', 'mpsc calendar 2026',
     'mpsc rajyaseva exam date', 'mpsc combined group b c date 2026',
@@ -23,7 +24,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'MPSC Exam Date 2026 — Official Calendar & Schedule | ExamUdaan',
-    description: 'Official MPSC Exam Dates 2026: Rajyaseva, Combined Group B & C Prelims/Mains timetable, notification schedule, 841+ PYQ papers & answer key links.',
+    description: 'Official MPSC Exam Dates 2026: Rajyaseva, Combined Group B & C Prelims/Mains timetable, notification schedule, 1,284+ PYQ papers & answer key links.',
     url: 'https://examudaan.in/mpsc-exam-dates-2026',
     siteName: 'ExamUdaan.in',
     type: 'article',
@@ -31,7 +32,7 @@ export const metadata = {
   twitter: {
     card: 'summary',
     title: 'MPSC Exam Date 2026 — Official Calendar & Schedule | ExamUdaan',
-    description: 'Official MPSC 2026 timetable, Rajyaseva & Combined exam dates, and 841+ question papers.',
+    description: 'Official MPSC 2026 timetable, Rajyaseva & Combined exam dates, and 1,284+ question papers.',
   },
 }
 
@@ -114,7 +115,7 @@ export default function MpscExamDates2026Page() {
           <div className={styles.quickActionStrip}>
             <Link href="/mpsc-pyq" className={styles.quickActionBtnPrimary}>
               <span className="material-symbols-outlined">description</span>
-              Browse 841+ MPSC Papers &amp; Keys
+              Browse {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}+ MPSC Papers &amp; Keys
             </Link>
             <Link href="/syllabus/mpsc" className={styles.quickActionBtnOutline}>
               <span className="material-symbols-outlined">account_balance</span>
@@ -139,8 +140,8 @@ export default function MpscExamDates2026Page() {
             </div>
             <div className={styles.overviewCard}>
               <span className={styles.overviewLabel}>Paired Exam Archive</span>
-              <span className={styles.overviewVal}>429 Exam Sets</span>
-              <span className={styles.overviewSub}>841+ PDFs with Answer Keys</span>
+              <span className={styles.overviewVal}>{MPSC_TOTAL_ARCHIVE_FOLDERS.toLocaleString('en-IN')} Exam Sets</span>
+              <span className={styles.overviewSub}>{MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}+ PDFs with Answer Keys</span>
             </div>
             <div className={styles.overviewCard}>
               <span className={styles.overviewLabel}>Official Syllabi</span>
@@ -229,11 +230,11 @@ export default function MpscExamDates2026Page() {
                 <div className={styles.resourceIcon}>
                   <span className="material-symbols-outlined">description</span>
                 </div>
-                <span className={styles.resourceBadge}>429 Exam Sets</span>
+                <span className={styles.resourceBadge}>{MPSC_TOTAL_ARCHIVE_FOLDERS.toLocaleString('en-IN')} Exam Sets</span>
               </div>
-              <h3 className={styles.resourceTitle}>841+ MPSC Question Papers &amp; Keys</h3>
+              <h3 className={styles.resourceTitle}>{MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}+ MPSC Question Papers &amp; Keys</h3>
               <p className={styles.resourceDesc}>
-                Official 2021–2026 question papers paired side-by-side with verified final answer keys in browser.
+                Official {MPSC_ARCHIVE_YEARS_SPAN} question papers paired side-by-side with verified final answer keys in browser.
               </p>
               <span className={styles.resourceCta}>
                 <span>Open MPSC Archive</span>

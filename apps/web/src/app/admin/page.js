@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/admin/page.js — ExamUdaan Site Admin Panel
 // Protected: Only accessible to users with is_admin = true in DB
 // Features: Feature toggles, site stats, enquiry inbox
@@ -626,7 +626,7 @@ export default function AdminPage() {
               <div style={{ display: 'flex', gap: 8 }}>
                 <a
                   href="https://search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fexamudaan.in%2F"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   rel="noopener noreferrer"
                   className="btn-primary"
                   style={{
@@ -639,7 +639,7 @@ export default function AdminPage() {
                 </a>
                 <a
                   href="/sitemap.xml"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   rel="noopener noreferrer"
                   style={{
                     display: 'inline-flex', alignItems: 'center', gap: 6,

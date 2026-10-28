@@ -1,0 +1,93 @@
+{
+  "docId": 1651,
+  "examName": "Combined Screening Test for Assistant Project Officer Gr-B, Project Officer Gr-A, and Other Posts",
+  "examNameMr": "संयुक्त चाळणी परीक्षा अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Aptitude Test",
+      "paperTitleMr": "सामान्य ज्ञान व बुद्धिमापन चाचणी",
+      "totalMarks": 200,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Affairs",
+          "unitTitleMr": "चालू घडामोडी",
+          "topics": [
+            "Current Affairs (30 Marks):- Global and India."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमापन चाचणी",
+          "topics": [
+            "Intelligence Test (40 Marks):- Arithmetic, Addition, Subtraction, Multiplication, Division, Average, Decimals and Fractions, and related questions on IQ."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Geography of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा भूगोल",
+          "topics": [
+            "Geography of Maharashtra (30 Marks):- Physical Geography of Maharashtra, Physiographic Divisions, Climate, Rainfall and Temperature, Variations in Rainfall, Rivers, Mountains and Hills, Political Divisions, Administrative Divisions, Natural Resources- Forests and Minerals, Human and Social Geography- Population, Migration of Population and its Sources and Destinations, Rural settlements, Tandas, Slums and related questions."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Right to Information Act - 2005",
+          "unitTitleMr": "माहितीचा अधिकार कायदा - 2005",
+          "topics": [
+            "Right to Information Act - 2005 (10 Marks)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "History of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा इतिहास",
+          "topics": [
+            "History of Maharashtra (15 Marks):- Social and Economic Awakening (1885-1947), Role of Important Personalities, Newspapers and Impact of Education in pre-independence India, Other contemporary movements (Satyashodhak Samaj, Dr. Babasaheb Ambedkar's movement, Hindu Mahasabha, Muslim League, National Freedom Movement, Left Ideology / Communist Movement, Peasant Movement, Tribal Uprising)."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Indian Constitution",
+          "unitTitleMr": "भारतीय राज्यघटना",
+          "topics": [
+            "Indian Constitution (25 Marks):- Formation of Constitution, Preamble and Philosophy, Important Articles / Salient Features, Centre-State Relations, Secular State, Fundamental Rights and Duties, Directive Principles of State Policy, Uniform Civil Code, Independent Judiciary, Governor, Chief Minister and Council of Ministers- Role, Powers and Functions, State Legislature- Vidhan Sabha, Vidhan Parishad and their Members, Powers, Functions and Role, Legislative Committees."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Computer and Information Technology",
+          "unitTitleMr": "संगणक व माहिती तंत्रज्ञान",
+          "topics": [
+            "Computer and Information Technology (25 Marks):- Role of Computers in modern society, Use of computers in various fields, Data Communication, Networking and Web Technology, Cyber Crimes and Preventive measures, Use of Information Technology as a new industry for various public services, Growth of IT industry in India and its quality, Government programs like Media Lab Asia, Vidya Vahini, Gyan Vahini, Community Information Centre etc., Basic questions and future of IT industry."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Human Rights and Responsibilities",
+          "unitTitleMr": "मानवी हक्क व जबाबदाऱ्या",
+          "topics": [
+            "Human Rights and Responsibilities (25 Marks):- Concepts - International Human Rights Standards, Provisions in Indian Constitution, Implementation and Protection of Human Rights and Responsibilities machinery in India, Human Rights Movement, Problems of deprivation of human rights, Poverty, Illiteracy, Unemployment, Social-Cultural-Religious customs and difficulties (Violence, Corruption, Terrorism, Exploitation of laborers, Protected crime, etc.), Need and importance of education regarding mutual respect for human rights, dignity and unity in a democratic system, Civil Rights Protection Act 1955, Human Rights Protection Act 1993, Protection of Women from Domestic Violence Act 2005, Protection of Women from Domestic Violence Rules 2005, Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act 1989, Dowry Prohibition Act 1961, Mahatma Gandhi Tanta Mukti Abhiyan."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

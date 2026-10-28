@@ -1,0 +1,152 @@
+{
+  "docId": 12370,
+  "examName": "Assistant Professor (Arabic), Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहायक प्राध्यापक (अरबी), महाराष्ट्र शिक्षण सेवा, गट-अ (संस्थेची शाखा) उच्च आणि तांत्रिक शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Arabic Syllabus",
+      "paperTitleMr": "अरबी अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Arabic Poetry up to the Abbasid Period",
+          "unitTitleMr": "अब्बासी काळापर्यंतची अरबी कविता",
+          "topics": [
+            "The Origin of the Arabic Language",
+            "The Mu'allaqat and Their Poets: Imru' al-Qais, Amr ibn Kulthum, Zuhayr ibn Abi Sulma, Antarah ibn Shaddad al-Absi",
+            "The Sa’aliq Poets: Ta'abbata Sharra, Al-Shanfarā, Urwah ibn al-Ward",
+            "The poets of the Mukhadarimun period: Hassan ibn Thabit, Al-Khansa bint Tamadur, Ka'b ibn Zuhayr, Al-Hutay'ah",
+            "The Umayyad Poets: Omar ibn Abi Rabi'ah, Jamil ibn Ma'mar, Al-Akhtal, Al-Farazdaq, Jarir",
+            "Poets of the Abbasid Period: Bashar ibn Burd, Abu Nuwas, Abu Tammam, Al-Buhturi, Al-Mutanabbi, Ibn al-Rumi, Abu al-Ala al-Ma'arri"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Arabic Prose up to the Abbasid Period",
+          "unitTitleMr": "अब्बासी काळापर्यंतचे अरबी गद्य",
+          "topics": [
+            "Oratory in the Pre-Islamic Era: Quss ibn Sa'ida al-Ayadi, Al-Aktham ibn Sayfi al-Tamimi",
+            "The Holy Quran and the Prophetic Hadith and Their Literary Significance",
+            "Oratory in the Islamic Era: Ali ibn Abi Talib, Ziyaad ibn Abeeh, Al-Hajjaj ibn Yusuf al-Thaqafi, Tariq ibn Ziyad",
+            "The Letters: Abd al-Hamid al-Katib, Al-Jahiz, Al-Qadi Al-Fadhil, Ibn al-Amid, Al-Sahib ibn Abbad",
+            "The Maqamat: Badi' al-Zaman al-Hamadhani, Abu Muhammad al-Qasim ibn Ali al-Hariri",
+            "Stories and Tales: Kalila and Dimna, One Thousand and One Nights"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Migrant and Andalusian Literature",
+          "unitTitleMr": "स्थलांतरित आणि आंदालुशियन साहित्य",
+          "topics": [
+            "Emigrant Literature: Khalil Gibran, Elia Abu Madi, Nasib Arida, Rashid Ayyub, Mikhail Nuaima, Rashid Salim al-Khawry, Michel Maalouf, Ilias Farhat",
+            "Andalusian Literature: Muwashahat, The zajals, Nature poetry",
+            "Great poets and poetesses: Ibn Darraj al-Qastalli, Ibn Khafaja, Ibn Hani, Ibn Zaydun, Wallada bint al-Mustakfi, Hamdouna bint Zainab, Hafsa bint Ziyad",
+            "Great figures of prose: Ibn Hazm, Ibn Tufail, Ibn Shaheed, Ibn Abd Rabbih"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Literary Criticism and Prominent Critics",
+          "unitTitleMr": "साहित्यिक टीका आणि प्रमुख समीक्षक",
+          "topics": [
+            "Criticism in the Pre-Islamic Era",
+            "Criticism in the Islamic Era",
+            "Criticism in the Abbasid Era: Ibn Salam al-Jumahi, Ibn Qutaybah al-Dinawari, Qudamah ibn Ja'far, Ibn Rachiq al-Qayrawani, Abu al-Qasim Bishr al-Amidi, Abdul Qahir al-Jurjani",
+            "Criticism in the Modern Era: Hassan Al-Marsafi, Taha Hussein, Abbas Mahmoud al-Aqqad, Ahmed Al-Shayeb, Mohamed Mandour, Ghanimi Hilal, Mikhail Nuaima, Shawqi Dhaif, Abd al-Salam al-Masdi"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Rhetoric and Prosody",
+          "unitTitleMr": "अलंकारशास्त्र आणि वृत्तशास्त्र",
+          "topics": [
+            "Ilmul Balagha: Al-Fasaha, Al-Balagha, Ilmul Maani, Al-Khabar Wa Aqsamuhu, Al-Insha Wa Aqsamuhu",
+            "Ilmul Bayan: At-Tashbeeh Wa Aqsamuhu, Al-Isti’aarah Wa Aqsamuha, Al-Kinayah Wa Aqsamuha, Al-Majaaz Wa Aqsamuhu",
+            "Ilmul Badi: Al-Muhassinaat Al-Lafziyah, Al-Muhassinaat Al-Manawiyah",
+            "Science of Prosody (Ilmul Arooz): Baher Tawil, Baher Kamil, Baher Khafif, Baher Baseet"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "The most important Arabic sources and references",
+          "unitTitleMr": "सर्वात महत्त्वाचे अरबी स्रोत आणि संदर्भ",
+          "topics": [
+            "Kitabul Aghani by Abu al-Faraj al-Isfahani",
+            "Al bayan -w- Tab’yeen by Al-Jahiz",
+            "Muqaddimah by Ibn Khaldun",
+            "Iqdul Farid by Ibn Abd Rabbih",
+            "Al Fahrist by Ibn al-Nadim",
+            "Al-Khasa'is by Ibn Jinni",
+            "Kashf al-Zunun by Khaji Khalifa",
+            "Wafiyatul Ayan by Ibn Khallikan",
+            "Futuhul Buldan by Al-Baladhuri",
+            "Al Ama’ali by Al-Qaali"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Modern Arabic Literature",
+          "unitTitleMr": "आधुनिक अरबी साहित्य",
+          "topics": [
+            "Poetry: Mahmoud Sami Al-Baroudi, Ahmed Shawqi, Hafez Ibrahim, Ma'ruf al-Rusafi, Khalil Mutran, Abu al-Qasim al-Shabi, Badr Shakir al-Sayyab, Nazik al-Malaikah, Omar Abu Risha, Nizar Qabbani, Abdullah Al-Bardouni, Fadwa Tuqan, Mahmoud Darwish, Ali Ahmad Saeed Adonis",
+            "Prose: Rifa'a al-Tahtawi, Muhammad Abduh, Mustafa Lutfi Al-Manfaluti, Mahmoud Taymour, Ehsan Abdul Quddus, Yahiya haqi, Youssef Idris, Zakaria Tamer",
+            "The novel: Jurjee Zaidan, Muhammad Husayn Haykal, Naguib Mahfouz, Abdul Hamid Joudah Al-Sahhar, Abdul Rahman Munif, Ghazi Al-Gosaibi, Hanna Mina, Ahlam Mosteghanemi, Ibrahim al-Koni, Abdul Karim Ghalab, Najib al-Kilani, Leila al-Othman",
+            "The Drama: Maroun al-Naqqash, Tawfiq al-Hakim, Aziz Abaza, Ali Ahmed Bakathir, Saadallah Wannous"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Literary Trends, Movements, and Schools",
+          "unitTitleMr": "साहित्यिक प्रवाह, चळवळी आणि शाळा",
+          "topics": [
+            "Neoclassicism / Conservative Movement",
+            "Romanticism",
+            "Realism",
+            "Symbolism",
+            "Free verse/versification poetry",
+            "The Diwan School",
+            "Apollo Group",
+            "The Pen League",
+            "The Andalusian League"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Indo-Arabic Literature",
+          "unitTitleMr": "इंडो-अरबी साहित्य",
+          "topics": [
+            "Prominent Figures in Prose: Shah Waliullah Dehlawi, Nawab Siddiq Hasan Khan Qanouji, Abdul Hai Al-Hasani, Hamid al-Din al-Farahi, Abdul Aziz Al-Mai'mani, Abu al-Hasan Ali al-Hasani al-Nadwi, Abu Mahfouz Karim al-Masoomi",
+            "Notable Poets: Faiz-ul-Haq Khairabadi, Faiz al-Hassan al-Saharanpuri, Anwar Shah Kashmiri, Muhammad Nazim al-Nadwi, Omar Qadi al-Balankoti, Abdul Qadir al-Fazfari",
+            "The most important Indian works: Hujjatullah al-Baligha, Taj al-Aroos, Sabhatul Marjan, Abjad al-Uloom, Tohfatul Mujahideen, Kashshaafu Mustalahatul Funoon, As-Saqafatul Islamiya fil hind"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Arabic- English Translation, Language Application and General Knowledge",
+          "unitTitleMr": "अरबी-इंग्रजी भाषांतर, भाषा उपयोजन आणि सामान्य ज्ञान",
+          "topics": [
+            "Translation: General political terms and general economic terms in newspapers and magazines",
+            "Linguistic Applications: Prominent Arabic Terms, Grammatical Analysis, Use of prepositions",
+            "General Knowledge about the Arab world: Political Systems, Fine Arts, Festivals and Special Events, Political and cultural organizations"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

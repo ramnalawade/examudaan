@@ -1,0 +1,49 @@
+{
+  "docId": 10094,
+  "examName": "Civil Judge Junior Division and Judicial Magistrate First Class Preliminary Examination",
+  "examNameMr": "दिवाणी न्यायाधीश कनिष्ठ स्तर आणि न्यायदंडाधिकारी प्रथम वर्ग पूर्व परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Civil Judge (Junior Division) and Judicial Magistrate (First Class) (Preliminary) Examination",
+      "paperTitleMr": "दिवाणी न्यायाधीश कनिष्ठ स्तर आणि न्यायदंडाधिकारी प्रथम वर्ग पूर्व परीक्षा",
+      "totalMarks": 100,
+      "duration": "Two Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Law Subjects",
+          "unitTitleMr": "कायदे विषयक बाबी",
+          "topics": [
+            "Code of Criminal Procedure",
+            "Civil Procedure Code",
+            "Evidence Act",
+            "Transfer of Property Act",
+            "Specific Relief Act",
+            "Maharashtra Rent Control Act",
+            "Limitation Act",
+            "Constitution of India",
+            "Indian Penal Code",
+            "Law of Contracts, The Sale of Goods Act and Partnership Act",
+            "Bhartiya Nyaya Sanhita, 2023",
+            "Bhartiya Sakshya Adhiniyam, 2023",
+            "Bhartiya Nagrik Surksha Sanhita, 2023 (BNSS)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

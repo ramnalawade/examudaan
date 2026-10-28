@@ -1,0 +1,96 @@
+{
+  "docId": 1612,
+  "examName": "Assistant Engineer (Electrical), Grade-2, Maharashtra Electrical Engineering Services, Group-B",
+  "examNameMr": "सहाय्यक अभियंता (विद्युत), श्रेणी-२, महाराष्ट्र विद्युत अभियांत्रिकी सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Electrical Engineering - Paper - I",
+      "paperTitleMr": "विद्युत अभियांत्रिकी - पेपर - १",
+      "totalMarks": 200,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Fundamental of Electrical Engineering",
+          "unitTitleMr": "विद्युत अभियांत्रिकीची मूलतत्त्वे",
+          "topics": [
+            "Fundamentals of electrical engineering, DC and AC network theorems",
+            "Behavior of R-L, R-C and R-L-C circuits",
+            "Basics of Electromagnetism and electrostatics",
+            "AC circuits, Three phase circuits",
+            "Power and energy in single phase and three phase circuits and its measurement"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Electrical Machines",
+          "unitTitleMr": "विद्युत यंत्रे",
+          "topics": [
+            "Single phase and three phase transformers, Distribution and Power Transformers, Instrument transformers",
+            "Basics of energy conversion, Construction, Working, Performance of DC machine, Induction machine and Synchronous machine",
+            "Characteristics of these machines in motoring and generating modes, starting, braking and speed control of induction and DC machine",
+            "Parallel operation of transformers and Alternators"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Power System",
+          "unitTitleMr": "विद्युत यंत्रणा (पॉवर सिस्टीम)",
+          "topics": [
+            "Power Generation scenario of the country and Maharashtra, P.U.Systems, Power Generation and transmission",
+            "Symmetrical and asymmetrical fault calculations, Load flow",
+            "Selection of switchgear and protection devices, Relaying and coordination",
+            "Substation components, Earthing, grounding and lightning protection"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Power Electronics and Drives",
+          "unitTitleMr": "पॉवर इलेक्ट्रॉनिक्स आणि ड्राईव्हज",
+          "topics": [
+            "Power Devices, AC-DC, DC-DC, DC-AC power converters",
+            "Power Quality issues, Reactive power compensation",
+            "Fundamentals of AC and DC drives",
+            "Energy saving using VSD's"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Measurement and Testing of Equipment and Standards",
+          "unitTitleMr": "उपकरणांचे मापन, चाचणी आणि मानके",
+          "topics": [
+            "Measurement of electrical parameters for sinusoidal and non-sinusoidal systems",
+            "Field instruments such as digital multimeter, megger, lux meter, power analyzer, clamp on meters, earth tester, etc.",
+            "Type and routine tests, field tests for electrical equipment such as transformers, motors, switchgear, insulators, cables, batteries etc. and the relevant Indian Standards",
+            "Codes of electrification of buildings, DG, UPS selection, Basics of illumination systems, types of bulbs, lamps, CFL and LED lighting",
+            "Codes for electrical safety, and Fire-fighting equipment and systems"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Non-conventional Energy Sources",
+          "unitTitleMr": "अपारंपरिक ऊर्जा स्रोत",
+          "topics": [
+            "Non-conventional energy sources",
+            "Economics of solar-thermal, solar-electrical systems",
+            "Energy conservation opportunities in fans, pumps, compressors, HVAC etc."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

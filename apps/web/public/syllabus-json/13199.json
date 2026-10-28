@@ -1,0 +1,156 @@
+{
+  "docId": 13199,
+  "examName": "Superintendent, Maharashtra Education Service, Group-B (Administrative Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "अधीक्षक, महाराष्ट्र शिक्षण सेवा, गट ब (प्रशासकीय शाखा) उच्च व तंत्र शिक्षण विभाग",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "Marathi",
+  "category": "education",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination - 200 marks, Interview - 50 marks",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge, Intelligence Test and Departmental Related Component",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धिमापन चाचणी व विभागाशी संबंधित घटक",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "History of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा इतिहास",
+          "topics": [
+            "Freedom movement contribution in Maharashtra (1818 to 1947)",
+            "Maharashtra's reform movements",
+            "Pre-independence Maharashtra (1947 to 1960)",
+            "Samyukta Maharashtra movement",
+            "Marathwada Muktisangram",
+            "Progress of Maharashtra (Political, Economic, Educational & Social)"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Geography of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा भूगोल",
+          "topicTitleMr": "महाराष्ट्राचा भूगोल",
+          "topics": [
+            "Location and extent of Maharashtra",
+            "Political and administrative divisions",
+            "Physiography and geology",
+            "Rivers, soils, rainfall, major crops, cities, rivers, industries"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Right to Information Act 2005",
+          "unitTitleMr": "माहितीचा अधिकार अधिनियम २००५",
+          "topics": [
+            "Right to Information Act 2005 (with amendments)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Indian Constitution",
+          "unitTitleMr": "भारतीय राज्यघटना",
+          "topics": [
+            "Preamble",
+            "Formation of Constitution",
+            "Salient features",
+            "Indian federal system",
+            "Union and its territory",
+            "Fundamental Rights",
+            "Fundamental Duties"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Information and Communication Technology (ICT)",
+          "unitTitleMr": "संगणक व माहिती तंत्रज्ञान",
+          "topics": [
+            "Introduction - Computer, Hardware, Software, Accessories, Communication, Internet, Web Hosting",
+            "Latest tools and technology",
+            "Cloud computing",
+            "Artificial Intelligence",
+            "Media Lab Asia",
+            "Digital India, etc."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Human Rights and Related Laws",
+          "unitTitleMr": "मानवी हक्क व जबाबदस्या",
+          "topics": [
+            "Human Rights concept",
+            "Universal Declaration of Human Rights",
+            "Fundamental rights of Indian citizens and their relation to human rights"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Current Affairs (Global and India)",
+          "unitTitleMr": "जागतिक व भारतातील चालू घडामोडी",
+          "topics": [
+            "Political",
+            "Economic",
+            "Social",
+            "Educational",
+            "Industrial",
+            "Geographical",
+            "Astronomical",
+            "Cultural",
+            "Scientific, etc."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमापन विषयक प्रश्न",
+          "topics": [
+            "Age",
+            "Direction test",
+            "Calendar",
+            "Inter-relationship",
+            "Alphabet series",
+            "Coded language",
+            "Number series",
+            "Venn diagram",
+            "Missing terms finding"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Rules and Orders Applicable regarding Administrative Work",
+          "unitTitleMr": "प्रशासकीय कामकाजाच्या संदर्भात लागू होणारे नियम व आदेश",
+          "topics": [
+            "Maharashtra Civil Services (General Conditions of Service) Rules, 1981",
+            "Maharashtra Civil Services (Leave) Rules, 1981",
+            "Maharashtra Civil Services (Pension) Rules, 1982",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules, 1979",
+            "Maharashtra Civil Services (Conduct) Rules, 1979",
+            "Maharashtra Civil Services (Regulation of Seniority) Rules, 2021",
+            "Maharashtra Official Languages Act, 1964 and Maharashtra Official Languages (Amendment) Act, 2021",
+            "Maharashtra Prevention of Delay in Discharge of Official Duties of Government Employees Act, 2005",
+            "Maharashtra Public Universities Act, 2016",
+            "Maharashtra Unaided Private Professional Educational Institutions (Regulation of Admissions and Fees) Act, 2015",
+            "Maharashtra Educational Institutions (Management) Act, 1976",
+            "Various scholarship schemes and concessions within the jurisdiction of the Directorate of Higher Education"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Negative marking: 25% or 1/4th of the total marks given for a correct answer will be deducted for each incorrect answer.",
+    "If more than one answer is given or if the candidate does not darken the correct circle on the answer sheet, 25% or 1/4th marks of the total marks will be deducted as a penalty for a wrong answer.",
+    "If the sum of final marks after applying negative marking results in a fraction, the fraction remains as it is and further actions are taken based on that.",
+    "If a question is left unanswered, no negative marking will apply.",
+    "Final merit will be based on the combined marks of objective examination and interview."
+  ]
+}

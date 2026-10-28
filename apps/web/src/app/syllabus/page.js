@@ -7,6 +7,7 @@ import Link from 'next/link'
 import SyllabusFeaturedCards from '@/components/SyllabusFeaturedCards'
 import LatestMicroRubrics from '@/components/LatestMicroRubrics'
 import SyllabusStrategyBanner from '@/components/SyllabusStrategyBanner'
+import { MPSC_TOTAL_QUESTION_PAPERS, MPSC_ARCHIVE_YEARS_SPAN } from '@/lib/platformStats'
 import styles from './syllabus.module.css'
 
 export const metadata = {
@@ -82,11 +83,11 @@ export default function SyllabusPage() {
                 <div className={`${styles.hubCardIcon} ${styles.iconOrange}`}>
                   <span className="material-symbols-outlined">description</span>
                 </div>
-                <span className={`${styles.hubBadge} ${styles.badgeOrange}`}>841 Official Papers</span>
+                <span className={`${styles.hubBadge} ${styles.badgeOrange}`}>{MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} Official Papers</span>
               </div>
-              <h3 className={styles.hubCardTitle}>MPSC Papers &amp; Keys (2021–2026)</h3>
+              <h3 className={styles.hubCardTitle}>MPSC Papers &amp; Keys ({MPSC_ARCHIVE_YEARS_SPAN})</h3>
               <p className={styles.hubCardDesc}>
-                Official 2021–2026 Rajyaseva, Group B, Group C papers across 429 exam sets paired side-by-side with final answer keys in browser.
+                Official {MPSC_ARCHIVE_YEARS_SPAN} Rajyaseva, Group B, Group C papers paired side-by-side with final answer keys in browser.
               </p>
               <span className={styles.hubCardCta}>
                 <span>Open MPSC Archive</span>

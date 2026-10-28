@@ -302,7 +302,7 @@ Since there is **zero negative marking**, attempt every single question on the O
         { title: '15-Year Subject-wise PYQ Library', link: '/pyq', badge: 'All Subjects' },
       ],
       mpscPapers: [
-        { title: 'Official MPSC Question Papers & Keys (841)', link: '/mpsc-pyq', badge: 'Official PDFs' },
+        { title: 'Official MPSC Question Papers & Keys (1,284)', link: '/mpsc-pyq', badge: 'Official PDFs' },
       ],
       mockTests: [
         { title: 'Talathi TCS 100-Q Computer Based Mock Test', link: '/mock-tests/maharashtra-talathi-tcs-mock', badge: 'Full Mock' },
@@ -557,7 +557,7 @@ Chief Engineer (मुख्य अभियंता - CE) [Level S-29: ₹1,31
         { title: 'Interactive Subject-wise PYQ Bank', link: '/pyq', badge: '15-Year Bank' },
       ],
       mpscPapers: [
-        { title: 'Official MPSC Question Papers & Keys', link: '/mpsc-pyq', badge: '841 Papers' },
+        { title: 'Official MPSC Question Papers & Keys', link: '/mpsc-pyq', badge: '1,284 Papers' },
       ],
       mockTests: [
         { title: 'MPSC Combined Full Length Mock Test', link: '/mock-tests/mpsc-combined-full-prelims', badge: '100 Qs / 60 Min' },

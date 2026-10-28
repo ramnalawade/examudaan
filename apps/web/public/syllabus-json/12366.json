@@ -1,0 +1,144 @@
+{
+  "docId": 12366,
+  "examName": "Lecturer (Pali Prakrut) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "व्याख्याता (पाली प्राकृत) महाराष्ट्र शिक्षण सेवा, गट-ब (संस्थानीय शाखा) उच्च व तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer (Pali Prakrut) - Pali Prakrut Syllabus",
+      "paperTitleMr": "पाली प्राकृत अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Biography of the Buddha and Buddhist Councils",
+          "unitTitleMr": "बुद्धाचे चरित्र आणि बौद्ध संगीती",
+          "topics": [
+            "Biography of the Buddha based on Pāli sources: Birth, Visit of Asitamuni, Reasons of Renunciation and going forth, severe austerities, attainment of Enlightenment, setting forth the wheel of Dhamma, establishment of the Buddhist order, Propagation of the Dhamma and the great passing away Mahāparinibbānasutta (Dīghanikāya)",
+            "Ariyapariyesanasutta/Pāsarāsisutta, Mahāsīhanādasutta (Majjhimanikāya); Pabbajjāsutta and Padhānasutta (Suttanipāta); Jātakanidānakathā and Jinacarita",
+            "Buddhist Councils: Period, location, patron king, number of monks participating in the council, president of the council, reasons and salient feature of the councils",
+            "The First, Second and Third Buddhist Councils based on Cullavagga (Pañcasatikā-khandhaka, Sattasatikā-khandhaka), Samantapāsādikā (Bāhirakathā) and Mahāvaṃsa"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Pali Language, Traditions and Salient Features of Pāli Grammar",
+          "unitTitleMr": "पाली भाषा, परंपरा आणि पाली व्याकरणाची मुख्य वैशिष्ट्ये",
+          "topics": [
+            "Derivation of the word 'Pāli', Homeland of Pāli language; Three traditions of Pali grammar: Kaccāyanvyākaraṇa, Moggallānavyākaraṇa and Saddanītivyākaraṇa",
+            "Pāli Alphabets: number of alphabets and characteristics",
+            "Sandhi: Types of Sandhi, Varṇasandhi and Padasandhi; vowelsandhi, consonantsandhi, niggahitasandhi, āgamasandhi, and vomisasandhi",
+            "Kāraka: Definition of Kāraka, Kattā, Kamma, Karaṇa, Sampadāna, Apādāna, Adhikaraṇa, Liṅgattha, Sambandha",
+            "Compound (Samāsa): Definition of compound, types of compound: Abyayibhāva, Tappurisa, Digu, Kammadhāraya, Bahubbīhi and Dvandva",
+            "Secondary derivative (Taddhita): Definition and Types: Apacca, Tarati, etc. and Bhāva taddhita",
+            "Finite verb: Definition, Tenses and moods: Vattamānā, Bhavissati, Ajjatanī, Hiyyattani, Parokkhā, Pañcamī, Sattamī, Kālātipatti",
+            "Primary derivative (Kṛdanta): Definition and Types: Sādhitadhatu, kicca, Kattari, Bhāvavācaka, Itthivācaka, Dhātusādhita (based on the Kaccāyana Grammar)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Introduction to Vinayapiṭaka",
+          "unitTitleMr": "विनयपिटकाचा सामान्य परिचय",
+          "topics": [
+            "What is Vinaya? Nature of Vinayapiṭaka, Parts of Vinayapiṭaka",
+            "Mahāvagga: Introduction to Khandhaka, Mahākhandhaka: Bodhikathā, Dhammacakkapavattana, Yasapabbajjā, Ūruvelā-pāṭihāriya, Jaṭila-pabbajjā, Bimbisāra-samāgamakathā, Sāriputta-Moggallāna-pabbajjākathā",
+            "Cullavagga: Kammakhandhaka, Types of Kamma: Tajjanīyakamma, Nitassakamma, Pabbājanīyakamma, Paṭisāraṇīyakamma, Ukkhepanīyakamma",
+            "Bhikkhunikkhandhaka (Paṭhamabhāṇavāro): Mahāpajāpatīgotamīvatthu, Aṭṭhagarudhammā, Bhikkhunīupasampadānujānanaṃ",
+            "Pātimokkha: Definition and sections: Pārājika, Saṅghādisesa, Aniyata, Nissagiya Pācittiya, Pācittiya, Pāṭidesanīya, Sekhiya, and Adhikaraṇasamatha"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "General Introduction to Suttapiṭaka",
+          "unitTitleMr": "सुत्तपिटकाचा सामान्य परिचय",
+          "topics": [
+            "Suttapiṭaka: Definition and nature, classification according to nikāyas, nature and structure of nikāyas, classification of nikāyas, number of suttas, characteristics of nikayas",
+            "Dīghanikāya: Sāmaññaphalasutta, Kūṭadantasutta, Sigālovādasutta",
+            "Majjhimanikāya: Sabbāsavasutta, Satipaṭṭhānasutta, Assalāyanasutta",
+            "Saṃyuttanikāya: First two suttas of Buddhavagga of Nidānavagga of Nidānasaṃyutta; Bhikkhunisaṃyutta of Sagāthāvagga",
+            "Aṅguttaranikāya: Kesamuttisutta, Kathāvatthusutta (Tikanipāta), Dīghajānusutta (Aṭṭhakanipāta)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "General Introduction to Khuddakanikāya",
+          "unitTitleMr": "खुद्दकनिकायचा सामान्य परिचय",
+          "topics": [
+            "Number of books in the Khuddakanikāya (according to Sinhalese, Burmese and Thai traditions), books in the Khuddakanikāya and their nature: Khuddakapāṭha, Dhammapada, Udana, Itivuttaka, Suttanipata, Vimanavatthu, Petavatthu, Theragatha, Therigatha, Jataka, Niddesa, Apadana, Patisambhidamaggaga, Buddhavamsa and Chariyapitaka",
+            "Dhammapada: Yamakavagga, Appamādavagga and Cittavagga",
+            "Suttanipāta: Kasibhāradvājasutta, Vāseṭṭhasutta, Parābhavasutta",
+            "Theragāthā: Dhammikatheragāthā, Sunītatheragāthā, Kāḷudāyitheragāthā",
+            "Therīgāthā: Mahāpajāpati-gotamītherī, Puṇnikātherī, Ambapālitherī",
+            "Jātaka: Tittirajātaka, Vānarindajātaka, Rājovādajātaka"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "General Introduction to Abhidhamma Literature",
+          "unitTitleMr": "अभिड्धम्म साहित्याचा सामान्य परिचय",
+          "topics": [
+            "Abhidhammapiṭaka: Definition and nature, Seven texts of Abhidhammapitaka: Dhammasaṅgaṇi, Vibhaṅga, Dhatukathā, Puggapaññati, Kathāvatthu, Yamaka and Paṭṭhāna",
+            "Nature and characteristics of the texts in the Abhidhammapiṭaka",
+            "Dhammasaṅgaṇī: Tikamātikā and Dukamātikā",
+            "Handbooks of Abhidhamma: Abhidhammatthasaṅgaha: nature and characteristics, Citta, Cetasika, Rūpa and Nibbāna (Chapter 1, 2 and 6)"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "General Introduction to Extra canonical literature",
+          "unitTitleMr": "अतिरिक्त प्रमाणबाह्य साहित्याचा सामान्य परिचय",
+          "topics": [
+            "Definition and prominent texts: Milindapañha, Nettippakaraṇa, Peṭakopadesa; Introduction, nature and characteristics of these texts",
+            "Milindapañha: Bāhirakathā, Lakkhaṇapañha"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "General Introduction to Visuddhimagga and Commentarial Literature",
+          "unitTitleMr": "विशुद्धिमग्ग आणि टीका साहित्याचा सामान्य परिचय",
+          "topics": [
+            "Visuddhimagga: Author, composition, period, nature and characteristics",
+            "Visuddhimagga: Sīlaniddesa",
+            "General Introduction to Commentarial Literature: Nature and characteristics of commentaries, commentaries on the Texts of Tipiṭaka",
+            "Prominent Commentators: Buddhadatta, Buddhaghosa and Dhammapāla"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "General Introduction to Vaṃsa Literature and Pāli Kāvya Literature",
+          "unitTitleMr": "वंश साहित्य आणि पाली काव्य साहित्याचा सामान्य परिचय",
+          "topics": [
+            "Vaṃsa Literature: Definition and nature, Major Vaṃsa Texts in Pali: Dīpavaṃsa, Mahāvaṃsa, Mahābodhivaṃsa, Dāṭhāvaṃsa, Thupavaṃsa, Gandhavaṃsa, Sāsanavaṃsa etc.",
+            "General Introduction to Pāli Kāvya Literature: Nature and Characteristics",
+            "Prominent Kāvya texts in Pali: Jincarita, Jinālaṅkāra, Telakaṭāhagāthā, Pajjamadhu, etc."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Buddhist Philosophical Concepts",
+          "unitTitleMr": "बौद्ध दार्शनिक संकल्पना",
+          "topics": [
+            "Aṭṭha-ariyapuggala, Arahata, Bodhisatta, Paccekabuddha, Sammāsambuddha",
+            "Ariyasacca, Ariyaaṭṭhaṅgika-magga, Tilakkhaṇa, Paṭiccasamuppāda",
+            "Kusala-Akusala mūla, Kusala-Akusala Kammapatha, Āsava, Nīvaraṇa, Saṃyojana",
+            "Sīla, Samādhi, Paññā, Brahmavihāra, Bodhipakkhiyadhamma, Nibbāna"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

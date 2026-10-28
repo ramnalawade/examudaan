@@ -12,6 +12,7 @@ import JobDetailTitle from '../../../components/JobDetailTitle'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 import { buildAnswerKeyMetadata } from '../../../lib/seoMetadata'
+import { safeJsonLd } from '../../../lib/jobSeo'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
 export const revalidate = 300
@@ -222,8 +223,8 @@ export default async function AnswerKeyDetailPage({ params }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(answerKeySchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(answerKeySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <div className="container" style={{ paddingTop: '20px', paddingBottom: '100px' }}>
 
         {/* Breadcrumb */}

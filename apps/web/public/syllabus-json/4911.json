@@ -1,0 +1,43 @@
+{
+  "docId": 4911,
+  "examName": "Maharashtra Subordinate Services Group-B Non Gazetted [Preliminary and Main] Competitive Examination - Syllabus",
+  "examNameMr": "महाराष्ट्र अधीनस्थ सेवा गट-ब (अराजपत्रित) [पूर्व व मुख्य] संयुक्त परीक्षा - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Maharashtra Subordinate Services Group-B Non Gazetted Main Examination - Paper II",
+      "paperTitleMr": "महाराष्ट्र अधीनस्थ सेवा गट-ब मुख्य परीक्षा - पेपर २",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Studies and Competency Test",
+          "unitTitleMr": "सामान्य ज्ञान व क्षमता चाचणी",
+          "topics": [
+            "Current Affairs (Global and National)",
+            "History of Modern India with special reference to Maharashtra",
+            "Geography of Maharashtra with physical, social and economic aspects",
+            "Indian Polity and Governance (Constitution, Judiciary, Local Government)",
+            "Economic and Social Development (Planning, Demography, Poverty, Unemployment)",
+            "General Science (Physics, Chemistry, Zoology, Botany, Hygiene)",
+            "Intelligence Tests and Arithmetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

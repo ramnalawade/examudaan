@@ -9,6 +9,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '../context/LanguageContext'
 import { trackSocialCommunity } from '../lib/analytics'
+import {
+  MPSC_TOTAL_QUESTION_PAPERS,
+  MPSC_ARCHIVE_YEARS_SPAN,
+  REAL_AI_TOOLS_COUNT,
+  REAL_BLOGS_COUNT
+} from '@/lib/platformStats'
 import styles from './footer.module.css'
 
 export default function Footer() {
@@ -20,16 +26,21 @@ export default function Footer() {
     { label: isMarathi ? 'पोलीस भरती हॉल तिकीट २०२६' : 'Police Bharti Hall Ticket 2026', href: '/police-bharti-hall-ticket-2026' },
     { label: isMarathi ? 'तलाठी भरती थेट ऑनलाइन अर्ज' : 'Talathi Bharti Apply Online', href: '/talathi-bharti-apply-online' },
     { label: isMarathi ? 'BMC भरती २०२६ (MCGM मुंबई)' : 'BMC Recruitment 2026 (MCGM)', href: '/bmc-recruitment-2026' },
-    { label: isMarathi ? 'MPSC वेळापत्रक २०२६' : 'MPSC Exam Dates 2026', href: '/mpsc-exam-dates-2026' },
-    { label: isMarathi ? 'MPSC राज्यसेवा २०२६' : 'MPSC State Services 2026', href: '/jobs/org/mpsc' },
+    { label: isMarathi ? 'MPSC गट ब (PSI / STI / ASO)' : 'MPSC Group B (PSI/STI/ASO)', href: '/mpsc/group-b-previous-year-papers' },
+    { label: isMarathi ? 'MPSC गट क (लिपिक, कर सहायक)' : 'MPSC Group C Services', href: '/mpsc/group-c-previous-year-papers' },
+    { label: isMarathi ? 'MPSC राज्यसेवा २०२६' : 'MPSC State Services 2026', href: '/mpsc/rajyaseva-previous-year-papers' },
     { label: isMarathi ? 'रेल्वे भरती (RRB NTPC)' : 'Railway RRB NTPC & Group D', href: '/jobs/org/rrb' },
     { label: isMarathi ? 'कर्मचारी निवड (SSC CGL & CHSL)' : 'SSC CGL & CHSL Combined', href: '/jobs/org/ssc' },
+    { label: isMarathi ? 'महाराष्ट्र शिक्षक पात्रता परीक्षा (TET)' : 'Maharashtra TET (MAHA TET)', href: '/mahatet-previous-year-papers' },
   ]
 
   const QUESTION_PAPERS_KEYS = [
-    { label: isMarathi ? 'MPSC मूळ प्रश्नपत्रिका व कीज् (८४१ पेपर्स)' : 'MPSC Papers & Keys (841 Papers)', href: '/mpsc-pyq' },
+    { label: isMarathi ? `MPSC मूळ प्रश्नपत्रिका व कीज् (${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('mr-IN')} पेपर्स)` : `MPSC Papers & Keys (${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} Papers)`, href: '/mpsc-pyq' },
+    { label: isMarathi ? `MPSC गट ब प्रश्नपत्रिका (${MPSC_ARCHIVE_YEARS_SPAN})` : `MPSC Group B Papers (${MPSC_ARCHIVE_YEARS_SPAN})`, href: '/mpsc/group-b-previous-year-papers' },
+    { label: isMarathi ? `MPSC गट क प्रश्नपत्रिका (${MPSC_ARCHIVE_YEARS_SPAN})` : `MPSC Group C Papers (${MPSC_ARCHIVE_YEARS_SPAN})`, href: '/mpsc/group-c-previous-year-papers' },
     { label: isMarathi ? 'पोलीस भरती प्रश्नपत्रिका व कीज्' : 'Police Bharti Question Papers', href: '/police-bharti-question-papers' },
     { label: isMarathi ? 'तलाठी भरती प्रश्नपत्रिका (TCS)' : 'Talathi Question Papers (TCS)', href: '/talathi-question-papers' },
+    { label: isMarathi ? 'महाटीईटी प्रश्नपत्रिका व कीज् (४४+ सेट्स)' : 'MAHA TET Papers & Keys (44+ Sets)', href: '/mahatet-previous-year-papers' },
     { label: isMarathi ? 'MPSC ३४३ अधिकृत अभ्यासक्रम' : 'MPSC 343 Official Catalog', href: '/syllabus/mpsc' },
     { label: isMarathi ? 'सर्व अधिकृत प्रश्नपत्रिका (All PYQs)' : 'All Official Question Papers', href: '/question-papers' },
     { label: isMarathi ? 'अधिकृत उत्तरतालिका पोर्टल (Keys)' : 'Official Answer Keys Portal', href: '/answer-keys' },
@@ -39,6 +50,7 @@ export default function Footer() {
   const PREP_STUDY = [
     { label: isMarathi ? 'दैनिक चालू घडामोडी (Current Affairs)' : 'Daily Current Affairs Digest', href: '/current-affairs' },
     { label: isMarathi ? '५ मिनिटे दैनिक क्विझ' : '5-Minute Daily Quiz', href: '/daily-quiz' },
+    { label: isMarathi ? `परीक्षार्थी ब्लॉग व गाईड्स (${REAL_BLOGS_COUNT} लेख)` : `Exam Prep Blog & Guides (${REAL_BLOGS_COUNT} Guides)`, href: '/blog' },
     { label: isMarathi ? 'परीक्षा अभ्यासक्रम २०२६' : 'Exam Syllabus 2026', href: '/syllabus' },
     { label: isMarathi ? 'CBT सराव टेस्ट सिरीज' : 'CBT Mock Test Series', href: '/mock-tests' },
     { label: isMarathi ? '१० वी व १२ वी करिअर मार्गदर्शक' : '10th & 12th Career Compass', href: '/career' },
@@ -53,7 +65,7 @@ export default function Footer() {
     { label: isMarathi ? 'वारंवार विचारले जाणारे प्रश्न (FAQ)' : 'Frequently Asked Questions', href: '/faq' },
     { label: isMarathi ? 'टेलिग्राम जॉब अलर्ट नेटवर्क' : 'Telegram Job Alerts Network', href: '/alerts' },
     { label: isMarathi ? '७ वे वेतन आयोग पगार कॅल्क्युलेटर' : '7th CPC Salary Calculator', href: '/salary-calculator' },
-    { label: isMarathi ? 'AI अभ्यास साधने (१२४+ टूल्स)' : 'AI Study Tools Directory (124+ Tools)', href: '/ai-tools' },
+    { label: isMarathi ? `AI अभ्यास साधने (${REAL_AI_TOOLS_COUNT}+ टूल्स)` : `AI Study Tools Directory (${REAL_AI_TOOLS_COUNT}+ Tools)`, href: '/ai-tools' },
   ]
 
   return (

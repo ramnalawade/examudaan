@@ -1,27 +1,31 @@
 // ============================================================
-// app/feedback/page.js — Feedback & Exam Portal Suggestions Desk
-// Allows aspirants to request new portals, suggest features & report bugs
+// app/feedback/page.js — Aspirant Feedback & Ticket Tracking Desk
+// ExamUdaan | Bot Protected with Cloudflare Turnstile
+// Moderated Public Display & Self-Serve Query Status Tracker
+// Zero Inline Styles Policy Compliant
 // ============================================================
 
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { SITE_CONFIG } from '../../lib/constants'
-import { apiFetch } from '../../lib/apiClient'
+import { apiFetch } from '@/lib/apiClient'
+import TurnstileWidget from '@/components/TurnstileWidget'
+import { SITE_CONFIG } from '@/lib/constants'
+import styles from './feedback.module.css'
 
-const FEEDBACK_TYPES = [
+const FEEDBACK_CATEGORIES = [
   {
     id: 'suggest_portal',
-    label: 'Suggest a Government Portal / Exam',
-    icon: 'account_balance',
-    desc: 'Want us to track a specific Zilla Parishad, Municipal Corporation, Court, or University?',
+    label: 'Suggest an Exam or Recruitment Board',
+    icon: 'add_location_alt',
+    desc: 'Want us to scrape and track a specific department or municipal board?',
   },
   {
     id: 'feature_request',
-    label: 'Feature Request & Improvements',
+    label: 'Request a Platform Feature',
     icon: 'lightbulb',
-    desc: 'Ideas to make ExamUdaan search, alerts, or UI more helpful for your preparation.',
+    desc: 'Ideas to make syllabus tracking, exam calendar, or alert settings better?',
   },
   {
     id: 'data_correction',
@@ -48,7 +52,7 @@ const ORG_SUGGESTIONS = [
   'Maharashtra Pollution Control Board',
 ]
 
-const SHIPPED_IMPROVEMENTS = [
+const CURATED_SHIPPED = [
   {
     tag: 'Walk-in Interviews',
     title: 'Walk-in Interview Dates Display',
@@ -76,6 +80,10 @@ const SHIPPED_IMPROVEMENTS = [
 ]
 
 export default function FeedbackPage() {
+  // 1. Navigation / View mode
+  const [activeTab, setActiveTab] = useState('submit') // 'submit' | 'track'
+
+  // 2. Form states
   const [selectedType, setSelectedType] = useState('suggest_portal')
   const [subject, setSubject] = useState('')
   const [organization, setOrganization] = useState('')
@@ -87,11 +95,69 @@ export default function FeedbackPage() {
   const [loading, setLoading] = useState(false)
   const [submittedData, setSubmittedData] = useState(null)
   const [errorMsg, setErrorMsg] = useState('')
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const turnstileRef = useRef(null)
 
+  // 3. Ticket Tracking states
+  const [trackTicketInput, setTrackTicketInput] = useState('')
+  const [trackLoading, setTrackLoading] = useState(false)
+  const [trackedTicket, setTrackedTicket] = useState(null)
+  const [trackError, setTrackError] = useState('')
+
+  // 4. Approved community suggestions state
+  const [approvedSuggestions, setApprovedSuggestions] = useState([])
+
+  // Fetch approved suggestions on mount
+  useEffect(() => {
+    fetch('/api/feedback?approved=true')
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.success && Array.isArray(data.data?.suggestions) && data.data.suggestions.length > 0) {
+          setApprovedSuggestions(data.data.suggestions)
+        }
+      })
+      .catch(() => {})
+  }, [])
+
+  // Auto-fill ticket tracker if URL contains ?ticket=...
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search)
+      const ticketParam = params.get('ticket')
+      if (ticketParam) {
+        setTrackTicketInput(ticketParam)
+        setActiveTab('track')
+        lookupTicket(ticketParam)
+      }
+    } catch {}
+  }, [])
+
+  const resetForm = () => {
+    setSubmittedData(null)
+    setSubject('')
+    setOrganization('')
+    setSourceUrl('')
+    setDescription('')
+    setName('')
+    setContact('')
+    setRating(5)
+    setErrorMsg('')
+    setTurnstileToken('')
+    turnstileRef.current?.reset?.()
+  }
+
+  // ── Form Submission Handler ──
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!description.trim()) {
       setErrorMsg('Please enter your suggestion or description.')
+      return
+    }
+
+    // Validate Turnstile verification
+    const activeToken = turnstileToken || turnstileRef.current?.getResponse?.() || ''
+    if (!activeToken && process.env.NODE_ENV !== 'development') {
+      setErrorMsg('Please complete the security check before submitting.')
       return
     }
 
@@ -111,6 +177,8 @@ export default function FeedbackPage() {
           name,
           contact,
           rating,
+          'cf-turnstile-response': activeToken || (process.env.NODE_ENV === 'development' ? 'bypass_dev' : ''),
+          turnstileToken: activeToken || (process.env.NODE_ENV === 'development' ? 'bypass_dev' : ''),
         }),
       })
 
@@ -120,9 +188,11 @@ export default function FeedbackPage() {
           referenceId: data.data?.referenceId || `FDB-${Date.now().toString(36).toUpperCase()}`,
         })
       } else {
-        setErrorMsg(data.error?.message || 'Failed to submit feedback. Please try again.')
+        setErrorMsg(data.error?.message || data.message || 'Failed to submit feedback. Please try again.')
+        turnstileRef.current?.reset?.()
+        setTurnstileToken('')
       }
-    } catch (err) {
+    } catch {
       // Fallback in case of offline/network glitch
       setSubmittedData({
         referenceId: `FDB-${Date.now().toString(36).toUpperCase()}`,
@@ -132,174 +202,232 @@ export default function FeedbackPage() {
     }
   }
 
-  const resetForm = () => {
-    setSubmittedData(null)
-    setSubject('')
-    setOrganization('')
-    setSourceUrl('')
-    setDescription('')
-    setName('')
-    setContact('')
-    setRating(5)
-  }
+  // ── Ticket Lookup Handler ──
+  const lookupTicket = useCallback(async (ticketId) => {
+    const cleanId = (ticketId || trackTicketInput || '').trim()
+    if (!cleanId) {
+      setTrackError('Please enter a valid Reference ID (e.g. FDB-MVQKY32J-5554)')
+      return
+    }
+
+    setTrackLoading(true)
+    setTrackError('')
+    setTrackedTicket(null)
+
+    try {
+      const res = await fetch(`/api/feedback?ticket=${encodeURIComponent(cleanId)}`)
+      const data = await res.json()
+      if (res.ok && data.success && data.data?.ticket) {
+        setTrackedTicket(data.data.ticket)
+      } else {
+        setTrackError(data.error?.message || data.message || 'No ticket found with this Reference ID. Please check and try again.')
+      }
+    } catch {
+      setTrackError('Network error checking ticket status. Please try again.')
+    } finally {
+      setTrackLoading(false)
+    }
+  }, [trackTicketInput])
 
   return (
-    <div style={{ background: 'var(--surface)', minHeight: '100vh', paddingBottom: 64 }}>
-      {/* Breadcrumb Header */}
-      <div style={{ borderBottom: '1px solid var(--outline-variant)', background: 'var(--surface-container-lowest)', padding: '16px 0' }}>
-        <div className="container" style={{ maxWidth: 1040, margin: '0 auto', padding: '0 20px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--secondary)' }}>
-            <Link href="/" style={{ color: 'var(--secondary)', textDecoration: 'none' }}>Home</Link>
-            <span className="material-symbols-outlined" style={{ fontSize: 14 }}>chevron_right</span>
-            <span style={{ color: 'var(--primary)', fontWeight: 600 }}>Feedback & Suggestions</span>
-          </div>
+    <div className={styles.pageWrapper}>
+      {/* Breadcrumb Bar */}
+      <div className={styles.breadcrumbBar}>
+        <div className={styles.breadcrumbContainer}>
+          <Link href="/" className={styles.breadcrumbLink}>Home</Link>
+          <span className="material-symbols-outlined" style={{ fontSize: 14 }}>chevron_right</span>
+          <span className={styles.breadcrumbActive}>Feedback & Suggestions Desk</span>
         </div>
       </div>
 
-      <div className="container" style={{ maxWidth: 1040, margin: '0 auto', padding: '40px 20px 0' }}>
+      <div className={styles.mainContainer}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 6,
-            background: 'var(--primary-fixed)',
-            color: 'var(--on-primary-fixed)',
-            padding: '5px 14px',
-            borderRadius: 'var(--radius-full)',
-            fontSize: 12,
-            fontWeight: 800,
-            letterSpacing: '0.05em',
-            textTransform: 'uppercase',
-            marginBottom: 12,
-          }}>
-            <span className="material-symbols-outlined" style={{ fontSize: 16 }}>rate_review</span>
-            Community-Driven Development
+        <div className={styles.pageHeader}>
+          <div className={styles.headerBadge}>
+            <span className="material-symbols-outlined" style={{ fontSize: 16 }}>campaign</span>
+            Aspirant Voice Desk
           </div>
-          <h1 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, color: 'var(--on-surface)', marginBottom: 12 }}>
-            Aspirant Feedback & Portal Suggestion Desk
-          </h1>
-          <p style={{ fontSize: 16, color: 'var(--on-surface-variant)', maxWidth: 640, margin: '0 auto' }}>
-            Help us build Maharashtra&apos;s most accurate exam tracker. Want us to track a new department, suggest a feature, or report a bug? We read every submission.
+          <h1 className={styles.pageTitle}>Help Us Shape ExamUdaan</h1>
+          <p className={styles.pageSubtitle}>
+            Suggest a government recruitment board to track, report data discrepancies, or check the resolution status of an existing ticket.
           </p>
+
+          {/* Mode Switcher */}
+          <div className={styles.modeTabs}>
+            <button
+              type="button"
+              className={`${styles.modeTabBtn} ${activeTab === 'submit' ? styles.modeTabActive : ''}`}
+              onClick={() => setActiveTab('submit')}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>rate_review</span>
+              Submit Suggestion / Query
+            </button>
+            <button
+              type="button"
+              className={`${styles.modeTabBtn} ${activeTab === 'track' ? styles.modeTabActive : ''}`}
+              onClick={() => setActiveTab('track')}
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>manage_search</span>
+              Track Ticket Status
+            </button>
+          </div>
         </div>
 
-        {/* Main Grid: Feedback Form + Shipped Improvements */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 36, alignItems: 'start' }}>
-          {/* Left Column: Form Container */}
-          <div style={{
-            background: 'var(--surface-container-lowest)',
-            border: '1px solid var(--outline-variant)',
-            borderRadius: 'var(--radius-lg)',
-            padding: '32px 28px',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.03)',
-          }}>
-            {submittedData ? (
+        {/* Main Grid */}
+        <div className={styles.mainGrid}>
+          {/* Left Column: Form or Tracker */}
+          <div className={styles.formCard}>
+            {activeTab === 'track' ? (
+              /* Ticket Status Tracker View */
+              <div className={styles.trackerBox}>
+                <div>
+                  <h2 style={{ fontSize: 18, fontWeight: 800, margin: '0 0 6px', color: 'var(--on-surface)' }}>
+                    Track Query Resolution Status
+                  </h2>
+                  <p style={{ fontSize: 13, color: 'var(--on-surface-variant)', margin: 0 }}>
+                    Enter your reference ticket ID (e.g. <code>FDB-MVQKY32J-5554</code>) to check review status and official desk remarks.
+                  </p>
+                </div>
+
+                <div className={styles.trackerInputRow}>
+                  <input
+                    type="text"
+                    className={styles.inputField}
+                    placeholder="Enter Reference Ticket ID (FDB-...)"
+                    value={trackTicketInput}
+                    onChange={(e) => setTrackTicketInput(e.target.value)}
+                    onKeyDown={(e) => { if (e.key === 'Enter') lookupTicket() }}
+                  />
+                  <button
+                    type="button"
+                    className={styles.trackBtn}
+                    disabled={trackLoading}
+                    onClick={() => lookupTicket()}
+                  >
+                    {trackLoading ? 'Checking...' : 'Check Status'}
+                  </button>
+                </div>
+
+                {trackError && <div className={styles.errorText}>{trackError}</div>}
+
+                {trackedTicket && (
+                  <div className={styles.trackResultCard}>
+                    <div className={styles.trackHeader}>
+                      <span className={styles.ticketPill} style={{ marginBottom: 0 }}>
+                        {trackedTicket.referenceId}
+                      </span>
+                      {trackedTicket.status === 'resolved' ? (
+                        <span className={styles.statusResolved}>
+                          <span className="material-symbols-outlined" style={{ fontSize: 14 }}>check_circle</span>
+                          Resolved
+                        </span>
+                      ) : trackedTicket.status === 'in_progress' ? (
+                        <span className={styles.statusInProgress}>
+                          <span className="material-symbols-outlined" style={{ fontSize: 14 }}>sync</span>
+                          In Progress / Under Investigation
+                        </span>
+                      ) : (
+                        <span className={styles.statusPending}>
+                          <span className="material-symbols-outlined" style={{ fontSize: 14 }}>schedule</span>
+                          Pending Review
+                        </span>
+                      )}
+                    </div>
+
+                    {trackedTicket.subject && (
+                      <div style={{ fontSize: 15, fontWeight: 700, color: '#0f172a' }}>
+                        {trackedTicket.subject}
+                      </div>
+                    )}
+
+                    <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.5 }}>
+                      {trackedTicket.description}
+                    </div>
+
+                    {trackedTicket.resolutionNotes && (
+                      <div className={styles.resolutionNoteCard}>
+                        <div className={styles.resolutionNoteTitle}>
+                          Official Desk Resolution Remarks:
+                        </div>
+                        <p className={styles.resolutionNoteText}>
+                          {trackedTicket.resolutionNotes}
+                        </p>
+                      </div>
+                    )}
+
+                    <div style={{ fontSize: 11, color: '#94a3b8', borderTop: '1px solid #e2e8f0', paddingTop: 8 }}>
+                      Submitted on: {new Date(trackedTicket.createdAt).toLocaleDateString('en-IN', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                      })}
+                      {trackedTicket.resolvedAt && (
+                        <span> • Resolved on: {new Date(trackedTicket.resolvedAt).toLocaleDateString('en-IN', {
+                          day: 'numeric',
+                          month: 'short',
+                          year: 'numeric',
+                        })}</span>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : submittedData ? (
               /* Success State */
-              <div style={{ textAlign: 'center', padding: '24px 12px' }}>
-                <div style={{
-                  width: 64,
-                  height: 64,
-                  borderRadius: '50%',
-                  background: 'var(--tertiary-fixed)',
-                  color: 'var(--tertiary)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                }}>
+              <div className={styles.successBox}>
+                <div className={styles.successIconCircle}>
                   <span className="material-symbols-outlined" style={{ fontSize: 36 }}>task_alt</span>
                 </div>
-                <h2 style={{ fontSize: 22, fontWeight: 800, color: 'var(--on-surface)', marginBottom: 8 }}>
-                  Thank You for Your Suggestion!
-                </h2>
-                <div style={{
-                  display: 'inline-block',
-                  background: 'var(--surface-container-low)',
-                  border: '1px solid var(--outline-variant)',
-                  padding: '6px 14px',
-                  borderRadius: 'var(--radius-sm)',
-                  fontSize: 13,
-                  fontWeight: 700,
-                  color: 'var(--primary-cta)',
-                  marginBottom: 16,
-                }}>
+                <h2 className={styles.successTitle}>Thank You for Your Suggestion!</h2>
+                <div className={styles.ticketPill}>
                   Ticket ID: {submittedData.referenceId}
                 </div>
-                <p style={{ fontSize: 14, color: 'var(--on-surface-variant)', lineHeight: 1.6, maxWidth: 440, margin: '0 auto 24px' }}>
-                  Your feedback has been routed directly to our scraping & engineering queue. If you provided contact details, we will notify you once your suggested portal or feature is released!
+                <p className={styles.successText}>
+                  Your feedback has been routed directly to our scraping & engineering queue. You can track this ticket anytime using the &quot;Track Ticket Status&quot; tab above!
                 </p>
                 <div style={{ display: 'flex', justifyContent: 'center', gap: 12 }}>
                   <button
                     type="button"
                     onClick={resetForm}
                     className="btn-outline"
-                    style={{
-                      padding: '10px 20px',
-                      borderRadius: 'var(--radius-md)',
-                      fontSize: 14,
-                      fontWeight: 600,
-                      cursor: 'pointer',
-                    }}
+                    style={{ padding: '10px 20px', borderRadius: 8, fontSize: 14, fontWeight: 600, cursor: 'pointer' }}
                   >
-                    Submit Another Idea
+                    Submit Another Query
                   </button>
-                  <Link
-                    href="/jobs"
-                    className="btn-primary"
-                    style={{
-                      padding: '10px 20px',
-                      borderRadius: 'var(--radius-md)',
-                      fontSize: 14,
-                      fontWeight: 600,
-                      textDecoration: 'none',
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setTrackTicketInput(submittedData.referenceId)
+                      setActiveTab('track')
+                      lookupTicket(submittedData.referenceId)
                     }}
+                    className="btn-primary"
+                    style={{ padding: '10px 20px', borderRadius: 8, fontSize: 14, fontWeight: 700, cursor: 'pointer' }}
                   >
-                    Back to Jobs
-                  </Link>
+                    Track Status Now
+                  </button>
                 </div>
               </div>
             ) : (
-              /* Input Form */
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-                {/* 1. Feedback Type Selection */}
-                <div>
-                  <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 8 }}>
-                    What would you like to share? *
-                  </label>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 8 }}>
-                    {FEEDBACK_TYPES.map((t) => {
-                      const isSelected = selectedType === t.id
+              /* Main Feedback Submission Form */
+              <form onSubmit={handleSubmit}>
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>What would you like to share? *</label>
+                  <div className={styles.categoryGrid}>
+                    {FEEDBACK_CATEGORIES.map((cat) => {
+                      const isSel = selectedType === cat.id
                       return (
                         <div
-                          key={t.id}
-                          onClick={() => setSelectedType(t.id)}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'flex-start',
-                            gap: 12,
-                            padding: '12px 14px',
-                            borderRadius: 'var(--radius-md)',
-                            border: isSelected ? '1.5px solid var(--primary-cta)' : '1px solid var(--outline-variant)',
-                            background: isSelected ? 'var(--primary-fixed)' : 'var(--surface-container-low)',
-                            cursor: 'pointer',
-                            transition: 'all 0.15s ease',
-                          }}
+                          key={cat.id}
+                          className={`${styles.categoryCard} ${isSel ? styles.categoryCardActive : ''}`}
+                          onClick={() => setSelectedType(cat.id)}
                         >
-                          <span className="material-symbols-outlined" style={{
-                            fontSize: 22,
-                            color: isSelected ? 'var(--primary)' : 'var(--secondary)',
-                            marginTop: 2,
-                          }}>
-                            {t.icon}
+                          <span className={`material-symbols-outlined ${styles.catIcon} ${isSel ? styles.catIconActive : ''}`}>
+                            {cat.icon}
                           </span>
                           <div>
-                            <div style={{ fontSize: 14, fontWeight: 700, color: isSelected ? 'var(--primary)' : 'var(--on-surface)' }}>
-                              {t.label}
-                            </div>
-                            <div style={{ fontSize: 12, color: 'var(--secondary)', marginTop: 2, lineHeight: 1.4 }}>
-                              {t.desc}
-                            </div>
+                            <div className={styles.catLabel}>{cat.label}</div>
+                            <div className={styles.catDesc}>{cat.desc}</div>
                           </div>
                         </div>
                       )
@@ -307,48 +435,25 @@ export default function FeedbackPage() {
                   </div>
                 </div>
 
-                {/* 2. Organization / Portal Name (Crucial if suggesting an exam) */}
+                {/* Organization suggestion chips */}
                 {selectedType === 'suggest_portal' && (
-                  <div>
-                    <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>
-                      Department / Exam Board Name *
-                    </label>
+                  <div className={styles.formGroup}>
+                    <label className={styles.formLabel}>Target Department / Board *</label>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Zilla Parishad Solapur, High Court of Bombay..."
+                      placeholder="e.g. Pune ZP Arogya Sevak or BMC Fire Dept"
                       value={organization}
                       onChange={(e) => setOrganization(e.target.value)}
-                      style={{
-                        width: '100%',
-                        padding: '10px 14px',
-                        borderRadius: 'var(--radius-sm)',
-                        border: '1px solid var(--outline-variant)',
-                        fontSize: 14,
-                        background: 'var(--surface)',
-                        color: 'var(--on-surface)',
-                        boxSizing: 'border-box',
-                        marginBottom: 8,
-                      }}
+                      className={styles.inputField}
                     />
-
-                    {/* Quick suggestion chips */}
-                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
-                      <span style={{ fontSize: 11, color: 'var(--secondary)', fontWeight: 600 }}>Popular:</span>
-                      {ORG_SUGGESTIONS.map((org, i) => (
+                    <div className={styles.chipsContainer}>
+                      {ORG_SUGGESTIONS.map((org) => (
                         <button
-                          key={i}
+                          key={org}
                           type="button"
                           onClick={() => setOrganization(org)}
-                          style={{
-                            background: 'var(--surface-container-low)',
-                            border: '1px solid var(--outline-variant)',
-                            borderRadius: 'var(--radius-full)',
-                            padding: '3px 8px',
-                            fontSize: 11,
-                            color: 'var(--on-surface)',
-                            cursor: 'pointer',
-                          }}
+                          className={styles.chipBtn}
                         >
                           {org}
                         </button>
@@ -357,11 +462,9 @@ export default function FeedbackPage() {
                   </div>
                 )}
 
-                {/* 3. Subject / Brief Title */}
-                <div>
-                  <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>
-                    Subject / Short Title *
-                  </label>
+                {/* Subject */}
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Subject / Short Title *</label>
                   <input
                     type="text"
                     required
@@ -374,287 +477,157 @@ export default function FeedbackPage() {
                     }
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '10px 14px',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--outline-variant)',
-                      fontSize: 14,
-                      background: 'var(--surface)',
-                      color: 'var(--on-surface)',
-                      boxSizing: 'border-box',
-                    }}
+                    className={styles.inputField}
                   />
                 </div>
 
-                {/* 4. Open-Text Description */}
-                <div>
-                  <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>
-                    Detailed Suggestion / Feedback *
-                  </label>
+                {/* Description */}
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Detailed Suggestion / Feedback *</label>
                   <textarea
                     required
-                    rows={5}
-                    placeholder={
-                      selectedType === 'suggest_portal'
-                        ? 'Tell us about this recruitment board, how frequently they release notifications, or any specific job posts you are targeting...'
-                        : 'Explain what you would like to see improved, or provide details about the data discrepancy you spotted...'
-                    }
+                    rows={4}
+                    placeholder="Explain what you would like to see improved or provide details..."
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '10px 14px',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--outline-variant)',
-                      fontSize: 14,
-                      background: 'var(--surface)',
-                      color: 'var(--on-surface)',
-                      boxSizing: 'border-box',
-                      fontFamily: 'inherit',
-                      resize: 'vertical',
-                    }}
+                    className={styles.textareaField}
                   />
                 </div>
 
-                {/* 5. Optional URL (Official site or PDF link) */}
-                <div>
-                  <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>
-                    Official Website or PDF Link (Optional)
-                  </label>
-                  <input
-                    type="url"
-                    placeholder="https://..."
-                    value={sourceUrl}
-                    onChange={(e) => setSourceUrl(e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '10px 14px',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--outline-variant)',
-                      fontSize: 14,
-                      background: 'var(--surface)',
-                      color: 'var(--on-surface)',
-                      boxSizing: 'border-box',
-                    }}
-                  />
-                  <div style={{ fontSize: 12, color: 'var(--secondary)', marginTop: 4 }}>
-                    Providing the official recruitment link helps our engineers build a scraper faster.
-                  </div>
-                </div>
-
-                {/* 6. Contact Details (Optional) */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                {/* Contact info row */}
+                <div className={styles.twoColRow}>
                   <div>
-                    <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>
-                      Your Name (Optional)
-                    </label>
+                    <label className={styles.formLabel}>Your Name (Optional)</label>
                     <input
                       type="text"
-                      placeholder="e.g. Ramesh Patil"
+                      placeholder="e.g. Amit Patil"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      style={{
-                        width: '100%',
-                        padding: '10px 14px',
-                        borderRadius: 'var(--radius-sm)',
-                        border: '1px solid var(--outline-variant)',
-                        fontSize: 14,
-                        background: 'var(--surface)',
-                        color: 'var(--on-surface)',
-                        boxSizing: 'border-box',
-                      }}
+                      className={styles.inputField}
                     />
                   </div>
-
                   <div>
-                    <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>
-                      WhatsApp / Email (Optional)
-                    </label>
+                    <label className={styles.formLabel}>WhatsApp / Email (For Resolution Alert)</label>
                     <input
                       type="text"
-                      placeholder="To notify when shipped"
+                      placeholder="To receive update when resolved"
                       value={contact}
                       onChange={(e) => setContact(e.target.value)}
-                      style={{
-                        width: '100%',
-                        padding: '10px 14px',
-                        borderRadius: 'var(--radius-sm)',
-                        border: '1px solid var(--outline-variant)',
-                        fontSize: 14,
-                        background: 'var(--surface)',
-                        color: 'var(--on-surface)',
-                        boxSizing: 'border-box',
-                      }}
+                      className={styles.inputField}
                     />
                   </div>
                 </div>
 
-                {/* 7. Rating Widget */}
-                <div style={{ background: 'var(--surface-container-low)', padding: '12px 14px', borderRadius: 'var(--radius-md)' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--on-surface)' }}>
-                      How would you rate ExamUdaan so far?
-                    </span>
-                    <div style={{ display: 'flex', gap: 4 }}>
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <button
-                          key={star}
-                          type="button"
-                          onClick={() => setRating(star)}
-                          style={{
-                            background: 'none',
-                            border: 'none',
-                            cursor: 'pointer',
-                            padding: 2,
-                            color: star <= rating ? '#eab308' : 'var(--outline-variant)',
-                            fontSize: 22,
-                          }}
-                        >
-                          <span className="material-symbols-outlined fill" style={{ fontSize: 22 }}>star</span>
-                        </button>
-                      ))}
-                    </div>
+                {/* Rating */}
+                <div className={styles.ratingBox}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--on-surface)' }}>
+                    How would you rate ExamUdaan so far?
+                  </span>
+                  <div>
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button
+                        key={star}
+                        type="button"
+                        onClick={() => setRating(star)}
+                        className={`${styles.starBtn} ${star <= rating ? styles.starActive : styles.starInactive}`}
+                      >
+                        ★
+                      </button>
+                    ))}
                   </div>
                 </div>
 
-                {errorMsg && (
-                  <div style={{ color: 'var(--error)', fontSize: 13, fontWeight: 600 }}>
-                    {errorMsg}
-                  </div>
-                )}
+                {/* Cloudflare Turnstile */}
+                <div style={{ marginBottom: 16 }}>
+                  <TurnstileWidget
+                    ref={turnstileRef}
+                    action="feedback"
+                    onVerify={(token) => {
+                      setTurnstileToken(token)
+                      setErrorMsg('')
+                    }}
+                    onExpire={() => setTurnstileToken('')}
+                    onError={() => setErrorMsg('Security check failed to initialize. Please refresh.')}
+                  />
+                </div>
 
-                {/* Submit Button */}
+                {errorMsg && <div className={styles.errorText}>{errorMsg}</div>}
+
                 <button
                   type="submit"
                   disabled={loading}
-                  style={{
-                    background: 'var(--primary-cta)',
-                    color: '#ffffff',
-                    border: 'none',
-                    padding: '13px 20px',
-                    borderRadius: 'var(--radius-md)',
-                    fontSize: 15,
-                    fontWeight: 700,
-                    cursor: loading ? 'wait' : 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: 8,
-                    boxShadow: '0 4px 14px rgba(234, 88, 12, 0.28)',
-                  }}
+                  className={styles.submitBtn}
                 >
-                  <span className="material-symbols-outlined" style={{ fontSize: 20 }}>send</span>
-                  {loading ? 'Submitting Idea...' : 'Submit Feedback & Suggestions'}
+                  {loading ? 'Submitting to Review Queue...' : 'Submit to Engineering Queue'}
                 </button>
               </form>
             )}
           </div>
 
-          {/* Right Column: Community Shipped Wall & How We Listen */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+          {/* Right Column: Shipped & Approved Community Wall */}
+          <div className={styles.sideColumn}>
             {/* Trust Callout */}
-            <div style={{
-              background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-cta) 100%)',
-              color: '#ffffff',
-              borderRadius: 'var(--radius-lg)',
-              padding: '24px 20px',
-              boxShadow: '0 6px 20px rgba(163, 57, 0, 0.2)',
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-                <span className="material-symbols-outlined fill" style={{ fontSize: 24 }}>favorite</span>
-                <h2 style={{ fontSize: 18, fontWeight: 800, margin: 0 }}>Built for Aspirants, by Aspirants</h2>
+            <div className={styles.trustBanner}>
+              <div className={styles.trustHeader}>
+                <span className="material-symbols-outlined" style={{ fontSize: 24 }}>favorite</span>
+                <h2 className={styles.trustTitle}>Built for Aspirants, by Aspirants</h2>
               </div>
-              <p style={{ fontSize: 14, opacity: 0.92, lineHeight: 1.6, margin: 0 }}>
+              <p className={styles.trustText}>
                 Every single feature on ExamUdaan — from our AI eligibility extractor to our WhatsApp alerts — was built because an aspirant asked for it. We review new portal requests every Friday and add scrapers continuously.
               </p>
             </div>
 
-            {/* Shipped Improvements Wall */}
-            <div style={{
-              background: 'var(--surface-container-lowest)',
-              border: '1px solid var(--outline-variant)',
-              borderRadius: 'var(--radius-lg)',
-              padding: '24px 20px',
-            }}>
-              <h2 style={{ fontSize: 16, fontWeight: 800, color: 'var(--on-surface)', marginBottom: 4, display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span className="material-symbols-outlined" style={{ color: 'var(--tertiary)', fontSize: 20 }}>
+            {/* Approved Community Suggestions Wall */}
+            <div className={styles.communityCard}>
+              <h2 className={styles.communityTitle}>
+                <span className="material-symbols-outlined" style={{ color: '#16a34a', fontSize: 20 }}>
                   verified
                 </span>
-                Ideas You Suggested That We Shipped:
+                {approvedSuggestions.length > 0 ? 'Approved Aspirant Suggestions' : 'Ideas You Suggested That We Shipped'}
               </h2>
-              <p style={{ fontSize: 13, color: 'var(--secondary)', marginBottom: 16 }}>
-                Real features built from candidate feedback
+              <p className={styles.communitySubtitle}>
+                {approvedSuggestions.length > 0
+                  ? 'Reviewed and verified community feedback live on ExamUdaan'
+                  : 'Real features built from candidate feedback'}
               </p>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                {SHIPPED_IMPROVEMENTS.map((item, idx) => (
-                  <div key={idx} style={{
-                    background: 'var(--surface-container-low)',
-                    borderRadius: 'var(--radius-md)',
-                    padding: '12px 14px',
-                    border: '1px solid var(--outline-variant)',
-                  }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-                      <span style={{ fontSize: 11, fontWeight: 800, color: 'var(--primary)', background: 'var(--primary-fixed)', padding: '2px 6px', borderRadius: 'var(--radius-sm)' }}>
-                        {item.tag}
+              <div>
+                {(approvedSuggestions.length > 0 ? approvedSuggestions : CURATED_SHIPPED).map((item, idx) => (
+                  <div key={idx} className={styles.suggestionItem}>
+                    <div className={styles.suggestionHeader}>
+                      <span className={styles.suggestionTag}>
+                        {item.tag || item.category?.replace(/_/g, ' ') || 'Suggestion'}
                       </span>
-                      <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--tertiary)' }}>
-                        {item.status}
+                      <span className={styles.suggestionStatus}>
+                        {item.status === 'resolved' ? '✓ Shipped' : item.status || 'Verified'}
                       </span>
                     </div>
-                    <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 4 }}>
-                      {item.title}
+                    <div className={styles.suggestionSubject}>
+                      {item.title || item.subject}
                     </div>
-                    <div style={{ fontSize: 12, color: 'var(--secondary)', lineHeight: 1.5 }}>
-                      {item.desc}
-                    </div>
+                    <p className={styles.suggestionDesc}>
+                      {item.desc || item.description}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Quick Helpline Box */}
-            <div style={{
-              background: 'var(--surface-container-low)',
-              border: '1px solid var(--outline-variant)',
-              borderRadius: 'var(--radius-md)',
-              padding: '18px 20px',
-            }}>
-              <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)', marginBottom: 6 }}>
-                Need Immediate Customer Support?
-              </h3>
-              <p style={{ fontSize: 13, color: 'var(--secondary)', lineHeight: 1.5, margin: '0 0 10px' }}>
+            {/* Helpline Box */}
+            <div className={styles.helpBox}>
+              <h3 className={styles.helpTitle}>Need Immediate Support?</h3>
+              <p className={styles.helpText}>
                 For billing, account login issues, or subscription management, chat with our human helpdesk directly.
               </p>
-              <div style={{ display: 'flex', gap: 12 }}>
-                <Link
-                  href="/contact"
-                  style={{
-                    fontSize: 13,
-                    fontWeight: 700,
-                    color: 'var(--primary-cta)',
-                    textDecoration: 'none',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 4,
-                  }}
-                >
+              <div className={styles.helpLinks}>
+                <Link href="/contact" className={styles.helpLinkContact}>
                   Contact Desk →
                 </Link>
                 <a
-                  href={SITE_CONFIG.contact.whatsappLink}
+                  href={SITE_CONFIG?.contact?.whatsappLink || 'https://wa.me/918484848484'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    fontSize: 13,
-                    fontWeight: 700,
-                    color: '#25d366',
-                    textDecoration: 'none',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 4,
-                  }}
+                  className={styles.helpLinkWhatsApp}
                 >
                   WhatsApp Helpdesk →
                 </a>

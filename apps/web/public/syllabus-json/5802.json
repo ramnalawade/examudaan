@@ -1,0 +1,55 @@
+{
+  "docId": 5802,
+  "examName": "Higher Grade Stenographer (Marathi) & (English), Lower Grade Stenographer (Marathi) & (English) and Stenotypist (Marathi) & (English) Examination",
+  "examNameMr": "उच्च श्रेणी लघुलेखक (मराठी) व (इंग्रजी), निम्न श्रेणी लघुलेखक (मराठी) व (इंग्रजी), गट-ब (अराजपत्रित), लघुलेखक (इंग्रजी) व (मराठी), गट-क",
+  "conductingBody": "Maharashtra Public Service Commission (MPSC)",
+  "year": 2022,
+  "language": "Marathi and English",
+  "category": "group-b",
+  "totalMarks": 200,
+  "mainsMarks": 100,
+  "interviewMarks": 25,
+  "examPattern": "1. Screening Test (100 Marks) 2. Shorthand-Typing Test (75 Marks) 3. Interview (25 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi & Intelligence Test",
+      "paperTitleMr": "मराठी व बुद्धिमापन चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "topics": [
+            "Common vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Use of idioms and phrases and their meaning",
+            "Comprehension of passage"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमापन चाचणी",
+          "topics": [
+            "Logical reasoning and mental ability questions to test how quickly and accurately the candidate can think"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा / कमी करण्यात येतील.",
+    "लघुलेखन-टंकलेखन चाचणीच्या ७५ गुणांपैकी किमान ३१ गुण मिळविणे आवश्यक राहील.",
+    "३१ पेक्षा कमी गुण प्राप्त करणाऱ्या उमेदवाराची मुलाखत घेण्यात येणार नाही.",
+    "लघुलेखन-टंकलेखन व मुलाखत यांच्या एकुण १०० गुणांपैकी किमान ४१% गुण मिळविणे आवश्यक राहील.",
+    "अंतीम निवडीकरिता चाचणी परीक्षाचे गुण विचारात घेतले जाणार नाहीत."
+  ]
+}

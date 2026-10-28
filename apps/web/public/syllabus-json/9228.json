@@ -1,0 +1,71 @@
+{
+  "docId": 9228,
+  "examName": "State Services Main Examination - Revised Pattern - Question Paper Structure & Instructions",
+  "examNameMr": "राज्यसेवा मुख्य परीक्षा - संशोधित पॅटर्न - प्रश्नपत्रिका रचना व सूचना",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "rajyaseva",
+  "totalMarks": 300,
+  "mainsMarks": 300,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Descriptive",
+  "papers": [
+    {
+      "paperNumber": 2,
+      "paperTitle": "English Language (Qualifying Paper)",
+      "paperTitleMr": "इंग्रजी भाषा (अर्हता परीक्षा)",
+      "totalMarks": 300,
+      "duration": "3 Hours",
+      "type": "Descriptive",
+      "isQualifying": true,
+      "isMerit": false,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Essay",
+          "unitTitleMr": "निबंध",
+          "topics": [
+            "Essay writing with a total of 100 marks"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Comprehension of given Passage",
+          "unitTitleMr": "उताऱ्यावरील प्रश्न",
+          "topics": [
+            "Comprehension of given passage carrying 75 marks"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Precis Writing",
+          "unitTitleMr": "थोडक्यात लेखन (प्रेसिस रायटिंग)",
+          "topics": [
+            "Precis writing carrying 75 marks"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Usage and Vocabulary Part I",
+          "unitTitleMr": "शब्दसंग्रह आणि वापर भाग १",
+          "topics": [
+            "Grammar and vocabulary usage carrying 25 marks"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Usage and Vocabulary Part II",
+          "unitTitleMr": "शब्दसंग्रह आणि वापर भाग २",
+          "topics": [
+            "Advanced grammar and vocabulary usage carrying 25 marks"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "English version of the question shall be authentic in case of any type of ambiguity."
+  ]
+}

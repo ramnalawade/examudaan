@@ -1,0 +1,169 @@
+{
+  "docId": 8875,
+  "examName": "Assistant Secretary (Technical), MSBTE, Maharashtra Engg. Administrative Services, Group A- Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Secretary (Technical), MSBTE, Maharashtra Engg. Administrative Services, Group A- Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "1. EDUCATION SYSTEMS:",
+          "unitTitleMr": null,
+          "topics": [
+            "A) In India",
+            "National Policy on Education – NEP 2020",
+            "Present Education Systems.",
+            "Technical Education System.",
+            "Recommendations of various committees regarding technical education.",
+            "Concept of technical education.",
+            "Objective and scope of polytechnic education.",
+            "AICTE norms.",
+            "National Credit Framework (NCrF)",
+            "B) In Maharashtra",
+            "Technical and Vocational Education System.",
+            "3-Tier System.",
+            "Classification of Polytechnics.",
+            "AICTE, PCI, CoA and State Govt. approved short term diploma programs.",
+            "Policies – Initiatives and program of Government of Maharashtra for skill development, quality enhancement and promoting entrepreneurship."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "2. ORGANISATIONAL MANAGEMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "Organisational structures of Technical education of Government of Maharashtra, Directorate of Technical Education (DTE), Maharashtra State Board of Technical Education (MSBTE), Autonomous and Non-Autonomous Polytechnic.",
+            "MSBTE Act & Functions of various Committees, Various departments and services offered at MSBTE, Vision, Mission and challenges in context of globalisation.",
+            "General managerial functions – Planning, Organising, Leading and controlling",
+            "Managerial Competencies – Communication, Planning and Administration,",
+            "Team work,",
+            "Strategic Action, Global Awareness and Self –Management.",
+            "RTI Act/RTS Act."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "3. CURRICULUM DESIGN AND MANAGEMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "Need of Assessment",
+            "Concept of curriculum design – OBE Philosophy",
+            "Components of curriculum design",
+            "Sources of curriculum design",
+            "Design dimension considerations",
+            "Conceptual frame work for a program (Horizontal and Vertical Organisation)",
+            "Program educational objectives, program outcomes, course outcomes.",
+            "Purpose of laboratory courses, need for multi-disciplinary and inter-disciplinary courses, importance of sandwich programmes, role of in-plant training,",
+            "Importance of courses like – generic skills, self study techniques, environmental awareness and entrepreneurship development.",
+            "Systems approach in curriculum design, various diploma schemes of MSBTE (scientific based, out come based curriculum, etc), Process of granting Equivalence, NEP 2020 guidelines for curriculum development, credit system."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "4. CURRICULUM IMPLEMENTATION",
+          "unitTitleMr": null,
+          "topics": [
+            "Staff orientation with objectives",
+            "Design and develop print and non-print learning resource (study material, work sheets, laboratory manuals, model answers, laboratory models, educational videos, etc) based on events of instructions",
+            "Staff training in methodology, content updating, industrial experience and managerial effectiveness enhancement",
+            "Monitoring and gathering feedback with emphasis on instructional process-",
+            "EIMC, Curriculum evaluation",
+            "Counselling and guidance",
+            "Training and placement- Role of BOAT, Apprentice Act and provisions",
+            "Effective utilisation of resources",
+            "Industry institute cooperation",
+            "SWAYAM, MOOCS Courses",
+            "Learning Management System",
+            "Remedial Coaching"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "5. STUDENTS ASSESSMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "Purpose",
+            "Types",
+            "Stakeholders in assessment",
+            "Characteristics of good assessment system",
+            "Domains of learning",
+            "Knowledge dimensions, levels of learning and principles of learning.",
+            "Taxonomy of questions based on Blooms Taxonomy of questions",
+            "Importance of specification table and question paper profile",
+            "Criteria for assessment of skills and performance",
+            "Methods of examinations",
+            "Examination schemes of MSBTE and Autonomous Institutions.",
+            "On-line examinations",
+            "CIAAN document"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "6. EXAMINATION SYSTEM",
+          "unitTitleMr": null,
+          "topics": [
+            "Registration of students",
+            "Pre examination process",
+            "Examination time table",
+            "Post examination process",
+            "Result declaration",
+            "Analysis of result and reporting",
+            "Grievances and malpractice related rules and regulations",
+            "Award of Diploma",
+            "Revaluation Process",
+            "Schemes of Government of India, World Bank and State Government in the Department of Technical Education in the State such as:",
+            "World Bank Assisted Technical Education Quality Improvement Programs (TEQIP), MERITE etc.",
+            "Minority schemes of Government of India and Government of Maharashtra",
+            "Government approved short term diploma courses under MSBTE.",
+            "Various Schemes for Persons with Disability and Women.",
+            "Continuing education programs.",
+            "Community Colleges and Distance Education.",
+            "Community Development through Polytechnic Scheme.",
+            "Teachers Training Programmes.",
+            "Finishing courses / Skill Courses",
+            "National Skill Qualification Framework.",
+            "Unnat Maharashtra Abhiyan.",
+            "Learn & Earn Scheme.",
+            "NSS"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "8. ACCOUNTS, BUDGET AND STORE MANAGEMENT",
+          "unitTitleMr": null,
+          "topics": [
+            "Budget process, Budget performance, PLAN & Non PLAN, budget heads, bill passing procedure, financial powers, finance rules, Audit, Cost Benefit Analysis, Cost reduction techniques, Revenue generation, Treasury/Pay & Accounts Office rules, assessment of finance, cash book and transaction, record and reports, Sevarth Pranali.",
+            "Classification of inventory, purchase procedure, Quotation and tendering process, Inventory Control, Stores Manual, Stock register, Procurement plan, Economic Order Quantity, Buffer stock, Stores audit, records & reports, physical verification of stock, maintenance plan, write-off rules and procedures, purchases through GeM."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "9. MANPOWER PLANNING RELEVANT TO DIPLOMA PROGRAMS IN ENGINEERING :",
+          "unitTitleMr": null,
+          "topics": [
+            "Human Resource Planning, Skill Gap Analysis, Elements of manpower planning, Surveys and their objectives, Demand estimation of skilled manpower.",
+            "Role of various organisations such as DTE, ARA, FRA, CET CELL, AICTE, MoE, BOAT, UGC, IIT’s, NITTTR, NBA, NAAC, RUSA, MSFDA, NSDC, State/ Central/ Open/ Deemed/ Private Universities, PCI and COA, Perspective plan of the authorities."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

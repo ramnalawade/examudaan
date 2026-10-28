@@ -1,0 +1,41 @@
+{
+  "docId": 1703,
+  "examName": "Higher Grade and Lower Grade Stenographer (Marathi and English), Gr-B (Non Gazetted) and Steno-Typist, Gr-C",
+  "examNameMr": "उच्च श्रेणी लघुलेखक (मराठी व इंग्रजी), गट-अ/ब (अराजपत्रित), निम्न श्रेणी लघुलेखक (मराठी व इंग्रजी), गट-ब (अराजपत्रित) आणि लघूटंकलेखक (मराठी व इंग्रजी), गट-क",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "other",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Higher Grade and Lower Grade Stenographer (Marathi and English), Gr-B (Non Gazetted) and Steno-Typist, Gr-C",
+      "paperTitleMr": "उच्च श्रेणी लघुलेखक (मराठी व इंग्रजी), गट-ब आणि लघूटंकलेखक, गट-क",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "English / Marathi Language",
+          "unitTitleMr": "इंग्रजी / मराठी भाषा",
+          "topics": [
+            "Common vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Use of Idioms & Phrases and their meaning",
+            "Comprehension of passage"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

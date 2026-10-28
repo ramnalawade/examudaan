@@ -331,3 +331,39 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ── Zero-Inline-Styles Utility Classes ── */
+.locationIcon {
+  font-size: 14px;
+}
+
+.workIcon {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.alertsBtn {
+  font-size: 13px;
+}
+
+.notifIcon {
+  font-size: 16px;
+}
+
+.searchOffIcon {
+  font-size: 48px;
+  color: var(--outline-variant);
+}
+
+.emptySub {
+  font-size: 13px;
+}
+
+.viewAllBtn {
+  margin-top: 16px;
+}
+
+.cityIcon {
+  font-size: 18px;
+}
+

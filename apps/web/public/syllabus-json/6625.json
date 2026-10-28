@@ -1,0 +1,285 @@
+{
+  "docId": 6625,
+  "examName": "Engineering Services Examination",
+  "examNameMr": "अभियांत्रिकी सेवा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Mechanical Engineering Syllabus",
+      "paperTitleMr": "यांत्रिक अभियांत्रिकी अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Materials and Their Behavior - Engineering Materials",
+          "unitTitleMr": "साहित्य आणि त्यांचे वर्तन - अभियांत्रिकी साहित्य",
+          "topics": [
+            "Crystalline structure of metals and alloys",
+            "Defects in crystalline materials",
+            "Iron-Carbon equilibrium diagram",
+            "Plain carbon steel, alloy steel, cast iron and types",
+            "Brass and Bronze, Aluminum, lead, Tin, Zinc- their properties and applications",
+            "Plastic deformation, bearing materials, plastics, ceramics, composite materials",
+            "Heat treatment of steels"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Fundamentals",
+          "unitTitleMr": "मूलभूत बाबी",
+          "topics": [
+            "Force, moment, couple, resultant of forces",
+            "Equilibrium of forces, friction and friction angle, columb friction",
+            "Rolling friction and belt friction, frictional torque in pivot and Collar bearings",
+            "M.I., Work and energy"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Strength of Materials",
+          "unitTitleMr": "सामग्रीचे सामर्थ्य",
+          "topics": [
+            "Normal and Shear stresses, Stress-strain diagram, thermal stresses",
+            "Shear force and bending moment diagrams",
+            "Bending stresses in solid, hollow and built up sections",
+            "Deflection of beams, shear stress distribution diagram, strain energy",
+            "Torsion of bars, shafts and helical springs",
+            "Deflection of beam under different conditions, impact load"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Theory of Machines",
+          "unitTitleMr": "यंत्रांचा सिद्धांत",
+          "topics": [
+            "Kinematic link, pair, chain, Mechanism and structure, degrees of freedom",
+            "Cams, Gear trains, fluctuation of speed and energy in flywheel, Gyroscope",
+            "Balancing of rotating machines, Static & Dynamic balancing",
+            "Balancing of Single and multi-cylinder engines and V-engines",
+            "Belts and chain drives, Hydrodynamic bearing"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Machine Design - Design of Elements",
+          "unitTitleMr": "मशीन डिझाइन - घटकांची रचना",
+          "topics": [
+            "Theories of failure, factor of safety, combined stresses",
+            "Pressure vessels, struts and columns",
+            "Design of Screw and bolt, riveted, welded joints, power screw",
+            "Design of Shafts and springs, keys, couplings",
+            "Design of clutches and brakes, design under fatigue loading",
+            "Stress concentration, reduction in stress concentration, S-N curve",
+            "Soderberg & Goodman diagram, modified Goodman diagram, fatigue under combined stress"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Design of Gears",
+          "unitTitleMr": "गिअर्सची रचना",
+          "topics": [
+            "Spur, helical, bevel and worm gears"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "System Design",
+          "unitTitleMr": "सिस्टम डिझाइन",
+          "topics": [
+            "Design of mechanical systems, specification of components",
+            "Design of system including material handling systems, power plants",
+            "Refrigeration and air conditioning systems, pneumatic and hydraulic systems"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Dynamics of machines",
+          "unitTitleMr": "यंत्रांची गतिशीलता",
+          "topics": [
+            "Inertia force analysis, law of gearing, interference and minimum number of teeth",
+            "Longitudinal - transverse and torsional vibration",
+            "Single degree freedom - undamped free, damped, forced vibrations",
+            "Whirling of shaft - critical speed, vibration isolation"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Manufacturing Science",
+          "unitTitleMr": "उत्पादन विज्ञान",
+          "topics": [
+            "Theory of metal cutting, Merchant's force analysis, Tool materials",
+            "Taylor's tool life equation, Machinability, economics, cutting fluids",
+            "Chip removal, Calculation of cutting force on single point cutting tools",
+            "Twist drills, milling cutter, broaches, reamers, Jigs and fixtures",
+            "Recent machining methods - EDM, ECM, PAM, Ultrasonic and Laser"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Manufacturing Processes",
+          "unitTitleMr": "उत्पादन प्रक्रिया",
+          "topics": [
+            "Casting, moulding - Types, equipments and defects",
+            "Hot and cold working of metals - blanking, shearing, punching, piercing, coining, embossing, drawing, spinning and forging",
+            "Metal joining processes - welding, soldering, brazing",
+            "High energy rate forming, electroplating, surface finishing processes"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Manufacturing Management",
+          "unitTitleMr": "उत्पादन व्यवस्थापन",
+          "topics": [
+            "Production planning and control, forecasting - Moving average, moving range, exponential smoothening",
+            "Scheduling, assembly line balancing",
+            "Inventory Control - ABC analysis, EOQ models",
+            "Statistical quality control and TQM, TPM",
+            "Elements of cost, job costing, process costing, estimation of machining time"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Operation Research",
+          "unitTitleMr": "ऑपरेशन संशोधन",
+          "topics": [
+            "Linear programming - Graphical and simplex methods",
+            "Transportation and assignment models, game theory, queuing models",
+            "CPM and PERT, Replacement models, value analysis"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "CAD (Computer Aided Design)",
+          "unitTitleMr": "कॅड (संगणक सहाय्यित डिझाइन)",
+          "topics": [
+            "Overview and benefits of CAD, primitives, 2D / 3D animation",
+            "Bezier curves and splines, Wire-frame modeling, surface and solid modeling",
+            "Kinematic analysis of open and closed loop mechanisms",
+            "Stiffness matrix, finite element analysis, optimum design",
+            "Constrained optimization - Penalty function method",
+            "Computer aided optimum design of gears, bearings and shafts"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "CAM (Computer Aided Manufacturing)",
+          "unitTitleMr": "कॅम (संगणक सहाय्यित उत्पादन)",
+          "topics": [
+            "Types of automation, Steps in NC manufacturing, manual and NC part programming",
+            "APT, Machining centres, FMS, Computer Aided Process Planning",
+            "CMM, CIMS & its components, Robotics"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Product Development",
+          "unitTitleMr": "उत्पादन विकास",
+          "topics": [
+            "Design materials, human factors in design, applied ergonomics",
+            "Product development processes, concept development process",
+            "Customer needs, product specifications, concept generation",
+            "Creative & logical techniques - QFD, conceptual decomposition",
+            "Two/three dimensional morphological chart, concept evaluation, pugh chart",
+            "Weighted decision matrix, analytical hierarchy method, product architecture",
+            "Configuration Design, Parametric design, Detailed Design for manufacturing and Assembly"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Machine Tool Design",
+          "unitTitleMr": "मशीन टूल डिझाइन",
+          "topics": [
+            "Kinematics of machine Tools, structural and ray diagrams for speed",
+            "Stepped and step less regulation of speed",
+            "Static and dynamic rigidity of machine tools",
+            "Vibration of machine tools, chatter, Slide ways and guide ways"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Thermodynamics, Heat and Mass Transfer",
+          "unitTitleMr": "थर्मोडायनामिक्स, उष्णता आणि वस्तुमान हस्तांतरण",
+          "topics": [
+            "Fundamentals - Work, Heat, Zeroth law, First law - application to thermodynamic system components, efficiency",
+            "Second law - quality of energy, increase of entropy, availability and irreversibility, Third law",
+            "Ideal gas, real gases, compressibility factor, Joule - Thomson Coefficient",
+            "Gas power cycles - Air standard work output and efficiency, mean effective pressure",
+            "Vapour Power Cycles - Carnot and Rankine, Reheating and regenerative feed heating, Binary vapour cycle",
+            "Modes of heat transfer, Fourier's, Newton's and Stefan Boltzman's law",
+            "Conduction - Thermal conductivity, general differential equation, steady state, linear heat flow",
+            "Convection - Forced and Natural, Heat Exchangers - Types, performance, parallel and counter flow",
+            "Thermal Radiation - Black and non black bodies, Kirchoff's law, grey body radiation"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Fluid Mechanics and Machinery, Pneumatics and Hydraulics",
+          "unitTitleMr": "फ्लुइड मेकॅनिक्स आणि मशिनरी, न्यूमॅटिक्स आणि हायड्रॉलिक्स",
+          "topics": [
+            "Fluid and flow - definition and types, properties of ideal and real fluids",
+            "Fluid statics, Kinematics and Dynamics of fluid, flow in pipes, Laminar and Turbulent flow",
+            "Fluid Machinery - Classification, energy transfer between fluid and rotor",
+            "Hydraulic turbines, pumps, compressors and blowers",
+            "Production of compressed air, Pneumatic control - Components and Systems",
+            "Electro Pneumatic logic circuits, Pneumatic counters, Sensors"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Power Plant and Energy Engineering",
+          "unitTitleMr": "पॉवर प्लांट आणि ऊर्जा अभियांत्रिकी",
+          "topics": [
+            "Sources of energy, variable load problem, power plant economics and selection",
+            "Steam power plant - boilers, general layout, turbine auxiliary systems",
+            "Gas turbine power plant - regeneration, reheating, cogeneration",
+            "Nuclear Power Plants - basic components, power stations",
+            "Hydro electric power plant - site selection, arrangement, operation",
+            "Energy conservation methods, audit, Solar energy, Wind energy, Biogas plants",
+            "Direct Energy Conversion - Fuel Cells, Thermoelectric, Thermionic and MHD systems"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "I.C. Engines, Automobile Engineering, Refrigeration and Air Conditioning",
+          "unitTitleMr": "आय.सी. इंजिने, ऑटोमोबाईल अभियांत्रिकी, रेफ्रिजरेटर आणि एअर कंडिशनिंग",
+          "topics": [
+            "Fuel air cycles, volumetric and thermal efficiency",
+            "S.I. Engines and C.I. Engines - carburetion, combustion, fuel injection, combustion chambers",
+            "Detonation - Knock rating of fuels, Emission Control Systems",
+            "Testing of automobiles, resistances to motion, power requirement for propulsion",
+            "Automobile engines, frames, transmission systems, steering, suspension, brakes",
+            "Refrigeration and heating systems, vapour compression and absorption systems",
+            "Psychrometrics, solar radiation, estimating requirements, ducting systems"
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Measurement, Metrology, Numerical Analysis and Automatic Control",
+          "unitTitleMr": "मोजमाप, मेट्रोलॉजी, संख्यात्मक विश्लेषण आणि स्वयंचलित नियंत्रण",
+          "topics": [
+            "Measuring instruments, generalized measuring systems, static and dynamic performance",
+            "Sensors and Transducers, Measurement of displacement, velocity, pressure, strain, force, temperature, flow",
+            "Metrology - Standards of linear measurement, Limits and Fits, Limit gauges, Interferometry",
+            "Numerical Analysis - Approximations, roots of polynomials, C and C++ programming for equations",
+            "Numerical Control of Machine Tools - NC, CNC, DNC, adaptive control",
+            "Automatic Control - Components of automation, actuators, sensors, PLCs, transfer function"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

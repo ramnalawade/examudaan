@@ -1,0 +1,120 @@
+{
+  "docId": 8005,
+  "examName": "Principal, Government Polytechnic, Maharashtra Polytechnic Teachers Services, Group A - Syllabus",
+  "examNameMr": "प्राचार्य, शासकीय तंत्रनिकेतन, महाराष्ट्र तंत्रनिकेतन शिक्षक सेवा, गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Principal, Government Polytechnic, Maharashtra Polytechnic Teachers Services, Group A - Syllabus",
+      "paperTitleMr": "प्राचार्य, शासकीय तंत्रनिकेतन, महाराष्ट्र तंत्रनिकेतन शिक्षक सेवा, गट-अ - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Education System in India",
+          "unitTitleMr": "भारतातील शिक्षण प्रणाली",
+          "topics": [
+            "Education System in India, National Policies on Education in India, Historical Background of Technical Education in India, Recommendations of various Committees on Technical Education, Need for Technical Education in India, Various Systems of Technical Education in India, Policies for Technical Education, Objective and scope of Polytechnic Education.",
+            "Status of Technical Education in Maharashtra: Technical and Vocational Education System in the State, Three Tier System.",
+            "World Bank assisted and externally aided projects in Technical Education: Phases, purpose, outcomes, the projects taken up so far for polytechnic education. Various Policies and Programmes of the State Government for skill development, enhancement of employability, Employment and Self employment, Classification of polytechnics in the State, MSBTE Act."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Manpower Planning relevant to Diploma Programs in Engineering",
+          "unitTitleMr": "अभियांत्रिकी पदविका कार्यक्रमांशी संबंधित मानवशक्ती नियोजन",
+          "topics": [
+            "Human Resource Planning, Elements of manpower Planning, Techniques in human planning, Surveys and their objectives, Demand estimation of skilled manpower, Role of various organisations such as DTE, MSBTE, NCERT, AICTE, MHRD, BOAT, UGC, IIT’s, NITTR, State/Central/Open/Deemed/Private Universities, NEERI, NITIE, PCI and COA.",
+            "Perspective plan of the authorities."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Administration of polytechnics",
+          "unitTitleMr": "तंत्रनिकेतनांचे प्रशासन",
+          "topics": [
+            "(A) Academic Management: Organisation structure of Government Polytechnics, Reporting systems, Reporting authorities, SWOT analysis, Vision and mission, goals, Strategic Planning, Internal/external environment management, Resource mobilization, library management, maintenance of academic facilities, marketing strategies related to educational institute.",
+            "(B) Human Resource Management: Leadership and decision-making, Personality development, human behavior, character and moral qualities of public relation, effective communication, Problem solving techniques, personal management, value analysis, faculty norms, Maharashtra Civil Service Rules (MCSR), procedure for approval of teaching and non teaching staff, faculty and staff development plans, training policies of faculty and staff, types of training, motivation, evaluation of performance of faculty and staff, team building, orientation training of new employees.",
+            "(C) Material, Infrastructure, Resource and Financial Management (With reference to State Government Institutions): Budget, Budget process, Budget Performance, PLAN and Non PLAN, budget heads, bill passing procedure, financial powers, finance rules, Audit, Cost Benefit Analysis, Cost reduction techniques, Revenue generation, source of funds, Treasure/Pay and Accounts Office Rules, assessment of finance, cash book and transaction, record and reports.",
+            "Classification of inventory, Type of stores, purchase, Inventory Control, Stores Manual, stock register, Procurement plan, Economic Order quantity, Buffer stock, Reorder Level, CPM and PERT techniques, infrastructure norms, stores audit, records and reports, physical verification of goods and equipments, maintenance plan of equipments and machineries, write off rules and procedures."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Admission",
+          "unitTitleMr": "प्रवेश",
+          "topics": [
+            "Approval process (establishment of new polytechnic, addition of course, variation in intake) Admission regulation authority, Competent authority, CAP, Eligibility, Statutory reservations, Rounds of admission, Tuition fee waiver schemes.",
+            "Authority deciding fees for Government/Aided/Unaided polytechnics, Fee exemptions and scholarships, reimbursement of fees.",
+            "Affiliations of institutes, enrolment of students."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Curriculum",
+          "unitTitleMr": "अभ्यासक्रम",
+          "topics": [
+            "Definition, importance of curriculum development, components of curriculum, participation of industry, objectives, outcomes, programme educational objectives, program outcomes, course objectives, course outcomes, purpose of laboratory course, need of multi-disciplinary and inter-disciplinary courses, sandwich programmes, inplant training, self study, Course contents, Credit and grading systems, choice based credit system, different grades, relative and absolute grading system, lateral entry and lateral exit system."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Teaching learning process",
+          "unitTitleMr": "अध्यापन-अधिगम प्रक्रिया",
+          "topics": [
+            "Assessment of curriculum implementation, learning material development, laboratory manual, development of media for instructions, various Teaching aids, class room/laboratory monitoring, feedback systems, academic audit, Accreditation process (NBA), Academic monitoring."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Examination",
+          "unitTitleMr": "परीक्षा",
+          "topics": [
+            "Purpose of examination, types, Various evaluation techniques, effective evaluation, Criteria for measurement of skills and performance, methods of examination, Examination schemes of MSBTE and Autonomous institutions."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Training and Placements",
+          "unitTitleMr": "प्रशिक्षण आणि प्लेसमेंट्स",
+          "topics": [
+            "Requirement of various Organisations (Registered/Non-registered, Local/Outside) and availability of candidates, Process of Placement.",
+            "Role of training and placement office, Types of training, Training Methodologies, Apprenticeship Training, Linkage with Industries, Importance of Industry-Institution-interaction, Apprenticeship Act, 1961, Various criteria used for evaluating the Training Programme, Entrepreneurship Development Programme."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Schemes being implemented in the Department of Technical Education",
+          "unitTitleMr": "तंत्रशिक्षण विभागाद्वारे राबविण्यात येणाऱ्या योजना",
+          "topics": [
+            "a) Second shift in polytechnics.",
+            "b) Minority schemes",
+            "c) Short term Government approved certificate courses under MSBTE.",
+            "d) Various Schemes for Disabled (PWD) and Women.",
+            "e) Continuing education programs.",
+            "f) Community Colleges",
+            "g) Teachers Training Programme.",
+            "h) Finishing courses.",
+            "i) Community polytechnics.",
+            "j) National Skill Qualification Framework.",
+            "k) Unnat Maharashtra Abhiyan"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

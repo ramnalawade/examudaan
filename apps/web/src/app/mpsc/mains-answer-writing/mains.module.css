@@ -1,0 +1,933 @@
+/* ============================================================
+   mains.module.css — MPSC Mains Answer-Writing Practice Studio
+   ExamUdaan Design System | Zero Inline Styles Policy
+   ============================================================ */
+
+.pageWrapper {
+  min-height: 100vh;
+  background-color: var(--surface-container-lowest, #FFFBF5);
+  color: var(--on-surface, #1E1B18);
+  padding-bottom: 5rem;
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #FFFFFF;
+  padding: 3rem 1.25rem 2.25rem;
+  border-bottom: 3px solid var(--primary, #EA580C);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #94A3B8;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb a:hover {
+  color: #EA580C;
+}
+
+.breadcrumbSep {
+  color: #64748B;
+}
+
+.breadcrumbCurrent {
+  color: #EA580C;
+  font-weight: 600;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(234, 88, 12, 0.2);
+  border: 1px solid rgba(234, 88, 12, 0.4);
+  color: #FDBA74;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.heroTitle {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  color: #FFFFFF;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  max-width: 850px;
+  line-height: 1.6;
+}
+
+/* Statutory Educational Guidance Disclaimer Banner */
+.disclaimerBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-left: 4px solid #D97706;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+  color: #92400E;
+}
+
+.disclaimerIcon {
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.disclaimerTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  color: #B45309;
+}
+
+.disclaimerText {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #78350F;
+}
+
+/* Main Container */
+.mainContainer {
+  max-width: 1200px;
+  margin: -1.5rem auto 0;
+  padding: 0 1.25rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* Paper Navigation Ribbon */
+.controlCard {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E2E8F0;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.paperTabsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #F1F5F9;
+  scrollbar-width: thin;
+}
+
+.paperTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #475569;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.paperTab:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+  border-color: #CBD5E1;
+}
+
+.paperTabActive {
+  background: #EA580C;
+  color: #FFFFFF;
+  border-color: #EA580C;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.25);
+}
+
+.paperTabActive:hover {
+  background: #D94E06;
+  border-color: #D94E06;
+  color: #FFFFFF;
+}
+
+.paperCountBadge {
+  font-size: 0.74rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.paperTabActive .paperCountBadge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+/* Search Bar */
+.filterRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.searchWrap {
+  flex: 1;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.65rem 0.85rem 0.65rem 2.35rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  background: #FFFFFF;
+  transition: border-color 0.15s ease;
+}
+
+.searchInput:focus {
+  border-color: #EA580C;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12);
+}
+
+/* Section Header */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionMeta {
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+/* Active Writing Studio Modal / Panel */
+.activeStudioBox {
+  background: #FFFFFF;
+  border: 2px solid #EA580C;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(234, 88, 12, 0.15);
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.studioTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #F1F5F9;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.studioTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.liveStudioBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid #BFDBFE;
+}
+
+.studioMetaInfo {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.studioQuestionSub {
+  font-size: 0.9rem;
+  color: #64748B;
+  margin: 0 0 0.5rem 0;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.loadingBox {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #64748B;
+  font-size: 0.95rem;
+}
+
+.btnStudioClose {
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid #CBD5E1;
+  background: #F8FAFC;
+  color: #475569;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnStudioClose:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+}
+
+/* Active Studio Grid (2 Columns on Desktop) */
+.studioGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 1.5rem;
+}
+
+/* Left Studio Column: Question & Model Outline */
+.studioLeftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.studioQuestionCard {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.studioDirectiveChip {
+  display: inline-block;
+  background: #FEF3C7;
+  color: #B45309;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1px solid #FDE68A;
+  margin-bottom: 0.5rem;
+}
+
+.studioQuestionText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.6;
+  margin: 0 0 0.5rem 0;
+}
+
+.studioDirectiveNotice {
+  font-size: 0.82rem;
+  color: #64748B;
+  background: #FFFFFF;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border-left: 3px solid #F59E0B;
+  margin-top: 0.5rem;
+}
+
+/* Model Outline Accordion inside Studio */
+.modelOutlineCard {
+  background: #FFFBF5;
+  border: 1px solid #FED7AA;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.modelOutlineHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #C2410C;
+  margin: 0;
+}
+
+.modelOutlineBody {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed #FDBA74;
+}
+
+.outlineSection {
+  margin-bottom: 0.85rem;
+}
+
+.outlineSectionLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #EA580C;
+  margin-bottom: 0.25rem;
+}
+
+.outlineSectionText {
+  font-size: 0.88rem;
+  color: #1E293B;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.outlineBullets {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+/* Right Studio Column: Timer, Editor, Upload, Rubric */
+.studioRightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Timer & Word Count Bar */
+.studioControlBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1E293B;
+  color: #FFFFFF;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.timerWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.timerDisplay {
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FBBF24;
+  letter-spacing: 0.05em;
+}
+
+.btnTimerToggle {
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  background: #EA580C;
+  color: #FFFFFF;
+  transition: background 0.15s ease;
+}
+
+.btnTimerToggle:hover {
+  background: #D94E06;
+}
+
+.btnTimerReset {
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid #475569;
+  cursor: pointer;
+  background: transparent;
+  color: #CBD5E1;
+}
+
+.wordMeter {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: #CBD5E1;
+}
+
+.wordCountNum {
+  font-weight: 700;
+  color: #34D399;
+}
+
+.wordCountWarn {
+  color: #F87171;
+}
+
+/* Practice Mode Tabs (Typing vs Upload) */
+.modeTabs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 0.5rem;
+}
+
+.modeTabBtn {
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  border: none;
+  background: #F1F5F9;
+  color: #64748B;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.modeTabBtnActive {
+  background: #1E293B;
+  color: #FFFFFF;
+}
+
+/* Textarea Editor */
+.editorTextarea {
+  width: 100%;
+  min-height: 280px;
+  padding: 1rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  background: #FFFFFF;
+  color: #0F172A;
+  transition: border-color 0.15s ease;
+}
+
+.editorTextarea:focus {
+  border-color: #EA580C;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12);
+}
+
+/* Upload Dropzone */
+.uploadZone {
+  border: 2px dashed #CBD5E1;
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background: #F8FAFC;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.uploadZone:hover {
+  border-color: #EA580C;
+  background: #FFFBF5;
+}
+
+.uploadIcon {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.uploadHeading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 0.25rem 0;
+}
+
+.uploadSub {
+  font-size: 0.82rem;
+  color: #64748B;
+  margin: 0;
+}
+
+/* Self-Evaluation Rubric Accordion */
+.rubricAccordion {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.rubricAccordionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.rubricList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #E2E8F0;
+}
+
+.rubricItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+}
+
+.rubricDimension {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.15rem;
+}
+
+.rubricGuide {
+  font-size: 0.8rem;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+.rubricMaxMarks {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #EA580C;
+  white-space: nowrap;
+}
+
+/* Questions Grid (Feed) */
+.questionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.questionCard {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 1.35rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.questionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: #CBD5E1;
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cardPills {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.paperPill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: #1E293B;
+  color: #FFFFFF;
+  padding: 0.2rem 0.55rem;
+  border-radius: 5px;
+}
+
+.marksPill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  background: #FFF7ED;
+  color: #C2410C;
+  padding: 0.2rem 0.55rem;
+  border-radius: 5px;
+  border: 1px solid #FED7AA;
+}
+
+.directiveBadge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: #FEF3C7;
+  color: #B45309;
+  padding: 0.2rem 0.55rem;
+  border-radius: 5px;
+  border: 1px solid #FDE68A;
+}
+
+.timeTag {
+  font-size: 0.78rem;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cardQuestionText {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.55;
+  margin: 0 0 0.85rem 0;
+}
+
+.cardTopicMeta {
+  font-size: 0.82rem;
+  color: #64748B;
+  margin-bottom: 1.15rem;
+}
+
+.cardActionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed #E2E8F0;
+  flex-wrap: wrap;
+}
+
+.btnStartPractice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #EA580C;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnStartPractice:hover {
+  background: #D94E06;
+  transform: translateY(-1px);
+}
+
+.btnViewModel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #F8FAFC;
+  color: #334155;
+  padding: 0.5rem 0.85rem;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid #CBD5E1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btnViewModel:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+}
+
+/* Numbered Pagination */
+.paginationWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.pageBtn {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #334155;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+  color: #0F172A;
+}
+
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageBtnActive {
+  background: #EA580C;
+  color: #FFFFFF;
+  border-color: #EA580C;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.25);
+}
+
+.pageEllipsis {
+  padding: 0 0.35rem;
+  color: #94A3B8;
+}
+
+/* Responsive across all 5 tiers */
+@media (max-width: 900px) {
+  .studioGrid {
+    grid-template-columns: 1fr;
+  }
+  .questionsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 1.7rem;
+  }
+  .disclaimerBanner {
+    flex-direction: column;
+    padding: 0.85rem;
+  }
+  .studioTopBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .studioControlBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cardActionRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btnStartPractice, .btnViewModel {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroTitle {
+    font-size: 1.45rem;
+  }
+  .heroSection {
+    padding: 1.85rem 0.85rem 1.65rem;
+  }
+  .mainContainer {
+    padding: 0 0.85rem;
+  }
+  .activeStudioBox {
+    padding: 1rem 0.85rem;
+    border-radius: 12px;
+  }
+  .questionCard {
+    padding: 1rem 0.85rem;
+  }
+  .editorTextarea {
+    min-height: 220px;
+    padding: 0.75rem;
+  }
+  .modeTabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .modeTabBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

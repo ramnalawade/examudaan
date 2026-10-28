@@ -1,0 +1,76 @@
+{
+  "docId": 1695,
+  "examName": "Workshop Superintendent, Government Engineering College, Maharashtra Engineering Teachers' Service, Gr. A",
+  "examNameMr": "कार्यशाळा अधीक्षक, शासकीय अभियांत्रिकी महाविद्यालय, महाराष्ट्र अभियांत्रिकी शिक्षक सेवा, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Workshop Superintendent, Government Engineering College",
+      "paperTitleMr": "कार्यशाळा अधीक्षक, शासकीय अभियांत्रिकी महाविद्यालय",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "ENGINEERING MATHEMATICS",
+          "unitTitleMr": "अभियांत्रिकी गणित",
+          "topics": [
+            "Linear Algebra: Matrix algebra, Systems of linear equations, Eigen values and eigen vectors.",
+            "Calculus: Functions of single variable, Limit, continuity and differentiability, Mean value theorems, Evaluation of definite and improper integrals, Partial derivatives, Total derivative, Maxima and minima, Gradient, Divergence and Curl, Vector identities, Directional derivatives, Line, Surface and Volume integrals, Stokes, Gauss and Green's theorems.",
+            "Differential equations: First order equations (linear and nonlinear), Higher order linear differential equations with constant coefficients, Cauchy's and Euler's equations, Initial and boundary value problems, Laplace transforms, Solutions of one dimensional heat and wave equations and Laplace equation.",
+            "Complex variables: Analytic functions, Cauchy's integral theorem, Taylor and Laurent series.",
+            "Probability and Statistics: Definitions of probability and sampling theorems, Conditional probability, Mean, median, mode and standard deviation, Random variables, Poisson, Normal and Binomial distributions.",
+            "Numerical Methods: Numerical solutions of linear and non-linear algebraic equations. Integration by trapezoidal and Simpson's rule, single and multi-step methods for differential equations."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "GENERAL ENGINEERING",
+          "unitTitleMr": "सामान्य अभियांत्रिकी",
+          "topics": [
+            "Engineering Materials: Structure and properties of engineering materials and their applications; effect of strain, strain rate and temperature on mechanical properties of metals and alloys; heat treatment of metals and alloys, its influence on mechanical properties.",
+            "Applied Mechanics: Engineering mechanics – equivalent force systems, free body concepts, equations of equilibrium; strength of materials – stress, strain and their relationship, Mohr's circle, deflection of beams, bending and shear stress, Euler's theory of columns.",
+            "Theory of Machines and Design: Analysis of planar mechanisms, cams and followers; governers and fly wheels; design of elements – failure theories; design of bolted, riveted and welded joints; design of shafts, keys, spur gears, belt drives, brakes and clutches.",
+            "Thermal Engineering: Fluid mechanics – fluid statics, Bernoulli's equation, flow through pipes, equations of continuity and momentum; thermodynamics – zeroth, first and second law of thermodynamics, thermodynamic system and processes, calculation of work and heat for systems and control volumes; air standard cycles; basics of internal combustion engines and steam turbines; heat transfer – fundamentals of conduction, convection and radiation, heat exchangers."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "MECHANICAL & PRODUCTION ENGINEERING",
+          "unitTitleMr": "यांत्रिक आणि उत्पादन अभियांत्रिकी",
+          "topics": [
+            "Metallurgy: Production of metal powders, compaction and sintering, iron equilibrium diagram",
+            "Metal Casting: Casting processes – types and applications; patterns – types and materials; allowances; moulds and cores – materials, making, and testing; casting techniques of cast iron, steels and nonferrous metals and alloys; solidification; design of casting, gating and risering; casting inspection, defects and remedies.",
+            "Metal Forming: Stress-strain relations in elastic and plastic deformation; concept of flow stress, deformation mechanisms; hot and cold working – forging, rolling, extrusion, wire and tube drawing; sheet metal working processes such as blanking, piercing, bending, deep drawing, coining and embossing; analysis of rolling, forging, extrusion and wire/rod drawing; metal working defects.",
+            "Metal Joining Processes: Welding processes – manual metal arc, MIG, TIG, plasma arc, submerged arc, electroslag, thermit, resistance, forge, friction, and explosive welding; other joining processes – soldering, brazing, braze welding; inspection of welded joints, defects and remedies; introduction to advanced welding processes – ultrasonic, electron beam, laser beam; thermal cutting.",
+            "Machining and Machine Tool Operations: Basic machine tools; machining processes-turning, drilling, boring, milling, shaping, planing, gear cutting, thread production, broaching, grinding, lapping, honing, super finishing; mechanics of machining – geometry of cutting tools, chip formation, cutting forces and power requirements, Merchant's analysis; selection of machining parameters; tool materials, tool wear and tool life, economics of machining, thermal aspects of machining, cutting fluids, machinability; principles and applications of nontraditional machining processes – USM, AJM, WJM, EDM and Wire cut EDM, LBM, EBM, PAM, CHM, ECM.",
+            "Tool Engineering: Jigs and fixtures – principles, applications, and design; press tools – configuration, design of die and punch; principles of forging die design.",
+            "Metrology and Inspection: Limits, fits, and tolerances, interchangeability, selective assembly; linear and angular measurements by mechanical and optical methods, comparators; design of limit gauges; interferometry; measurement of straightness, flatness, roundness, squareness and symmetry; surface finish measurement; inspection of screw threads and gears; alignment testing of machine tools.",
+            "Quality Management: Quality – concept and costs, quality circles, quality assurance; statistical quality control, acceptance sampling, zero defects, six sigma; total quality management; ISO 9000; design of experiments – taguchi method.",
+            "Computer Integrated Manufacturing: Basic concepts of CAD, CAM, CAPP, cellular manufacturing, NC, CNC, DNC, Robotics, FMS, and CIM.",
+            "Product Design and Development: Principles of good product design, tolerance design; quality and cost considerations; product life cycle; standardization, simplification, diversification, value engineering and analysis, concurrent engineering.",
+            "Engineering Economy and Costing: Elementary cost accounting and methods of depreciation; break-even analysis, techniques for evaluation of capital investments, financial statements.",
+            "Work System Design: Taylor's scientific management, Gilbreths's contributions; productivity – concepts and measurements; method study, micro-motion study, principles of motion economy; work measurement – stop watch time study, work sampling, standard data, PMTS; ergonomics; job evaluation, merit rating, incentive schemes, and wage administration; business process reengineering.",
+            "Production Planning and Inventory Control: Forecasting techniques – causal and time series models, moving average, exponential smoothing, trend and seasonality; aggregate production planning; master production scheduling; MRP and MRP-II; order control and flow control; routing, scheduling and priority dispatching; push and pull production systems, concept of JIT manufacturing system; logistics, distribution, and supply chain management; Inventory – functions, costs, classifications, deterministic and probabilistic inventory models, quantity discount; perpetual and periodic inventory control systems.",
+            "Operation Research: Linear programming – problem formulation, simplex method, duality and sensitivity analysis; transportation and assignment models; network flow models, constrained optimization and Lagrange multipliers; simple queuing models; dynamic programming; simulation – manufacturing applications; PERT and CPM, time-cost trade-off, resource leveling.",
+            "Reliability and Maintenance: Reliability, availability and maintainability; distribution of failure and repair times; determination of MTBF and MTTR, reliability models; system reliability determination; preventive maintenance and replacement, total productive maintenance – concept and applications.",
+            "Industrial safety: Introduction to industrial safety and measures."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

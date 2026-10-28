@@ -20,10 +20,9 @@ import { trackLogin } from '../../lib/analytics'
 export default function LoginPage() {
   const router = useRouter()
 
-  const [tab, setTab]         = useState('email')  // 'email' | 'phone' | 'password'
+  const [tab, setTab]         = useState('email')  // 'email' | 'password'
   const [password, setPassword] = useState('')
   const [email, setEmail]     = useState('')
-  const [phone, setPhone]     = useState('')
   const [otp, setOtp]         = useState('')
   const [otpSent, setOtpSent] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -36,8 +35,8 @@ export default function LoginPage() {
     if (token) router.replace('/dashboard')
   }, [router])
 
-  const identifier = tab === 'email' ? email : phone
-  const channel    = tab === 'email' ? 'email' : 'sms'
+  const identifier = email
+  const channel    = 'email'
 
   // --- Step 1: Send OTP ---
   async function handleSendOtp(e) {
@@ -249,17 +248,6 @@ export default function LoginPage() {
               Email (OTP)
             </button>
             <button
-              className={`tab-btn${tab === 'phone' ? ' active' : ''}`}
-              onClick={() => resetTab('phone')}
-              id="tab-phone-btn"
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: 16, verticalAlign: 'middle', marginRight: 4 }}>
-                phone
-              </span>
-              Phone (OTP)
-            </button>
-          
-            <button
               className={`tab-btn${tab === 'password' ? ' active' : ''}`}
               onClick={() => resetTab('password')}
               id="tab-password-btn"
@@ -271,15 +259,14 @@ export default function LoginPage() {
             </button>
           </div>
 
-          {/* OTP Form — shared for email and phone */}
-          {/* OTP Form (email / phone tabs) */}
+          {/* OTP Form (Email tab) */}
           {tab !== 'password' && (
           <form
             style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
             onSubmit={otpSent ? handleVerifyOtp : handleSendOtp}
           >
             {/* Email input */}
-            {tab === 'email' && !otpSent && (
+            {!otpSent && (
               <div className="input-group">
                 <label className="input-label" htmlFor="email-input">Email Address</label>
                 <input
@@ -294,31 +281,11 @@ export default function LoginPage() {
               </div>
             )}
 
-            {/* Phone input */}
-            {tab === 'phone' && !otpSent && (
-              <div className="input-group">
-                <label className="input-label" htmlFor="phone-input">Mobile Number</label>
-                <div className="phone-input-wrap">
-                  <span className="phone-prefix">+91</span>
-                  <input
-                    id="phone-input"
-                    className="form-input"
-                    type="tel"
-                    placeholder="Enter 10-digit number"
-                    value={phone}
-                    onChange={e => setPhone(e.target.value)}
-                    maxLength={10}
-                    required
-                  />
-                </div>
-              </div>
-            )}
-
             {/* OTP input — shown after sending */}
             {otpSent && (
               <div className="input-group">
                 <label className="input-label" htmlFor="otp-input">
-                  Enter OTP sent to {identifier}
+                  Enter OTP sent to {email}
                 </label>
                 <input
                   id="otp-input"
@@ -337,7 +304,7 @@ export default function LoginPage() {
                   onClick={() => { setOtpSent(false); setOtp(''); setError('') }}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--primary)', fontSize: 13, fontWeight: 600, textAlign: 'left', padding: '4px 0' }}
                 >
-                  Change {tab === 'email' ? 'email' : 'number'}
+                  Change email
                 </button>
               </div>
             )}

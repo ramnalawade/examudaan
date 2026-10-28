@@ -1,0 +1,217 @@
+/* ============================================================
+   AlertsClient.module.css
+   ExamUdaan.in — Client island styles for Alerts page
+   ============================================================ */
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.headerTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0;
+}
+
+.unreadBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  background: var(--error, #BA1A1A);
+  color: #ffffff;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  min-width: 22px;
+}
+
+.headerSubtitle {
+  font-size: 14px;
+  color: var(--secondary);
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.markReadBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary, #EA580C);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.1s;
+}
+
+.markReadBtn:hover {
+  background: rgba(234, 88, 12, 0.08);
+}
+
+.tabsRow {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.alertsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alertLink {
+  text-decoration: none;
+  background: var(--surface-container-lowest, #fff);
+  transition: box-shadow 0.15s;
+}
+
+.alertLinkUnread {
+  background: rgba(163, 57, 0, 0.03);
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconBoxNew {
+  background: rgba(163, 57, 0, 0.08);
+  color: var(--primary);
+}
+
+.iconBoxUrgent {
+  background: var(--error-container);
+  color: var(--error);
+}
+
+.iconBoxResult {
+  background: rgba(0, 107, 44, 0.1);
+  color: var(--tertiary);
+}
+
+.iconBoxAdmit {
+  background: var(--secondary-container);
+  color: var(--secondary);
+}
+
+.iconSymbol {
+  font-size: 24px;
+}
+
+.contentCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0;
+  display: inline;
+  font-family: inherit;
+}
+
+.unreadDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--primary, #EA580C);
+  border-radius: 50%;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.timeAgo {
+  font-size: 11px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.cardBody {
+  font-size: 13px;
+  color: var(--secondary);
+  margin-top: 4px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.typeTag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.typeTagNew {
+  color: var(--primary);
+}
+
+.typeTagUrgent {
+  color: var(--error);
+}
+
+.typeTagResult {
+  color: var(--tertiary);
+}
+
+.typeTagAdmit {
+  color: var(--secondary);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--secondary);
+}
+
+.emptyIcon {
+  font-size: 56px;
+  display: block;
+  margin-bottom: 12px;
+  opacity: 0.4;
+}
+
+.emptyTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.emptySubtitle {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

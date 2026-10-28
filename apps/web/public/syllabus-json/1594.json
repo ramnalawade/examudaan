@@ -1,0 +1,248 @@
+{
+  "docId": 1594,
+  "examName": "Assistant Professor, Law, Government Colleges/Institutions",
+  "examNameMr": "सहायक प्राध्यापक, कायदा, शासकीय महाविद्यालये/संस्था",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Law",
+      "paperTitleMr": "कायदा",
+      "totalMarks": 200,
+      "duration": "2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Constitutional Law of India",
+          "unitTitleMr": "भारताची घटनात्मक कायदा",
+          "topics": [
+            "Historical Perspective.",
+            "Salient features of the Constitution.",
+            "Preamble and the interpretation of the Constitution.",
+            "Fundamental Rights.",
+            "Directive Principles of State Policies.",
+            "Fundamental Duties.",
+            "Judiciary – Executive – Legislature.",
+            "Centre-State Relations.",
+            "Emergency.",
+            "Amendment."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Legal Theory (Jurisprudence)",
+          "unitTitleMr": "कायदेशीर सिद्धांत (न्यायशास्त्र)",
+          "topics": [
+            "Nature and Sources of Law.",
+            "Positivism, Natural Law Theory, Sociological jurisprudence.",
+            "Legal concepts - Rights, Duty, Ownership, Possession and Person.",
+            "Judicial contribution in bringing social changes.",
+            "Law and Morality."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Public International Law and Human Rights",
+          "unitTitleMr": "सार्वजनिक आंतरराष्ट्रीय कायदा आणि मानवाधिकार",
+          "topics": [
+            "Nature of International Law and its sources.",
+            "Relation between International Law and Municipal Law.",
+            "Concept of sovereignty and its relevance in present scenario.",
+            "Recognition of State and Government.",
+            "Extra-diction, Asylum, Nationality and State Refugees.",
+            "International Court of Justice - powers and function.",
+            "United Nations Organization and its organs.",
+            "War and armed conflict - Role of International Organizations.",
+            "Concept and Development of Human Rights.",
+            "Role of International Institutions on Human Rights.",
+            "Universal Declaration of Human Rights.",
+            "International Conventions.",
+            "Human Rights in Global and Regional Perspective.",
+            "Human Rights and vulnerable groups.",
+            "Implementation of Human Rights - Role of National Human Rights Commission in India."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Family Law",
+          "unitTitleMr": "कौटुंबिक कायदा",
+          "topics": [
+            "Concept – Sources of Family Law in India.",
+            "Marriage",
+            "Divorce.",
+            "Adoption and guardianship.",
+            "Maintenance.",
+            "Matrimonial Remedies.",
+            "Family Court."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Law of Contract",
+          "unitTitleMr": "कराराचा कायदा",
+          "topics": [
+            "Definition, essentials of contract.",
+            "Capacity to contract.",
+            "Elements vitiating contract - Coercion undue influence, misrepresentation, fraud, mistake, public policy, frustration.",
+            "Remedies for breach of contract.",
+            "Special contract – indemnity, guarantee, bailment, pledge, agency.",
+            "Indian Partnership Act.",
+            "Sale of Goods Act."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Law of Torts Including Consumer Protection Law",
+          "unitTitleMr": "उपभोक्ता संरक्षण कायद्यासह टॉर्ट्सचा कायदा",
+          "topics": [
+            "Definition, nature and scope of torts.",
+            "Justifications.",
+            "Discharge.",
+            "General Principles of Tortuous Liability.",
+            "Vicarious and Absolute Liability.",
+            "Consumer Protection Law."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Law of Crimes - Indian Penal Code, Criminology",
+          "unitTitleMr": "गुन्ह्यांचा कायदा - भारतीय दंड संहिता, गुन्हेशास्त्र",
+          "topics": [
+            "General Principles of Criminal Liability.",
+            "Offences affecting State, Property and Human Body.",
+            "Offences relating to Public Servants.",
+            "Offences relating to Marriage.",
+            "Theories of Punishments."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Labour Laws",
+          "unitTitleMr": "कामगार कायदे",
+          "topics": [
+            "Definitions.",
+            "Industrial Dispute Act, 1947.",
+            "Strikes, Lock-out, and instruments of collective bargaining, Retrenchment, Lay-off and closures.",
+            "Maharashtra Recognition of Trade Unions and Prevention of Unfair Labour Practices Act, 1971.",
+            "Factories Act, 1948.",
+            "Employees State Insurance Scheme Act, 1948.",
+            "Minimum Wages Act.",
+            "Workmen's Compensations Act, 1923."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Administrative Law",
+          "unitTitleMr": "प्रशासकीय कायदा",
+          "topics": [
+            "Definition, nature and scope of Administrative Law",
+            "Concept of rule of Law",
+            "Doctrine of Separation of Powers",
+            "Administration discretion",
+            "Liability for the wrongs of the government.",
+            "Delegated Legislation.",
+            "Principles of Natural Justice.",
+            "Judicial Review and Public Interest Litigation.",
+            "Tribunals.",
+            "Informal methods of settlement of dispute and grievance redressal procedures."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Environmental Law",
+          "unitTitleMr": "पर्यावरण कायदा",
+          "topics": [
+            "Concept of Environmental Pollution.",
+            "Sources, causes and various kinds of pollution.",
+            "Constitutional perspective - Public Interest Litigation and new trends.",
+            "Environmental Impact Assessment.",
+            "Environmental Protection Laws and its implementation.",
+            "Air (Prevention and Control of Pollution) Act, 1981.",
+            "Water (Prevention and Control of Pollution) Act, 1974.",
+            "Environment Protection Act, 1986.",
+            "The Wildlife Protection Act, 1972.",
+            "Forest (Conservation) Act, 1980.",
+            "Prevention of Cruelty to Animals Act, 1960."
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Intellectual Property Law",
+          "unitTitleMr": "बौद्धिक संपदा कायदा",
+          "topics": [
+            "Nature of intellectual property.",
+            "Objects of Patent Law.",
+            "Rights and obligations of patents.",
+            "Trademarks-- Licensing of trademarks and registered users.",
+            "Copy rights-- objects and nature.",
+            "Rights and remedies against infringement.",
+            "Civil remedies against piracy and defaces.",
+            "Confidential information and breach of confidence.",
+            "Intellectual property and conservation of traditional knowledge.",
+            "Intellectual property designs."
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Land Laws and Property Law",
+          "unitTitleMr": "जमीन कायदे आणि मालमत्ता कायदा",
+          "topics": [
+            "Maharashtra Land Revenue Code, 1966.",
+            "Maharashtra Rent Control Act, 1999.",
+            "Transfer of Property Act.",
+            "Easement Act."
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Procedural Laws-- C.P.C., Cr.P.C. And Evidence",
+          "unitTitleMr": "प्रक्रियात्मक कायदे-- सी.पी.सी., सी.आर.पी.सी. आणि पुरावा",
+          "topics": [
+            "Definitions.",
+            "Essentials of a suit.",
+            "Principles of Res-subjudice and Res-judicata.",
+            "Suits in particular cases.",
+            "Appeals.",
+            "Review, Reference and Revision.",
+            "Law of Limitation.",
+            "Constitution of Criminal Courts, powers, functions and jurisdiction.",
+            "Arrest, Warrant, Summons, Investigation, Trial.",
+            "Regular Bail and Anticipatory Bail.",
+            "Nature and purpose of Evidence.",
+            "Admission, Confession, Dying declaration.",
+            "Different types of evidence and its evidentiary value.",
+            "Estoppels.",
+            "Competency of witness-- examination of witness-- burden of proof.",
+            "Special Privileges to Government."
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Recent Developments",
+          "unitTitleMr": "अलीकडील घडामोडी",
+          "topics": [
+            "Laws Relating to Women and Children.",
+            "Right to Information Act, 2005",
+            "Alternative Dispute Resolution System.",
+            "The Information Technology Act, 2000.",
+            "Company Law, 2014.",
+            "Landmark decisions of Apex Court.",
+            "New Trends in Law."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

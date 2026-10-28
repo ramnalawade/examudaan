@@ -1,0 +1,1508 @@
+{
+  "docId": 10354,
+  "examName": "Assistant Professor in Periodontology, Oral Pathology and Microbiology, Oral and Maxillofacial Surgery, Government Dental College and Hospital, Group-B - Syllabus",
+  "examNameMr": "सहायक प्राध्यापक, पेरिडॉन्टोलॉजी, ओरल पॅथॉलॉजी आणि मायक्रोबायोलॉजी, ओरल आणि मॅक्सिलोफेशियल सर्जरी, शासकीय दंत महाविद्यालय आणि रुग्णालय, गट-ब - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor in Periodontology, Oral Pathology and Microbiology, Oral and Maxillofacial Surgery, Government Dental College and Hospital, Group-B - Syllabus",
+      "paperTitleMr": "सहायक प्राध्यापक, पेरिडॉन्टोलॉजी, ओरल पॅथॉलॉजी आणि मायक्रोबायोलॉजी, ओरल आणि मॅक्सिलोफेशियल सर्जरी, शासकीय दंत महाविद्यालय आणि रुग्णालय, गट-ब - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Neck - Deep fascia of neck, posterior triangle, suboccipital triangle, anterior triangle",
+          "unitTitleMr": "मान - मानेचा खोल फॅशिया, पोस्टेरियर त्रिकोण, सबॉसिस्पिटल त्रिकोण, अँटेरिअर त्रिकोण",
+          "topics": [
+            "Anterior median region of the neck, deep structures in the neck.",
+            "Cranial cavity - Meninges, parts of brain, ventricles of brain, dural venous sinuses.",
+            "Cranial nerves attached to the brain, pituitary gland."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Orbital cavity – Muscles of the eye ball, supports of the eye ball, nerves and vessels in the orbit",
+          "unitTitleMr": "नेत्राची पोकळी – डोळ्याच्या स्नायू, डोळ्याचे आधार, कक्षेतील नसा आणि रक्तवाहिन्या",
+          "topics": [
+            "Orbit structures and contents."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Temporomandibular joint, muscles of mastication, infratemporal fossa, pterygopalatine fossa",
+          "unitTitleMr": "टेम्पोरमॅन्डिबुलर सांधे, जबड्याचे स्नायू, इन्फ्राटेम्पोरल फोसा, पटेरिगो-पॅलाटिन फोसा",
+          "topics": [
+            "Temporomandibular joint anatomy and associated structures."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Pharynx and Larynx. Osteology – Foetal skull, adult skull, individual bones, hyoid bone and cervical vertebrae",
+          "unitTitleMr": "घसा आणि कंठ. अस्थीशास्त्र – गर्भाची कवटी, प्रौढ कवटी, कवटीची वैयक्तिक हाडे, हायॉइड हाड आणि मानमोडी मणके",
+          "topics": [
+            "Pharynx (palatine tonsil and the auditory tube) Larynx, foetal skull, adult skull, individual bones of the skull, hyoid bone and cervical vertebrae."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Clinical Procedures: Intramuscular injections",
+          "unitTitleMr": "क्लिनिकल प्रक्रिया: इंट्रामस्क्युलर इंजेक्शन",
+          "topics": [
+            "Intramuscular injections: Demonstration on a dissected specimen and on a living person of the following sites of injection.",
+            "Deltoid muscle and its relation to the axillary nerve and radial nerve."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Vastus lateralis muscle and intravenous injections",
+          "unitTitleMr": "व्हेस्टस लॅटरलिस स्नायू आणि इंट्राव्हेनस इंजेक्शन",
+          "topics": [
+            "Vastus lateralis muscle.",
+            "Intravenous injections and venesection: Demonstration of veins in the dissected specimen and on a living person."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Long saphenous vein and arterial pulsations",
+          "unitTitleMr": "लाँग सेफेनस वेन आणि धमनी स्पंदने",
+          "topics": [
+            "Long saphenous vein.",
+            "Arterial pulsations: Demonstration of arteries on a dissected specimen and feeling of pulsation of the following arteries on a living person."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Dorsalis pedis and lumbar puncture",
+          "unitTitleMr": "डॉर्सॅलिस पेडीस आणि कंबर पंक्चर",
+          "topics": [
+            "Dorsalis pedis.",
+            "Lumbar puncture: Demonstration on a dissected specimen of the spinal cord, cauda equina and epidural space and the inter vertebral space between L4 and L5."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Embryology",
+          "unitTitleMr": "भ्रूणशास्त्र",
+          "topics": [
+            "Oogenesis, Spermatogenesis, Fertilisation, Placenta, Primitive streak, Neural crest.",
+            "Bilaminar and trilaminar embryonic disc, Intra embryonic mesoderm - formation and fate, notochord formation and fate.",
+            "Pharyngeal arches, pouches and clefts, Development of face, tongue, palate, thyroid gland, pituitary gland, salivary glands, and anomalies in their development, Tooth development in brief."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Histology",
+          "unitTitleMr": "उतीशास्त्र",
+          "topics": [
+            "The Cell, Basic tissues - Epithelium, Connective tissue including cartilage and bone.",
+            "Muscle Tissue, Nervous tissue : Peripheral nerve, optic nerve, sensory ganglion, motor ganglion, Skin Classification of Glands.",
+            "Salivary glands, Blood vessels, Lymphoid tissue, Tooth, lip, tongue, hard palate, oesophagus, stomach, duodenum, ileum, colon, vermiform appendix, Liver, Pancreas, Lung, Trachea, Epiglottis, Thyroid gland, parathyroid gland, supra renal gland, pituitary gland, Kidney, Ureter, Urinary bladder, Ovary and testis."
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Medical Genetics",
+          "unitTitleMr": "वैद्यकीय आनुवंशिकी",
+          "topics": [
+            "Mitosis, meiosis, Chromosomes, gene structure, Mendelism, modes of inheritance."
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Blood Physiology",
+          "unitTitleMr": "रक्त शरीरक्रियाविज्ञान",
+          "topics": [
+            "Composition and functions of blood, plasma proteins, erythrocytes, erythropoiesis, ESR.",
+            "Haemoglobin, blood indices, leucocytes, thrombocytes, haemostasis, blood groups, blood volume.",
+            "Body fluids, tissue fluids and lymph, reticuloendothelial system."
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Muscle and Nerve Physiology",
+          "unitTitleMr": "स्नायू आणि मज्जातंतू शरीरक्रियाविज्ञान",
+          "topics": [
+            "Classification of nerves, structure of skeletal muscle, molecular mechanism of muscle contraction, neuromuscular transmission.",
+            "Properties of skeletal muscle, structure and properties of cardiac muscle and smooth muscle."
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Digestive System Physiology",
+          "unitTitleMr": "पचनसंस्था शरीरक्रियाविज्ञान",
+          "topics": [
+            "Introduction to digestion, general structure of G.I. tract, innervation, salivary glands, stomach, exocrine pancreas.",
+            "Liver, gall bladder, small intestine, large intestine, motor functions of GIT."
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Excretory System Physiology",
+          "unitTitleMr": "उत्सर्जन संस्था शरीरक्रियाविज्ञान",
+          "topics": [
+            "Structure and functions of kidney, functional unit, juxta glomerular apparatus, renal blood flow.",
+            "Formation of urine, GFR, tubular reabsorption and secretion, concentration and dilution of urine, micturition."
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Endocrinology Physiology",
+          "unitTitleMr": "अंतःस्रावी ग्रंथ्या शरीरक्रियाविज्ञान",
+          "topics": [
+            "General endocrinology, anterior and posterior pituitary, thyroid, adrenal cortex and medulla, other hormones."
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Reproductive System Physiology",
+          "unitTitleMr": "प्रजनन संस्था शरीरक्रियाविज्ञान",
+          "topics": [
+            "Sex differentiation, physiological anatomy of male and female sex organs, menstrual cycle, pregnancy, lactation, contraception."
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Cardiovascular System Physiology",
+          "unitTitleMr": "हृदय व रक्तवाहिन्या संस्था शरीरक्रियाविज्ञान",
+          "topics": [
+            "Functional anatomy and innervation of heart, ECG, cardiac cycle, heart sounds, heart rate, cardiac output, arterial blood pressure, coronary circulation."
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Respiratory System Physiology",
+          "unitTitleMr": "श्वसन संस्था शरीरक्रियाविज्ञान",
+          "topics": [
+            "Physiology of respiration, respiratory movements, spirometry, pulmonary ventilation, exchange of gases, regulation of respiration, hypoxia."
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Special Senses",
+          "unitTitleMr": "विशेष ज्ञानेन्द्रिये",
+          "topics": [
+            "Fundamental knowledge of vision, hearing, taste and smell."
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Chemistry of Bioorganic Molecules",
+          "unitTitleMr": "जैव-सेंद्रिय रेणूंचे रसायनशास्त्र",
+          "topics": [
+            "Carbohydrates, lipids, proteins, nucleic acids, high energy compounds."
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "Macronutrients and Digestion",
+          "unitTitleMr": "स्थूल अन्नद्रव्ये आणि पचन",
+          "topics": [
+            "Energy needs, basal metabolic rate, dietary carbohydrates, lipids, proteins, enzymatic hydrolysis."
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Micronutrients",
+          "unitTitleMr": "सूक्ष्म अन्नद्रव्ये",
+          "topics": [
+            "Vitamins, minerals, calcium, phosphate, iron, iodine, fluoride."
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "Energy Metabolism",
+          "unitTitleMr": "ऊर्जा चयापचय",
+          "topics": [
+            "Glycolysis, pyruvate oxidation, citric acid cycle, beta oxidation, electron transport chain, gluconeogenesis."
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "Special Aspects of Metabolism",
+          "unitTitleMr": "चयापचयाचे विशेष पैलू",
+          "topics": [
+            "Pentose phosphate pathway, cholesterol synthesis and breakdown, ammonia metabolism, urea formation, detoxication."
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "Biochemical Genetics and Protein Synthesis",
+          "unitTitleMr": "बायोकेमिकल अनुवांशिकी आणि प्रथिने संश्लेषण",
+          "topics": [
+            "Nucleotides, DNA as genetic material, replication, transcription, translation, genetic code and mutation."
+          ]
+        },
+        {
+          "unitNumber": 27,
+          "unitTitle": "Enzyme and Metabolic Regulation",
+          "unitTitleMr": "एन्झाईम आणि चयापचय नियमन",
+          "topics": [
+            "Enzymes definition, classification, specificity, cofactors, effect of pH and temperature, inhibitors, second messengers."
+          ]
+        },
+        {
+          "unitNumber": 28,
+          "unitTitle": "Structural Components and Blood Proteins",
+          "unitTitleMr": "स्ट्रक्चरल घटक आणि रक्त प्रथिने",
+          "topics": [
+            "Connective tissue, bone structure, membranes, haemoglobin, plasma proteins, lipoproteins."
+          ]
+        },
+        {
+          "unitNumber": 29,
+          "unitTitle": "Medical Biochemistry",
+          "unitTitleMr": "वैद्यकीय बायोकेमिस्ट्री",
+          "topics": [
+            "Regulation of blood glucose, diabetes mellitus, hyperthyroidism, jaundice, liver and kidney function tests, genetic disorders."
+          ]
+        },
+        {
+          "unitNumber": 30,
+          "unitTitle": "Introduction to Pathology Terminologies",
+          "unitTitleMr": "पॅथॉलॉजी टर्मिनोलॉजीचा परिचय",
+          "topics": [
+            "The cell in health, normal cell structure, cellular functions."
+          ]
+        },
+        {
+          "unitNumber": 31,
+          "unitTitle": "Etiology and Pathogenesis of Disease Cell Injury",
+          "unitTitleMr": "रोगाचे इटिओलॉजी आणि पॅथोोजेनेसिस सेल इंजुरी",
+          "topics": [
+            "Types – congenital, acquired, mainly acquired causes of disease (hypoxic injury, chemical injury, physical injury, immunological injury)."
+          ]
+        },
+        {
+          "unitNumber": 32,
+          "unitTitle": "Degenerations",
+          "unitTitleMr": "डिजनरेशन्स",
+          "topics": [
+            "Amyloidosis, fatty change, cloudy swelling, hyaline change, mucoid degeneration."
+          ]
+        },
+        {
+          "unitNumber": 33,
+          "unitTitle": "Cell Death and Necrosis Apoptosis",
+          "unitTitleMr": "पेशी मृत्यू आणि नेक्रोसिस अपोपोटिस",
+          "topics": [
+            "Definition, causes, features and types of necrosis, gangrene (dry, wet, gas), pathological calcifications."
+          ]
+        },
+        {
+          "unitNumber": 34,
+          "unitTitle": "Inflammation",
+          "unitTitleMr": "दाह (इन्फ्लेमेशन)",
+          "topics": [
+            "Definition, causes, types, and features of acute and chronic inflammation, vascular response, cellular response, chemical mediators."
+          ]
+        },
+        {
+          "unitNumber": 35,
+          "unitTitle": "Healing",
+          "unitTitleMr": "हीलिंग (बरे होणे)",
+          "topics": [
+            "Regeneration, repair, mechanisms, healing by primary and secondary intention, fracture healing, complications."
+          ]
+        },
+        {
+          "unitNumber": 36,
+          "unitTitle": "Tuberculosis",
+          "unitTitleMr": "क्षयरोग (ट्यूबरकुलोसिस)",
+          "topics": [
+            "Epidemiology, pathogenesis, pathological features of primary and secondary TB, complications and fate."
+          ]
+        },
+        {
+          "unitNumber": 37,
+          "unitTitle": "Syphilis",
+          "unitTitleMr": "सिफिलीस",
+          "topics": [
+            "Epidemiology, types and stages of syphilis, pathological features, diagnostic criteria, oral lesions."
+          ]
+        },
+        {
+          "unitNumber": 38,
+          "unitTitle": "Typhoid",
+          "unitTitleMr": "टायफॉइड",
+          "topics": [
+            "Epidemiology, pathogenesis, pathological features, diagnostic criteria."
+          ]
+        },
+        {
+          "unitNumber": 39,
+          "unitTitle": "Thrombosis",
+          "unitTitleMr": "थ्रोम्बोसिस",
+          "topics": [
+            "Definition, pathophysiology, formation, complications and fate of a thrombus."
+          ]
+        },
+        {
+          "unitNumber": 40,
+          "unitTitle": "Embolism",
+          "unitTitleMr": "एम्बोलिझम",
+          "topics": [
+            "Definition, types, effects."
+          ]
+        },
+        {
+          "unitNumber": 41,
+          "unitTitle": "Ischaemia and Infarction",
+          "unitTitleMr": "इस्कॅमिया आणि इन्फार्क्शन",
+          "topics": [
+            "Definition, etiology, types, infarction of various organs."
+          ]
+        },
+        {
+          "unitNumber": 42,
+          "unitTitle": "Derangements of Body Fluids",
+          "unitTitleMr": "शारीरिक द्रव्यांचे विकार",
+          "topics": [
+            "Oedema – pathogenesis, different types."
+          ]
+        },
+        {
+          "unitNumber": 43,
+          "unitTitle": "Disorders of Circulation",
+          "unitTitleMr": "रक्ताभिसरण विकार",
+          "topics": [
+            "Hyperaemia, shock."
+          ]
+        },
+        {
+          "unitNumber": 44,
+          "unitTitle": "Nutritional Disorders",
+          "unitTitleMr": "पोषण विकार",
+          "topics": [
+            "Common vitamin deficiencies."
+          ]
+        },
+        {
+          "unitNumber": 45,
+          "unitTitle": "Immunological Mechanisms in Disease",
+          "unitTitleMr": "रोगातील इम्युनोलॉजिकल यंत्रणा",
+          "topics": [
+            "Humoral and cellular immunity, hypersensitivity and autoimmunity."
+          ]
+        },
+        {
+          "unitNumber": 46,
+          "unitTitle": "Hypertension",
+          "unitTitleMr": "उच्च रक्तदाब (हायपरटेन्शन)",
+          "topics": [
+            "Definition, classification, pathophysiology, effects in various organs."
+          ]
+        },
+        {
+          "unitNumber": 47,
+          "unitTitle": "Diabetes Mellitus",
+          "unitTitleMr": "मधुमेह (डायबेटीस मेलिटस)",
+          "topics": [
+            "Definition, classification, pathogenesis, pathology in different organs."
+          ]
+        },
+        {
+          "unitNumber": 48,
+          "unitTitle": "Adaptive Disorders of Growth",
+          "unitTitleMr": "वाढीचे अनुकूली विकार",
+          "topics": [
+            "Atrophy and hypertrophy, hyperplasia, metaplasia and dysplasia."
+          ]
+        },
+        {
+          "unitNumber": 49,
+          "unitTitle": "General Aspects of Neoplasia",
+          "unitTitleMr": "निओप्लासियाचे सामान्य पैलू",
+          "topics": [
+            "Definition, terminology, classification, differences between benign and malignant neoplasms, metastasis, carcinogenesis, oncogenes."
+          ]
+        },
+        {
+          "unitNumber": 50,
+          "unitTitle": "Precancerous Lesions and Systemic Pathology",
+          "unitTitleMr": "प्रिकॅन्सरस जखमा आणि प्रणालीगत पॅथॉलॉजी",
+          "topics": [
+            "Precancerous lesions, common specific tumours, systemic pathology, anaemias, leukaemias."
+          ]
+        },
+        {
+          "unitNumber": 51,
+          "unitTitle": "Diseases of Lymph Nodes",
+          "unitTitleMr": "लसिका ग्रंथींचे आजार",
+          "topics": [
+            "Hodgkin’s disease, Non-Hodgkin’s lymphoma, metastatic carcinoma."
+          ]
+        },
+        {
+          "unitNumber": 52,
+          "unitTitle": "Diseases of Oral Cavity",
+          "unitTitleMr": "तोंड पोकळीचे आजार",
+          "topics": [
+            "Lichen planus, stomatitis, leukoplakia, squamous cell carcinoma, dental caries, dentigerous cyst, ameloblastoma."
+          ]
+        },
+        {
+          "unitNumber": 53,
+          "unitTitle": "Diseases of Salivary Glands",
+          "unitTitleMr": "लाळ ग्रंथींचे आजार",
+          "topics": [
+            "Normal structure, sialadenitis, tumours."
+          ]
+        },
+        {
+          "unitNumber": 54,
+          "unitTitle": "Common Diseases of Bones",
+          "unitTitleMr": "हाडांचे सामान्य आजार",
+          "topics": [
+            "Osteomyelitis, metabolic bone diseases, bone tumours, osteosarcoma, giant cell tumour, Ewing’s sarcoma, fibrous dysplasia."
+          ]
+        },
+        {
+          "unitNumber": 55,
+          "unitTitle": "Diseases of Cardiovascular System",
+          "unitTitleMr": "हृदय व रक्तवाहिन्या संस्था आजार",
+          "topics": [
+            "Cardiac failure, congenital heart disease, infective endocarditis, atherosclerosis, ischaemic heart disease."
+          ]
+        },
+        {
+          "unitNumber": 56,
+          "unitTitle": "Haemorrhagic Disorders",
+          "unitTitleMr": "रक्तस्राव विकार",
+          "topics": [
+            "Coagulation cascade, coagulation disorders, platelet function, platelet disorders."
+          ]
+        },
+        {
+          "unitNumber": 57,
+          "unitTitle": "Clinical Specimens Processing",
+          "unitTitleMr": "क्लिनिकल नमुने प्रक्रिया",
+          "topics": [
+            "Basic knowledge of selection, collection, transport, processing of clinical specimens and identification of bacteria."
+          ]
+        },
+        {
+          "unitNumber": 58,
+          "unitTitle": "Bacterial Genetics and Immunology",
+          "unitTitleMr": "जिवाणू आनुवंशिकी आणि इम्युनोलॉजी",
+          "topics": [
+            "Bacterial genetics, drug resistance in bacteria, immunology basics."
+          ]
+        },
+        {
+          "unitNumber": 59,
+          "unitTitle": "Infection and Infectious Disease",
+          "unitTitleMr": "संक्रमण आणि संसर्गजन्य रोग",
+          "topics": [
+            "Definition, classification, source, mode of transmission and types of infectious disease."
+          ]
+        },
+        {
+          "unitNumber": 60,
+          "unitTitle": "Immunoglobulins",
+          "unitTitleMr": "इम्युनोग्लोबुलिन्स",
+          "topics": [
+            "Antibodies, general structure and role played in defense mechanism of the body."
+          ]
+        },
+        {
+          "unitNumber": 61,
+          "unitTitle": "Immunodeficiency Disorders",
+          "unitTitleMr": "प्रतिकारशक्ती कमी होण्याचे विकार",
+          "topics": [
+            "A brief knowledge of various types of immunodeficiency disorders relevant to dentistry."
+          ]
+        },
+        {
+          "unitNumber": 62,
+          "unitTitle": "Autoimmune Disorders",
+          "unitTitleMr": "ऑटोइम्यून विकार",
+          "topics": [
+            "Basic knowledge of autoimmune disorders of oral cavity and related structures."
+          ]
+        },
+        {
+          "unitNumber": 63,
+          "unitTitle": "Immunohematology and Systematic Bacteriology",
+          "unitTitleMr": "इम्युनोहेमॅटोलॉजी आणि सिस्टिमॅटिक बॅक्टेरिओलॉजी",
+          "topics": [
+            "Immunohematology, pyogenic cocci, Corynebacterium diphtheriae, non-sporing anaerobes."
+          ]
+        },
+        {
+          "unitNumber": 64,
+          "unitTitle": "Pyogenic Cocci",
+          "unitTitleMr": "पायोजेनिक कॉक्सी",
+          "topics": [
+            "Staphylococcus, Streptococcus, Pneumococcus, Gonococcus, Meningococcus, cariogenic streptococci."
+          ]
+        },
+        {
+          "unitNumber": 65,
+          "unitTitle": "Corynebacterium Diphtheriae",
+          "unitTitleMr": "कॉर्नेबॅक्टीरिअम डिफ्थेरी",
+          "topics": [
+            "Mode of spread, clinical features, laboratory diagnosis, chemotherapy and active immunisation."
+          ]
+        },
+        {
+          "unitNumber": 66,
+          "unitTitle": "Non-sporing Anaerobes",
+          "unitTitleMr": "नॉन-स्पोरिंग एनारोब्स",
+          "topics": [
+            "Classification, morphology, dental pathogens, mechanism of disease production and prevention."
+          ]
+        },
+        {
+          "unitNumber": 67,
+          "unitTitle": "Spirochaetes",
+          "unitTitleMr": "स्पायरोचाइट्स",
+          "topics": [
+            "Treponema pallidum, oral lesions of syphilis, Borrelia vincentii."
+          ]
+        },
+        {
+          "unitNumber": 68,
+          "unitTitle": "Actinomycetes and Virology",
+          "unitTitleMr": "अॅक्टिनोमायसेट्स आणि विषाणूशास्त्र",
+          "topics": [
+            "Actinomycetes, general properties of viruses, cultivation, host-virus interaction."
+          ]
+        },
+        {
+          "unitNumber": 69,
+          "unitTitle": "Virology Properties",
+          "unitTitleMr": "व्हायरोलॉजी गुणधर्म",
+          "topics": [
+            "General properties, cultivation, host-virus interaction with special reference to interferon."
+          ]
+        },
+        {
+          "unitNumber": 70,
+          "unitTitle": "Laboratory Diagnosis in Virology",
+          "unitTitleMr": "व्हायरोलॉजीमधील प्रयोगशाळा निदान",
+          "topics": [
+            "Brief account of laboratory diagnosis, chemotherapy and immunoprophylaxis in general."
+          ]
+        },
+        {
+          "unitNumber": 71,
+          "unitTitle": "Viruses of Relevance to Dentistry",
+          "unitTitleMr": "दंतचिकित्सेशी संबंधित विषाणू",
+          "topics": [
+            "Herpes virus, Hepatitis B virus, HIV, Mumps, Measles and Rubella virus."
+          ]
+        },
+        {
+          "unitNumber": 72,
+          "unitTitle": "Bacteriophage and Mycology",
+          "unitTitleMr": "बॅक्टेरिओफेज आणि मायकोलॉजी",
+          "topics": [
+            "Bacteriophage structure and significance, mycology basics."
+          ]
+        },
+        {
+          "unitNumber": 73,
+          "unitTitle": "Oral Lesions of Systemic Mycoses",
+          "unitTitleMr": "सिस्टिमेटिक मायकोसेसचे तोंडावरील विकार",
+          "topics": [
+            "Briefly on oral lesions of systemic mycoses."
+          ]
+        },
+        {
+          "unitNumber": 74,
+          "unitTitle": "Parasitology",
+          "unitTitleMr": "परजीवीशास्त्र (पॅरासिटोलॉजी)",
+          "topics": [
+            "Brief knowledge about mode of transmission and prevention of commonly seen parasitic infections."
+          ]
+        },
+        {
+          "unitNumber": 75,
+          "unitTitle": "General Principles of Pharmacology",
+          "unitTitleMr": "फार्माकोलॉजीची सामान्य तत्त्वे",
+          "topics": [
+            "Sources and nature of drugs, dosage forms, prescription writing, pharmacokinetics, pharmacodynamics, adverse drug reactions."
+          ]
+        },
+        {
+          "unitNumber": 76,
+          "unitTitle": "CNS Drugs",
+          "unitTitleMr": "मज्जासंस्थेवरील औषधे (सीएनएस ड्रग्ज)",
+          "topics": [
+            "General anaesthetics, hypnotics, analgesics, psychotropic drugs, antiepileptics, muscle relaxants, local anaesthetics."
+          ]
+        },
+        {
+          "unitNumber": 77,
+          "unitTitle": "Autonomic Drugs",
+          "unitTitleMr": "ऑटोनॉमिक औषधे",
+          "topics": [
+            "Sympathomimetics, antiadrenergic drugs, parasympathomimetics and parasympatholytics, implications in dentistry."
+          ]
+        },
+        {
+          "unitNumber": 78,
+          "unitTitle": "Cardiovascular Drugs",
+          "unitTitleMr": "हृदय व रक्तवाहिन्याসংस्थेवरील औषधे",
+          "topics": [
+            "Cardiac stimulants, antihypertensive drugs, vasopressor agents, antianginal agents, diuretics."
+          ]
+        },
+        {
+          "unitNumber": 79,
+          "unitTitle": "Autacoids",
+          "unitTitleMr": "ऑटाकोइड्स",
+          "topics": [
+            "Histamine, antihistamines, prostaglandins, leukotrienes and bronchodilators."
+          ]
+        },
+        {
+          "unitNumber": 80,
+          "unitTitle": "Drugs Acting on Blood",
+          "unitTitleMr": "रक्तावर कार्य करणारी औषधे",
+          "topics": [
+            "Coagulants and anticoagulants, hematinics, implications in clinical dentistry."
+          ]
+        },
+        {
+          "unitNumber": 81,
+          "unitTitle": "G.I.T. Drugs",
+          "unitTitleMr": "पचनसंस्थेवरील औषधे",
+          "topics": [
+            "Purgatives, anti-diarrhoeal, antacids, anti-emetics, implications in clinical dentistry."
+          ]
+        },
+        {
+          "unitNumber": 82,
+          "unitTitle": "Endocrines Pharmacology",
+          "unitTitleMr": "अंतःस्रावी औषधशास्त्र",
+          "topics": [
+            "Treatment of diabetes, glucocorticoids, thyroid and antithyroid agents, calcium balance drugs, anabolic steroids."
+          ]
+        },
+        {
+          "unitNumber": 83,
+          "unitTitle": "Chemotherapy",
+          "unitTitleMr": "केमोथेरपी",
+          "topics": [
+            "Antimicrobial agents, infection management in dentistry, pharmacotherapy of tuberculosis and leprosy."
+          ]
+        },
+        {
+          "unitNumber": 84,
+          "unitTitle": "Vitamins Pharmacology",
+          "unitTitleMr": "जीवनसत्त्वे औषधशास्त्र",
+          "topics": [
+            "Water-soluble vitamins, Vitamin D, Vitamin K and Vitamin E, implications in clinical dentistry."
+          ]
+        },
+        {
+          "unitNumber": 85,
+          "unitTitle": "Pharmacotherapy of Emergencies",
+          "unitTitleMr": "आपत्कालीन औषधोपचार",
+          "topics": [
+            "Pharmacotherapy of emergencies in dental office and emergency drugs tray."
+          ]
+        },
+        {
+          "unitNumber": 86,
+          "unitTitle": "Chelating Agents",
+          "unitTitleMr": "चिलेटींग एजंट्स",
+          "topics": [
+            "BAL, EDTA and desferrioxamine, dental pharmacology basics."
+          ]
+        },
+        {
+          "unitNumber": 87,
+          "unitTitle": "Dental Pharmacology",
+          "unitTitleMr": "दंत औषधशास्त्र",
+          "topics": [
+            "Antiseptics, astringents, obtundents, mummifying agents, bleaching agents, styptics, fluorides."
+          ]
+        },
+        {
+          "unitNumber": 88,
+          "unitTitle": "General Medicine Core Topics",
+          "unitTitleMr": "सामान्य औषधशास्त्र कोर विषय",
+          "topics": [
+            "Aims of medicine, definitions of signs, symptoms, diagnosis, differential diagnosis, treatment and prognosis."
+          ]
+        },
+        {
+          "unitNumber": 89,
+          "unitTitle": "Infections in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील संसर्ग",
+          "topics": [
+            "Enteric fever, AIDS, herpes simplex, herpes zoster, mononucleosis, syphilis, diphtheria, mumps, measles, rubella, malaria."
+          ]
+        },
+        {
+          "unitNumber": 90,
+          "unitTitle": "G.I.T. in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील पचनसंस्था विकार",
+          "topics": [
+            "Diarrhea, dysentery, stomatitis, gingival hyperplasia, dysphagia, peptic disease, jaundice, hepatitis, cirrhosis."
+          ]
+        },
+        {
+          "unitNumber": 91,
+          "unitTitle": "CVS in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील हृदय विकार",
+          "topics": [
+            "Rheumatic fever, hypertension, ischemic heart disease, infective endocarditis, arrhythmias, cardiac failure."
+          ]
+        },
+        {
+          "unitNumber": 92,
+          "unitTitle": "RS in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील श्वसनविकार",
+          "topics": [
+            "Pneumonia, COPD, pulmonary TB, bronchial asthma, pleural effusion, bronchiectasis, lung cancers."
+          ]
+        },
+        {
+          "unitNumber": 93,
+          "unitTitle": "Hematology in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील रक्तशास्त्र",
+          "topics": [
+            "Anemias, bleeding and clotting disorders, leukemias, lymphomas, oral manifestations of hematologic disorders."
+          ]
+        },
+        {
+          "unitNumber": 94,
+          "unitTitle": "Nutrition in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील पोषण",
+          "topics": [
+            "Avitaminosis, balanced diet."
+          ]
+        },
+        {
+          "unitNumber": 95,
+          "unitTitle": "CNS in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील मज्जासंस्था विकार",
+          "topics": [
+            "Meningitis, facial palsy, trigeminal neuralgia, epilepsy, headache, examination of comatose patient and cranial nerves."
+          ]
+        },
+        {
+          "unitNumber": 96,
+          "unitTitle": "Endocrines in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील अंतःस्रावी विकार",
+          "topics": [
+            "Diabetes mellitus, acromegaly, hypothyroidism, thyrotoxicosis, Addison’s disease, Cushing’s syndrome."
+          ]
+        },
+        {
+          "unitNumber": 97,
+          "unitTitle": "Critical Care in General Medicine",
+          "unitTitleMr": "सामान्य औषधशास्त्रातील गंभीर काळजी",
+          "topics": [
+            "Syncope, cardiac arrest, CPR, shock."
+          ]
+        },
+        {
+          "unitNumber": 98,
+          "unitTitle": "History of Surgery",
+          "unitTitleMr": "शल्यचिकित्सेचा इतिहास",
+          "topics": [
+            "Development of surgery as a speciality, contributions made by various scientists and investigators."
+          ]
+        },
+        {
+          "unitNumber": 99,
+          "unitTitle": "General Principles of Surgery",
+          "unitTitleMr": "शल्यचिकित्सेची सामान्य तत्त्वे",
+          "topics": [
+            "Introduction to surgical principles as related to orodental diseases, classification of diseases in general."
+          ]
+        },
+        {
+          "unitNumber": 100,
+          "unitTitle": "Wounds",
+          "unitTitleMr": "जखमा (वुउंड्स)",
+          "topics": [
+            "Classification, wound healing, repair, treatment of wounds, medico-legal aspects of accidental wounds."
+          ]
+        },
+        {
+          "unitNumber": 101,
+          "unitTitle": "Inflammation in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील दाह",
+          "topics": [
+            "Of soft and hard tissues, causes of inflammation, varieties, treatment and sequelae."
+          ]
+        },
+        {
+          "unitNumber": 102,
+          "unitTitle": "Infections in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील संसर्ग",
+          "topics": [
+            "Acute and chronic abscess, cellulitis, carbuncle, tetanus, gangrene, syphilis, gonorrhoea, tuberculosis, actinomycosis."
+          ]
+        },
+        {
+          "unitNumber": 103,
+          "unitTitle": "Transmissible Viral Infections",
+          "unitTitleMr": "संसर्गजन्य विषाणूजन्य आजार",
+          "topics": [
+            "HIV and Hepatitis B with special reference to their prevention and precautions in carrier state."
+          ]
+        },
+        {
+          "unitNumber": 104,
+          "unitTitle": "Shock and Haemorrhage",
+          "unitTitleMr": "धक्का आणि रक्तस्राव",
+          "topics": [
+            "Classification, causes, clinical features and management of shock, syncope, haemorrhage, blood transfusion and complications."
+          ]
+        },
+        {
+          "unitNumber": 105,
+          "unitTitle": "Tumours, Ulcers, Cysts, Sinus and Fistulae",
+          "unitTitleMr": "ट्यूमर, अल्सर, सिस्ट, साइनस आणि फिस्टुला",
+          "topics": [
+            "Classification, clinical examination and treatment principles in benign and malignant tumours, ulcers, cysts, sinus and fistulae."
+          ]
+        },
+        {
+          "unitNumber": 106,
+          "unitTitle": "Diseases of Lymphatic System",
+          "unitTitleMr": "लसिका संस्थेचे आजार",
+          "topics": [
+            "Head and neck region, tubercular infection, lymphomas, leukaemias, metastatic lymph node diseases."
+          ]
+        },
+        {
+          "unitNumber": 107,
+          "unitTitle": "Diseases of Oral Cavity in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील तोंड पोकळीचे आजार",
+          "topics": [
+            "Infective and malignant diseases of oral cavity and oropharynx including salivary glands."
+          ]
+        },
+        {
+          "unitNumber": 108,
+          "unitTitle": "Diseases of Larynx and Nasopharynx",
+          "unitTitleMr": "लॅरिंक्स आणि नॅसोफॅरिंक्सचे आजार",
+          "topics": [
+            "Infections and tumours, indications, procedure and complications of tracheostomy."
+          ]
+        },
+        {
+          "unitNumber": 109,
+          "unitTitle": "Nervous System in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील मज्जासंस्था",
+          "topics": [
+            "Peripheral nerve injuries, facial nerve affections, trigeminal neuralgia presentation and treatment."
+          ]
+        },
+        {
+          "unitNumber": 110,
+          "unitTitle": "Fractures",
+          "unitTitleMr": "फ्रॅक्चर्स (हाडे मोडणे)",
+          "topics": [
+            "General principles of fractures, clinical presentation, treatment, healing and rehabilitation."
+          ]
+        },
+        {
+          "unitNumber": 111,
+          "unitTitle": "Principles of Operative Surgery",
+          "unitTitleMr": "ऑपरेटिव्ह सर्जरीची तत्त्वे",
+          "topics": [
+            "Asepsis, antiseptics, sterilisation, principles of anaesthesia, tissue replacement, use of sutures and lasers."
+          ]
+        },
+        {
+          "unitNumber": 112,
+          "unitTitle": "Anomalies of Development of Face",
+          "unitTitleMr": "चेहऱ्याच्या विकासातील विकृती",
+          "topics": [
+            "Surgical anatomy, cleft lip and cleft palate principles of management."
+          ]
+        },
+        {
+          "unitNumber": 113,
+          "unitTitle": "Diseases of Thyroid and Parathyroid",
+          "unitTitleMr": "थायरॉईड आणि पॅराथायरॉईडचे आजार",
+          "topics": [
+            "Surgical anatomy, pathogenesis, clinical features and management of thyroid and parathyroid dysfunction."
+          ]
+        },
+        {
+          "unitNumber": 114,
+          "unitTitle": "Swellings of the Jaw",
+          "unitTitleMr": "जडब्यातील गाठी (स्वेलिंग)",
+          "topics": [
+            "Differential diagnosis and management of different types of jaw swellings."
+          ]
+        },
+        {
+          "unitNumber": 115,
+          "unitTitle": "Biopsy and Minor Surgery",
+          "unitTitleMr": "बायोप्सी आणि किरकोळ शस्त्रक्रिया",
+          "topics": [
+            "Types of biopsies, examining swellings and ulcers, performing minor surgical procedures."
+          ]
+        },
+        {
+          "unitNumber": 116,
+          "unitTitle": "Health Information Technology",
+          "unitTitleMr": "आरोग्य माहिती तंत्रज्ञान",
+          "topics": [
+            "Basic knowledge of computers, MS Office, statistical programmes."
+          ]
+        },
+        {
+          "unitNumber": 117,
+          "unitTitle": "Research Methodology and Biostatistics",
+          "unitTitleMr": "संशोधन पद्धती आणि जैवसंख्याशास्त्र",
+          "topics": [
+            "Definition, types of research, designing a written protocol, biostatistics, collection and presentation of data."
+          ]
+        },
+        {
+          "unitNumber": 118,
+          "unitTitle": "Introduction to Periodontology",
+          "unitTitleMr": "पेरिडॉन्टोलॉजीचा परिचय",
+          "topics": [
+            "Definition of periodontology, periodontics, periodontia, brief historical background, scope of periodontics."
+          ]
+        },
+        {
+          "unitNumber": 119,
+          "unitTitle": "Development of Periodontal Tissues",
+          "unitTitleMr": "पेरिडॉन्टल उतींचा विकास",
+          "topics": [
+            "Micro-structural anatomy and biology of periodontal tissues, gingiva, junctional epithelium, periodontal ligament, cementum, alveolar bone."
+          ]
+        },
+        {
+          "unitNumber": 120,
+          "unitTitle": "Defensive Mechanisms in Oral Cavity",
+          "unitTitleMr": "तोंड पोकळीतील संरक्षण यंत्रणा",
+          "topics": [
+            "Role of epithelium, gingival fluid, saliva and other defensive mechanisms in the oral environment."
+          ]
+        },
+        {
+          "unitNumber": 121,
+          "unitTitle": "Age Changes in Periodontal Structures",
+          "unitTitleMr": "पेरिडॉन्टल संरचनेतील वयोमानानुसार बदल",
+          "topics": [
+            "Age changes in teeth and periodontal structures and their association with periodontal diseases in geriatric dentistry."
+          ]
+        },
+        {
+          "unitNumber": 122,
+          "unitTitle": "Classification of Periodontal Diseases",
+          "unitTitleMr": "पेरिडॉन्टल रोगांचे वर्गीकरण",
+          "topics": [
+            "Need for classification, scientific basis, classification of gingival and periodontal diseases as described in World Workshop 1989."
+          ]
+        },
+        {
+          "unitNumber": 123,
+          "unitTitle": "Gingival Diseases",
+          "unitTitleMr": "हिरड्यांचे आजार",
+          "topics": [
+            "Localized and generalized gingivitis, etiology, pathogenesis, clinical signs, symptoms and management of plaque associated gingivitis."
+          ]
+        },
+        {
+          "unitNumber": 124,
+          "unitTitle": "Epidemiology of Periodontal Diseases",
+          "unitTitleMr": "पेरिडॉन्टल रोगांचे एपिडेमियोलॉजी",
+          "topics": [
+            "Definition of index, incidence, prevalence, epidemiology, classification of indices, Silness and Loe plaque index."
+          ]
+        },
+        {
+          "unitNumber": 125,
+          "unitTitle": "Extension of Inflammation",
+          "unitTitleMr": "दाहाचा विस्तार",
+          "topics": [
+            "Mechanism of spread of inflammation from gingival area to deeper periodontal structures, modifying factors."
+          ]
+        },
+        {
+          "unitNumber": 126,
+          "unitTitle": "Periodontal Pocket",
+          "unitTitleMr": "पेरिडॉन्टल पॉकेट",
+          "topics": [
+            "Definition, signs and symptoms, classification, pathogenesis, histopathology, root surface changes."
+          ]
+        },
+        {
+          "unitNumber": 127,
+          "unitTitle": "Etiology - Dental Plaque",
+          "unitTitleMr": "इटिओलॉजी - डेंटल प्लेक",
+          "topics": [
+            "Definition, new concept of biofilm, types, composition, bacterial colonization, growth, maturation and disclosing agents."
+          ]
+        },
+        {
+          "unitNumber": 128,
+          "unitTitle": "Host Response",
+          "unitTitleMr": "यजमान प्रतिसाद (होस्ट रिस्पॉन्स)",
+          "topics": [
+            "Mechanism of initiation and progression of periodontal diseases, basic concepts about cells, immune mechanisms and cytokines."
+          ]
+        },
+        {
+          "unitNumber": 129,
+          "unitTitle": "Periodontitis",
+          "unitTitleMr": "पेरिडोंटायटिस",
+          "topics": [
+            "Etiology, histopathology, clinical signs and symptoms, diagnosis and treatment of adult periodontitis, periodontal abscess."
+          ]
+        },
+        {
+          "unitNumber": 130,
+          "unitTitle": "Diagnosis in Periodontics",
+          "unitTitleMr": "पेरिडॉन्टिक्समधील निदान",
+          "topics": [
+            "Routine procedures, methods of probing, types of probes, halitosis etiology and treatment."
+          ]
+        },
+        {
+          "unitNumber": 131,
+          "unitTitle": "Prognosis",
+          "unitTitleMr": "प्रोग्नोसिस (अंदाज)",
+          "topics": [
+            "Definition, types, purpose and factors to be taken into consideration."
+          ]
+        },
+        {
+          "unitNumber": 132,
+          "unitTitle": "Periodontal Therapy General Principles",
+          "unitTitleMr": "पेरिडॉन्टल थेरपी सामान्य तत्त्वे",
+          "topics": [
+            "Phase I, II, III, IV therapy, definition of periodontal regeneration, repair, new attachment and reattachment."
+          ]
+        },
+        {
+          "unitNumber": 133,
+          "unitTitle": "Mechanical Plaque Control",
+          "unitTitleMr": "यांत्रिक प्लेक नियंत्रण",
+          "topics": [
+            "Toothbrushes, interdental cleaning aids, dentifrices."
+          ]
+        },
+        {
+          "unitNumber": 134,
+          "unitTitle": "Chemical Plaque Control",
+          "unitTitleMr": "रासायनिक प्लेक नियंत्रण",
+          "topics": [
+            "Classification and mechanism of action of chemical plaque control agents and pocket irrigation."
+          ]
+        },
+        {
+          "unitNumber": 135,
+          "unitTitle": "Pocket Eradication and Scaling",
+          "unitTitleMr": "पॉकेट उच्चाटन आणि स्केलिंग",
+          "topics": [
+            "Scaling and root planing, hand instruments, ultrasonic scalers, curettage, flap surgery."
+          ]
+        },
+        {
+          "unitNumber": 136,
+          "unitTitle": "Osseous Surgery",
+          "unitTitleMr": "हाडांची शस्त्रक्रिया (ओसियस सर्जरी)",
+          "topics": [
+            "Osseous defects in periodontal disease, resective and additive osseous surgery, osseous grafts, guided tissue regeneration."
+          ]
+        },
+        {
+          "unitNumber": 137,
+          "unitTitle": "Mucogingival Surgery and Periodontal Plastic Surgeries",
+          "unitTitleMr": "म्युकोजिंवल सर्जरी आणि पेरिडॉन्टल प्लास्टिक सर्जरी",
+          "topics": [
+            "Definition, mucogingival problems, gingival recession classification, gingival extension procedures, crown lengthening."
+          ]
+        },
+        {
+          "unitNumber": 138,
+          "unitTitle": "Periodontal Splints",
+          "unitTitleMr": "पेरिडॉन्टल स्प्लिंट्स",
+          "topics": [
+            "Purpose and classification, principles of splinting."
+          ]
+        },
+        {
+          "unitNumber": 139,
+          "unitTitle": "Dental Implants",
+          "unitTitleMr": "डेंटल इम्प्लांट्स",
+          "topics": [
+            "Definition, types, scope and biomaterials used, implant-bone interface, peri-implantitis and management."
+          ]
+        },
+        {
+          "unitNumber": 140,
+          "unitTitle": "Maintenance Phase (SPT)",
+          "unitTitleMr": "देखभाल टप्पा (SPT)",
+          "topics": [
+            "Aims, objectives and principles, importance, procedures, maintenance of implants."
+          ]
+        },
+        {
+          "unitNumber": 141,
+          "unitTitle": "Pharmacotherapy in Periodontics",
+          "unitTitleMr": "पेरिडॉन्टिक्समधील औषधोपचार",
+          "topics": [
+            "Periodontal dressings, antibiotics and anti-inflammatory drugs, local drug delivery systems."
+          ]
+        },
+        {
+          "unitNumber": 142,
+          "unitTitle": "Periodontal Management of Medically Compromised Patients",
+          "unitTitleMr": "वैद्यकीयदृष्ट्या त्रस्त रुग्णांचे पेरिडॉन्टल व्यवस्थापन",
+          "topics": [
+            "Topics concerning periodontal management of medically compromised patients."
+          ]
+        },
+        {
+          "unitNumber": 143,
+          "unitTitle": "Inter-disciplinary Care",
+          "unitTitleMr": "आंतर-विद्याशाखीय काळजी",
+          "topics": [
+            "Pulpo-periodontal involvement, routes of spread of infection, Simon’s classification, management."
+          ]
+        },
+        {
+          "unitNumber": 144,
+          "unitTitle": "Systemic Effects of Periodontal Diseases",
+          "unitTitleMr": "पेरिडॉन्टल रोगांचे प्रणालीगत परिणाम",
+          "topics": [
+            "Cardiovascular diseases, low birth weight babies, etc."
+          ]
+        },
+        {
+          "unitNumber": 145,
+          "unitTitle": "Ethics in Periodontics",
+          "unitTitleMr": "पेरिडॉन्टिक्समधील नैतिकता",
+          "topics": [
+            "Ethical principles and professional conduct."
+          ]
+        },
+        {
+          "unitNumber": 146,
+          "unitTitle": "Oral Pathology and Microbiology Introduction",
+          "unitTitleMr": "ओरल पॅथॉलॉजी आणि मायक्रोबायोलॉजी परिचय",
+          "topics": [
+            "A bird's eye view of pathological processes involving the oral cavity, interrelationship with general medicine and surgery."
+          ]
+        },
+        {
+          "unitNumber": 147,
+          "unitTitle": "Developmental Disturbances of Teeth, Jaws and Soft Tissues",
+          "unitTitleMr": "दात, जडबा आणि मऊ ऊतींच्या विकासात्मक विकृती",
+          "topics": [
+            "Hereditary, familial mutation, hormonal causes, developmental disturbances of teeth size, shape, number, structure, forensic odontology."
+          ]
+        },
+        {
+          "unitNumber": 148,
+          "unitTitle": "Dental Caries Pathology",
+          "unitTitleMr": "डेंटल कॅरीज पॅथॉलॉजी",
+          "topics": [
+            "Etiopathogenesis, microbiology, clinical features, diagnosis, histopathology, immunology, prevention of dental caries."
+          ]
+        },
+        {
+          "unitNumber": 149,
+          "unitTitle": "Pulp and Periapical Pathology and Osteomyelitis",
+          "unitTitleMr": "पल्प आणि पेरिअपिकल पॅथॉलॉजी आणि ऑस्टिओमायलाइटिस",
+          "topics": [
+            "Etiopathogenesis, clinical features, microbiology, histopathology and radiological features of pulp and periapical lesions."
+          ]
+        },
+        {
+          "unitNumber": 150,
+          "unitTitle": "Periodontal Diseases Pathology",
+          "unitTitleMr": "पेरिडॉन्टल रोगांची पॅथॉलॉजी",
+          "topics": [
+            "Etiopathogenesis, microbiology, clinical features, histopathology of gingivitis, gingival enlargements and periodontitis."
+          ]
+        },
+        {
+          "unitNumber": 151,
+          "unitTitle": "Microbial Infections of Oral Soft Tissues",
+          "unitTitleMr": "तोंड पोकळीच्या मऊ ऊतींचे जिवाणू संसर्ग",
+          "topics": [
+            "Microbiology, defense mechanisms, oral manifestations, bacterial, viral and fungal infections (Tuberculosis, Syphilis, Herpes, HIV, Candidiasis)."
+          ]
+        },
+        {
+          "unitNumber": 152,
+          "unitTitle": "Common Non-inflammatory Diseases Involving Jaws",
+          "unitTitleMr": "जडब्याशी संबंधित सामान्य बिगर-दाहक आजार",
+          "topics": [
+            "Fibrous dysplasia, cherubism, osteogenesis imperfecta, Paget's disease, cleidocranial dysplasia, rickets."
+          ]
+        },
+        {
+          "unitNumber": 153,
+          "unitTitle": "Diseases of TM Joint Pathology",
+          "unitTitleMr": "टीएम सांध्याचे आजार पॅथॉलॉजी",
+          "topics": [
+            "Ankylosis, arthritis, developmental malformations, traumatic injuries and myofascial pain dysfunction syndrome."
+          ]
+        },
+        {
+          "unitNumber": 154,
+          "unitTitle": "Cysts of Oral and Paraoral Region",
+          "unitTitleMr": "तोंड व लगतच्या भागातील सिस्ट",
+          "topics": [
+            "Classification, etiopathogenesis, clinical features, histopathology of odontogenic cysts, non-odontogenic cysts, pseudocysts."
+          ]
+        },
+        {
+          "unitNumber": 155,
+          "unitTitle": "Tumours of Oral Cavity",
+          "unitTitleMr": "तोंड पोकळीतील ट्यूमर",
+          "topics": [
+            "Classification of odontogenic, non-odontogenic and salivary gland tumours, etiopathogenesis, clinical features and histopathology."
+          ]
+        },
+        {
+          "unitNumber": 156,
+          "unitTitle": "Traumatic, Reactive and Regressive Lesions",
+          "unitTitleMr": "ट्रॉमॅटिक, रिऍक्टिव्ह आणि रेग्रेसिव्ह जखमा",
+          "topics": [
+            "Pyogenic and giant cell granuloma, exostoses, fibrous hyperplasia, traumatic ulcer, attrition, abrasion, erosion, radiation effects."
+          ]
+        },
+        {
+          "unitNumber": 157,
+          "unitTitle": "Non-neoplastic Salivary Gland Diseases",
+          "unitTitleMr": "बिगर-निओप्लास्टिक लाळ ग्रंथींचे आजार",
+          "topics": [
+            "Sialolithiasis, sialosis, sialadenitis, xerostomia and ptyalism."
+          ]
+        },
+        {
+          "unitNumber": 158,
+          "unitTitle": "Systemic Diseases Involving Oral Cavity",
+          "unitTitleMr": "तोंड पोकळीवर परिणाम करणारे प्रणालीगत आजार",
+          "topics": [
+            "Oral manifestations, diagnosis and significance of common blood, nutritional, hormonal and metabolic diseases."
+          ]
+        },
+        {
+          "unitNumber": 159,
+          "unitTitle": "Mucocutaneous Lesions",
+          "unitTitleMr": "म्युकोक्युटेनियस जखमा",
+          "topics": [
+            "Lichen planus, lupus erythematosus, pemphigus, pemphigoid, erythema multiforme, psoriasis, scleroderma."
+          ]
+        },
+        {
+          "unitNumber": 160,
+          "unitTitle": "Diseases of the Nerves",
+          "unitTitleMr": "मज्जातंतूंचे आजार",
+          "topics": [
+            "Facial neuralgias (trigeminal and glossopharyngeal), VII nerve paralysis, psychogenic facial pain, burning mouth syndrome."
+          ]
+        },
+        {
+          "unitNumber": 161,
+          "unitTitle": "Pigmentation and Discolouration",
+          "unitTitleMr": "रंग बदलणे आणि पिग्मेंटेशन",
+          "topics": [
+            "Causes and clinical manifestations of oral pigmentation and tooth discolouration."
+          ]
+        },
+        {
+          "unitNumber": 162,
+          "unitTitle": "Diseases of Maxillary Sinus",
+          "unitTitleMr": "मॅक्सिलरी साइनसचे आजार",
+          "topics": [
+            "Traumatic injuries to sinus, sinusitis, cysts and tumours involving antrum."
+          ]
+        },
+        {
+          "unitNumber": 163,
+          "unitTitle": "Oral Precancer and Cancer",
+          "unitTitleMr": "ओरल प्रिकॅन्सर आणि कर्करोग",
+          "topics": [
+            "Epidemiology, aetiology, clinical and histopathological features, TNM classification, biopsy types and cytology."
+          ]
+        },
+        {
+          "unitNumber": 164,
+          "unitTitle": "Principles of Forensic Odontology",
+          "unitTitleMr": "फॉरेन्सिक ओडोंटोलॉजीची तत्त्वे",
+          "topics": [
+            "Introduction, definition, aims, sex and ethnic differences in tooth morphology, dental DNA methods, bite marks."
+          ]
+        },
+        {
+          "unitNumber": 165,
+          "unitTitle": "Diagnosis in Oral Surgery",
+          "unitTitleMr": "ओरल सर्जरीमधील निदान",
+          "topics": [
+            "History taking, clinical examination, investigations."
+          ]
+        },
+        {
+          "unitNumber": 166,
+          "unitTitle": "Infection Control in Oral Surgery",
+          "unitTitleMr": "ओरल सर्जरीमध्ये संसर्ग नियंत्रण",
+          "topics": [
+            "Principles of infection control and cross-infection control with particular reference to HIV/AIDS and Hepatitis."
+          ]
+        },
+        {
+          "unitNumber": 167,
+          "unitTitle": "Principles of Oral Surgery",
+          "unitTitleMr": "ओरल सर्जरीची तत्त्वे",
+          "topics": [
+            "Asepsis, painless surgery, anaesthetic considerations, access, intra-oral and extra-oral incisions, control of haemorrhage."
+          ]
+        },
+        {
+          "unitNumber": 168,
+          "unitTitle": "Exodontia",
+          "unitTitleMr": "एक्सोडोंटिया (दात काढणे)",
+          "topics": [
+            "General considerations, ideal extraction, indications, extractions in medically compromised patients, elevators, complications."
+          ]
+        },
+        {
+          "unitNumber": 169,
+          "unitTitle": "Impacted Teeth",
+          "unitTitleMr": "इम्पॅक्टेड दात",
+          "topics": [
+            "Incidence, definition, aetiology, impacted mandibular and maxillary third molars, impacted maxillary canine."
+          ]
+        },
+        {
+          "unitNumber": 170,
+          "unitTitle": "Pre-prosthetic Surgery",
+          "unitTitleMr": "प्री-प्रोस्थेटिक सर्जरी",
+          "topics": [
+            "Definition, classification of procedures, corrective procedures, alveoloplasty, ridge extension, implants."
+          ]
+        },
+        {
+          "unitNumber": 171,
+          "unitTitle": "Disorders of T.M. Joint in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील टी.एम. सांध्याचे विकार",
+          "topics": [
+            "Applied surgical anatomy, dislocation, ankylosis, myofascial pain dysfunction syndrome, internal derangement."
+          ]
+        },
+        {
+          "unitNumber": 172,
+          "unitTitle": "Infections of Oral Cavity in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील तोंड पोकळीचे संसर्ग",
+          "topics": [
+            "Odontogenic infections, spread through facial spaces, dento-alveolar abscess, osteomyelitis of jaws, Ludwig's angina."
+          ]
+        },
+        {
+          "unitNumber": 173,
+          "unitTitle": "Benign Cystic Lesions of Jaws",
+          "unitTitleMr": "जडब्यातील बिनिग्न सिस्टिक जखमा",
+          "topics": [
+            "Definition, classification, pathogenesis, diagnosis, clinical features, management and surgical procedures."
+          ]
+        },
+        {
+          "unitNumber": 174,
+          "unitTitle": "Tumours of Oral Cavity - General Considerations",
+          "unitTitleMr": "तोंड पोकळीतील ट्यूमर - सामान्य विचार",
+          "topics": [
+            "Non-odontogenetic benign tumours, ameloblastoma, carcinoma of oral cavity, biopsy, TNM classification."
+          ]
+        },
+        {
+          "unitNumber": 175,
+          "unitTitle": "Fractures of Jaws",
+          "unitTitleMr": "जडब्याची फ्रॅक्चर्स",
+          "topics": [
+            "General considerations, mandibular fractures, fixation and immobilisation, condyle fractures, middle third facial fractures."
+          ]
+        },
+        {
+          "unitNumber": 176,
+          "unitTitle": "Salivary Gland Diseases in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील लाळ ग्रंथींचे आजार",
+          "topics": [
+            "Diagnosis, sialography, infections, sialolithiasis, salivary fistulae, pleomorphic adenoma."
+          ]
+        },
+        {
+          "unitNumber": 177,
+          "unitTitle": "Jaw Deformities",
+          "unitTitleMr": "जडब्याची विकृती",
+          "topics": [
+            "Basic forms (prognathism, retrognathism, open bite), reasons for correction, surgical methods."
+          ]
+        },
+        {
+          "unitNumber": 178,
+          "unitTitle": "Neurological Disorders in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील मज्जातंतूंचे विकार",
+          "topics": [
+            "Trigeminal neuralgia, facial paralysis, nerve injuries, classification, neurorrhaphy."
+          ]
+        },
+        {
+          "unitNumber": 179,
+          "unitTitle": "Cleft Lip and Palate Surgery",
+          "unitTitleMr": "क्लॅफ्ट लिप आणि टाळूची शस्त्रक्रिया",
+          "topics": [
+            "Aetiology, incidence, classification, role of dental surgeon, closure procedures."
+          ]
+        },
+        {
+          "unitNumber": 180,
+          "unitTitle": "Medical Emergencies in Dental Practice",
+          "unitTitleMr": "दंतचिकित्सेतील आपत्कालीन वैद्यकीय परिस्थिती",
+          "topics": [
+            "Primary care of medical emergencies, cardiovascular, respiratory, endocrine, anaphylactic reaction, epilepsy."
+          ]
+        },
+        {
+          "unitNumber": 181,
+          "unitTitle": "Emergency Drugs and Injections",
+          "unitTitleMr": "आपत्कालीन औषधे आणि इंजेक्शन",
+          "topics": [
+            "Applied anatomy, ideal location for giving intramuscular and IV injections, techniques."
+          ]
+        },
+        {
+          "unitNumber": 182,
+          "unitTitle": "Ethics in Surgery",
+          "unitTitleMr": "शल्यचिकित्सेतील नैतिकता",
+          "topics": [
+            "Local anaesthesia, concepts, classification of local anaesthetic agents, inferior alveolar nerve block."
+          ]
+        },
+        {
+          "unitNumber": 183,
+          "unitTitle": "General Anaesthesia",
+          "unitTitleMr": "सामान्य भूल (जनरल अनेस्थेशिया)",
+          "topics": [
+            "Concept, indications in dentistry, pre-anaesthetic evaluation, complication management, cardiopulmonary resuscitation, tracheostomy."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

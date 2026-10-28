@@ -1,0 +1,59 @@
+{
+  "docId": 8898,
+  "examName": "Inspector/Superintendent, in the Institutes of Disabled Persons, Group-B, Social Justice and Special Assistance Department - Syllabus",
+  "examNameMr": "अधीक्षक / निरीक्षक, दिव्यांग व्यक्तींचे संस्था, गट-ब, सामाजिक न्याय व विशेष सहाय्य विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Inspector/Superintendent, in the Institutes of Disabled Persons, Group-B, Social Justice and Special Assistance Department - Syllabus",
+      "paperTitleMr": "अधीक्षक / निरीक्षक, दिव्यांग व्यक्तींचे संस्था, गट-ब, सामाजिक न्याय व विशेष सहाय्य विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Social Reformers, Welfare and Legislation",
+          "unitTitleMr": "समाजसुधारक, कल्याण आणि कायदे",
+          "topics": [
+            "PWD Act 2016",
+            "Rural social life, Balutedari system, inequalities in land holding, various land tenure systems: Zamindari, Ryotwari, Mahalwari, Khoti system",
+            "Land ownership reform initiatives in independent India, Bhoodan movement",
+            "Work of social reformers and eminent personalities: Education, residential institutions and welfare of disabled persons"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Environment, Economy and Planning",
+          "unitTitleMr": "पर्यावरण, अर्थव्यवस्था आणि नियोजन",
+          "topics": [
+            "Climate change: causes, consequences and remedies, impact and management of natural and man-made disasters, biodiversity",
+            "Economic development and planning - history of Five Year Plans, NITI Aayog and National Development Council, micro-planning, unemployment, skill development and self-employment, sustainable development"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Current Affairs and Social Welfare Schemes",
+          "unitTitleMr": "चालू घडामोडी आणि सामाजिक कल्याण योजना",
+          "topics": [
+            "Current affairs, success stories for the welfare of disabled persons, local self-government bodies receiving national level awards for welfare of disabled persons e.g. Raigad and Akola Zilla Parishad, Navi Mumbai Municipal Corporation work",
+            "Success stories of athletes in Paralympics and various disabled persons",
+            "Social security schemes e.g. Mahatma Gandhi National Rural Employment Guarantee Scheme"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

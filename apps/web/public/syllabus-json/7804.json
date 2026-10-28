@@ -1,0 +1,39 @@
+{
+  "docId": 7804,
+  "examName": "Police Sub-Inspector Limited Departmental Competitive Examination - Syllabus Corrigendum",
+  "examNameMr": "पोलिस उप निरीक्षक मर्यादित विभागीय (मुख्य) स्पर्धा परीक्षा - शुद्धीपत्रक",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "Marathi",
+  "category": "departmental",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Mains",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Law (Minor Acts and Other Acts)",
+      "paperTitleMr": "कायदा (किरकोळ कायदे व इतर कायदे)",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 10,
+          "unitTitle": "Juvenile Justice (Care and Protection of Children) Act",
+          "unitTitleMr": "बाल न्याय (मुलांची काळजी आणि संरक्षण) अधिनियम",
+          "topics": [
+            "Juvenile Justice (Care and Protection of Children) Act, 2015"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "दिनांक ५ जून, २०१८ रोजी प्रसिद्ध अभ्यासक्रमातील Law (Minor Acts and Other Acts) मधील अनुक्रमांक १० वरील अधिनियम 'Juvenile Justice (Care and Protection of Children) Act, 2015' असा वाचण्यात यावा."
+  ]
+}

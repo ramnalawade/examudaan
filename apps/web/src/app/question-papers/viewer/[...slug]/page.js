@@ -14,6 +14,7 @@ import {
 } from '@/lib/mpscDocumentResolver'
 import { toSecureDocUrl } from '@/lib/docObfuscate'
 import { fitDescription } from '@/lib/seoMetadata'
+import { MPSC_TOTAL_QUESTION_PAPERS } from '@/lib/platformStats'
 
 export const revalidate = 86400
 export const dynamicParams = true
@@ -225,10 +226,10 @@ export default async function PaperViewerSlugPage({ params }) {
               <span>📖</span> MPSC Study Workspace
             </h4>
             <p className={styles.sidebarText}>
-              Access 841 official question papers & final answer keys arranged side-by-side in one row.
+              Access {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} official question papers & final answer keys arranged side-by-side in one row.
             </p>
             <Link href="/mpsc-pyq" className={styles.mpscHubBtn}>
-              Open MPSC Hub (841 PDFs) →
+              Open MPSC Hub ({MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} PDFs) →
             </Link>
           </div>
         </aside>

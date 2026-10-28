@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/talathi-bharti-apply-online/page.js — Talathi Bharti 2026 Apply Online Guide
 // Target Query: "talathi bharti 2026 apply online" (14,800 monthly searches, KD 0)
 // ExamUdaan | Official Mahabhumi TCS Portal Link, Steps, Document Specs & Fees
@@ -154,7 +154,7 @@ export default function TalathiBhartiApplyOnlinePage() {
           <div className={styles.actionRow}>
             <a
               href="https://mahabhumi.gov.in"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               className={styles.btnPrimaryPortal}
             >

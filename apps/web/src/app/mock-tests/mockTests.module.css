@@ -432,3 +432,161 @@
   .testMeta { gap: 8px; font-size: 12px; }
   .startBtn { font-size: 13.5px; padding: 10px 14px; }
 }
+
+/* ── Ecosystem Section ── */
+.ecosystemTitle {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--on-surface, #0f172a);
+  margin: 6px 0 8px;
+}
+
+.ecosystemSubtitle {
+  font-size: 14px;
+  color: var(--secondary, #64748b);
+  margin: 0;
+}
+
+.ecosystemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.ecosystemCardMpsc {
+  background: #ffffff;
+  border: 1.5px solid #fed7aa;
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.ecosystemCardMpsc:hover,
+.ecosystemCard:hover {
+  transform: translateY(-2px);
+}
+
+.ecosystemCard {
+  background: #ffffff;
+  border: 1px solid var(--outline-variant, #e2e8f0);
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cardTopEmoji {
+  font-size: 24px;
+}
+
+.cardBadgeMpsc {
+  font-size: 11px;
+  font-weight: 700;
+  background: #fff7ed;
+  color: #ea580c;
+  border: 1px solid #fed7aa;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.cardBadgeGreen {
+  font-size: 11px;
+  font-weight: 700;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.cardBadgePurple {
+  font-size: 11px;
+  font-weight: 700;
+  background: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.cardBadgeBlue {
+  font-size: 11px;
+  font-weight: 700;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px;
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.cardLinkMpsc {
+  margin-top: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ea580c;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cardLinkGreen {
+  margin-top: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #047857;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cardLinkPurple {
+  margin-top: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #6d28d9;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cardLinkBlue {
+  margin-top: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1d4ed8;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}

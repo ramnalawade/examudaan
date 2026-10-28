@@ -1,0 +1,1519 @@
+/* ============================================================
+   ResumeBuilder.module.css — All styles for ResumeBuilder.js
+   Zero inline styles policy — ExamUdaan GEMINI.md rule
+   ============================================================ */
+
+/* ── Root wrapper ─────────────────────────────────────────── */
+.root {
+  width: 100%;
+}
+
+/* ── Main container box ───────────────────────────────────── */
+.mainBox {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+/* ── Header banner ────────────────────────────────────────── */
+.headerBanner {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--outline-variant);
+  background: linear-gradient(135deg, rgba(234, 88, 12, 0.05) 0%, var(--surface) 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+/* Dynamic: color set via CSS var --scheme-primary on a parent data attr */
+.headerIcon {
+  font-size: 22px;
+  color: var(--rb-primary);
+}
+
+.headerH2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Dynamic scheme badge — colors set via CSS vars injected on .mainBox */
+.atsBadge {
+  background: var(--rb-light);
+  color: var(--rb-dark);
+  border: 1px solid var(--rb-border);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.headerSubtitle {
+  font-size: 13px;
+  color: var(--secondary);
+  margin: 0;
+}
+
+/* ── Action bar (top right) ───────────────────────────────── */
+.actionBar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* View mode toggle container */
+.tabToggleGroup {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--outline-variant);
+  border-radius: 8px;
+  padding: 2px;
+}
+
+/* Individual tab button — active/inactive via data-active attr */
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+  color: var(--on-surface);
+  transition: all 0.15s ease;
+}
+.tabBtn[data-active='true'] {
+  background: var(--rb-primary);
+  color: #fff;
+}
+
+.tabBtnIcon {
+  font-size: 16px;
+}
+
+/* Copy text button */
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  color: var(--on-surface);
+  border: 1px solid var(--outline-variant);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.copyBtnIcon {
+  font-size: 16px;
+  color: var(--rb-primary);
+}
+
+/* Print/Download button */
+.printBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--rb-primary);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.printBtnIcon {
+  font-size: 18px;
+}
+
+/* Save button — dynamic bg/color via data-save-status attr */
+.saveBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  color: var(--on-surface);
+  border: 1px solid var(--outline-variant);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+.saveBtn[data-save-status='saved'] {
+  background: #16a34a;
+  color: #fff;
+}
+.saveBtn[data-save-status='error'] {
+  background: #dc2626;
+  color: #fff;
+}
+.saveBtn[data-save-status='saving'] {
+  cursor: not-allowed;
+}
+
+.saveBtnIcon {
+  font-size: 16px;
+}
+
+/* Versions panel toggle button */
+.versionsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  color: var(--on-surface);
+  border: 1px solid var(--outline-variant);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.versionsBtn[data-open='true'] {
+  background: var(--primary-fixed, #fff7ed);
+  color: var(--primary);
+}
+
+.versionsBtnIcon {
+  font-size: 16px;
+}
+
+/* Login to Save link */
+.loginLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  color: var(--secondary);
+  border: 1px solid var(--outline-variant);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.loginLinkIcon {
+  font-size: 16px;
+}
+
+/* ── Saved Resumes Panel ───────────────────────────────────── */
+.savedPanel {
+  padding: 16px 24px;
+  background: var(--primary-fixed, #fff7ed);
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.savedPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.savedPanelTitle {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.savedPanelActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.versionNameInput {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--outline-variant);
+  font-size: 12px;
+  font-family: inherit;
+  background: var(--surface-container-lowest);
+  color: var(--on-surface);
+  width: 180px;
+}
+
+.saveNewBtn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.savedEmptyMsg {
+  font-size: 12px;
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.savedList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Saved resume row — active/inactive via data-current attr */
+.savedResumeRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+.savedResumeRow[data-current='true'] {
+  background: var(--primary-fixed-dim, #fed7aa);
+  border-color: var(--primary);
+}
+
+.savedResumeRowIcon {
+  font-size: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.savedResumeRowInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.savedResumeRowName {
+  font-size: 13px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.savedResumeCurrent {
+  font-size: 10px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 6px;
+}
+
+.savedResumeRowMeta {
+  font-size: 11px;
+  color: var(--secondary);
+}
+
+.loadVersionBtn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.deleteVersionBtn {
+  background: none;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── Controls Bar: Presets + Templates + Colors ───────────── */
+.controlsBar {
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--outline-variant);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.controlRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.controlLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.controlGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Role preset pill button — active via data-selected attr */
+.roleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-container-lowest);
+  color: var(--on-surface);
+  border: 1.5px solid var(--outline-variant);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+.roleBtn[data-selected='true'] {
+  background: var(--rb-light);
+  color: var(--rb-dark);
+  border-color: var(--rb-primary);
+  font-weight: 800;
+}
+
+/* Role badge sub-label inside pill */
+.roleBadge {
+  font-size: 10px;
+  background: var(--surface);
+  color: var(--secondary);
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+.roleBtn[data-selected='true'] .roleBadge {
+  background: var(--rb-primary);
+  color: #fff;
+}
+
+/* Template button — active via data-selected attr */
+.tplBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-container-lowest);
+  color: var(--on-surface);
+  border: 1.5px solid var(--outline-variant);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+.tplBtn[data-selected='true'] {
+  background: var(--on-surface);
+  color: var(--surface);
+  border-color: var(--on-surface);
+}
+
+.tplBtnIcon {
+  font-size: 16px;
+}
+
+/* ── Color scheme row ─────────────────────────────────────── */
+.controlRowSpread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.colorSchemeGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.colorDotGroup {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Color dot swatch — active via data-selected attr */
+.colorDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s ease;
+  /* background and outline set imperatively via useEffect */
+}
+.colorDot[data-selected='true'] {
+  border-color: #fff;
+  transform: scale(1.15);
+}
+
+/* ── Main Content Area ────────────────────────────────────── */
+.contentArea {
+  display: grid;
+  min-height: 700px;
+  background: var(--surface);
+}
+
+/* grid-template-columns set imperatively via ref+useEffect */
+
+/* ── Editor Panel ─────────────────────────────────────────── */
+.editorPanel {
+  padding: 24px;
+  background: var(--surface-container-lowest);
+  overflow-y: auto;
+}
+
+/* border-right and maxHeight set imperatively via ref+useEffect */
+
+.editorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.editorTitle {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.resetBtn {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--rb-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Section groupings */
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.formField label {
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--outline-variant);
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--outline-variant);
+  font-size: 13px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sectionBlockLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--secondary);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.sectionBlockLabelSm {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--secondary);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.expBlock {
+  padding: 12px;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--outline-variant);
+  margin-bottom: 10px;
+}
+
+.expBlockGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.expSmInput {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--outline-variant);
+  font-size: 12px;
+  font-family: inherit;
+}
+
+.expPeriodInput {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--outline-variant);
+  font-size: 12px;
+  margin-bottom: 6px;
+  font-family: inherit;
+}
+
+.expTextarea {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--outline-variant);
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: inherit;
+}
+
+.eduBlock {
+  padding: 10px;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--outline-variant);
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.sectionMb20 {
+  margin-bottom: 20px;
+}
+
+.doneEditingBtn {
+  width: 100%;
+  background: var(--rb-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── PDF Viewer Stage ─────────────────────────────────────── */
+.pdfStage {
+  background: #eae8e4; /* Neutral dark backdrop like Acrobat/Overleaf */
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto;
+}
+
+/* Toolbar above A4 canvas */
+.pdfToolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 794px;
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--secondary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.pdfToolbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pdfToolbarFileIcon {
+  font-size: 16px;
+  color: var(--rb-primary);
+}
+
+.pdfToolbarFilename {
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.pdfToolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdfZoomLabel {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Zoom button — active via data-active attr */
+.zoomBtn {
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--outline-variant);
+  background: #fff;
+  color: var(--on-surface);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.zoomBtn[data-active='true'] {
+  background: var(--rb-primary);
+  color: #fff;
+}
+
+.atsScoreBadge {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* A4 scale wrapper — transform set imperatively via ref+useEffect */
+.a4ScaleWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform-origin: top center;
+  transition: transform 0.15s ease;
+}
+
+/* A4 page */
+.a4Page {
+  width: 794px; /* Standard A4 at 96 DPI */
+  min-height: 1123px; /* Standard A4 ratio */
+  background: #ffffff;
+  color: #1b1c1b;
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.15), 0 8px 12px -6px rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  box-sizing: border-box;
+  position: relative;
+  /* font-family set imperatively (differs by template) */
+}
+
+/* ── Template 1: Modern Executive ─────────────────────────── */
+.tplModernWrap {
+  padding: 36px 42px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.tplTopAccentBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  /* background set imperatively via ref+useEffect (scheme.primary) */
+}
+
+.tplModernHeader {
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  /* border-bottom set imperatively (scheme.light) */
+}
+
+.tplModernHeaderInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.tplModernName {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+  /* color set imperatively (scheme.dark) */
+  letter-spacing: -0.02em;
+}
+
+.tplModernPost {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 3px;
+  /* color set imperatively (scheme.primary) */
+}
+
+.tplModernContact {
+  text-align: right;
+  font-size: 11.5px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.tplModernLinksRow {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #4b5563;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tplModernCategoryPill {
+  margin-top: 4px;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  /* color, background set imperatively (scheme.dark, scheme.light) */
+}
+
+.tplModernSummarySection {
+  margin-bottom: 18px;
+}
+
+.tplModernSummaryText {
+  margin: 6px 0 0;
+  color: #374151;
+  font-size: 12.5px;
+  text-align: justify;
+}
+
+.tplModernExpSection {
+  margin-bottom: 18px;
+}
+
+.tplModernExpList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.tplModernExpRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tplModernExpRole {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.tplModernExpOrg {
+  font-weight: 500;
+  /* color set imperatively (scheme.primary) */
+}
+
+.tplModernExpPeriod {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.tplModernBullets {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  color: #374151;
+  font-size: 12px;
+}
+
+.tplModernBulletItem {
+  margin-bottom: 3px;
+}
+
+.tplModernSkillsSection {
+  margin-bottom: 18px;
+}
+
+.tplModernSkillsList {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tplModernSkillRow {
+  font-size: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.tplModernSkillCategory {
+  font-weight: 700;
+  color: #111827;
+  min-width: 160px;
+}
+
+.tplModernSkillItems {
+  color: #374151;
+}
+
+.tplModernEduSection {
+  margin-bottom: 18px;
+}
+
+.tplModernEduList {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tplModernEduRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tplModernEduDegree {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.tplModernEduInst {
+  font-weight: 400;
+  color: #4b5563;
+}
+
+.tplModernEduScore {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.tplModernCertList {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  color: #374151;
+  font-size: 12px;
+}
+
+.tplModernCertItem {
+  margin-bottom: 3px;
+}
+
+/* ── Template 2: Classic Sarkari ──────────────────────────── */
+.tplSarkariWrap {
+  padding: 36px 42px;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.tplSarkariHeader {
+  text-align: center;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  /* border-bottom set imperatively (scheme.primary) */
+}
+
+.tplSarkariH1 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tplSarkariName {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 2px 0 4px;
+  /* color set imperatively (scheme.dark) */
+}
+
+.tplSarkariPost {
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.tplSarkariContact {
+  font-size: 11.5px;
+  color: #4b5563;
+}
+
+.tplSarkariLinks {
+  font-size: 11px;
+  color: #4b5563;
+  margin-top: 3px;
+}
+
+.tplSarkariCategoryBox {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  /* border, background, color set imperatively (scheme colors) */
+}
+
+.tplSarkariSectionDiv {
+  margin-bottom: 14px;
+}
+
+.tplSarkariSectionHead {
+  font-size: 12px;
+  font-weight: 800;
+  border-bottom: 1px solid #9ca3af;
+  padding-bottom: 2px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.tplSarkariSectionHead6 {
+  font-size: 12px;
+  font-weight: 800;
+  border-bottom: 1px solid #9ca3af;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.tplSarkariSummaryText {
+  margin: 0;
+  text-align: justify;
+  font-size: 12px;
+  color: #1f2937;
+}
+
+.tplSarkariTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+  margin-top: 4px;
+  text-align: left;
+}
+
+.tplSarkariThead tr {
+  /* background, color set imperatively (scheme.light, scheme.dark) */
+}
+
+.tplSarkariTh {
+  border: 1px solid #cbd5e1;
+  padding: 5px 8px;
+}
+
+.tplSarkariTd {
+  border: 1px solid #cbd5e1;
+  padding: 4px 8px;
+}
+
+.tplSarkariTdBold {
+  border: 1px solid #cbd5e1;
+  padding: 4px 8px;
+  font-weight: 600;
+}
+
+.tplSarkariTdCenter {
+  border: 1px solid #cbd5e1;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.tplSarkariExpItem {
+  margin-bottom: 8px;
+}
+
+.tplSarkariExpRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.tplSarkariExpBullets {
+  margin: 2px 0 0;
+  padding-left: 22px;
+  font-size: 11.5px;
+  color: #374151;
+}
+
+.tplSarkariExpBulletItem {
+  margin-bottom: 2px;
+}
+
+.tplSarkariSkillsText {
+  font-size: 11.5px;
+  line-height: 1.6;
+}
+
+.tplSarkariCertSectionDiv {
+  margin-bottom: 16px;
+}
+
+.tplSarkariCertList {
+  margin: 2px 0 0;
+  padding-left: 20px;
+  font-size: 11.5px;
+  color: #374151;
+}
+
+.tplSarkariCertItem {
+  margin-bottom: 2px;
+}
+
+.tplSarkariDeclaration {
+  border-top: 1px solid #9ca3af;
+  padding-top: 8px;
+  margin-top: 16px;
+  font-size: 10.5px;
+  color: #4b5563;
+}
+
+.tplSarkariDeclText {
+  margin: 0 0 16px;
+  font-style: italic;
+}
+
+.tplSarkariDeclFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-weight: 600;
+}
+
+.tplSarkariSignatureBox {
+  text-align: center;
+}
+
+.tplSarkariSignatureLine {
+  border-top: 1px solid #000;
+  width: 140px;
+  padding-top: 4px;
+}
+
+.tplSarkariSignatureName {
+  font-size: 10px;
+}
+
+/* ── Template 3: Minimalist ATS ───────────────────────────── */
+.tplMinWrap {
+  padding: 36px 42px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #111827;
+}
+
+.tplMinHeader {
+  text-align: left;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  /* border-bottom set imperatively (scheme.primary) */
+}
+
+.tplMinH1 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.tplMinPost {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 2px 0 4px;
+  /* color set imperatively (scheme.primary) */
+}
+
+.tplMinContact {
+  font-size: 11.5px;
+  color: #4b5563;
+}
+
+.tplMinSectionDiv {
+  margin-bottom: 14px;
+}
+
+.tplMinSectionHead {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 2px;
+  margin-bottom: 4px;
+  /* color set imperatively (scheme.dark) */
+}
+
+.tplMinSectionHead6 {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
+  /* color set imperatively (scheme.dark) */
+}
+
+.tplMinSummaryText {
+  margin: 0;
+  font-size: 12px;
+  text-align: justify;
+  color: #374151;
+}
+
+.tplMinExpItem {
+  margin-bottom: 10px;
+}
+
+.tplMinExpRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.tplMinExpOrgSpan {
+  font-weight: 500;
+}
+
+.tplMinExpPeriod {
+  font-size: 11.5px;
+  color: #6b7280;
+}
+
+.tplMinExpBullets {
+  margin: 3px 0 0;
+  padding-left: 18px;
+  font-size: 11.5px;
+  color: #374151;
+}
+
+.tplMinExpBulletItem {
+  margin-bottom: 2px;
+}
+
+.tplMinEduRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.tplMinEduScore {
+  color: #4b5563;
+}
+
+.tplMinSkillItem {
+  font-size: 11.5px;
+  margin-bottom: 3px;
+}
+
+.tplMinCertList {
+  margin: 3px 0 0;
+  padding-left: 18px;
+  font-size: 11.5px;
+  color: #374151;
+}
+
+.tplMinCertItem {
+  margin-bottom: 2px;
+}
+
+/* ── Template 4: Two-Column Sidebar ───────────────────────── */
+.tplSidebarWrap {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 1123px;
+  font-size: 12px;
+}
+
+.tplSidebarLeft {
+  padding: 36px 20px;
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  /* background, border-right set imperatively (scheme.light, scheme.border) */
+}
+
+.tplSidebarSectionHead {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+  /* color, border-bottom set imperatively (scheme.dark, scheme.border) */
+}
+
+.tplSidebarContactInfo {
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #374151;
+}
+
+.tplSidebarCredInfo {
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.tplSidebarCredLinks {
+  margin-bottom: 6px;
+}
+
+.tplSidebarCredCategory {
+  font-weight: 600;
+}
+
+.tplSidebarSkillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.tplSidebarSkillCat {
+  font-weight: 700;
+  margin-bottom: 2px;
+  /* color set imperatively (scheme.dark) */
+}
+
+.tplSidebarSkillItems {
+  color: #4b5563;
+  font-size: 10.5px;
+}
+
+.tplSidebarEduList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.tplSidebarEduDegree {
+  font-weight: 700;
+  color: #111827;
+}
+
+.tplSidebarEduInst {
+  color: #4b5563;
+  font-size: 10.5px;
+}
+
+.tplSidebarEduScore {
+  font-weight: 600;
+  font-size: 10.5px;
+  /* color set imperatively (scheme.primary) */
+}
+
+.tplSidebarCertList {
+  margin: 0;
+  padding-left: 14px;
+  font-size: 10.5px;
+  color: #374151;
+}
+
+.tplSidebarCertItem {
+  margin-bottom: 4px;
+}
+
+/* Right canvas */
+.tplSidebarRight {
+  padding: 36px 32px;
+  color: #111827;
+}
+
+.tplSidebarNameBlock {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  /* border-bottom set imperatively (scheme.primary) */
+}
+
+.tplSidebarH1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+  /* color set imperatively (scheme.dark) */
+}
+
+.tplSidebarPost {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+  /* color set imperatively (scheme.primary) */
+}
+
+.tplSidebarSummaryDiv {
+  margin-bottom: 20px;
+}
+
+.tplSidebarSummaryHead {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  /* color set imperatively (scheme.dark) */
+}
+
+.tplSidebarSummaryText {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #374151;
+  text-align: justify;
+}
+
+.tplSidebarExpHead {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  /* color set imperatively (scheme.dark) */
+}
+
+.tplSidebarExpList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tplSidebarExpRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tplSidebarExpRole {
+  font-weight: 700;
+  font-size: 13px;
+  color: #111827;
+}
+
+.tplSidebarExpPeriod {
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.tplSidebarExpOrg {
+  font-size: 11.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  /* color set imperatively (scheme.primary) */
+}
+
+.tplSidebarExpBullets {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 11.5px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.tplSidebarExpBulletItem {
+  margin-bottom: 3px;
+}
+
+/* ── SectionTitle component ───────────────────────────────── */
+.sectionTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+  /* border-bottom set imperatively (scheme.border) */
+}
+
+.sectionTitleDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  /* background set imperatively (scheme.primary) */
+}
+
+.sectionTitleH3 {
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  /* color set imperatively (scheme.dark) */
+}

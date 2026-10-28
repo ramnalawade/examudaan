@@ -1,0 +1,144 @@
+{
+  "docId": 12761,
+  "examName": "Veterinary Officer, Maharashtra Veterinary Services, Group-A",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper I: Animal Husbandry",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "UNIT 1",
+          "unitTitleMr": null,
+          "topics": [
+            "ANIMAL GENETICS AND BREEDING",
+            "Biostatistics and Computer Application: Introduction and importance of statistics and biostatistics, Classification and tabulation of data. Graphical and diagrammatic representation of data. Probability and probability distributions, Moments, Skewness and Kurtosis. Correlation and Regression. Introduction of sampling methods.",
+            "Computer Application: Introduction to computer languages, Data Base Management, Review of MS-Office and its components. Concepts of computer networks, internet & e-mail.",
+            "Principles of Animal and Population Genetics: Mitosis and Meiosis. Chromosome numbers and types in livestock and poultry. Overview of Mendelian principles. Modified Mendelian inheritance. Multiple alleles, lethals, sex-linked, sex limited and sex influenced inheritance.",
+            "Linkage, crossing over and construction of linkage map. Mutation, Chromosomal aberrations. Cytogenetics, Molecular genetics, Gene concept, DNA and its replication. Introduction to molecular techniques.",
+            "Genetic structure of population: Gene and genotypic frequency. Hardy-Weinberg law and its application.",
+            "Quantitative and qualitative genetics. Concept of correlation and interaction between Genotype and Environment. Heritability and Repeatability. Genetic and Phenotypic Correlations.",
+            "Principles of Animal Breeding: Livestock and Poultry Breeding: History Economic characters of livestock and poultry and their importance. Selection, types, response to selection and factors affecting it. Bases of selection. Method of selection, Single and Multi trait.",
+            "Classification of mating systems. Inbreeding coefficient and coefficient of relationship. Genetic and phenotypic consequences of inbreeding, inbreeding depression, application of inbreeding.",
+            "Out breeding and its different forms, application of outbreeding and heterosis. Systems of utilization of heterosis.",
+            "Breeding strategies for the improvement of dairy cattle, buffalo, sheep, goat, swine and poultry. Sire evaluation. Open nucleus breeding system.",
+            "Current livestock and poultry breeding policies and programmes in the state and country. Methods of conservation- livestock and poultry conservation programmes in the state and country.",
+            "Application of reproductive and biotechnological tools for genetic improvement.",
+            "Breeding of pet, zoo and wild animals Pedigree sheet, selection of breeds and major breed traits. Breeding management of dogs and cats. Common pet birds seen in India and their breeding management.",
+            "Population dynamics and effective population size of wild animals in captivity or zoo or natural habitats. Planned breeding of wild animals. Controlled breeding and assisted reproduction. Breeding for conservation of wild animals."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "UNIT 2",
+          "unitTitleMr": null,
+          "topics": [
+            "ANIMAL NUTRITION",
+            "Principles of Animal Nutrition and Feed Technology: Importance of nutrients in animal production and health. Composition of animal body and plants. Nutritional terms.",
+            "Nutritional aspect of carbohydrates, protein, fats, vitamins and minerals, their requirements and supplementation in feed.",
+            "Common feeds and fodders, their classification, availability and importance for livestock and poultry production. Measures of food energy and their applications.",
+            "Protein evaluation of feeds, biological value of protein. Calorie protein ratio. Nutritive ratio.",
+            "Introduction to feed technology- Feed industry. Processing of concentrates and roughages. Various physical, chemical and biological methods for improving the nutritive value of inferior quality roughages.",
+            "Silage and hay preparation. Harmful natural constituents and common adulterants of feeds and fodders. Feed additives in the rations of livestock and poultry.",
+            "Applied Ruminant Nutrition: Importance of scientific feeding. Measurement of digestibility.",
+            "Feeding standards, their uses and significance, merit and demerits of various feeding standards. Balanced ration and its characteristics.",
+            "General principles of computation of rations. Formulation of rations and feeding of livestock.",
+            "Zoo/wildlife Nutrition: Feed and feeding of common wild and zoo animals/birds encountered in India.",
+            "Applied Non-Ruminant Nutrition: Nutrient requirements in poultry and other simple stomach animals. Feeding standards for non-ruminants as per BIS and ICAR specifications."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "UNIT 3",
+          "unitTitleMr": null,
+          "topics": [
+            "VETERINARY PHYSIOLOGY",
+            "Blood, Cardiovascular, Nervous and Muscular Systems: Properties of blood as a body fluid, Heart- morphological characteristic, systemic excitability conduction. Cardiac Cycle. Electrocardiography and echocardiography- significance in Veterinary Sciences. Haemodynamics of circulation, Major function system- sensory, consciousness, emotion, motor and visceral control. Sense organs and receptors, physiology of special senses.",
+            "Digestive and Respiratory Systems: Morphological characteristic of mono gastric and poly gastric digestive system. Prehension, rumination, defecation, vomition, regulation of secretary function of various organs, hunger, developmental aspects of digestion, luminous, membranous and microbial digestion in rumen and intestine, enzymatic digestion in monogastric and fermentative digestion in rumen. Digestion in birds. Functional morphology of respiratory apparatus. Mechanics of breathing. exchanges of gases in lungs and tissues Respiration in birds.",
+            "Excretory and Endocrine Systems: Kidney- factors determining filtration pressure, methods of studying renal functions, urine concentration, micturition, uremia. Fluid, water balance, fluid therapy, dehydration, water concentration mechanisms. Acid base balance, correction and evolution of imbalances, total osmotic pressure. Formation and excretion of urine of Birds. metabolism of hormones-methods of study of endocrine system.",
+            "Reproduction, Lactation, Growth and Environmental Physiology: Genetic and endocrine control of gonadal development, modification of gonadotrophin release, ovarian functions, follicular development, dynamics, endocrine and receptor profiles, sexual receptivity, ovarian cycle, post-partum ovarian activity, ovum transport, hormones present in the biological fluids during pregnancy and their uses for the diagnosis of pregnancy- maternal foetal placental participation in pregnancy and parturition, immunology of gestation, preparturient endocrine status.",
+            "Spermatogenic cycle and wave- function of sertoli cell-leydig cell, cryptorchidism. Puberty - photoperiod - uses of androgens, progestogens, estrogens.",
+            "Functional and metabolic organization of mammary glands, lactogenesis and galactogenesis, prolactin and lactation cycle.",
+            "Heat balance, heat tolerance, thermo-regulation in farm animals, role of skin, responses of animals to heat and cold, fever, body temperature and hibernation. Temperature regulation in birds."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "UNIT 4",
+          "unitTitleMr": null,
+          "topics": [
+            "LIVESTOCK PRODUCTION MANAGEMENT",
+            "General Livestock Management: Problems and prospects of livestock industry in India. Common animal husbandry terms. Transportation of livestock and wild or zoo animals. Common farm management practices. Culling of animals. Selection and purchase of livestock.",
+            "Fodder Production and Conservation: Importance of grasslands and fodder in livestock production. Soil and Water conservation and drainage of water for fodder production. Fodder production for livestock. Storage of feeds and fodders. Scarcity fodders and preservation of green fodder.",
+            "Livestock Production Management- Ruminants: Housing systems, General principles affecting the design and construction of building for housing for various livestock species. Breeds and economic traits of cattle and buffalo and descriptions of important breeds. General management and feeding practices of animals, bulls and working animals. Draught ability. Routine animal farm operations and labour management, farm accounts and records. Milking Methods. Factors affecting quality and quantity of milk production. Breeds of sheep and goat and their descriptions.",
+            "Zoo Animals Production Management: Taxonomy of important wild animals, reptiles, amphibians and birds, Status and conservation practices of wild life in India. Different methods of Wildlife Census. Basic principles of habitat and housing of various classes of wild zoo animals. Size and space requirement of cubicles, enclosures of important wild zoo animals. Management of livestock in fringe areas, in and surrounding the breeding areas. Feeding habits, feeds and feeding schedules of captive wild animals.",
+            "Restraint, Rescue, organizations in wildlife management: Restraining, capture, handling, physical examination of captive animals. Man-wildlife conflict and its mitigation, Rescue and rehabilitation of wildlife, Rapid Response Team (RRT), Functions of Transit Treatment Centre (TTC). Classification of zoos, management of sanctuaries, national parks etc. Acts and Rules related to captive animals. National and international organization and institutions interlinked to captive animals/wildlife conservation- Wildlife Institute of India (WII), Wildlife Preservation Society of India, Central Zoo Authority, World Wide Fund for Nature- India, Wildlife Trust of India, Wildlife Research & Training Centre, MAFSU, Nagpur- role and functioning. Wildlife Protection Act 1972.",
+            "Animal Welfare: Definition of animal welfare and ethics. Welfare in relation to ecosystem and environmental factors. Role of veterinarians in animal welfare. Animal welfare organizations, Animal Welfare Board of India - their role, functions and current status. Rules, regulations, laws on animal welfare. Prevention of Cruelty to Animals Act, 1960 (59 of 1960). Role and function of Committee for Control and Supervision of Experiments on Animals. Protection of wild life in nature and captivity. Welfare of animals during transportation. Protection and welfare of working animals, pets and companion animals. Animal welfare during natural calamities and disaster management.",
+            "Legal duties of veterinarians, Common offences against animals and laws related to them. Provincial and Central Acts relating to animals. Laws relating to offences affecting Public Health. Livestock Importation Act. Evidence, liability and insurance. Code of Conduct and Ethics for veterinarians - the Regulations made under the Act.",
+            "Poultry Production Management: Indian poultry industry – Brief outline. Classification of poultry with respect to production characters, age and standards. Production characters of other avian species. Description of indigenous fowls and their value in rural farming.",
+            "Brooding management – Types of brooders – preparation of shed – Importance of environmental factors. Housing – Types of poultry houses – space requirements. Scavenging system of management – Low input technology – Backyard and semi-intensive units, their management and economic achievements. Deep litter management. Cage management– Different types, Advantages and disadvantages. Management of growers, layers, broilers and breeders. Management of stress, feeding and Watering. Breeding systems and methods of mating. Poultry judging. Egg structure. Bio-security and principles of disease prevention management.",
+            "Diversified Poultry Production and Hatchery Management: Principles of incubation and hatchery management practices. Factors affecting fertility and hatchability, hatchery hygiene. Candling, sexing, grading, packing of eggs and disposal of hatchery waste. Organic and hill farming. Mixed or integrated poultry farming. Management of ducks, geese, turkeys, Japanese quails, and guinea fowls.",
+            "Laboratory or Pet Animal Production Management: Importance and selection of laboratory animal, care and housing standards of mice, rats, hamster and guinea pigs. General considerations on feeding and breeding. Scope of rabbit farming in the country. Important breeds of dogs, cats and pet birds and their feeding.",
+            "Swine and Equine Production Management: Introduction and scope of swine farming in the country. Important breeds (exotic and indigenous) & their characteristics. Housing and feeding of swine for optimal production.",
+            "Equine population of India. Horses, donkeys and mules and their utility. Dentition and ageing of horses. Care and routine management of equines including grooming, saddling and exercise. Stable and its management. Vices of horses. Foot care and shoeing care. Feeding routine for equines. Care of stallion. Mating of horses, broodmare and its care. Foaling and care of newborn. Breeding mules. Doping and its detection. Colic and its prevention."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "UNIT 5",
+          "unitTitleMr": null,
+          "topics": [
+            "LIVESTOCK PRODUCTS TECHNOLOGY",
+            "Milk and Milk Products Technology: Layout of milk processing plant and its management. Physico-chemical properties of milk. Microbiological deterioration of milk and milk products. Collection, chilling, standardization, pasteurization, UHT treatment, homogenization, and bactofugation. Dried, dehydrated and fermented milk. Common defects of milk products. Packaging, transportation, storage and distribution of milk and milk products. Organic milk products. Food safety standards for milk and milk products. Dairy effluent management.",
+            "Wool Science: Introduction to wool, fur, pelt and specialty fibers with respect to processing industry. Glossary of terms of wool processing. Post-shearing operations of wool, classification and grading of wool, physical and chemical properties of wool. Impurity of wool, factors influencing the quality of wool.",
+            "Abattoir Practices and Animal Byproducts Technology: Layout and management of rural, urban and modern abattoirs. HACCP concepts in abattoir management. FSSA standards on organization and layout of abattoirs. Animal welfare and pre-slaughter care, handling and transport of meat animals including poultry. Slaughtering and dressing of meat animals and birds. Evaluation, grading and fabrication of dressed carcasses including poultry.",
+            "Abattoir byproducts, rendering, meat, bone, glue, gelatin, fat and byproducts of pharmaceutical value. Skin and hides, methods of flaying, defects, preservation and tanning. Treatment of condemned meat and carcasses. Management of effluent emanating from abattoir.",
+            "Meat Science: Prospect of meat industry in India. Fraudulent substitution of meat. Preservation of meat and poultry, drying, salting, curing, smoking, chilling, freezing, canning, irradiation and chemicals. Ageing of meat.",
+            "Modern processing technologies of meat and meat products. Packaging of meat and meat products. Formulation and development of meat sausages, meat balls or patties, tandoori chicken, soup, pickles. Fermentation of meat products.",
+            "Basics of sensory evaluation of meat products. Nutritive value, preservation, packaging of egg and egg products. Laws governing national or international trade in meat and meat products."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "UNIT 6",
+          "unitTitleMr": null,
+          "topics": [
+            "VETERINARY AND ANIMAL HUSBANDRY EXTENSION EDUCATION",
+            "Livestock based Livelihoods and their Evolution: Evolution and relationship between agriculture and animal husbandry. Farming and characteristics of farming in India. Classification of farming, types and systems. Peasant farming, cooperative farming, collective farming, contract farming, estate farming, organic farming, capitalistic farming, small-scale farming, large-scale farming, intensive, extensive farming, specialized, diversified, mixed, integrated and dry land farming.",
+            "Extension Education and Development: Types of education: Formal, non-formal and informal education. Extension education: Concept, levels, objectives and dimensions. Teaching- learning process and steps in extension teaching.",
+            "Rural development - Concept, significance and importance of rural development programmes. Problems and Issues in development. Panchayati Raj System.",
+            "Rural Sociology in Veterinary Extension: Concept of sociology and rural sociology in animal husbandry extension. Social institutions in rural society: Social, economic, political, religious and educational (definition, composition and function). Social change: concept, importance and factors. Leadership: definition, functions of leader, types of rural leaders.",
+            "Transfer of Technology for Livestock Development: Technology- Concept, generation process, application, merits and de-merits. Adoption and diffusion of innovations, stages of adoption, adopter categories, innovation decision process, attributes of innovations, diffusion process, factors affecting adoption and diffusion processes.",
+            "Programme planning- principles and objectives. Constraints in the adoption of scientific animal husbandry practices.",
+            "Cattle and buffalo improvement programmes: Key Village Scheme, Intensive Cattle Development Project, Gosadan and Gaushala.",
+            "Dairy development programmes: concept of cooperation, Amul pattern of dairy cooperative system and Operation Flood.",
+            "Transfer of technology projects of Indian Council of Agricultural Research: Krishi Vigyan Kendra, Agricultural Technology Information Centre, Agricultural Technology Management Agency, National Agricultural Innovation Project (NAIP), Rashtriya Krishi Vikas Yojana etc.",
+            "Different ongoing central and state government animal husbandry development programmes being run related to livestock.",
+            "Communication and Extension Teaching Methods: Communication and its functions. Types of communication. Individual contact methods, group contact methods and Mass contact methods. Selection and use of extension teaching methods.",
+            "Livestock Economics and Marketing: Economics and Livestock Economics: definition and scope. Basic concepts- wants, goods, wealth, utility, price, value, assets, capital, money, income etc. Theories of demand, supply and cost. Theories of production. Concept of market. Government interventions and role in marketing of livestock and livestock products. External trade in livestock products, recent policies on trade and international trade agreements and their implications in livestock sector.",
+            "Livestock Entrepreneurship: Definition of and difference between entrepreneur, entrepreneurship, enterprise and manager. Theories of entrepreneurship, characteristics and functions of an entrepreneur. Forms of entrepreneurship. Project appraisal-Introduction, importance, techno-economic feasibility, criteria of project evaluation, capital budgeting, etc. Business plan for enterprise. Institutions promoting entrepreneurship in India. Entrepreneurship development programmes.",
+            "Information and Communication Technology: Strengths and limitations of ICTs application in livestock sector and farmers capacity building. Information kiosk, E- learning, CAD, virtual class room, virtual reality, multi-media etc. Cyber extension- problems and prospects in livestock extension.",
+            "Contemporary Issues in Livestock Enterprises: Role of women in animal husbandry, gender sensitization and its importance, need for gender analysis, gender budgeting and mainstreaming. Livestock census, insurance scheme, national livestock mission."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

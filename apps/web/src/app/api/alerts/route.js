@@ -9,56 +9,67 @@
 //   header: Authorization: Bearer <token>
 // ============================================================
 
-import { supabase } from '../../../lib/supabase'
+import { query, queryOne } from '../../../lib/pgdb'
 import {
-  ok, created, serverError, serviceUnavailable
+  ok, created, badRequest, serverError, serviceUnavailable
 } from '../../../lib/apiResponse'
 import { withAuth } from '../../../lib/auth'
 import { withValidation, schemas } from '../../../lib/validate'
+import { verifyTurnstileToken } from '../../../lib/turnstile'
 
 // ---- POST /api/alerts — public subscribe ----
 async function subscribeHandler(req) {
-  if (!supabase) return serviceUnavailable('Alert service not configured')
-
   const {
     email, phone, whatsapp, name,
     boards, post_types, states,
     via_email, via_whatsapp, via_sms,
+    'cf-turnstile-response': turnstileTokenAlt,
+    turnstileToken,
   } = req.validatedBody
 
-  try {
-    // Upsert user
-    const upsertField = email ? 'email' : 'phone'
-    const { data: user, error: userErr } = await supabase
-      .from('users')
-      .upsert(
-        { email: email || null, phone: phone || null, whatsapp: whatsapp || null, name: name || null },
-        { onConflict: upsertField, ignoreDuplicates: false }
-      )
-      .select('id, email, phone, plan')
-      .single()
+  const token = turnstileTokenAlt || turnstileToken
+  if (token) {
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || null
+    const turnstileCheck = await verifyTurnstileToken({
+      token,
+      action: 'alert_subscribe',
+      clientIp,
+    })
+    if (!turnstileCheck.success) {
+      return badRequest(turnstileCheck.reason || 'Bot verification failed. Please try again.')
+    }
+  }
 
-    if (userErr || !user) {
-      console.error('[POST /alerts] User upsert error:', userErr)
+
+  try {
+    // Upsert user — insert or update on conflict with existing email/phone
+    const upsertField = email ? 'email' : 'phone'
+    const user = await queryOne(
+      `INSERT INTO users (email, phone, whatsapp, name)
+       VALUES ($1, $2, $3, $4)
+       ON CONFLICT (${upsertField}) DO UPDATE
+         SET phone    = EXCLUDED.phone,
+             whatsapp = EXCLUDED.whatsapp,
+             name     = EXCLUDED.name
+       RETURNING id, email, phone, plan`,
+      [email || null, phone || null, whatsapp || null, name || null]
+    )
+
+    if (!user) {
+      console.error('[POST /alerts] User upsert error: no row returned')
       return serverError('Failed to create user')
     }
 
     // Create subscription
-    const { error: subErr } = await supabase
-      .from('alert_subscriptions')
-      .insert({
-        user_id:     user.id,
-        boards:      boards || null,
-        post_types:  post_types || null,
-        states:      states || null,
-        via_email,
-        via_whatsapp,
-        via_sms,
-        is_active:   true,
-      })
+    const subResult = await query(
+      `INSERT INTO alert_subscriptions
+         (user_id, boards, post_types, states, via_email, via_whatsapp, via_sms, is_active)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, true)`,
+      [user.id, boards || null, post_types || null, states || null, via_email, via_whatsapp, via_sms]
+    )
 
-    if (subErr) {
-      console.error('[POST /alerts] Subscription error:', subErr)
+    if (!subResult) {
+      console.error('[POST /alerts] Subscription insert error')
       return serverError('Failed to create subscription')
     }
 
@@ -75,16 +86,16 @@ async function subscribeHandler(req) {
 
 // ---- GET /api/alerts — protected: get own subscriptions ----
 const getSubscriptions = withAuth(async (req, ctx, currentUser) => {
-  if (!supabase) return serviceUnavailable()
+  const rows = await query(
+    `SELECT id, boards, post_types, states, via_email, via_whatsapp, via_sms, is_active, created_at
+     FROM alert_subscriptions
+     WHERE user_id = $1
+     ORDER BY created_at DESC`,
+    [currentUser.user_id]
+  )
 
-  const { data, error } = await supabase
-    .from('alert_subscriptions')
-    .select('id, boards, post_types, states, via_email, via_whatsapp, via_sms, is_active, created_at')
-    .eq('user_id', currentUser.user_id)
-    .order('created_at', { ascending: false })
-
-  if (error) return serverError('Failed to fetch subscriptions')
-  return ok(data || [])
+  if (rows === null) return serverError('Failed to fetch subscriptions')
+  return ok(rows || [])
 })
 
 export const POST = withValidation(schemas.subscribeAlerts, subscribeHandler)

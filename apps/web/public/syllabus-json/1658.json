@@ -1,0 +1,38 @@
+{
+  "docId": 1658,
+  "examName": "Child Development Project Officer/District Women & Child Development Officer/Assistant Commissioner/Probation Officer",
+  "examNameMr": "बालविकास प्रकल्प अधिकारी / जिल्हा महिला व बालविकास अधिकारी / सहायक आयुक्त / प्रोबेशन अधिकारी",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "English",
+  "category": "other",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Child Development Project Officer/District Women & Child Development Officer",
+      "paperTitleMr": "बालविकास प्रकल्प अधिकारी / जिल्हा महिला व बालविकास अधिकारी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Child Development - 2005",
+          "unitTitleMr": "बाल विकास - २००५",
+          "topics": [
+            "Child Development",
+            "Schemes for Women and Children"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,165 @@
+{
+  "docId": 10546,
+  "examName": "Assistant Professor (Political Science) Maharashtra Education Service, Group-A and Lecturer (Political Science) Maharashtra Education Service, Group-B (Collegiate Branch) - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (राज्यशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ आणि प्राध्यापक (राज्यशास्त्र) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Political Science - Syllabus",
+      "paperTitleMr": "राज्यशास्त्र - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Political Theory and Research Methodology",
+          "unitTitleMr": "राजकीय सिद्धांत आणि संशोधन पद्धती",
+          "topics": [
+            "Approaches: Normative, Empirical, Behavioral",
+            "Theories of State: Classical, Pluralist and neo-Pluralist",
+            "Concepts: State, Liberty, Equality, Justice, Rights, Democracy, Power, Authority, Legitimacy, Political Obligation, Citizenship",
+            "Political Ideology: Nationalism, Liberalism, Conservatism, Socialism, Communism, Capitalism, Feminism, Ecologism, Multiculturalism, Postmodernism",
+            "Research Methodology in Political Science"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Western Political Thoughts",
+          "unitTitleMr": "पाश्चात्य राजकीय विचार",
+          "topics": [
+            "Confucius, Socrates, Plato, Aristotle, Machiavelli, Hobbes, Locke, Rousseau, Harold Laski, Jeremy Bentham, Hegel, Mary Wollstonecraft, John Stuart Mill, Karl Marx, T.H. Green, Gramsci, Hannah Arendt, Frantz Fanon, Mao Zedong, John Rawls etc."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Indian Knowledge System and Political Thought",
+          "unitTitleMr": "भारतीय ज्ञान प्रणाली आणि राजकीय विचार",
+          "topics": [
+            "Ancient Indian Thoughts and Legacy of Indian Polity, Vedic Period, Shantiparva",
+            "Political thought of Jain and Buddhist philosophy, Dharmashastra Kautilya, Aggannasutta, Barani",
+            "Kabir, Pandita Ramabai, Swami Vivekanand, Raja Ram Mohan Roy, Mahadev Govind Ranade, Bal Gangadhar Tilak",
+            "Rabindranath Tagore, M. K. Gandhi, Sri Aurobindo, Periyar E. V. Ramasamy, Muhammad Iqbal, M.N. Roy, V. D. Savarkar",
+            "Dr. B.R. Ambedkar, J. L. Nehru, Ram Manohar Lohia, Jaya Prakash Narayan, Deendayal Upadhyaya, Vinoba Bhave"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Comparative Political Analysis",
+          "unitTitleMr": "तुलनात्मक राजकीय विश्लेषण",
+          "topics": [
+            "Approaches: Systems, Structural Functionalism, Social, Institutional, Political Culture, Political Economy and New Institutionalism; Comparative Methods",
+            "Colonialism and decolonization: forms of colonialism, anti-colonial struggles and decolonization",
+            "Comparative Nationalism: European and non-European, Western and Eastern World",
+            "State theory: debate over the nature of state in capitalist and socialist societies; post-colonial state; welfare state; globalization and nations-states",
+            "Political regimes: democratic and non-democratic regimes",
+            "Constitutions and Constitutionalism: Forms of constitutions, Constitutional Values, rule of law, judicial independence and liberal constitutionalism",
+            "Democratisation: democratic transition and consolidation",
+            "Development: Underdevelopment, Dependency, Modernization, World Systems Theory, development and democracy",
+            "Structures of Power: ruling class, power elites, democratic elitism",
+            "Actor and Processes: Electoral Systems, Political Parties and Party System, Interest groups, Social movements, NGOs and civil society campaigns, Revolutions"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "International Relations",
+          "unitTitleMr": "आंतरराष्ट्रीय संबंध",
+          "topics": [
+            "Approaches to the study of International relations: Idealism, Realism, Structural Marxism, Neoliberalism, Neorealism, Social Constructivism, Critical International Theory, Feminism, Postmodernism",
+            "Concepts: State, state system and non-state actors, Power, Sovereignty, Security",
+            "Conflict and Peace: Diplomacy, Changing Nature of Warfare, Weapons of mass destruction, deterrence, conflict resolution",
+            "United Nations: Aims, Objectives, Structure and Evaluation of the Working of UN",
+            "Political Economy of IR: Globalisation, Global governance and Bretton Woods system, North-South Dialogue, WTO, G-20, BRICS",
+            "Regional Organisations: European Union, African Union, Shanghai Cooperation Organisation, ASEAN",
+            "Contemporary Challenges: International terrorism, Climate change and Environmental Concerns, Human Rights, Migration and Refugees, Religion, Culture and Identity Politics"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "India's Foreign Policy",
+          "unitTitleMr": "भारताचे परराष्ट्र धोरण",
+          "topics": [
+            "Perspectives on India's Foreign Policy: India's Identity as postcolonial, development, rising power and emerging political economy",
+            "Continuity and change in India's Foreign Policy: Principles, determinants, Non-Alignment movement, India's Nuclear Policy",
+            "India's relations with major powers: USA, USSR/Russia, People's Republic of China",
+            "India's Engagement with multipolar world: European Union, BRICS, ASEAN, Shanghai Cooperation Organisation, African Union, Southern African Development Community, Gulf Cooperation Council",
+            "India's relations with neighbourhood: SAARC, Gujaral doctrine, Look East/Act East, Look West",
+            "India's Negotiation Strategies in International Regimes",
+            "Contemporary challenges: maritime security, energy security, environmental security, migrants and refugees, water resources, international terrorism, cyber security"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Political and Administrative Institutions in India",
+          "unitTitleMr": "भारतातील राजकीय आणि प्रशासनिक संस्था",
+          "topics": [
+            "Making of the Indian Constitution: Colonialism heritage and contribution of Indian National Movement",
+            "Constituent Assembly: Composition, Ideological Moorings, Constitutional Debates",
+            "Philosophy of the Constitution: Preamble, Fundamental Rights, Directive Principles",
+            "Constitutionalism in India: Democracy, Social Change, National Unity, Checks and Balances, Basic Structure Debate",
+            "Union Executive and Union Parliament",
+            "Judiciary: Supreme Court, High Court, Judicial Review, Judicial Activism, Judicial Reform",
+            "Executive and Legislature in the States, Federalism in India",
+            "Electoral Process and Election Commission of India",
+            "Local Governance: Evolution, 73rd & 74th Constitutional Amendment, District Administration",
+            "Constitutional and Statutory Bodies"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Political Processes in India",
+          "unitTitleMr": "भारतातील राजकीय प्रक्रिया",
+          "topics": [
+            "State, Economy and Development: Indian National Movement, Nature of Indian State, Development Planning model, New Economic Policy",
+            "Process of globalisation: social and economic implications, Social Justice, Identity Politics",
+            "Social Movements: Dalit, Tribal, Women, Farmers, Labour",
+            "Civil Society Groups: Non-Party Social Formations, Non-Governmental Organisations, Social Action Groups, Pressure Groups",
+            "Regionalisation of Indian Politics: Formation & Reorganisation of Indian States, Regional disparities, Demand for New States",
+            "Gender and Politics in India: Issues of Equality and Representation",
+            "Ideology and Social basis of Political Parties: National Parties, State Parties",
+            "Electoral Politics: Participation, Contestation, Representation, Emerging trends, Psephology"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Public Administration",
+          "unitTitleMr": "लोकप्रशासन",
+          "topics": [
+            "Meaning and Evolution: Political Science and Public Administration Dichotomy, public and private administration",
+            "Approaches: Classical, Behavioral, System Theory, Decision Making, Ecological Approach",
+            "Public administration theories and concepts: Scientific Management, New Public Administration, Development Administration, Comparative Public Administration, New Public Management",
+            "Organisation: Theories and Principles of Organization, Types of Organisation, Bureaucratic Theory, Human Relations Theory",
+            "Managing the organization: Theories of leadership and motivation, POSDCORB",
+            "Administrative Thoughts: Woodrow Wilson, F. W. Taylor, Henry Fayol, Mary Parker Follett, Elton Mayo, Max Weber, Chester Barnard, Herbert Simon, F. W. Riggs, Abraham Maslow, Peter Drucker"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Governance and Public Policy in India",
+          "unitTitleMr": "भारतातील सुशासन आणि सार्वजनिक धोरण",
+          "topics": [
+            "Concepts: Governance, good governance, New governance and democratic governance, role of state, civil society and individuals",
+            "Accountability and control: Institutional mechanism for checks and balances, legislative control, judicial control, corruption and administrative reforms",
+            "Institutional mechanisms for good governance: Right to Information, Consumer Protection Act, Citizen Charter, Ombudsman, Lokpal, Lokayukta",
+            "Grassroots Governance: Urban local governance, Panchayati Raj Institutions",
+            "Planning and Development: Decentralised planning, sustainable development, e-governance, NITI Aayog",
+            "Public Policy: Public Policy Process, instruments of socio-economic development, housing, health, drinking water, food security, MNREGA, NHRM, RTE",
+            "Monitoring and evaluation of public policy: Jansunwai, Social audit, Policy Analysis"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

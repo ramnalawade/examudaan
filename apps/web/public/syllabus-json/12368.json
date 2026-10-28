@@ -1,0 +1,83 @@
+{
+  "docId": 12368,
+  "examName": "Law Officer, Group-A, Tribal Research and Training Institute, Tribal Development Department - Syllabus",
+  "examNameMr": "कायदा अधिकारी, गट-अ, आदिवासी संशोधन आणि प्रशिक्षण संस्था, आदिवासी विकास विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Law Officer, Group-A Syllabus",
+      "paperTitleMr": "कायदा अधिकारी, गट-अ अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Fundamental laws",
+          "unitTitleMr": "मूलभूत कायदे",
+          "topics": [
+            "Constitutional law",
+            "Protection of Human Rights Act 1993 (Amendment Act-2019)",
+            "Administrative Law",
+            "Transfer of Property Act 1882",
+            "Specific Relief Act 1963",
+            "Bhartiya Nyay Sanhita (BNS) 2023",
+            "Land Acquisition Act 2013",
+            "Maharashtra Land Revenue Code 1966",
+            "Contract Act 1872",
+            "Prevention of Corruption Act 1988",
+            "Motor Vehicles Act (Amendment Act-2019)",
+            "Indian Forests Act 1927",
+            "Wildlife Protection Act 1972",
+            "Prevention of Immoral Traffic Act 1956",
+            "Prenatal Diagnostic Act 1994",
+            "Environment Protection Act 1986 (Amendment Act -2024)",
+            "Mediation Act 2023",
+            "Right to Information Act 2005"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Procedural Law",
+          "unitTitleMr": "प्रक्रियात्मक कायदे",
+          "topics": [
+            "Civil Procedure Code 1908",
+            "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+            "Bharatiya Sakshya Adhiniyam (BSA) 2023",
+            "High Court (Original Side) Rules",
+            "High Court (Appellate Side) Rules",
+            "Limitation Act 1963",
+            "Presidency Small Causes Act 1882",
+            "Notaries Act 1952",
+            "The Maharashtra Scheduled Castes, Scheduled Tribes, Denotified (Vimukta Jatis), Nomadic Tribes, Other Backward Classes and Special Backward Category (Regulation of Issuance and Verification of Caste Certificate) Act, 2000",
+            "The Maharashtra Scheduled Tribes (Regulation of Issuance and Verification of Certificate) Rules, 2003"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Situational Laws (Recent case laws and trends)",
+          "unitTitleMr": "परिस्थितिजन्य कायदे (अलीकडील खटले आणि प्रवृत्ती)",
+          "topics": [
+            "Recent cases decided by the Supreme Court of public importance",
+            "Public Interest Litigation, Legal Aid, Lok Adalat",
+            "Recent legislations relating to women, children and weaker sections"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever Acts/Rules/Regulations are mentioned in syllabus, latest amendments/versions to be considered."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "docId": 2081,
+  "examName": "Maharashtra Gazetted Technical Services Main Competitive Examination - Mechanical Engineering Services",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2021,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper - I",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Applied Thermodynamics",
+          "unitTitleMr": null,
+          "topics": [
+            "Zeroth law of Thermodynamics, First law of Thermodynamics, Second law of Thermodynamics, calculation of work and heat in various processes",
+            "Thermodynamics property charts and tables, availability and irreversibility, Thermodynamic relations."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Fluid Mechanics and Turbomachinery",
+          "unitTitleMr": null,
+          "topics": [
+            "Fluid definition and properties, Newton’s Law of viscosity concept of continuum, Classification of fluid, Fluid statics, manometry, buoyancy, force of submerged bodies, stability of floating bodies, viscous flow of incompressible fluid, boundary layer, elementary turbulent flow, flow through pipes, head losses in pipes.",
+            "Impulse and reaction principles, velocity diagrams, Pelton-wheel, Francis and Kaplan turbines."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Heat Transfer",
+          "unitTitleMr": null,
+          "topics": [
+            "Modes of heat transfer, one dimensional heat conduction, resistance concept and electric analogy, heat transfer through fins",
+            "Unsteady heat conduction, lumped parameter system, thermal boundary layer, dimensionless parameters in free and forced convective heat transfer, heat exchanger performance, LMTD and NTU methods",
+            "Radiative heat transfer, Stefan Boltzmann law."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Refrigeration and Air Conditioning",
+          "unitTitleMr": null,
+          "topics": [
+            "Vapour and gas refrigeration and heat pump cycle",
+            "Properties of moist air, psychrometric chart, basic psychrometric processes."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Internal Combustion Engine",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification of I.C. Engine, circle Analysis of IC, SI, CI engines, Super charging/ Turbocharger Performance characteristics of SI and CI",
+            "Air pollution due to IC engine and its norms, engine fuels, engine lubricants, engine cooling, Introduction to CNG, LPG, wankle engines etc., Recent development in IC engine."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Power Plant Engineering",
+          "unitTitleMr": null,
+          "topics": [
+            "Thermal Power Plant: Analysis of steam cycle – Carnot, Rankine, Reheat cycle and Regenerative cycle. Layout of Power Plant, layout of pulverized coal burners, fluidized bed combustion, coal handling system, ash handling system. Forced draught and induced draught fans, boiler feed pumps, super heater regenerators, condensers, boilers, de-aerators and cooling towers.",
+            "Hydro power plant: Rainfall, run off and its measurement hydrographs, flow duration curve, reservoir storage capacity, classification of plants – run off river plant, storage river plant, pump storage plant, layout of hydroelectric power plant.",
+            "Nuclear Power Plant: Introduction of Nuclear Engineering, fission, fusion, nuclear materials, thermal fusion reactor and power plant – PWR, BWR, liquid metal fast breeder, reactors, reactor control, introduction to plasma technology.",
+            "Diesel and gas turbine power plant: General layout, advantage and disadvantage component, performance of gas turbine power plant, combine heat power generation."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Renewable Energy Sources",
+          "unitTitleMr": null,
+          "topics": [
+            "Solar Energy: Solar concentrators and tracking, Dish and Parabolic trough concentrating generating systems, Central tower solar power plants, Solar Ponds. Basic principle of power generation in a PV cell, Band gap and efficiency of PV cells, solar cells, characteristics, manufacturing methods of mono and poly-crystalline cells, Amorphous silicon thin film cells.",
+            "Wind Energy: Basic component of WEC, Type of wind turbine – HAWT, VAWT, Performance parameters of wind turbine, Power in wind, Wind electric generators, wind characteristics and site selection, wind farms for bulk power supply to grid."
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper - II",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Strength of Materials",
+          "unitTitleMr": null,
+          "topics": [
+            "Stress and Strain, Elastic Constants: Poisson's Ratio, Modulus of elasticity, Modulus of rigidity, Bulk modulus",
+            "Shear Force and Bending Moment diagram, Deflection of Beams, Thin Cylindrical and Spherical Shells, Strain Energy, Torsion."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Theory of Machines and Vibration",
+          "unitTitleMr": null,
+          "topics": [
+            "Kinematics: Structure, Machine, Link and its types, Kinematics pairs, Kinematic chain and mechanism, Grubler's criteria, Inversions of kinematics chains, inversions of four bar chain, single slider crank chain and double slider crank chain",
+            "Displacement, Velocity and acceleration analysis of plane mechanisms, dynamic analysis of linkages, cams, gears and gear trains, flywheels and governors, balancing of reciprocating and rotating masses, gyroscope",
+            "Free and forced vibration of single degree of freedom systems, effect of damping, vibration isolation, resonance critical speeds of shafts."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Design of Machine Elements",
+          "unitTitleMr": null,
+          "topics": [
+            "Design consideration in castings & forgings, theories of failure, Design for static loadings",
+            "Design against fluctuating loads, Design of shafts, Design of springs, Design of belts."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Materials Technology",
+          "unitTitleMr": null,
+          "topics": [
+            "Strain Hardening, Constitution of Alloys, Iron-Carbon Equilibrium Diagram, Heat Treatment of Steels, Cast Irons",
+            "Introduction to International Standards/Codes, Non Ferrous Metals and Alloys, Fatigue Failure, Creep, Alloy Steels, Strengthening mechanism, Powder Metallurgy."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Production Process, Planning and Control",
+          "unitTitleMr": null,
+          "topics": [
+            "Casting, Forming and Joining Processes - Non Destructive Techniques, Mechanics of machining, basic machine tools, single and multi-point cutting tools, tool geometry and materials, tool life and wear, economics of machining",
+            "Principles of non-traditional machining processes, principles of work holding, design of jigs and fixtures",
+            "Forecasting models, aggregate production planning, scheduling, materials requirement planning."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Mechanical Measurements",
+          "unitTitleMr": null,
+          "topics": [
+            "Limits, Fits and tolerances, linear and angular measurements, comparators, gauge design, interferometry",
+            "Form and finish measurements, alignment and testing methods, tolerances analysis in manufacturing and assembly."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

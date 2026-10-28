@@ -12,6 +12,14 @@ import { DEFAULT_HASH_KEY } from './hashVerify.js'
 
 function sha256Hex(str) {
   try {
+    if (typeof process !== 'undefined' && process.versions && process.versions.node) {
+      const cryptoMod = eval("require('crypto')")
+      return cryptoMod.createHash('sha256').update(str, 'utf8').digest('hex')
+    }
+  } catch {
+    // Fall back to jsSHA
+  }
+  try {
     const sha = new jsSHA('SHA-256', 'TEXT', { encoding: 'UTF8' })
     sha.update(str)
     return sha.getHash('HEX')
@@ -109,6 +117,20 @@ export function toSecureDocUrl(pathOrId, secretKey = null) {
   const num = parseInt(str, 10)
   if (!isNaN(num) && String(num) === str) {
     return `/api/mpsc-pdf/${obfuscateDocId(num, secretKey)}`
+  }
+
+  // Detect /downloads/mpsc/... path containing numeric ID
+  // e.g. /downloads/mpsc/archive/rajyaseva/2026/13372_state-services.../question_paper.pdf
+  // or /downloads/mpsc/cached/13372_mpsc_document.pdf
+  // or /downloads/mpsc/question_papers/2026/13763_...pdf
+  if (str.includes('/downloads/mpsc/')) {
+    const folderMatch = str.match(/\/(\d{4,6})_[^\/]+(?:\/|\.pdf|$)/)
+    if (folderMatch) {
+      const extractedNum = parseInt(folderMatch[1], 10)
+      if (!isNaN(extractedNum) && extractedNum > 0) {
+        return `/api/mpsc-pdf/${obfuscateDocId(extractedNum, secretKey)}`
+      }
+    }
   }
 
   return str

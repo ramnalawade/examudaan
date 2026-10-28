@@ -1,0 +1,484 @@
+/* ============================================================
+   CoverLetterBuilder.module.css
+   Styles for the Professional Cover Letter Builder component.
+   All styles migrated from inline style={{ }} attributes.
+   ============================================================ */
+
+/* ── Outer wrapper ── */
+.wrapper {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+/* ── Header bar ── */
+.header {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--outline-variant);
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.headerIcon {
+  font-size: 28px;
+  color: #EA580C;
+}
+
+.headerText {
+  flex: 1;
+}
+
+.headerTitle {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.headerSubtitle {
+  font-size: 12px;
+  color: #94A3B8;
+  margin-top: 2px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ── Header buttons ── */
+.btnEdit {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s;
+}
+
+.btnEditActive {
+  background: #EA580C;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btnCopy {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s;
+}
+
+.btnCopied {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btnPrint {
+  background: #EA580C;
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Small icon inside header buttons */
+.btnIcon {
+  font-size: 16px;
+}
+
+/* ── Template selector bar ── */
+.templateBar {
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--outline-variant);
+  background: var(--surface);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.templateLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+.templateBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-container-lowest);
+  color: var(--on-surface);
+  border: 1.5px solid var(--outline-variant);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.templateBtnActive {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: #fff;
+  border: 1.5px solid var(--primary);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+/* ── Body: form + preview side-by-side ── */
+.body {
+  display: flex;
+  gap: 0;
+}
+
+/* ── Form panel (collapsible) ── */
+.formPanel {
+  width: 340px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--outline-variant);
+  overflow-y: auto;
+  max-height: 80vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Login nudge inside form ── */
+.loginNudge {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--primary-fixed);
+  border: 1px solid var(--outline-variant);
+  font-size: 12px;
+  color: var(--on-surface);
+  text-align: center;
+}
+
+.loginNudgeLink {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ── Preview panel ── */
+.previewPanel {
+  flex: 1;
+  background: #F1F5F9;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.previewDoc {
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  max-width: 794px;
+  margin: 0 auto;
+}
+
+/* ── FieldGroup helper ── */
+.fieldGroupTitle {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.fieldGroupChildren {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Field helper ── */
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 3px;
+}
+
+.fieldInput {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid var(--outline-variant);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  background: var(--surface-container-lowest);
+  color: var(--on-surface);
+  outline: none;
+  resize: none;
+}
+
+/* ── FORMAL TEMPLATE ── */
+.formalWrap {
+  padding: 40px 48px;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+
+.formalSenderBlock {
+  text-align: right;
+  margin-bottom: 28px;
+}
+
+.formalSenderName {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.formalDate {
+  margin-bottom: 20px;
+}
+
+.formalRecipient {
+  margin-bottom: 20px;
+}
+
+.formalRecipientName {
+  font-weight: 700;
+}
+
+.formalOrgAddress {
+  white-space: pre-line;
+}
+
+.formalSubject {
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.formalSalutation {
+  margin-bottom: 12px;
+}
+
+.formalPara {
+  margin-bottom: 14px;
+}
+
+.formalClosingPara {
+  margin-bottom: 28px;
+}
+
+.formalSignoff {
+  margin-bottom: 4px;
+}
+
+.formalSignerName {
+  font-weight: 700;
+}
+
+/* ── MODERN TEMPLATE ── */
+.modernWrap {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+
+.modernHeader {
+  background: #EA580C;
+  color: #fff;
+  padding: 28px 40px 20px;
+}
+
+.modernName {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.modernContact {
+  font-size: 12px;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+.modernBody {
+  padding: 32px 40px;
+}
+
+.modernMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.modernRecipientName {
+  font-weight: 700;
+}
+
+.modernOrgAddress {
+  color: #555;
+  font-size: 12px;
+}
+
+.modernDate {
+  text-align: right;
+  color: #555;
+  font-size: 12px;
+}
+
+.modernSubject {
+  font-weight: 700;
+  font-size: 14px;
+  border-left: 4px solid #EA580C;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+.modernSubjectRef {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.modernSalutation {
+  margin-bottom: 12px;
+}
+
+.modernPara {
+  margin-bottom: 14px;
+}
+
+.modernClosingPara {
+  margin-bottom: 28px;
+}
+
+.modernSignoff {
+  margin-bottom: 4px;
+}
+
+.modernSignerName {
+  font-weight: 700;
+}
+
+/* ── CONCISE TEMPLATE ── */
+.conciseWrap {
+  padding: 40px 48px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+
+.conciseHeaderRow {
+  border-bottom: 2px solid #1E293B;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.conciseName {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1E293B;
+}
+
+.conciseContact {
+  font-size: 12px;
+  color: #555;
+}
+
+.conciseDate {
+  font-size: 12px;
+  color: #555;
+  text-align: right;
+}
+
+.conciseRecipient {
+  margin-bottom: 16px;
+}
+
+.conciseRecipientName {
+  font-weight: 700;
+}
+
+.conciseOrg {
+  color: #555;
+}
+
+.conciseSubject {
+  margin-bottom: 16px;
+}
+
+.conciseRefNo {
+  color: #555;
+}
+
+.concisePara {
+  margin-bottom: 14px;
+}
+
+.conciseClosingPara {
+  margin-bottom: 24px;
+}
+
+.conciseSignerName {
+  font-weight: 700;
+}

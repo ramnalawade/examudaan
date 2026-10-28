@@ -1,0 +1,68 @@
+{
+  "docId": 1669,
+  "examName": "District Malaria Officers / Filaria Officers / Biologist, in the Directorate of Health Services, General State Service, Group-B",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2008,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Screening Test Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": true,
+      "isMerit": false,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Parasitism and Vector Biology",
+          "unitTitleMr": null,
+          "topics": [
+            "Parasitism: Concept, origin, evolution, advantages & disadvantages in the parasitic life.",
+            "Classification of parasites according to habitat.",
+            "Kinds of hosts: definitive, intermediate, primary, secondary, specific, paratenic, carrier, susceptible, resistant, accidental, reservoir, vector.",
+            "Modes of parasitic invasion, passive, mechanical, active, contact, transovarial, pathways of entry, sites of habitation.",
+            "Host specificity.",
+            "Habitats & environments of parasites: vertebrate digestive system, environmental conditions in different parts of the system, blood, reticulo-endothelial system, tissues & other microhabitats, invertebrate habitats.",
+            "Structural, physiological & biological adaptations of parasites for infectiousness, establishment & transmission, shape, size, attachment & protective devices, feeding aids, locomotion, respiration, metabolism, reproduction, life cycles, regressive changes, resistant & quiescent free living stages.",
+            "Host-parasite system: effects of parasites on hosts, mechanical, nutritional, destructive, toxic, biological etc. Hosts reactions to parasites: resistance, compatibility, immunity, cellular and tissue reactions, e.g. phagocytosis, inflammation, repair, abnormal growth, Humoral reaction. (Physiological resistance, immune response): premunition, avoidance of parasites by hosts, influence of host on parasite life cycle.",
+            "Disease cycles: concept of diffusion (dissemination), principles of control; protection of host, control in and outside the host.",
+            "Parasites & Zoonosis, vital rickettsial, bacterial, protozoan, helminthic & arthropod diseases. Leptospirosis, Leishmaniasis.",
+            "Vector Biology: taxonomic groups, methods of transmission, stages which act as vector, characteristics of arthropods in transmission cycles, effect of environment on vector transmission.",
+            "Study of the following parasites with respect to geographical distribution, habitat, structure, life cycle, pathogenicity, treatment and prophylaxis: 1. Trypanosoma Spp. 2. Leishmania donovani. 3. Plasmodium 4. Wuchereria bancrofti."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Insects, Chemotherapy, and Laboratory Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Insects as causes and vectors of disease & their life cycles in brief: (i) Mosquitoes (Anopheles, Culex, Aedes etc.), (ii) Rat Flea (Xenopsylla), (iii) Tse-tse fly (Glossina), (iv) Sandfly (Phlebotomus).",
+            "Insecticides: Classification, Chemical-nature, mode of action. Pesticide application equipment - Dusters, sprayers. Hazards of pesticides.",
+            "a) Principles and methods of insect control in brief e.g. mechanical, chemical & biological, Pheromones in pest control, Integrated Pest Control. b) Personal Protection Methods: Bed net & repellents etc.",
+            "Chemotherapy: (a) Antimalarial drugs, (b) Leishmanicidal drugs, (c) Antifilarial drugs.",
+            "Human Immunology, National Immunization Schedule.",
+            "Laboratory Examinations: (i) Collection of blood smear, (ii) Staining of blood smear, (iii) Examination of blood smear & identification of species.",
+            "Organisation and management of the Clinical Laboratory: (a) Setting goal & objectives, (b) Laboratory facilities, (c) Laboratory Set up, (d) Storage, stock inventory and checking etc.",
+            "World Health Organisation (WHO) - Objectives, Structure, Work & programmes.",
+            "National Health Policy, Health care system in India, National Health programme & scheme & particularly Malaria and Filaria."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "The Screening Test consists of a single paper of objective type (multiple choice questions) carrying 100 marks of 1-hour duration.",
+    "No penalty marks will be deducted for wrong answers marked by a candidate.",
+    "Marks obtained in the Screening Test will not be taken into account for final selection, which will be decided on performance in the interview alone."
+  ]
+}

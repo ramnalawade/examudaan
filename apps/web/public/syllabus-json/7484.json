@@ -1,0 +1,175 @@
+{
+  "docId": 7484,
+  "examName": "Lecturer/Assistant Professor (Nursing Service), Maharashtra Medical Education and Research Service, Group-B",
+  "examNameMr": "ագպարիկ/सहाय्यक प्राध्यापक (नर्सेस सेवा), महाराष्ट्र वैद्यकीय शिक्षण आणि संशोधन सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer/Assistant Professor (Nursing Service), Maharashtra Medical Education and Research Service, Group-B",
+      "paperTitleMr": "ագպարիկ/सहाय्यक प्राध्यापक (नर्सेस सेवा), महाराष्ट्र वैद्यकीय शिक्षण आणि संशोधन सेवा, गट-ब",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Child Health Nursing",
+          "unitTitleMr": "बाल आरोग्य शुश्रुषा",
+          "topics": [
+            "Introduction",
+            "Principles of growth and development",
+            "Nursing care of a neonate",
+            "Integrated management of neonatal and childhood illnesses (IMNCI)",
+            "Nursing management in common childhood diseases",
+            "Drugs in paediatrics - calculation and administration",
+            "Management of behavioural & social problems in children"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Community Health Nursing",
+          "unitTitleMr": "समुदाय आरोग्य शुश्रुषा",
+          "topics": [
+            "Introduction",
+            "Health planning and policies and problems",
+            "Health care delivery system",
+            "Community health nursing approaches, concepts and roles and responsibilities of nursing personnel",
+            "Assisting individuals and groups to promote and maintain their health",
+            "National Health & Family Welfare Programmes and the Role of Nurse",
+            "National and International Health Agencies"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Medical and Surgical Nursing",
+          "unitTitleMr": "वैद्यकीय आणि शल्यचिकित्सा शुश्रुषा",
+          "topics": [
+            "Introduction to medical and surgical nursing",
+            "Common signs and symptoms and management of Fluid and electrolyte imbalance",
+            "Nursing management of patients (adults including elderly) with respiratory problems",
+            "Nursing management of patient (adults including elderly) with disorders of digestive system",
+            "Nursing management of patient (adults including elderly) with blood and cardio vascular problems",
+            "Nursing management of patient (adults including elderly) with Genito-urinary problems",
+            "Nursing management of patient (adults including elderly) with disorders of endocrine system",
+            "Nursing management of patient (adults including elderly) with disorders of Integumentary system",
+            "Nursing management of patient (adults including elderly) with musculoskeletal problems",
+            "Nursing management of patient (adults including elderly) with Immunological problems",
+            "Nursing management of patient (adults including elderly) with Communicable Diseases",
+            "Role of nurse in special areas"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Nursing Education",
+          "unitTitleMr": "नर्सेस शिक्षण",
+          "topics": [
+            "Introduction",
+            "Objectives and their classification",
+            "Teaching learning objectives",
+            "Instructional media – (A.V. aids)",
+            "Evaluation",
+            "Standardised and non standardised test",
+            "Nursing educational Programme",
+            "Administrating, scoring, reporting test",
+            "In service and Continuing education in nursing",
+            "Curriculum Development",
+            "Teachers Preparation",
+            "Guidance and counselling",
+            "Management of educational institute"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Nursing Management",
+          "unitTitleMr": "नर्सेस व्यवस्थापन",
+          "topics": [
+            "Health care delivery system in India",
+            "Functions of Management. (POSDCORB)",
+            "Human resource for Health",
+            "Directing",
+            "Material management",
+            "Controlling",
+            "Budgeting",
+            "Nursing Informatics",
+            "Leadership",
+            "Legal Ethical issues"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Obstetric and Gynaecological Nursing",
+          "unitTitleMr": "प्रसूतिशास्त्र आणि स्त्रीरोग शुश्रुषा",
+          "topics": [
+            "History of maternal child health",
+            "Human Reproduction",
+            "Pregnancy",
+            "Normal Labour",
+            "Normal Puerperium",
+            "Normal Newborn",
+            "Drugs in obstetrics",
+            "Family welfare services",
+            "Infertility",
+            "Menopause",
+            "Abortion",
+            "High risk Pregnancy",
+            "Abnormal Labour",
+            "Postpartum complications",
+            "High risk Newborns",
+            "Administration and management of obstetrical unit"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Psychiatric Nursing",
+          "unitTitleMr": "मानसोपचार शुश्रुषा",
+          "topics": [
+            "Mental Health and mental illness",
+            "Concept of Psychobiology",
+            "Theories of personality development",
+            "Stress and its management",
+            "Therapeutic communication and interpersonal relationship",
+            "Promoting self esteem",
+            "Nursing process in Psychiatric Nursing",
+            "Psychosocial Therapies",
+            "Drugs in Psychiatric",
+            "Electroconvulsive therapy",
+            "Crisis Intervention",
+            "Disorders of infancy, Childhood, Adolescence",
+            "Schizophrenia",
+            "Anxiety disorders",
+            "Psychosocial rehabilitation",
+            "Counselling"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Nursing Research and Statistics",
+          "unitTitleMr": "नर्सेस संशोधन आणि सांख्यिकी",
+          "topics": [
+            "Research and research process",
+            "Research Problem Question",
+            "Review of Literature",
+            "Research approaches and designs",
+            "Sampling and data collection",
+            "Analysis of data",
+            "Introduction to statistics",
+            "Critical review of published research",
+            "Evidenced based Nursing"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

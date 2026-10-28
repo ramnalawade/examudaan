@@ -13,11 +13,12 @@
 
 import { query as pgQuery } from '../../../../lib/pgdb'
 import { ok, serverError } from '../../../../lib/apiResponse'
+import { withValidation, schemas } from '../../../../lib/validate'
 
-export async function GET(req) {
-  const { searchParams } = new URL(req.url)
-  const q     = searchParams.get('q')?.trim()
-  const limit = Math.min(parseInt(searchParams.get('limit') || '10', 10), 20)
+async function semanticHandler(req) {
+  const validated = req.validatedBody || {}
+  const q     = validated.q?.trim()
+  const limit = Math.min(parseInt(validated.limit || '10', 10), 20)
 
   if (!q || q.length < 3) {
     return ok({ results: [], query: q, mode: 'semantic' })
@@ -116,3 +117,5 @@ async function _keywordSearch(q, limit) {
     return serverError('Search failed')
   }
 }
+
+export const GET = withValidation(schemas.semanticSearch, semanticHandler)

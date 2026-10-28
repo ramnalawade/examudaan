@@ -5,9 +5,11 @@
 
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { SITE_CONFIG } from '../../lib/constants'
+import TurnstileWidget from '../../components/TurnstileWidget'
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -20,15 +22,26 @@ export default function ContactPage() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [errorMsg, setErrorMsg] = useState('')
+  const turnstileRef = useRef(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (!turnstileToken) {
+      setErrorMsg('Please complete the security check before submitting.')
+      return
+    }
+    setErrorMsg('')
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
       setSubmitted(true)
+      setTurnstileToken('')
+      turnstileRef.current?.reset()
     }, 800)
   }
+
 
   const contactCards = [
     {
@@ -381,6 +394,24 @@ export default function ContactPage() {
                     }}
                   />
                 </div>
+
+                {/* Cloudflare Turnstile Bot Protection */}
+                <TurnstileWidget
+                  ref={turnstileRef}
+                  action="contact"
+                  onVerify={(token) => {
+                    setTurnstileToken(token)
+                    setErrorMsg('')
+                  }}
+                  onExpire={() => setTurnstileToken('')}
+                  onError={() => setErrorMsg('Security check failed to initialize. Please refresh.')}
+                />
+
+                {errorMsg && (
+                  <div style={{ color: 'var(--error, #dc2626)', fontSize: 13, fontWeight: 600 }}>
+                    {errorMsg}
+                  </div>
+                )}
 
                 <button
                   type="submit"

@@ -1,0 +1,149 @@
+{
+  "docId": 1675,
+  "examName": "Food Safety Officer, Food and Drug Administration, Group-B",
+  "examNameMr": "अन्न सुरक्षा अधिकारी, अन्न आणि औषध प्रशासन, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "other",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Food Safety Officer, Food and Drug Administration, Group-B",
+      "paperTitleMr": "अन्न सुरक्षा अधिकारी, अन्न आणि औषध प्रशासन, गट-ब",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Chemistry",
+          "unitTitleMr": "रसायनशास्त्र",
+          "topics": [
+            "Periodic Table/ Concepts of qualitative Analysis",
+            "Bonding & structure of organic compound & their nomenclature",
+            "Mechanism of organic Reactions Alkanels & Cycloalkanes",
+            "Chemical calculations - Introduction to Molecular Spectroscopy",
+            "Chemical Thermodynamics",
+            "Industrial Organic Chemistry",
+            "Aromatic Hydrocarbons - Haloarenes, Phenols, Ether and Epoxides",
+            "Source of organic compounds chemical industry"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Introduction to Food",
+          "unitTitleMr": "अन्नाची ओळख",
+          "topics": [
+            "Carbohydrates, Proteins, Fats, Fibers, Vitamins, Minerals, ME etc",
+            "Effect of food processing on food nutrition",
+            "Basics of Food Safety",
+            "Food Contaminants (Microbial, Chemical, Physical)",
+            "Food Adulteration (Common adulterants, simple tests for detection of adulteration)",
+            "Food Additives (Classification, Functional role, Safety issues)",
+            "Food Packaging & labelling (Packaging types, Understanding labelling rules & Regulations, Nutritional labelling, Labeling requirements for pre-packaged food as per CODEX)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Introduction of Food Processing and Technology",
+          "unitTitleMr": "अन्न प्रक्रिया आणि तंत्रज्ञानाची ओळख",
+          "topics": [
+            "F&VP, Milk, Meat, Oil, Grain milling, Tea-Coffee, Spices & Condiments processing",
+            "Food processing techniques (Minimal processing technologies, Photochemical processes, Pulsed electric field, Hurdle technology)",
+            "Food Preservation Techniques (Pickling, Drying, Smoking, Curing, Canning, Bottling, Jellying, Modified atmosphere, Pasteurization etc.)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Codex Alimentarius Commission (Codex)",
+          "unitTitleMr": "कोडेक्स Alimentarius आयोग (कोडेक्स)",
+          "topics": [
+            "Introduction",
+            "Standards. Codex of practice, Guidelines and Recommendations",
+            "Applying Codex Standards",
+            "Codex India – Role of Codex Contact point, National Codex Contact Point (NCCP)",
+            "Core functions of NCCP-India",
+            "National Codex Committee of India – TOR (Terms of Reference), Functions, Shadow Committees etc"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Emerging Issues in Food Processing",
+          "unitTitleMr": "अन्न प्रक्रियेतील उदयोन्मुख बाबी",
+          "topics": [
+            "Organic food",
+            "Identifying organic foods, Advantages, The Organic Certification Process, Organic food labeling",
+            "GM food",
+            "Why are GM food produced. Main issues of concern for Human Health, How are GM Food regulated Internationally, Regulation in India",
+            "Role of WHO to improve evaluation of GM food",
+            "Benefits & Controversies",
+            "Irradiated Food",
+            "How is food Irradiated, Sources of radiations used",
+            "Potential uses of Food Irradiation",
+            "Labelling of Irradiated Food",
+            "Freeze dried food",
+            "Definition, Principle of Freeze-drying, Process",
+            "The benefits of Freeze-Drying",
+            "Functional Foods & Nutraceuticals",
+            "Functional foods from plant sources, Animal sources",
+            "Nutraceuticals, Dietary supplements, Regulation",
+            "Nano-tech in food processing",
+            "What is Nanotechnology, use in food products and processing",
+            "Food Fortification & Modification"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "FSSAI Act 2006",
+          "unitTitleMr": "एफएसएसएआय कायदा २००६",
+          "topics": [
+            "Food Safety & Standards Act, 2006",
+            "Major aspects of the act"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Advances in Food Safety & Quality Management",
+          "unitTitleMr": "अन्न सुरक्षा आणि गुणवत्ता व्यवस्थापनातील प्रगती",
+          "topics": [
+            "Pre-requisite Programme – Good Hygienic Practices (GHP)",
+            "Objective, Scope & Use, Key aspects of Hygiene Control Systems etc.",
+            "Pre-requisite Programme – Good Manufacturing Practices (GMP)",
+            "What is GMP, GMP in Food Industry etc.",
+            "Food Safety Management Systems – HACCP",
+            "HACCP seven principles, HACCP applications",
+            "HACCP based SOPs by USDA",
+            "Food Safety Management Systems – ISO 22000",
+            "Key elements of ISO 22000",
+            "What does ISO 22000 bring to the HACCP Method",
+            "Why to use ISO 22000",
+            "Quality Management Systems – ISO 9001",
+            "Introduction, Clauses of ISO 9001 : 2000",
+            "Documentation structure of ISO 9001 : 2000",
+            "Quality Manual, Mandatory Procedures, SOP’s, Formats and Records etc."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Other Related Acts",
+          "unitTitleMr": "इतर संबंधित कायदे",
+          "topics": [
+            "B.I.S",
+            "C.R.P.C / I.P.C.",
+            "EC (Essential Commodities Act)",
+            "Consumer Protection Act"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

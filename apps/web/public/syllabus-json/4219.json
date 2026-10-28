@@ -1,0 +1,91 @@
+{
+  "docId": 4219,
+  "examName": "Maharashtra Group C Services Main Examination - Syllabus",
+  "examNameMr": "महाराष्ट्र गट क सेवा मुख्य परीक्षा - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2021,
+  "language": "English",
+  "category": "group-c",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Maharashtra Group C Services Main Examination Paper",
+      "paperTitleMr": "महाराष्ट्र गट क सेवा मुख्य परीक्षा पेपर",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Human Rights and Laws",
+          "unitTitleMr": "मानवी हक्क व कायदे",
+          "topics": [
+            "International Human Rights Standards",
+            "Provisions of Indian Constitution",
+            "Implementation and Protection of Human Rights and Responsibilities in India",
+            "Human Rights Movement",
+            "Problems of Deprivation of Human Rights",
+            "Poverty, Illiteracy, Unemployment, Social-Cultural-Religious Traditions",
+            "Violence, Corruption, Terrorism, Exploitation of Workers, Organized Crime",
+            "Civil Rights Protection Act 1955",
+            "Protection of Human Rights Act 1993",
+            "Protection of Women from Domestic Violence Act 2005",
+            "Scheduled Castes and Scheduled Tribes Prevention of Atrocities Act 1989",
+            "Dowry Prohibition Act 1961",
+            "Mahatma Gandhi Tantamukti Abhiyan",
+            "The Bombay Prohibition Act 1949",
+            "The Maharashtra Excise Manual Volume-I",
+            "The Maharashtra Excise Manual Volume-III",
+            "The Prohibition and Excise Manual Volume-II"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Book-Keeping and Accountancy",
+          "unitTitleMr": "पुस्तपालन व खातेलेखन",
+          "topics": [
+            "Book-keeping meaning and definition",
+            "Accounting terminology",
+            "Fundamentals of Double Entry",
+            "Source documents for accounting",
+            "Journal",
+            "Subsidiary Books",
+            "Ledger",
+            "Bank Reconciliation Statements",
+            "Trial Balance",
+            "Depreciation",
+            "Final Accounts",
+            "Preparing Financial Statements",
+            "Accounts of non-profit-making organizations"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Studies and Aptitude",
+          "unitTitleMr": "सामान्य अभ्यास व अभियोग्यता",
+          "topics": [
+            "History",
+            "Geography",
+            "Civics",
+            "Arithmetic",
+            "Algebra",
+            "Geometry",
+            "Statistics",
+            "Physics",
+            "Chemistry",
+            "Biology",
+            "Environment"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

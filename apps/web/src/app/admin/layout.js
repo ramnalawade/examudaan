@@ -12,7 +12,7 @@ export default function AdminLayout({ children }) {
 
   useEffect(() => {
     trackAdminPageView({ page_path: pathname })
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem('eu_access_token') || localStorage.getItem('token')
     if (!token) {
       // In production: redirect to login. In dev: allow access via env flag.
       const isDev = process.env.NODE_ENV === 'development'
@@ -23,10 +23,11 @@ export default function AdminLayout({ children }) {
       console.warn('[Admin] No auth token — allowing access in development mode only.')
     }
     setIsAuth(true)
-  }, [router])
+  }, [router, pathname])
 
   const navItems = [
     { name: 'Overview', path: '/admin' },
+    { name: 'Feedback Desk', path: '/admin/feedback' },
     { name: 'Jobs', path: '/admin/jobs' },
     { name: 'Scrapers', path: '/admin/scrapers' },
   ]

@@ -1,0 +1,118 @@
+{
+  "docId": 1200,
+  "examName": "Civil Engineering Services Examination",
+  "examNameMr": "स्थापत्य अभियांत्रिकी सेवा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Civil Engineering, Paper - I",
+      "paperTitleMr": "स्थापत्य अभियांत्रिकी, पेपर - I",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Building Construction & Materials",
+          "unitTitleMr": "इमारत बांधणी आणि साहित्य",
+          "topics": [
+            "Properties of wet and hardened concrete, tests on concrete, factors affecting strength of concrete, water-cement ratio, aggregate-cement ratio",
+            "Mix design, additives, design of form work, types of formwork",
+            "Stones, bricks, cements, lime, mortar, timber, plastic, concrete, steel, paints and varnishes",
+            "Principles of building planning and design, integrated approach, building byelaws, building services such as vertical transportation, water supply sanitation, thermal ventilation, lighting, acoustics, fire protection, electrical fittings",
+            "Foundations, stones, brick and block masonry, steel and reinforced cement concrete structures, floors, doors and windows, roofs, finishing works, water proofing"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Strength of Materials",
+          "unitTitleMr": "सामग्रीचे सामर्थ्य",
+          "topics": [
+            "Stresses, strains, principal stresses, bending moments, shear forces and torsion theory",
+            "Bending theory of beam, deflection of beam, theories of buckling of columns"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Theory of Structures and Design",
+          "unitTitleMr": "संरचना सिद्धांत आणि डिझाइन",
+          "topics": [
+            "Analysis of beams, frames and trusses, slope deflection method, moment distribution method",
+            "Structural analysis: Analysis of arches and suspension cables, influence lines, stiffness and flexibility matrix methods",
+            "Steel structures: Design of bolted and welded connections, columns, footings, trusses, steel beams, plate girders",
+            "Design of reinforced concrete structures (Working stress and limit state): Design of slab, beams, columns, footing, retaining walls, tanks, building frames, staircases",
+            "Pre-stressed Concrete: Principles of pre-stressing, materials used and their properties, permissible stresses as per I.S. codes, systems of pre-stressing, losses in pre-stress, design of pre-tensioned and post-tensioned beams- simply supported, rectangular and T- beams, cable profile, end block design, bridge girder",
+            "Construction Planning and Management: Elements of scientific management, elements of material management, safety engineering, network analysis, construction equipment, site layout, quality control",
+            "Computer-aided analysis and design of structures, application of computer programming to structures, numerical methods such as Finding area by Simpson's rule, trapezoidal rule, finding root of an equation by Newton-Raphson techniques and bisection method, solution of simultaneous equations by Gauss elimination method, Gauss-Jordan method, and iteration method"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Civil Engineering, Paper - II",
+      "paperTitleMr": "स्थापत्य अभियांत्रिकी, पेपर - II",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Surveying, Estimating, Costing and Valuation",
+          "unitTitleMr": "सर्वेक्षण, अंदाजपत्रक, खर्च आणि मूल्यमापन",
+          "topics": [
+            "Classification of surveys, measurement of distances-direct and indirect methods, optical and electronic devices, prismatic compass, local attraction",
+            "Plane table surveying, levelling, calculations of volumes, contours, theodolite, theodolite traversing, omitted measurements, trigonometric levelling, tacheometry, curves, photogrammetry, geodetic surveying, hydrographic surveying",
+            "Specification, estimation, costing, tenders and contracts, rate analysis, valuation"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Geo-technical Engineering, Fluid Mechanics and Hydraulics",
+          "unitTitleMr": "जिओ-टेक्निकल अभियांत्रिकी, फ्लुइड मेकॅनिक्स आणि हायड्रॉलिक्स",
+          "topics": [
+            "Geotechnical properties, stresses in soil, shear resistance, compaction, consolidation and earth pressure, stability of slopes, bearing capacity, settlements, shallow and deep foundations, cofferdams, ground water control",
+            "Properties of fluids, fluid statics and buoyancy, kinematics and dynamics, flow measurement, flow in open channel, flow in closed conduits, dimensional and model analysis, losses in pipe flow, siphon, water hammer, boundary layer and control, pipe network",
+            "Fluid Machines: Hydraulic turbines, centrifugal pumps, reciprocating pumps, power house, classification and layout"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Hydrology, Irrigation, Highway and Bridge Engineering",
+          "unitTitleMr": "जलविज्ञान, सिंचन, महामार्ग आणि पूल अभियांत्रिकी",
+          "topics": [
+            "Hydrological cycle, precipitation, evaporation, infiltration, runoff, hydrographs, reservoir planning & sediment control, floods, flood routing, ground water",
+            "Water requirement of crops, methods of irrigation, lift irrigation, water logging, dams, spillways, energy dissipation, diversion head works, canal and canal structures, cross drainage works, river training works",
+            "Planning of highway systems, alignment and geometric design, horizontal and vertical curves, grade separation, materials and different surfaces and maintenance, rigid and flexible pavement, traffic engineering",
+            "Selection of site, types of bridges, discharge, waterway, spans, afflux, scour, standards, specifications, loads and forces, erection of superstructure, strengthening"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Tunnelling and Environmental Engineering",
+          "unitTitleMr": "बोगदा खणणे आणि पर्यावरण अभियांत्रिकी",
+          "topics": [
+            "Open cuts, surveys, criteria for selection of size and shapes, driving in soft and hard grounds, mucking, dust control, ventilation, lighting and drainage, special methods of tunnelling",
+            "Water Supply Engineering: Sources of supply, design of intakes, estimation of demand, water quality standards, primary and secondary treatment, maintenance of treatment units, conveyance and distribution of treated water, rural water supply",
+            "Waste Water Engineering & Pollution control: Quantity, collection and conveyance and quality, disposal, design of sewer and sewerage systems, pumping, characteristics of sewage and its treatment, rural sanitation, sources and effects of air and noise pollution, monitoring, standards",
+            "Solid Waste Management: Sources, classification, collection and disposal"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

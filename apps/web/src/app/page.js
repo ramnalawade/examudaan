@@ -6,7 +6,8 @@
 
 import HomePageView from '../components/HomePageView'
 import { query } from '../lib/pgdb'
-import { getPlatformStats } from '../lib/platformStats'
+import { getPlatformStats } from '../lib/serverStats'
+import { MPSC_TOTAL_QUESTION_PAPERS, MPSC_ARCHIVE_YEARS_SPAN } from '../lib/platformStats'
 
 export const metadata = {
   title: { absolute: "ExamUdaan — Govt Jobs, MPSC PYQ & Police Bharti 2026" },
@@ -350,7 +351,7 @@ export default async function HomePage() {
           '@type': 'SiteNavigationElement',
           position: 1,
           name: 'Mock Tests',
-          description: 'Free CBT mock tests with timer, negative marking, instant scorecard & state rank for MPSC, Police Bharti & Talathi.',
+          description: 'Free CBT mock tests with timer, negative marking, instant scorecard & simulated state percentile for MPSC, Police Bharti & Talathi.',
           url: 'https://examudaan.in/mock-tests',
         },
         {
@@ -398,8 +399,8 @@ export default async function HomePage() {
         {
           '@type': 'SiteNavigationElement',
           position: 8,
-          name: 'MPSC Papers (2021-2026)',
-          description: 'Complete archive of 429+ authentic MPSC question papers and final answer keys with in-browser PDF reader.',
+          name: `MPSC Papers & Keys (${MPSC_ARCHIVE_YEARS_SPAN})`,
+          description: `Complete archive of ${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}+ authentic MPSC question papers and final answer keys with in-browser PDF reader.`,
           url: 'https://examudaan.in/mpsc-pyq',
         },
       ],

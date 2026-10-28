@@ -1,0 +1,387 @@
+{
+  "docId": 1627,
+  "examName": "Syllabus for the post of Assistant Professor - Chemistry, Government Engineering College, Maharashtra Engineering College Teachers Service, Group - A",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (100 Questions, 200 Marks) followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor - Chemistry",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Quantum Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Planck's quantum theory",
+            "Wave-particle duality",
+            "Uncertainty Principle",
+            "Operators and commutation relations",
+            "Postulates of quantum mechanics and Schrodinger equation",
+            "Free particle, particle in a box, degeneracy, harmonic oscillator, rigid rotator and the hydrogen atom",
+            "Angular momentum including spin coupling of angular momenta including spin-orbit coupling"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "The variation method and perturbation theory",
+          "unitTitleMr": null,
+          "topics": [
+            "Application to the helium atom",
+            "Antisymmetry and Exclusion Principle",
+            "Slater determinantal wave functions",
+            "Term symbols and spectroscopic states"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Chemical Binding and Molecular Orbitals",
+          "unitTitleMr": null,
+          "topics": [
+            "Born-Oppenheimer approximation",
+            "Hydrogen molecule ion: LCAO-MO and VB treatments of the hydrogen molecule",
+            "Electron density, forces and their role in chemical binding",
+            "Hybridisation and valence MO",
+            "Huckel pi-electron theory and its applications to ethylene, butadiene and benzene",
+            "Idea of self-consistent fields"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Group theoretical representations and quantum mechanics",
+          "unitTitleMr": null,
+          "topics": [
+            "Vanishing of integrals",
+            "Spectroscopic selection rules for vibrational, electronic, vibronic and Raman spectroscopy",
+            "MO treatment of large molecules with symmetry"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Spectroscopy",
+          "unitTitleMr": null,
+          "topics": [
+            "Theoretical treatment of rotational, vibrational and electronic spectroscopy",
+            "Principles of magnetic resonance, Mossbauer and Photoelectron spectroscopy"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Thermodynamics",
+          "unitTitleMr": null,
+          "topics": [
+            "First law of thermodynamics, relation between Cp and Cv",
+            "Enthalpies of physical and chemical changes, temperature dependence of enthalpies",
+            "Second law of thermodynamics, entropy, Gibbs-Helmholtz equation",
+            "Third law of thermodynamics and calculation of entropy"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Chemical Equilibrium",
+          "unitTitleMr": null,
+          "topics": [
+            "Free energy and entropy of mixing",
+            "Partial molar quantities, Gibbs-Duhem equation",
+            "Equilibrium constant, temperature dependence of equilibrium constant",
+            "Phase diagram of one and two-component systems, phase rule"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Ideal and Non-ideal Solutions",
+          "unitTitleMr": null,
+          "topics": [
+            "Excess functions, activities, concept of hydration number",
+            "Activities in electrolytic solutions, mean ionic activity coefficient",
+            "Debye-Huckel treatment of dilute electrolyte solutions"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Equilibria in Electrochemical Cells",
+          "unitTitleMr": null,
+          "topics": [
+            "Cell reactions, Nernst equation, application of cell EMF measurements"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Surface Phenomena",
+          "unitTitleMr": null,
+          "topics": [
+            "Surface tension, adsorption on solids, electrical phenomena at interfaces including electrokinetic micelles and reverse micelles",
+            "Applications of photoelectron spectroscopy, ESCA and Auger spectroscopy to the study of surfaces"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Statistical Thermodynamics",
+          "unitTitleMr": null,
+          "topics": [
+            "Thermodynamic probability and entropy",
+            "Maxwell-Boltzmann distribution of velocities, average, most probable and root-mean-square velocities",
+            "Maxwell-Boltzmann, Bose-Einstein and Fermi-Dirac statistics",
+            "Partition function, rotational, translational, vibrational and electronic partition functions for diatomic molecules",
+            "Calculations of thermodynamic functions and equilibrium constants",
+            "Theories of specific heat for solids"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Non-equilibrium Thermodynamics",
+          "unitTitleMr": null,
+          "topics": [
+            "Postulates and methodologies",
+            "Linear laws, Gibbs equation, Onsager reciprocal theory"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Reaction Kinetics",
+          "unitTitleMr": null,
+          "topics": [
+            "Methods of determining rate laws",
+            "Mechanisms of photo-chemical, chain and oscillatory reactions",
+            "Collision theory of reaction rates, steric factor, treatment of unimolecular reactions",
+            "Theory of absolute reaction rates, comparison of result with Eyring and Arrhenius equations",
+            "Ionic reactions, salt effect",
+            "Homogeneous catalysis and Michaelis-Menten Kinetics, heterogeneous catalysis"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Fast Reactions",
+          "unitTitleMr": null,
+          "topics": [
+            "Study of kinetics by stop-flow technique, relaxation method, flash photolysis and magnetic resonance method"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Macromolecules",
+          "unitTitleMr": null,
+          "topics": [
+            "Number-average and weight-average molecular weights",
+            "Determination of molecular weights",
+            "Kinetics of polymerisation",
+            "Stereochemistry and mechanism of polymerisation"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Solids",
+          "unitTitleMr": null,
+          "topics": [
+            "Dislocations in solids, Schottky and Frenkel defects",
+            "Electrical properties, insulators and semiconductors, band theory of solids, solid-state reactions"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Nuclear Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Radioactive decay and equilibrium",
+            "Nuclear reactions, Q value, cross-sections, types of reactions",
+            "Chemical effects of nuclear transformations, fission and fusion, fission products and fission yields",
+            "Radioactive techniques, tracer techniques, neutron activation analysis, counting techniques such as G.M., ionization and proportional counters"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Chemistry of Non-transition Elements",
+          "unitTitleMr": null,
+          "topics": [
+            "General discussion on the properties of the non-transition elements",
+            "Special features of individual elements, synthesis, properties and structure of their halides and oxides",
+            "Polymorphism of carbon, phosphorus and sulphur",
+            "Synthesis, properties and structure of boranes, carboranes, borazines, silicates, carbides, silicones, phosphazenes, sulphur",
+            "Oxyacids of nitrogen, phosphorus, sulphur and halogens",
+            "Interhalogens, pseudohalides and noble gas compounds"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Chemistry of Transition Elements",
+          "unitTitleMr": null,
+          "topics": [
+            "Coordination chemistry of transition metal ions",
+            "Stability constants of complexes and their determination, stabilization of unusual oxidation states",
+            "Stereochemistry of coordination compounds",
+            "Ligand field theory, splitting of d-orbitals in low symmetry environments",
+            "Jahn-Teller effect, interpretation of electronic spectra including charge transfer spectra, spectrochemical series, nephelauxetic series",
+            "Dia-para-ferro and antiferromagnetism, quenching of orbital angular moments, spin-orbit coupling",
+            "Inorganic reaction mechanisms, substitution reactions, trans-effect and electron transfer reactions",
+            "Photochemical reactions of chromium and ruthenium complexes, fluxional molecules",
+            "Iso and heteropolyacids, metal clusters, spin crossover in coordination compounds"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Chemistry of Lanthanides and Actinides",
+          "unitTitleMr": null,
+          "topics": [
+            "Spectral and magnetic properties",
+            "Use of lanthanide compounds as shift reagents"
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Organometallic Chemistry of Transition Elements",
+          "unitTitleMr": null,
+          "topics": [
+            "Synthesis, structure and bonding",
+            "Organometallic reagents in organic synthesis and in homogeneous catalytic reactions (hydrogenation, hydroformylation, isomerisation and polymerisation)",
+            "Pi-metal complexes, activation of small molecules by coordination"
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "Topics in Analytical Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Adsorption, partition, exclusion, electrochromatography",
+            "Solvent extraction and ion exchange methods",
+            "Application of atomic and molecular absorption and emission spectroscopy in quantitative analysis",
+            "Light scattering techniques including nephelometry and Raman spectroscopy",
+            "Electroanalytical techniques: voltammetry, cyclic voltammetry, polarography, amperometry, coulometry and conductometry",
+            "Ion-selective electrodes, anodic stripping voltammetry, TGA, DTA, DSC and on-line analysers"
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Bioinorganic Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Molecular mechanism of ion transport across membranes, ionophores",
+            "Photosynthesis-PS-I, PS-II, nitrogen fixation, oxygen uptake proteins, cytochromes and ferredoxins"
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "Aromaticity",
+          "unitTitleMr": null,
+          "topics": [
+            "Huckel's rule and concept of aromaticity",
+            "Annulenes and heteroannulenes, fullerenes (C60)"
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "Stereochemistry and Conformational Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "Newer methods of asymmetric synthesis (including enzymatic and catalytic nexus)",
+            "Enantio- and diastereoselective synthesis",
+            "Effects of conformation on reactivity in acyclic compounds and cyclohexanes"
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "Selective Organic Name Reactions",
+          "unitTitleMr": null,
+          "topics": [
+            "Favorskii reaction, Stork enamine reaction, Michael addition, Mannich reaction",
+            "Sharpless asymmetric epoxidation, ene reaction, Barton reaction",
+            "Hofmann-Loffler-Freytag reaction, Shapiro reaction, Baeyer-Villiger reaction, Chichibabin reaction"
+          ]
+        },
+        {
+          "unitNumber": 27,
+          "unitTitle": "Mechanisms of Organic Reactions",
+          "unitTitleMr": null,
+          "topics": [
+            "Labelling and kinetic isotope effects",
+            "Hammett equation, sigma-rho relationship",
+            "Non-classical carbonium ions, neighbouring group participation"
+          ]
+        },
+        {
+          "unitNumber": 28,
+          "unitTitle": "Pericyclic Reactions",
+          "unitTitleMr": null,
+          "topics": [
+            "Selection rules and stereochemistry of electrocyclic reactions",
+            "Cycloaddition and sigmatropic shifts",
+            "Sommelet-Hauser, Cope and Claisen rearrangements"
+          ]
+        },
+        {
+          "unitNumber": 29,
+          "unitTitle": "Heterocycles",
+          "unitTitleMr": null,
+          "topics": [
+            "Synthesis and reactivity of furan, thiophene, pyrrole, pyridine, quinoline, isoquinoline and indole",
+            "Skraup synthesis, Fischer indole synthesis"
+          ]
+        },
+        {
+          "unitNumber": 30,
+          "unitTitle": "Reagents in Organic Synthesis",
+          "unitTitleMr": null,
+          "topics": [
+            "Use of complex metal hydrides, Gilman's reagent, lithium dimethylcuprate, lithium diisopropylamide (LDA)",
+            "Dicyclohexylcarbodiimide, 1,3-dithiane (reactivity umpolung)",
+            "Trimethylsilyl iodide, tri-n-butyltin hydride, Woodward and Prevost hydroxylation, osmium tetroxide",
+            "DDQ, selenium dioxide, phase transfer catalysts, crown ethers and Merrifield resin",
+            "Peterson's synthesis, Wilkinson's catalyst, Baker's yeast"
+          ]
+        },
+        {
+          "unitNumber": 31,
+          "unitTitle": "Chemistry of Natural Products",
+          "unitTitleMr": null,
+          "topics": [
+            "Familiarity with methods of structure elucidation and biosynthesis of alkaloids, terpenoids, steroids, carbohydrates and proteins",
+            "Conformations of proteins and nucleic acids"
+          ]
+        },
+        {
+          "unitNumber": 32,
+          "unitTitle": "Bioorganic Chemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Elementary structure and function of biopolymers such as proteins and nucleic acids",
+            "Genetic code, mechanism of enzyme action"
+          ]
+        },
+        {
+          "unitNumber": 33,
+          "unitTitle": "Photochemistry",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of energy transfer, cis-trans isomerization",
+            "Paterno-Buchi reaction, Norrish Type I and II reactions",
+            "Photoreduction of ketones, di-pi-methane rearrangement, photochemistry of arenes"
+          ]
+        },
+        {
+          "unitNumber": 34,
+          "unitTitle": "Spectroscopy Applications",
+          "unitTitleMr": null,
+          "topics": [
+            "Combined applications of mass, UV-VIS, IR and NMR spectroscopy for structural elucidation of compounds"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

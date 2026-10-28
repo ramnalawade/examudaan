@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/youtube/page.js — ExamUdaan YouTube Learning Hub
 // Shows curated channels + inline video search with embedded players
 // Users watch videos DIRECTLY on ExamUdaan — no redirect to YouTube
@@ -305,7 +305,7 @@ function YouTubeContent() {
                   </div>
                   <a
                     href={`https://www.youtube.com/watch?v=${activeVideo.videoId}`}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     rel="noopener noreferrer"
                     style={{
                       background: 'rgba(255,255,255,0.1)', color: '#fff',
@@ -913,7 +913,7 @@ function VideoCard({ video, isActive, onPlay, isMarathi }) {
         </button>
         <a
           href={`https://www.youtube.com/watch?v=${video.videoId}`}
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           rel="noopener noreferrer"
           title={isMarathi ? 'YouTube वर उघडा' : 'Open in YouTube'}
           style={{

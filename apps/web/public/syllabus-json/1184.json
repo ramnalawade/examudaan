@@ -1,0 +1,43 @@
+{
+  "docId": 1184,
+  "examName": "Translator (Marathi), Directorate of Languages, General State Service, Gr- C",
+  "examNameMr": "अनुवादक (मराठी) भाषा संचालनालय, सामान्य राज्य सेवा गट- क",
+  "conductingBody": "MPSC",
+  "year": 2020,
+  "language": "Marathi",
+  "category": "group-c",
+  "totalMarks": 200,
+  "mainsMarks": 160,
+  "interviewMarks": 40,
+  "examPattern": "Written Examination (160 Marks) followed by Interview (40 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi and English",
+      "paperTitleMr": "मराठी व इंग्रजी",
+      "totalMarks": 160,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi :- General vocabulary, Sentence structure, Grammar, Use of Idioms & Phrases and their meaning and Comprehension of passage.",
+          "unitTitleMr": "मराठी :- सर्वसामान्य शब्दसंग्रह, वाक्यरचना, व्याकरण, वाक्प्रचार व म्हणी यांचा अर्थ आणि उपयोग तसेच उताऱ्यावरील प्रश्नांची उत्तरे"
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English :- Common vocabulary, Sentence structure, Grammar, Use of Idioms & Phrases and their meaning and Comprehension of passage.",
+          "unitTitleMr": "इंग्रजी :- Common vocabulary, Sentence structure, Grammar, Use of Idioms & Phrases and their meaning and Comprehension of passage."
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Negative marking: 25% or 1/4th of the marks will be deducted for each incorrect answer.",
+    "Final merit list will be based on the combined marks of the objective test and interview.",
+    "Out of 40 marks for interview, 20 marks are for translation test and 20 marks are for interview."
+  ]
+}

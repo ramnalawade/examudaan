@@ -1,0 +1,195 @@
+{
+  "docId": 1617,
+  "examName": "Physical Education and Sports, MPSC Examination",
+  "examNameMr": "शारीरिक शिक्षण आणि खेळ परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Physical Education and Sports",
+      "paperTitleMr": "शारीरिक शिक्षण आणि खेळ",
+      "totalMarks": 100,
+      "duration": "3 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Principles and History of Physical Education",
+          "unitTitleMr": "शारीरिक शिक्षणाची तत्त्वे आणि इतिहास",
+          "topics": [
+            "Physical education and adapted physical education, their objectives Philosophies of education as applied to physical education.",
+            "Introduction of ancient Olympics in Greece, Rome, Germany",
+            "Growth and development of physical education in India, USA, Germany, China, England, Russia",
+            "Recreation- its principles, characteristics and importance, Modern trends in recreation, Indoor and outdoor recreational programmes",
+            "Wellness- its importance, benefits and challenges, Development and maintenance of wellness",
+            "Social aspects of sports- sports as a socializing agency, social values, sports leadership, sports as cultural heritage and social aspects of competition",
+            "Importance of IKS in sports, Importance of traditional sports, Ancient games",
+            "Ancient & Modern Olympics games, Asian and Commonwealth games",
+            "Structure and functions of international and national bodies controlling various games and sports, Prominent honors and awards in games and sports"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Exercise Physiology",
+          "unitTitleMr": "व्यायाम शरीरविज्ञानशास्त्र",
+          "topics": [
+            "Exercise physiology its scope and importance in the field of physical education and sports",
+            "Cardiorespiratory adaptations to long- and short-term physical activities",
+            "Muscle- its types, characteristics, and functions, Microscopic structure of muscle fiber, Sliding filament theory of muscular contraction",
+            "Neuro-muscular junction and transmission of nerve impulse, kinesthetic Sense organs and neural control of motor skills",
+            "Bio-chemical aspects of exercise - Metabolism of food products, Aerobic and anaerobic systems during rest and exercise",
+            "Recovery process - Physiological aspects of fatigue, Restoration of energy stores, Recovery oxygen",
+            "Nutritional aspects of performance, Environmental influence on human physiology under exercise",
+            "Women in sports- trainability, Physiological gender differences and special problems of women athletes",
+            "Aging - Physiological consequences, life style management and healthful aging, Physiological responses of various therapeutic modalities and rehabilitation",
+            "Physiological aspects of various Ergogenic aids, Massage manipulations and their physiological responses"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Kinesiology and Biomechanics",
+          "unitTitleMr": "काइनेजिओलॉजी आणि बायोमेकॅनिक्स",
+          "topics": [
+            "Kinesiology and biomechanics, Modern trends in biomechanics, Planes, Lever, and Axes of human body, Joints and their movements",
+            "Muscle attachments - Origin, insertion, action and leverage of the principal muscles used in sports",
+            "Motion: its laws and their application in sports, Projectile and principles of projections",
+            "Linear and angular kinematics and kinetics, Friction, Spin, impact, and elasticity",
+            "Air and water dynamics, Mechanical advantage and applications of Levers in sports",
+            "Posture and its deformities with their corrective exercises",
+            "Kinesiological, Muscular and mechanical analyses of fundamental movements: Mechanical analyses of major sports skills"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Sports Psychology",
+          "unitTitleMr": "क्रीडा मानसशास्त्र",
+          "topics": [
+            "Sports psychology- its importance in the field of physical education and sports",
+            "Motivation in sports- types, theories and dynamics",
+            "Psychological factors affecting sports performance - Emotions, Anxiety aggression, stress, self-confidence, concentration, mental practice and goal setting",
+            "Personality- Theories of personality, measurement of personality",
+            "Group dynamics, Group cohesion and leadership in sports",
+            "Cognitive process- memory and thinking, Principles of Motor skill learning, Transfer of training and its types with its implication in sports",
+            "Long- and short-term psychological preparation for performance/ competition, Psychological skill training for activation and relaxation",
+            "Spectators and sports performance"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Teacher Education and Curriculum Design",
+          "unitTitleMr": "शिक्षक शिक्षण आणि अभ्यासक्रम रचना",
+          "topics": [
+            "Development of teacher education for physical education in India, Comparative study of professional preparation in physical education",
+            "Professional and other courses of physical education in India, Role of Government agencies monitoring professional courses",
+            "Teaching Aptitude – nature, objectives, characteristics of teaching, learner characteristics and teaching methods",
+            "Qualities, qualifications and responsibilities of physical education personnel at primary, secondary and higher education levels",
+            "Recent Government policies for promoting physical education and sports in India",
+            "Hierarchy of organizational set-up in physical education at schools, colleges and university level",
+            "Curriculum development- Concepts and principles of curriculum planning, Subject matter for different levels of education",
+            "Curriculum design and content- importance, selection and classification of subject matter with reference to age, sex and differently abled pupils",
+            "Teaching aids - Time-table, Concepts, credit system for various subject courses, Impact of technology in physical education and sports",
+            "Curriculum evaluation: Concepts and purpose; procedure and appraisal"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Health Education and First-Aid",
+          "unitTitleMr": "आरोग्य शिक्षण आणि प्रथमोपचार",
+          "topics": [
+            "Health- its objectives and spectrum, Health education, its importance and principles, Role of genetics and environment in achieving health",
+            "Community health programme- Health appraisal & health instructions, International and national health promoting government & private agencies",
+            "School Health programme and personal hygiene",
+            "Communicable diseases: causes, symptoms, prevention through other means and Immunization",
+            "Psychosomatic disorders/ sedentary life style diseases : causes, symptoms and prevention",
+            "Obesity related health problems, Body weight control and its significance on health",
+            "First-aid- objectives and principles, First-aid for Shock, poisoning, burns, drowning, bleeding, electric shock and common sports injuries",
+            "Pollution- Air, water, sound and radiation, Effects of pollution on health, Preventive and safety measures",
+            "Nutrition- Balanced diet and its components, Nutritional Deficiencies, Understanding of malnutrition and nutritional supplements",
+            "Effects of smoking, alcohol, & drugs on health; prevention and rehabilitation"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Sports Training",
+          "unitTitleMr": "क्रीडा प्रशिक्षण",
+          "topics": [
+            "Sports training- its characteristics and principles, Training load, its features, principles and adaptation process",
+            "Strength, Endurance, Speed, Flexibility and Coordinative abilities- characteristics, types, factors determining and development",
+            "Technique and skill- its characteristics and importance, Different stages of technique development and technique training, Tactics and strategy",
+            "Planning- its importance and principles, Types of planning",
+            "Periodization- its importance, objectives and types, Concept of different periods - Preparatory, competition and transitional",
+            "Talent identification- process and procedure"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Research Methodology in Physical Education",
+          "unitTitleMr": "शारीरिक शिक्षणातील संशोधन पद्धती",
+          "topics": [
+            "Research in physical education- its importance and classification, Ethical issues in research",
+            "Methods of research- Descriptive, historical, and experimental, Experimental research designs",
+            "Identification and formulation of research problem, Types of research hypotheses and their formulation",
+            "Tools of research- Questionnaires, opinionnaires, interviews and observation",
+            "Sources and steps of literature search- library, research data bases, internet- search engines, online journals",
+            "Sampling Techniques- Probability and non probability, Data, its types and collecting measures",
+            "Statistical processes, their importance and uses in research, Application of parametric and non-parametric statistical techniques",
+            "Computer applications- statistical packages for data analyses- SPSS, e-mail, search engines and Microsoft office"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Test, Measurement and Evaluation",
+          "unitTitleMr": "कसोटी, मोजमाप आणि मूल्यमापन",
+          "topics": [
+            "Test, measurement and evaluation -their types and importance in physical education and sports",
+            "Criteria of selecting an appropriate test and administration of test, Types of tests and construction of standard knowledge and skill tests",
+            "Tests for fitness- Physical fitness, motor fitness, motor ability and motor educability, Health related fitness tests",
+            "Sports skill tests- Badminton, Basketball, Football, Hockey, Tennis, Cricket and Volleyball",
+            "Anthropometric Measurements- land marks and measurement of various body segments, Somatotype and Posture evaluating techniques",
+            "Testing of physiological phenomenons- Blood pressure, breathing frequency vital capacity, heart rate, pulse rate",
+            "Tests for psychological variables- Anxiety, aggression, team cohesion, achievement motivation, mental-toughness, and self-efficacy"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Sports Management",
+          "unitTitleMr": "क्रीडा व्यवस्थापन",
+          "topics": [
+            "Management- its principles and theories, Scope of management in physical education and sports",
+            "Personnel management- objectives and principles, Self-appraisal, communication skills and time management",
+            "Financial management- objectives, purposes, principles and scope, Planning and preparation of budget",
+            "Supervision - objectives, principles and importance, Techniques of supervision",
+            "Facility management- planning, procuring and maintenance of facilities- indoor and outdoor facilities",
+            "Role of sports manager- interpersonal, informational and decision making, Managerial skills",
+            "Event management- its principles, planning, check list, rehearsal, itinerary, execution, reporting and follow-up",
+            "Public relation- principles of public relations, Mass Media- communication and publicity"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "IKS and Yoga",
+          "unitTitleMr": "भारतीय ज्ञान परंपरा आणि योग",
+          "topics": [
+            "Meaning and definition of yoga, History of YOGA",
+            "Aims and Objectives of Yoga, Importance and scope of yoga",
+            "Astang yoga, Concept of yogic practices",
+            "Asana, pranayama, Techniques and types of asanas, types and techniques of pranayama, benefits of Surynamaskar",
+            "Indication of Centre indication and do and don’t for Asana and Pranayama",
+            "Therapeutic Asana"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

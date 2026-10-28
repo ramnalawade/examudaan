@@ -1,0 +1,61 @@
+{
+  "docId": 1633,
+  "examName": "Assistant Professor - English, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": "सहाय्यक प्राध्यापक - इंग्रजी, महाराष्ट्र शिक्षण सेवा, गट - अ (संबंधित शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor - English",
+      "paperTitleMr": "सहाय्यक प्राध्यापक - इंग्रजी",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "British Literature, Criticism and Literary Theory",
+          "unitTitleMr": "ब्रिटिश साहित्य, टीका आणि साहित्यिक सिद्धांत",
+          "topics": [
+            "Literary Comprehension",
+            "Up to the Renaissance",
+            "Jacobean to Restoration Periods",
+            "Augustan Age : 18th Century Literature",
+            "Romantic Period",
+            "Victorian and Pre-Raphaelites",
+            "Modern British Literature",
+            "Contemporary British Literature",
+            "Literary Theory and Criticism up to T. S. Eliot",
+            "Contemporary Theory"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "History of English Language, English Language Teaching and World Literatures",
+          "unitTitleMr": "इंग्रजी भाषेचा इतिहास, इंग्रजी भाषा शिक्षण आणि जागतिक साहित्य",
+          "topics": [
+            "British Literature from Chaucer to the present day",
+            "History of English Language, English Language Teaching",
+            "European Literature from Classical Age to the 20th Century",
+            "Indian writing in English and Indian Literature in English translation",
+            "American and other non-British English Literatures",
+            "Literary Theory and Criticism"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

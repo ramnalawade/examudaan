@@ -1,0 +1,266 @@
+.chartContainer {
+  background: var(--surface-container-lowest, #ffffff);
+  border: 1px solid var(--outline-variant, #fed7aa);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(234, 88, 12, 0.06);
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--outline-variant, #fed7aa);
+}
+
+.chartTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chartTitle {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--on-surface, #1e293b);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chartSubtitle {
+  font-family: var(--font-inter, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.chartBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #fff7ed;
+  color: #ea580c;
+  border: 1px solid #fed7aa;
+}
+
+.chartLayout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Donut SVG styling */
+.svgWrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.svgDonut {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.svgCircleBg {
+  fill: none;
+  stroke: #f1f5f9;
+  stroke-width: 12;
+}
+
+.svgSegment {
+  fill: none;
+  stroke-width: 12;
+  transition: stroke-width 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.svgSegment:hover {
+  stroke-width: 14;
+  opacity: 0.9;
+}
+
+.donutCenterText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.centerTotal {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ea580c;
+  line-height: 1.1;
+  display: block;
+}
+
+.centerLabel {
+  font-family: var(--font-inter, 'Inter', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  display: block;
+}
+
+.centerSpan {
+  font-family: var(--font-inter, 'Inter', sans-serif);
+  font-size: 0.68rem;
+  color: #94a3b8;
+  display: block;
+}
+
+/* Legend Grid */
+.legendGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.85rem;
+}
+
+.legendCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.legendCard:hover {
+  border-color: #ea580c;
+  background: #fff7ed;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.08);
+}
+
+.legendCardActive {
+  background: #fff7ed;
+  border-color: #ea580c;
+  box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.2);
+}
+
+.legendCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.legendDotWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dotRajyaseva {
+  background-color: #ea580c;
+}
+
+.dotGroupB {
+  background-color: #0284c7;
+}
+
+.dotGroupC {
+  background-color: #059669;
+}
+
+.dotOtherServices {
+  background-color: #7c3aed;
+}
+
+.legendName {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.legendPercent {
+  font-family: var(--font-inter, 'Inter', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.legendStats {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.legendCount {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.legendUnits {
+  font-family: var(--font-inter, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.legendSub {
+  font-family: var(--font-inter, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+}
+
+.legendLinkText {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+/* Responsiveness */
+@media (max-width: 860px) {
+  .chartLayout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .svgWrapper {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chartContainer {
+    padding: 1rem 0.85rem;
+  }
+
+  .legendGrid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+}

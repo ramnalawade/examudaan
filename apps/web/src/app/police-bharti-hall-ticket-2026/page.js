@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/police-bharti-hall-ticket-2026/page.js — Maharashtra Police Bharti Hall Ticket 2026 Hub
 // Target Query: "police bharti hall ticket 2026" (33,100 monthly searches, KD 0)
 // ExamUdaan | Official Download Portal, Steps, Physical Test Instructions & Checklist
@@ -154,7 +154,7 @@ export default function PoliceBhartiHallTicket2026Page() {
           <div className={styles.actionRow}>
             <a
               href="https://policerecruitment2024.mahait.org"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               className={styles.btnDownloadPortal}
             >

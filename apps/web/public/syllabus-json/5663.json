@@ -1,0 +1,75 @@
+{
+  "docId": 5663,
+  "examName": "Law Officer, Maharashtra Town Planning and Valuation Service Group A - Syllabus",
+  "examNameMr": "विधि अधिकारी, महाराष्ट्र नगर रचना व मूल्यमापन सेवा गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Law Officer, Maharashtra Town Planning and Valuation Service Group A - Syllabus",
+      "paperTitleMr": "विधि अधिकारी, महाराष्ट्र नगर रचना व मूल्यमापन सेवा गट-अ - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Acts (as updated)",
+          "unitTitleMr": "कायदे (सुधारित)",
+          "topics": [
+            "Constitution of India",
+            "Administrative Law",
+            "Transfer of Property Act, 1882",
+            "Specific Relief Act, 1963",
+            "Indian Penal Code, 1860",
+            "Right to Fair Compensation and Transparency Land Acquisition, Rehabilitation and Resettlement Act, 2013",
+            "Maharashtra Land Revenue Code, 1966",
+            "Maharashtra Regional and Town Planning Act, 1966",
+            "Indian Contract Act, 1872",
+            "Real Estate (Regulation and Development) Act, 2016",
+            "Maharashtra Apartment Ownership Act, 1970",
+            "Prevention of Corruption Act, 1988",
+            "The Environment Protection Act, 1986",
+            "Air (Prevention and Control of Pollution) Act, 1981",
+            "Water (Prevention and Control of Pollution) Act, 1974",
+            "Mumbai Municipal Corporation Act, 1988",
+            "Maharashtra Municipal Corporation Act, 1949",
+            "Arbitration and Conciliation Act, 1996",
+            "The Maharashtra Public Trusts Act, 1956",
+            "The Legal Services Authorities Act, 1986",
+            "The Maharashtra Metropolitan Region Development Authority Act, 2017",
+            "Contempt of Courts Act, 1971",
+            "Indian Stamps Act, 1899",
+            "Maharashtra Civil Services (Conduct) Rules, 1979",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules, 1979"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Procedural Law (as updated)",
+          "unitTitleMr": "प्रक्रियात्मक कायदे (सुधारित)",
+          "topics": [
+            "The Code of Civil Procedure, 1908",
+            "The Code of Criminal Procedure, 1973",
+            "The Indian Evidence Act, 1872",
+            "The Limitation Act, 1963",
+            "The Bombay High Court (Original Side) Rules, 1980",
+            "The Bombay High Court (Appellate Side) Rules, 1960",
+            "The Presidency Small Causes Act, 1882"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

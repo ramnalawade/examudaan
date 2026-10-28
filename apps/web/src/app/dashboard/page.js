@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/dashboard/page.js — Personalised User Dashboard
 // ExamUdaan | Connects to real DB via API routes
 //
@@ -18,6 +18,17 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { apiFetch, createVerifyHash } from '../../lib/apiClient'
+import {
+  MPSC_TOTAL_QUESTION_PAPERS,
+  MPSC_TOTAL_ANSWER_KEYS,
+  MPSC_ARCHIVE_YEARS_SPAN,
+  MPSC_CADRE_COUNTS,
+  REAL_AI_TOOLS_COUNT,
+  REAL_MOCK_TESTS_COUNT,
+  REAL_CAREERS_COUNT,
+  REAL_BLOGS_COUNT
+} from '../../lib/platformStats'
+import MpscDistributionChart from '../../components/MpscDistributionChart'
 import s from './dashboard.module.css'
 
 const SIDEBAR_ITEMS = [
@@ -237,8 +248,8 @@ export default function DashboardPage() {
   const [savedJobs,     setSavedJobs]     = useState([])
   const [criteria,      setCriteria]      = useState([])
   const [loading,       setLoading]       = useState(true)
-  const [error,         setError]         = useState('')
   const [siteStats,     setSiteStats]     = useState(null)
+  const [mpscAnnouncements, setMpscAnnouncements] = useState([])
 
   // ── Criteria form state ──
   const [showCriteriaForm,       setShowCriteriaForm]       = useState(false)
@@ -408,6 +419,12 @@ export default function DashboardPage() {
       fetch('/api/stats')
         .then(res => res.json())
         .then(d => { if (d.data) setSiteStats(d.data) })
+        .catch(() => {})
+
+      // Fetch latest official MPSC announcements & exam details
+      fetch('/api/mpsc/latest-announcements?limit=6')
+        .then(res => res.json())
+        .then(d => { if (d.data) setMpscAnnouncements(d.data) })
         .catch(() => {})
     } catch (err) {
       console.error('[Dashboard] Fetch error:', err)
@@ -739,10 +756,10 @@ export default function DashboardPage() {
 
           {/* Quick study access: Question Papers & Keys */}
           <div className={s.quickAccessSection}>
-            <Link href="/question-papers" className={s.quickAccessLink}>
+            <Link href="/mpsc-pyq" className={s.quickAccessLink}>
               <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#EA580C' }}>description</span>
-              <span className={s.flex1}>Question Papers & Keys</span>
-              <span className={s.quickAccessBadge}>214+</span>
+              <span className={s.flex1}>MPSC Papers & Keys</span>
+              <span className={s.quickAccessBadge}>{MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}+</span>
             </Link>
           </div>
 
@@ -844,12 +861,12 @@ export default function DashboardPage() {
                   </Link>
                   <Link href="/career" className={s.pulseCard}>
                     <span className={s.pulseCardLabel}>Career Compass</span>
-                    <strong className={s.pulseCardValue} style={{ color: '#ea580c' }}>{siteStats?.total_careers ? `${siteStats.total_careers}+ Paths` : '40+ Paths'}</strong>
+                    <strong className={s.pulseCardValue} style={{ color: '#ea580c' }}>{siteStats?.total_careers ? `${siteStats.total_careers}+ Paths` : `${REAL_CAREERS_COUNT}+ Paths`}</strong>
                     <span className={s.pulseCardCta} style={{ color: '#ea580c' }}>Careers guide →</span>
                   </Link>
                   <Link href="/ai-tools" className={s.pulseCard}>
                     <span className={s.pulseCardLabel}>AI Study Tools</span>
-                    <strong className={s.pulseCardValue} style={{ color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : '124 Tools'}</strong>
+                    <strong className={s.pulseCardValue} style={{ color: '#2563eb' }}>{siteStats?.total_ai_tools ? `${siteStats.total_ai_tools} Tools` : `${REAL_AI_TOOLS_COUNT} Tools`}</strong>
                     <span className={s.pulseCardCta} style={{ color: '#2563eb' }}>Explore tools →</span>
                   </Link>
                   <Link href="/pyq" className={s.pulseCard}>
@@ -859,13 +876,13 @@ export default function DashboardPage() {
                   </Link>
                   <Link href="/mock-tests" className={s.pulseCard}>
                     <span className={s.pulseCardLabel}>CBT Mock Tests</span>
-                    <strong className={s.pulseCardValue} style={{ color: '#7c3aed' }}>{siteStats?.total_mock_tests ? `${siteStats.total_mock_tests} Tests` : '12 Tests'}</strong>
+                    <strong className={s.pulseCardValue} style={{ color: '#7c3aed' }}>{siteStats?.total_mock_tests ? `${siteStats.total_mock_tests} Tests` : `${REAL_MOCK_TESTS_COUNT} Tests`}</strong>
                     <span className={s.pulseCardCta} style={{ color: '#7c3aed' }}>TCS/MPSC tests →</span>
                   </Link>
                   <Link href="/question-papers" className={`${s.pulseCard} ${s.pulseCardHighlight}`}>
-                    <span className={s.pulseCardHighlightLabel}>Question Papers</span>
-                    <strong className={s.pulseCardValue} style={{ color: '#EA580C' }}>214+ PDFs</strong>
-                    <span className={s.pulseCardCta} style={{ color: '#EA580C' }}>Papers & Keys →</span>
+                    <span className={s.pulseCardHighlightLabel}>MPSC Question Papers</span>
+                    <strong className={s.pulseCardValue} style={{ color: '#EA580C' }}>{MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}+ PDFs</strong>
+                    <span className={s.pulseCardCta} style={{ color: '#EA580C' }}>{MPSC_TOTAL_ANSWER_KEYS} Keys • {MPSC_ARCHIVE_YEARS_SPAN} →</span>
                   </Link>
                 </div>
               </div>
@@ -878,22 +895,134 @@ export default function DashboardPage() {
                   </div>
                   <div className={s.featureBannerBody}>
                     <div className={s.featureBannerTagRow}>
-                      <span className={s.featureBannerNewTag}>NEW FEATURE</span>
-                      <strong className={s.featureBannerTitle}>Official Previous Year Question Papers & Answer Keys</strong>
+                      <span className={s.featureBannerNewTag}>18-YEAR ARCHIVE</span>
+                      <strong className={s.featureBannerTitle}>Official MPSC Previous Year Question Papers &amp; Final Answer Keys ({MPSC_ARCHIVE_YEARS_SPAN})</strong>
                     </div>
                     <p className={s.featureBannerDesc}>
-                      214+ authentic original question papers & official final answer keys (2024–2026). Read directly in-browser with zero ads.
+                      {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} authentic original question papers &amp; {MPSC_TOTAL_ANSWER_KEYS} verified final answer keys across Rajyaseva, Group B, Group C &amp; Technical Services. View papers or attempt CBT Mocks with zero ads.
                     </p>
                   </div>
                 </div>
                 <div className={s.featureBannerActions}>
-                  <Link href="/question-papers" className={s.featureBannerBtnPrimary}>
-                    <span>Browse Question Papers</span>
+                  <Link href="/mpsc-pyq" className={s.featureBannerBtnPrimary}>
+                    <span>Browse All ({MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')})</span>
                     <span className="material-symbols-outlined" style={{ fontSize: 16 }}>arrow_forward</span>
                   </Link>
-                  <Link href="/syllabus/mpsc-combined" className={s.featureBannerBtnSecondary}>
-                    <span>MPSC Combined Prelims</span>
+                  <Link href="/mpsc/group-b-previous-year-papers" className={s.featureBannerBtnSecondary}>
+                    <span>Group B ({MPSC_CADRE_COUNTS.groupB.count})</span>
                   </Link>
+                  <Link href="/mpsc/group-c-previous-year-papers" className={s.featureBannerBtnSecondary}>
+                    <span>Group C ({MPSC_CADRE_COUNTS.groupC.count})</span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* ── Visual MPSC Distribution Donut/Pie Chart & Cadre Breakdown ── */}
+              <MpscDistributionChart />
+
+              {/* ── Live MPSC Official Bulletins & Circulars (mpsc.gov.in) ── */}
+              <div className={s.mpscBulletin}>
+                <div className={s.mpscBulletinHeader}>
+                  <div className={s.mpscBulletinTitleRow}>
+                    <div className={s.mpscBulletinIcon}>
+                      <span className="material-symbols-outlined">campaign</span>
+                    </div>
+                    <div className={s.mpscBulletinTitleWrap}>
+                      <div className={s.mpscBulletinTitle}>MPSC Official Bulletins & Circulars</div>
+                      <div className={s.mpscBulletinSubtitle}>महाराष्ट्र लोकसेवा आयोग — थेट प्रसिद्धीपत्रके, वेळापत्रक व निकाल</div>
+                    </div>
+                    <span className={s.mpscLiveTag}>
+                      <span className={s.mpscLiveDot} />
+                      Live Feed
+                    </span>
+                  </div>
+                  <Link href="/mpsc-pyq" className={s.linkBtn}>
+                    View {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}+ MPSC Papers &amp; Keys →
+                  </Link>
+                </div>
+
+                <div className={s.mpscBulletinList}>
+                  {mpscAnnouncements.length === 0 ? (
+                    <div className={s.emptyState}>
+                      <span className={`material-symbols-outlined ${s.mpscSyncIcon}`}>sync</span>
+                      <p className={s.mpscEmptyText}>Syncing latest MPSC official circulars...</p>
+                    </div>
+                  ) : (
+                    mpscAnnouncements.slice(0, 5).map(item => {
+                      const isResult = item.notificationType === 'result'
+                      const isSchedule = item.notificationType === 'syllabus'
+                      return (
+                        <div key={item.id} className={s.mpscBulletinCard}>
+                          <div className={s.mpscCardContent}>
+                            <div className={s.mpscCardMeta}>
+                              <span className={`${s.mpscCategoryPill} ${isResult ? s.mpscCategoryPillResult : (isSchedule ? s.mpscCategoryPillSchedule : '')}`}>
+                                {item.categoryMr} • {item.category}
+                              </span>
+                              {item.advtNo && (
+                                <span className={s.mpscAdvtBadge}>
+                                  जा. क्र. {item.advtNo}
+                                </span>
+                              )}
+                              {item.publishedAt && (
+                                <span className={s.mpscDateText}>
+                                  <span className={`material-symbols-outlined ${s.mpscIconCalendar}`}>calendar_today</span>
+                                  {item.publishedAt}
+                                </span>
+                              )}
+                            </div>
+                            <div className={s.mpscCardTitleEn}>{item.titleEn}</div>
+                            {item.titleMr && item.titleMr !== item.titleEn && (
+                              <div className={s.mpscCardTitleMr}>{item.titleMr}</div>
+                            )}
+                          </div>
+                          <div className={s.mpscCardActions}>
+                            {item.pdfUrl && (
+                              <a
+                                href={item.pdfUrl}
+                                target="_blank" rel="noopener noreferrer"
+                                rel="noopener noreferrer"
+                                className={s.mpscBtnPdf}
+                              >
+                                <span className={`material-symbols-outlined ${s.mpscIconPdf}`}>picture_as_pdf</span>
+                                <span>Official PDF</span>
+                              </a>
+                            )}
+                            <Link href={item.portalUrl} className={s.mpscBtnNotice}>
+                              <span>View Notice</span>
+                              <span className={`material-symbols-outlined ${s.mpscIconAction}`}>arrow_forward</span>
+                            </Link>
+                          </div>
+                        </div>
+                      )
+                    })
+                  )}
+                </div>
+
+                <div className={s.mpscBulletinFooter}>
+                  <div className={s.mpscChannelPrompt}>
+                    <span className={`material-symbols-outlined ${s.mpscIconChannel}`}>notifications_active</span>
+                    <span>Get new MPSC circulars instantly via WhatsApp &amp; Telegram:</span>
+                  </div>
+                  <div className={s.mpscChannelLinks}>
+                    <a
+                      href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
+                      target="_blank" rel="noopener noreferrer"
+                      rel="noopener noreferrer"
+                      className={s.mpscWaChannelBtn}
+                    >
+                      <span>Follow WhatsApp Channel</span>
+                      <span className={`material-symbols-outlined ${s.mpscIconCalendar}`}>open_in_new</span>
+                    </a>
+                    <a
+                      href="https://t.me/examudaanjobs"
+                      target="_blank" rel="noopener noreferrer"
+                      rel="noopener noreferrer"
+                      className={s.mpscTgChannelBtn}
+                    >
+                      <span>Join Telegram</span>
+                      <span className={`material-symbols-outlined ${s.mpscIconCalendar}`}>open_in_new</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 

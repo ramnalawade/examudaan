@@ -1,0 +1,39 @@
+{
+  "docId": 1673,
+  "examName": "Excise Sub Inspector, Gr.C (Pre) & (Main) Competitive Examination.",
+  "examNameMr": "दुय्यम निरीक्षक, राज्य उत्पादन शुल्क, गट-क (पूर्व व मुख्य) संयुक्त परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "English",
+  "category": "group-c",
+  "totalMarks": 100,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Preliminary Examination (100 Marks) and Main Examination (200 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Excise Sub Inspector, Gr.C (Pre) Competitive Examination",
+      "paperTitleMr": "दुय्यम निरीक्षक, राज्य उत्पादन शुल्क, गट-क पूर्व परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Excise Sub Inspector, Gr.-C (Main) Competitive Examination",
+      "paperTitleMr": "दुय्यम निरीक्षक, राज्य उत्पादन शुल्क, गट-क मुख्य परीक्षा",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

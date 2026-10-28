@@ -9,6 +9,7 @@ import { getExamBySlug, ALL_EXAM_SLUGS, SYLLABUS_EXAMS, getMockTestForExam } fro
 import InteractiveSyllabusTracker from '@/components/InteractiveSyllabusTracker'
 import OfficialPdfViewer from '@/components/OfficialPdfViewer'
 import { fitDescription } from '@/lib/seoMetadata'
+import { MPSC_TOTAL_QUESTION_PAPERS, MPSC_ARCHIVE_YEARS_SPAN } from '@/lib/platformStats'
 import styles from './examDetail.module.css'
 
 // Static params for Next.js build
@@ -807,7 +808,17 @@ export default function ExamDetailPage({ params }) {
                       <span className={styles.pyqYearBadge}>{p.exam || 'Paper'}</span>
                     </div>
                     <div className={styles.pyqInfoCol}>
-                      <h3 className={styles.pyqPaperTitle}>{p.label}</h3>
+                      <h3 className={styles.pyqPaperTitle}>
+                        <a
+                          href={p.paperUrl || p.url || '#'}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.pyqPaperTitleLink}
+                          title={`Open ${p.label}`}
+                        >
+                          {p.label}
+                        </a>
+                      </h3>
                       <p className={styles.pyqExamMeta}>
                         <span className="material-symbols-outlined">account_balance</span>
                         <span>{exam.conductingBody}</span>
@@ -816,6 +827,33 @@ export default function ExamDetailPage({ params }) {
                       </p>
                     </div>
                     <div className={styles.pyqActions}>
+                      {/* 1. Direct Official Question Paper */}
+                      <a
+                        href={p.paperUrl || p.url || exam.officialWebsite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.pyqPaperBtn}
+                        title={`Open ${p.year} official question paper (PDF)`}
+                      >
+                        <span className="material-symbols-outlined">description</span>
+                        <span>Question Paper (PDF)</span>
+                        <span className="material-symbols-outlined">open_in_new</span>
+                      </a>
+
+                      {/* 2. Direct Official Answer Key (Always available next to Question Paper) */}
+                      <a
+                        href={p.answerKeyUrl || p.paperUrl || `/answer-keys?q=${encodeURIComponent(exam.shortName || exam.nameEn)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.pyqAnswerBtn}
+                        title={`Open ${p.year} official answer key`}
+                      >
+                        <span className="material-symbols-outlined">key</span>
+                        <span>Official Answer Key</span>
+                        <span className="material-symbols-outlined">open_in_new</span>
+                      </a>
+
+                      {/* 3. Interactive Practice in PYQ Bank */}
                       <Link
                         href={`/pyq?q=${encodeURIComponent(exam.shortName || exam.nameEn)}`}
                         className={`${styles.pyqPaperBtn} ${styles.pyqBankBtn}`}
@@ -824,32 +862,6 @@ export default function ExamDetailPage({ params }) {
                         <span className={`material-symbols-outlined ${styles.pyqBankIcon}`}>quiz</span>
                         <span>Practice in PYQ Bank</span>
                       </Link>
-                      {p.paperUrl && (
-                        <a
-                          href={p.paperUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.pyqPaperBtn}
-                          title={`Open ${p.year} official question paper in PDF format`}
-                        >
-                          <span className="material-symbols-outlined">description</span>
-                          <span>Question Paper (PDF)</span>
-                          <span className="material-symbols-outlined">open_in_new</span>
-                        </a>
-                      )}
-                      {p.answerKeyUrl && p.answerKeyUrl !== p.paperUrl && (
-                        <a
-                          href={p.answerKeyUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.pyqAnswerBtn}
-                          title={`Open ${p.year} official answer key`}
-                        >
-                          <span className="material-symbols-outlined">task_alt</span>
-                          <span>Official Key</span>
-                          <span className="material-symbols-outlined">open_in_new</span>
-                        </a>
-                      )}
                     </div>
                   </div>
                 ))}
@@ -890,12 +902,12 @@ export default function ExamDetailPage({ params }) {
             ) : exam.slug.startsWith('mpsc-') ? (
               <div className={styles.mpscArchiveBanner}>
                 <div>
-                  <strong className={styles.mpscArchiveBannerTitle}>🏛️ संपूर्ण MPSC २०२१–२०२६ अधिकृत संग्रह (841 Papers &amp; 343 Syllabi)</strong>
+                  <strong className={styles.mpscArchiveBannerTitle}>🏛️ संपूर्ण MPSC {MPSC_ARCHIVE_YEARS_SPAN} अधिकृत संग्रह ({MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} Papers &amp; 343 Syllabi)</strong>
                   <p className={styles.mpscArchiveBannerText}>सर्व राज्यसेवा, संयुक्त गट ब व क, वनसेवा आणि चाळणी परीक्षा प्रश्नपत्रिका व उत्तरतालिका थेट ब्राऊझरमध्ये उपलब्ध.</p>
                 </div>
                 <div className={styles.bannerButtonGroup}>
                   <Link href="/mpsc-pyq" className={styles.mpscArchiveBannerBtn}>
-                    ८४१ पेपर्स संग्रह उघडा →
+                    {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('mr-IN')} पेपर्स संग्रह उघडा →
                   </Link>
                   <Link href="/syllabus/mpsc" className={styles.mpscArchiveBannerBtnSecondary}>
                     ३४३ अभ्यासक्रम संचिका →
@@ -922,50 +934,87 @@ export default function ExamDetailPage({ params }) {
         </section>
       )}
 
-      {/* ── Books ── */}
-      <section className={styles.booksSection}>
+      {/* ── Related Exams & PYQ Practice Sets (Books Removed per User Request) ── */}
+      <section className={styles.relatedSection}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>
-            <span className="material-symbols-outlined">auto_stories</span>
-            Recommended Books
-          </h2>
-          <div className={styles.booksGrid}>
-            {exam.books.map((book, i) => (
-              <div key={i} className={styles.bookCard}>
-                <span className={styles.bookNum}>{i + 1}</span>
-                <div>
-                  <strong>{book.title}</strong>
-                  <span>Use for: {book.useFor}</span>
+          <div className={styles.relatedSectionHeader}>
+            <div>
+              <h2 className={styles.sectionTitle}>
+                <span className="material-symbols-outlined">hub</span>
+                Related Exams & PYQ Practice Sets
+              </h2>
+              <p className={styles.relatedSubtitle}>
+                Explore connected exam syllabi, previous year papers, and syllabus-matched practice question banks.
+              </p>
+            </div>
+            <Link href="/syllabus" className={styles.viewAllSyllabiBtn}>
+              All Exam Syllabi →
+            </Link>
+          </div>
+
+          {related.length > 0 && (
+            <div className={styles.relatedGrid}>
+              {related.map(rel => (
+                <div key={rel.slug} className={styles.relatedCardItem}>
+                  <div className={styles.relatedCardTop}>
+                    <div className={styles.relatedIconBadge}>
+                      <span className="material-symbols-outlined">{rel.logo || 'school'}</span>
+                    </div>
+                    <div className={styles.relatedInfo}>
+                      <strong className={styles.relatedName}>{rel.nameEn}</strong>
+                      <span className={styles.relatedOrg}>{rel.conductingBody}</span>
+                    </div>
+                  </div>
+                  <div className={styles.relatedActionsRow}>
+                    <Link
+                      href={`/syllabus/${rel.slug}`}
+                      className={styles.btnRelatedSyllabus}
+                      title={`View ${rel.nameEn} syllabus & exam pattern`}
+                    >
+                      <span>📄 View Syllabus</span>
+                    </Link>
+                    <Link
+                      href={`/pyq?q=${encodeURIComponent(rel.shortName || rel.nameEn)}`}
+                      className={styles.btnRelatedPyq}
+                      title={`Practice ${rel.shortName || rel.nameEn} previous year questions`}
+                    >
+                      <span>🎯 Solve PYQs</span>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          )}
+
+          {/* Quick Access to Main Official PYQ Archives */}
+          <div className={styles.quickPyqHub}>
+            <div className={styles.quickPyqHeader}>
+              <span className="material-symbols-outlined">collections_bookmark</span>
+              <strong>Quick Access to Official Question Papers & Keys</strong>
+            </div>
+            <div className={styles.quickPyqLinksRow}>
+              <Link href="/mpsc-pyq" className={styles.quickPyqChipOrange}>
+                🏛️ MPSC Question Papers & Keys (2009–2026)
+              </Link>
+              <Link href="/police-bharti-question-papers" className={styles.quickPyqChipBlue}>
+                👮 Police Bharti Papers & Keys
+              </Link>
+              <Link href="/talathi-question-papers" className={styles.quickPyqChipGreen}>
+                🏛️ Talathi Bharti Question Papers
+              </Link>
+              <Link href="/mahatet-previous-year-papers" className={styles.quickPyqChipPurple}>
+                🎓 MAHA TET Previous Papers
+              </Link>
+              <Link href="/question-papers" className={styles.quickPyqChipTeal}>
+                📚 All Central & State Papers
+              </Link>
+              <Link href="/answer-keys" className={styles.quickPyqChipAmber}>
+                🔑 All Official Answer Keys
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* ── Related Exams ── */}
-      {related.length > 0 && (
-        <section className={styles.relatedSection}>
-          <div className="container">
-            <h2 className={styles.sectionTitle}>
-              <span className="material-symbols-outlined">link</span>
-              Related Exams
-            </h2>
-            <div className={styles.relatedGrid}>
-              {related.map(rel => (
-                <Link key={rel.slug} href={`/syllabus/${rel.slug}`} className={styles.relatedCard}>
-                  <span className="material-symbols-outlined">{rel.logo}</span>
-                  <div>
-                    <strong>{rel.nameEn}</strong>
-                    <span>{rel.conductingBody}</span>
-                  </div>
-                  <span className={styles.relatedArrow}>→</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ── Next Steps: Practice & Test Hub ── */}
       <section className={styles.nextStepsSection}>
@@ -1038,14 +1087,14 @@ export default function ExamDetailPage({ params }) {
                   <div className={styles.nextStepCardTop}>
                     <span className={styles.nextStepEmoji}>📄</span>
                     <span className={styles.nextStepBadgePrimary}>
-                      841 Papers
+                      {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} Papers
                     </span>
                   </div>
                   <strong className={styles.nextStepCardTitle}>
                     MPSC मूळ प्रश्नपत्रिका व की
                   </strong>
                   <p className={styles.nextStepCardDesc}>
-                    २०२१ ते २०२६ चे सर्व ४२९ अधिकृत संच थेट ब्राऊझरमध्ये वाचा व डाऊनलोड करा.
+                    {MPSC_ARCHIVE_YEARS_SPAN} चे सर्व अधिकृत संच थेट ब्राऊझरमध्ये वाचा व डाऊनलोड करा.
                   </p>
                 </div>
                 <span className={styles.nextStepCardLinkPrimary}>

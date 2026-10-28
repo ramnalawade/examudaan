@@ -1,4 +1,4 @@
-/**
+﻿/**
  * /walk-in-interviews — Walk-in Interview Listings
  * Shows all notifications where is_walk_in = TRUE
  * Fetches from /api/notifications?walk_in=true
@@ -112,7 +112,7 @@ function WalkInCard({ item }) {
         {item.application_links?.official_website && (
           <a
             href={item.application_links.official_website}
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             rel="noopener noreferrer"
             className={styles.btnOfficial}
           >

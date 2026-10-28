@@ -1,0 +1,149 @@
+{
+  "docId": 10544,
+  "examName": "Assistant Professor (English) Maharashtra Education Service, Group-A and Lecturer (English) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (इंग्रजी) महाराष्ट्र शिक्षण सेवा, गट-अ आणि व्याख्याता (इंग्रजी) महाराष्ट्र शिक्षण सेवा, गट-ब (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "English Syllabus",
+      "paperTitleMr": "इंग्रजी अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Drama",
+          "unitTitleMr": "नाटक",
+          "topics": [
+            "Ancient to Medieval Drama including Greek, Roman and English Drama (Upto 15th Century)",
+            "Renaissance and Restoration Drama (16th - Late 17th Century)",
+            "Victorian and Modern Drama (19th - 20th Century)",
+            "World Drama",
+            "Indian Drama including ancient Sanskrit and Regional Drama"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Poetry",
+          "unitTitleMr": "कविता",
+          "topics": [
+            "Old English and Medieval Poetry",
+            "The Renaissance and Early Modern Poetry",
+            "The Romantic Era",
+            "Modernist and Postmodernist Poetry",
+            "Contemporary and Global English Poetry"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Fiction",
+          "unitTitleMr": "कादंबरी / कथासाहित्य",
+          "topics": [
+            "The Rise of English Fiction (16th - 18th Century)",
+            "The Victorian Novel (19th Century)",
+            "Modernist Fiction (Early 20th Century)",
+            "Postcolonial and Global Fiction (Mid-20th Century)",
+            "Contemporary Multicultural Fiction (Late 20th Century - Present)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Non-Fictional Prose",
+          "unitTitleMr": "वैचारिक गद्य",
+          "topics": [
+            "Early Beginnings: Renaissance and Reformation (16th - 17th Century)",
+            "The Enlightenment and Augustan Age (18th Century)",
+            "Romantic and Victorian Non-Fiction (19th Century)",
+            "Modernist and Postcolonial Non-Fiction (20th Century)",
+            "Contemporary and Global Non-Fiction (Late 20th Century - Present)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Language: Basic Concepts, Theories and Pedagogy",
+          "unitTitleMr": "भाषा: मूलभूत संकल्पना, सिद्धांत आणि अध्यापनशास्त्र",
+          "topics": [
+            "Foundations of Language: Basic Concepts",
+            "Theories of Language Development and Learning",
+            "Pedagogy of Language Teaching",
+            "Language in Use: Sociocultural and Functional Perspectives",
+            "Future of Language and English in Use"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "English in India: History, Evolution and Future",
+          "unitTitleMr": "भारतात इंग्रजी: इतिहास, उत्क्रांती आणि भविष्य",
+          "topics": [
+            "Introduction of English in Colonial India",
+            "Macaulay’s Minute and the Formalization of English Education",
+            "Role of English in Nationalism and Post-Colonial Identity",
+            "English in Independent India: Lingua Franca and Global Link",
+            "Contemporary and Future Role of English in India"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Cultural Studies",
+          "unitTitleMr": "सांस्कृतिक अभ्यास",
+          "topics": [
+            "Foundations and Early Influences",
+            "Emergence of Cultural Studies as a Discipline",
+            "Globalization and Cultural Hybridity",
+            "Cultural Studies in the Digital Era",
+            "Future Directions and Challenges"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Literary Criticism",
+          "unitTitleMr": "साहित्यिक टीकाशास्त्र",
+          "topics": [
+            "Classical Literary Criticism (5th Century BCE - 4th Century CE)",
+            "Medieval and Renaissance Criticism (5th - 17th Century)",
+            "Neoclassical and Enlightenment Criticism (17th - 18th Century)",
+            "Romantic and Victorian Criticism (19th Century)",
+            "Modern and Contemporary Criticism (20th Century - Present)"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Literary Theory Post-World War II",
+          "unitTitleMr": "दुसऱ्या महायुद्धोत्तर साहित्यिक सिद्धांत",
+          "topics": [
+            "Structuralism and Semiotics",
+            "Post-Structuralism and Deconstruction",
+            "Psychoanalytic and Marxist Criticism",
+            "Postmodernism and Postcolonialism",
+            "Feminism and Contemporary Theories"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Research Methods and Materials in English",
+          "unitTitleMr": "इंग्रजीमधील संशोधन पद्धती आणि साहित्य",
+          "topics": [
+            "Types of Research",
+            "Methods of Data Collection",
+            "Ethics in Research",
+            "Research in English Language",
+            "Research in English Literature"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

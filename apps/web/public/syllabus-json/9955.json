@@ -1,0 +1,58 @@
+{
+  "docId": 9955,
+  "examName": "Sub Inspector in State Excise, Group -C, Limited Departmental Competitive Examination - Syllabus",
+  "examNameMr": "राज्य उत्पादक शुल्क उप निरीक्षक, गट-क, मर्यादित विभागीय स्पर्धा परीक्षा - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "departmental",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Law, Acts and Rules related to State Excise Department",
+      "paperTitleMr": "राज्य उत्पादन शुल्क विभागाशी संबंधित कायदे व नियम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Indian Penal Code and Criminal Procedure Code",
+          "unitTitleMr": "भारतीय दंड संहिता आणि फौजदारी प्रक्रिया संहिता",
+          "topics": [
+            "General Exceptions regarding Education and Law",
+            "Offences against the Human Body",
+            "Offences relating to Public Servants",
+            "Contempt of the Lawful Authority of Public Servants",
+            "Offences relating to Documents and Property Marks",
+            "Constitution of Criminal Courts and Offices",
+            "Process to Compel Appearance and Production of Things",
+            "Security for Keeping the Peace and for Good Behaviour",
+            "Information to the Police and their Powers to Investigate",
+            "Provisions as to Bail and Bonds"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Indian Evidence Act and State Acts",
+          "unitTitleMr": "भारतीय पुरावा कायदा आणि राज्य कायदे",
+          "topics": [
+            "Relevancy of Facts",
+            "Estoppel",
+            "Witnesses and Examination of Witnesses",
+            "Maharashtra Drugs Control Act",
+            "Maharashtra Opium Smoking Act"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

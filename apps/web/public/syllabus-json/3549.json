@@ -1,0 +1,109 @@
+{
+  "docId": 3549,
+  "examName": "Senior Research Officer, Group-A, Grade - II (Tribal Development Department)",
+  "examNameMr": "वरिष्ठ संशोधन अधिकारी -गट अ,(श्रेणी-२) (आदिवासी विकास विभाग)",
+  "conductingBody": "MPSC",
+  "year": 2021,
+  "language": "Marathi",
+  "category": "group-a",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination - 200 Marks, Interview - 50 Marks",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge, Right to Information Act 2005, Computer and Information Technology, Intelligence Test, Tribal Work and Tribal Welfare Administration Study",
+      "paperTitleMr": "सामान्य ज्ञान, माहिती अधिकार कायदा २००५, संगणक व माहिती तंत्रज्ञान, बुद्धीमापन चाचणी, आदिवासी कार्य तसेच आदिवासी कल्याण प्रशासन अध्ययन",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Knowledge",
+          "unitTitleMr": "सामान्य ज्ञान",
+          "topics": [
+            "History of Modern India with special reference to Maharashtra",
+            "Geography of Maharashtra",
+            "Local Self Government in Maharashtra (Rural)",
+            "Right to Information Act - 2005 (As updated)",
+            "Economy and Budget of Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Computer and Information Technology",
+          "unitTitleMr": "संगणक व माहिती तंत्रज्ञान",
+          "topics": [
+            "Role of computers in modern society",
+            "Computer usage in various fields of life",
+            "Data communication, networking and web technology",
+            "Cyber crimes and preventive measures",
+            "Use of information technology in facilitating various services to citizens as emerging new industries",
+            "Growth and quality of information technology industry in India",
+            "Government programs like Media Lab Asia, Vidya Vahini, Gyan Vahini, Community Information Centers etc.",
+            "Fundamental questions and future in information technology industry"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Current Affairs",
+          "unitTitleMr": "जागतिक तसेच भारतातील चालू घडामोडी",
+          "topics": [
+            "Political",
+            "Industrial",
+            "Economic",
+            "Social",
+            "Educational",
+            "Geographical",
+            "Astronomical",
+            "Cultural",
+            "Scientific etc."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धीमापन चाचणी",
+          "topics": [
+            "To estimate how quickly and accurately a candidate can think"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Tribal Work and Tribal Welfare Administration Study",
+          "unitTitleMr": "आदिवासी कार्य तसेच आदिवासी कल्याण प्रशासन अध्ययन",
+          "topics": [
+            "Tribals: Concept, Meaning and Definition",
+            "Origin and Classification of Tribals: Geographical, Linguistic, Racial and Cultural",
+            "General and Evental Characteristics of Tribes and Scheduled Tribes",
+            "State-wise and National-wise Scheduled Tribes in India, Scheduled Tribes in Maharashtra State, Tribe-wise Sub-Tribes, Population of Scheduled Tribes in decadal census",
+            "Indian Caste System, various castes, tribes declared by Central Government notification and Scheduled Tribes and other castes/tribes similar in appearance to Scheduled Tribes - actual position",
+            "Scheduled Tribe Certificate 'Nirgaman' process and research",
+            "Scheduled Tribe Certificate Verification Process and Research",
+            "Scheduled Tribe Certificate Verification Committee composition and role",
+            "Scheduled Tribe Actual Residence Area Classification: Schedule Area (TSP Area), Additional Tribal Sub-Plan Area (ATSP Area), MADA Area, Mini MADA Area, OTSPP Area",
+            "Social, Economic, Educational, Religious, Political and Health problems of Tribals",
+            "Three Theories of Remediation of Tribal Problems: Isolationism, Assimilation, Acculturation",
+            "Tribal Development in India: Concept of Tribal Development, Human Development, Human Development Index",
+            "Human Development Index and Tribal Sub-Plan and Tribal Component Program interrelationship",
+            "Indian Tribal Development Policy, Forest Laws and Tribals, Other Acts related to Tribal Society, Role of Tribal Development Department, Integrated Administrative Structure of Tribal Development Department",
+            "Research Methods used for Study of Tribals: Participant Observation, Ethnography and Case Study Method",
+            "Tribal Research and Training Institute: Composition, Function and Role in Caste Certificate Verification Process"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Negative marking: 25% or 1/4th of the marks assigned to that question will be deducted for each wrong answer.",
+    "If more than one answer is given for a question, it will be treated as wrong and 25% or 1/4th of the marks will be deducted.",
+    "If the sum of final marks results in a fraction, it will remain as a fraction and further processing will be done based on that.",
+    "If a question is left unattempted by a candidate, negative marking will not apply.",
+    "Final merit list will be based on combined marks of objective examination and interview."
+  ]
+}

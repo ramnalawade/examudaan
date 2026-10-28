@@ -14,6 +14,7 @@ import JobDetailTitle from '../../../components/JobDetailTitle'
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 import { buildSyllabusMetadata, fitDescription } from '../../../lib/seoMetadata'
+import { safeJsonLd } from '../../../lib/jobSeo'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
 export const revalidate = 300
@@ -239,8 +240,8 @@ export default async function SyllabusDetailPage({ params }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <div className="container" style={{ paddingTop: '20px', paddingBottom: '100px' }}>
 
         {/* ── Breadcrumb ───────────────────────────────────── */}

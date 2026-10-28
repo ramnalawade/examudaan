@@ -317,6 +317,17 @@
   opacity: 0.9;
 }
 
+.disclaimerNote {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
 /* Section Table */
 .sectionTable {
   width: 100%;

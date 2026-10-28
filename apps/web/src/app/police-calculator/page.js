@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 // ============================================================
 // app/police-calculator/page.js
@@ -138,8 +138,8 @@ export default function PoliceCalculatorPage() {
 
   // Share text
   const shareText = isMarathi
-    ? `माझा महाराष्ट्र पोलीस शिपाई २०२६ अंदाजित स्कोर:\nमैदानी: ${physicalTotal}/५०\nलेखी: ${writtenMarks}/१००\nएकूण गुण: ${compositeTotal}/१५०\nजिल्हा: ${selectedDistrict.name_mr}\nअंदाजित कट-ऑफ: ${targetCutoff} गुण (${isSafe ? '✅ सेफ झोन' : isBorder ? '⚠️ बॉर्डरलाईन' : '❌ सरावाची गरज'})\n\nतुम्हीसुद्धा तुमचा अचूक स्कोर व गुणवत्ता यादी येथे तपासा:\nhttps://examudaan.in/police-calculator`
-    : `My Maharashtra Police Constable 2026 Estimated Score:\nPhysical: ${physicalTotal}/50\nWritten: ${writtenMarks}/100\nTotal Composite: ${compositeTotal}/150\nDistrict: ${selectedDistrict.name_en}\nEstimated Cutoff: ${targetCutoff} marks (${isSafe ? '✅ Safe Zone' : isBorder ? '⚠️ Borderline' : '❌ Needs Practice'})\n\nCheck your rank and score breakdown here:\nhttps://examudaan.in/police-calculator`
+    ? `माझा महाराष्ट्र पोलीस शिपाई २०२६ अंदाजित स्कोर:\nमैदानी: ${physicalTotal}/५०\nलेखी: ${writtenMarks}/१००\nएकूण गुण: ${compositeTotal}/१५०\nजिल्हा: ${selectedDistrict.name_mr}\nअंदाजित कट-ऑफ: ${targetCutoff} गुण (${isSafe ? '✅ सेफ झोन' : isBorder ? '⚠️ बॉर्डरलाईन' : '❌ सरावाची गरज'})\n\nतुम्हीसुद्धा तुमचा अंदाजित मेरिट बॅन्ड व गुणवत्ता यादी येथे तपासा:\nhttps://examudaan.in/police-calculator`
+    : `My Maharashtra Police Constable 2026 Estimated Score:\nPhysical: ${physicalTotal}/50\nWritten: ${writtenMarks}/100\nTotal Composite: ${compositeTotal}/150\nDistrict: ${selectedDistrict.name_en}\nEstimated Cutoff: ${targetCutoff} marks (${isSafe ? '✅ Safe Zone' : isBorder ? '⚠️ Borderline' : '❌ Needs Practice'})\n\nCheck your estimated merit band and score breakdown here:\nhttps://examudaan.in/police-calculator`
 
   return (
     <main className={styles.page}>
@@ -148,7 +148,7 @@ export default function PoliceCalculatorPage() {
         <div className="container">
           <div className={styles.heroContent}>
             <span className={styles.heroBadge}>
-              <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>local_police</span>
+              <span className="material-symbols-outlined">local_police</span>
               {isMarathi ? 'महाराष्ट्र पोलीस भरती २०२६ अधिकृत कॅल्क्युलेटर' : 'Maharashtra Police Bharti 2026 Official Calculator'}
             </span>
             <h1>
@@ -158,8 +158,8 @@ export default function PoliceCalculatorPage() {
             </h1>
             <p>
               {isMarathi
-                ? 'अधिकृत पोलीस भरती नियमावलीनुसार (GR) १६०० मी/८०० मी धावणे, १०० मी धावणे व गोळाफेकचे अचूक गुण मोजा. तुमचा लेखी परीक्षेचा गुण मिळवून १५० गुणांमधील एकूण गुणवत्ता क्रमवारी आणि जिल्हा-निहाय निवड शक्यता त्वरित तपासा.'
-                : 'Calculate precise marks for 1600m/800m running, 100m sprint, and shot put according to the official Maharashtra Police rules. Combine with written exam score out of 100 to predict your composite rank and district selection odds out of 150 marks.'}
+                ? 'अधिकृत पोलीस भरती नियमावलीनुसार (GR) १६०० मी/८०० मी धावणे, १०० मी धावणे व गोळाफेकचे अचूक गुण मोजा. तुमचा लेखी परीक्षेचा गुण मिळवून १५० गुणांमधील अंदाजित गुणवत्ता श्रेणी आणि जिल्हा-निहाय निवड शक्यता त्वरित तपासा.'
+                : 'Calculate marks for 1600m/800m running, 100m sprint, and shot put according to official Maharashtra Police standards. Combine with written exam score out of 100 to estimate your composite merit band and district selection zone out of 150 marks.'}
             </p>
           </div>
         </div>
@@ -440,7 +440,7 @@ export default function PoliceCalculatorPage() {
               {/* WhatsApp Share Button */}
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 className={styles.whatsappShareBtn}
               >

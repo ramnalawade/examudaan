@@ -50,6 +50,20 @@ const FEATURED_EXAMS = [
     downloadTitle: 'View Police Bharti Physical & Written Criteria'
   },
   {
+    slug: 'maha-tet',
+    tagLeft: 'Teacher • MSCE Pune',
+    tagRight: 'Paper 1 & Paper 2',
+    titleEn: 'Maharashtra Teacher Eligibility Test (MAHA TET)',
+    titleMr: 'महाराष्ट्र राज्य परीक्षा परिषद पुणे • शिक्षक पात्रता परीक्षा (इ. १ ली ते ८ वी)',
+    eligibility: '12th + D.El.Ed (Paper 1) / Degree + B.Ed/D.El.Ed (Paper 2)',
+    ageLimit: 'Min 18 yrs / Govt relaxation',
+    stages: 'Paper 1 Primary (150 M) & Paper 2 Upper Primary (150 M)',
+    badges: ['Official GR PDF', 'Pedagogy Blueprint', 'Bilingual'],
+    buttonLabel: 'View TET Syllabus →',
+    downloadUrl: '/downloads/mahatet/syllabus/MAHATET_Syllabus.pdf',
+    downloadTitle: 'Download Official MAHA TET Syllabus PDF'
+  },
+  {
     slug: 'upsc-cse',
     tagLeft: 'Central • All-India',
     tagRight: 'Annual Calendar',

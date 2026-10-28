@@ -11,7 +11,7 @@ export default function robots() {
   return {
     rules: [
       {
-        // Explicitly allow Bingbot, msnbot, BingPreview
+        // Explicitly allow Googlebot, Bingbot and other trusted search & AI bots
         userAgent: [
           'Googlebot', 'Googlebot-Image',
           'Bingbot', 'msnbot', 'BingPreview',
@@ -31,27 +31,18 @@ export default function robots() {
           '/dashboard/',
           '/api/',
           '/auth-success',
+          '/downloads/',
+          '/downloads/*',
+          '/*.pdf$',
+          '/question-papers/mpsc/',
+          '/login',
+          '/login/',
+          '/register',
+          '/register/',
         ],
       },
       {
-        // Explicitly allow Googlebot
-        userAgent: ['Googlebot', 'Googlebot-Image'],
-        allow: [
-          '/',
-          '/_next/static/',
-          '/_next/image/',
-        ],
-        disallow: [
-          '/admin',
-          '/admin/',
-          '/dashboard',
-          '/dashboard/',
-          '/api/',
-          '/auth-success',
-        ],
-      },
-      {
-        // Allow legitimate search engine crawlers (general)
+        // Allow legitimate search engine crawlers (general wildcard)
         userAgent: '*',
         allow: [
           '/',
@@ -65,6 +56,14 @@ export default function robots() {
           '/dashboard/',
           '/api/',
           '/auth-success',
+          '/downloads/',
+          '/downloads/*',
+          '/*.pdf$',
+          '/question-papers/mpsc/',
+          '/login',
+          '/login/',
+          '/register',
+          '/register/',
         ],
       },
       {

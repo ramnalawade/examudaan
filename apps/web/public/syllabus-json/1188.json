@@ -1,0 +1,140 @@
+{
+  "docId": 1188,
+  "examName": "Assistant Limited Departmental Examination for Clerk, Clerk-Typist or Ministerial Staff in Secretariat and Maharashtra Public Service Commission Office",
+  "examNameMr": "मंत्रாலयातील तसेच महाराष्ट्र लोकसेवा आयोगाच्या कार्यालयातील लिपिक, लिपिक - टंकलेखक किंवा लिपिकवर्गीय कर्मचाऱ्यांची सहायक पदावर निवडद्वारे नियुक्ती करण्यासाठी घेण्यात येणाऱ्या मर्यादित विभागीय स्पर्धा परीक्षा सुधारित परीक्षा योजना व अभ्यासक्रम.",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "Marathi",
+  "category": "departmental",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "लेखी परीक्षा - २०० गुण, लेखी परीक्षेच्या गुणांच्या आधारे अंतिम निवड करण्यात येईल. वस्तुनिष्ठ बहुपर्यायी परीक्षा.",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper - 1: Marathi, English, Govt Schemes & General Knowledge",
+      "paperTitleMr": "पेपर - १ : मराठी, इंग्रजी, शासकीय योजना व शासनाशी संबंधित बाबी, सामान्य ज्ञान",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi: Grammar, vocabulary, punctuation, sentences, idioms, etc.",
+          "unitTitleMr": "मراठी :- व्याकरण, शुद्धलेखन व विरामचिन्हे यांचे नियम, शब्दांच्या जाती (प्रकार), काळ व अर्थ, वाक्यप्रकार, शब्दसिद्धी, पारिभाषिक शब्द, म्हणींचा अर्थ व उपयोग, वाक्यप्रचारांचा अर्थ व उपयोग.",
+          "marks": 25,
+          "topics": [
+            "व्याकरण",
+            "शुद्धलेखन व विरामचिन्हे",
+            "शब्दांच्या जाती",
+            "काळ व अर्थ",
+            "वाक्यप्रकार",
+            "शब्दसिद्धी",
+            "पारिभाषिक शब्द",
+            "म्हणींचा अर्थ व उपयोग",
+            "वाक्यप्रचारांचा अर्थ व उपयोग"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English: Common vocabulary, Sentence structure, Grammar, Comprehension of passage.",
+          "unitTitleMr": "इंग्रजी :- Common vocabulary, Sentence structure, Grammar, Comprehension of passage.",
+          "marks": 25,
+          "topics": [
+            "Common vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Comprehension of passage"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Government Schemes and related matters: Department important schemes, scheme names, budget limits, central-state share, beneficiary eligibility.",
+          "unitTitleMr": "शासकीय योजना व शासनाशी संबंधित बाबी :- विभागाच्या महत्त्वाच्या योजना, योजनांची नावे, अनुदान मर्यादा, केंद्र-राज्य हिस्सा लाभार्थी पात्रता, इ.",
+          "marks": 25,
+          "topics": [
+            "विभागाच्या महत्त्वाच्या योजना",
+            "योजनांची नावे",
+            "अनुदान मर्यादा",
+            "केंद्र-राज्य हिस्सा",
+            "लाभार्थी पात्रता"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "General Knowledge: History, Geography, Art, Sports, Literature, Awards, Current Affairs, Right to Information Act-2005, Political Science.",
+          "unitTitleMr": "सामान्य ज्ञान :- इतिहास, भूगोल, कला, क्रीडा, साहित्य, पुरस्कार, चालू घडामोडी, माहिती अधिकार अधिनियम-२००५, राज्य शास्त्र, इ.",
+          "marks": 25,
+          "topics": [
+            "इतिहास",
+            "भूगोल",
+            "कला",
+            "क्रीडा",
+            "साहित्य",
+            "पुरस्कार",
+            "चालू घडामोडी",
+            "माहिती अधिकार अधिनियम-२००५",
+            "राज्य शास्त्र"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper - 2: Administrative Knowledge and Procedures",
+      "paperTitleMr": "पेपर - २ : कार्यालयीन कामकाजाचे ज्ञान व पद्धती",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Division A: Secretariat and Ayog Common Administrative Components",
+          "unitTitleMr": "विभाग - अ : मंत्रालय व आयोग यांच्या सामायिक कामकाजाविषयीचे घटक",
+          "marks": 75,
+          "topics": [
+            "भारतीय संविधान - मूलभूत अधिकार (अनुच्छेद १२ ते ३०)",
+            "राज्य धोरणांची निर्देशक तत्वे (अनुच्छेद ३६ ते ५१)",
+            "मूलभूत कर्तव्ये (अनुच्छेद - ५१ (क))",
+            "महाराष्ट्र नागरी सेवा (वर्तणूक) नियम, १९७९",
+            "महाराष्ट्र नागरी सेवा (सेवेच्या सर्वसाधारण शर्ती) नियम, १९८१ नियम क्र. ९ ते २०, २७, ३१ ते ४५, ४७."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Division B: Secretariat Administrative Components only",
+          "unitTitleMr": "विभाग - ब : फक्त मंत्रालयाच्या कामकाजासंबंधीचे घटक",
+          "marks": 25,
+          "topics": [
+            "मंत्रालयातील कार्यालयीन पद्धतीची नियमपुस्तिका",
+            "मंत्रालयातील कामकाजाविषयक नियम व त्यासंबंधीच्या सूचना",
+            "प्रशासकीय सुधारणा व कल्याणकारी धोरणे या संबंधात अंमलबजावणीसाठीचे शासनाचे धोरण / वेळेوେळी शासनाने घेतलेले निर्णय",
+            "विधीमंडळ कामकाज - विधानसभा आणि विधानपरिषद नियम",
+            "भारताचे संविधान - भाग - ६ मधील प्रकरण १ ते ४ [अनुच्छेद १५२ ते २१३]"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Division C: MPSC Administrative Components only",
+          "unitTitleMr": "विभाग - क : फक्त महाराष्ट्र लोकसेवा आयोगाच्या कामकाजासंबंधीचे घटक",
+          "marks": 25,
+          "topics": [
+            "भारतीय संविधानातील लोकसेवा आयोगासंबंधीचे अनुच्छेद ३१५ ते ३२३",
+            "महाराष्ट्र लोकसेवा आयोगातील कार्यालयीन कार्यपद्धती",
+            "महाराष्ट्र लोकसेवा आयोग व शासन दरम्यानच्या पत्रव्यवहार करण्याविषयीच्या कार्यपद्धती व त्यासंबंधीच्या सूचना",
+            "महाराष्ट्र लोकसेवा आयोगामार्फत प्रसिद्ध करण्यात येणाऱ्या-या अधिसूचना, जाहिराती व वार्षिक अहवाल."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "मंत्रालयातील लिपिकवर्गीय कर्मचाऱ्यांनी विभाग-अ आणि विभाग-ब सोडवणे आवश्यक आहे व महाराष्ट्र लोकसेवा आयोगातील लिपिकवर्गीय कर्मचाऱ्यांनी विभाग-अ आणि विभाग-क सोडवणे आवश्यक आहे."
+  ]
+}

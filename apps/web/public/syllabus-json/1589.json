@@ -1,0 +1,108 @@
+{
+  "docId": 1589,
+  "examName": "Maharashtra Polytechnic Teachers’ Services, Group-A.",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2018,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Related to the Subject",
+      "paperTitleMr": null,
+      "totalMarks": 200,
+      "duration": "3 hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "I ENGINEERING MATHEMATICS",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Linear Algebra: Matrix algebra, Systems of linear equations, Eigen values and Eigen vectors.",
+            "(2) Calculus: Functions of single variable, Limit, continuity and differentiability, Mean value theorems, Evaluation of definite and improper integrals, Partial derivatives, Total derivative, Maxima and minima, Vector identities, Directional derivatives, Line, Surface and Volume integrals.",
+            "(3) Differential equations: First order equations (linear and nonlinear), Higher order linear differential equations with constant coefficients, Cauchy’s and Euler’s equations, Initial and boundary value problems, Laplace transforms.",
+            "(4) Probability and Statistics: Definitions of probability and sampling theorems, Conditional probability, Mean, median, mode and standard deviation, Random variables, Poisson, Normal and Binomial distributions.",
+            "(5) Numerical Methods: Numerical solutions of linear and non-linear algebraic equations, Integration by trapezoidal and Simpson’s rule, single and multi-step methods for differential equations."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "II GENERAL ENGINEERING",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Engineering Materials: Structure and properties correlation; engineering materials (metals, ceramics, polymers and composite) - properties and applications: stress-strain behavior of metals and alloys; iron-carbon phase diagram, heat treatment of metals and alloys, its influence on mechanical properties.",
+            "(2) Thermal and Fluids Engineering: Thermodynamics – zeroth, first and second law of thermodynamics, thermodynamic system and processes, calculation of work and heat for system and control volumes; air standard cycles; heat transfer – basic application of conduction, convection and radiation. Fluid mechanics – fluid statics, Bernoulli’s equation, flow through pipes, equations of continuity and momentum, capillary action, contact angle and wetting.",
+            "(3) Manufacturing Science: Pattern making and Foundry; Machining operations; Lathe; Milling; drilling; Planner/Shaper/Slotting machine, Grinding; Welding; Non-conventional machining; abrasive jet, Electric discharge machining, Ultrasonic machining, Design of Jigs and Fixtures, Metal cutting and cutting tool engineering, Sheet metal working operations, Rolling and Forging, Metrology and Inspection, Computer Integrated Manufacturing (CIM).",
+            "(4) Manufacturing Planning and Control: Planning functions; master production schedule, shop floor control; Planning for material requirement; inventory control system, economic order quantity, JIT, Project management, CPM and PERT, Production planning using linear programming, assignment model, transportation model."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "III ENGINEERING MECHANICS",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) System of Coplanar Forces: Introduction to coplanar & non-coplanar force system, Equilibrium of coplanar force system. Meaning of equilibrium, free body diagrams, Types of supports, determination of reactions at supports for various types of determinate beams.",
+            "(2) Forces in space and Analysis of pin jointed frame/truss: Rectangular components of forces in space, Equilibrium of a particle in space, Perfect truss, Imperfect truss, Analysis of truss by method of Joints and method of section.",
+            "(3) Friction: Laws of friction, angle of friction, angle of repose, cone of friction, Equilibrium of bodies on rough horizontal and inclined plane, application to problems involving wedges, ladder, Belt friction, flat belts on the flat pulleys. Principle of virtual work: Application to determine the reactions of determinate beams with/without internal hinges.",
+            "(4) Centroid of Plane Areas and Moment of Inertia: Concept of Centroid of plane areas. Centroid of areas by integration. Centroid of composite areas, Moment of inertia of plane areas, Parallel axis theorem. Introduction to polar moment of inertia, product of inertia and mass moment of inertia.",
+            "(5) Kinematics of particle and rigid bodies: Velocity and acceleration in terms of rectangular coordinate system, rectilinear motion, motion along plane curved path, tangential and normal component of acceleration, acceleration- time, velocity- time, graphs and their use, relative velocity, projectile motion, simple harmonic motion; Translation, pure rotation and plane motion of rigid bodies, instantaneous centre of rotation for the velocity for bodies in plane motion, link mechanisms (upto two links).",
+            "(6) Kinetics of particles and rigid bodies: Newton’s laws of motion, D’Alembert’s principle, equation of dynamic equilibrium, linear motion, curvilinear motion, D’Alembert’s principle for bodies under translational motion, rotational motion about a fixed axis and plane motion. Application to motion of bars, cylinders, spheres.",
+            "(7) Energy and Momentum principles: Work done by a force, potential and kinetic energy, power, work energy equation, principle of conservation of energy, momentum, impulse and momentum principle, principle of conservation of momentum, impact of solid bodies, elastic impact, semi-elastic impact and plastic impact."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "IV STRENGTH OF MATERIALS",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Stress and Strain: Definition of stress and strain, tensile and compressive stresses, shear stress, elastic limit, Hooke’s law, Poisson’s ratio, modulus of elasticity, modulus of rigidity, bulk modulus, yield stress, ultimate stress, factor of safety, state of simple shear, relation between elastic constants, volumetric strain, volumetric strain for tri-axial loading.",
+            "(2) Simple Deformations and thermal stresses: Deformation of tapering members, deformation due to self-weight, bars of varying sections, composite sections, Temperature stresses in composite structural components. Energy methods: strain energy, Resilience, Proof resilience.",
+            "(3) Shear force and Bending Moment in beams: Axial force, shear force and bending moment diagrams for statically determinate beams including beams with internal hinges for different types of loading, relationship between rate of loading, shear force and bending moment.",
+            "(4) Stresses in Beam: (i) Bending: Theory of pure bending, assumptions, flexural formula for straight beams, bending stress distribution, section moduli for different sections, beams of uniform strength. (ii) Shear stress in beams: Distribution of shear stress across plane sections used commonly for structural purposes, shear connectors. (iii) Torsion: Torsion of circular shafts- solid and hollow, stresses in shaft when transmitting power, shafts in series and parallel.",
+            "(5) Principal Stresses: General equations for transformation of stress, principal planes and principal stresses, maximum shear stress, determination using Mohr’s circle, maximum principle & maximum shear stress theory of failure, combined bending and torsion, equivalent bending moment and equivalent torque.",
+            "(6) Deflection of beams: Deflection of cantilevers, simply supported and over hanging beams using double integration and Macaulay’s methods for different types of loading.",
+            "(7) Thin Cylindrical and Spherical Shells: Stress and strain in thin cylinders and spheres due to internal pressure, cylindrical shell with hemispherical ends. Thick Shells: Introduction, Lame’s theory, Lame’s equation, Longitudinal stress, maximum shear stress, Volumetric strain."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "V Theory of Machines",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Basic Kinematics: Structure, Machine, Link and its types, Kinematics pair-Lower Pair and higher pair, form closed pair and force closed pairs, based on relative motion permitted such as revolute, prismatic, cam, helical, globular.",
+            "(2) Velocity and Acceleration Analysis of Mechanisms: By instantaneous center of rotation method (Graphical approach), by relative method (Graphical approach), by analytical approach- four bar mechanism only. Static force analysis of plane mechanisms: Static force analysis, two and three-force member, Four force member.",
+            "(3) Cams, Belts, Chains and Gears: Types of cams, cam profile generation, law of belting, chordal action of chains, law of gearing, interference in gears.",
+            "(4) Clutches, Brakes and Dynamometers: Types of clutches, analysis of frictional torque, power transmission; Type of brakes, Analysis of Block brakes; Absorption and transmission dynamometers. Governors: Comparison between governors and flywheel, Types-centrifugal governors, inertia governors.",
+            "(5) Basic Concepts of Vibration: Vibration and oscillation, causes and effects of vibration, Vibration parameters - spring, mass, damper, damper models, Motion -periodic, non-periodic, harmonic, non-harmonic, Degree of freedom, static equilibrium position, Vibration classification, Steps involved in vibration analysis."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "VI Machine Design",
+          "unitTitleMr": null,
+          "topics": [
+            "(1) Design against static Loads: Cotter joint, knuckle joint, Bolted and welded joints under eccentric loading, Power Screw- Screw Presses along with the frame. Design against Fluctuating Loads: Fatigue Failure - Static and fatigue stress concentration factors Endurance limit, Soderberg and Goodman design criteria.",
+            "(2) Design of shaft, keys and couplings: Power transmitting, power distribution, shafts (excluding crank shaft) under static and fatigue criteria. Types of Keys and their selection based on shafting condition. Classification of coupling. Selection of Standard Bush Pin coupling.",
+            "(3) Design of springs: Helical compression, tension springs under static and variable loads, Laminated Springs. Design of Belts and roller chains: Flat and V-belt with pulley construction, selection of Standard Roller chains.",
+            "(4) Design of riveted, bolted and welded Joints: Eccentrically loaded riveted joints, design of bolted joints under eccentric loading. Design of single transverse, double transverse parallel fillet and eccentrically loaded welded joints.",
+            "(5) Design of Gears: Spur, helical, bevels and worm gears, two stage box design. Selection of rolling contact and hydro dynamic bearings: Based on constant /Variable Load and speed conditions; Design of hydro dynamically lubricated bearings; Introduction to hydro Static bearings, Selection of Mechanical Seals.",
+            "(6) Design of Brakes: Disk shoe and drum type. Design of lever arm. Design of clutches: Single and multi-plate with springs, pressure and friction plate selection."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Latest and recent developments in the above topics will also be expected from candidates.",
+    "Use of Non-programmable Scientific calculator is permitted."
+  ]
+}

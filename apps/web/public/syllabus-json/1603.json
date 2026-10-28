@@ -1,0 +1,64 @@
+{
+  "docId": 1603,
+  "examName": "Administrative Officer, Maharashtra Agriculture Administration Service, Gr-A",
+  "examNameMr": "प्रशासकीय अधिकारी, महाराष्ट्र कृषी शासकीय सेवा, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Aptitude Test",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धीमापन चाचणी",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Studies and Current Affairs",
+          "unitTitleMr": "सामान्य ज्ञान व चालू घडामोडी",
+          "topics": [
+            "महाराष्ट्राचा इतिहास (1857-1990)",
+            "महाराष्ट्राचा भूगोल",
+            "माहितीचा अधिकार कायदा - 2005",
+            "भारतीय राज्यघटना",
+            "संगणक व माहिती तंत्रज्ञान",
+            "मानवी हक्क व जबाबदाऱ्या",
+            "जागतिक तसेच भारतातील चालू घडामोडी: राजकीय, औद्योगिक, आर्थिक, सामाजिक, शैक्षणिक, भौगोलिक, खगोलशास्त्रीय, सांस्कृतिक, वैज्ञानिक, इत्यादी."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test and Administrative Rules",
+          "unitTitleMr": "बुद्धीमापन विषयक प्रश्न व प्रशासकीय नियम",
+          "topics": [
+            "बुद्धीमापन विषयक प्रश्न - उमेदवार किती लवकर व अचूकपणे विचार करू शकतो याचा अंदाज घेण्यासाठी घटेंगे सदर प्रश्न विचारण्यात येतील.",
+            "प्रशासकीय कामकाजाच्या संदर्भात लागू होणारे नियम व आदेश:",
+            "1. महाराष्ट्र नागरी सेवा (सेवेच्या सर्वसाधारण शर्ती) नियम 1981",
+            "2. महाराष्ट्र नागरी सेवा (वेतन) नियम 1981",
+            "3. महाराष्ट्र नागरी सेवा (पदग्रहण अवधी, परकीय सेवा, िनलंबन, बडतर्फ, सेवेतून काढुन टाकणे या काळातील प्रदाने) नियम 1981",
+            "4. महाराष्ट्र नागरी सेवा (रजा) नियम 1981",
+            "5. महाराष्ट्र नागरी सेवा (निवृत्तीवेतन) नियम 1982",
+            "6. महाराष्ट्र नागरी सेवा (शिक्षा व अपील) नियम 1979 / विभागीय चौकशी पुस्तिका",
+            "7. महाराष्ट्र नागरी सेवा (वर्तणूक) नियम 1979",
+            "8. लेखा विषयक बाबत",
+            "9. ज्येष्ठतासूचीबाबत",
+            "10. न्यायालयीन कामकाज पद्धती",
+            "11. कार्यालयीन कार्यपद्धती",
+            "12. प्रशासकीय बाबी"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

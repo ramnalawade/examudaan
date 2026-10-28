@@ -16,6 +16,7 @@
 import { queryOne } from '../../../lib/pgdb'
 import { ok, serverError, unauthorized } from '../../../lib/apiResponse'
 import { withAuth } from '../../../lib/auth'
+import { withValidation, schemas } from '../../../lib/validate'
 
 // ---- Key rotation state (in-process, per request shared via module scope) ----
 // For a serverless environment this only persists within a single warm instance.
@@ -71,7 +72,7 @@ async function generateWithRotation(keys, model, contents, systemInstruction) {
   throw new Error('All keys exhausted after retries')
 }
 
-export const POST = withAuth(async (req, ctx, currentUser) => {
+export const POST = withValidation(schemas.askAssistant, withAuth(async (req, ctx, currentUser) => {
   try {
     // 1. Verify user plan via PostgreSQL directly
     const user = await queryOne(
@@ -89,8 +90,10 @@ export const POST = withAuth(async (req, ctx, currentUser) => {
     }
 
     // 2. Parse request
-    const body = await req.json()
-    const { prompt, history = [], examSlug } = body
+    const body = req.validatedBody || (await req.json().catch(() => ({})))
+    const prompt = body.prompt || body.question
+    const history = body.history || []
+    const examSlug = body.examSlug || body.exam_slug
 
     if (!prompt) {
       return new Response(
@@ -195,4 +198,4 @@ ${examContext ? `You have specific information about an exam the user is viewing
     console.error('[POST /api/ask] Error:', err)
     return serverError('Failed to process request')
   }
-})
+}))

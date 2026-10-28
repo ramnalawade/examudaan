@@ -1,0 +1,146 @@
+{
+  "docId": 11619,
+  "examName": "Assistant Library Director/District Library Officer (Gazetted) Maharashtra Library Service, Group-B Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहायक ग्रंथालय संचालक / जिल्हा ग्रंथालय अधिकारी (राजपत्रित), महाराष्ट्र ग्रंथालय सेवा, गट-ब, उच्च व तंत्र शिक्षण विभाग",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "Marathi",
+  "category": "group-b",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination - 200 marks, Interview - 50 marks",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Library Related Subject",
+      "paperTitleMr": "ग्रंथयाशी संबंधित घटक",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Library Classification",
+          "unitTitleMr": "ग्रंथ वर्गीकरण",
+          "topics": [
+            "Meaning of classification and book classification, purpose, necessity and advantages of book classification",
+            "Various schemes of book classification - Dewey Decimal Classification (D.D.C.), Colon Classification (C.C.), Universal Decimal Classification (U.D.C.) - their origin, form, structure, features, evolution, edition and comparative information",
+            "Meaning of book classification call numbers, function, qualities and necessity",
+            "Call number (Call No) - concept and utility"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Library Cataloguing",
+          "unitTitleMr": "ग्रंथालय तालीकीकरण",
+          "topics": [
+            "Library catalogue objective, types - internal and external catalogue, utility and importance",
+            "Library collaboration, library network (Library network) - its form, function and utility",
+            "OPAC - its features and utility",
+            "Centralized cataloging, pre-publication cataloging and MARC",
+            "Concepts of ISBN, ISBD, CIP, ISSN in cataloging",
+            "Interrelationship between cataloging and book classification"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Library Management",
+          "unitTitleMr": "ग्रंथालय व्यवस्थापन",
+          "topics": [
+            "Book acquisition - various methods of book acquisition, various means of book selection, characteristics and advantages of book collection",
+            "Bookbinder",
+            "Accession register and its importance",
+            "Action to be taken after collection of loss and price",
+            "Measures for protection and conservation of books",
+            "Annual report of the library and library committee",
+            "Book circulation",
+            "Various works in newspaper/periodical department",
+            "Test of leadership qualities for the library"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Library Reference Service & Reference Sources",
+          "unitTitleMr": "ग्रंथालयीन संदर्भ सेवा व संदर्भ साधने",
+          "topics": [
+            "What is reference service, necessity, type - prompt, delayed and referral reference service",
+            "Various types of reference books - Dictionaries, Encyclopedias, Biographical, Geographical reference sources and yearbooks",
+            "Important reference books - Marathi Vishwakosh, Encyclopedia Britannica, World Almanac, Manorama Yearbook, Statesman's Yearbook, India Reference Annual, Zilla Darshnika, Date Marathi Granth Suchi, Date Marathi Niyatkalike Lekhsuchi, India Who's Who, International Who's Who, Granthalay Paribhasha Kosh, Shasan Vyavahar Kosh, Rajbhasha Parichay, Prashasnik Lekhan, Prashasan Vakyaprayog",
+            "Characteristics and uniqueness of reference book and general book",
+            "Criteria for evaluation of reference service",
+            "Features, role and function of reference librarian",
+            "Catalog, index, bibliography and calendar - type, work and importance",
+            "History, format and utility of Indian National Bibliography",
+            "Importance and necessity of preservation and digitization of rare documents, manuscripts and rare book collections"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Modernization of Libraries: Application of Information Technology",
+          "unitTitleMr": "ग्रंथालयाचे ఆధుਨੀકીकरण आणि संगणकीकरण व माहिती तंत्रज्ञानाचे उपयोजन",
+          "topics": [
+            "Modernization of library and computerization or concept",
+            "Library computerization - pre-preparation, necessity and advantages",
+            "Available software for computerization of library services - Libsys (LIBSYS), SOUL (SOUL), Koha (KOHA), Greenstone (GREENSTONE), Evergreen (EVERGREEN)",
+            "Digital library and its related resources and service work",
+            "Format and scope of various services provided in internet libraries - e-mail, e-book, e-journal, e-newspaper, employment related information, information on educational service facilities",
+            "Difficulties and solutions encountered in computerization of libraries"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Information Collection and Distribution",
+          "unitTitleMr": "माहिती संग्रह व वितरण",
+          "topics": [
+            "Information concept, necessity, needs and information collection development",
+            "Information service distribution - dissemination of Current Awareness Service (CAS), Selective Dissemination of Information (SDI), Documentation service, Indexing service, Abstracting service, Translation service, Photocopying service",
+            "Online database services",
+            "Referral services",
+            "Growing use of internet and future of printed literature and mutual strengths and limitations",
+            "Role of information service and librarian"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Public Library Movement in Maharashtra - History, Function and Present Status",
+          "unitTitleMr": "महाराष्ट्रातील सार्वजनिक ग्रंथालय चळवळ - इतिहास, कार्य व सध्या स्थिती",
+          "topics": [
+            "Review of the progress of library movement in Maharashtra",
+            "Fuz committee report",
+            "Kolhapur State Public Library Act - 1945 in the pre-independence princely state period",
+            "Maharashtra Public Libraries Act - 1967",
+            "Maharashtra Public Libraries (Rules for grant-in-aid and building and equipment for recognition) Rules - 1970",
+            "Maharashtra Public Libraries Associations (Recognition and Grant-in-Aid) Rules - 1991",
+            "Maharashtra Libraries (Grants to Literary Associations and Research Institutions Libraries) Rules - 1984",
+            "Directorate of Libraries, Maharashtra State - Pre-history, establishment, functions, development and present status",
+            "Maharashtra State Library Union, Divisional and District Library Union progress and work",
+            "Various promotional programs and schemes for public libraries in the state - Award distribution scheme for excellent public libraries, workers and employees, Reading Inspiration Day, District Level Library Festival, Chain scheme, Raja Rammohun Roy Library Foundation, Kolkata scheme, Various schemes providing financial assistance through District Planning and Development Committee, Library Week, Book exhibitions, Certificate course syllabus",
+            "Problems and challenges facing state general public libraries"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Libraries and Society",
+          "unitTitleMr": "ग्रंथालये आणि समाज",
+          "topics": [
+            "History, development and present status of public library movement in India",
+            "Dr. S.R. Ranganathan's contribution and five laws of library science told about library science",
+            "Work done by the Government of India for the development of public libraries in the pre-independence and post-independence periods - Model Public Libraries Bills, The Press and Registration of Books Act - 1867, Delivery of Books Act - 1954 and subsequent amendments, The Indian Copyright Act - 1957",
+            "Committees, commissions, study groups and special programs appointed by the Government of India for the development of public libraries - K.P. Sinha Advisory Committee, D.P. Chattopadhyaya Committee, Raja Rammohun Roy Library Foundation, National Knowledge Commission, National Book Trust, Community Information Centers (CIC) in Northeast India",
+            "Provisions and features of public library acts passed by various states in India",
+            "International, national and state level organizations and their work related to libraries - I.F.L.A., A.L.A., I.L.A., I.A.S.L.I.C.",
+            "Role and importance of public libraries in social education and development",
+            "Work done by UNESCO for the promotion and dissemination of public libraries - Manifesto for public libraries, Library charter, CDS/ISIS information management system, UNESCO project Delhi Public Library"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever acts/rules/regulations are mentioned in the syllabus, the latest amendments/modifications in such acts/rules/regulations should be taken into consideration."
+  ]
+}

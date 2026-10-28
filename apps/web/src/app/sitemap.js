@@ -22,6 +22,8 @@ import { CAREER_PATHS } from '../lib/careerGuideData.js'
 import { getCleanMpscPaperSitemapEntries } from '../lib/mpscDocumentResolver.js'
 import { buildMpscSyllabusSlug } from '../lib/mpscTaxonomy.js'
 import mpscSyllabusCatalog from '../lib/mpscSyllabusCatalog.json'
+import mpscPyqArchiveManifest from '../lib/mpscPyqArchiveManifest.json'
+
 
 // Revalidate sitemap from database & RSS every 24 hours (86,400s)
 export const revalidate = 86400
@@ -49,14 +51,23 @@ const STATIC_PAGES = [
   { url: '/mpsc-exam-dates-2026', priority: 0.95, changeFrequency: 'daily' },
   { url: '/police-bharti-question-papers', priority: 0.95, changeFrequency: 'daily' },
   { url: '/talathi-question-papers', priority: 0.95, changeFrequency: 'daily' },
+  { url: '/mahatet-previous-year-papers', priority: 0.95, changeFrequency: 'daily' },
   { url: '/police-bharti-hall-ticket-2026', priority: 0.95, changeFrequency: 'daily' },
   { url: '/talathi-bharti-apply-online', priority: 0.95, changeFrequency: 'daily' },
   { url: '/bmc-recruitment-2026', priority: 0.95, changeFrequency: 'daily' },
   { url: '/syllabus', priority: 0.92, changeFrequency: 'weekly' },
+  { url: '/syllabus/maha-tet', priority: 0.95, changeFrequency: 'weekly' },
   { url: '/syllabus/mpsc', priority: 0.92, changeFrequency: 'weekly' },
   { url: '/jobs/org/mpsc', priority: 0.90, changeFrequency: 'daily' },
   { url: '/question-papers', priority: 0.95, changeFrequency: 'daily' },
   { url: '/mpsc-pyq', priority: 0.95, changeFrequency: 'daily' },
+  { url: '/mpsc/group-b-previous-year-papers', priority: 0.95, changeFrequency: 'daily' },
+  { url: '/mpsc/group-c-previous-year-papers', priority: 0.95, changeFrequency: 'daily' },
+  { url: '/mpsc/rajyaseva-previous-year-papers', priority: 0.95, changeFrequency: 'daily' },
+  { url: '/mpsc/other-services-previous-year-papers', priority: 0.95, changeFrequency: 'daily' },
+  { url: '/mpsc/pyq-analysis', priority: 0.95, changeFrequency: 'daily' },
+  { url: '/mpsc/my-preparation', priority: 0.92, changeFrequency: 'daily' },
+  { url: '/mpsc/syllabus-tracker', priority: 0.95, changeFrequency: 'daily' },
   { url: '/cutoffs', priority: 0.90, changeFrequency: 'weekly' },
   { url: '/pyq', priority: 0.90, changeFrequency: 'weekly' },
   { url: '/score-calculator', priority: 0.88, changeFrequency: 'weekly' },
@@ -255,6 +266,35 @@ export default async function sitemap() {
     console.error('Sitemap MPSC syllabus error:', err)
   }
 
+  // 5h. MPSC 2009–2026 PYQ Archive Hubs & Dedicated Paper Pages
+  const mpscArchiveEntries = []
+  try {
+    // 1. Cadre Hubs (/mpsc/rajyaseva-previous-year-papers, etc.)
+    Object.values(mpscPyqArchiveManifest?.cadres || {}).forEach(c => {
+      if (c.slug) {
+        mpscArchiveEntries.push({
+          url: `${BASE_URL}/mpsc/${c.slug}`,
+          lastModified: now,
+          changeFrequency: 'daily',
+          priority: 0.94,
+        })
+      }
+    })
+    // 2. Individual Verified Exam-Stage-Year Papers (/mpsc/[slug])
+    ;(mpscPyqArchiveManifest?.items || []).forEach(item => {
+      if (item.slug) {
+        mpscArchiveEntries.push({
+          url: `${BASE_URL}/mpsc/${item.slug}`,
+          lastModified: now,
+          changeFrequency: 'weekly',
+          priority: 0.88,
+        })
+      }
+    })
+  } catch (archErr) {
+    console.error('Sitemap MPSC archive error:', archErr)
+  }
+
   // 6. Database Exam Notifications (Up to 45,000 published entries)
   let postEntries = []
   try {
@@ -292,6 +332,7 @@ export default async function sitemap() {
     ...pyqSubjectEntries,
     ...mpscPaperEntries,
     ...mpscSyllabusEntries,
+    ...mpscArchiveEntries,
     ...postEntries,
   ]
 

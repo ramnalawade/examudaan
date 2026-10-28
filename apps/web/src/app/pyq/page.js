@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/pyq/page.js — 15-Year Topic-wise Searchable PYQ Bank
 // ExamUdaan.in — Database-backed API search across MPSC, TCS Talathi & Police PYQs
 // Design: Warm Ivory (#FFFBF5), Deep Saffron (#EA580C), Outfit & Inter typography
@@ -9,6 +9,7 @@ import { useState, useEffect, useRef, useCallback, useMemo, Suspense } from 'rea
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { trackCtaClick, trackSocialCommunity } from '@/lib/analytics'
+import { MPSC_TOTAL_QUESTION_PAPERS, MPSC_ARCHIVE_YEARS_SPAN } from '@/lib/platformStats'
 import styles from './pyq.module.css'
 
 const SUBJECT_FILTERS = [
@@ -52,9 +53,13 @@ const TRENDING_TOPICS = [
 function PyqSearchInner() {
   const searchParams = useSearchParams()
   const initialQuery = searchParams ? searchParams.get('q') || '' : ''
+  const initialSubjectParam = searchParams ? searchParams.get('subject') || '' : ''
+  const matchedSubject = SUBJECT_FILTERS.find(
+    s => s.toLowerCase() === initialSubjectParam.trim().toLowerCase()
+  )
 
   const [searchQuery, setSearchQuery] = useState(initialQuery)
-  const [activeSubject, setActiveSubject] = useState('All')
+  const [activeSubject, setActiveSubject] = useState(matchedSubject || 'All')
   const [questions, setQuestions] = useState([])
   const [totalCount, setTotalCount] = useState(0)
   const [subjectCounts, setSubjectCounts] = useState({})
@@ -64,6 +69,32 @@ function PyqSearchInner() {
   const [hasMore, setHasMore] = useState(false)
   const [selectedAnswers, setSelectedAnswers] = useState({})
   const [revealedSolutions, setRevealedSolutions] = useState({})
+  const [isStorageLoaded, setIsStorageLoaded] = useState(false)
+
+  // Load saved answers from LocalStorage
+  useEffect(() => {
+    try {
+      const savedAns = localStorage.getItem('eu_pyq_answers')
+      const savedRev = localStorage.getItem('eu_pyq_revealed')
+      if (savedAns) setSelectedAnswers(JSON.parse(savedAns))
+      if (savedRev) setRevealedSolutions(JSON.parse(savedRev))
+    } catch (e) {
+      console.warn('[pyq] localStorage load error:', e)
+    } finally {
+      setIsStorageLoaded(true)
+    }
+  }, [])
+
+  // Save answers to LocalStorage on change
+  useEffect(() => {
+    if (!isStorageLoaded) return
+    try {
+      localStorage.setItem('eu_pyq_answers', JSON.stringify(selectedAnswers))
+      localStorage.setItem('eu_pyq_revealed', JSON.stringify(revealedSolutions))
+    } catch (e) {
+      console.warn('[pyq] localStorage save error:', e)
+    }
+  }, [selectedAnswers, revealedSolutions, isStorageLoaded])
 
   const debounceTimerRef = useRef(null)
   const PAGE_LIMIT = 50
@@ -114,7 +145,11 @@ function PyqSearchInner() {
       const q = searchParams.get('q')
       if (q !== null && q !== undefined) {
         setSearchQuery(q)
-        setActiveSubject('All')
+      }
+      const subj = searchParams.get('subject')
+      if (subj) {
+        const found = SUBJECT_FILTERS.find(s => s.toLowerCase() === subj.trim().toLowerCase())
+        if (found) setActiveSubject(found)
       }
     }
   }, [searchParams])
@@ -173,6 +208,10 @@ function PyqSearchInner() {
   const handleResetScore = () => {
     setSelectedAnswers({})
     setRevealedSolutions({})
+    try {
+      localStorage.removeItem('eu_pyq_answers')
+      localStorage.removeItem('eu_pyq_revealed')
+    } catch {}
   }
 
   const handleToggleAllSolutions = () => {
@@ -285,11 +324,11 @@ function PyqSearchInner() {
                   संपूर्ण MPSC प्रश्नपत्रिका व अंतिम उत्तरतालिका हव्या आहेत का?
                 </h2>
                 <p className={styles.mpscBannerDesc}>
-                  राज्यसेवा, संयुक्त गट ब व क (PSI/STI/ASO), वनसेवा आणि नगर रचनाकार परीक्षांचे सर्व १३८ अधिकृत पेपर एकाच ओळीत वाचण्यासाठी आमचे नवीन स्टडी वर्कस्पेस वापरा.
+                  राज्यसेवा, संयुक्त गट ब व क (PSI/STI/ASO), वनसेवा आणि नगर रचनाकार परीक्षांचे सर्व {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('mr-IN')} अधिकृत पेपर एकाच ओळीत वाचण्यासाठी आमचे नवीन स्टडी वर्कस्पेस वापरा.
                 </p>
               </div>
               <Link href="/mpsc-pyq" className={styles.mpscBannerBtn}>
-                MPSC प्रश्नपत्रिका व की उघडा (429) →
+                MPSC प्रश्नपत्रिका व की उघडा ({MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('mr-IN')}) →
               </Link>
             </div>
           </div>
@@ -343,14 +382,14 @@ function PyqSearchInner() {
               ))}
               <Link
                 href="/mpsc-pyq"
-                style={{ color: '#EA580C', fontWeight: 700, textDecoration: 'none', background: '#FFF7ED', border: '1px solid #FED7AA', padding: '3px 10px', borderRadius: '4px' }}
+                className={styles.quickMpscBadge}
               >
-                📄 841 MPSC मूळ पेपर्स व की ➔
+                📄 {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('mr-IN')} MPSC मूळ पेपर्स व की ➔
               </Link>
               <Link
                 href="/mock-tests"
                 onClick={() => trackCtaClick('Free Online Mock Tests Link', '/mock-tests', 'pyq_hero_strip')}
-                style={{ color: '#047857', fontWeight: 700, textDecoration: 'none', background: '#ECFDF5', border: '1px solid #A7F3D0', padding: '3px 10px', borderRadius: '4px' }}
+                className={styles.quickMockBadge}
               >
                 ⏱️ मोफत ऑनलाईन मॉक टेस्ट्स ➔
               </Link>
@@ -521,7 +560,7 @@ function PyqSearchInner() {
                       href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
                         `प्रश्न (${item.exam} ${item.year}):\n${item.question}\n\nसविस्तर उत्तर व ट्रिक्स ExamUdaan वर पहा:\nhttps://examudaan.in/pyq`
                       )}`}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       rel="noopener noreferrer"
                       onClick={() => trackSocialCommunity('whatsapp_pyq_share', 'https://examudaan.in/pyq', 'pyq_question_card')}
                       className={styles.shareBtn}
@@ -601,135 +640,95 @@ function PyqSearchInner() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '14px' }}>
+            <div className={styles.nextStepsGrid}>
               <Link
                 href="/mpsc-pyq"
-                style={{
-                  background: '#FFFFFF',
-                  border: '1.5px solid #FED7AA',
-                  borderRadius: '12px',
-                  padding: '16px',
-                  textDecoration: 'none',
-                  boxShadow: '0 2px 6px rgba(234,88,12,0.05)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between'
-                }}
+                className={styles.nextStepCardMpsc}
               >
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '22px' }}>📄</span>
-                    <span style={{ fontSize: '11px', fontWeight: 700, background: '#FFF7ED', color: '#EA580C', border: '1px solid #FED7AA', padding: '2px 7px', borderRadius: '999px' }}>
-                      841 पेपर्स
+                  <div className={styles.nextStepTopRow}>
+                    <span className={styles.nextStepEmoji}>📄</span>
+                    <span className={styles.badgeOrangePill}>
+                      {MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('mr-IN')} पेपर्स
                     </span>
                   </div>
-                  <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit, Outfit)', display: 'block', marginBottom: '4px' }}>
+                  <strong className={styles.nextStepCardTitle}>
                     MPSC मूळ प्रश्नपत्रिका व की
                   </strong>
-                  <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
-                    २०२१ ते २०२६ चे सर्व ४२९ परीक्षा संच थेट ब्राऊझरमध्ये वाचा व डाऊनलोड करा.
+                  <p className={styles.nextStepCardDesc}>
+                    {MPSC_ARCHIVE_YEARS_SPAN} चे सर्व अधिकृत परीक्षा संच थेट ब्राऊझरमध्ये वाचा व डाऊनलोड करा.
                   </p>
                 </div>
-                <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#EA580C' }}>
+                <span className={styles.nextStepLinkOrange}>
                   प्रश्नपत्रिका उघडा →
                 </span>
               </Link>
 
               <Link
                 href="/mock-tests"
-                style={{
-                  background: '#FFFFFF',
-                  border: '1px solid #E2E8F0',
-                  borderRadius: '12px',
-                  padding: '16px',
-                  textDecoration: 'none',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between'
-                }}
+                className={styles.nextStepCardNormal}
               >
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '22px' }}>⏱️</span>
-                    <span style={{ fontSize: '11px', fontWeight: 700, background: '#ECFDF5', color: '#047857', border: '1px solid #A7F3D0', padding: '2px 7px', borderRadius: '999px' }}>
+                  <div className={styles.nextStepTopRow}>
+                    <span className={styles.nextStepEmoji}>⏱️</span>
+                    <span className={styles.badgeGreenPill}>
                       100% Free
                     </span>
                   </div>
-                  <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit, Outfit)', display: 'block', marginBottom: '4px' }}>
+                  <strong className={styles.nextStepCardTitle}>
                     मोफत ऑनलाईन मॉक टेस्ट्स
                   </strong>
-                  <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                  <p className={styles.nextStepCardDesc}>
                     MPSC संयुक्त १०० प्रश्नांचा संपूर्ण मॉक व विषयवार स्पीड ड्रिल्स सोडवा.
                   </p>
                 </div>
-                <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#047857' }}>
+                <span className={styles.nextStepLinkGreen}>
                   मॉक टेस्ट द्या →
                 </span>
               </Link>
 
               <Link
                 href="/cutoffs"
-                style={{
-                  background: '#FFFFFF',
-                  border: '1px solid #E2E8F0',
-                  borderRadius: '12px',
-                  padding: '16px',
-                  textDecoration: 'none',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between'
-                }}
+                className={styles.nextStepCardNormal}
               >
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '22px' }}>📊</span>
-                    <span style={{ fontSize: '11px', fontWeight: 700, background: '#F5F3FF', color: '#6D28D9', border: '1px solid #DDD6FE', padding: '2px 7px', borderRadius: '999px' }}>
+                  <div className={styles.nextStepTopRow}>
+                    <span className={styles.nextStepEmoji}>📊</span>
+                    <span className={styles.badgePurplePill}>
                       10-Yr Cutoffs
                     </span>
                   </div>
-                  <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit, Outfit)', display: 'block', marginBottom: '4px' }}>
+                  <strong className={styles.nextStepCardTitle}>
                     मागील १० वर्षांचे कट-ऑफ
                   </strong>
-                  <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                  <p className={styles.nextStepCardDesc}>
                     Open, OBC, EWS, SC, ST प्रवर्गांचे अधिकृत बेंचमार्क मार्क्स तपासा.
                   </p>
                 </div>
-                <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#6D28D9' }}>
+                <span className={styles.nextStepLinkPurple}>
                   कट-ऑफ पहा →
                 </span>
               </Link>
 
               <Link
                 href="/syllabus"
-                style={{
-                  background: '#FFFFFF',
-                  border: '1px solid #E2E8F0',
-                  borderRadius: '12px',
-                  padding: '16px',
-                  textDecoration: 'none',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between'
-                }}
+                className={styles.nextStepCardNormal}
               >
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '22px' }}>📚</span>
-                    <span style={{ fontSize: '11px', fontWeight: 700, background: '#EFF6FF', color: '#1D4ED8', border: '1px solid #BFDBFE', padding: '2px 7px', borderRadius: '999px' }}>
+                  <div className={styles.nextStepTopRow}>
+                    <span className={styles.nextStepEmoji}>📚</span>
+                    <span className={styles.badgeBluePill}>
                       17 Exams
                     </span>
                   </div>
-                  <strong style={{ fontSize: '15px', color: '#0F172A', fontFamily: 'var(--font-outfit, Outfit)', display: 'block', marginBottom: '4px' }}>
+                  <strong className={styles.nextStepCardTitle}>
                     अधिकृत अभ्यासक्रम व पॅटर्न
                   </strong>
-                  <p style={{ fontSize: '12.5px', color: '#64748B', margin: 0, lineHeight: 1.4 }}>
+                  <p className={styles.nextStepCardDesc}>
                     परीक्षा पद्धती, विषयनिहाय गुणविभागणी आणि नकारात्मक गुण पद्धती.
                   </p>
                 </div>
-                <span style={{ marginTop: '10px', fontSize: '12px', fontWeight: 700, color: '#1D4ED8' }}>
+                <span className={styles.nextStepLinkBlue}>
                   अभ्यासक्रम पहा →
                 </span>
               </Link>

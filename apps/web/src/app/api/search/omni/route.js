@@ -11,6 +11,7 @@
 
 import { query as pgQuery } from '../../../../lib/pgdb.js'
 import { ok } from '../../../../lib/apiResponse.js'
+import { withValidation, schemas } from '../../../../lib/validate.js'
 import { SYLLABUS_EXAMS } from '../../../../lib/syllabusData.js'
 import { MOCK_TESTS } from '../../../../lib/mockTestsData.js'
 import { AI_TOOLS } from '../../../../lib/aiToolsData.js'
@@ -42,10 +43,10 @@ function getNotificationTypeLabel(type) {
   }
 }
 
-export async function GET(req) {
-  const { searchParams } = new URL(req.url)
-  const q = (searchParams.get('q') || '').trim()
-  const categoryFilter = searchParams.get('category') || 'all'
+async function omniHandler(req) {
+  const validated = req.validatedBody || {}
+  const q = (validated.q || '').trim()
+  const categoryFilter = validated.category || 'all'
 
   const results = {
     jobs: [],
@@ -498,3 +499,5 @@ export async function GET(req) {
     flat
   })
 }
+
+export const GET = withValidation(schemas.omniSearch, omniHandler)

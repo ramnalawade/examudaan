@@ -119,7 +119,7 @@ logging.getLogger("pdfplumber").setLevel(logging.WARNING)
 BREVO_API_KEY         = os.getenv("BREVO_API_KEY", "")
 BREVO_SENDER_EMAIL    = os.getenv("BREVO_SENDER_EMAIL", "noreply@examudaan.in")
 BREVO_SENDER_NAME     = os.getenv("BREVO_SENDER_NAME", "ExamUdaan Scraper")
-BREVO_RECIPIENT_EMAIL = os.getenv("BREVO_RECIPIENT_EMAIL", "ramnalawade1986@gmail.com")
+BREVO_RECIPIENT_EMAIL = os.getenv("BREVO_RECIPIENT_EMAIL", "virajnalawade2010@gmail.com")
 
 # ============================================================
 # Gemini key rate-limit info (documented for reference)

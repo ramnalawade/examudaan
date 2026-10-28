@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // daily-quiz/page.js — Daily 10-Question Habit Streak Quiz
 // ExamUdaan.in | 5 Min Blitz Mode | WhatsApp Streak Badges
 // Fully responsive across Mobile, Tablet, Laptop, and Desktop
@@ -234,7 +234,7 @@ export default function DailyQuizPage() {
               href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
                 `🔥 *I just scored ${score}/10 in today's ExamUdaan Daily GK Challenge!*\n\nDay ${streak} Streak Active ⚡\nCan you beat my score? Attempt today's free 5-minute quiz here: https://examudaan.in/daily-quiz`
               )}`}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               className={styles.shareBtn}
             >

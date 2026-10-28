@@ -1,0 +1,315 @@
+{
+  "docId": 11618,
+  "examName": "Assistant Professor (Finance) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department- Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Finance) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department- Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Nature and Scope of Financial Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Development of Finance as a discipline",
+            "Finance up to 1950 - The Traditional",
+            "After 1950 - An integrated view of Finance Function"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Objective of Financial Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Profit Maximization as Objective of Financial Management",
+            "Shareholders' Wealth Maximization (SWM) as Objective of Financial Management",
+            "Decisions pertaining to Financial Management",
+            "Capital Budgeting Decision",
+            "Capital Structure Decision",
+            "Dividend Decision",
+            "Working Capital Management Decision",
+            "Inter-relationships between Financial Decisions",
+            "Risk and return: Basic Dimensions of Financial Decisions"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Interdisciplinary Facets of Financial Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Financial Management and Economics",
+            "Financial Management and Accounting",
+            "Financial Management and Statistics",
+            "Financial Management and Production Management",
+            "Financial Management and Marketing Management",
+            "Financial Management and Psychology and Organisational Behaviour"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Introduction",
+          "unitTitleMr": null,
+          "topics": [
+            "Concept of Capital Budgeting",
+            "Features of Capital Budgeting",
+            "Importance of Capital Budgeting Decision",
+            "Types of Capital Budgeting Decision (or Investment Decision)",
+            "Types of Capital Projects",
+            "Capital Budgeting (or Investment Decision) Process",
+            "Estimation of Cost and Benefits from the Project"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Traditional or Non-Discounting Cash Flow Techniques",
+          "unitTitleMr": null,
+          "topics": [
+            "Accounting Rate of Return",
+            "Payback Period Method",
+            "Limitations of Traditional or Non-Discounting Techniques"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Discounted Cash Flow (DCF) Techniques",
+          "unitTitleMr": null,
+          "topics": [
+            "Net Present Value",
+            "Profitability Index Method",
+            "Internal Rate of Return (IRR) Method",
+            "Relationship between NPV, IRR, and Cost of Capital"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Time value of Money",
+          "unitTitleMr": null,
+          "topics": [
+            "Concept of Time Value of Money",
+            "Reasons for Time Value of Money",
+            "Is inflation the fundamental reason for time value of money",
+            "Compounding",
+            "Discounting Technique",
+            "Annuity Due"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Concept of Leverage",
+          "unitTitleMr": null,
+          "topics": [
+            "Operating Leverage",
+            "Financial Leverage",
+            "Combined Leverage"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Measurement of Specific Cost of Capital",
+          "unitTitleMr": null,
+          "topics": [
+            "Cost of Debt",
+            "Cost of Preference Share Capital",
+            "Cost of Equity Capital",
+            "Cost of Retained Earnings"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Capital Structure decision",
+          "unitTitleMr": null,
+          "topics": [
+            "Financial Structure",
+            "Capital Structure",
+            "Net Income Approach",
+            "Net Operating Income Approach",
+            "Traditional Approach",
+            "Modigliani and Millar Approaches"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Dividend Theories and Practice",
+          "unitTitleMr": null,
+          "topics": [
+            "Dividend decision",
+            "Issues in Dividend Policy",
+            "Significance of Dividend Decision",
+            "Dividend as a Residual Decision or Residual Theory of Dividend",
+            "Walter’s Model on the Relevance of Dividend",
+            "Gordon’s Model",
+            "Miller-Modigliani Theory on Dividend (MM Hypothesis or MM Model)",
+            "Dividend Policy - Concept",
+            "Factors Influencing Dividend Policy",
+            "Types of Dividend Policies"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Introduction to Working Capital Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Need for Working Capital",
+            "Definition & Concepts of Working Capital",
+            "Types of Working Capital",
+            "Importance of Working Capital"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Excess and Inadequate Working Capital",
+          "unitTitleMr": null,
+          "topics": [
+            "Disadvantages of Excess Working Capital",
+            "Dangers of Inadequate/Short Working Capital"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Approaches of Financing Current Assets",
+          "unitTitleMr": null,
+          "topics": [
+            "Short-Term vs. Long-Term Financing: A Risk-Return Trade-off"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Purposes for Holding Cash",
+          "unitTitleMr": null,
+          "topics": [
+            "Cash Management: Theoretical Framework",
+            "Cash Management: Planning Aspects"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Cash Budget",
+          "unitTitleMr": null,
+          "topics": [
+            "Cash Management: Control Aspects",
+            "Managing the Float",
+            "Optimum Cash Balance: A few Models",
+            "Baumol’s Model, Miller Orr Model"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Costs of Receivables",
+          "unitTitleMr": null,
+          "topics": [
+            "Benefits of Receivables Credit Policy",
+            "Credit Evaluation",
+            "Control of Receivables",
+            "Evaluation of Credit Policies"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Introduction",
+          "unitTitleMr": null,
+          "topics": [
+            "Objectives",
+            "Importance of International Finance",
+            "Finance Function in Multinational Firms"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "International Trade",
+          "unitTitleMr": null,
+          "topics": [
+            "Basis of International Trade",
+            "Trends in International Trade",
+            "Cross-border Financial Flows",
+            "Gains from International Trade"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Balance of Payments",
+          "unitTitleMr": null,
+          "topics": [
+            "Components of BOP",
+            "Currency Convertibility",
+            "Currency Devaluation",
+            "Capital Account Convertibility"
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Introduction",
+          "unitTitleMr": null,
+          "topics": [
+            "History of International Monetary System",
+            "Exchange Rate Regimes",
+            "International Monetary Fund"
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "European Monetary System",
+          "unitTitleMr": null,
+          "topics": [
+            "Background to the Emergence of the European Monetary System"
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Establishment of the European Monetary System",
+          "unitTitleMr": null,
+          "topics": [
+            "Functions of the European Monetary System",
+            "Benefits of the European Monetary Union",
+            "Challenges Faced by the European Monetary System"
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "Introduction",
+          "unitTitleMr": null,
+          "topics": [
+            "Objectives",
+            "International Financial Markets",
+            "Instruments of International Financial Markets"
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "Global Financial Markets",
+          "unitTitleMr": null,
+          "topics": [
+            "Foreign Exchange Market",
+            "Structure of Foreign Exchange Market in India"
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "Euro Markets",
+          "unitTitleMr": null,
+          "topics": [
+            "Eurocurrency Market",
+            "Eurobond Market",
+            "International Equity"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

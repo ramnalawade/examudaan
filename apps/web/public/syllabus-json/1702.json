@@ -1,0 +1,53 @@
+{
+  "docId": 1702,
+  "examName": "Stenographers and Steno-typists, Gr-C (Special Drive)",
+  "examNameMr": "लघुलेखक आणि लघुसंघलेखक, गट-क (विशेष भरती मोहीम)",
+  "conductingBody": "MPSC",
+  "year": 2008,
+  "language": "Marathi",
+  "category": "group-c",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination (Objective) followed by Skill Test / Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi / English and Intelligence Test",
+      "paperTitleMr": "मराठी / इंग्रजी आणि बुद्धिमत्ता चाचणी",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi / English",
+          "unitTitleMr": "मराठी / इंग्रजी",
+          "topics": [
+            "General Vocabulary",
+            "Sentence Structure",
+            "Grammar",
+            "Questions on Passages"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी",
+          "topics": [
+            "Logical Reasoning",
+            "Mental Ability",
+            "Problem Solving"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "The examination will be held only at Mumbai center.",
+    "Blind candidates will be allowed a scribe subject to rules and prior application."
+  ]
+}

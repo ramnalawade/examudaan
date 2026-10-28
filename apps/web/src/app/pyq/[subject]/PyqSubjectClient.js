@@ -8,6 +8,7 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import MpscFeedbackModal from '@/components/MpscFeedbackModal'
+import { recordSingleQuestionAnswer } from '@/lib/prepVault'
 
 export default function PyqSubjectClient({ subjectInfo, questions, allSubjects }) {
   const [selectedExam, setSelectedExam] = useState('All')
@@ -57,6 +58,14 @@ export default function PyqSubjectClient({ subjectInfo, questions, allSubjects }
   }, [questions, selectedExam, searchFilter])
 
   const handleSelectOption = (qId, optionKey) => {
+    const qObj = questions.find(q => q.id === qId)
+    if (qObj) {
+      const isCorrect = String(qObj.correct).trim().toUpperCase() === String(optionKey).trim().toUpperCase()
+      try {
+        recordSingleQuestionAnswer(qObj, optionKey, isCorrect)
+      } catch (err) {}
+    }
+
     setSelectedAnswers(prev => {
       const next = { ...prev, [qId]: optionKey }
       const totalAnswered = Object.keys(next).length

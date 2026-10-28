@@ -67,7 +67,7 @@ export default function CareerExplorerClient() {
   return (
     <div className={styles.page}>
       {/* ── Breadcrumb ── */}
-      <div className="container" style={{ paddingTop: '16px' }}>
+      <div className={`container ${styles.breadcrumbContainer}`}>
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/">Home</Link>
           <span>/</span>
@@ -118,7 +118,7 @@ export default function CareerExplorerClient() {
                   >
                     <div className={styles.streamIconRow}>
                       <span className={styles.streamIcon}>{stream.icon}</span>
-                      <span className={styles.streamBadge} style={{ background: stream.badgeBg, color: stream.color }}>
+                      <span className={styles.streamBadge} style={{ background: stream.badgeBg, color: stream.color }} /* stream-dynamic-colors */>
                         {stream.shortName}
                       </span>
                     </div>
@@ -133,15 +133,15 @@ export default function CareerExplorerClient() {
       </section>
 
       {/* ── Main Content Area ── */}
-      <main className="container" style={{ paddingTop: '28px' }}>
+      <main className={`container ${styles.mainContent}`}>
         {/* If no search query, show current Stream Banner & Subject Combinations */}
         {!searchQuery.trim() && (
           <div className={styles.streamBanner}>
             <div className={styles.streamBannerTitle}>
-              <span style={{ fontSize: '24px' }}>{currentStream.icon}</span>
+              <span className={styles.streamBannerIcon}>{currentStream.icon}</span>
               <div>
                 <strong>{currentStream.name}</strong>
-                <p style={{ margin: '2px 0 0', fontSize: '13px', color: '#57534e', fontWeight: 400 }}>
+                <p className={styles.streamEligibility}>
                   {currentStream.eligibility10th}
                 </p>
               </div>
@@ -185,13 +185,13 @@ export default function CareerExplorerClient() {
 
         {/* Search Results indicator */}
         {searchQuery.trim() && (
-          <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: '15px', color: '#44403c', fontWeight: 600 }}>
+          <div className={styles.searchResultsHeader}>
+            <span className={styles.searchResultsCount}>
               Showing {filteredCareers.length} career options matching &quot;<strong>{searchQuery}</strong>&quot;
             </span>
             <button
               onClick={() => setSearchQuery('')}
-              style={{ background: 'none', border: 'none', color: '#ea580c', cursor: 'pointer', fontWeight: 700, fontSize: '13px' }}
+              className={styles.clearSearchBtn}
             >
               Clear Search ✕
             </button>
@@ -200,14 +200,14 @@ export default function CareerExplorerClient() {
 
         {/* ── Career Cards Grid ── */}
         {filteredCareers.length === 0 ? (
-          <div style={{ textAlign: 'center', padding: '60px 20px', background: '#fff', borderRadius: '16px', border: '1px solid #e7e5e4' }}>
-            <span className="material-symbols-outlined" style={{ fontSize: '48px', color: '#ea580c', marginBottom: '12px' }}>
+          <div className={styles.noResultsBox}>
+            <span className={`material-symbols-outlined ${styles.noResultsIcon}`}>
               search_off
             </span>
-            <h3 style={{ fontSize: '18px', fontWeight: 700, margin: '0 0 6px', color: '#1c1917' }}>
+            <h3 className={styles.noResultsTitle}>
               No specific career found for &quot;{searchQuery}&quot;
             </h3>
-            <p style={{ fontSize: '14px', color: '#78716c', margin: '0 0 16px' }}>
+            <p className={styles.noResultsText}>
               Try searching with broader terms like &quot;Engineer&quot;, &quot;Doctor&quot;, &quot;Teacher&quot;, &quot;Law&quot;, or &quot;Pilot&quot;.
             </p>
             <button className="btn-primary" onClick={() => setSearchQuery('')}>
@@ -227,7 +227,7 @@ export default function CareerExplorerClient() {
                         <span className={styles.badgeCategory}>
                           {streamMeta?.icon} {streamMeta?.shortName}
                         </span>
-                        <h2 className={styles.cardTitle} style={{ marginTop: '8px' }}>
+                        <h2 className={styles.cardTitle}>
                           {career.title}
                         </h2>
                         <p className={styles.cardRole}>{career.role}</p>
@@ -240,9 +240,9 @@ export default function CareerExplorerClient() {
                         <span>Entry Fresher:</span>
                         <strong>{career.salaryLadder.entry.split('(')[0]}</strong>
                       </div>
-                      <div className={styles.salaryEntry} style={{ textAlign: 'right' }}>
+                      <div className={`${styles.salaryEntry} ${styles.salaryEntryRight}`}>
                         <span>Senior Potential:</span>
-                        <strong style={{ color: '#047857' }}>{career.salaryLadder.senior.split('(')[0]}</strong>
+                        <strong className={styles.salaryHighlight}>{career.salaryLadder.senior.split('(')[0]}</strong>
                       </div>
                     </div>
 
@@ -252,7 +252,7 @@ export default function CareerExplorerClient() {
                         <span className={`material-symbols-outlined ${styles.cardMetaIcon}`}>grade</span>
                         <div>
                           <span className={styles.cardMetaLabel}>Must Score In 10th / 12th:</span>
-                          <span style={{ fontSize: '13px', fontWeight: 600, color: '#1c1917' }}>
+                          <span className={styles.examName}>
                             {career.keySubjectsToScore.map(s => `${s.subject} (${s.minScore})`).join(' • ')}
                           </span>
                         </div>
@@ -262,7 +262,7 @@ export default function CareerExplorerClient() {
                         <span className={`material-symbols-outlined ${styles.cardMetaIcon}`}>quiz</span>
                         <div>
                           <span className={styles.cardMetaLabel}>Key Entrance Exams:</span>
-                          <span style={{ fontSize: '13px', color: '#44403c' }}>
+                          <span className={styles.examDate}>
                             {career.entranceExams.map(e => e.name).slice(0, 3).join(', ')}
                           </span>
                         </div>
@@ -272,7 +272,7 @@ export default function CareerExplorerClient() {
                         <span className={`material-symbols-outlined ${styles.cardMetaIcon}`}>trending_up</span>
                         <div>
                           <span className={styles.cardMetaLabel}>Future Scope:</span>
-                          <span style={{ fontSize: '12px', color: '#047857', fontWeight: 700 }}>
+                          <span className={styles.examVacancy}>
                             {career.scopeAndFuture.rating} • {career.scopeAndFuture.aiImpact.split(':')[0]}
                           </span>
                         </div>
@@ -281,39 +281,25 @@ export default function CareerExplorerClient() {
                   </div>
 
                   {/* CTAs */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: '16px' }}>
+                  <div className={styles.cardButtonGrid}>
                     <button
                       type="button"
-                      className={styles.btnExplore}
+                      className={`${styles.btnExplore} ${styles.cardBtnNoMargin}`}
                       onClick={() => setActiveDossier(career)}
-                      style={{ marginTop: 0 }}
                       title="Quick Dossier Preview"
                     >
                       <span>Quick View</span>
-                      <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>visibility</span>
+                      <span className={`material-symbols-outlined ${styles.btnIcon}`}>visibility</span>
                     </button>
 
                     <Link
                       href={`/career/${career.id}`}
                       className="btn-outline"
-                      style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '4px',
-                        fontSize: '13px',
-                        fontWeight: 700,
-                        textDecoration: 'none',
-                        padding: '10px 12px',
-                        borderRadius: '10px',
-                        borderColor: '#fdba74',
-                        color: '#ea580c',
-                        background: '#fff'
-                      }}
+                      className={styles.cardFullPageBtn}
                       title="Open Dedicated Full Page with Complete Syllabus"
                     >
                       <span>Full Page</span>
-                      <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>open_in_new</span>
+                      <span className={`material-symbols-outlined ${styles.btnIconSm}`}>open_in_new</span>
                     </Link>
                   </div>
                 </div>
@@ -323,15 +309,15 @@ export default function CareerExplorerClient() {
         )}
 
         {/* ── Stream Decision Matrix & Comparison Table ── */}
-        <section style={{ marginTop: '48px' }}>
-          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-            <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#ea580c', letterSpacing: '0.6px' }}>
+        <section className={styles.sectionSpacingLg}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionLabel}>
               Strategic Comparison
             </span>
-            <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '26px', fontWeight: 800, color: '#1c1917', margin: '6px 0' }}>
+            <h2 className={styles.sectionTitle}>
               Side-by-Side Stream Comparison: Science vs Commerce vs Arts
             </h2>
-            <p style={{ fontSize: '14px', color: '#57534e', margin: 0 }}>
+            <p className={styles.sectionDesc}>
               Benchmark degree duration, study intensity, education cost, and long-term career adaptability.
             </p>
           </div>
@@ -403,64 +389,64 @@ export default function CareerExplorerClient() {
         </section>
 
         {/* ── Visual Technical Ladder: ITI -> Diploma -> Degree ── */}
-        <section style={{ marginTop: '40px', background: 'linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)', border: '1.5px solid #c4b5fd', borderRadius: '16px', padding: '28px 24px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '18px' }}>
+        <section className={styles.techLadderSection}>
+          <div className={styles.techLadderHeader}>
             <div>
-              <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.6px', background: '#7c3aed', color: '#fff', padding: '3px 10px', borderRadius: '999px' }}>
+              <span className={styles.techLadderBadge}>
                 ⭐ High-ROI Alternative Technical Route
               </span>
-              <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '22px', fontWeight: 800, color: '#4c1d95', margin: '8px 0 4px' }}>
+              <h2 className={styles.techLadderTitle}>
                 The 10th Technical Ladder: ITI → Polytechnic Diploma → B.Tech Degree
               </h2>
-              <p style={{ fontSize: '14px', color: '#5b21b6', margin: 0 }}>
+              <p className={styles.techLadderSubtitle}>
                 Don&apos;t want to face the extreme stress of JEE Main or MHT-CET coaching? You can earn a full <strong>B.Tech / B.E. Engineering Degree</strong> starting right after Class 10th through progressive lateral entry!
               </p>
             </div>
             <Link
               href="/career/iti-diploma-degree-lateral-pathway"
               className="btn-primary"
-              style={{ background: '#7c3aed', borderColor: '#7c3aed', fontSize: '13px', padding: '10px 18px', whiteSpace: 'nowrap' }}
+              className={`btn-primary ${styles.techLadderBtn}`}
             >
               View Full Ladder Dossier →
             </Link>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '14px' }}>
-            <div style={{ background: '#fff', border: '1px solid #ddd6fe', borderRadius: '12px', padding: '16px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <span style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#7c3aed', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '13px' }}>1</span>
-                <strong style={{ fontSize: '15px', color: '#1c1917' }}>Class 10th → 2-Yr ITI Trade</strong>
+          <div className={styles.ladderStepsGrid}>
+            <div className={styles.ladderStepCard}>
+              <div className={styles.ladderStepHeader}>
+                <span className={styles.ladderStepNum}>1</span>
+                <strong className={styles.ladderStepTitle}>Class 10th → 2-Yr ITI Trade</strong>
               </div>
-              <p style={{ fontSize: '13px', color: '#57534e', margin: '0 0 10px', lineHeight: 1.45 }}>
+              <p className={styles.ladderStepDesc}>
                 Direct merit admission on DVET portal. Learn practical trades: Electrician, Fitter, Machinist, Wireman.
               </p>
-              <div style={{ fontSize: '12px', color: '#047857', fontWeight: 700, background: '#ecfdf5', padding: '6px 10px', borderRadius: '6px' }}>
+              <div className={styles.jobExitBadge}>
                 ⚡ Job Exit: Railway ALP, PSU Technician (₹3.5L – ₹6L)
               </div>
             </div>
 
-            <div style={{ background: '#fff', border: '1px solid #ddd6fe', borderRadius: '12px', padding: '16px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <span style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#7c3aed', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '13px' }}>2</span>
-                <strong style={{ fontSize: '15px', color: '#1c1917' }}>Post-ITI Lateral Diploma</strong>
+            <div className={styles.ladderStepCard}>
+              <div className={styles.ladderStepHeader}>
+                <span className={styles.ladderStepNum}>2</span>
+                <strong className={styles.ladderStepTitle}>Post-ITI Lateral Diploma</strong>
               </div>
-              <p style={{ fontSize: '13px', color: '#57534e', margin: '0 0 10px', lineHeight: 1.45 }}>
+              <p className={styles.ladderStepDesc}>
                 Direct admission into <strong>2nd Year of Polytechnic Diploma</strong> (skips 1st year). Complete 3-year diploma in just 2 years!
               </p>
-              <div style={{ fontSize: '12px', color: '#0284c7', fontWeight: 700, background: '#f0f9ff', padding: '6px 10px', borderRadius: '6px' }}>
+              <div className={styles.jobExitBadge + " " + styles.jobExitBadgeBlue}>
                 ⚡ Job Exit: PWD, SSC JE, RRB Junior Engineer (₹5L – ₹9L)
               </div>
             </div>
 
-            <div style={{ background: '#fff', border: '1px solid #ddd6fe', borderRadius: '12px', padding: '16px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <span style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#7c3aed', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '13px' }}>3</span>
-                <strong style={{ fontSize: '15px', color: '#1c1917' }}>DSE B.Tech Engineering Degree</strong>
+            <div className={styles.ladderStepCard}>
+              <div className={styles.ladderStepHeader}>
+                <span className={styles.ladderStepNum}>3</span>
+                <strong className={styles.ladderStepTitle}>DSE B.Tech Engineering Degree</strong>
               </div>
-              <p style={{ fontSize: '13px', color: '#57534e', margin: '0 0 10px', lineHeight: 1.45 }}>
+              <p className={styles.ladderStepDesc}>
                 Direct Second Year (DSE) into 4-year B.Tech at <strong>COEP, VJTI, SPCE</strong> without taking JEE Main or MHT-CET!
               </p>
-              <div style={{ fontSize: '12px', color: '#7c3aed', fontWeight: 700, background: '#f5f3ff', padding: '6px 10px', borderRadius: '6px' }}>
+              <div className={styles.jobExitBadge + " " + styles.jobExitBadgePurple}>
                 ⚡ Graduate as B.Tech Engineer: MPSC MES, Core MNCs (₹8L – ₹35L+)
               </div>
             </div>
@@ -468,16 +454,16 @@ export default function CareerExplorerClient() {
         </section>
 
         {/* ── FAQs for 10th & 12th Students ── */}
-        <section style={{ marginTop: '40px', background: '#fff', borderRadius: '16px', border: '1px solid #e7e5e4', padding: '32px 28px' }}>
-          <h2 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '22px', fontWeight: 800, color: '#1c1917', margin: '0 0 20px' }}>
+        <section className={styles.faqSection}>
+          <h2 className={styles.faqTitle}>
             ❓ Frequently Asked Career Questions by Maharashtra Students
           </h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <details style={{ background: '#fafaf9', border: '1px solid #e7e5e4', borderRadius: '10px', padding: '14px 18px' }}>
-              <summary style={{ fontWeight: 700, color: '#1c1917', cursor: 'pointer', fontSize: '15px' }}>
+          <div className={styles.faqList}>
+            <details className={styles.faqItem}>
+              <summary className={styles.faqQuestion}>
                 How does the ITI to Polytechnic Diploma to B.Tech Degree ladder work?
               </summary>
-              <p style={{ margin: '10px 0 0', fontSize: '14px', color: '#57534e', lineHeight: 1.55 }}>
+              <p className={styles.faqAnswer}>
                 In Maharashtra, the technical education directorate (DTE & DVET) offers a completely integrated progression:
                 <br />
                 <strong>1. Class 10th Pass</strong> → Join a 2-Year ITI trade (Electrician, Fitter, Machinist) via DVET portal.
@@ -490,31 +476,31 @@ export default function CareerExplorerClient() {
               </p>
             </details>
 
-            <details style={{ background: '#fafaf9', border: '1px solid #e7e5e4', borderRadius: '10px', padding: '14px 18px' }}>
-              <summary style={{ fontWeight: 700, color: '#1c1917', cursor: 'pointer', fontSize: '15px' }}>
+            <details className={styles.faqItem}>
+              <summary className={styles.faqQuestion}>
                 Which is better after 10th: 11th–12th Science or Polytechnic Diploma?
               </summary>
-              <p style={{ margin: '10px 0 0', fontSize: '14px', color: '#57534e', lineHeight: 1.55 }}>
+              <p className={styles.faqAnswer}>
                 • <strong>Choose 11th & 12th Science</strong> if you wish to pursue <strong>Medical (MBBS, BDS, BAMS), Commercial Pilot, Pure Science (ISRO), or standard JEE Main/Advanced</strong>.
                 <br />
                 • <strong>Choose Polytechnic Diploma</strong> if your sole focus is <strong>Engineering</strong>. You avoid massive coaching fees, study core technical subjects from day one, and enter B.Tech via DSE based on continuous diploma semester marks instead of a single high-stress 3-hour entrance exam!
               </p>
             </details>
 
-            <details style={{ background: '#fafaf9', border: '1px solid #e7e5e4', borderRadius: '10px', padding: '14px 18px' }}>
-              <summary style={{ fontWeight: 700, color: '#1c1917', cursor: 'pointer', fontSize: '15px' }}>
+            <details className={styles.faqItem}>
+              <summary className={styles.faqQuestion}>
                 Can a Science student switch to Commerce or Arts after 12th?
               </summary>
-              <p style={{ margin: '10px 0 0', fontSize: '14px', color: '#57534e', lineHeight: 1.5 }}>
+              <p className={styles.faqAnswer}>
                 <strong>Yes, absolutely.</strong> A student who completes 12th Science has universal eligibility: you can pursue CA (Chartered Accountancy), 5-Year Law (CLAT), BBA/BMS, Mass Media, or Civil Services. However, an Arts or Commerce student cannot pursue B.Tech Engineering, MBBS, or Commercial Pilot courses without 12th Science PCM/PCB.
               </p>
             </details>
 
-            <details style={{ background: '#fafaf9', border: '1px solid #e7e5e4', borderRadius: '10px', padding: '14px 18px' }}>
-              <summary style={{ fontWeight: 700, color: '#1c1917', cursor: 'pointer', fontSize: '15px' }}>
+            <details className={styles.faqItem}>
+              <summary className={styles.faqQuestion}>
                 Is Mathematics compulsory in 11th & 12th for high-paying careers?
               </summary>
-              <p style={{ margin: '10px 0 0', fontSize: '14px', color: '#57534e', lineHeight: 1.5 }}>
+              <p className={styles.faqAnswer}>
                 Mathematics opens the widest doors (B.Tech Engineering, Computer Science, Data Science, Commercial Pilot, Investment Banking, Actuarial Science). However, lucrative careers without Mathematics include <strong>MBBS Doctor, Dental (BDS), 5-Year Corporate Law (CLAT), Clinical Psychology, UPSC / MPSC Civil Services, and Fashion Design (NIFT)</strong>.
               </p>
             </details>
@@ -524,7 +510,7 @@ export default function CareerExplorerClient() {
         {/* ── Career Guidance Advisory & Due Diligence Box with * Conditions ── */}
         <section className={styles.advisoryBox} aria-label="Career Guidance Advisory">
           <div className={styles.advisoryHeader}>
-            <span className="material-symbols-outlined" style={{ color: '#ea580c', fontSize: '24px' }}>gavel</span>
+            <span className={`material-symbols-outlined ${styles.advisoryIcon}`}>gavel</span>
             <h3>* Career Decision Advisory & Mandatory Due Diligence Notice</h3>
           </div>
           <p className={styles.advisoryText}>
@@ -554,7 +540,7 @@ export default function CareerExplorerClient() {
                 <span className={styles.badgeCategory}>
                   {STREAMS.find(s => s.id === activeDossier.streamId)?.icon} {STREAMS.find(s => s.id === activeDossier.streamId)?.shortName}
                 </span>
-                <h2 className={styles.modalTitle} style={{ marginTop: '6px' }}>{activeDossier.title}</h2>
+                <h2 className={styles.modalTitle}>{activeDossier.title}</h2>
                 <p className={styles.modalRole}>{activeDossier.role}</p>
               </div>
               <button
@@ -570,22 +556,22 @@ export default function CareerExplorerClient() {
             {/* Modal Body */}
             <div className={styles.modalBody}>
               {/* Minimum 12th Stream */}
-              <div style={{ background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: '10px', padding: '12px 16px', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span className="material-symbols-outlined" style={{ color: '#ea580c' }}>verified</span>
-                <span style={{ fontSize: '13.5px', color: '#7c2d12', fontWeight: 600 }}>
+              <div className={styles.eligibilityBox}>
+                <span className={`material-symbols-outlined ${styles.iconOrange}`}>verified</span>
+                <span className={styles.eligibilityText}>
                   <strong>Eligibility Requirement: </strong>{activeDossier.min12thStream}
                 </span>
               </div>
 
               {/* Dedicated Page Link Banner */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '10px', padding: '10px 16px', marginBottom: '24px', flexWrap: 'wrap', gap: '10px' }}>
-                <span style={{ fontSize: '13px', color: '#1e40af' }}>
+              <div className={styles.fullPageBanner}>
+                <span className={styles.fullPageBannerText}>
                   💡 Prefer a full printable roadmap with official syllabus breakdown?
                 </span>
                 <Link
                   href={`/career/${activeDossier.id}`}
                   className="btn-primary"
-                  style={{ fontSize: '12px', padding: '6px 14px', whiteSpace: 'nowrap' }}
+                  className={`btn-primary ${styles.fullPageBannerBtn}`}
                 >
                   Open Dedicated Page ↗
                 </Link>
@@ -594,7 +580,7 @@ export default function CareerExplorerClient() {
               {/* 1. Key Subjects to Score in */}
               <div className={styles.dossierSection}>
                 <h3 className={styles.dossierHeading}>
-                  <span className="material-symbols-outlined" style={{ color: '#ea580c' }}>grade</span>
+                  <span className={`material-symbols-outlined ${styles.iconOrange}`}>grade</span>
                   🎯 Key Subjects to Score in (10th / 12th Focus & Cutoffs)
                 </h3>
                 <div className={styles.subjectGrid}>
@@ -613,10 +599,10 @@ export default function CareerExplorerClient() {
               {/* 2. Gateway Entrance Exams */}
               <div className={styles.dossierSection}>
                 <h3 className={styles.dossierHeading}>
-                  <span className="material-symbols-outlined" style={{ color: '#0284c7' }}>quiz</span>
+                  <span className={`material-symbols-outlined ${styles.iconBlue}`}>quiz</span>
                   📝 Gateway Entrance Exams (National & Maharashtra)
                 </h3>
-                <div style={{ overflowX: 'auto' }}>
+                <div className={styles.tableScrollWrapper}>
                   <table className={styles.examTable}>
                     <thead>
                       <tr>
@@ -637,9 +623,9 @@ export default function CareerExplorerClient() {
                           <td>
                             <a
                               href={exam.website}
-                              target="_blank"
+                              target="_blank" rel="noopener noreferrer"
                               rel="noopener noreferrer"
-                              style={{ color: '#ea580c', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                              className={styles.examTableLink}
                             >
                               Visit Official Site ↗
                             </a>
@@ -652,9 +638,9 @@ export default function CareerExplorerClient() {
 
                 {/* Annual Application & Exam Cycle */}
                 {activeDossier.examDatesAndCycles && (
-                  <div style={{ background: '#fffbeb', border: '1px solid #fef3c7', borderRadius: '10px', padding: '12px 16px', marginTop: '14px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span className="material-symbols-outlined" style={{ color: '#b45309', fontSize: '22px' }}>calendar_month</span>
-                    <div style={{ fontSize: '13px', color: '#92400e' }}>
+                  <div className={styles.examCycleBox}>
+                    <span className={`material-symbols-outlined ${styles.iconAmber}`}>calendar_month</span>
+                    <div className={styles.examCycleText}>
                       <strong>Annual Application & Exam Cycle: </strong>{activeDossier.examDatesAndCycles}
                     </div>
                   </div>
@@ -665,18 +651,18 @@ export default function CareerExplorerClient() {
               {(activeDossier.portionAndSyllabus || activeDossier.examPatternSummary) && (
                 <div className={styles.dossierSection}>
                   <h3 className={styles.dossierHeading}>
-                    <span className="material-symbols-outlined" style={{ color: '#be185d' }}>menu_book</span>
+                    <span className={`material-symbols-outlined ${styles.iconPink}`}>menu_book</span>
                     📖 Syllabus Portion & Exam Pattern Breakdown
                   </h3>
                   {activeDossier.examPatternSummary && (
-                    <div style={{ background: '#fdf2f8', border: '1px solid #fbcfe8', borderRadius: '8px', padding: '10px 14px', marginBottom: '12px', fontSize: '13px', color: '#831843' }}>
+                    <div className={styles.syllabusPatternBox}>
                       <strong>Pattern & Marking Scheme: </strong>{activeDossier.examPatternSummary}
                     </div>
                   )}
                   {activeDossier.portionAndSyllabus && (
-                    <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', color: '#44403c', lineHeight: 1.6 }}>
+                    <ul className={styles.syllabusPortionList}>
                       {activeDossier.portionAndSyllabus.map((p, idx) => (
-                        <li key={idx} style={{ marginBottom: '4px' }}>{p}</li>
+                        <li key={idx} className={styles.syllabusLi}>{p}</li>
                       ))}
                     </ul>
                   )}
@@ -686,27 +672,27 @@ export default function CareerExplorerClient() {
               {/* 3. Realistic Salary Ladder */}
               <div className={styles.dossierSection}>
                 <h3 className={styles.dossierHeading}>
-                  <span className="material-symbols-outlined" style={{ color: '#059669' }}>payments</span>
+                  <span className={`material-symbols-outlined ${styles.iconGreen}`}>payments</span>
                   💰 Realistic Salary Ladder (2026 – 2030 Updated)
                 </h3>
                 <div className={styles.salaryLadderGrid}>
                   <div className={styles.ladderPill} data-level="entry">
                     <div className={styles.ladderLevel}>🟢 Entry-Level (0–2 Yrs)</div>
                     <div className={styles.ladderAmount}>{activeDossier.salaryLadder.entry}</div>
-                    <div style={{ fontSize: '11px', color: '#065f46' }}>Fresher graduate package</div>
+                    <div className={styles.ladderNote}>Fresher graduate package</div>
                   </div>
                   <div className={styles.ladderPill} data-level="mid">
                     <div className={styles.ladderLevel}>🟡 Mid-Level (3–7 Yrs)</div>
                     <div className={styles.ladderAmount}>{activeDossier.salaryLadder.mid}</div>
-                    <div style={{ fontSize: '11px', color: '#1e40af' }}>Experienced specialist</div>
+                    <div className={styles.ladderNoteBlue}>Experienced specialist</div>
                   </div>
                   <div className={styles.ladderPill} data-level="senior">
                     <div className={styles.ladderLevel}>🔴 Senior / Partner (8+ Yrs)</div>
                     <div className={styles.ladderAmount}>{activeDossier.salaryLadder.senior}</div>
-                    <div style={{ fontSize: '11px', color: '#991b1b' }}>Leadership / Equity / Private Practice</div>
+                    <div className={styles.ladderNoteRed}>Leadership / Equity / Private Practice</div>
                   </div>
                 </div>
-                <div style={{ fontSize: '12.5px', color: '#57534e', background: '#fafaf9', padding: '10px 14px', borderRadius: '8px' }}>
+                <div className={styles.salaryNiche}>
                   <strong>Highest Paying Niches: </strong>{activeDossier.salaryLadder.highestPaying}
                 </div>
               </div>
@@ -714,22 +700,22 @@ export default function CareerExplorerClient() {
               {/* 4. Future Scope & AI Impact */}
               <div className={styles.dossierSection}>
                 <h3 className={styles.dossierHeading}>
-                  <span className="material-symbols-outlined" style={{ color: '#7c3aed' }}>psychology</span>
+                  <span className={`material-symbols-outlined ${styles.iconPurple}`}>psychology</span>
                   🚀 Future Scope & AI Impact (2026–2035)
                 </h3>
-                <p style={{ fontSize: '14px', color: '#292524', lineHeight: 1.6, margin: '0 0 12px' }}>
+                <p className={styles.scopeSummary}>
                   {activeDossier.scopeAndFuture.summary}
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '10px' }}>
-                  <div style={{ background: '#f5f3ff', border: '1px solid #ddd6fe', borderRadius: '8px', padding: '12px' }}>
-                    <strong style={{ fontSize: '12px', color: '#6d28d9', textTransform: 'uppercase' }}>AI Automation Vulnerability:</strong>
-                    <p style={{ margin: '4px 0 0', fontSize: '13px', color: '#4c1d95', fontWeight: 600 }}>
+                <div className={styles.aiImpactGrid}>
+                  <div className={styles.aiImpactCard}>
+                    <strong className={styles.aiImpactLabel}>AI Automation Vulnerability:</strong>
+                    <p className={styles.aiImpactValue}>
                       {activeDossier.scopeAndFuture.aiImpact}
                     </p>
                   </div>
-                  <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: '8px', padding: '12px' }}>
-                    <strong style={{ fontSize: '12px', color: '#047857', textTransform: 'uppercase' }}>High-Growth Niches:</strong>
-                    <p style={{ margin: '4px 0 0', fontSize: '13px', color: '#065f46' }}>
+                  <div className={styles.growthCard}>
+                    <strong className={styles.growthLabel}>High-Growth Niches:</strong>
+                    <p className={styles.growthValue}>
                       {activeDossier.scopeAndFuture.growthSectors.join(' • ')}
                     </p>
                   </div>
@@ -739,12 +725,12 @@ export default function CareerExplorerClient() {
               {/* 5. Required Tech Stack & Skills */}
               <div className={styles.dossierSection}>
                 <h3 className={styles.dossierHeading}>
-                  <span className="material-symbols-outlined" style={{ color: '#d97706' }}>terminal</span>
+                  <span className={`material-symbols-outlined ${styles.iconAmberDark}`}>terminal</span>
                   💻 Required Tech Stack, Software & Core Skills
                 </h3>
-                <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13.5px', color: '#44403c', lineHeight: 1.6 }}>
+                <ul className={styles.skillsList}>
                   {activeDossier.techStackAndSkills.map((skill, idx) => (
-                    <li key={idx} style={{ marginBottom: '6px' }}>{skill}</li>
+                    <li key={idx} className={styles.skillsLi}>{skill}</li>
                   ))}
                 </ul>
               </div>
@@ -752,7 +738,7 @@ export default function CareerExplorerClient() {
               {/* 6. Step-by-Step Educational Journey */}
               <div className={styles.dossierSection}>
                 <h3 className={styles.dossierHeading}>
-                  <span className="material-symbols-outlined" style={{ color: '#ea580c' }}>route</span>
+                  <span className={`material-symbols-outlined ${styles.iconOrange}`}>route</span>
                   🗺️ Step-by-Step Educational Journey (10th to Career)
                 </h3>
                 <div className={styles.roadmapList}>
@@ -768,14 +754,14 @@ export default function CareerExplorerClient() {
               {/* 7. Top Colleges in Maharashtra & India */}
               <div className={styles.dossierSection}>
                 <h3 className={styles.dossierHeading}>
-                  <span className="material-symbols-outlined" style={{ color: '#0284c7' }}>school</span>
+                  <span className={`material-symbols-outlined ${styles.iconBlue}`}>school</span>
                   🏛️ Top Colleges in Maharashtra & Across India
                 </h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '10px' }}>
+                <div className={styles.collegesGrid}>
                   {activeDossier.topColleges.map((col, idx) => (
-                    <div key={idx} style={{ background: '#fafaf9', border: '1px solid #e7e5e4', borderRadius: '8px', padding: '10px 14px' }}>
-                      <strong style={{ fontSize: '13.5px', color: '#1c1917', display: 'block' }}>{col.name}</strong>
-                      <span style={{ fontSize: '12px', color: '#78716c' }}>{col.location} • {col.type}</span>
+                    <div key={idx} className={styles.collegeCard}>
+                      <strong className={styles.collegeName}>{col.name}</strong>
+                      <span className={styles.collegeMeta}>{col.location} • {col.type}</span>
                     </div>
                   ))}
                 </div>
@@ -784,7 +770,7 @@ export default function CareerExplorerClient() {
               {/* 8. Official External Websites to Explore */}
               <div className={styles.dossierSection}>
                 <h3 className={styles.dossierHeading}>
-                  <span className="material-symbols-outlined" style={{ color: '#059669' }}>link</span>
+                  <span className={`material-symbols-outlined ${styles.iconGreen}`}>link</span>
                   🌐 Official External Portals to Explore (Verified URLs)
                 </h3>
                 <div className={styles.extLinksGrid}>
@@ -792,13 +778,13 @@ export default function CareerExplorerClient() {
                     <a
                       key={idx}
                       href={site.url}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       rel="noopener noreferrer"
                       className={styles.extLinkCard}
                     >
                       <div className={styles.extLinkTitle}>
                         <span>{site.title}</span>
-                        <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>open_in_new</span>
+                        <span className={`material-symbols-outlined ${styles.btnIcon}`}>open_in_new</span>
                       </div>
                       <div className={styles.extLinkNote}>{site.note}</div>
                     </a>
@@ -812,25 +798,25 @@ export default function CareerExplorerClient() {
                   <strong>🏛️ Related Government Job Opportunities in this Field</strong>
                   <p>{activeDossier.govtExamSynergy.jobs}</p>
                 </div>
-                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                <div className={styles.synergyBtns}>
                   <Link
                     href={`/career/${activeDossier.id}`}
                     className="btn-primary"
-                    style={{ fontSize: '13px', padding: '8px 16px', background: '#1c1917' }}
+                    className={`btn-primary ${styles.synergyBtnDark}`}
                   >
                     Open Full Dedicated Page ↗
                   </Link>
                   <Link
                     href={activeDossier.govtExamSynergy.examUdaanLink}
                     className="btn-primary"
-                    style={{ fontSize: '13px', padding: '8px 16px' }}
+                    className={`btn-primary ${styles.synergyBtnPrimary}`}
                   >
                     View Govt Jobs →
                   </Link>
                   <Link
                     href={activeDossier.govtExamSynergy.mockTestLink}
                     className="btn-outline"
-                    style={{ fontSize: '13px', padding: '8px 16px', background: '#fff' }}
+                    className={`btn-outline ${styles.synergyBtnOutline}`}
                   >
                     Free Mock Tests
                   </Link>

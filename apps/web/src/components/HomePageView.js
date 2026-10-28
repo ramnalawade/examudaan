@@ -8,7 +8,13 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
-import { trackCtaClick, trackSocialCommunity } from '../lib/analytics'
+import {
+  MPSC_TOTAL_QUESTION_PAPERS,
+  MPSC_ARCHIVE_YEARS_SPAN,
+  MPSC_TOTAL_ARCHIVE_FOLDERS,
+  REAL_AI_TOOLS_COUNT,
+  REAL_BLOGS_COUNT
+} from '../lib/platformStats'
 import styles from './homePageView.module.css'
 
 // ── 1. Hero Urgent Exam Openings (Live countdown cards) ───────
@@ -44,6 +50,19 @@ const URGENT_OPENINGS = [
 
 // ── 1B. "What's New on ExamUdaan" (New Releases, Blogs, AI Tools, Calculators & PYQs) ────
 const WHATS_NEW_ITEMS = [
+  {
+    id: 'wn-mahatet',
+    badge: 'MAHA TET 2026',
+    badge_mr: 'महाटीईटी २०२६',
+    badgeClass: 'badgePyq',
+    title: 'MAHA TET 44+ Official Question Papers & Answer Keys (2013–2026)',
+    title_mr: 'महाराष्ट्र शिक्षक पात्रता परीक्षा (MAHA TET) ४४+ अधिकृत प्रश्नपत्रिका व अंतिम उत्तरतालिका',
+    subtitle: 'Paper 1 (Primary) & Paper 2 (Math-Sci / Social Science) in Marathi, English & Hindi with in-browser PDF reader.',
+    subtitle_mr: 'पेपर १ व २ (गणित-विज्ञान / सामाजिक शास्त्रे) मराठी, इंग्रजी व हिंदी माध्यमातील अधिकृत पेपर्स.',
+    href: '/mahatet-previous-year-papers',
+    ctaText: 'Open TET Papers ↗',
+    ctaText_mr: 'टीईटी पेपर्स पहा ↗',
+  },
   {
     id: 'wn-1',
     badge: 'NEW BLOG',
@@ -185,8 +204,8 @@ const NEW_TOOLS_ITEMS = [
     badge: 'OFFICIAL PAPERS',
     badge_mr: 'अधिकृत पेपर्स',
     badgeClass: 'badgePyq',
-    title: '841 Official MPSC Question Papers & Final Answer Keys (2021–2026)',
-    title_mr: '८४१ अधिकृत MPSC प्रश्नपत्रिका व अंतिम उत्तरतालिका (२०२१–२०२६)',
+    title: '1,284 Official MPSC Question Papers & Final Answer Keys (2009–2026)',
+    title_mr: '१,२८४ अधिकृत MPSC प्रश्नपत्रिका व अंतिम उत्तरतालिका (२००९–२०२६)',
     subtitle: 'Download & read Rajyaseva, Group B, Group C & PSI papers free in browser.',
     subtitle_mr: 'राज्यसेवा, गट ब व क चे अधिकृत पेपर व फायनल की एकाच ओळीत मोफत वाचा.',
     href: '/mpsc-pyq',
@@ -195,11 +214,11 @@ const NEW_TOOLS_ITEMS = [
   },
   {
     id: 'nt-4',
-    badge: '15-YR PYQ BANK',
-    badge_mr: '१५-वर्षीय बँक',
+    badge: '18-YR PYQ BANK',
+    badge_mr: '१८-वर्षीय बँक',
     badgeClass: 'badgeGuide',
-    title: '15-Year Topic-wise Searchable PYQ Question Bank',
-    title_mr: '१५-वर्षीय घटकनिहाय सर्च करण्यायोग्य PYQ प्रश्न बँक',
+    title: '18-Year Topic-wise Searchable PYQ Question Bank',
+    title_mr: '१८-वर्षीय घटकनिहाय सर्च करण्यायोग्य PYQ प्रश्न बँक',
     subtitle: 'Interactive MCQ practice with answers & explanations across Polity, History, Science & Marathi.',
     subtitle_mr: 'राज्यघटना, इतिहास, भूगोल, विज्ञान व मराठी विषयांचे घटकनिहाय प्रश्न व स्पष्टीकरणे.',
     href: '/pyq',
@@ -222,12 +241,12 @@ const SUITE_CARDS = [
   },
   {
     icon: 'description',
-    badge: 'MPSC 2021–2026',
+    badge: `MPSC ${MPSC_ARCHIVE_YEARS_SPAN}`,
     title: 'MPSC Question Papers & Answer Keys',
     title_mr: 'MPSC मूळ प्रश्नपत्रिका व उत्तरतालिका',
-    desc: '841 official MPSC question papers and validated final answer keys across 429 exams (2021–2026). Read in-browser or download.',
-    cta: 'Browse 841 MPSC Papers & Keys →',
-    cta_mr: '८४१ MPSC पेपर्स व कीज् पहा →',
+    desc: `${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} official MPSC question papers and validated final answer keys across ${MPSC_TOTAL_ARCHIVE_FOLDERS.toLocaleString('en-IN')}+ exams (${MPSC_ARCHIVE_YEARS_SPAN}). Read in-browser or download.`,
+    cta: `Browse ${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} MPSC Papers & Keys →`,
+    cta_mr: `${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('mr-IN')} MPSC पेपर्स व कीज् पहा →`,
     href: '/mpsc-pyq',
   },
   {
@@ -310,11 +329,22 @@ const SUITE_CARDS = [
     cta_mr: 'इन-हँड पगार मोजा →',
     href: '/salary-calculator',
   },
+  {
+    icon: 'school',
+    badge: 'TET 2013–2026',
+    title: 'MAHA TET Papers & Official Keys',
+    title_mr: 'महाटीईटी प्रश्नपत्रिका व उत्तरतालिका',
+    desc: '44+ official question papers and verified final answer keys for Paper 1 (Classes 1–5) and Paper 2 (Classes 6–8) in Marathi, English & Hindi with in-browser PDF reader.',
+    cta: 'Browse 44+ MAHA TET Sets →',
+    cta_mr: 'महाटीईटी पेपर्स व कीज् पहा →',
+    href: '/mahatet-previous-year-papers',
+  },
 ]
 
-// ── 3. Popular Commissions (6 Commissions) ───────────────────
+// ── 3. Popular Commissions (7 Commissions) ───────────────────
 const COMMISSIONS = [
   { name: 'MPSC Maharashtra', name_mr: 'MPSC महाराष्ट्र', meta: 'State Civil Services • 4,124+ Posts', icon: 'account_balance', href: '/jobs/org/mpsc' },
+  { name: 'MSCE Pune (MAHA TET)', name_mr: 'शिक्षक पात्रता परीक्षा परिषद', meta: 'Teacher Eligibility • 44+ Sets & Keys', icon: 'school', href: '/mahatet-previous-year-papers' },
   { name: 'UPSC New Delhi', name_mr: 'UPSC नवी दिल्ली', meta: 'Civil & Defense • 1,200+ Posts', icon: 'gavel', href: '/jobs/org/upsc' },
   { name: 'Railway (RRB/RRC)', name_mr: 'रेल्वे भरती बोर्ड', meta: 'ALP, NTPC, Group D • 32K+ Posts', icon: 'train', href: '/jobs/org/rrb' },
   { name: 'SSC New Delhi', name_mr: 'कर्मचारी निवड आयोग', meta: 'CGL, CHSL, GD, MTS • 25K+ Posts', icon: 'description', href: '/jobs/org/ssc' },
@@ -870,15 +900,15 @@ export default function HomePageView({
                 <Link href="/mpsc-pyq" className={styles.pillarCard}>
                   <span className={styles.pillarIcon}>📚</span>
                   <div>
-                    <strong>{isMarathi ? '१५-वर्षीय PYQ पेपर्स' : '15-Yr Solved PYQ Bank'}</strong>
-                    <span>{isMarathi ? '८४१+ MPSC प्रश्नपत्रिका उत्तरे' : '841+ MPSC papers & keys'}</span>
+                    <strong>{isMarathi ? '१८-वर्षीय PYQ पेपर्स' : '18-Yr Solved PYQ Bank'}</strong>
+                    <span>{isMarathi ? `${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('mr-IN')}+ MPSC प्रश्नपत्रिका उत्तरे` : `${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}+ MPSC papers & keys`}</span>
                   </div>
                 </Link>
                 <Link href="/study-planner" className={styles.pillarCard}>
                   <span className={styles.pillarIcon}>🤖</span>
                   <div>
                     <strong>{isMarathi ? 'AI स्टडी प्लॅनर' : 'AI Study Planner & Tools'}</strong>
-                    <span>{isMarathi ? '१२४+ मोफत अभ्यास साधने' : '124+ Free prep tools & timetable'}</span>
+                    <span>{isMarathi ? `${REAL_AI_TOOLS_COUNT}+ मोफत अभ्यास साधने` : `${REAL_AI_TOOLS_COUNT}+ Free prep tools & timetable`}</span>
                   </div>
                 </Link>
               </div>
@@ -898,7 +928,7 @@ export default function HomePageView({
                   📅 {isMarathi ? 'MPSC वेळापत्रक २०२६' : 'MPSC Exam Dates 2026'}
                 </Link>
                 <Link href="/mpsc-pyq" className={styles.popularPillBlue}>
-                  🏛️ MPSC Papers &amp; Keys (841)
+                  🏛️ MPSC Papers &amp; Keys ({MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')})
                 </Link>
                 <Link href="/answer-keys" className={styles.popularPillGreen}>
                   🔑 Answer Keys
@@ -1034,20 +1064,20 @@ export default function HomePageView({
                   ) : heroTab === 'blogs' ? (
                     <Link href="/blog">
                       {isMarathi
-                        ? 'सर्व २८ सविस्तर परीक्षा गाईड्स व स्ट्रॅटेजी वाचा →'
-                        : 'View All 28 Prep Guides & Strategies →'}
+                        ? `सर्व ${REAL_BLOGS_COUNT} सविस्तर परीक्षा गाईड्स व स्ट्रॅटेजी वाचा →`
+                        : `View All ${REAL_BLOGS_COUNT} Prep Guides & Strategies →`}
                     </Link>
                   ) : heroTab === 'tools' ? (
                     <Link href="/ai-tools">
                       {isMarathi
-                        ? 'सर्व १२४+ AI टूल्स, कॅल्क्युलेटर व PYQ बँक उघडा →'
+                        ? `सर्व ${REAL_AI_TOOLS_COUNT}+ AI टूल्स, कॅल्क्युलेटर व PYQ बँक उघडा →`
                         : 'Explore All AI Tools, Calculators & PYQs →'}
                     </Link>
                   ) : (
                     <Link href="/blog">
                       {isMarathi
-                        ? 'सर्व २८ परीक्षा गाईड्स, मोफत साधने व PYQ पेपर्स पहा →'
-                        : 'Explore All 28 Guides, AI Tools & PYQ Banks →'}
+                        ? `सर्व ${REAL_BLOGS_COUNT} परीक्षा गाईड्स, मोफत साधने व PYQ पेपर्स पहा →`
+                        : `Explore All ${REAL_BLOGS_COUNT} Guides, AI Tools & PYQ Banks →`}
                     </Link>
                   )}
                 </div>
@@ -1187,7 +1217,7 @@ export default function HomePageView({
               </p>
             </div>
             <Link href="/ai-tools" className={styles.headerLink}>
-              View all tools ({stats.total_ai_tools || 124} AI Tools) →
+              View all tools ({stats.total_ai_tools || REAL_AI_TOOLS_COUNT} AI Tools) →
             </Link>
           </div>
 

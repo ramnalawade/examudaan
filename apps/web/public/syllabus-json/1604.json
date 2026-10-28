@@ -1,0 +1,112 @@
+{
+  "docId": 1604,
+  "examName": "Administrative Officer, Maharashtra Agricultural Service, Group-A Screening Test",
+  "examNameMr": "प्रशासकीय अधिकारी, महाराष्ट्र कृषि सेवा, गट-अ चाळणी परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Online Screening Test / Objective Type",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Intelligence Test",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धिमापन चाचणी",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "History of Maharashtra (1857-1990)",
+          "unitTitleMr": "महाराष्ट्राचा इतिहास (1857-1990)",
+          "topics": [
+            "History of Maharashtra (1857-1990)"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Geography of Maharashtra",
+          "unitTitleMr": "महाराष्ट्राचा भूगोल",
+          "topics": [
+            "Geography of Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Right to Information Act - 2005",
+          "unitTitleMr": "माहितीचा अधिकार कायदा - 2005",
+          "topics": [
+            "Right to Information Act - 2005"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Indian Constitution",
+          "unitTitleMr": "भारतीय राज्यघटना",
+          "topics": [
+            "Indian Constitution"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Computer and Information Technology",
+          "unitTitleMr": "संगणक व माहिती तंत्रज्ञान",
+          "topics": [
+            "Computer and Information Technology"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Human Rights and Responsibilities",
+          "unitTitleMr": "मानवी हक्क व जबाबदाऱ्या",
+          "topics": [
+            "Human Rights and Responsibilities"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Current Affairs - Global and India",
+          "unitTitleMr": "जागतिक तसेच भारतातील चालू घडामोडी",
+          "topics": [
+            "Political, industrial, economic, social, educational, geographical, astronomical, cultural, scientific and others"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमापन विषयक प्रश्न",
+          "topics": [
+            "Questions to test how quickly and accurately the candidate can think"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Rules and Orders regarding Administrative Work",
+          "unitTitleMr": "प्रशासकीय कामकाजाच्या संदर्भात लागू होणारे नियम व आदेश",
+          "topics": [
+            "Maharashtra Civil Services (General Conditions of Service) Rules 1981",
+            "Maharashtra Civil Services (Pay) Rules 1981",
+            "Maharashtra Civil Services (Joining Time, Foreign Service, Suspension, Dismissal, Removal from Service) Rules 1981",
+            "Maharashtra Civil Services (Leave) Rules 1981",
+            "Maharashtra Civil Services (Pension) Rules 1982",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules 1979 / Departmental Inquiry Handbook",
+            "Maharashtra Civil Services (Conduct) Rules 1979",
+            "Matters related to Accounts",
+            "Matters related to Seniority List",
+            "Judicial work procedures",
+            "Office work procedures",
+            "Administrative matters"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

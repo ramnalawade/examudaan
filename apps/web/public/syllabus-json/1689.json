@@ -1,0 +1,67 @@
+{
+  "docId": 1689,
+  "examName": "Screening Test for Joint Charity Commissioner, Deputy Charity Commissioner & Assistant Charity Commissioner",
+  "examNameMr": "धर्मदाय सहआयुक्त, धर्मदाय उपआयुक्त व सहायक धर्मदाय आयुक्त परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 125,
+  "mainsMarks": 100,
+  "interviewMarks": 25,
+  "examPattern": "Written Examination (Objective & Subjective) followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Screening Test for Joint Charity Commissioner, Deputy Charity Commissioner & Assistant Charity Commissioner",
+      "paperTitleMr": "धर्मदाय सहआयुक्त, धर्मदाय उपआयुक्त व सहायक धर्मदाय आयुक्त चाळणी परीक्षा",
+      "totalMarks": 100,
+      "duration": "Three Hours",
+      "type": "Objective & Subjective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Law and Acts",
+          "unitTitleMr": "कायदे व अधिनियम",
+          "topics": [
+            "Indian Trusts Act, 1882",
+            "Bombay Public Trust Act, 1950",
+            "Transfer of Property Act, 1882",
+            "Limitation Act, 1963",
+            "Maharashtra Co-operative Societies Act, 1960",
+            "Civil Procedure Code, 1908",
+            "Criminal Procedure Code, 1973",
+            "Evidence Act, 1872"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Precis Writing",
+          "unitTitleMr": "संक्षिप्त लेखन",
+          "topics": [
+            "Precis Writing in Marathi",
+            "Precis Writing in English"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Office Translation",
+          "unitTitleMr": "कार्यालयीन भाषांतर",
+          "topics": [
+            "Office Translation in English to Marathi",
+            "Office Translation in Marathi to English"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Objective Type - 30 Marks (15 Questions)",
+    "Subjective Type - 70 Marks",
+    "A candidate who secures not less than 50% marks shall be eligible for viva-voce.",
+    "Merit list will be prepared by combining 100 marks of written examination and 25 marks of interview."
+  ]
+}

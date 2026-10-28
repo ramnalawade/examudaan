@@ -1,0 +1,120 @@
+{
+  "docId": 10095,
+  "examName": "Maharashtra Judicial Service - Civil Judge (Junior Division) & Judicial Magistrate (First Class) Main Examination",
+  "examNameMr": "महाराष्ट्र न्यायसेवा - दिवाणी न्यायाधीश (कनिष्ठ स्तर) व न्यायदंडाधिकारी (प्रथम वर्ग) मुख्य परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English/Marathi",
+  "category": "judicial-legal",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (Main) followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper-I: Civil Law",
+      "paperTitleMr": "पेपर-१: दिवाणी कायदा",
+      "totalMarks": 100,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Civil Procedure Code",
+          "unitTitleMr": "दिवाणी प्रक्रिया संहिता",
+          "topics": [
+            "Civil Procedure Code"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Transfer of Property Act",
+          "unitTitleMr": "मालमत्ता हस्तांतरण कायदा",
+          "topics": [
+            "Transfer of Property Act"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Specific Relief Act",
+          "unitTitleMr": "विशिष्ट आराम कायदा",
+          "topics": [
+            "Specific Relief Act"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Law of Contracts, Sale of Goods Act and Partnership Act",
+          "unitTitleMr": "कंत्राट कायदा, वस्तू विक्री कायदा आणि भागीदारी कायदा",
+          "topics": [
+            "Law of Contracts",
+            "Sale of Goods Act",
+            "Partnership Act"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper-II: Criminal Law and Essay",
+      "paperTitleMr": "पेपर-२: फौजदारी कायदा आणि निबंध",
+      "totalMarks": 100,
+      "duration": "Three Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Indian Penal Code",
+          "unitTitleMr": "भारतीय दंड संहिता",
+          "topics": [
+            "Indian Penal Code"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Indian Evidence Act",
+          "unitTitleMr": "भारतीय पुरावा कायदा",
+          "topics": [
+            "Indian Evidence Act"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Code of Criminal Procedure",
+          "unitTitleMr": "फौजदारी प्रक्रिया संहिता",
+          "topics": [
+            "Code of Criminal Procedure"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Scheduled Castes & Scheduled Tribes (Prevention of Atrocities) Act-1989 and Protection of Civil Rights Act - 1955",
+          "unitTitleMr": "अनुसूचित जाती आणि अनुसूचित जमाती (अत्याचार प्रतिबंधक) कायदा-१९८९ आणि नागरी हक्क संरक्षण कायदा - १९५५",
+          "topics": [
+            "Scheduled Castes & Scheduled Tribes (Prevention of Atrocities) Act-1989",
+            "Protection of Civil Rights Act - 1955"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Essay On Current Legal Topic",
+          "unitTitleMr": "चालू कायदेशीर विषयावर निबंध",
+          "topics": [
+            "Essay On Current Legal Topic (Approximately 800 Words)"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Medium of the paper: Marathi/English",
+    "Nature of the paper: Conventional type",
+    "Standard: Suitable to the post"
+  ]
+}

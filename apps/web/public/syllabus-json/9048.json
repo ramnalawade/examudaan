@@ -1,0 +1,132 @@
+{
+  "docId": 9048,
+  "examName": "Professor Group-A, Associate Professor Group-A, Assistant Professor Group-B Maharashtra Ayurvedic Service, Directorate Of AYUSH, Medical Education and Drug Department Syllabus",
+  "examNameMr": "प्राध्यापक गट-अ, सहप्राध्यापक गट-अ, सहायक प्राध्यापक गट-ब महाराष्ट्र आयुर्वेद सेवा, आयुष संचालनालय, वैद्यकीय शिक्षण आणि औषधी द्रव्य विभाग अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "medical",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Ayurvedic Service Examination",
+      "paperTitleMr": "आयुर्वेद सेवा परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Syllabus related with Ayurved subjects",
+          "unitTitleMr": "आयुर्वेद विषयांच्या संबंधित अभ्यासक्रम",
+          "topics": [
+            "Samhitasiddhant",
+            "Rachana Sharir",
+            "Kriya Sharir",
+            "Dravyagun",
+            "Rasashastra and bhaishjyakalpana",
+            "Agadtantra",
+            "Swasthvritta",
+            "Rognidan",
+            "Kaychikitsa",
+            "Panchkarm",
+            "Shalyatantra",
+            "Shalakyatantra",
+            "Strirogprasutitantra",
+            "Koumarbhrutya"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Current Affairs related to Medical Education and Administration & Maharashtra Civil Services Rules",
+          "unitTitleMr": "वैद्यकीय शिक्षण आणि प्रशासन संबंधित चालू घडामोडी व महाराष्ट्र नागरी सेवा नियम",
+          "topics": [
+            "Current Affairs related to Medical Education",
+            "Comment Writing and Correspondence Writing",
+            "Maharashtra Civil Services (Conduct) Rules",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules",
+            "Maharashtra Civil Services (General Conditions of Service) Rules",
+            "Maharashtra Civil Service (Tenure of Joining, Post-Recruitment Service, Suspension etc. Grants) Rule",
+            "Maharashtra Civil Service (Leave) Rules",
+            "Maharashtra Civil Services (Pay) Rules and Seventh Pay Commission",
+            "Maharashtra Civil Services (Pension) Rules",
+            "National Pension Scheme",
+            "Travel Allowance / Transfer Travel Allowance / Swagram Travel Allowance Rules",
+            "Medical Expenses Reimbursement Rules",
+            "Bombay Financial Rules",
+            "Write off",
+            "Maharashtra Treasury Rules",
+            "Maharashtra Public Service Rights Act",
+            "Maharashtra General Provident Fund Rules",
+            "Prevention of delay in performance of Government duties"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Research Methodology",
+          "unitTitleMr": "संशोधन पद्धती",
+          "topics": [
+            "General Guidelines and Steps in the Research Process",
+            "Critical Evaluation of Research Articles",
+            "Research Designs",
+            "Clinical Research",
+            "Case Study, Case Series, Pilot study, RCT, Multicentric Clinical Trials, Metaanalysis etc.",
+            "Different Phases of Clinical Trials",
+            "Good Clinical Practices (GCP)",
+            "Pharmacovigilance for ASU Drugs",
+            "Preparation of research proposals for submission to funding agencies",
+            "Scientific Writing and Publication Skills",
+            "Intellectual Property Rights"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Biomedical Statistics",
+          "unitTitleMr": "बायोमेडिकल सांख्यिकी",
+          "topics": [
+            "Data Collection, Classification, Presentation, Analysis and Interpretation of Data",
+            "Scale of Measures, Types of Variables, Types of Series",
+            "Measures of Central Tendency",
+            "Types of Variability, Measures of Variability",
+            "Probability",
+            "Normal Distribution",
+            "Fundamentals of Hypothesis",
+            "Univariate Analysis of Categorical Data",
+            "Parametric Tests of Significance",
+            "Nonparametric Tests of Significance",
+            "Sampling and Sample Size Calculation",
+            "Vital Statistics and Demography",
+            "Use of Statistical Softwares"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Information Technology and Computer Applications in Medical Education",
+          "unitTitleMr": "वैद्यकीय शिक्षणात माहिती तंत्रज्ञान आणि संगणक अनुप्रयोग",
+          "topics": [
+            "Ayurved Software Tools and it's Applicability",
+            "Application of Computer Techniques in Medical Education, Hospital management, Knowledge and Information Technology"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Ayush Ministry and Schemes",
+          "unitTitleMr": "आयुष मंत्रालय आणि योजना",
+          "topics": [
+            "Ayush Ministry",
+            "Ayush Schemes - NAH, National Ayush Mission, AyurGyan, Ayurswasthya etc.",
+            "Other Ayush Services"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

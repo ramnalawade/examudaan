@@ -37,6 +37,10 @@
   text-transform: uppercase;
 }
 
+.heroBadge span {
+  font-size: 15px;
+}
+
 .hero h1 {
   font-family: 'Outfit', sans-serif;
   font-size: 32px;

@@ -1,0 +1,340 @@
+/* ============================================================
+   AiMatcher.module.css
+   ExamUdaan.in — AI Eligibility Matcher component styles
+   ============================================================ */
+
+.matcherCard {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--outline-variant);
+  box-shadow: 0 12px 40px rgba(163, 57, 0, 0.08);
+  padding: 24px 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.topAccentLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-cta) 50%, #f59e0b 100%);
+}
+
+.matcherHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.iconAutoAwesome {
+  color: var(--primary-cta);
+  font-size: 22px;
+}
+
+.matcherTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+.versionBadge {
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+}
+
+.matcherSubtitle {
+  font-size: 13px;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.liveCounterBox {
+  background: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-md);
+  padding: 6px 10px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.liveCounterLabel {
+  font-size: 11px;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.liveCounterValue {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--tertiary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.pulseDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tertiary);
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.4; transform: scale(0.9); }
+}
+
+.presetsSection {
+  margin-bottom: 16px;
+}
+
+.presetsLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.presetsRow {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.presetBtn {
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.presetBtnActive {
+  background: var(--primary-fixed);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fieldLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 4px;
+}
+
+.aiVerifiedPill {
+  font-size: 11px;
+  color: var(--primary-cta);
+  font-weight: 600;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--surface);
+  color: var(--on-surface);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.selectInputSmall {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--surface);
+  color: var(--on-surface);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fieldBlockLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 4px;
+}
+
+.ageBox {
+  background: var(--surface-container-low);
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+}
+
+.ageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.ageLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.ageHighlight {
+  color: var(--primary-cta);
+  font-size: 14px;
+}
+
+.relaxBadge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--tertiary);
+  background: var(--tertiary-fixed);
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+}
+
+.ageSlider {
+  width: 100%;
+  accent-color: var(--primary-cta);
+  cursor: pointer;
+  height: 5px;
+}
+
+.ageTicks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--secondary);
+  margin-top: 2px;
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #a33900 0%, #EA580C 100%);
+  color: #ffffff;
+  border: none;
+  padding: 13px 20px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(234, 88, 12, 0.28);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.submitBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.35);
+}
+
+.searchIcon {
+  font-size: 20px;
+}
+
+.naturalPromptSection {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--outline-variant);
+}
+
+.plainWordsBtn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+}
+
+.plainWordsIcon {
+  font-size: 16px;
+}
+
+.naturalPromptForm {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.naturalPromptInput {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--outline-variant);
+  font-size: 12px;
+  background: var(--surface);
+  color: var(--on-surface);
+}
+
+.naturalPromptSubmit {
+  background: var(--primary-fixed);
+  color: var(--primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .matcherCard {
+    padding: 18px 14px;
+  }
+  .splitGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

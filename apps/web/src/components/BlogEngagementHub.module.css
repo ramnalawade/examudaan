@@ -7,7 +7,10 @@
   margin: 36px 0 28px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* ── 1. Focus Study Sprint Card ── */
@@ -22,12 +25,16 @@
   gap: 20px;
   flex-wrap: wrap;
   box-shadow: 0 4px 16px rgba(234, 88, 12, 0.08);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .timerLeft {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex: 1;
+  min-width: 0;
 }
 
 .timerIconBox {
@@ -49,6 +56,7 @@
   font-weight: 800;
   color: #7C2D12;
   margin: 0 0 4px;
+  word-break: break-word;
 }
 
 .timerSubtitle {
@@ -144,6 +152,8 @@
   border-radius: 16px;
   padding: 22px 24px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .checklistHeader {
@@ -164,6 +174,7 @@
   align-items: center;
   gap: 8px;
   margin: 0;
+  word-break: break-word;
 }
 
 .checklistBadge {
@@ -173,6 +184,7 @@
   font-weight: 700;
   padding: 3px 10px;
   border-radius: 999px;
+  white-space: nowrap;
 }
 
 .progressBarTrack {
@@ -194,18 +206,21 @@
 .checklistItems {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  width: 100%;
 }
 
 .checkItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: 8px;
   transition: background 0.15s;
   cursor: pointer;
   user-select: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .checkItem:hover {
@@ -217,13 +232,18 @@
   height: 18px;
   accent-color: var(--primary, #EA580C);
   cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .checkLabel {
   font-size: 14px;
   color: var(--on-surface, #1E293B);
-  line-height: 1.4;
+  line-height: 1.45;
   cursor: pointer;
+  word-break: break-word;
+  flex: 1;
+  min-width: 0;
 }
 
 .checkLabelDone {
@@ -238,10 +258,12 @@
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hubHeader {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .hubTitle {
@@ -253,12 +275,14 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  word-break: break-word;
 }
 
 .hubSubtitle {
   font-size: 13px;
   color: var(--secondary, #64748B);
   margin: 0;
+  line-height: 1.45;
 }
 
 .resourceTabs {
@@ -266,7 +290,14 @@
   gap: 8px;
   margin-bottom: 18px;
   overflow-x: auto;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+
+.resourceTabs::-webkit-scrollbar {
+  display: none;
 }
 
 .resourceTab {
@@ -279,6 +310,7 @@
   color: #475569;
   cursor: pointer;
   white-space: nowrap;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -294,6 +326,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 14px;
+  width: 100%;
 }
 
 .resourceCard {
@@ -307,6 +340,8 @@
   justify-content: space-between;
   gap: 10px;
   transition: border-color 0.15s, transform 0.15s, background 0.15s;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .resourceCard:hover {
@@ -330,11 +365,13 @@
   padding: 2px 8px;
   border-radius: 4px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .resIcon {
   font-size: 18px;
   color: var(--secondary, #64748B);
+  flex-shrink: 0;
 }
 
 .resTitle {
@@ -343,6 +380,7 @@
   color: var(--on-surface, #1E293B);
   margin: 0;
   line-height: 1.35;
+  word-break: break-word;
 }
 
 .resActionRow {
@@ -358,15 +396,114 @@
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
+  .engagementHub {
+    gap: 16px;
+    margin: 24px 0 20px;
+  }
   .timerCard {
     flex-direction: column;
     align-items: flex-start;
+    padding: 16px 14px;
+    gap: 14px;
+  }
+  .timerLeft {
+    width: 100%;
+    gap: 12px;
+  }
+  .timerIconBox {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+  .timerIcon {
+    font-size: 24px;
+  }
+  .timerTitle {
+    font-size: 15px;
+  }
+  .timerSubtitle {
+    font-size: 12px;
   }
   .timerRight {
     width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 8px;
+  }
+  .timerDisplay {
+    font-size: 22px;
+    padding: 4px 10px;
+    min-width: 80px;
+  }
+  .timerBtn {
+    flex: 1;
+    justify-content: center;
+    padding: 9px 12px;
+    font-size: 12.5px;
+  }
+  .timerResetBtn {
+    padding: 9px 12px;
+  }
+  .checklistCard {
+    padding: 16px 14px;
+  }
+  .checklistHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .checklistTitle {
+    font-size: 14.5px;
+  }
+  .checkItem {
+    padding: 6px 6px;
+    gap: 10px;
+  }
+  .checkLabel {
+    font-size: 13px;
+  }
+  .practiceHubCard {
+    padding: 16px 14px;
+  }
+  .hubTitle {
+    font-size: 15.5px;
+    line-height: 1.35;
+  }
+  .hubSubtitle {
+    font-size: 12px;
   }
   .resourceGrid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .resourceCard {
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .timerCard,
+  .checklistCard,
+  .practiceHubCard {
+    padding: 12px 10px;
+    border-radius: 12px;
+  }
+  .timerTitle,
+  .checklistTitle,
+  .hubTitle {
+    font-size: 14px;
+  }
+  .timerDisplay {
+    font-size: 19px;
+    min-width: 70px;
+    padding: 4px 6px;
+  }
+  .timerBtn {
+    padding: 8px 10px;
+    font-size: 11.5px;
+  }
+  .checkLabel {
+    font-size: 12.5px;
   }
 }

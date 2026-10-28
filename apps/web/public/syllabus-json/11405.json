@@ -1,0 +1,247 @@
+{
+  "docId": 11405,
+  "examName": "Assistant Professor (Computer Science) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (संगणक शास्त्र) महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Computer Science",
+      "paperTitleMr": "संगणक शास्त्र",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Discrete Structures",
+          "unitTitleMr": "असतत संरचना",
+          "topics": [
+            "Mathematical Logic",
+            "Sets and Relations",
+            "Counting",
+            "Mathematical Induction and Discrete Probability",
+            "Group Theory",
+            "Graph Theory",
+            "Boolean Algebra"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Computer System Architecture",
+          "unitTitleMr": "संगणक प्रणाली वास्तुकला",
+          "topics": [
+            "Digital Logic Circuits and Components",
+            "Data Representation",
+            "Register Transfer and Micro operations",
+            "Basic Computer Organization and Design",
+            "Programming the Basic Computer",
+            "Microprogrammed Control",
+            "Central Processing Unit",
+            "Pipeline and Vector Processing",
+            "Input-Output Organization",
+            "Memory Hierarchy",
+            "Multiprocessors"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Programming Languages",
+          "unitTitleMr": "प्रोग्रामिंग भाषा",
+          "topics": [
+            "Language Design and Translation Issues",
+            "Elementary Data Types",
+            "Programming in C",
+            "Object Oriented Programming in C++"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Computer Graphics",
+          "unitTitleMr": "संगणक ग्राफिक्स",
+          "topics": [
+            "Video-Display Devices",
+            "Raster-Scan and Random-Scan Systems",
+            "Graphics Monitors",
+            "Input Devices",
+            "Points and Lines",
+            "Line Drawing Algorithms",
+            "Mid-Point Circle and Ellipse Algorithms",
+            "Scan Line Polygon Fill Algorithm",
+            "Boundary-Fill and Flood-Fill",
+            "2-D Geometrical Transforms and Viewing",
+            "3-D Object Representation",
+            "Geometric Transformations and Viewing"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Database Management Systems",
+          "unitTitleMr": "डेटाबेस व्यवस्थापन प्रणाली",
+          "topics": [
+            "Database System Concepts and Architecture",
+            "Data Modeling",
+            "Database Design",
+            "ER Diagrams",
+            "Relational Algebra and Calculus",
+            "SQL",
+            "Normalization for Relational Databases",
+            "Enhanced Data Models",
+            "Transaction Management and Concurrency control",
+            "Data Warehousing and Data Mining",
+            "NOSQL"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "System Software and Operating System",
+          "unitTitleMr": "सिस्टम सॉफ्टवेअर आणि ऑपरेटिंग सिस्टम",
+          "topics": [
+            "System Software",
+            "Basics of Operating Systems",
+            "Process Management",
+            "Threads",
+            "CPU Scheduling",
+            "Deadlocks",
+            "Memory Management",
+            "Storage Management",
+            "File and Input/Output Systems",
+            "Security",
+            "Virtual Machines",
+            "Linux Operating Systems",
+            "Windows Operating Systems",
+            "Distributed Systems"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Software Engineering",
+          "unitTitleMr": "सॉफ्टवेअर अभियांत्रिकी",
+          "topics": [
+            "Software Process Models",
+            "Software Requirements",
+            "Software Design",
+            "Software Quality",
+            "Estimation and Scheduling of Software Projects",
+            "Software Testing",
+            "Software Configuration Management"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Data Structures and Algorithms",
+          "unitTitleMr": "डेटा संरचना आणि अल्गोरिदम",
+          "topics": [
+            "Arrays and their Applications",
+            "Sparse Matrix",
+            "Stacks",
+            "Queues",
+            "Priority Queues",
+            "Linked Lists",
+            "Trees",
+            "Forest",
+            "Binary Tree",
+            "Threaded Binary Tree",
+            "Binary Search Tree",
+            "AVL Tree",
+            "B Tree",
+            "B+ Tree",
+            "B* Tree",
+            "Data Structure for Sets",
+            "Graphs",
+            "Sorting and Searching Algorithms",
+            "Hashing",
+            "Performance Analysis of Algorithms and Recurrences",
+            "Design Techniques",
+            "Lower Bound Theory",
+            "Graph Algorithms",
+            "Complexity Theory",
+            "Greedy method techniques",
+            "Dynamic programming techniques",
+            "Divide and Conquer"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Theory of Computation and Compilers",
+          "unitTitleMr": "गणना सिद्धांत आणि कंपाइलर",
+          "topics": [
+            "Theory of Computation",
+            "Regular Language Models",
+            "Context Free Language",
+            "Turing Machines (TM)",
+            "Unsolvable Problems and Computational Complexity",
+            "Syntax Analysis",
+            "Semantic Analysis",
+            "Run Time System",
+            "Intermediate Code Generation",
+            "Code Generation and Code Optimization"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Computer Networks",
+          "unitTitleMr": "संगणक नेटवर्क",
+          "topics": [
+            "Components of a Data Communication System",
+            "Simplex, Half-Duplex and Duplex Modes of Communication",
+            "Multiplexing",
+            "Transmission Media",
+            "Transmission Errors",
+            "Error Handling Mechanisms",
+            "Network Topologies",
+            "Local Area Networks",
+            "Metropolitan Area Networks",
+            "Wide Area Network",
+            "Wireless Networks",
+            "Internet",
+            "Layered Architecture",
+            "OSI Reference Model and its Protocols",
+            "TCP/IP Protocol Suite",
+            "Physical, Logical, Port and Specific Addresses",
+            "Switching Techniques",
+            "Functions of OSI and TCP/IP Layers",
+            "IPv4 Structure and Address Space",
+            "IPv6"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Machine Learning and Artificial Intelligence (AI)",
+          "unitTitleMr": "मशीन लर्निंग आणि कृत्रिम बुद्धिमत्ता (AI)",
+          "topics": [
+            "Approaches to AI",
+            "Knowledge Representation",
+            "Planning: Components of a Planning System",
+            "Linear and Non Linear Planning",
+            "Goal Stack Planning",
+            "Hierarchical Planning",
+            "STRIPS",
+            "Partial Order Planning",
+            "Machine Learning: Regression, Classification, Supervised and Unsupervised Learning",
+            "Support Vector Machine",
+            "K-Nearest Neighbor",
+            "Hidden Markov Model",
+            "Performance measurement metrics",
+            "Artificial Neural Networks (ANN): Supervised, Unsupervised and Reinforcement Learning",
+            "Single Perceptron",
+            "Multi-Layer Perceptron",
+            "Self-Organizing Maps",
+            "Hopfield Network"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

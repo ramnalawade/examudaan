@@ -12,6 +12,7 @@
 import { query as pgQuery } from '../../../../lib/pgdb'
 import { ok, badRequest, serverError, serviceUnavailable } from '../../../../lib/apiResponse'
 import { withAuth } from '../../../../lib/auth'
+import { withValidation, schemas } from '../../../../lib/validate'
 
 const PLAN_PRICES = {
   basic: 2900,   // ₹29/month
@@ -25,10 +26,9 @@ const PLAN_LABELS = {
   pro:   'ExamUdaan Pro — All Channels (1 Month)',
 }
 
-export const POST = withAuth(async (req, ctx, currentUser) => {
+export const POST = withValidation(schemas.createPaymentOrder, withAuth(async (req, ctx, currentUser) => {
   try {
-    const body = await req.json().catch(() => ({}))
-    const { plan } = body
+    const { plan } = req.validatedBody || (await req.json().catch(() => ({})))
 
     if (!plan || !PLAN_PRICES[plan]) {
       return badRequest(`Invalid plan. Choose one of: ${Object.keys(PLAN_PRICES).join(', ')}`)
@@ -87,4 +87,4 @@ export const POST = withAuth(async (req, ctx, currentUser) => {
     console.error('[create-order] Error:', err)
     return serverError()
   }
-})
+}))

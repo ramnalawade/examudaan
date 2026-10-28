@@ -1,0 +1,48 @@
+{
+  "docId": 7442,
+  "examName": "Assistant Administrative Officer, Group B-Public Health Dept and Ground Water Survey & Development Agency; and Administrative Officer, Group B-Directorate of Archaeology and Museums-Syllabus",
+  "examNameMr": "सहाय्यक प्रशासनिक अधिकारी, गट-ब (सार्वजनिक आरोग्य विभाग व भूजल सर्वेक्षण आणि विकास यंत्रणा) आणि प्रशासनिक अधिकारी, गट-ब (पुरातत्व व वस्तुसंग्रहालय संचालनालय) - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Administrative Officer and Administrative Officer Syllabus",
+      "paperTitleMr": "महाराष्ट्र नागरी सेवा व कार्यालयीन प्रक्रिया नियम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Civil Services Rules and Administrative Procedures",
+          "unitTitleMr": "महाराष्ट्र नागरी सेवा नियम व कार्यालयीन प्रक्रिया",
+          "topics": [
+            "Maharashtra Civil Services (General Conditions of Service) Rules",
+            "Maharashtra Civil Services (Pay) Rules",
+            "Maharashtra Civil Services (Joining Time, Foreign Service, Suspension, Dismissal and Removal from Service) Rules",
+            "Maharashtra Civil Services (Leave) Rules",
+            "Maharashtra Civil Services (Pension) Rules",
+            "Maharashtra Civil Services (Discipline and Appeal) Rules / Departmental Enquiry",
+            "Maharashtra Civil Services (Conduct) Rules",
+            "Accounts related matters",
+            "Seniority list matters",
+            "Office procedures",
+            "Administrative matters",
+            "Judicial/Legal matters"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -79,7 +79,7 @@ export default function DistrictJobsClient({ district }) {
         <div className={`container ${styles.heroInner}`}>
           {/* Region tag */}
           <span className={styles.regionPill}>
-            <span className="material-symbols-outlined" style={{ fontSize: 14 }}>location_on</span>
+            <span className={`material-symbols-outlined ${styles.locationIcon}`}>location_on</span>
             {district.region}
           </span>
 
@@ -111,7 +111,7 @@ export default function DistrictJobsClient({ district }) {
           {/* Total count badge */}
           {!loading && (
             <p className={styles.totalBadge}>
-              <span className="material-symbols-outlined" style={{ fontSize: 16, verticalAlign: 'middle' }}>work</span>
+              <span className={`material-symbols-outlined ${styles.workIcon}`}>work</span>
               {total > 0
                 ? ` ${total.toLocaleString('en-IN')} active notifications for ${district.name}`
                 : ` No active notifications right now — check back soon`
@@ -127,8 +127,8 @@ export default function DistrictJobsClient({ district }) {
           <h2 className={styles.sectionTitle}>
             Latest Jobs in {district.name}
           </h2>
-          <Link href="/alerts" className="btn-primary" style={{ fontSize: 13 }}>
-            <span className="material-symbols-outlined" style={{ fontSize: 16 }}>notifications</span>
+          <Link href="/alerts" className={`btn-primary ${styles.alertsBtn}`}>
+            <span className={`material-symbols-outlined ${styles.notifIcon}`}>notifications</span>
             Get Alerts
           </Link>
         </div>
@@ -154,10 +154,10 @@ export default function DistrictJobsClient({ district }) {
         {/* Empty state */}
         {!loading && jobs.length === 0 && (
           <div className={styles.emptyState}>
-            <span className="material-symbols-outlined" style={{ fontSize: 48, color: 'var(--outline-variant)' }}>search_off</span>
+            <span className={`material-symbols-outlined ${styles.searchOffIcon}`}>search_off</span>
             <p>No active recruitments found for {district.name} right now.</p>
-            <p style={{ fontSize: 13 }}>New notifications are scraped every 6 hours. Bookmark this page and check back!</p>
-            <Link href="/jobs" className="btn-outline" style={{ marginTop: 16 }}>
+            <p className={styles.emptySub}>New notifications are scraped every 6 hours. Bookmark this page and check back!</p>
+            <Link href="/jobs" className={`btn-outline ${styles.viewAllBtn}`}>
               View All India Jobs
             </Link>
           </div>
@@ -192,7 +192,7 @@ export default function DistrictJobsClient({ district }) {
               .filter(d => d.slug !== district.slug) // exclude current
               .map(d => (
                 <Link key={d.slug} href={`/jobs/district/${d.slug}`} className={styles.districtCard}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>location_city</span>
+                  <span className={`material-symbols-outlined ${styles.cityIcon}`}>location_city</span>
                   {d.name}
                 </Link>
               ))

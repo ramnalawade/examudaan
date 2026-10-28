@@ -16,18 +16,16 @@ import { trackSignUp } from '../../lib/analytics'
 export default function RegisterPage() {
   const router = useRouter()
 
-  const [tab, setTab]         = useState('email') // 'email' | 'phone'
   const [name, setName]       = useState('')
   const [email, setEmail]     = useState('')
-  const [phone, setPhone]     = useState('')
   const [otp, setOtp]         = useState('')
   const [otpSent, setOtpSent] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError]     = useState('')
   const [success, setSuccess] = useState('')
 
-  const identifier = tab === 'email' ? email : phone
-  const channel    = tab === 'email' ? 'email' : 'sms'
+  const identifier = email
+  const channel    = 'email'
 
   // --- Step 1: Send OTP ---
   async function handleSendOtp(e) {
@@ -181,27 +179,7 @@ export default function RegisterPage() {
             </div>
           )}
 
-          {/* Tab selector */}
-          <div className="tab-bar">
-            <button
-              className={`tab-btn${tab === 'email' ? ' active' : ''}`}
-              onClick={() => { setTab('email'); setOtpSent(false); setError('') }}
-              id="reg-tab-email"
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: 16, verticalAlign: 'middle', marginRight: 4 }}>mail</span>
-              Email
-            </button>
-            <button
-              className={`tab-btn${tab === 'phone' ? ' active' : ''}`}
-              onClick={() => { setTab('phone'); setOtpSent(false); setError('') }}
-              id="reg-tab-phone"
-            >
-              <span className="material-symbols-outlined" style={{ fontSize: 16, verticalAlign: 'middle', marginRight: 4 }}>phone</span>
-              Phone (OTP)
-            </button>
-          </div>
-
-          {/* Registration Form */}
+          {/* Registration Form (Email OTP) */}
           <form
             style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
             onSubmit={otpSent ? handleVerifyOtp : handleSendOtp}
@@ -222,8 +200,8 @@ export default function RegisterPage() {
               </div>
             )}
 
-            {/* Email or Phone */}
-            {!otpSent && tab === 'email' && (
+            {/* Email Address */}
+            {!otpSent && (
               <div className="input-group">
                 <label className="input-label" htmlFor="reg-email-input">Email Address</label>
                 <input
@@ -238,30 +216,11 @@ export default function RegisterPage() {
               </div>
             )}
 
-            {!otpSent && tab === 'phone' && (
-              <div className="input-group">
-                <label className="input-label" htmlFor="reg-phone-input">Mobile Number</label>
-                <div className="phone-input-wrap">
-                  <span className="phone-prefix">+91</span>
-                  <input
-                    id="reg-phone-input"
-                    className="form-input"
-                    type="tel"
-                    placeholder="Enter 10-digit number"
-                    value={phone}
-                    onChange={e => setPhone(e.target.value)}
-                    maxLength={10}
-                    required
-                  />
-                </div>
-              </div>
-            )}
-
             {/* OTP Input — shown after send */}
             {otpSent && (
               <div className="input-group">
                 <label className="input-label" htmlFor="reg-otp-input">
-                  Enter OTP sent to {identifier}
+                  Enter OTP sent to {email}
                 </label>
                 <input
                   id="reg-otp-input"
@@ -280,7 +239,7 @@ export default function RegisterPage() {
                   onClick={() => { setOtpSent(false); setOtp(''); setError('') }}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--primary)', fontSize: 13, fontWeight: 600, textAlign: 'left', padding: '4px 0' }}
                 >
-                  Change {tab === 'email' ? 'email' : 'number'}
+                  Change email
                 </button>
               </div>
             )}

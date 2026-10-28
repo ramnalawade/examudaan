@@ -2393,6 +2393,272 @@ export const SYLLABUS_EXAMS = [
     youtubeQuery: "RBI Grade B syllabus phase 1 phase 2 preparation previous papers",
     relatedExams: ["upsc-cse", "sbi-po", "ibps-po"],
   },
+
+  // ────────────────────────────────────────────────────────────
+  // 18. Maharashtra Teacher Eligibility Test (MAHA TET)
+  // ────────────────────────────────────────────────────────────
+  {
+    slug: "maha-tet",
+    name: "महाराष्ट्र शिक्षक पात्रता परीक्षा (MAHA TET)",
+    nameEn: "Maharashtra Teacher Eligibility Test (MAHA TET)",
+    shortName: "MAHA TET",
+    conductingBody: "Maharashtra State Council of Examination (MSCE Pune)",
+    logo: "school",
+    color: "#EA580C",
+    examLevel: "State (Maharashtra)",
+    targetPosts: [
+      "Primary Teacher (Classes 1–5: इ. १ ली ते ५ वी)",
+      "Upper Primary Teacher (Classes 6–8: इ. ६ वी ते ८ वी)",
+      "Mathematics & Science Teacher (इ. ६ वी ते ८ वी)",
+      "Social Science Teacher (इ. ६ वी ते ८ वी)"
+    ],
+    totalVacancies: "State-wide Teacher Eligibility Certification (Pavitra Portal)",
+    applicationFee: { general: "₹500 (Paper 1 or 2) / ₹800 (Both Papers)", reserved: "₹250 (Paper 1 or 2) / ₹400 (Both Papers)" },
+    ageLimit: { min: 18, max: 40, note: "शासकीय नियमांनुसार कमाल वयोमर्यादेत आरक्षण वर्ग व अपंग उमेदवारांना नियमांनुसार सूट" },
+    eligibility: "Paper 1 (Primary): 12th Passed (min 50%) + 2-year Diploma in Elementary Education (D.El.Ed / D.Ed). Paper 2 (Upper Primary): Graduate in relevant stream + B.Ed or D.El.Ed (Final year appearing candidates eligible).",
+    stages: [
+      "Paper I: Primary Tier (Classes 1 to 5 — 150 Marks / 150 MCQs)",
+      "Paper II: Upper Primary Tier (Classes 6 to 8 — 150 Marks / 150 MCQs)"
+    ],
+    officialWebsite: "https://www.mahatet.in",
+    notificationUrl: "https://www.mahatet.in/Notices/QuestionPaper/ShowPreviousQuestionPapers",
+    pdfUrl: "/downloads/mahatet/syllabus/MAHATET_Syllabus.pdf",
+    papers: [
+      {
+        stage: "Paper I: प्राथमिक स्तर (इ. १ ली ते ५ वी) — १५० गुण",
+        papers: [
+          {
+            name: "Paper 1: Primary Teacher Eligibility (Classes 1 to 5)",
+            marks: 150,
+            questions: 150,
+            duration: "2 तास 30 मिनिटे (150 Mins)",
+            type: "MCQ (वस्तुनिष्ठ बहुपर्यायी — No Negative Marking)",
+            topics: [
+              {
+                name: "बालमानसशास्त्र व अध्यापनशास्त्र (Child Development & Pedagogy — 30 Marks)",
+                subtopics: [
+                  "६ ते ११ वर्षे वयोगटातील विद्यार्थ्यांचे अध्ययन-अध्यापन मानसशास्त्र",
+                  "बालविकासाच्या अवस्था, शारीरिक, मानसिक व भावनिक विकास",
+                  "अध्ययनाची उपपत्ती व अध्ययनार्थीची व्यक्तिगत वैशिष्ट्ये",
+                  "समावेशक शिक्षण व विशेष गरजा असणारी बालके",
+                  "शालेय आंतरक्रिया, अध्यापन पद्धती व मूल्यमापन तंत्रे"
+                ]
+              },
+              {
+                name: "भाषा - १: मराठी भाषा व व्याकरण (Language 1 — 30 Marks)",
+                subtopics: [
+                  "वर्णविचार, नाम, सर्वनाम, विशेषण व क्रियापद",
+                  "समास, प्रयोग, वाक्यप्रकार व वाक्यपृथक्करण",
+                  "समानार्थी व विरुद्धार्थी शब्द, वाक्प्रचार व म्हणी",
+                  "अपठित गद्य व पद्य आकलन (Comprehension Passages)",
+                  "इ. १ ली ते ५ वी प्रचलित अभ्यासक्रमातील भाषिक उद्दिष्टे"
+                ]
+              },
+              {
+                name: "भाषा - २: English Language & Grammar (Language 2 — 30 Marks)",
+                subtopics: [
+                  "Parts of Speech, Nouns, Pronouns, Adjectives, Verbs & Adverbs",
+                  "Tenses, Active & Passive Voice, Direct & Indirect Speech",
+                  "Prepositions, Conjunctions & Articles",
+                  "Synonyms, Antonyms, Spellings & Vocabulary",
+                  "Unseen Reading Comprehension Passages"
+                ]
+              },
+              {
+                name: "गणित व अंकगणित (Mathematics — 30 Marks)",
+                subtopics: [
+                  "संख्याज्ञान, स्थानिक किंमत, दर्शनी किंमत व मूलभूत क्रिया",
+                  "लसावि व मसावि (LCM & HCF), अपूर्णांक व दशांश अपूर्णांक",
+                  "शेकडेवारी, नफा-तोटा, सरळव्याज व सरासरी",
+                  "भूमिती: कोन, त्रिकोण, चौकोन, परिमिती व क्षेत्रफळ",
+                  "गणितातील मूलभूत संबोध, तार्किकता व समस्या निराकरण"
+                ]
+              },
+              {
+                name: "परिसर अभ्यास (Environmental Studies — EVS 30 Marks)",
+                subtopics: [
+                  "आपला परिसर, सजीव सृष्टी, वनस्पती व प्राणी जीवन",
+                  "इतिहास: छत्रपती शिवाजी महाराज व स्वराज्य निर्मिती",
+                  "नागरिकशास्त्र: कुटुंब, समाज, स्थानिक स्वराज्य संस्था व संविधान मूलभूत कर्तव्ये",
+                  "भूगोल: महाराष्ट्र व भारताचा प्राकृतिक भूगोल, हवामान व जलसंपदा",
+                  "पर्यावरण संवर्धन, आपत्ती व्यवस्थापन, आरोग्य व पोषण"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        stage: "Paper II: उच्च प्राथमिक स्तर (इ. ६ वी ते ८ वी) — १५० गुण",
+        papers: [
+          {
+            name: "Paper 2: Upper Primary Teacher Eligibility (Classes 6 to 8)",
+            marks: 150,
+            questions: 150,
+            duration: "2 तास 30 मिनिटे (150 Mins)",
+            type: "MCQ (वस्तुनिष्ठ बहुपर्यायी — No Negative Marking)",
+            topics: [
+              {
+                name: "बालमानसशास्त्र व अध्यापनशास्त्र (Child Development & Pedagogy — 30 Marks)",
+                subtopics: [
+                  "११ ते १४ वर्षे वयोगटातील विद्यार्थ्यांचे अध्ययन-अध्यापन मानसशास्त्र",
+                  "किशोरावस्थेतील शारीरिक, बौद्धिक, सामाजिक व भावनिक बदल",
+                  "अध्ययनाचे नियम, प्रेरणेचे महत्त्व व स्मरण-विस्मरण प्रक्रिया",
+                  "समावेशक शिक्षण, विशेष शिक्षण गरजा व अध्ययन अक्षमता",
+                  "बी.एड. व डी.एल.एड. आधारित अध्यापनशास्त्र, मूल्यमापन व सातत्यपूर्ण सर्वंकष मूल्यमापन (CCE)"
+                ]
+              },
+              {
+                name: "भाषा - १ (Language 1 — 30 Marks)",
+                subtopics: [
+                  "इ. ६ वी ते ८ वी प्रचलित अभ्यासक्रमातील भाषा कौशल्ये",
+                  "उच्च मराठी व्याकरण: संधि, अलंकार, वृत्त, रसविचार व शब्दशक्ती",
+                  "वाक्यरूपांतर, शुद्धलेखनाचे नियम, विरामचिन्हे व साहित्य प्रकार",
+                  "साहित्यिक टोपणनावे, प्रसिद्ध ग्रंथ व काव्याकलन"
+                ]
+              },
+              {
+                name: "भाषा - २ (Language 2 — 30 Marks)",
+                subtopics: [
+                  "Grammar at Secondary School Level: Clauses, Synthesis of Sentences",
+                  "Modal Auxiliaries, Question Tags & Idioms",
+                  "Vocabulary enrichment, Word Formation & Collocations",
+                  "Pedagogy of English Language Teaching & Learning Assessment"
+                ]
+              },
+              {
+                name: "पर्यायी विषय गट अ: गणित व विज्ञान (Mathematics & Science — 60 Marks)",
+                subtopics: [
+                  "गणित (३० गुण): घातांक, बैजिक राशी, एकचल समीकरणे, पायथागोरस सिद्धांत, वर्तुळ, घनफळ व पृष्ठफळ, सांख्यिकी व आलेख",
+                  "विज्ञान (३० गुण): गती व बल, कार्य व ऊर्जा, प्रकाश व ध्वनी, उष्णता व चुंबकत्व",
+                  "द्रव्याचे संघटन, आम्ल-आम्लारी, धातू-अधातू व रासायनिक अभिक्रिया",
+                  "पेशी रचना व सूक्ष्मजीव, सजीवांतील जीवनप्रक्रिया, परिसंस्था व जैवविविधता",
+                  "गणित व विज्ञान अध्यापन पद्धती, प्रयोगशाळा कार्य व वैज्ञानिक दृष्टिकोन"
+                ]
+              },
+              {
+                name: "पर्यायी विषय गट ब: सामाजिक शास्त्रे (Social Studies — 60 Marks)",
+                subtopics: [
+                  "इतिहास: प्राचीन संस्कृती (हडप्पा), मौर्य व गुप्त साम्राज्य, मध्ययुगीन भारत, छत्रपती शिवाजी महाराज व पेशवे काळ",
+                  "आधुनिक भारत: १८५७ चा उठाव, राष्ट्रीय चळवळ, स्वातंत्र्य लढा व समाजसुधारक (फुले, शाहू, आंबेडकर)",
+                  "भूगोल: पृथ्वीची रचना, भूरूपे, हवामान प्रदेश, सूर्यमाला, महाराष्ट्र व भारताचा भूगोल, उद्योग व वाहतूक",
+                  "नागरिकशास्त्र व राज्यघटना: भारतीय संविधानाची वैशिष्ट्ये, मूलभूत हक्क, संसद, राष्ट्रपती, न्यायव्यवस्था व स्थानिक स्वराज्य",
+                  "सामाजिक शास्त्रे अध्यापनशास्त्र, शैक्षणिक साधने व प्रकल्प पद्धती"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    officialPdfs: [
+      {
+        id: "mahatet-syllabus-gr",
+        year: 2026,
+        label: "Official MAHA TET Syllabus & GR (परिशिष्ट - अ)",
+        title: "Maharashtra State Council of Examination (MSCE Pune) — Official MAHA TET Syllabus Blueprint (शासन निर्णय २०१३/प्र.क्र.९१/प्राशि-१)",
+        size: "2.93 MB",
+        url: "/downloads/mahatet/syllabus/MAHATET_Syllabus.pdf",
+        badge: "OFFICIAL GR SYLLABUS",
+        isAnswerKey: false
+      },
+      {
+        id: "mahatet-2024-p1-marathi",
+        year: 2024,
+        label: "2024 Paper 1 Marathi Question Paper",
+        title: "MAHA TET 2024 Paper 1 (Primary Classes 1–5) Marathi Medium Official Question Paper",
+        size: "18.1 MB",
+        url: "/downloads/mahatet/question_papers/2024/2024_P1_Marathi.pdf",
+        badge: "2024 PAPER 1",
+        isAnswerKey: false
+      },
+      {
+        id: "mahatet-2024-p1-marathi-key",
+        year: 2024,
+        label: "2024 Paper 1 Marathi Final Key",
+        title: "MAHA TET 2024 Paper 1 Marathi Medium Official Final Answer Key",
+        size: "7.08 MB",
+        url: "/downloads/mahatet/answer_keys/2024/P1_Marathi.pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true
+      },
+      {
+        id: "mahatet-2024-p2-math-marathi",
+        year: 2024,
+        label: "2024 Paper 2 Maths-Science Marathi Paper",
+        title: "MAHA TET 2024 Paper 2 (Maths & Science) Marathi Medium Official Question Paper",
+        size: "16.5 MB",
+        url: "/downloads/mahatet/question_papers/2024/2024_P2_Marathi_MS.pdf",
+        badge: "2024 PAPER 2 MS",
+        isAnswerKey: false
+      },
+      {
+        id: "mahatet-2024-p2-math-marathi-key",
+        year: 2024,
+        label: "2024 Paper 2 Maths-Science Final Key",
+        title: "MAHA TET 2024 Paper 2 (Maths & Science) Marathi Medium Official Final Answer Key",
+        size: "834 KB",
+        url: "/downloads/mahatet/answer_keys/2024/P2_Marathi_MS.pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true
+      },
+      {
+        id: "mahatet-2024-p2-social-marathi",
+        year: 2024,
+        label: "2024 Paper 2 Social Science Marathi Paper",
+        title: "MAHA TET 2024 Paper 2 (Social Science) Marathi Medium Official Question Paper",
+        size: "15.7 MB",
+        url: "/downloads/mahatet/question_papers/2024/2024_P2_Marathi_SS.pdf",
+        badge: "2024 PAPER 2 SS",
+        isAnswerKey: false
+      },
+      {
+        id: "mahatet-2024-p2-social-marathi-key",
+        year: 2024,
+        label: "2024 Paper 2 Social Science Final Key",
+        title: "MAHA TET 2024 Paper 2 (Social Science) Marathi Medium Official Final Answer Key",
+        size: "699 KB",
+        url: "/downloads/mahatet/answer_keys/2024/P2_Marathi_SS.pdf",
+        badge: "FINAL KEY",
+        isAnswerKey: true
+      }
+    ],
+    pyqLinks: [
+      {
+        year: 2024,
+        exam: "MAHA TET 2024 Paper 1 Marathi",
+        label: "MAHA TET 2024 Paper 1 Marathi Question Paper & Final Key",
+        paperUrl: "/downloads/mahatet/question_papers/2024/2024_P1_Marathi.pdf",
+        answerKeyUrl: "/downloads/mahatet/answer_keys/2024/P1_Marathi.pdf",
+        url: "/downloads/mahatet/question_papers/2024/2024_P1_Marathi.pdf"
+      },
+      {
+        year: 2024,
+        exam: "MAHA TET 2024 Paper 2 Math-Sci",
+        label: "MAHA TET 2024 Paper 2 Maths & Science Question Paper & Key",
+        paperUrl: "/downloads/mahatet/question_papers/2024/2024_P2_Marathi_MS.pdf",
+        answerKeyUrl: "/downloads/mahatet/answer_keys/2024/P2_Marathi_MS.pdf",
+        url: "/downloads/mahatet/question_papers/2024/2024_P2_Marathi_MS.pdf"
+      },
+      {
+        year: 2024,
+        exam: "MAHA TET 2024 Paper 2 Social Science",
+        label: "MAHA TET 2024 Paper 2 Social Studies Question Paper & Key",
+        paperUrl: "/downloads/mahatet/question_papers/2024/2024_P2_Marathi_SS.pdf",
+        answerKeyUrl: "/downloads/mahatet/answer_keys/2024/P2_Marathi_SS.pdf",
+        url: "/downloads/mahatet/question_papers/2024/2024_P2_Marathi_SS.pdf"
+      }
+    ],
+    books: [
+      { title: "बालमानसशास्त्र व अध्यापनशास्त्र — डी.एल.एड. / डी.टी.एड. फडके प्रकाशन", useFor: "Paper 1 & Paper 2 Child Development (30 Marks)" },
+      { title: "सुगम मराठी व्याकरण व लेखन — मो. रा. वाळंबे", useFor: "Paper 1 & 2 Marathi Grammar & Comprehension (30 Marks)" },
+      { title: "High School English Grammar & Composition — Wren & Martin", useFor: "Paper 1 & 2 English Language (30 Marks)" },
+      { title: "महाराष्ट्र राज्य पाठ्यपुस्तक निर्मिती मंडळ (बालभारती) — इ. १ ली ते १० वी पाठ्यपुस्तके", useFor: "Mathematics, Science, EVS & Social Science Core Reference" },
+      { title: "MAHA TET पेपर १ व २ संपूर्ण मार्गदर्शक — के'सागर (K'Sagar Publications)", useFor: "Comprehensive PYQ Analysis & Practice Sets" }
+    ],
+    youtubeQuery: "MAHA TET syllabus paper 1 paper 2 preparation strategy marathi",
+    relatedExams: ["maharashtra-police", "maharashtra-talathi", "maharashtra-zp", "mpsc-combined"]
+  },
 ]
 
 // Defensive Aliases: Map legacy or previously broadcasted syllabus slugs to real canonical exams
@@ -2405,7 +2671,10 @@ export const SYLLABUS_SLUG_ALIASES = {
   'zp-recruitment': 'maharashtra-zp',
   'arogya-sevak': 'maharashtra-arogya-vibhag',
   'mpsc-civil-judge': 'mpsc-state-services',
-  'tet-mahatet': 'mpsc-state-services',
+  'maha-tet': 'maha-tet',
+  'mahatet': 'maha-tet',
+  'mahatet-syllabus': 'maha-tet',
+  'tet-mahatet': 'maha-tet',
 }
 
 // Helper: get exam by slug with verified downloadable officialPdfs only
@@ -2438,6 +2707,7 @@ export function getMockTestForExam(slug) {
     'maharashtra-talathi': { slug: 'maharashtra-talathi-tcs-mock', label: 'तलाठी भरती TCS 100-Q Mock' },
     'maharashtra-zp': { slug: 'maharashtra-talathi-tcs-mock', label: 'ZP भरती IBPS Mock Drill' },
     'maharashtra-nagar-parishad': { slug: 'maharashtra-talathi-tcs-mock', label: 'नगर परिषद TCS Mock Drill' },
+    'maha-tet': { slug: 'mpsc-combined-full-prelims', label: 'TET Pedagogy & GS Mock' },
     'ssc-cgl': { slug: 'ssc-cgl-general-awareness', label: 'SSC CGL General Awareness Mock' },
     'ssc-chsl': { slug: 'ssc-cgl-general-awareness', label: 'SSC General Awareness Drill' },
   }
@@ -2451,6 +2721,9 @@ export function getSyllabusForMockTest(test) {
   const examType = (test.examType || '').toLowerCase()
   const title = (test.title || '').toLowerCase()
 
+  if (slug.includes('tet') || examType.includes('tet') || title.includes('tet') || title.includes('टीईटी') || title.includes('शिक्षक पात्रता')) {
+    return { slug: 'maha-tet', name: 'महाराष्ट्र शिक्षक पात्रता परीक्षा (MAHA TET)', path: '/syllabus/maha-tet' }
+  }
   if (slug.includes('police') || examType.includes('police') || title.includes('police') || title.includes('पोलीस')) {
     return { slug: 'maharashtra-police', name: 'महाराष्ट्र पोलीस शिपाई भरती', path: '/syllabus/maharashtra-police' }
   }
@@ -2477,6 +2750,9 @@ export function getSyllabusForJob(job) {
   if (!job) return null
   const text = `${job.title || ''} ${job.org_name || ''} ${job.org_acronym || ''}`.toLowerCase()
 
+  if (text.includes('tet') || text.includes('mahatet') || text.includes('शिक्षक पात्रता') || text.includes('tait') || text.includes('pavitra')) {
+    return { slug: 'maha-tet', name: 'महाराष्ट्र शिक्षक पात्रता परीक्षा (MAHA TET)', path: '/syllabus/maha-tet' }
+  }
   if (text.includes('police driver') || text.includes('पोलीस चालक') || text.includes('srpf')) {
     return { slug: 'pune-mumbai-police-driver', name: 'महाराष्ट्र पोलीस चालक व SRPF शिपाई', path: '/syllabus/pune-mumbai-police-driver' }
   }

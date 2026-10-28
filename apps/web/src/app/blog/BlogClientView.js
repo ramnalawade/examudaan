@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/blog/BlogClientView.js — Client Interactive Component for Blog Hub
 // ============================================================
 
@@ -178,7 +178,7 @@ export default function BlogClientView({ initialPosts = [] }) {
           </div>
           <a
             href="https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             rel="noopener noreferrer"
             className={styles.whatsappBtn}
           >

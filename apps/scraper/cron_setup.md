@@ -100,4 +100,4 @@ Logs are saved to `apps/scraper/logs/`:
 2. Spiders crawl new pages; pages where the last 3 consecutive pages are all duplicates are skipped automatically
 3. New PDFs are parsed via Gemini (key rotation + rate limiting built-in)
 4. Results are saved to PostgreSQL
-5. At end of crawl, Brevo sends a summary email to ramnalawade1986@gmail.com
+5. At end of crawl, Brevo sends a summary email to virajnalawade2010@gmail.com

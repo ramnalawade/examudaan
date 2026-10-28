@@ -849,3 +849,474 @@
   font-weight: 700;
 }
 
+
+
+/* ── Additional classes added by audit migration ─────────────── */
+.breadcrumbContainer {
+  padding-top: 16px;
+}
+.mainContent {
+  padding-top: 28px;
+}
+.streamBannerIcon {
+  font-size: 24px;
+}
+.streamEligibility {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #57534e;
+  font-weight: 400;
+}
+.searchResultsHeader {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchResultsCount {
+  font-size: 15px;
+  color: #44403c;
+  font-weight: 600;
+}
+.clearSearchBtn {
+  background: none;
+  border: none;
+  color: #ea580c;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+.noResultsBox {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e7e5e4;
+}
+.noResultsIcon {
+  font-size: 48px;
+  color: #ea580c;
+  margin-bottom: 12px;
+  display: block;
+}
+.noResultsTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #1c1917;
+}
+.noResultsText {
+  font-size: 14px;
+  color: #78716c;
+  margin: 0 0 16px;
+}
+.salaryEntryRight {
+  text-align: right;
+}
+.salaryHighlight {
+  color: #047857;
+}
+.examName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1c1917;
+}
+.examDate {
+  font-size: 13px;
+  color: #44403c;
+}
+.examVacancy {
+  font-size: 12px;
+  color: #047857;
+  font-weight: 700;
+}
+.cardButtonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+.cardBtnNoMargin {
+  margin-top: 0;
+}
+.btnIcon {
+  font-size: 16px;
+}
+.btnIconSm {
+  font-size: 15px;
+}
+.sectionSpacingLg {
+  margin-top: 48px;
+}
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ea580c;
+  letter-spacing: 0.1em;
+}
+.sectionTitle {
+  font-family: Outfit, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1c1917;
+  margin: 6px 0 8px;
+}
+.sectionDesc {
+  font-size: 14px;
+  color: #57534e;
+  margin: 0;
+}
+.ctaSection {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  border-radius: 16px;
+  padding: 32px 24px;
+  margin-bottom: 48px;
+}
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ── CareerExplorer: ITI Technical Ladder ────────────────── */
+.techLadderBadge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: #7c3aed;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.techLadderTitle {
+  font-family: Outfit, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #4c1d95;
+  margin: 8px 0 4px;
+}
+.techLadderSubtitle {
+  font-size: 14px;
+  color: #5b21b6;
+  margin: 0;
+}
+.techLadderBtn {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  font-size: 13px;
+  padding: 10px 18px;
+  white-space: nowrap;
+}
+.techLadderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.techLadderSection {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  border: 1.5px solid #c4b5fd;
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+.ladderStepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+.ladderStepCard {
+  background: #fff;
+  border: 1px solid #ddd6fe;
+  border-radius: 12px;
+  padding: 16px;
+}
+.ladderStepHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.ladderStepNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+}
+.ladderStepTitle {
+  font-size: 15px;
+  color: #1c1917;
+}
+.ladderStepDesc {
+  font-size: 13px;
+  color: #57534e;
+  margin: 0 0 10px;
+  line-height: 1.45;
+}
+.jobExitBadge {
+  font-size: 12px;
+  color: #047857;
+  font-weight: 700;
+  background: #ecfdf5;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.jobExitBadgeBlue {
+  color: #0284c7;
+  background: #f0f9ff;
+}
+.jobExitBadgePurple {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+/* ── CareerExplorer: FAQ Section ─────────────────────────── */
+.faqSection {
+  margin-top: 40px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e7e5e4;
+  padding: 32px 28px;
+}
+.faqTitle {
+  font-family: Outfit, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1c1917;
+  margin: 0 0 20px;
+}
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.faqItem {
+  background: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+.faqQuestion {
+  font-weight: 700;
+  color: #1c1917;
+  cursor: pointer;
+  font-size: 15px;
+}
+.faqAnswer {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #57534e;
+  line-height: 1.55;
+}
+
+/* ── CareerExplorer: Modal Dossier ───────────────────────── */
+.advisoryIcon {
+  color: #ea580c;
+  font-size: 24px;
+}
+.eligibilityBox {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.iconOrange { color: #ea580c; }
+.iconBlue { color: #0284c7; }
+.iconGreen { color: #059669; }
+.iconPurple { color: #7c3aed; }
+.iconPink { color: #be185d; }
+.iconAmber { color: #b45309; font-size: 22px; }
+.iconAmberDark { color: #d97706; }
+.eligibilityText {
+  font-size: 13.5px;
+  color: #7c2d12;
+  font-weight: 600;
+}
+.fullPageBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.fullPageBannerText {
+  font-size: 13px;
+  color: #1e40af;
+}
+.fullPageBannerBtn {
+  font-size: 12px;
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+.examCycleBox {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.examCycleText {
+  font-size: 13px;
+  color: #92400e;
+}
+.syllabusPatternBox {
+  background: #fdf2f8;
+  border: 1px solid #fbcfe8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #831843;
+}
+.syllabusPortionList {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #44403c;
+  line-height: 1.6;
+}
+.syllabusLi {
+  margin-bottom: 4px;
+}
+.ladderNote { font-size: 11px; color: #065f46; }
+.ladderNoteBlue { font-size: 11px; color: #1e40af; }
+.ladderNoteRed { font-size: 11px; color: #991b1b; }
+.salaryNiche {
+  font-size: 12.5px;
+  color: #57534e;
+  background: #fafaf9;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.scopeSummary {
+  font-size: 14px;
+  color: #292524;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+.aiImpactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+.aiImpactCard {
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 8px;
+  padding: 12px;
+}
+.aiImpactLabel {
+  font-size: 12px;
+  color: #6d28d9;
+  text-transform: uppercase;
+}
+.aiImpactValue {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #4c1d95;
+  font-weight: 600;
+}
+.growthCard {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  padding: 12px;
+}
+.growthLabel {
+  font-size: 12px;
+  color: #047857;
+  text-transform: uppercase;
+}
+.growthValue {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #065f46;
+}
+.skillsList {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13.5px;
+  color: #44403c;
+  line-height: 1.6;
+}
+.skillsLi { margin-bottom: 6px; }
+.collegesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+.collegeCard {
+  background: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.collegeName {
+  font-size: 13.5px;
+  color: #1c1917;
+  display: block;
+}
+.collegeMeta {
+  font-size: 12px;
+  color: #78716c;
+}
+.tableScrollWrapper { overflow-x: auto; }
+.examTableLink {
+  color: #ea580c;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.cardFullPageBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border-color: #fdba74;
+  color: #ea580c;
+  background: #fff;
+}
+.synergyBtns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.synergyBtnDark { font-size: 13px; padding: 8px 16px; background: #1c1917; }
+.synergyBtnPrimary { font-size: 13px; padding: 8px 16px; }
+.synergyBtnOutline { font-size: 13px; padding: 8px 16px; background: #fff; }

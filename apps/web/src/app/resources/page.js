@@ -1,10 +1,11 @@
-// ============================================================
+﻿// ============================================================
 // app/resources/page.js — ExamUdaan Resources Hub
 // Simplified: links to dedicated pages + Syllabus PDF directory
 // YouTube channels → /youtube | AI Tools → /ai-tools
 // ============================================================
 
 import Link from 'next/link'
+import { REAL_AI_TOOLS_COUNT, REAL_CAREERS_COUNT } from '@/lib/platformStats'
 
 export const metadata = {
   title: 'Free Study Resources \u2014 Syllabus, YouTube & AI Tools',
@@ -78,10 +79,10 @@ const QUICK_LINKS = [
   {
     icon: 'smart_toy',
     title: 'AI Tools for Study',
-    desc: '124+ curated AI tools — NotebookLM, Claude, Gamma, Perplexity, Knowt — each with a step-by-step how-to guide.',
+    desc: `${REAL_AI_TOOLS_COUNT}+ curated AI tools — NotebookLM, Claude, Gamma, Perplexity, Knowt — each with a step-by-step how-to guide.`,
     href: '/ai-tools',
-    cta: 'Explore 124 AI Tools',
-    badge: '124 Free & Pro Tools',
+    cta: `Explore ${REAL_AI_TOOLS_COUNT} AI Tools`,
+    badge: `${REAL_AI_TOOLS_COUNT} Free & Pro Tools`,
     bg: 'var(--primary)',
   },
   {
@@ -90,7 +91,7 @@ const QUICK_LINKS = [
     desc: 'Complete career options after 10th & 12th across Science, Commerce, Arts, and Polytechnic with salary ladders.',
     href: '/career',
     cta: 'Explore Careers',
-    badge: '40+ Career Paths',
+    badge: `${REAL_CAREERS_COUNT}+ Career Paths`,
     bg: '#EA580C',
   },
   {
@@ -225,7 +226,7 @@ export default function ResourcesPage() {
                   ) : (
                     <a
                       href={item.url}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       rel="noopener noreferrer"
                       style={{
                         fontSize: 12, fontWeight: 700, color: 'var(--primary)',

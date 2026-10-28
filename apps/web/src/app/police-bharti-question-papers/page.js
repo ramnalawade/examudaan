@@ -214,38 +214,62 @@ export default function PoliceBhartiQuestionPapersPage() {
           </div>
 
           <div className={styles.patternGrid}>
-            <div className={styles.patternCard}>
-              <h3 className={styles.patternSubject}>Marathi Grammar</h3>
+            <Link href="/pyq/marathi" className={styles.patternCard} title="Solve Marathi Grammar PYQs">
+              <div className={styles.patternCardHeader}>
+                <h3 className={styles.patternSubject}>Marathi Grammar</h3>
+                <span className={styles.patternArrowIcon}>→</span>
+              </div>
               <div className={styles.patternSubjectMr}>मराठी व्याकरण व शब्दसंग्रह</div>
               <div className={styles.patternMarksRow}>
                 <span>Questions: <strong>25 Qs</strong></span>
                 <span className={styles.patternMarksVal}>25 Marks</span>
               </div>
-            </div>
-            <div className={styles.patternCard}>
-              <h3 className={styles.patternSubject}>Mathematics</h3>
+              <div className={styles.patternCardCta}>
+                <span>Solve Subject PYQs →</span>
+              </div>
+            </Link>
+            <Link href="/pyq/reasoning" className={styles.patternCard} title="Solve Mathematics PYQs">
+              <div className={styles.patternCardHeader}>
+                <h3 className={styles.patternSubject}>Mathematics</h3>
+                <span className={styles.patternArrowIcon}>→</span>
+              </div>
               <div className={styles.patternSubjectMr}>अंकगणित व संख्याज्ञान</div>
               <div className={styles.patternMarksRow}>
                 <span>Questions: <strong>25 Qs</strong></span>
                 <span className={styles.patternMarksVal}>25 Marks</span>
               </div>
-            </div>
-            <div className={styles.patternCard}>
-              <h3 className={styles.patternSubject}>Intellectual Test</h3>
+              <div className={styles.patternCardCta}>
+                <span>Solve Subject PYQs →</span>
+              </div>
+            </Link>
+            <Link href="/pyq/reasoning" className={styles.patternCard} title="Solve Intellectual Test PYQs">
+              <div className={styles.patternCardHeader}>
+                <h3 className={styles.patternSubject}>Intellectual Test</h3>
+                <span className={styles.patternArrowIcon}>→</span>
+              </div>
               <div className={styles.patternSubjectMr}>बुद्धिमत्ता चाचणी व तर्क</div>
               <div className={styles.patternMarksRow}>
                 <span>Questions: <strong>25 Qs</strong></span>
                 <span className={styles.patternMarksVal}>25 Marks</span>
               </div>
-            </div>
-            <div className={styles.patternCard}>
-              <h3 className={styles.patternSubject}>General Knowledge</h3>
+              <div className={styles.patternCardCta}>
+                <span>Solve Subject PYQs →</span>
+              </div>
+            </Link>
+            <Link href="/pyq/polity" className={styles.patternCard} title="Solve General Knowledge PYQs">
+              <div className={styles.patternCardHeader}>
+                <h3 className={styles.patternSubject}>General Knowledge</h3>
+                <span className={styles.patternArrowIcon}>→</span>
+              </div>
               <div className={styles.patternSubjectMr}>सामान्य ज्ञान व चालू घडामोडी</div>
               <div className={styles.patternMarksRow}>
                 <span>Questions: <strong>25 Qs</strong></span>
                 <span className={styles.patternMarksVal}>25 Marks</span>
               </div>
-            </div>
+              <div className={styles.patternCardCta}>
+                <span>Solve Subject PYQs →</span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -286,12 +310,12 @@ export default function PoliceBhartiQuestionPapersPage() {
                       <td>{p.marks}</td>
                       <td>
                         <Link href="/question-papers" className={styles.btnDownloadPaper}>
-                          <span className="material-symbols-outlined">visibility</span> Read Paper
+                          <span className="material-symbols-outlined">visibility</span> View Paper
                         </Link>
                       </td>
                       <td>
                         <Link href="/answer-keys" className={styles.btnDownloadKey}>
-                          <span className="material-symbols-outlined">task_alt</span> Verified Key
+                          <span className="material-symbols-outlined">key</span> View Answer Key
                         </Link>
                       </td>
                     </tr>
@@ -321,10 +345,10 @@ export default function PoliceBhartiQuestionPapersPage() {
                   </div>
                   <div className={styles.mobileActionRow}>
                     <Link href="/question-papers" className={styles.mobileBtnPaper}>
-                      <span className="material-symbols-outlined">visibility</span> Read Paper
+                      <span className="material-symbols-outlined">visibility</span> View Paper
                     </Link>
                     <Link href="/answer-keys" className={styles.mobileBtnKey}>
-                      <span className="material-symbols-outlined">task_alt</span> Verified Key
+                      <span className="material-symbols-outlined">key</span> View Answer Key
                     </Link>
                   </div>
                 </div>

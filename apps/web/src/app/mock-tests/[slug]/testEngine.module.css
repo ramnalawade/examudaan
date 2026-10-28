@@ -1357,4 +1357,59 @@
   gap: 4px;
 }
 
+/* ── Zero-Inline-Styles Utility Classes ── */
+.breadcrumbNav {
+  padding: 16px 0;
+}
+
+.blueprintBadge {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #6ee7b7;
+}
+
+.sectionsBox {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+}
+
+.sectionsTitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #1e293b;
+}
+
+.sectionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.sectionItem {
+  font-size: 13px;
+  color: #475569;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.btnPreparation {
+  background: #EA580C;
+  border-color: #C2410C;
+}
+
+.btnPreparation:hover {
+  background: #c2410c;
+}
+
+
 

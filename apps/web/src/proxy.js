@@ -91,9 +91,20 @@ export function proxy(request) {
 
   const lowerUa = ua.toLowerCase()
 
-  // 2. Allow whitelisted search engines & social previews
+  const isDocOrPdf = pathname.startsWith('/downloads/') || pathname.endsWith('.pdf') || pathname.startsWith('/api/mpsc-pdf')
+
+  // 2. Allow whitelisted search engines & social previews (BUT disallow direct PDF binaries)
   const isWhitelisted = WHITELISTED_BOTS.some(bot => lowerUa.includes(bot))
   if (isWhitelisted) {
+    if (isDocOrPdf) {
+      return new Response('Access Denied: Document archiving disallowed.', {
+        status: 403,
+        headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+          'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet',
+        },
+      })
+    }
     return NextResponse.next()
   }
 
@@ -109,13 +120,60 @@ export function proxy(request) {
     })
   }
 
-  // 4. Rate Limiting on API and Document Stream Endpoints
+  // 4. Crawl-Proof PDF & Document Protection
+  // Prevents automated bots, external hotlinkers, or scripts from harvesting papers
   let rateCheck = null
-  if (pathname.startsWith('/api/')) {
-    const clientIp = getClientIp(request)
+  const clientIp = getClientIp(request)
 
-    // A. PDF & Question Paper Streamer: Strict 15 docs/minute
-    if (pathname.startsWith('/api/mpsc-pdf')) {
+  if (isDocOrPdf) {
+    const isRangeReq = Boolean(request.headers.get('range'))
+    if (!isRangeReq) {
+      rateCheck = pdfLimiter.check(clientIp)
+      if (!rateCheck.allowed) {
+        return pdfLimiter.create429Response(rateCheck, 'Document access rate limit exceeded. Please wait a moment before viewing more papers.')
+      }
+    }
+
+    const referer = request.headers.get('referer') || ''
+    const secFetchSite = request.headers.get('sec-fetch-site') || ''
+    const secFetchDest = request.headers.get('sec-fetch-dest') || ''
+    const hasInternalReferer = referer.includes('examudaan.in') || referer.includes('localhost') || referer.includes('127.0.0.1')
+    const hasInternalFetch = secFetchSite === 'same-origin' || secFetchSite === 'same-site' || secFetchDest === 'iframe'
+    const hasVerify = Boolean(request.headers.get('x-verify') || request.headers.get('X-Verify'))
+    const isObfuscatedDoc = pathname.includes('/api/mpsc-pdf/doc_')
+
+    // Require internal study workspace context, authenticated token, or cryptographic signature
+    if (!hasInternalReferer && !hasInternalFetch && !hasVerify && !isObfuscatedDoc) {
+      return new Response('Access Denied: Direct document crawling is prohibited. Official question papers can only be viewed in the ExamUdaan study workspace.', {
+        status: 403,
+        headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+          'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet, noimageindex',
+        },
+      })
+    }
+  }
+
+  // 5. Rate Limiting on API Endpoints & Mutating Method Origin Verification
+  if (pathname.startsWith('/api/')) {
+    // Check mutating methods (POST, PUT, DELETE, PATCH)
+    const method = request.method
+    if (['POST', 'PUT', 'DELETE', 'PATCH'].includes(method)) {
+      const origin = request.headers.get('origin') || ''
+      const referer = request.headers.get('referer') || ''
+      const isInternal = origin.includes('examudaan.in') || origin.includes('localhost') || origin.includes('127.0.0.1') ||
+                         referer.includes('examudaan.in') || referer.includes('localhost') || referer.includes('127.0.0.1')
+      const hasVerify = Boolean(request.headers.get('x-verify') || request.headers.get('X-Verify'))
+      if (!isInternal && !hasVerify) {
+        return new Response(JSON.stringify({ status: 403, success: false, message: 'Forbidden: Untrusted API origin' }), {
+          status: 403,
+          headers: { 'Content-Type': 'application/json' },
+        })
+      }
+    }
+
+    // A. PDF & Question Paper Streamer: Strict 15 docs/minute (already checked above if isDocOrPdf)
+    if (pathname.startsWith('/api/mpsc-pdf') && !rateCheck && !request.headers.get('range')) {
       rateCheck = pdfLimiter.check(clientIp)
       if (!rateCheck.allowed) {
         return pdfLimiter.create429Response(rateCheck, 'Document download rate limit exceeded. Please wait a moment before accessing more papers.')
@@ -129,7 +187,7 @@ export function proxy(request) {
       }
     }
     // C. General API endpoints: 120 req/minute
-    else {
+    else if (!isDocOrPdf) {
       rateCheck = apiLimiter.check(clientIp)
       if (!rateCheck.allowed) {
         return apiLimiter.create429Response(rateCheck, 'API request limit exceeded. Please wait a moment before trying again.')
@@ -137,10 +195,16 @@ export function proxy(request) {
     }
   }
 
-  // 5. Pass normal requests with standard security and rate limit headers
+  // 6. Pass normal requests with standard security and rate limit headers
   const response = NextResponse.next()
   response.headers.set('X-Content-Type-Options', 'nosniff')
   response.headers.set('X-Frame-Options', 'SAMEORIGIN')
+
+  if (isDocOrPdf) {
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet, noimageindex')
+    response.headers.set('Content-Security-Policy', "frame-ancestors 'self'")
+    response.headers.set('Content-Disposition', 'inline')
+  }
 
   if (rateCheck) {
     response.headers.set('X-RateLimit-Limit', String(rateCheck.limit))

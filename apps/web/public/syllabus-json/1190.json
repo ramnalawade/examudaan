@@ -1,0 +1,103 @@
+{
+  "docId": 1190,
+  "examName": "Assistant Preliminary Examination",
+  "examNameMr": "सहायक (पूर्व) परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2013,
+  "language": "Marathi",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Objective",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Capacity",
+      "paperTitleMr": "सामान्य क्षमता",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Affairs",
+          "unitTitleMr": "चालू घडामोडी",
+          "topics": [
+            "Current affairs - global and national"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Civics",
+          "unitTitleMr": "नागरिकशास्त्र",
+          "topics": [
+            "Primary study of the Constitution of India",
+            "State governance (administration)",
+            "Gram administration (administration)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "History",
+          "unitTitleMr": "आधुनिक भारताचा विशेषतः महाराष्ट्राचा इतिहास",
+          "topics": [
+            "History of Modern India with special reference to Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Geography",
+          "unitTitleMr": "भूगोल",
+          "topics": [
+            "Geography (with special study of Maharashtra geography)",
+            "Earth",
+            "World divisions",
+            "Climate",
+            "Latitudes and longitudes",
+            "Types of soil in Maharashtra",
+            "Rainfall",
+            "Major crops",
+            "Cities",
+            "Rivers",
+            "Industries, etc."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Economy",
+          "unitTitleMr": "अर्थव्यवस्था",
+          "topics": [
+            "Indian Economy - National Income, Agriculture, Industry, Foreign Trade, Banking, Population, Poverty and Unemployment",
+            "Currency and Fiscal Policy, etc.",
+            "Government Economy - Budget, Accounts, Audit, etc."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "General Science",
+          "unitTitleMr": "सामान्य विज्ञान",
+          "topics": [
+            "Physics",
+            "Chemistry",
+            "Zoology",
+            "Botany",
+            "Hygiene"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Intelligence Test and Arithmetic",
+          "unitTitleMr": "बुद्धिमापन चाचणी व अंकगणित",
+          "topics": [
+            "Intelligence test and arithmetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

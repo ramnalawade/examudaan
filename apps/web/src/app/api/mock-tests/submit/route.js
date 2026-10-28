@@ -7,6 +7,7 @@
 import { query } from '../../../../lib/pgdb'
 import { ok, badRequest, serverError } from '../../../../lib/apiResponse'
 import { getExamUseCaseRoute } from '../../../../lib/examRoutes'
+import { withValidation, schemas } from '../../../../lib/validate'
 
 /**
  * Ensures the mock_test_attempts table exists in PostgreSQL.
@@ -161,7 +162,7 @@ function generatePersonalizedRoadmap({ targetExam, weakestSubjects, testSlug, pe
   }
 }
 
-export async function POST(req) {
+async function mockTestSubmitHandler(req) {
   try {
     const body = await req.json().catch(() => ({}))
 
@@ -233,8 +234,8 @@ export async function POST(req) {
       ]
 
       const res = await query(insertSql, params)
-      if (res && res.rows && res.rows.length > 0) {
-        attemptId = res.rows[0].id
+      if (res && res.length > 0) {
+        attemptId = res[0].id
       }
     } catch (dbErr) {
       console.warn('[mock-tests/submit] DB insert error (non-fatal):', dbErr.message)
@@ -251,3 +252,5 @@ export async function POST(req) {
     return serverError('Failed to record test submission: ' + err.message)
   }
 }
+
+export const POST = withValidation(schemas.mockTestSubmit, mockTestSubmitHandler)

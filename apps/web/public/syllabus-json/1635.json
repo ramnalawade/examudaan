@@ -1,0 +1,112 @@
+{
+  "docId": 1635,
+  "examName": "Assistant Professor- Marketing, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": "सहाय्यक प्राध्यापक- मार्केटिंग, महाराष्ट्र शिक्षण सेवा, गट - अ (संस्थेची शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Marketing, Maharashtra Education Services, Group - A (Collegiate Branch)",
+      "paperTitleMr": "सहाय्यक प्राध्यापक- मार्केटिंग, महाराष्ट्र शिक्षण सेवा, गट - अ (संस्थेची शाखा)",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marketing Environment and Concepts",
+          "unitTitleMr": null,
+          "topics": [
+            "Marketing environment and Environment scanning",
+            "Marketing Information Systems and Marketing research",
+            "Understanding consumer and industrial markets",
+            "Demand Measurement and Forecasting",
+            "Market Segmentation, Targeting and Positioning",
+            "Marketing-Concept, Nature and Scope",
+            "Marketing myopia",
+            "Marketing mix",
+            "Different environments and their influences on marketing",
+            "Understanding the customer and competition",
+            "Role and Relevance of Segmentation and Positioning"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Product and Pricing Decisions",
+          "unitTitleMr": null,
+          "topics": [
+            "Product decisions, Product mix, Product Life Cycle",
+            "New product development",
+            "Branding and Packaging",
+            "Pricing methods and strategies",
+            "Static and Dynamic understanding of BCG Matrix and Product Life Cycle",
+            "Brands-Meaning and Role",
+            "Brand building strategies",
+            "Share increasing strategies",
+            "Pricing objectives",
+            "Pricing concepts",
+            "Pricing methods",
+            "Product-Basic and Augmented stages in New Product Developments",
+            "Test marketing concepts"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Promotion and Distribution Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Promotion decisions-Promotion mix",
+            "Advertising",
+            "Personal selling",
+            "Channel management",
+            "Vertical marketing systems",
+            "Evaluation and control of marketing effort",
+            "Marketing of services",
+            "Customer relation management",
+            "Promotion mix-Role and Relevance of advertising",
+            "Sales promotion-media planning and management",
+            "Advertising-Planning, execution and evaluation",
+            "Different tools used in sales promotion and their specific advantages and limitations",
+            "Public Relations-Concept and Relevance",
+            "Distribution channel hierarchy",
+            "Role of each member in the channel",
+            "Analysis of business potential and evaluation of performance of the channel members",
+            "Wholesaling and Retailing-Different types and the strengths of each one",
+            "Emerging issues in different kinds of retailing in India"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Advanced Marketing and Digital Media",
+          "unitTitleMr": null,
+          "topics": [
+            "Uses of internet as a marketing medium-other related issues like branding, market development, Advertising and retailing on the net",
+            "New issues in Marketing",
+            "Marketing research-sources of information, Data collection, Basic tools used in data analysis, Structuring a research report",
+            "Marketing to organisations-Segmentation models, Buyer behaviour models, Organisational buying process",
+            "Consumer Behaviour theories and models and their specific relevance to marketing managers",
+            "Sales Function-Role of technology in automation of sales function",
+            "Customer relationship management including the concept of 'Relationship marketing'",
+            "Use of internet as a medium of marketing",
+            "Managerial issues in reaching consumers/organisation through internet",
+            "Structuring and managing marketing organisations",
+            "Export Marketing-Indian and global context"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written Test & Interview."
+  ]
+}

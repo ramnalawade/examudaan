@@ -7,16 +7,81 @@ import { AI_TOOLS } from './aiToolsData.js'
 import { MOCK_TESTS } from './mockTestsData.js'
 import { SYLLABUS_EXAMS } from './syllabusData.js'
 import { CAREER_PATHS } from './careerGuideData.js'
-import { query as pgQuery } from './pgdb.js'
+import { BLOG_POSTS } from './blogData.js'
 
 // Real exact counts from active data registries
 export const REAL_AI_TOOLS_COUNT = (AI_TOOLS || []).length || 124
-export const REAL_MOCK_TESTS_COUNT = (MOCK_TESTS || []).length || 12
+export const REAL_MOCK_TESTS_COUNT = (MOCK_TESTS || []).length || 13
 export const REAL_SYLLABI_COUNT = 280
 export const REAL_CAREERS_COUNT = (CAREER_PATHS || []).length || 50
-export const REAL_PYQ_PAPERS_COUNT = 841
-export const REAL_PYQ_EXAMS_COUNT = 429
-export const REAL_PYQ_COUNT = '1,100+'
+export const REAL_BLOGS_COUNT = (BLOG_POSTS || []).length || 28
+
+// 18-Year MPSC Archive (2009-2026) verified counts — Single Source of Truth
+export const MPSC_ARCHIVE_YEARS_SPAN = '2009-2026'
+export const MPSC_ARCHIVE_YEARS_COUNT = 18
+export const MPSC_TOTAL_QUESTION_PAPERS = 1284
+export const MPSC_TOTAL_ANSWER_KEYS = 773
+export const MPSC_TOTAL_ARCHIVE_FOLDERS = 1491
+export const MPSC_TOTAL_EXTRACTED_PYQS = '11,960+'
+
+export const MPSC_CADRE_COUNTS = {
+  rajyaseva: {
+    key: 'rajyaseva',
+    name: 'Rajyaseva (State Services)',
+    nameMr: 'राज्यसेवा परीक्षा',
+    count: 344,
+    folders: 429,
+    keys: 152,
+    percent: 26.8,
+    color: '#EA580C',
+    slug: 'rajyaseva-previous-year-papers',
+    badge: 'State Services',
+    icon: '🏛️'
+  },
+  groupB: {
+    key: 'group-b',
+    name: 'Group B (PSI / STI / ASO)',
+    nameMr: 'गट ब संयुक्त परीक्षा',
+    count: 259,
+    folders: 290,
+    keys: 206,
+    percent: 20.2,
+    color: '#0284C7',
+    slug: 'group-b-previous-year-papers',
+    badge: 'Non-Gazetted Group B',
+    icon: '👮'
+  },
+  groupC: {
+    key: 'group-c',
+    name: 'Group C Services',
+    nameMr: 'गट क संयुक्त परीक्षा',
+    count: 53,
+    folders: 88,
+    keys: 38,
+    percent: 4.1,
+    color: '#059669',
+    slug: 'group-c-previous-year-papers',
+    badge: 'Group C Services',
+    icon: '📋'
+  },
+  otherServices: {
+    key: 'other-services',
+    name: 'Other & Technical Services',
+    nameMr: 'इतर व तांत्रिक सेवा',
+    count: 628,
+    folders: 684,
+    keys: 377,
+    percent: 48.9,
+    color: '#7C3AED',
+    slug: 'other-services-previous-year-papers',
+    badge: 'Technical & Other Services',
+    icon: '🏗️'
+  }
+}
+
+export const REAL_PYQ_PAPERS_COUNT = MPSC_TOTAL_QUESTION_PAPERS
+export const REAL_PYQ_EXAMS_COUNT = MPSC_TOTAL_ARCHIVE_FOLDERS
+export const REAL_PYQ_COUNT = MPSC_TOTAL_EXTRACTED_PYQS
 
 // Safe fallback for live database counts
 export const DEFAULT_PLATFORM_STATS = {
@@ -34,65 +99,6 @@ export const DEFAULT_PLATFORM_STATS = {
   total_pyq_papers: REAL_PYQ_PAPERS_COUNT,
   total_careers: REAL_CAREERS_COUNT,
   total_questions: REAL_PYQ_COUNT,
+  total_blogs: REAL_BLOGS_COUNT,
 }
 
-let _cachedPlatformStats = null
-let _lastPlatformStatsTime = 0
-const PLATFORM_STATS_CACHE_TTL = 5 * 60 * 1000 // 5 minutes
-
-/**
- * Fetch live platform stats combining real PostgreSQL records and verified registry lengths.
- * Used by Server Components (homepage, layouts) and API endpoints (/api/stats).
- */
-export async function getPlatformStats() {
-  const now = Date.now()
-  if (_cachedPlatformStats && (now - _lastPlatformStatsTime < PLATFORM_STATS_CACHE_TTL)) {
-    return _cachedPlatformStats
-  }
-
-  try {
-    const rows = await pgQuery(`
-
-      SELECT
-        COUNT(*) FILTER (WHERE status = 'published' AND (notification_type = 'recruitment' OR notification_type IS NULL) AND (apply_end_date IS NULL OR apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date)) AS active_jobs,
-        COUNT(*) FILTER (WHERE status = 'published')                                  AS total_jobs,
-        COUNT(*) FILTER (WHERE status = 'published' AND notification_type = 'result') AS total_results,
-        COUNT(*) FILTER (WHERE status = 'published' AND notification_type = 'answer_key') AS total_answer_keys,
-        COUNT(*) FILTER (WHERE status = 'published' AND notification_type = 'admit_card') AS total_admit_cards,
-        COUNT(DISTINCT organization_id)                                               AS total_boards,
-        COALESCE(SUM(total_vacancies) FILTER (WHERE status = 'published' AND (apply_end_date IS NULL OR apply_end_date >= (CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Kolkata')::date)), 0) AS total_vacancies
-      FROM exam_notifications
-    `)
-
-    if (rows && rows.length > 0 && rows[0].total_jobs) {
-      const r = rows[0]
-      const activeJobs = Number(r.active_jobs || r.total_jobs || 575)
-      const vacancies = Number(r.total_vacancies || 90791)
-      const results = Number(r.total_results || 140)
-      const answerKeys = Number(r.total_answer_keys || 68)
-
-      _cachedPlatformStats = {
-        total_jobs: activeJobs.toLocaleString('en-IN'),
-        raw_total_jobs: activeJobs,
-        total_notifications: Number(r.total_jobs).toLocaleString('en-IN'),
-        total_results: results.toLocaleString('en-IN'),
-        total_answer_keys: answerKeys.toLocaleString('en-IN'),
-        total_keys_results: (results + answerKeys).toLocaleString('en-IN'),
-        total_boards: `${r.total_boards || 42}+`,
-        total_vacancies: vacancies.toLocaleString('en-IN'),
-        total_ai_tools: REAL_AI_TOOLS_COUNT,
-        total_mock_tests: REAL_MOCK_TESTS_COUNT,
-        total_syllabi: REAL_SYLLABI_COUNT,
-        total_pyq_papers: REAL_PYQ_PAPERS_COUNT,
-        total_careers: REAL_CAREERS_COUNT,
-        total_questions: REAL_PYQ_COUNT,
-      }
-      _lastPlatformStatsTime = Date.now()
-      return _cachedPlatformStats
-    }
-  } catch (err) {
-    console.warn('[platformStats] PostgreSQL query failed, using verified fallback:', err.message)
-  }
-
-  return DEFAULT_PLATFORM_STATS
-}

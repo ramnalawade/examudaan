@@ -1,0 +1,442 @@
+{
+  "docId": 10550,
+  "examName": "Electronics Engineering",
+  "examNameMr": "इलेक्ट्रॉनिक्स अभियांत्रिकी",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Electronics Engineering",
+      "paperTitleMr": "इलेक्ट्रॉनिक्स अभियांत्रिकी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Analog Electronics",
+          "unitTitleMr": "ॲनालॉग इलेक्ट्रॉनिक्स",
+          "topics": [
+            "Introduction to Electronic Engineering",
+            "Ohm’s Law, Kirchhoff’s Laws",
+            "Series and Parallel Circuits",
+            "Basics of Semiconductors",
+            "Basics and Characteristics of diode/ Transistor",
+            "Diodes for different uses: Junction and Field Effect Transistors (BJT, JFET and MOSFET)",
+            "Diode circuits clipping, clamping",
+            "Transistors at low and high frequencies",
+            "Amplifiers, Single and multistage, Feedback amplifiers, Operational Amplifiers (Inverting, Non-inverting, summing), Instrumentation amplifier, Precision rectifier",
+            "V-to-I and I-to-V converter",
+            "Op-Amp based active filters",
+            "Oscillators and signal generators, Function Generators and wave-shaping circuits, 555Timers, Power Supplies"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Digital Circuits",
+          "unitTitleMr": "डिजिटल सर्किट",
+          "topics": [
+            "Boolean algebra",
+            "Logic gates; Basics of Integrated Circuits (ICs), digital IC families (DTL, TTL, ECL, MOS, CMOS)",
+            "Adders, multiplexers, de-multiplexers, decoders, PROMs and PLAs",
+            "Sequential circuits: latches and flip-flops, counters and shift-registers",
+            "ADCs, DACs, Micro-processor (8085) and interfacing with peripherals 8255 and 8259 and Microcontrollers: 8051"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electronic Measurements and Instrumentation",
+          "unitTitleMr": "इलेक्ट्रॉनिक मोजमाप आणि इन्स्ट्रुमेंटेशन",
+          "topics": [
+            "Principles of Measurement, accuracy, precision and standards",
+            "Analog and Digital systems for measurement, measuring instruments for different application",
+            "Static/ dynamic characteristics of measurements systems, errors, statistical analysis and curve fitting",
+            "Measurement systems for non-electrical quantities; Basics of telemetry",
+            "Different types of transducers and displays; Data acquisition system basics"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Electromagnetics",
+          "unitTitleMr": "इलेक्ट्रोमॅग्नेटिक्स",
+          "topics": [
+            "Elements of Vector calculus : divergence and curl",
+            "Gauss’ and Stokes’ theorems, Maxwell’s equations: differential and integral forms",
+            "Wave equation, poynting vector",
+            "Plane waves : Propagation through various media; reflection and refraction",
+            "Phase and group velocity",
+            "Skin depth, Transmission lines",
+            "Characteristics impedance; impedance transformation; smith chart; impedance matching; S-parameters, pulse excitation",
+            "Basics of propagation in dielectric waveguide and optical fibers",
+            "Basics of Antennas: Dipole antennas; radiation pattern; antenna gain"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Integrated Electronics",
+          "unitTitleMr": "इंटीग्रेटेड इलेक्ट्रॉनिक्स",
+          "topics": [
+            "Analog and mixed Signals",
+            "RF/ Microwave/ millimeter –wave circuits and systems",
+            "Components and packaging",
+            "Wireline Circuits and systems",
+            "Biosensors and Bioelectronics",
+            "Sensor Interface Circuits",
+            "Applied Electromagnetics",
+            "Circuit / Component Modeling"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Advanced Electronics Topics",
+          "unitTitleMr": "प्रगत इलेक्ट्रॉनिक्स विषय",
+          "topics": [
+            "VLSI technology, Processing, lithography, interconnects, packaging, testing, VLSI design, Principles, MUX/ROM/PLA – based design, Moore & Mealy circuit design, Pipeline concepts & functions",
+            "Design for testability, examples, DSP, Discrete time signals/ systems, uses",
+            "Digital filters: FIR/IIR types, design, speech/ audio/radar signal processing uses, Microprocessors & microcontrollers, basics, interrupts, DMA, instruction sets, interfacing Controllers & uses",
+            "Advance Embedded systems: Embedded Systems ARM Architecture, Embedded C"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Analog Communication Systems",
+          "unitTitleMr": "ॲनालॉग कम्युनिकेशन सिस्टीम्स",
+          "topics": [
+            "Random Signals, noise, probability theory, information theory",
+            "Analog versus digital communication and applications: systems – AM, FM, transmitters / receivers, theory/ practice/ standards, SNR comparison",
+            "Modulation Techniques : AM, FM & PM"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Digital Communication Systems",
+          "unitTitleMr": "डिजिटल कम्युनिकेशन सिस्टीम्स",
+          "topics": [
+            "Digital communication basics; Sampling, quantizing, coding, PCM, DPCM, multiplexing- audio/ video",
+            "Digital modulation Schemes: ASK, FSK, PSK QAM",
+            "Coherent – Non Coherent Detection",
+            "Error Probabilities in digital Modulation",
+            "Multiplexing and Multiple Access: Time Division Multiplexing (TDM), Frequency Division Multiplexing (FDM) Code Division Multiple Access (CDMA) Spread Spectrum Techniques",
+            "Switching Techniques : Circuit Switching, Packet Switching & Message Switching"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Source Coding and Channel Capacity",
+          "unitTitleMr": "स्त्रोत कोडिंग आणि चॅनेल क्षमता",
+          "topics": [
+            "Entropy, mutual information",
+            "Shannon’s theorem and channel capacity",
+            "Lossless source coding: Huffman coding, arithmetic coding"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Fading Channels and Diversity Techniques",
+          "unitTitleMr": "फेडिंग चॅनेल आणि डायव्हर्सिटी तंत्रे",
+          "topics": [
+            "Fading Channels : Rayleigh and Rician Fading",
+            "BER over fading channels",
+            "Diversity techniques : Time, Frequency and Space diversity",
+            "MIMO systems and channel modeling"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Advanced Digital Communication",
+          "unitTitleMr": "प्रगत डिजिटल कम्युनिकेशन",
+          "topics": [
+            "Communication networks; Principles/ practices/ technologies/ uses/ OSI Model/ Security",
+            "Basic Packet multiplexed streams/ scheduling; cellular networks, types, analysis, protocols (TCP/TCPIP)",
+            "Microwave & satellite communication",
+            "Terrestrial / Space Type LOS systems",
+            "Cognitive Radio and Spectrum sensing",
+            "Cooperative Communication",
+            "5G and future communication systems",
+            "Block schematics link calculations, system design",
+            "Communication satellite, orbits, characteristics, systems, uses",
+            "Systems, uses, Fiber-optic communication systems, block schematics, link calculations, and system design"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Control Systems",
+          "unitTitleMr": "कंट्रोल सिस्टीम्स",
+          "topics": [
+            "Basic Control System Components, Open loop and closed loop (Feedback) systems and stability analysis of these systems",
+            "Tools and techniques for LTI control system analysis, Control system compensators, elements of lead and lag compensation, elements of Proportional Integral Derivative (PID) control",
+            "Block Codes; Hamming code, Reed Solomon Codes",
+            "Convolutional Coding and Viterbi algorithm",
+            "Turbo codes, LDPC codes"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Communication Systems",
+          "unitTitleMr": "कम्युनिकेशन सिस्टीम्स",
+          "topics": [
+            "Time and Frequency Domain Analysis",
+            "Power and energy spectral density of communication signals",
+            "Sampling and quantization",
+            "Line Coding, Pulse Shaping, Pulse and carrier modulation techniques",
+            "Transmitter and receiver design concepts"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Fiber Optics and Satellite",
+          "unitTitleMr": "फायबर ऑप्टिक्स आणि उपग्रह",
+          "topics": [
+            "Introduction to Optical Fiber",
+            "Fiber Materials, Optical Sources and Photo Detectors, Fiber Fabrication",
+            "Optical couplers and WDM Concepts",
+            "System Design and Optical Fiber Applications",
+            "Satellite Subsystems and Transponder",
+            "Satellite Link Design",
+            "Earth Station Subsystems"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Wireless Broadband Communication",
+          "unitTitleMr": "वायरलेस ब्रॉडबँड कम्युनिकेशन",
+          "topics": [
+            "Wireless communication and their importance in age of high speed internet",
+            "Study of Wireless Network areas like WLAN and WWAN",
+            "Advanced 3G and 4G Wireless Communication",
+            "Communication System Security",
+            "RADAR Communication System",
+            "RF Devices and Applications",
+            "High Performance Network",
+            "Network Management"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Antennas",
+          "unitTitleMr": "अँटेना",
+          "topics": [
+            "Types and Applications of Antennas"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Line Communication",
+          "unitTitleMr": "लाइन कम्युनिकेशन",
+          "topics": [
+            "EPABX ( Analog & Digital )",
+            "IP EPABX Exchange ( VoIP Based )"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Basics of Information Technology",
+          "unitTitleMr": "माहिती तंत्रज्ञानाची मूलभूत तत्त्वे",
+          "topics": [
+            "Introduction to IT: Definitions, applications and impact on Industries",
+            "History and evolution of Computing",
+            "Computer Hardware and Software Overview",
+            "Operating Systems : Types, functions and features",
+            "Basic Networking Concepts",
+            "Internet Technologies: HTML, CSS and basic web development"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Programming Fundamentals",
+          "unitTitleMr": "प्रोग्रामिंग फंडामेंटल्स",
+          "topics": [
+            "Introduction to Programming Language (C, C++, Java or Python)",
+            "Variables, Data Types, Operators",
+            "Control Structures (if, else, loops)",
+            "Functions and Procedures",
+            "Object-Oriented Programming (OOP) Concepts",
+            "Data Structures: Arrays, Linked Lists, Stacks, Queues"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Database Management Systems (DBMS)",
+          "unitTitleMr": "डेटाबेस मॅनेजमेंट सिस्टम्स (DBMS)",
+          "topics": [
+            "Introduction to DBMS",
+            "Relational Database Concepts",
+            "SQL: Data Query Language (DQL), Data Manipulation Language (DML), Data Definition Language (DDL)",
+            "Normalization and ER Diagrams",
+            "Database Design and Architecture",
+            "Introduction to NoSQL databases"
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Software Engineering",
+          "unitTitleMr": "सॉफ्टवेअर इंजिनियरिंग",
+          "topics": [
+            "Software Development Life Cycle (SDLC)",
+            "Agile and Waterfall Models",
+            "Requirements Analysis and Specification",
+            "Software Design and Architecture",
+            "Testing and Debugging",
+            "Version Control Systems (Git)"
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "Data Structures and Algorithms",
+          "unitTitleMr": "डेटा स्ट्रक्चर्स आणि अल्गोरिदम",
+          "topics": [
+            "Complexity Analysis (Big O notation)",
+            "Sorting Algorithms: Bubble, Merge, Quick, etc.",
+            "Searching Algorithms: Binary Search, Linear Search",
+            "Trees, Graphs, and Hashing",
+            "Recursion",
+            "Dynamic Programming"
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Computer Networks",
+          "unitTitleMr": "संगणक नेटवर्क",
+          "topics": [
+            "OSI and TCP/IP",
+            "Layer functions: Application of Layer in the Internet",
+            "Application Layer – Host configuration, DHCP, Domain Name System (DNS) Multicast DNS",
+            "Network Protocols (HTTP, FTP, etc.)",
+            "IP Addressing and Subnetting",
+            "Wireless Networks and Mobile Computing",
+            "Network Security: Encryption, Firewalls, VPNs"
+          ]
+        },
+        {
+          "unitNumber": 24,
+          "unitTitle": "Information Security",
+          "unitTitleMr": "माहिती सुरक्षा",
+          "topics": [
+            "Internet Security",
+            "Network layer security (AH, ESP, IPsec)",
+            "Transport layer security (SSL), Application layer security ( Secure E mail- PGP, S/MIME)",
+            "Basics of Cyber security",
+            "Cryptography and Encryption Methods",
+            "Security Protocols and Standards",
+            "Risk Management and Incident Response",
+            "Ethical Hacking and Penetration Testing"
+          ]
+        },
+        {
+          "unitNumber": 25,
+          "unitTitle": "Web Technologies",
+          "unitTitleMr": "वेब तंत्रज्ञान",
+          "topics": [
+            "Introduction to Web Development",
+            "Front-end Development (HTML, CSS, JavaScript)",
+            "Back-end Development (Node.js, PHP, Python)",
+            "Web Hosting and Domain Management",
+            "Web Security: SSL/TLS, HTTPS, Security Practices"
+          ]
+        },
+        {
+          "unitNumber": 26,
+          "unitTitle": "Cloud Computing and Virtualization",
+          "unitTitleMr": "क्लाउड कंप्यूटिंग आणि व्हर्च्युअलायझेशन",
+          "topics": [
+            "Introduction to Cloud Computing",
+            "Cloud Service Models (IaaS, PaaS, SaaS)",
+            "Virtualization Techniques",
+            "Cloud Deployment Models (Public, Private, Hybrid)",
+            "AWS, Azure, Google Cloud",
+            "Remote login TELNET and SSH, HTTPS, electronic mail"
+          ]
+        },
+        {
+          "unitNumber": 27,
+          "unitTitle": "Emerging Technologies",
+          "unitTitleMr": "उदयमुख तंत्रज्ञान",
+          "topics": [
+            "Blockchain and Cryptocurrency",
+            "Internet of Things (IoT), IoT Protocols",
+            "Advanced Topics and Industry-Oriented Learning Wireless Communication GSM, CDMA, LTE, 5G Technologies Nano technology",
+            "Big Data Analytics",
+            "Augmented Reality (AR) and Virtual Reality (VR)",
+            "Intrusion Detection System",
+            "Multimedia Communication",
+            "Multimedia transport across IP networks and relevant protocols such as RSVP, RTP, RTCP, DVMRP, Signaling Protocols, Real Time Streaming Protocol (RTSP)",
+            "VoIP, IPTV",
+            "Information Representation – text, images, audio and video, Text and image compression, Audio and video compression, video",
+            "Compression standards: H.261, H.263, PI.323, MPEG 1, MPEG 2, other coding formats for text speech, image and video"
+          ]
+        },
+        {
+          "unitNumber": 28,
+          "unitTitle": "Artificial Intelligence and Machine Learning (Basics)",
+          "unitTitleMr": "आर्टिफिशियल इंटेलिजन्स आणि मशिन लर्निंग",
+          "topics": [
+            "Introduction to AI and ML",
+            "Supervised, Unsupervised, and Reinforcement Learning",
+            "Popular Algorithms (Linear Regression, Decision Trees, etc.)",
+            "Applications of AI in Industry"
+          ]
+        },
+        {
+          "unitNumber": 29,
+          "unitTitle": "Modern Digital Communication Systems",
+          "unitTitleMr": "आधुनिक डिजिटल कम्युनिकेशन सिस्टीम्स",
+          "topics": [
+            "Modern digital communication systems in electronics and telecommunications engineering",
+            "MIMO (Multiple Input Multiple Output): Uses multiple antennas at both the transmitter and receiver to improve communication performance",
+            "Adaptive Modulation and Coding (AMC): Dynamically adjusts the modulation scheme and coding rate based on channel conditions to optimize performance",
+            "Cognitive Radio: A smart communication system that dynamically adjusts its operating parameters based on the environment to optimize spectrum use"
+          ]
+        },
+        {
+          "unitNumber": 30,
+          "unitTitle": "Advanced Communication",
+          "unitTitleMr": "प्रगत कम्युनिकेशन",
+          "topics": [
+            "VLSI Antenna and Wave Propagation Antenna Types, Radiation Patterns, Propagation Models",
+            "VLSI Design",
+            "CMOS Technology",
+            "HDL",
+            "Logic Synthesis Computer Organization and Architecture Microprocessors, Memory, I/O Systems",
+            "Power Electronics Converters, Inverters, Motor Drives, Real-Time Operating Systems (RTOS)"
+          ]
+        },
+        {
+          "unitNumber": 31,
+          "unitTitle": "Current Events and General Engineering",
+          "unitTitleMr": "चालामोडी आणि सामान्य अभियांत्रिकी",
+          "topics": [
+            "Current issues of national and international importance relating to social, economic, Political Cultural and Sports and telecommunication industrial developments",
+            "Engineering Mathematics and Numerical Analysis",
+            "Standards and Quality practices in production, maintenance and services",
+            "Information and Communication Technologies (ICT) based tools and their applications in Engineering such as Networking, e- governance and technology based education",
+            "Knowledge of relevant topics as may be expected from an Engineering Graduate"
+          ]
+        },
+        {
+          "unitNumber": 32,
+          "unitTitle": "Acts regarding Telecommunication",
+          "unitTitleMr": "दूरसंचार संबंधित कायदे",
+          "topics": [
+            "Indian Wireless Telegraphy Act, 1933",
+            "Indian Telegraph Act, 1985",
+            "National Telecom Act, 2023",
+            "Note:- Wherever Acts/Rule/Regulations are mentioned in syllabus, latest amendments/versions to be considered."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever Acts/Rule/Regulations are mentioned in syllabus, latest amendments/versions to be considered."
+  ]
+}

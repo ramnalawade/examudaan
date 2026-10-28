@@ -247,6 +247,11 @@ echo "[INFO] Running daily current affairs automated fetcher..." | tee -a "$SUMM
 python daily_ca_fetcher.py >> "$SUMMARY_LOG" 2>&1 || true
 echo "[INFO] Daily current affairs ingestion completed"         | tee -a "$SUMMARY_LOG"
 
+# ---- Daily MPSC Official Announcements, Timetables & Results Ingestion + Alerts ----
+echo "[INFO] Running daily MPSC official announcements, timetables & results monitor..." | tee -a "$SUMMARY_LOG"
+python mpsc_announcements_spider.py --daily >> "$SUMMARY_LOG" 2>&1 || true
+echo "[INFO] Daily MPSC announcements monitor completed"                                  | tee -a "$SUMMARY_LOG"
+
 # ---- Send email summary via Brevo ----
 # Only sends if BREVO_API_KEY is set in .env
 if [[ -n "${BREVO_API_KEY:-}" && -n "${BREVO_RECIPIENT_EMAIL:-}" ]]; then

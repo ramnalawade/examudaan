@@ -1,0 +1,292 @@
+{
+  "docId": 9537,
+  "examName": "Principal, Government Industrial Training Institute / Vice Principal, Government Industrial Training Institute / Inspector, Vocational Education and Training / Exam Controller, Maharashtra State Board of Skill, Vocational Education and Training, Maharashtra Education Service, Group A (Junior) (Technical) And Deputy Director, Vocational Education, Maharashtra Education Service, Group A (Technical) (Senior)",
+  "examNameMr": "प्राचार्य, शासकीय औद्योगिक प्रशिक्षण संस्था / उपप्राचार्य, शासकीय औद्योगिक प्रशिक्षण संस्था / निरीक्षक, व्यावसायिक शिक्षण व प्रशिक्षण / परीक्षा नियंत्रक, महाराष्ट्र राज्य कौशल्य, व्यावसायिक शिक्षण व प्रशिक्षण मंडळ, महाराष्ट्र शिक्षण सेवा, गट-अ (कनिष्ठ) (तांत्रिक) आणि उपसंचालक, व्यावसायिक शिक्षण, महाराष्ट्र शिक्षण सेवा, गट-अ (तांत्रिक) (वरिष्ठ)",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Education, Vocational Education, Human Resource Development, Management, and Administration",
+      "paperTitleMr": "सामान्य शिक्षण, व्यावसायिक शिक्षण, मानवर संसाधन विकास, व्यवस्थापन आणि प्रशासन",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Education",
+          "unitTitleMr": "सामान्य शिक्षण",
+          "topics": [
+            "Evolution; Education as a tool of Human Resource Development and social change",
+            "Pre-primary to Higher Education: Problems and issues",
+            "Universalization of education",
+            "National Policies on Education in India and recommendations of Committees",
+            "Quality improvement",
+            "Impact of Globalization and Privatization on Indian education"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Vocational Education",
+          "unitTitleMr": "व्यवसायिक शिक्षण",
+          "topics": [
+            "Evolution; Objective and Scope",
+            "Stages for introduction of Vocational Education in regular educational stream",
+            "Policies for Skill Development and Vocational Education",
+            "Concept and meaning of work experience and socially useful productive work",
+            "Objective and scope of Pre-Vocational Education: Problems and Issues"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Role of various apex Institutes in Human Resource Development",
+          "unitTitleMr": "मानव संसाधन विकासामधील विविध सर्वोच्च संस्थांची भूमिका",
+          "topics": [
+            "Role of DGT, NCVET, Skill India, NSDA, NSDC, SSC, CSTARI, NIMI, ATI, NCERT",
+            "Role of NIESBUD, NIEPA, PSSCIVE, TITI, AICTE, MHRD, RIE, UGC, IIT",
+            "Open Universities, Skill Universities, NERI, NITIE, SIVE, CBSE, ICSE"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Concepts related to Skill Development",
+          "unitTitleMr": "कौशल्या विकासाशी संबंधित संकल्पना",
+          "topics": [
+            "National Occupation Standard",
+            "Qualification Pack",
+            "Job Role",
+            "Skilling, Reskilling, Upskilling",
+            "RPL, NSQF, NCrF, ABC, DST, OJT",
+            "Provisions of National Education Policy"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Government efforts for Skill Development",
+          "unitTitleMr": "कौशल्या विकासासाठी शासकीय प्रयत्न",
+          "topics": [
+            "Scheme for Skill Development, Employment, Entrepreneurship and Innovation by International Agencies",
+            "Government of India, Government of Maharashtra, District Administration, Local Self Government, CSR"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Socio-Economic development of Society",
+          "unitTitleMr": "समाजाचा सामाजिक-आर्थिक विकास",
+          "topics": [
+            "Children, Youth, Women, Tribal, Socially and Economically deprived classes, Senior Citizen, Minorities, Person with Disability and Labour",
+            "Problems and issues related to education, health, economical and social aspects",
+            "Government Welfare Policies and schemes",
+            "Role of State, National and International agencies",
+            "Voluntary Organisations, People participation, Sustainable Development, Social Sector initiatives"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Industrial development",
+          "unitTitleMr": "औद्योगिक विकास",
+          "topics": [
+            "Evolution; Industry 1.0 to 5.0",
+            "Challenges: Poverty, Unemployment and Regional Imbalances",
+            "Locational factors and Growth Pattern",
+            "Structure, Problem and potential of Large, Small, Micro, Cottage and Village industries",
+            "Impact of liberalization, privatization and globalization",
+            "State Government Policy"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Sectoral Development",
+          "unitTitleMr": "क्षेत्रीय विकास",
+          "topics": [
+            "Trends in Sectoral Development and profile of agriculture, industry and service sector",
+            "Economic Sectors: Sectors, share in economy, issues, employment and self employment opportunities, projections",
+            "Emerging Sectors and required Future Skill",
+            "Crises and problems related to Infrastructure"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Human Resource Development in India",
+          "unitTitleMr": "भारतातील मानव संसाधन विकास",
+          "topics": [
+            "Present status of population; Quantitative and Qualitative aspects",
+            "Population policy and projections",
+            "Importance and need of Human Resource planning",
+            "Components and factors of Human Resources planning",
+            "Nature, types and problems of unemployment",
+            "Trends of Employment",
+            "Demand estimate of skilled manpower",
+            "Migration: effects on source and destination areas",
+            "Rural settlements and rural economy",
+            "Sustainable development of cities"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Managerial Function and Process",
+          "unitTitleMr": "व्यवस्थापकीय कार्य आणि प्रक्रिया",
+          "topics": [
+            "Concept and foundations of management, Evolution of Management Thoughts",
+            "Managerial Functions: Planning, Organizing, Controlling",
+            "Managerial skills, Entrepreneurship, Management of innovation, Flexible Systems Management",
+            "Social responsibility and managerial ethics",
+            "Process and customer orientation",
+            "Managerial processes on direct and indirect value chain",
+            "Gender balance, People participation and involvement",
+            "Important aspects of governance, transparency and accountability",
+            "e-governance: applications, models, successes, limitations, and potential",
+            "Citizens charters, transparency and accountability and institutional and other measures"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Organisational Behavior and Design",
+          "unitTitleMr": "संघटनात्मक वर्तन आणि रचना",
+          "topics": [
+            "Conceptual model of organization behavior",
+            "The individual processes: personality, values and attitude, perception, motivation, learning and reinforcement, work stress and stress management",
+            "The dynamics of Organization behaviour: power and politics, conflict and negotiation, leadership process and styles, communication",
+            "The Organizational Processes: decision making, job design",
+            "Classical, Neoclassical and Contingency approaches to organizational design",
+            "Organizational theory and design: Organizational culture, managing cultural diversity, learning Organization",
+            "Organizational change and development",
+            "Knowledge Based Enterprise: systems and processes",
+            "Networked and virtual organizations"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Human Resource Management",
+          "unitTitleMr": "मानव संसाधन व्यवस्थापन",
+          "topics": [
+            "HR challenges; HRM functions; The future challenges of HRM",
+            "Strategic Management of human resources",
+            "Human resource planning; Job analysis; Job evaluation",
+            "Recruitment and selection; Training and development; Promotion and transfer",
+            "Performance management; Compensation management and benefits",
+            "Employee morale and productivity",
+            "Management of Organizational climate and Industrial relations",
+            "Human resources accounting and audit; Human resource information system",
+            "International human resource management",
+            "Demand estimation of skilled manpower; Apprentice engagement",
+            "Process of Placement; Orientation and Training of new recruits"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Quantitative Techniques in Decision Making",
+          "unitTitleMr": "निर्णय प्रक्रियेतील परिमाणित तंत्रे",
+          "topics": [
+            "Classification of data; Measures of central tendency and dispersion",
+            "Correlation and regression; Time series analysis; Forecasting techniques",
+            "Elementary concepts of Binomial, Poisson and normal distribution",
+            "Linear programming; problem formulation; Simplex method and graphical solution",
+            "PERT and CPM; SWOT analysis; value analysis",
+            "Decision making under certainty"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Total Quality Management",
+          "unitTitleMr": "एकूण गुणवत्ता व्यवस्थापन",
+          "topics": [
+            "Reengineering, Empowerment, Benchmarking, Down Sizing, Learning Organisations",
+            "Latest Trends in Management: Quality Circles, Kaizen, 5-S, Just in Time, ISO, Six Sigma"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Financial Management",
+          "unitTitleMr": "वित्तीय व्यवस्थापन",
+          "topics": [
+            "Goal of Finance Function; Concepts of value and return",
+            "Management of working capital: Estimation and Financing",
+            "Management of cash, receivables, inventory and current liabilities",
+            "Cost of capital; Capital budgeting; Financial and operating leverage",
+            "Venture capital; State Government Budget; State Government Budgetary process and control",
+            "Performance Budgeting; Zero-based budgeting",
+            "Audit and Cost Benefit Analysis; Cost reduction techniques; Job and process costing"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Management Information System",
+          "unitTitleMr": "व्यवस्थापन माहिती प्रणाली",
+          "topics": [
+            "Conceptual foundations of information systems; Information theory; Information resource management",
+            "Types of information Systems; Systems Development: Overview of Systems and Design",
+            "System Development management life-cycle",
+            "Designing online and distributed environments; Implementation and control of project",
+            "Trends in information technology; Managing data resources",
+            "Enterprise Resource Planning (ERP); e-Business architecture; e-Governance",
+            "User involvement; Evaluation of information systems; Cyber Laws"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Development Administration",
+          "unitTitleMr": "विकास प्रशासन",
+          "topics": [
+            "Meaning and Features; Scope and Significance",
+            "Public Administration as a tool for Development",
+            "Changing role of Bureaucracy in development",
+            "Role of Various Agencies in Development; Peoples Participation and Development",
+            "State participation in business, Interaction between Government, Business and different Chambers of Commerce and Industry in India",
+            "Public Relation; Public Distribution System; Pressure Groups"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Managerial Ethics and Challenges in the Future",
+          "unitTitleMr": "व्यवस्थापकीय नैतिकता आणि भविष्यातील आव्हाने",
+          "topics": [
+            "Ethics in the Workplace; Formulation of ethics; Managerial ethics",
+            "Managing ethical behaviour; Codes of Ethics; Ethics training",
+            "Encouraging ethical behaviour, Management of Change; Organizational Development",
+            "Globalization; Demographic Change Resource Availability",
+            "Social Responsibility; Areas of social responsibility; Managing social responsibility",
+            "Entrepreneurship and Intrapreneurship"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Office Administration",
+          "unitTitleMr": "कार्यालयीन प्रशासन",
+          "topics": [
+            "Meaning; Nature; Importance and Functions of Office Administration",
+            "Elements of Office Administration",
+            "Office Procedure and Method; Disposal of cases",
+            "Working of Office Administration; Administrative Reforms",
+            "Right to Information Act, 2005; Right To Services Act 2015"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Training Planning and Implementation",
+          "unitTitleMr": "प्रशिक्षण नियोजन आणि अंमलबजावणी",
+          "topics": [
+            "Role of training coordinator, Mode of training; New trends in training",
+            "Teachers training program; Linkage with Industries",
+            "Importance and development of curriculum; development of media for instructions",
+            "Mode of evaluation/ assessment; Importance of Industry Institute-Interaction",
+            "Apprenticeship Act; Factory Act; Workmen’s Compensation Act",
+            "Entrepreneurship Development Program; Safety at workplace; Fire protection; First-aid techniques",
+            "Impact of Industrialization and globalization on Training"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,92 @@
+{
+  "docId": 11408,
+  "examName": "Assistant Professor (Biology) Maharashtra Education Service, Group-A (Collegiate Branch) And Lecturer (Biology) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Biology Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Molecules and Their Interaction Relevant to Biology",
+          "unitTitleMr": null,
+          "topics": [
+            "Structure of atoms, molecules and chemical bonds.",
+            "Composition, structure and function of biomolecules (carbohydrates, lipids, proteins, nucleic acids and vitamins).",
+            "Stabilising interactions (Van der Waals, electrostatic, hydrogen bonding, hydrophobic interaction, etc.).",
+            "Principles of biophysical chemistry (pH, buffer, reaction kinetics, thermodynamics, colligative properties).",
+            "Bioenergetics, glycolysis, oxidative phosphorylation, coupled reaction, group transfer, biological energy transducers.",
+            "Principles of catalysis, enzymes and enzyme kinetics, enzyme regulation, mechanism of enzyme catalysis, isozymes, Conformation of proteins (Ramachandran plot, secondary structure, domains, motif and folds).",
+            "Conformation of nucleic acids (helix (A, B, Z), t-RNA, micro-RNA).",
+            "Stability of proteins and nucleic acids.",
+            "Metabolism of carbohydrates, lipids, amino acids, nucleotides and vitamins."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Cellular Organization",
+          "unitTitleMr": null,
+          "topics": [
+            "Membrane structure and function: Structure of model membrane, lipid bilayer and membrane protein diffusion, osmosis, ion channels, active transport, membrane pumps, mechanism of sorting and regulation of intracellular transport, electrical properties of membranes.",
+            "Structural organization and function of intracellular organelles: Cell wall, nucleus, mitochondria, Golgi bodies, lysosomes, endoplasmic reticulum, peroxisomes, plastids, vacuoles, chloroplast, structure & function of cytoskeleton and its role in motility.",
+            "Organization of genes and chromosomes: Operon, unique and repetitive DNA, interrupted genes, gene families, structure of chromatin and chromosomes, heterochromatin, euchromatin, transposons",
+            "Cell division and cell cycle: Mitosis and meiosis, their regulation, steps in cell cycle, regulation and control of cell cycle",
+            "Microbial Physiology: Growth yield and characteristics, strategies of cell division, stress response"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Fundamental Processes",
+          "unitTitleMr": null,
+          "topics": [
+            "DNA replication, repair and recombination: Unit of replication, enzymes involved, replication origin and replication fork, fidelity of replication, extrachromosomal replicons, DNA damage and repair mechanisms, homologous and site-specific recombination",
+            "RNA synthesis and processing: transcription factors and machinery, formation of initiation complex, transcription activator and repressor, RNA polymerases, capping, elongation, and termination, RNA processing, RNA editing, splicing, and polyadenylation, structure and function of different types of RNA, RNA transport.",
+            "Protein synthesis and processing: Ribosome, formation of initiation complex, initiation factors and their regulation, elongation and elongation factors, termination, genetic code, aminoacylation of tRNA, tRNA-identity, aminoacyl tRNA synthetase, and translational proof-reading, translational inhibitors, Post-translational modification of proteins.",
+            "Control of gene expression at transcription and translation level: regulating the expression of phages, viruses, prokaryotic and eukaryotic genes, role of chromatin in gene expression and gene silencing"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Cell Communication and Cell Signalling",
+          "unitTitleMr": null,
+          "topics": [
+            "Host parasite interaction: Recognition and entry processes of different pathogens like bacteria, viruses into animal and plant host cells, alteration of host cell behavior by pathogens, virus-induced cell transformation, pathogen-induced diseases in animals and plants, cell-cell fusion in both normal and abnormal cells.",
+            "Cell signaling: Hormones and their receptors, cell surface receptor, signaling through G-protein coupled receptors, signal transduction pathways, second messengers, regulation of signaling pathways, bacterial and plant two component systems, light signaling in plants, bacterial chemotaxis and quorum sensing.",
+            "Cellular communication: Regulation of hematopoiesis, general principles of cell communication, cell adhesion and roles of different adhesion molecules, gap junctions, extracellular matrix, integrins, neurotransmission and its regulation.",
+            "Cancer: Genetic rearrangements in progenitor cells, oncogenes, tumor suppressor genes, cancer and the cell cycle, virus-induced cancer, metastasis, interaction of cancer cells with normal cells, therapeutic interventions of uncontrolled cell growth.",
+            "Innate and adaptive immune system: Cells and molecules involved in innate and adaptive immunity, antigens, antigenicity and immunogenicity. B and T cell epitopes, structure and function of antibody molecules. generation of antibody diversity, monoclonal antibodies, antibody engineering, antigen-antibody interactions, MHC molecules, antigen processing and presentation, activation and differentiation of B and T cells, B and T cell receptors, humoral and cell mediated immune responses, primary and secondary immune modulation, the complement system, Toll-like receptors, cell-mediated effector functions, inflammation, hypersensitivity and autoimmunity, immune response during bacterial (tuberculosis), parasitic (malaria) and viral (HIV) infections, congenital and acquired immunodeficiencies, vaccines."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Developmental Biology",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic concepts of development: Potency, commitment, specification, induction, competence, determination and differentiation, morphogenetic gradients, cell fate and cell lineages, stem cells, genomic equivalence and the cytoplasmic determinants, imprinting, mutants and transgenics in analysis of development",
+            "Gametogenesis, fertilization and early development: Production of gametes, cell surface molecules in sperm-egg recognition in animals, embryo sac development and double fertilization in plants, zygote formation, cleavage, blastula formation, embryonic fields, gastrulation and formation of germ layers in animals, embryogenesis, establishment of symmetry in plants, seed formation and germination.",
+            "Morphogenesis and organogenesis in animals: Cell aggregation and differentiation in Dictyostelium, axes and pattern formation in Drosophila, amphibia and chick, organogenesis – vulva formation in Caenorhabditis elegans, eye lens induction, limb development and regeneration in vertebrates, differentiation of neurons, post embryonic development- larval formation, metamorphosis, environmental regulation of normal development, sex determination.",
+            "Morphogenesis and organogenesis in plants: Organization of shoot and root apical meristem, shoot and root development, leaf development and phyllotaxy, transition to flowering, floral meristems and floral development in Arabidopsis and Antirrhinum",
+            "Stem Cells - Totipotency, Pluripotency, Multipotency Programmed cell death, Regeneration in animals, aging and senescence"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

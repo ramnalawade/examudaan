@@ -71,7 +71,14 @@ export default function OfficialPdfViewer({
   const [selectedType, setSelectedType] = useState('ALL') // 'ALL' | 'PAPERS' | 'KEYS'
   const [searchQuery, setSearchQuery] = useState('')
   const [showMoreInfo, setShowMoreInfo] = useState(false)
+  const [pdfLoading, setPdfLoading] = useState(true)
+  const [loadingSlow, setLoadingSlow] = useState(false)
   const viewerRef = useRef(null)
+
+  // Find currently active document
+  const activePaper = useMemo(() => {
+    return allDocuments.find(p => p.id === selectedId) || allDocuments[0] || null
+  }, [allDocuments, selectedId])
 
   // Sync selectedId when parent passes a new initialSelectedId or documents list changes
   useEffect(() => {
@@ -81,6 +88,28 @@ export default function OfficialPdfViewer({
       setSelectedId(prev => (prev && allDocuments.some(d => d.id === prev) ? prev : allDocuments[0].id))
     }
   }, [initialSelectedId, allDocuments])
+
+  // Reset loading state whenever active document URL changes
+  useEffect(() => {
+    setPdfLoading(true)
+    setLoadingSlow(false)
+
+    // Fast automatic dismissal fallback:
+    // Chromium/Edge/Firefox embedded PDF viewers (PDFium plugin) often do not emit standard DOM `load` events on the <iframe>.
+    // If the browser starts rendering the PDF, dismiss the loading overlay after 1.2s so it never blocks an already rendered document.
+    const autoDismissTimer = setTimeout(() => {
+      setPdfLoading(false)
+    }, 1200)
+
+    const slowTimer = setTimeout(() => {
+      setLoadingSlow(true)
+    }, 5000)
+
+    return () => {
+      clearTimeout(autoDismissTimer)
+      clearTimeout(slowTimer)
+    }
+  }, [activePaper?.url])
 
   // Extract clean domain name for display
   const domainName = useMemo(() => {
@@ -92,11 +121,6 @@ export default function OfficialPdfViewer({
       return officialWebsite
     }
   }, [officialWebsite])
-
-  // Find currently active document
-  const activePaper = useMemo(() => {
-    return allDocuments.find(p => p.id === selectedId) || allDocuments[0] || null
-  }, [allDocuments, selectedId])
 
   // Strict check if currently active document is a direct PDF file
   const isEmbeddablePdf = useMemo(() => {
@@ -362,28 +386,29 @@ export default function OfficialPdfViewer({
                 <span>{isEmbeddablePdf ? 'Fullscreen' : 'Official Portal'}</span>
               </a>
 
-              {/* Direct Download or Official Portal Launch Button */}
-              <a
-                href={activePaper.url}
-                download={isEmbeddablePdf ? true : undefined}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => {
-                  trackAnswerKeyDownload({
-                    exam_name: activePaper?.title || activePaper?.label || '',
-                    year: activePaper?.year || '',
-                    file_name: activePaper.url,
-                  })
-                  trackOutboundLinkClick({ link_url: activePaper.url })
-                }}
-                className={styles.actionBtnPrimary}
-                title={isEmbeddablePdf ? "Download document directly" : "Open official portal"}
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: 16 }}>
-                  {isEmbeddablePdf ? 'download' : 'open_in_new'}
-                </span>
-                <span>{isEmbeddablePdf ? 'Download PDF' : 'Open Govt Link ↗'}</span>
-              </a>
+              {/* Official External Portal Launch Button (only for external links) */}
+              {!isEmbeddablePdf && (
+                <a
+                  href={activePaper.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    trackAnswerKeyDownload({
+                      exam_name: activePaper?.title || activePaper?.label || '',
+                      year: activePaper?.year || '',
+                      file_name: activePaper.url,
+                    })
+                    trackOutboundLinkClick({ link_url: activePaper.url })
+                  }}
+                  className={styles.actionBtnPrimary}
+                  title="Open official government portal"
+                >
+                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>
+                    open_in_new
+                  </span>
+                  <span>Open Govt Link ↗</span>
+                </a>
+              )}
             </div>
           </div>
 
@@ -415,28 +440,77 @@ export default function OfficialPdfViewer({
                 </a>
               </div>
 
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 16px', background: '#0F172A', color: '#E2E8F0', borderBottom: '1px solid #334155' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px' }}>
-                  <span className="material-symbols-outlined" style={{ fontSize: 16, color: '#38BDF8' }}>menu_book</span>
+              <div className={styles.viewerSubHeader}>
+                <div className={styles.viewerSubHeaderLeft}>
+                  <span className={`material-symbols-outlined ${styles.viewerBookIcon}`}>menu_book</span>
                   <span>Official Viewer: <strong>{activePaper.title || activePaper.label}</strong></span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <div className={styles.viewerSubHeaderRight}>
                   <a
                     href={activePaper.url}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: '#38BDF8', fontSize: '12px', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}
+                    rel="noopener"
+                    className={styles.viewerFullscreenLink}
                   >
-                    <span className="material-symbols-outlined" style={{ fontSize: 14 }}>open_in_new</span>
+                    <span className="material-symbols-outlined">open_in_new</span>
                     Fullscreen ↗
                   </a>
                 </div>
               </div>
+
+              {/* Central Loading State with ExamUdaan Branding */}
+              {pdfLoading && (
+                <div className={styles.loadingOverlay} role="status" aria-live="polite">
+                  <div className={styles.loaderContent}>
+                    <div className={styles.loaderSpinnerWrapper}>
+                      <div className={styles.loaderSpinner}></div>
+                      <div className={styles.loaderPulseDot}></div>
+                    </div>
+                    <div className={styles.loaderTitle}>Loading Study Workspace...</div>
+                    <div className={styles.loaderSubtitle}>
+                      Preparing Official Document • ExamUdaan Study Workspace
+                    </div>
+                    <div className={styles.loaderProgressBar}>
+                      <div className={styles.loaderProgressIndicator}></div>
+                    </div>
+                    {loadingSlow && (
+                      <div className={styles.loaderSlowHint}>
+                        <span>Rendering is taking a moment. You can also open the full document directly:</span>
+                        <div className={styles.loaderActionRow}>
+                          <a
+                            href={activePaper.url}
+                            target="_blank"
+                            rel="noopener"
+                            className={styles.loaderDirectBtn}
+                          >
+                            📱 Open Full PDF ↗
+                          </a>
+                          <button
+                            type="button"
+                            className={styles.loaderRetryBtn}
+                            onClick={() => {
+                              setPdfLoading(true)
+                              setLoadingSlow(false)
+                              const el = document.getElementById('official-study-iframe')
+                              if (el) el.src = el.src
+                            }}
+                          >
+                            🔄 Refresh Viewer
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
               <iframe
+                id="official-study-iframe"
                 key={activePaper.url}
                 src={activePaper.url.includes('#') ? activePaper.url : `${activePaper.url}#view=FitH&toolbar=1`}
                 className={styles.pdfIframe}
                 title={activePaper.title || activePaper.label}
+                onLoad={() => setPdfLoading(false)}
               />
               <div className={styles.iframeFooter}>
                 <div className={styles.iframeFooterLeft}>
@@ -543,25 +617,6 @@ export default function OfficialPdfViewer({
                         >
                           <span className="material-symbols-outlined" style={{ fontSize: 18 }}>open_in_new</span>
                           <span>Fullscreen / New Tab ↗</span>
-                        </a>
-
-                        <a
-                          href={activePaper.url}
-                          download
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={() => {
-                            trackAnswerKeyDownload({
-                              exam_name: activePaper?.title || activePaper?.label || '',
-                              year: activePaper?.year || '',
-                              file_name: activePaper.url,
-                            })
-                            trackOutboundLinkClick({ link_url: activePaper.url })
-                          }}
-                          className={styles.secondaryActionBtn}
-                        >
-                          <span className="material-symbols-outlined" style={{ fontSize: 18, color: '#16A34A' }}>download</span>
-                          <span>Download PDF</span>
                         </a>
 
                         <Link
@@ -773,19 +828,20 @@ export default function OfficialPdfViewer({
                       <span>{isCurrentlyReading ? 'Viewing Now' : 'View Document'}</span>
                     </button>
 
-                    <a
-                      href={doc.url}
-                      download={checkIsPdf(doc.url) ? true : undefined}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.downloadBtn}
-                      title={checkIsPdf(doc.url) ? "Download PDF document" : "Open official document link on portal"}
-                    >
-                      <span className="material-symbols-outlined" style={{ fontSize: 16 }}>
-                        {checkIsPdf(doc.url) ? 'download' : 'open_in_new'}
-                      </span>
-                      <span>{checkIsPdf(doc.url) ? 'Download' : 'Open Link ↗'}</span>
-                    </a>
+                    {!checkIsPdf(doc.url) && (
+                      <a
+                        href={doc.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.downloadBtn}
+                        title="Open official document link on portal"
+                      >
+                        <span className="material-symbols-outlined" style={{ fontSize: 16 }}>
+                          open_in_new
+                        </span>
+                        <span>Open Link ↗</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               )

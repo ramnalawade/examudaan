@@ -1,0 +1,4957 @@
+{
+  "metadata": {
+    "generatedAt": "2026-10-24T04:40:24.596Z",
+    "dataSource": "MPSC Official Solved Question Papers Repository (ExamUdaan.in)",
+    "auditCoverage": {
+      "totalQuestionsAnalyzed": 10392,
+      "yearsRange": "2002 – 2025",
+      "distinctYearsCount": 18,
+      "distinctExamsCount": 89,
+      "distinctSubjectsCount": 18,
+      "officialPapersCount": 89,
+      "classificationMethodology": "Double-blind AI taxonomy mapping with syllabus rubric verification"
+    }
+  },
+  "totalOverview": {
+    "total_questions": "10392",
+    "min_year": 2002,
+    "max_year": 2025,
+    "distinct_years": "18",
+    "distinct_exams": "89",
+    "distinct_subjects": "18",
+    "easy_count": "481",
+    "medium_count": "9610",
+    "hard_count": "301",
+    "multi_statement_count": "1475",
+    "mh_specific_count": "522"
+  },
+  "cadreData": {
+    "all": {
+      "overview": {
+        "total_questions": "10392",
+        "min_year": 2002,
+        "max_year": 2025,
+        "distinct_years": "18",
+        "distinct_exams": "89",
+        "easy_count": "481",
+        "medium_count": "9610",
+        "hard_count": "301",
+        "multi_statement_count": "1475",
+        "match_columns_count": "213",
+        "mh_specific_count": "522"
+      },
+      "subjects": [
+        {
+          "subject": "Science",
+          "questions_count": "2338",
+          "topic_count": "95",
+          "years_active": "17",
+          "easy_count": "30",
+          "medium_count": "2303",
+          "hard_count": "5",
+          "mh_count": "3"
+        },
+        {
+          "subject": "General Studies",
+          "questions_count": "2189",
+          "topic_count": "28",
+          "years_active": "14",
+          "easy_count": "94",
+          "medium_count": "2013",
+          "hard_count": "82",
+          "mh_count": "78"
+        },
+        {
+          "subject": "Economy",
+          "questions_count": "987",
+          "topic_count": "57",
+          "years_active": "17",
+          "easy_count": "24",
+          "medium_count": "961",
+          "hard_count": "2",
+          "mh_count": "47"
+        },
+        {
+          "subject": "Geography",
+          "questions_count": "817",
+          "topic_count": "51",
+          "years_active": "14",
+          "easy_count": "30",
+          "medium_count": "786",
+          "hard_count": "1",
+          "mh_count": "225"
+        },
+        {
+          "subject": "Polity",
+          "questions_count": "787",
+          "topic_count": "64",
+          "years_active": "15",
+          "easy_count": "21",
+          "medium_count": "763",
+          "hard_count": "3",
+          "mh_count": "48"
+        },
+        {
+          "subject": "Reasoning",
+          "questions_count": "764",
+          "topic_count": "49",
+          "years_active": "16",
+          "easy_count": "25",
+          "medium_count": "730",
+          "hard_count": "9",
+          "mh_count": "9"
+        },
+        {
+          "subject": "History",
+          "questions_count": "712",
+          "topic_count": "56",
+          "years_active": "14",
+          "easy_count": "18",
+          "medium_count": "686",
+          "hard_count": "8",
+          "mh_count": "31"
+        },
+        {
+          "subject": "Current Affairs",
+          "questions_count": "707",
+          "topic_count": "10",
+          "years_active": "6",
+          "easy_count": "0",
+          "medium_count": "707",
+          "hard_count": "0",
+          "mh_count": "28"
+        },
+        {
+          "subject": "Law",
+          "questions_count": "367",
+          "topic_count": "46",
+          "years_active": "10",
+          "easy_count": "78",
+          "medium_count": "216",
+          "hard_count": "73",
+          "mh_count": "37"
+        },
+        {
+          "subject": "English",
+          "questions_count": "210",
+          "topic_count": "21",
+          "years_active": "12",
+          "easy_count": "19",
+          "medium_count": "158",
+          "hard_count": "33",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Marathi",
+          "questions_count": "195",
+          "topic_count": "35",
+          "years_active": "13",
+          "easy_count": "45",
+          "medium_count": "121",
+          "hard_count": "29",
+          "mh_count": "0"
+        },
+        {
+          "subject": "General Knowledge",
+          "questions_count": "112",
+          "topic_count": "5",
+          "years_active": "2",
+          "easy_count": "27",
+          "medium_count": "67",
+          "hard_count": "18",
+          "mh_count": "16"
+        },
+        {
+          "subject": "Medical",
+          "questions_count": "93",
+          "topic_count": "6",
+          "years_active": "1",
+          "easy_count": "37",
+          "medium_count": "39",
+          "hard_count": "17",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Mechanical Engineering",
+          "questions_count": "46",
+          "topic_count": "12",
+          "years_active": "1",
+          "easy_count": "16",
+          "medium_count": "28",
+          "hard_count": "2",
+          "mh_count": "0"
+        },
+        {
+          "subject": "General Intelligence",
+          "questions_count": "42",
+          "topic_count": "3",
+          "years_active": "1",
+          "easy_count": "8",
+          "medium_count": "17",
+          "hard_count": "17",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Management",
+          "questions_count": "14",
+          "topic_count": "10",
+          "years_active": "1",
+          "easy_count": "5",
+          "medium_count": "9",
+          "hard_count": "0",
+          "mh_count": "0"
+        }
+      ],
+      "topTopics": [
+        {
+          "subject": "Current Affairs",
+          "topic": "GK 2025-26 Marathon",
+          "questions_count": "263",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Geography",
+          "topic": "महाराष्ट्र खनिज संपत्ती",
+          "questions_count": "198",
+          "hard_count": "0",
+          "mh_count": "48"
+        },
+        {
+          "subject": "History",
+          "topic": "Maharashtra Social Reformers",
+          "questions_count": "122",
+          "hard_count": "0",
+          "mh_count": "10"
+        },
+        {
+          "subject": "Science",
+          "topic": "वनस्पतीशास्त्र",
+          "questions_count": "100",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "प्राणिशास्त्र",
+          "questions_count": "100",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "History",
+          "topic": "वृत्तपत्र — संस्थापक व संपादक",
+          "questions_count": "100",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "State Government",
+          "questions_count": "84",
+          "hard_count": "0",
+          "mh_count": "16"
+        },
+        {
+          "subject": "Law",
+          "topic": "Law",
+          "questions_count": "81",
+          "hard_count": "19",
+          "mh_count": "8"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Government Schemes & Yojanas",
+          "questions_count": "78",
+          "hard_count": "0",
+          "mh_count": "12"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Five Year Plans",
+          "questions_count": "77",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Constitutional Framework & Preamble",
+          "questions_count": "77",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "Botany (Plant Biology)",
+          "questions_count": "75",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "Science & Technology (IT/Space)",
+          "questions_count": "75",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Panchayati Raj",
+          "questions_count": "71",
+          "hard_count": "0",
+          "mh_count": "4"
+        },
+        {
+          "subject": "Marathi",
+          "topic": "Marathi Grammar",
+          "questions_count": "66",
+          "hard_count": "13",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Industry, Trade & Reforms",
+          "questions_count": "66",
+          "hard_count": "0",
+          "mh_count": "6"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "International Affairs & Summits",
+          "questions_count": "65",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Economy",
+          "topic": "महत्त्वाच्या योजना (PYQ)",
+          "questions_count": "61",
+          "hard_count": "0",
+          "mh_count": "6"
+        },
+        {
+          "subject": "Science",
+          "topic": "पेशी",
+          "questions_count": "60",
+          "hard_count": "0",
+          "mh_count": "1"
+        },
+        {
+          "subject": "Medical",
+          "topic": "Public Health",
+          "questions_count": "60",
+          "hard_count": "10",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Awards & Honours",
+          "questions_count": "59",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "General Studies",
+          "topic": "Indian Economy",
+          "questions_count": "58",
+          "hard_count": "7",
+          "mh_count": "3"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Public Finance & Budget",
+          "questions_count": "58",
+          "hard_count": "0",
+          "mh_count": "4"
+        },
+        {
+          "subject": "Geography",
+          "topic": "Maharashtra Physical Geography",
+          "questions_count": "57",
+          "hard_count": "0",
+          "mh_count": "38"
+        },
+        {
+          "subject": "Science",
+          "topic": "Zoology (Animal Biology)",
+          "questions_count": "52",
+          "hard_count": "0",
+          "mh_count": "0"
+        }
+      ],
+      "yearTrend": [
+        {
+          "year": 2012,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2013,
+          "subject": "General Studies",
+          "count": "126"
+        },
+        {
+          "year": 2013,
+          "subject": "Reasoning",
+          "count": "21"
+        },
+        {
+          "year": 2013,
+          "subject": "Science",
+          "count": "13"
+        },
+        {
+          "year": 2013,
+          "subject": "Polity",
+          "count": "9"
+        },
+        {
+          "year": 2013,
+          "subject": "Economy",
+          "count": "6"
+        },
+        {
+          "year": 2013,
+          "subject": "Geography",
+          "count": "3"
+        },
+        {
+          "year": 2013,
+          "subject": "Marathi",
+          "count": "2"
+        },
+        {
+          "year": 2013,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2013,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Polity",
+          "count": "5"
+        },
+        {
+          "year": 2014,
+          "subject": "English",
+          "count": "5"
+        },
+        {
+          "year": 2014,
+          "subject": "Marathi",
+          "count": "5"
+        },
+        {
+          "year": 2014,
+          "subject": "History",
+          "count": "4"
+        },
+        {
+          "year": 2014,
+          "subject": "Geography",
+          "count": "2"
+        },
+        {
+          "year": 2014,
+          "subject": "Science",
+          "count": "2"
+        },
+        {
+          "year": 2014,
+          "subject": "Economy",
+          "count": "2"
+        },
+        {
+          "year": 2014,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "English",
+          "count": "6"
+        },
+        {
+          "year": 2015,
+          "subject": "Marathi",
+          "count": "6"
+        },
+        {
+          "year": 2015,
+          "subject": "Polity",
+          "count": "5"
+        },
+        {
+          "year": 2015,
+          "subject": "Geography",
+          "count": "4"
+        },
+        {
+          "year": 2015,
+          "subject": "Law",
+          "count": "4"
+        },
+        {
+          "year": 2015,
+          "subject": "History",
+          "count": "4"
+        },
+        {
+          "year": 2015,
+          "subject": "Reasoning",
+          "count": "3"
+        },
+        {
+          "year": 2015,
+          "subject": "Economy",
+          "count": "3"
+        },
+        {
+          "year": 2015,
+          "subject": "Science",
+          "count": "2"
+        },
+        {
+          "year": 2016,
+          "subject": "Marathi",
+          "count": "6"
+        },
+        {
+          "year": 2016,
+          "subject": "Law",
+          "count": "6"
+        },
+        {
+          "year": 2016,
+          "subject": "English",
+          "count": "5"
+        },
+        {
+          "year": 2016,
+          "subject": "Polity",
+          "count": "5"
+        },
+        {
+          "year": 2016,
+          "subject": "Geography",
+          "count": "5"
+        },
+        {
+          "year": 2016,
+          "subject": "Reasoning",
+          "count": "5"
+        },
+        {
+          "year": 2016,
+          "subject": "History",
+          "count": "5"
+        },
+        {
+          "year": 2016,
+          "subject": "Economy",
+          "count": "4"
+        },
+        {
+          "year": 2016,
+          "subject": "Science",
+          "count": "3"
+        },
+        {
+          "year": 2017,
+          "subject": "General Studies",
+          "count": "100"
+        },
+        {
+          "year": 2017,
+          "subject": "Reasoning",
+          "count": "34"
+        },
+        {
+          "year": 2017,
+          "subject": "Science",
+          "count": "15"
+        },
+        {
+          "year": 2017,
+          "subject": "Economy",
+          "count": "9"
+        },
+        {
+          "year": 2017,
+          "subject": "Polity",
+          "count": "9"
+        },
+        {
+          "year": 2017,
+          "subject": "Geography",
+          "count": "7"
+        },
+        {
+          "year": 2017,
+          "subject": "Marathi",
+          "count": "7"
+        },
+        {
+          "year": 2017,
+          "subject": "Law",
+          "count": "6"
+        },
+        {
+          "year": 2017,
+          "subject": "English",
+          "count": "6"
+        },
+        {
+          "year": 2017,
+          "subject": "History",
+          "count": "5"
+        },
+        {
+          "year": 2018,
+          "subject": "General Studies",
+          "count": "200"
+        },
+        {
+          "year": 2018,
+          "subject": "Economy",
+          "count": "69"
+        },
+        {
+          "year": 2018,
+          "subject": "Geography",
+          "count": "42"
+        },
+        {
+          "year": 2018,
+          "subject": "Polity",
+          "count": "39"
+        },
+        {
+          "year": 2018,
+          "subject": "Science",
+          "count": "31"
+        },
+        {
+          "year": 2018,
+          "subject": "Reasoning",
+          "count": "27"
+        },
+        {
+          "year": 2018,
+          "subject": "History",
+          "count": "25"
+        },
+        {
+          "year": 2018,
+          "subject": "Marathi",
+          "count": "8"
+        },
+        {
+          "year": 2018,
+          "subject": "Law",
+          "count": "8"
+        },
+        {
+          "year": 2018,
+          "subject": "English",
+          "count": "7"
+        },
+        {
+          "year": 2019,
+          "subject": "General Studies",
+          "count": "156"
+        },
+        {
+          "year": 2019,
+          "subject": "Economy",
+          "count": "71"
+        },
+        {
+          "year": 2019,
+          "subject": "Polity",
+          "count": "37"
+        },
+        {
+          "year": 2019,
+          "subject": "Reasoning",
+          "count": "33"
+        },
+        {
+          "year": 2019,
+          "subject": "Geography",
+          "count": "31"
+        },
+        {
+          "year": 2019,
+          "subject": "History",
+          "count": "23"
+        },
+        {
+          "year": 2019,
+          "subject": "Science",
+          "count": "22"
+        },
+        {
+          "year": 2019,
+          "subject": "Marathi",
+          "count": "10"
+        },
+        {
+          "year": 2019,
+          "subject": "Law",
+          "count": "8"
+        },
+        {
+          "year": 2019,
+          "subject": "English",
+          "count": "6"
+        },
+        {
+          "year": 2020,
+          "subject": "General Studies",
+          "count": "304"
+        },
+        {
+          "year": 2020,
+          "subject": "Reasoning",
+          "count": "60"
+        },
+        {
+          "year": 2020,
+          "subject": "Science",
+          "count": "48"
+        },
+        {
+          "year": 2020,
+          "subject": "Mechanical Engineering",
+          "count": "46"
+        },
+        {
+          "year": 2020,
+          "subject": "Economy",
+          "count": "43"
+        },
+        {
+          "year": 2020,
+          "subject": "History",
+          "count": "41"
+        },
+        {
+          "year": 2020,
+          "subject": "Polity",
+          "count": "36"
+        },
+        {
+          "year": 2020,
+          "subject": "Geography",
+          "count": "34"
+        },
+        {
+          "year": 2020,
+          "subject": "Current Affairs",
+          "count": "22"
+        },
+        {
+          "year": 2020,
+          "subject": "Marathi",
+          "count": "6"
+        },
+        {
+          "year": 2020,
+          "subject": "Law",
+          "count": "6"
+        },
+        {
+          "year": 2020,
+          "subject": "English",
+          "count": "6"
+        },
+        {
+          "year": 2021,
+          "subject": "General Studies",
+          "count": "390"
+        },
+        {
+          "year": 2021,
+          "subject": "Law",
+          "count": "200"
+        },
+        {
+          "year": 2021,
+          "subject": "Marathi",
+          "count": "104"
+        },
+        {
+          "year": 2021,
+          "subject": "Economy",
+          "count": "96"
+        },
+        {
+          "year": 2021,
+          "subject": "English",
+          "count": "87"
+        },
+        {
+          "year": 2021,
+          "subject": "General Knowledge",
+          "count": "79"
+        },
+        {
+          "year": 2021,
+          "subject": "Polity",
+          "count": "63"
+        },
+        {
+          "year": 2021,
+          "subject": "Science",
+          "count": "46"
+        },
+        {
+          "year": 2021,
+          "subject": "Geography",
+          "count": "43"
+        },
+        {
+          "year": 2021,
+          "subject": "General Intelligence",
+          "count": "42"
+        },
+        {
+          "year": 2021,
+          "subject": "History",
+          "count": "33"
+        },
+        {
+          "year": 2021,
+          "subject": "Reasoning",
+          "count": "31"
+        },
+        {
+          "year": 2021,
+          "subject": "Management",
+          "count": "14"
+        },
+        {
+          "year": 2021,
+          "subject": "Public Administration",
+          "count": "8"
+        },
+        {
+          "year": 2021,
+          "subject": "Mathematics",
+          "count": "4"
+        },
+        {
+          "year": 2022,
+          "subject": "General Studies",
+          "count": "183"
+        },
+        {
+          "year": 2022,
+          "subject": "Economy",
+          "count": "90"
+        },
+        {
+          "year": 2022,
+          "subject": "Polity",
+          "count": "83"
+        },
+        {
+          "year": 2022,
+          "subject": "Reasoning",
+          "count": "82"
+        },
+        {
+          "year": 2022,
+          "subject": "Geography",
+          "count": "72"
+        },
+        {
+          "year": 2022,
+          "subject": "Science",
+          "count": "70"
+        },
+        {
+          "year": 2022,
+          "subject": "General Knowledge",
+          "count": "33"
+        },
+        {
+          "year": 2022,
+          "subject": "Marathi",
+          "count": "27"
+        },
+        {
+          "year": 2022,
+          "subject": "History",
+          "count": "24"
+        },
+        {
+          "year": 2022,
+          "subject": "English",
+          "count": "24"
+        },
+        {
+          "year": 2022,
+          "subject": "Current Affairs",
+          "count": "20"
+        },
+        {
+          "year": 2022,
+          "subject": "Law",
+          "count": "9"
+        },
+        {
+          "year": 2023,
+          "subject": "General Studies",
+          "count": "141"
+        },
+        {
+          "year": 2023,
+          "subject": "Law",
+          "count": "119"
+        },
+        {
+          "year": 2023,
+          "subject": "Medical",
+          "count": "93"
+        },
+        {
+          "year": 2023,
+          "subject": "Economy",
+          "count": "75"
+        },
+        {
+          "year": 2023,
+          "subject": "Polity",
+          "count": "69"
+        },
+        {
+          "year": 2023,
+          "subject": "Science",
+          "count": "58"
+        },
+        {
+          "year": 2023,
+          "subject": "Geography",
+          "count": "47"
+        },
+        {
+          "year": 2023,
+          "subject": "History",
+          "count": "44"
+        },
+        {
+          "year": 2023,
+          "subject": "Current Affairs",
+          "count": "36"
+        },
+        {
+          "year": 2023,
+          "subject": "Reasoning",
+          "count": "26"
+        },
+        {
+          "year": 2023,
+          "subject": "Marathi",
+          "count": "10"
+        },
+        {
+          "year": 2023,
+          "subject": "English",
+          "count": "4"
+        },
+        {
+          "year": 2024,
+          "subject": "Science",
+          "count": "1850"
+        },
+        {
+          "year": 2024,
+          "subject": "Geography",
+          "count": "409"
+        },
+        {
+          "year": 2024,
+          "subject": "Economy",
+          "count": "392"
+        },
+        {
+          "year": 2024,
+          "subject": "History",
+          "count": "337"
+        },
+        {
+          "year": 2024,
+          "subject": "Polity",
+          "count": "295"
+        },
+        {
+          "year": 2024,
+          "subject": "Current Affairs",
+          "count": "262"
+        },
+        {
+          "year": 2024,
+          "subject": "Reasoning",
+          "count": "254"
+        },
+        {
+          "year": 2024,
+          "subject": "General Studies",
+          "count": "86"
+        },
+        {
+          "year": 2024,
+          "subject": "English",
+          "count": "53"
+        },
+        {
+          "year": 2024,
+          "subject": "Marathi",
+          "count": "3"
+        },
+        {
+          "year": 2025,
+          "subject": "Current Affairs",
+          "count": "337"
+        },
+        {
+          "year": 2025,
+          "subject": "Science",
+          "count": "104"
+        },
+        {
+          "year": 2025,
+          "subject": "Polity",
+          "count": "94"
+        },
+        {
+          "year": 2025,
+          "subject": "Economy",
+          "count": "87"
+        },
+        {
+          "year": 2025,
+          "subject": "Reasoning",
+          "count": "80"
+        },
+        {
+          "year": 2025,
+          "subject": "Geography",
+          "count": "75"
+        },
+        {
+          "year": 2025,
+          "subject": "History",
+          "count": "70"
+        },
+        {
+          "year": 2025,
+          "subject": "General Studies",
+          "count": "10"
+        }
+      ]
+    },
+    "rajyaseva": {
+      "overview": {
+        "total_questions": "1705",
+        "min_year": 2011,
+        "max_year": 2025,
+        "distinct_years": "14",
+        "distinct_exams": "7",
+        "easy_count": "19",
+        "medium_count": "1667",
+        "hard_count": "19",
+        "multi_statement_count": "281",
+        "match_columns_count": "53",
+        "mh_specific_count": "95"
+      },
+      "subjects": [
+        {
+          "subject": "General Studies",
+          "questions_count": "276",
+          "topic_count": "7",
+          "years_active": "5",
+          "easy_count": "0",
+          "medium_count": "276",
+          "hard_count": "0",
+          "mh_count": "15"
+        },
+        {
+          "subject": "Polity",
+          "questions_count": "244",
+          "topic_count": "34",
+          "years_active": "13",
+          "easy_count": "2",
+          "medium_count": "240",
+          "hard_count": "2",
+          "mh_count": "4"
+        },
+        {
+          "subject": "Science",
+          "questions_count": "243",
+          "topic_count": "26",
+          "years_active": "12",
+          "easy_count": "2",
+          "medium_count": "240",
+          "hard_count": "1",
+          "mh_count": "0"
+        },
+        {
+          "subject": "History",
+          "questions_count": "236",
+          "topic_count": "31",
+          "years_active": "13",
+          "easy_count": "2",
+          "medium_count": "233",
+          "hard_count": "1",
+          "mh_count": "15"
+        },
+        {
+          "subject": "Geography",
+          "questions_count": "201",
+          "topic_count": "25",
+          "years_active": "13",
+          "easy_count": "5",
+          "medium_count": "196",
+          "hard_count": "0",
+          "mh_count": "43"
+        },
+        {
+          "subject": "Economy",
+          "questions_count": "179",
+          "topic_count": "26",
+          "years_active": "12",
+          "easy_count": "3",
+          "medium_count": "176",
+          "hard_count": "0",
+          "mh_count": "7"
+        },
+        {
+          "subject": "Current Affairs",
+          "questions_count": "143",
+          "topic_count": "8",
+          "years_active": "5",
+          "easy_count": "0",
+          "medium_count": "143",
+          "hard_count": "0",
+          "mh_count": "10"
+        },
+        {
+          "subject": "Reasoning",
+          "questions_count": "121",
+          "topic_count": "22",
+          "years_active": "9",
+          "easy_count": "1",
+          "medium_count": "117",
+          "hard_count": "3",
+          "mh_count": "1"
+        },
+        {
+          "subject": "Marathi",
+          "questions_count": "28",
+          "topic_count": "10",
+          "years_active": "10",
+          "easy_count": "3",
+          "medium_count": "22",
+          "hard_count": "3",
+          "mh_count": "0"
+        },
+        {
+          "subject": "English",
+          "questions_count": "25",
+          "topic_count": "6",
+          "years_active": "10",
+          "easy_count": "0",
+          "medium_count": "19",
+          "hard_count": "6",
+          "mh_count": "0"
+        }
+      ],
+      "topTopics": [
+        {
+          "subject": "General Studies",
+          "topic": "General",
+          "questions_count": "248",
+          "hard_count": "0",
+          "mh_count": "15"
+        },
+        {
+          "subject": "History",
+          "topic": "Maharashtra Social Reformers",
+          "questions_count": "76",
+          "hard_count": "0",
+          "mh_count": "8"
+        },
+        {
+          "subject": "Polity",
+          "topic": "General",
+          "questions_count": "65",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Economy",
+          "topic": "General",
+          "questions_count": "61",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Geography",
+          "topic": "General",
+          "questions_count": "37",
+          "hard_count": "0",
+          "mh_count": "8"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Constitutional Framework & Preamble",
+          "questions_count": "35",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Government Schemes & Yojanas",
+          "questions_count": "34",
+          "hard_count": "0",
+          "mh_count": "6"
+        },
+        {
+          "subject": "Science",
+          "topic": "General",
+          "questions_count": "30",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Geography",
+          "topic": "Climatology",
+          "questions_count": "28",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Poverty & Unemployment",
+          "questions_count": "24",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Panchayati Raj",
+          "questions_count": "23",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Science",
+          "topic": "Science & Technology (IT/Space)",
+          "questions_count": "23",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Economic Planning & Five Year Plans",
+          "questions_count": "22",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "History",
+          "topic": "Medieval India",
+          "questions_count": "21",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Other",
+          "questions_count": "20",
+          "hard_count": "0",
+          "mh_count": "4"
+        },
+        {
+          "subject": "Geography",
+          "topic": "Maharashtra Physical Geography",
+          "questions_count": "20",
+          "hard_count": "0",
+          "mh_count": "16"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Constitutional & Statutory Bodies",
+          "questions_count": "20",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "International Affairs & Summits",
+          "questions_count": "19",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "Botany (Plant Biology)",
+          "questions_count": "19",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Persons in News & Books",
+          "questions_count": "19",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Reasoning",
+          "topic": "General",
+          "questions_count": "19",
+          "hard_count": "0",
+          "mh_count": "1"
+        },
+        {
+          "subject": "Science",
+          "topic": "Chemical Bonding & Reactions",
+          "questions_count": "18",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "National Appointments & Reports",
+          "questions_count": "18",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Geography",
+          "topic": "Minerals & Industries",
+          "questions_count": "17",
+          "hard_count": "0",
+          "mh_count": "3"
+        },
+        {
+          "subject": "Reasoning",
+          "topic": "Algebra & Equations",
+          "questions_count": "17",
+          "hard_count": "0",
+          "mh_count": "0"
+        }
+      ],
+      "yearTrend": [
+        {
+          "year": 2011,
+          "subject": "History",
+          "count": "96"
+        },
+        {
+          "year": 2011,
+          "subject": "Reasoning",
+          "count": "40"
+        },
+        {
+          "year": 2011,
+          "subject": "Science",
+          "count": "40"
+        },
+        {
+          "year": 2011,
+          "subject": "Geography",
+          "count": "40"
+        },
+        {
+          "year": 2011,
+          "subject": "Polity",
+          "count": "32"
+        },
+        {
+          "year": 2011,
+          "subject": "Current Affairs",
+          "count": "30"
+        },
+        {
+          "year": 2011,
+          "subject": "Economy",
+          "count": "20"
+        },
+        {
+          "year": 2013,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "Polity",
+          "count": "2"
+        },
+        {
+          "year": 2015,
+          "subject": "Economy",
+          "count": "2"
+        },
+        {
+          "year": 2015,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "History",
+          "count": "2"
+        },
+        {
+          "year": 2016,
+          "subject": "Economy",
+          "count": "2"
+        },
+        {
+          "year": 2016,
+          "subject": "Polity",
+          "count": "2"
+        },
+        {
+          "year": 2016,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Reasoning",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Geography",
+          "count": "2"
+        },
+        {
+          "year": 2017,
+          "subject": "Science",
+          "count": "2"
+        },
+        {
+          "year": 2017,
+          "subject": "Economy",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Reasoning",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "Polity",
+          "count": "2"
+        },
+        {
+          "year": 2018,
+          "subject": "Law",
+          "count": "2"
+        },
+        {
+          "year": 2018,
+          "subject": "Geography",
+          "count": "2"
+        },
+        {
+          "year": 2018,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "Reasoning",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "Economy",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "History",
+          "count": "4"
+        },
+        {
+          "year": 2019,
+          "subject": "Economy",
+          "count": "2"
+        },
+        {
+          "year": 2019,
+          "subject": "Marathi",
+          "count": "2"
+        },
+        {
+          "year": 2019,
+          "subject": "Reasoning",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "History",
+          "count": "3"
+        },
+        {
+          "year": 2020,
+          "subject": "Polity",
+          "count": "3"
+        },
+        {
+          "year": 2020,
+          "subject": "Reasoning",
+          "count": "2"
+        },
+        {
+          "year": 2020,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "Economy",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2021,
+          "subject": "General Studies",
+          "count": "98"
+        },
+        {
+          "year": 2021,
+          "subject": "Polity",
+          "count": "32"
+        },
+        {
+          "year": 2021,
+          "subject": "Economy",
+          "count": "31"
+        },
+        {
+          "year": 2021,
+          "subject": "Science",
+          "count": "19"
+        },
+        {
+          "year": 2021,
+          "subject": "Geography",
+          "count": "14"
+        },
+        {
+          "year": 2021,
+          "subject": "Reasoning",
+          "count": "8"
+        },
+        {
+          "year": 2021,
+          "subject": "History",
+          "count": "7"
+        },
+        {
+          "year": 2021,
+          "subject": "Marathi",
+          "count": "2"
+        },
+        {
+          "year": 2021,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2021,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2022,
+          "subject": "General Studies",
+          "count": "93"
+        },
+        {
+          "year": 2022,
+          "subject": "Reasoning",
+          "count": "56"
+        },
+        {
+          "year": 2022,
+          "subject": "Polity",
+          "count": "53"
+        },
+        {
+          "year": 2022,
+          "subject": "Geography",
+          "count": "43"
+        },
+        {
+          "year": 2022,
+          "subject": "Science",
+          "count": "38"
+        },
+        {
+          "year": 2022,
+          "subject": "Economy",
+          "count": "34"
+        },
+        {
+          "year": 2022,
+          "subject": "Current Affairs",
+          "count": "20"
+        },
+        {
+          "year": 2022,
+          "subject": "Marathi",
+          "count": "17"
+        },
+        {
+          "year": 2022,
+          "subject": "English",
+          "count": "15"
+        },
+        {
+          "year": 2022,
+          "subject": "History",
+          "count": "8"
+        },
+        {
+          "year": 2023,
+          "subject": "Science",
+          "count": "44"
+        },
+        {
+          "year": 2023,
+          "subject": "Current Affairs",
+          "count": "36"
+        },
+        {
+          "year": 2023,
+          "subject": "History",
+          "count": "31"
+        },
+        {
+          "year": 2023,
+          "subject": "Polity",
+          "count": "30"
+        },
+        {
+          "year": 2023,
+          "subject": "Economy",
+          "count": "28"
+        },
+        {
+          "year": 2023,
+          "subject": "Geography",
+          "count": "28"
+        },
+        {
+          "year": 2023,
+          "subject": "General Studies",
+          "count": "6"
+        },
+        {
+          "year": 2024,
+          "subject": "General Studies",
+          "count": "69"
+        },
+        {
+          "year": 2024,
+          "subject": "Polity",
+          "count": "55"
+        },
+        {
+          "year": 2024,
+          "subject": "Science",
+          "count": "53"
+        },
+        {
+          "year": 2024,
+          "subject": "History",
+          "count": "51"
+        },
+        {
+          "year": 2024,
+          "subject": "Geography",
+          "count": "34"
+        },
+        {
+          "year": 2024,
+          "subject": "Current Affairs",
+          "count": "33"
+        },
+        {
+          "year": 2024,
+          "subject": "Economy",
+          "count": "30"
+        },
+        {
+          "year": 2024,
+          "subject": "Reasoning",
+          "count": "11"
+        },
+        {
+          "year": 2024,
+          "subject": "English",
+          "count": "2"
+        },
+        {
+          "year": 2025,
+          "subject": "Science",
+          "count": "42"
+        },
+        {
+          "year": 2025,
+          "subject": "Geography",
+          "count": "33"
+        },
+        {
+          "year": 2025,
+          "subject": "History",
+          "count": "30"
+        },
+        {
+          "year": 2025,
+          "subject": "Polity",
+          "count": "30"
+        },
+        {
+          "year": 2025,
+          "subject": "Economy",
+          "count": "27"
+        },
+        {
+          "year": 2025,
+          "subject": "Current Affairs",
+          "count": "24"
+        },
+        {
+          "year": 2025,
+          "subject": "General Studies",
+          "count": "10"
+        }
+      ]
+    },
+    "group_b": {
+      "overview": {
+        "total_questions": "2526",
+        "min_year": 2012,
+        "max_year": 2025,
+        "distinct_years": "14",
+        "distinct_exams": "24",
+        "easy_count": "95",
+        "medium_count": "2329",
+        "hard_count": "102",
+        "multi_statement_count": "340",
+        "match_columns_count": "74",
+        "mh_specific_count": "165"
+      },
+      "subjects": [
+        {
+          "subject": "General Studies",
+          "questions_count": "447",
+          "topic_count": "10",
+          "years_active": "6",
+          "easy_count": "10",
+          "medium_count": "411",
+          "hard_count": "26",
+          "mh_count": "25"
+        },
+        {
+          "subject": "Economy",
+          "questions_count": "325",
+          "topic_count": "28",
+          "years_active": "10",
+          "easy_count": "4",
+          "medium_count": "321",
+          "hard_count": "0",
+          "mh_count": "12"
+        },
+        {
+          "subject": "Reasoning",
+          "questions_count": "281",
+          "topic_count": "26",
+          "years_active": "11",
+          "easy_count": "4",
+          "medium_count": "276",
+          "hard_count": "1",
+          "mh_count": "7"
+        },
+        {
+          "subject": "Polity",
+          "questions_count": "277",
+          "topic_count": "31",
+          "years_active": "13",
+          "easy_count": "3",
+          "medium_count": "273",
+          "hard_count": "1",
+          "mh_count": "26"
+        },
+        {
+          "subject": "Science",
+          "questions_count": "236",
+          "topic_count": "24",
+          "years_active": "11",
+          "easy_count": "4",
+          "medium_count": "231",
+          "hard_count": "1",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Geography",
+          "questions_count": "212",
+          "topic_count": "21",
+          "years_active": "12",
+          "easy_count": "6",
+          "medium_count": "206",
+          "hard_count": "0",
+          "mh_count": "68"
+        },
+        {
+          "subject": "History",
+          "questions_count": "199",
+          "topic_count": "25",
+          "years_active": "13",
+          "easy_count": "4",
+          "medium_count": "194",
+          "hard_count": "1",
+          "mh_count": "8"
+        },
+        {
+          "subject": "Current Affairs",
+          "questions_count": "152",
+          "topic_count": "8",
+          "years_active": "3",
+          "easy_count": "0",
+          "medium_count": "152",
+          "hard_count": "0",
+          "mh_count": "6"
+        },
+        {
+          "subject": "English",
+          "questions_count": "138",
+          "topic_count": "10",
+          "years_active": "9",
+          "easy_count": "17",
+          "medium_count": "108",
+          "hard_count": "13",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Marathi",
+          "questions_count": "112",
+          "topic_count": "12",
+          "years_active": "11",
+          "easy_count": "21",
+          "medium_count": "68",
+          "hard_count": "23",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Law",
+          "questions_count": "100",
+          "topic_count": "15",
+          "years_active": "9",
+          "easy_count": "9",
+          "medium_count": "68",
+          "hard_count": "23",
+          "mh_count": "10"
+        },
+        {
+          "subject": "General Knowledge",
+          "questions_count": "36",
+          "topic_count": "1",
+          "years_active": "2",
+          "easy_count": "13",
+          "medium_count": "17",
+          "hard_count": "6",
+          "mh_count": "3"
+        },
+        {
+          "subject": "General Intelligence",
+          "questions_count": "10",
+          "topic_count": "1",
+          "years_active": "1",
+          "easy_count": "0",
+          "medium_count": "3",
+          "hard_count": "7",
+          "mh_count": "0"
+        }
+      ],
+      "topTopics": [
+        {
+          "subject": "General Studies",
+          "topic": "General",
+          "questions_count": "356",
+          "hard_count": "0",
+          "mh_count": "17"
+        },
+        {
+          "subject": "Economy",
+          "topic": "General",
+          "questions_count": "132",
+          "hard_count": "0",
+          "mh_count": "5"
+        },
+        {
+          "subject": "Law",
+          "topic": "Law",
+          "questions_count": "81",
+          "hard_count": "19",
+          "mh_count": "8"
+        },
+        {
+          "subject": "Marathi",
+          "topic": "Marathi Grammar",
+          "questions_count": "66",
+          "hard_count": "13",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "General",
+          "questions_count": "58",
+          "hard_count": "0",
+          "mh_count": "5"
+        },
+        {
+          "subject": "Geography",
+          "topic": "General",
+          "questions_count": "53",
+          "hard_count": "0",
+          "mh_count": "17"
+        },
+        {
+          "subject": "Polity",
+          "topic": "State Government",
+          "questions_count": "50",
+          "hard_count": "0",
+          "mh_count": "14"
+        },
+        {
+          "subject": "General Studies",
+          "topic": "General Knowledge",
+          "questions_count": "50",
+          "hard_count": "11",
+          "mh_count": "6"
+        },
+        {
+          "subject": "English",
+          "topic": "English Grammar",
+          "questions_count": "49",
+          "hard_count": "5",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Reasoning",
+          "topic": "General",
+          "questions_count": "42",
+          "hard_count": "0",
+          "mh_count": "5"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Industry, Trade & Reforms",
+          "questions_count": "40",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Science",
+          "topic": "Science & Technology (IT/Space)",
+          "questions_count": "38",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "History",
+          "topic": "Maharashtra Social Reformers",
+          "questions_count": "36",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Panchayati Raj",
+          "questions_count": "36",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "General Knowledge",
+          "topic": "General Knowledge",
+          "questions_count": "36",
+          "hard_count": "6",
+          "mh_count": "3"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Public Finance & Budget",
+          "questions_count": "34",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "Botany (Plant Biology)",
+          "questions_count": "32",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "International Affairs & Summits",
+          "questions_count": "30",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "General",
+          "questions_count": "29",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Money & Banking",
+          "questions_count": "28",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "Zoology (Animal Biology)",
+          "questions_count": "28",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Persons in News & Books",
+          "questions_count": "28",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Geography",
+          "topic": "Maharashtra Physical Geography",
+          "questions_count": "26",
+          "hard_count": "0",
+          "mh_count": "16"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Awards & Honours",
+          "questions_count": "26",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "History",
+          "topic": "General",
+          "questions_count": "24",
+          "hard_count": "0",
+          "mh_count": "2"
+        }
+      ],
+      "yearTrend": [
+        {
+          "year": 2012,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2013,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2013,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2013,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Economy",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "Polity",
+          "count": "2"
+        },
+        {
+          "year": 2015,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "Reasoning",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "History",
+          "count": "2"
+        },
+        {
+          "year": 2016,
+          "subject": "Economy",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Reasoning",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2016,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Polity",
+          "count": "2"
+        },
+        {
+          "year": 2017,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Reasoning",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "General Studies",
+          "count": "104"
+        },
+        {
+          "year": 2018,
+          "subject": "Economy",
+          "count": "34"
+        },
+        {
+          "year": 2018,
+          "subject": "Geography",
+          "count": "22"
+        },
+        {
+          "year": 2018,
+          "subject": "Reasoning",
+          "count": "13"
+        },
+        {
+          "year": 2018,
+          "subject": "Polity",
+          "count": "12"
+        },
+        {
+          "year": 2018,
+          "subject": "Science",
+          "count": "10"
+        },
+        {
+          "year": 2018,
+          "subject": "History",
+          "count": "9"
+        },
+        {
+          "year": 2018,
+          "subject": "Marathi",
+          "count": "3"
+        },
+        {
+          "year": 2018,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "General Studies",
+          "count": "56"
+        },
+        {
+          "year": 2019,
+          "subject": "Economy",
+          "count": "31"
+        },
+        {
+          "year": 2019,
+          "subject": "Geography",
+          "count": "11"
+        },
+        {
+          "year": 2019,
+          "subject": "Polity",
+          "count": "9"
+        },
+        {
+          "year": 2019,
+          "subject": "Reasoning",
+          "count": "8"
+        },
+        {
+          "year": 2019,
+          "subject": "Science",
+          "count": "7"
+        },
+        {
+          "year": 2019,
+          "subject": "History",
+          "count": "6"
+        },
+        {
+          "year": 2019,
+          "subject": "Marathi",
+          "count": "4"
+        },
+        {
+          "year": 2019,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "General Studies",
+          "count": "84"
+        },
+        {
+          "year": 2020,
+          "subject": "Economy",
+          "count": "33"
+        },
+        {
+          "year": 2020,
+          "subject": "Science",
+          "count": "32"
+        },
+        {
+          "year": 2020,
+          "subject": "Reasoning",
+          "count": "31"
+        },
+        {
+          "year": 2020,
+          "subject": "History",
+          "count": "31"
+        },
+        {
+          "year": 2020,
+          "subject": "Geography",
+          "count": "23"
+        },
+        {
+          "year": 2020,
+          "subject": "Current Affairs",
+          "count": "22"
+        },
+        {
+          "year": 2020,
+          "subject": "Polity",
+          "count": "22"
+        },
+        {
+          "year": 2020,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2021,
+          "subject": "General Studies",
+          "count": "97"
+        },
+        {
+          "year": 2021,
+          "subject": "Marathi",
+          "count": "97"
+        },
+        {
+          "year": 2021,
+          "subject": "Law",
+          "count": "83"
+        },
+        {
+          "year": 2021,
+          "subject": "English",
+          "count": "81"
+        },
+        {
+          "year": 2021,
+          "subject": "Economy",
+          "count": "35"
+        },
+        {
+          "year": 2021,
+          "subject": "Polity",
+          "count": "19"
+        },
+        {
+          "year": 2021,
+          "subject": "Geography",
+          "count": "15"
+        },
+        {
+          "year": 2021,
+          "subject": "Reasoning",
+          "count": "11"
+        },
+        {
+          "year": 2021,
+          "subject": "Science",
+          "count": "11"
+        },
+        {
+          "year": 2021,
+          "subject": "General Intelligence",
+          "count": "10"
+        },
+        {
+          "year": 2021,
+          "subject": "History",
+          "count": "8"
+        },
+        {
+          "year": 2021,
+          "subject": "General Knowledge",
+          "count": "3"
+        },
+        {
+          "year": 2021,
+          "subject": "Mathematics",
+          "count": "1"
+        },
+        {
+          "year": 2022,
+          "subject": "General Knowledge",
+          "count": "33"
+        },
+        {
+          "year": 2022,
+          "subject": "Polity",
+          "count": "5"
+        },
+        {
+          "year": 2022,
+          "subject": "Law",
+          "count": "4"
+        },
+        {
+          "year": 2022,
+          "subject": "Economy",
+          "count": "3"
+        },
+        {
+          "year": 2022,
+          "subject": "History",
+          "count": "2"
+        },
+        {
+          "year": 2022,
+          "subject": "Science",
+          "count": "2"
+        },
+        {
+          "year": 2022,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2022,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2022,
+          "subject": "Reasoning",
+          "count": "1"
+        },
+        {
+          "year": 2023,
+          "subject": "General Studies",
+          "count": "99"
+        },
+        {
+          "year": 2023,
+          "subject": "Economy",
+          "count": "41"
+        },
+        {
+          "year": 2023,
+          "subject": "Polity",
+          "count": "29"
+        },
+        {
+          "year": 2023,
+          "subject": "Reasoning",
+          "count": "13"
+        },
+        {
+          "year": 2023,
+          "subject": "Geography",
+          "count": "11"
+        },
+        {
+          "year": 2023,
+          "subject": "History",
+          "count": "9"
+        },
+        {
+          "year": 2023,
+          "subject": "Law",
+          "count": "7"
+        },
+        {
+          "year": 2023,
+          "subject": "Science",
+          "count": "6"
+        },
+        {
+          "year": 2023,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2024,
+          "subject": "Reasoning",
+          "count": "161"
+        },
+        {
+          "year": 2024,
+          "subject": "Polity",
+          "count": "144"
+        },
+        {
+          "year": 2024,
+          "subject": "Science",
+          "count": "134"
+        },
+        {
+          "year": 2024,
+          "subject": "Economy",
+          "count": "116"
+        },
+        {
+          "year": 2024,
+          "subject": "History",
+          "count": "108"
+        },
+        {
+          "year": 2024,
+          "subject": "Current Affairs",
+          "count": "106"
+        },
+        {
+          "year": 2024,
+          "subject": "Geography",
+          "count": "100"
+        },
+        {
+          "year": 2024,
+          "subject": "English",
+          "count": "50"
+        },
+        {
+          "year": 2024,
+          "subject": "General Studies",
+          "count": "7"
+        },
+        {
+          "year": 2024,
+          "subject": "Marathi",
+          "count": "1"
+        },
+        {
+          "year": 2025,
+          "subject": "Reasoning",
+          "count": "40"
+        },
+        {
+          "year": 2025,
+          "subject": "Science",
+          "count": "31"
+        },
+        {
+          "year": 2025,
+          "subject": "Economy",
+          "count": "30"
+        },
+        {
+          "year": 2025,
+          "subject": "Polity",
+          "count": "30"
+        },
+        {
+          "year": 2025,
+          "subject": "Geography",
+          "count": "25"
+        },
+        {
+          "year": 2025,
+          "subject": "Current Affairs",
+          "count": "24"
+        },
+        {
+          "year": 2025,
+          "subject": "History",
+          "count": "20"
+        }
+      ]
+    },
+    "group_c": {
+      "overview": {
+        "total_questions": "1475",
+        "min_year": 2018,
+        "max_year": 2025,
+        "distinct_years": "7",
+        "distinct_exams": "5",
+        "easy_count": "0",
+        "medium_count": "1475",
+        "hard_count": "0",
+        "multi_statement_count": "215",
+        "match_columns_count": "41",
+        "mh_specific_count": "87"
+      },
+      "subjects": [
+        {
+          "subject": "General Studies",
+          "questions_count": "338",
+          "topic_count": "5",
+          "years_active": "5",
+          "easy_count": "0",
+          "medium_count": "338",
+          "hard_count": "0",
+          "mh_count": "16"
+        },
+        {
+          "subject": "Economy",
+          "questions_count": "235",
+          "topic_count": "14",
+          "years_active": "6",
+          "easy_count": "0",
+          "medium_count": "235",
+          "hard_count": "0",
+          "mh_count": "9"
+        },
+        {
+          "subject": "Polity",
+          "questions_count": "193",
+          "topic_count": "17",
+          "years_active": "7",
+          "easy_count": "0",
+          "medium_count": "193",
+          "hard_count": "0",
+          "mh_count": "8"
+        },
+        {
+          "subject": "Science",
+          "questions_count": "174",
+          "topic_count": "21",
+          "years_active": "6",
+          "easy_count": "0",
+          "medium_count": "174",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Reasoning",
+          "questions_count": "163",
+          "topic_count": "19",
+          "years_active": "6",
+          "easy_count": "0",
+          "medium_count": "163",
+          "hard_count": "0",
+          "mh_count": "1"
+        },
+        {
+          "subject": "Geography",
+          "questions_count": "143",
+          "topic_count": "17",
+          "years_active": "6",
+          "easy_count": "0",
+          "medium_count": "143",
+          "hard_count": "0",
+          "mh_count": "39"
+        },
+        {
+          "subject": "History",
+          "questions_count": "127",
+          "topic_count": "17",
+          "years_active": "6",
+          "easy_count": "0",
+          "medium_count": "127",
+          "hard_count": "0",
+          "mh_count": "4"
+        },
+        {
+          "subject": "Current Affairs",
+          "questions_count": "100",
+          "topic_count": "8",
+          "years_active": "2",
+          "easy_count": "0",
+          "medium_count": "100",
+          "hard_count": "0",
+          "mh_count": "10"
+        }
+      ],
+      "topTopics": [
+        {
+          "subject": "General Studies",
+          "topic": "General",
+          "questions_count": "328",
+          "hard_count": "0",
+          "mh_count": "16"
+        },
+        {
+          "subject": "Economy",
+          "topic": "General",
+          "questions_count": "129",
+          "hard_count": "0",
+          "mh_count": "1"
+        },
+        {
+          "subject": "Polity",
+          "topic": "General",
+          "questions_count": "62",
+          "hard_count": "0",
+          "mh_count": "3"
+        },
+        {
+          "subject": "Geography",
+          "topic": "General",
+          "questions_count": "49",
+          "hard_count": "0",
+          "mh_count": "15"
+        },
+        {
+          "subject": "Reasoning",
+          "topic": "General",
+          "questions_count": "41",
+          "hard_count": "0",
+          "mh_count": "1"
+        },
+        {
+          "subject": "Science",
+          "topic": "General",
+          "questions_count": "39",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "History",
+          "topic": "General",
+          "questions_count": "30",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Government Schemes & Yojanas",
+          "questions_count": "26",
+          "hard_count": "0",
+          "mh_count": "6"
+        },
+        {
+          "subject": "Science",
+          "topic": "Botany (Plant Biology)",
+          "questions_count": "24",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Constitutional Framework & Preamble",
+          "questions_count": "22",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Awards & Honours",
+          "questions_count": "18",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "State Government",
+          "questions_count": "18",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Science",
+          "topic": "Zoology (Animal Biology)",
+          "questions_count": "18",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "National Appointments & Reports",
+          "questions_count": "16",
+          "hard_count": "0",
+          "mh_count": "4"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Public Finance & Budget",
+          "questions_count": "16",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Industry, Trade & Reforms",
+          "questions_count": "16",
+          "hard_count": "0",
+          "mh_count": "4"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "International Affairs & Summits",
+          "questions_count": "16",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Geography",
+          "topic": "World Geography & Locations",
+          "questions_count": "16",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Geography",
+          "topic": "Population & Census",
+          "questions_count": "14",
+          "hard_count": "0",
+          "mh_count": "8"
+        },
+        {
+          "subject": "Reasoning",
+          "topic": "Number System & Simplification",
+          "questions_count": "14",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Current Affairs",
+          "topic": "Sports",
+          "questions_count": "14",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Judiciary",
+          "questions_count": "14",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "Science & Technology (IT/Space)",
+          "questions_count": "14",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Economy",
+          "topic": "Economic Planning & Five Year Plans",
+          "questions_count": "14",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "Constitutional & Statutory Bodies",
+          "questions_count": "12",
+          "hard_count": "0",
+          "mh_count": "0"
+        }
+      ],
+      "yearTrend": [
+        {
+          "year": 2018,
+          "subject": "General Studies",
+          "count": "96"
+        },
+        {
+          "year": 2018,
+          "subject": "Economy",
+          "count": "31"
+        },
+        {
+          "year": 2018,
+          "subject": "Polity",
+          "count": "20"
+        },
+        {
+          "year": 2018,
+          "subject": "Science",
+          "count": "13"
+        },
+        {
+          "year": 2018,
+          "subject": "Geography",
+          "count": "12"
+        },
+        {
+          "year": 2018,
+          "subject": "History",
+          "count": "10"
+        },
+        {
+          "year": 2018,
+          "subject": "Reasoning",
+          "count": "8"
+        },
+        {
+          "year": 2019,
+          "subject": "General Studies",
+          "count": "100"
+        },
+        {
+          "year": 2019,
+          "subject": "Economy",
+          "count": "34"
+        },
+        {
+          "year": 2019,
+          "subject": "Polity",
+          "count": "21"
+        },
+        {
+          "year": 2019,
+          "subject": "Reasoning",
+          "count": "16"
+        },
+        {
+          "year": 2019,
+          "subject": "Geography",
+          "count": "13"
+        },
+        {
+          "year": 2019,
+          "subject": "Science",
+          "count": "6"
+        },
+        {
+          "year": 2019,
+          "subject": "History",
+          "count": "6"
+        },
+        {
+          "year": 2021,
+          "subject": "General Studies",
+          "count": "42"
+        },
+        {
+          "year": 2021,
+          "subject": "Economy",
+          "count": "24"
+        },
+        {
+          "year": 2021,
+          "subject": "History",
+          "count": "7"
+        },
+        {
+          "year": 2021,
+          "subject": "Polity",
+          "count": "7"
+        },
+        {
+          "year": 2021,
+          "subject": "Geography",
+          "count": "6"
+        },
+        {
+          "year": 2021,
+          "subject": "Science",
+          "count": "6"
+        },
+        {
+          "year": 2021,
+          "subject": "Reasoning",
+          "count": "5"
+        },
+        {
+          "year": 2022,
+          "subject": "General Studies",
+          "count": "90"
+        },
+        {
+          "year": 2022,
+          "subject": "Economy",
+          "count": "40"
+        },
+        {
+          "year": 2022,
+          "subject": "Geography",
+          "count": "18"
+        },
+        {
+          "year": 2022,
+          "subject": "Science",
+          "count": "15"
+        },
+        {
+          "year": 2022,
+          "subject": "Polity",
+          "count": "14"
+        },
+        {
+          "year": 2022,
+          "subject": "Reasoning",
+          "count": "12"
+        },
+        {
+          "year": 2022,
+          "subject": "History",
+          "count": "7"
+        },
+        {
+          "year": 2022,
+          "subject": "Marathi",
+          "count": "2"
+        },
+        {
+          "year": 2023,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2024,
+          "subject": "Science",
+          "count": "103"
+        },
+        {
+          "year": 2024,
+          "subject": "Polity",
+          "count": "96"
+        },
+        {
+          "year": 2024,
+          "subject": "Reasoning",
+          "count": "82"
+        },
+        {
+          "year": 2024,
+          "subject": "Geography",
+          "count": "77"
+        },
+        {
+          "year": 2024,
+          "subject": "History",
+          "count": "77"
+        },
+        {
+          "year": 2024,
+          "subject": "Economy",
+          "count": "76"
+        },
+        {
+          "year": 2024,
+          "subject": "Current Affairs",
+          "count": "74"
+        },
+        {
+          "year": 2024,
+          "subject": "General Studies",
+          "count": "10"
+        },
+        {
+          "year": 2025,
+          "subject": "Reasoning",
+          "count": "40"
+        },
+        {
+          "year": 2025,
+          "subject": "Polity",
+          "count": "34"
+        },
+        {
+          "year": 2025,
+          "subject": "Science",
+          "count": "31"
+        },
+        {
+          "year": 2025,
+          "subject": "Economy",
+          "count": "30"
+        },
+        {
+          "year": 2025,
+          "subject": "Current Affairs",
+          "count": "26"
+        },
+        {
+          "year": 2025,
+          "subject": "History",
+          "count": "20"
+        },
+        {
+          "year": 2025,
+          "subject": "Geography",
+          "count": "17"
+        }
+      ]
+    },
+    "technical": {
+      "overview": {
+        "total_questions": "1170",
+        "min_year": 2002,
+        "max_year": 2023,
+        "distinct_years": "13",
+        "distinct_exams": "3",
+        "easy_count": "18",
+        "medium_count": "1145",
+        "hard_count": "7",
+        "multi_statement_count": "22",
+        "match_columns_count": "2",
+        "mh_specific_count": "4"
+      },
+      "subjects": [
+        {
+          "subject": "General Studies",
+          "questions_count": "844",
+          "topic_count": "1",
+          "years_active": "7",
+          "easy_count": "0",
+          "medium_count": "844",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Reasoning",
+          "questions_count": "139",
+          "topic_count": "1",
+          "years_active": "7",
+          "easy_count": "0",
+          "medium_count": "139",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "questions_count": "68",
+          "topic_count": "2",
+          "years_active": "9",
+          "easy_count": "0",
+          "medium_count": "66",
+          "hard_count": "2",
+          "mh_count": "1"
+        },
+        {
+          "subject": "Mechanical Engineering",
+          "questions_count": "46",
+          "topic_count": "12",
+          "years_active": "1",
+          "easy_count": "16",
+          "medium_count": "28",
+          "hard_count": "2",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Economy",
+          "questions_count": "34",
+          "topic_count": "1",
+          "years_active": "7",
+          "easy_count": "0",
+          "medium_count": "34",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "questions_count": "24",
+          "topic_count": "3",
+          "years_active": "7",
+          "easy_count": "0",
+          "medium_count": "24",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Geography",
+          "questions_count": "10",
+          "topic_count": "2",
+          "years_active": "4",
+          "easy_count": "1",
+          "medium_count": "9",
+          "hard_count": "0",
+          "mh_count": "1"
+        }
+      ],
+      "topTopics": [
+        {
+          "subject": "General Studies",
+          "topic": "General",
+          "questions_count": "844",
+          "hard_count": "0",
+          "mh_count": "2"
+        },
+        {
+          "subject": "Reasoning",
+          "topic": "General",
+          "questions_count": "139",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Science",
+          "topic": "General",
+          "questions_count": "66",
+          "hard_count": "0",
+          "mh_count": "1"
+        },
+        {
+          "subject": "Economy",
+          "topic": "General",
+          "questions_count": "34",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Polity",
+          "topic": "General",
+          "questions_count": "21",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Mechanical Engineering",
+          "topic": "Thermodynamics",
+          "questions_count": "10",
+          "hard_count": "2",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Geography",
+          "topic": "General",
+          "questions_count": "9",
+          "hard_count": "0",
+          "mh_count": "0"
+        },
+        {
+          "subject": "Mechanical Engineering",
+          "topic": "Fluid Mechanics",
+          "questions_count": "8",
+          "hard_count": "0",
+          "mh_count": "0"
+        }
+      ],
+      "yearTrend": [
+        {
+          "year": 2002,
+          "subject": "General Studies",
+          "count": "116"
+        },
+        {
+          "year": 2002,
+          "subject": "Reasoning",
+          "count": "19"
+        },
+        {
+          "year": 2002,
+          "subject": "Science",
+          "count": "9"
+        },
+        {
+          "year": 2002,
+          "subject": "Economy",
+          "count": "5"
+        },
+        {
+          "year": 2003,
+          "subject": "General Studies",
+          "count": "122"
+        },
+        {
+          "year": 2003,
+          "subject": "Reasoning",
+          "count": "13"
+        },
+        {
+          "year": 2003,
+          "subject": "Science",
+          "count": "9"
+        },
+        {
+          "year": 2003,
+          "subject": "Economy",
+          "count": "6"
+        },
+        {
+          "year": 2005,
+          "subject": "General Studies",
+          "count": "119"
+        },
+        {
+          "year": 2005,
+          "subject": "Science",
+          "count": "12"
+        },
+        {
+          "year": 2005,
+          "subject": "Reasoning",
+          "count": "12"
+        },
+        {
+          "year": 2005,
+          "subject": "Economy",
+          "count": "4"
+        },
+        {
+          "year": 2005,
+          "subject": "Polity",
+          "count": "3"
+        },
+        {
+          "year": 2011,
+          "subject": "General Studies",
+          "count": "136"
+        },
+        {
+          "year": 2011,
+          "subject": "Reasoning",
+          "count": "24"
+        },
+        {
+          "year": 2011,
+          "subject": "Economy",
+          "count": "5"
+        },
+        {
+          "year": 2011,
+          "subject": "Science",
+          "count": "4"
+        },
+        {
+          "year": 2011,
+          "subject": "Polity",
+          "count": "3"
+        },
+        {
+          "year": 2011,
+          "subject": "Geography",
+          "count": "3"
+        },
+        {
+          "year": 2013,
+          "subject": "General Studies",
+          "count": "126"
+        },
+        {
+          "year": 2013,
+          "subject": "Reasoning",
+          "count": "21"
+        },
+        {
+          "year": 2013,
+          "subject": "Science",
+          "count": "13"
+        },
+        {
+          "year": 2013,
+          "subject": "Polity",
+          "count": "8"
+        },
+        {
+          "year": 2013,
+          "subject": "Economy",
+          "count": "6"
+        },
+        {
+          "year": 2013,
+          "subject": "Geography",
+          "count": "3"
+        },
+        {
+          "year": 2014,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2014,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2015,
+          "subject": "History",
+          "count": "1"
+        },
+        {
+          "year": 2017,
+          "subject": "General Studies",
+          "count": "100"
+        },
+        {
+          "year": 2017,
+          "subject": "Reasoning",
+          "count": "29"
+        },
+        {
+          "year": 2017,
+          "subject": "Science",
+          "count": "9"
+        },
+        {
+          "year": 2017,
+          "subject": "Polity",
+          "count": "4"
+        },
+        {
+          "year": 2017,
+          "subject": "Economy",
+          "count": "4"
+        },
+        {
+          "year": 2018,
+          "subject": "English",
+          "count": "1"
+        },
+        {
+          "year": 2018,
+          "subject": "Geography",
+          "count": "1"
+        },
+        {
+          "year": 2019,
+          "subject": "Science",
+          "count": "1"
+        },
+        {
+          "year": 2020,
+          "subject": "General Studies",
+          "count": "125"
+        },
+        {
+          "year": 2020,
+          "subject": "Mechanical Engineering",
+          "count": "46"
+        },
+        {
+          "year": 2020,
+          "subject": "Reasoning",
+          "count": "21"
+        },
+        {
+          "year": 2020,
+          "subject": "Science",
+          "count": "10"
+        },
+        {
+          "year": 2020,
+          "subject": "Economy",
+          "count": "4"
+        },
+        {
+          "year": 2020,
+          "subject": "Polity",
+          "count": "4"
+        },
+        {
+          "year": 2020,
+          "subject": "Geography",
+          "count": "3"
+        },
+        {
+          "year": 2022,
+          "subject": "Polity",
+          "count": "1"
+        },
+        {
+          "year": 2022,
+          "subject": "Law",
+          "count": "1"
+        },
+        {
+          "year": 2023,
+          "subject": "History",
+          "count": "1"
+        }
+      ]
+    }
+  },
+  "hitlist": [
+    {
+      "subject": "Current Affairs",
+      "topic": "GK 2025-26 Marathon",
+      "total_occurrences": "263",
+      "years_asked": [
+        2025
+      ],
+      "hard_questions": "0",
+      "medium_questions": "263",
+      "easy_questions": "0",
+      "maharashtra_focus": "2",
+      "sample_question": {
+        "id": 25885,
+        "question": "What is India's rank in the 'World Happiness Report 2026'?",
+        "options": {
+          "A": "105th",
+          "B": "113th",
+          "C": "116th",
+          "D": "118th"
+        },
+        "correct": "C",
+        "explanation": "\"116th\" is the option marked correct in the official key. The year 2026 anchors this question — the correct option is the fact that dates to that year. The three wrong options are the standard distractor set MPSC uses for this topic — one is a chronological neighbour, one is a thematic near-miss and one is a plausible-sounding invention.",
+        "year": 2025,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Geography",
+      "topic": "महाराष्ट्र खनिज संपत्ती",
+      "total_occurrences": "198",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "198",
+      "easy_questions": "0",
+      "maharashtra_focus": "48",
+      "sample_question": {
+        "id": 26133,
+        "question": "आशिया खंडातील सर्वात मोठा पवन ऊर्जा प्रकल्प कुठे आहे?",
+        "options": {
+          "A": "अलिबाग (रायगड)",
+          "B": "वनकुसवडे (सातारा)",
+          "C": "लोणावळा (पुणे)",
+          "D": "रामटेक (नागपूर)"
+        },
+        "correct": "B",
+        "explanation": "अपेक्षित उत्तर वनकुसवडे (सातारा) आहे. हा MPSC चा ठराविक 'anchor-word' प्रश्न आहे — प्रश्नात असलेला एक निश्चित शब्द (व्यक्तीचे नाव, तारीख, कलम) थेट एका पर्यायाशी जुळतो.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "History",
+      "topic": "Maharashtra Social Reformers",
+      "total_occurrences": "122",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "122",
+      "easy_questions": "0",
+      "maharashtra_focus": "10",
+      "sample_question": {
+        "id": 22858,
+        "question": "\"सुधारकांना आपले आई-वडील, पत्नी, मुली आणि देशबांधव अशा सर्व निकटवर्तीयांचा विरोध पत्करून जगण्याचा प्रवास करावा लागतो.\" हे सांगणारे वामनराव माधवराव कोल्हटकर हे समाजसुधारक _________ येथील होते.",
+        "options": {
+          "A": "विदर्भ",
+          "B": "मराठवाडा",
+          "C": "पुणे",
+          "D": "कोल्हापूर"
+        },
+        "correct": "A",
+        "explanation": "विश्लेषण केल्यास पर्याय A योग्य ठरतो. वामनराव माधवराव कोल्हटकर Vidarbha- — घरगुती आणि community resistance to change बद्दल candidly बोलले; ची। Pune, Kolhapur, Marathwada इतर reformers;।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "प्राणिशास्त्र",
+      "total_occurrences": "100",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "100",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 25571,
+        "question": "Salamanders are included in which of the following Order ?",
+        "options": {
+          "A": "Order Apoda",
+          "B": "Order Uradella",
+          "C": "Order Anyura",
+          "D": "None of these"
+        },
+        "correct": "B",
+        "explanation": "Correct: option B — \"Order Uradella\". This is a classic MPSC 'anchor-word' item — the stem contains one specific term (a proper noun, a date, an article number) that maps directly to only one option.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "वनस्पतीशास्त्र",
+      "total_occurrences": "100",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "100",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 25472,
+        "question": "“Hibiscus rosa-sinensis” is the scientific name of which plant?",
+        "options": {
+          "A": "Jaswand",
+          "B": "Lotus",
+          "C": "Jasmine",
+          "D": "Rose"
+        },
+        "correct": "A",
+        "explanation": "Option A works here because Hibiscus rosa-sinensis is Jaswand (China rose/Hibiscus)—not lotus (Nelumbo), jasmine (Jasminum), or Rosa. You can eliminate B (Lotus), C (Jasmine), D (Rose) — each one conflicts with the principle or calculation that leads to option A. If the question asks what is incorrect, identify the false statement first and then match it to the answer choice.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "History",
+      "topic": "वृत्तपत्र — संस्थापक व संपादक",
+      "total_occurrences": "100",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "100",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 23797,
+        "question": "खालीलपैकी कोणती जोडी अयोग्य आहे?",
+        "options": {
+          "A": "केसरी — लो. टिळक",
+          "B": "हिंदुस्तान टाईम्स — के. एम. पण्णीकर",
+          "C": "नॅशनल हेरॉल्ड — मोतीलाल नेहरू",
+          "D": "बॉम्बे क्रॉनिकल — फिरोजशहा मेहता"
+        },
+        "correct": "C",
+        "explanation": "इथे अयोग्य जोडी पर्याय C आहे। 'नॅशनल हेरॉल्ड' जवाहरलाल नेहरू (१९३८) — not Motilal. Motilal = Independent. A Kesari-Tilak, B HT-Panikkar, D Chronicle-Mehta — all बरोबर pairs पर्याय A (केसरी — लो. टिळक) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी; पर्याय B (हिंदुस्तान टाईम्स — के. पण्णीकर) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी; पर्याय D (बॉम्बे क्रॉनिकल — फिरोजशहा मेहता) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Polity",
+      "topic": "State Government",
+      "total_occurrences": "84",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "84",
+      "easy_questions": "0",
+      "maharashtra_focus": "16",
+      "sample_question": {
+        "id": 22719,
+        "question": "खालीलपैकी कोणते विधान/विधाने कलम 168 मध्ये समाविष्ट नाही/नाहीत? (a) प्रत्येक राज्यासाठी एक कायदेमंडळ असेल ज्यामध्ये राज्यपाल असतील. (b) जिथे राज्याच्या कायदेमंडळाची दोन सभागृहे असतील, तिथे एक विधान परिषद आणि दुसरे विधानसभा म्हणून ओळखले जाईल. (c) जिथे फक्त एकच सभागृह असेल, तेथे ते विधानसभा म्हणून ओळखले जाईल. (d) प्रत्येक राज्याच्या विधानसभेत राज्यातील प्रादेशिक मतदारसंघांमधून थेट निवडणुकीद्वारे निवडलेले पाचशेपेक्षा जास्त आणि साठपेक्षा कमी नसलेले सदस्य असतील.",
+        "options": {
+          "A": "(a)",
+          "B": "(d)",
+          "C": "(b) आणि (c)",
+          "D": "(a) आणि (b)"
+        },
+        "correct": "B",
+        "explanation": "सोडवत गेल्यास पर्याय B येतो. कलम १६८ राज्य विधानमंडळ स्थापन करते; MLA संख्या मर्यादा (कमाल ५००, किमान ६०) कलम १७० मध्ये, १६८ मध्ये नाही। (a)(b)(c) १६८ बाबत बरोबर; पर्याय (B) फक्त चुकीची संख्या-तरतूद दर्शवतो पर्याय A ((a)) या प्रश्नात विचारलेल्या व्याख्या/तथ्याशी जुळत नाही; पर्याय C ((b) and (c)) या प्रश्नात विचारलेल्या व्याख्या/तथ्याशी जुळत नाही; पर्याय D ((a) and (b)) या प्रश्नात विचारलेल्या व्याख्या/तथ्याशी जुळत नाही।",
+        "year": 2025,
+        "exam": "MPSC Group B Combined"
+      }
+    },
+    {
+      "subject": "Law",
+      "topic": "Law",
+      "total_occurrences": "81",
+      "years_asked": [
+        2021
+      ],
+      "hard_questions": "19",
+      "medium_questions": "53",
+      "easy_questions": "9",
+      "maharashtra_focus": "8",
+      "sample_question": {
+        "id": 30089,
+        "question": "Nimas response to Deeps comment serves to : Deep : I wonder that we are using commercial flights to save time and energy and these flights contribute carbon dioxide to the atmosphere than do the whole of some nations in one year. We need to restrict the number of flights we use. Nima : I know ..... when we take one intercontinental flight we cause more pollution than if we would travel by car for one year.",
+        "options": {
+          "A": "question whether he really understands the severity of the problem of carbon dioxide pollution.",
+          "B": "add more weight to her contention that we need to restrict the number of flights we use.",
+          "C": "suggest the alternative way for reducing the problem of carbon dioxide pollution.",
+          "D": "reinforce Deeps contention that flights are a major contribution towards increase of carbon dioxide level in the atmosphere."
+        },
+        "correct": "D",
+        "explanation": "निमाचे उत्तर दीपच्या मुद्द्याला दुजोरा देत आहे.",
+        "year": 2021,
+        "exam": "ASO Main"
+      }
+    },
+    {
+      "subject": "Current Affairs",
+      "topic": "Government Schemes & Yojanas",
+      "total_occurrences": "78",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "78",
+      "easy_questions": "0",
+      "maharashtra_focus": "12",
+      "sample_question": {
+        "id": 22951,
+        "question": "खालीलपैकी योग्य विधान/विधाने ओळखा. अ. 2025-26 च्या केंद्रीय अर्थसंकल्पातील प्रमुख आकर्षण म्हणजे अणू ऊर्जा अभियानाची सुरुवात, जे लघु मॉड्युलर अणु भट्ट्यांच्या (SMR) संशोधन आणि विकासावर केंद्रीत आहे. ब. अणू ऊर्जा अभियानाच्या अंमलबजावणीला चालना देण्यासाठी, अणू ऊर्जा कायदा आणि आण्विक नुकसानीसाठी नागरी दायित्व कायद्यातील सुधारणा संसदेत मांडल्या जातील. क. या सुधारणामुळे अणू ऊर्जा प्रकल्पामध्ये परकीय क्षेत्रातील गुंतवणुकीला प्रोत्साहन मिळेल, अशी अपेक्षा आहे.",
+        "options": {
+          "A": "फक्त अ, ब",
+          "B": "फक्त ब, क",
+          "C": "फक्त अ, क",
+          "D": "वरीलपैकी सर्व"
+        },
+        "correct": "D",
+        "explanation": "पर्याय D (वरील सर्व) — Budget briefings नुसार सर्व तीन align पर्याय A (फक्त A, B) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त B, C) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय C (फक्त A, C) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात. पर्याय A (फक्त A, B) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त B, C) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय C (फक्त A, C) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Economy",
+      "topic": "Five Year Plans",
+      "total_occurrences": "77",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "77",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 27758,
+        "question": "Twelfth Plan theme and period?",
+        "options": {
+          "A": "Materialistic · 1956–61",
+          "B": "Education · 2002–07",
+          "C": "Faster, more inclusive and sustainable growth · 2012–17",
+          "D": "Self-reliance · 1966–69"
+        },
+        "correct": "C",
+        "explanation": "Twelfth Plan 2012–2017 — Faster, More Inclusive and Sustainable Growth.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Polity",
+      "topic": "Constitutional Framework & Preamble",
+      "total_occurrences": "77",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "77",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 22936,
+        "question": "आधुनिक संविधानवाद या संकल्पनेची सुरुवात कोणत्या देशात झाली?",
+        "options": {
+          "A": "अमेरिका",
+          "B": "इंग्लंड",
+          "C": "फ्रान्स",
+          "D": "भारत"
+        },
+        "correct": "A",
+        "explanation": "Modern constitutionalism—written संविधान, separation of powers, popular sovereignty, judicial review—crystallised with the American Revolution and the U.S। संविधान (1787)। England evolved uncodified conventions; France's modern constitutional cycle followed 1789; India adopted its framework much later पर्याय B (England) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय C (France) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (India) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "Science & Technology (IT/Space)",
+      "total_occurrences": "75",
+      "years_asked": [
+        2025,
+        2024,
+        2022,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "75",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 22915,
+        "question": "'मानवी जीनोम प्रकल्प 1990' चे मुख्य उद्दिष्ट/उद्दिष्टे _________ होते. अ. मानवातील 20,000 ते 25,000 जनुके ओळखणे. ब. डी.एन.ए. मधील 5 billion बेस पेअर्सचा क्रम निश्चित करणे. क. नव्याने प्राप्त जीनोमिक ज्ञानाचा संशोधन व औषधशास्त्रात समावेश करणे. ड. प्राण्यांचे क्लोनिंग विकसित करणे.",
+        "options": {
+          "A": "फक्त ब आणि ड",
+          "B": "फक्त अ आणि क",
+          "C": "फक्त अ",
+          "D": "फक्त ब"
+        },
+        "correct": "C",
+        "explanation": "पर्याय C (फक्त a) — Human diploid sequence ~3 billion base pairs, 5 billion नाही (b); broad medical application (c) आणि animal cloning (d) collateral/outside primary 1990 mandate — key 'फक्त a' accept करते पर्याय A (फक्त b and d) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त a and c) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (फक्त b) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात. पर्याय A (फक्त b and d) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त a and c) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (फक्त b) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "Botany (Plant Biology)",
+      "total_occurrences": "75",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2020
+      ],
+      "hard_questions": "0",
+      "medium_questions": "75",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 22914,
+        "question": "स्क्लेराईड्सच्या श्रेणी _________ आहेत. अ. मॅक्रोस्क्लेराईड्स ब. ओस्टिओस्क्लेराईड्स क. ट्रॅकिड्स ड. अस्टेरोस्क्लेराईड्स वरीलपैकी कोणते विधान/विधाने बरोबर आहेत?",
+        "options": {
+          "A": "फक्त अ",
+          "B": "फक्त अ आणि ब",
+          "C": "अ, ब आणि ड",
+          "D": "अ, ब आणि क"
+        },
+        "correct": "C",
+        "explanation": "पर्याय C (a, b and d) — Tracheids elongated xylem water-conducting cells — sclereid type नाहीत; sclereids सोबत pair करणे tissue systems gondhal करते पर्याय A (फक्त a) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त a and b) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय D (a, b and c) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही. पर्याय A (फक्त a) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त a and b) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय D (a, b and c) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Polity",
+      "topic": "Panchayati Raj",
+      "total_occurrences": "71",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "71",
+      "easy_questions": "0",
+      "maharashtra_focus": "4",
+      "sample_question": {
+        "id": 22715,
+        "question": "खालील जोड्या जुळवा. यादी-I (विषय) (a) ग्रामसभा (b) राखीव जागा आरक्षण (c) पंचायतींच्या निवडणुका (d) सदस्यत्वाची अपात्रता यादी-II (कलम क्र.) (i) 243 K (ii) 243 F (iii) 243 A (iv) 243 D",
+        "options": {
+          "A": "(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)",
+          "B": "(a)-(iii), (b)-(ii), (c)-(i), (d)-(iv)",
+          "C": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)",
+          "D": "(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)"
+        },
+        "correct": "A",
+        "explanation": "पंचायत राज कलमांचा संच लक्षात ठेवा — ग्रामसभा २४३-अ, आरक्षण २४३-ड, निवडणूक २४३-क, अपात्रता २४३-फ. विसंवादी पर्याय दोन क्रमांक अदलाबदल करतात — चारही एकत्र लक्षात ठेवा — पर्याय A पर्याय B ((a)-(iii), (b)-(ii), (c)-(i), (d)-(iv)) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी; पर्याय C ((a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी; पर्याय D ((a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी।",
+        "year": 2025,
+        "exam": "MPSC Group B Combined"
+      }
+    },
+    {
+      "subject": "Economy",
+      "topic": "Industry, Trade & Reforms",
+      "total_occurrences": "66",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "66",
+      "easy_questions": "0",
+      "maharashtra_focus": "6",
+      "sample_question": {
+        "id": 22893,
+        "question": "भारतीय अर्थव्यवस्थेबाबत खालील विधाने विचारात घेऊन योग्य पर्याय निवडा. अ. जागतिकीकरणानंतर भारतीय अर्थव्यवस्थेतील बदल लक्षात घेता 'ट्रिकल डाऊन थिअरी' भारतीय अर्थव्यवस्थेला तंतोतंत लागू होते. ब. जागतिकीकरणानंतर विशेषतः 2005 पासून भारताने गाठलेला उच्च विकास दर 'ट्रिकल डाऊन थिअरी' वर प्रश्नचिन्ह उपस्थित करतो.",
+        "options": {
+          "A": "विधान अ बरोबर आहे",
+          "B": "विधान ब बरोबर आहे",
+          "C": "दोन्ही विधाने अ आणि ब बरोबर आहेत",
+          "D": "दोन्ही विधाने अ आणि ब चुकीची आहेत"
+        },
+        "correct": "B",
+        "explanation": "प्रश्नातील विधाने तपासल्यास पर्याय B बरोबर आहे। Post-liberalisation high GDP and lagging human-विकास indicators led many analysts to question naive 'trickle-down' assumptions—विधान B । विधान A चुकी.ly मानले trickle-down as 'precisely applicable' to , ।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Marathi",
+      "topic": "Marathi Grammar",
+      "total_occurrences": "66",
+      "years_asked": [
+        2021
+      ],
+      "hard_questions": "13",
+      "medium_questions": "36",
+      "easy_questions": "17",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 29895,
+        "question": "क्रियाविशेषणाचे उपप्रकार व त्यांची उदाहरणे यांच्या योग्य जोड्या जुळवा. (a) स्थलवाचक (i) तेव्हा, हमेशा, रातोरात (b) कालवाचक (ii) करकर, पटदिशी, उगीच (c) संख्यावाचक (iii) समोरून, तिकडून, जवळ (d) रीतिवाचक (iv) अत्यंत, वेेताचा, चौपट",
+        "options": {
+          "A": "(a)-(iii), (b)-(i), (c)-(iv), (d)-(ii)",
+          "B": "(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)",
+          "C": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)",
+          "D": "(a)-(iii), (b)-(i), (c)-(ii), (d)-(iv)"
+        },
+        "correct": "A",
+        "explanation": "स्थलवाचक: समोरून, तिकडून, जवळ; कालवाचक: तेव्हा, हमेशा, रातोरात; संख्यावाचक: अत्यंत, वेेताचा, चौपट; रीतिवाचक: करकर, पटदिशी, उगीच.",
+        "year": 2021,
+        "exam": "Group B Main"
+      }
+    },
+    {
+      "subject": "Current Affairs",
+      "topic": "International Affairs & Summits",
+      "total_occurrences": "65",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "65",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 22943,
+        "question": "मालदिवमध्ये एप्रिल 2024 मध्ये झालेल्या सार्वत्रिक निवडणुकामध्ये कोणत्या राजकीय पक्षाचा विजय झाला?",
+        "options": {
+          "A": "पीपल्स नॅशनल काँग्रेस",
+          "B": "मालदिव नॅशनल काँग्रेस",
+          "C": "अवामी लीग",
+          "D": "डेमॉक्रॅटिक पार्टी"
+        },
+        "correct": "A",
+        "explanation": "Maldives National Congress, Bangladesh Awami League, generic 'Democratic Party' outcome जोड नाहीत पर्याय B (Maldives National Congress) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय C (Awami League) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (Democratic Party) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Economy",
+      "topic": "महत्त्वाच्या योजना (PYQ)",
+      "total_occurrences": "61",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "61",
+      "easy_questions": "0",
+      "maharashtra_focus": "6",
+      "sample_question": {
+        "id": 23866,
+        "question": "राष्ट्रीय ग्रामीण रोजगार हमी कायदा ___ रोजी अस्तित्वात आला.",
+        "options": {
+          "A": "२ फेब्रुवारी २००६",
+          "B": "१२ फेब्रुवारी २००७",
+          "C": "२ फेब्रुवारी २००८",
+          "D": "२२ फेब्रुवारी २००९"
+        },
+        "correct": "A",
+        "explanation": "योग्य उत्तर पर्याय A आहे NREGA — २ Feb २००६. चुकीचे पर्याय B (१२ फेब्रुवारी २००७), C (२ फेब्रुवारी २००८), D (२२ फेब्रुवारी २००९) पर्याय B (१२ फेब्रुवारी २००७) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय C (२ फेब्रुवारी २००८) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (२२ फेब्रुवारी २००९) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "पेशी",
+      "total_occurrences": "60",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "60",
+      "easy_questions": "0",
+      "maharashtra_focus": "1",
+      "sample_question": {
+        "id": 24647,
+        "question": "दृश्यकेंद्रकी पेशी बाबत खालील विधाने लक्षात घ्या व योग्य विधाने निवडा? अ. यामध्ये सुस्पष्ट केेंद्रपटल, केंद्रक द्रव्य असलेले केंद्रक असते. ब. यात एकापेक्षा जास्त गुणसूत्रे (उहीेोीोश) असतात. क. साधारणतः उच्च विकसित प्राणी व वनस्पतीमध्ये या पेशी आढळतात.",
+        "options": {
+          "A": "अ, ब, क तिन्ही योग्य",
+          "B": "अ, ब, क तिन्ही अयोग्य",
+          "C": "अ, क योग्य",
+          "D": "अ, ब योग्य"
+        },
+        "correct": "A",
+        "explanation": "पर्याय A (३ १६) ४) — पर्याय B (३ १७) २) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय C (२ १८) १) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (३ १९) ३ ५) ४ २०) २ ६) २ २१) १ ७) २ २२) …) प्रश्नातील तथ्ये/गणना/व्याख्येशी विरोधाभासी आहे. पर्याय B (३ १७) २) २) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय C (२ १८) १) १) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (३ १९) ३ ५) ४ २०) २ ६) २ २१) १ ७) २ २२) …) ३ ५) ४ २०) २ ६) २ २१) १ ७) २ २२) …) प्रश्नातील तथ्ये/गणना/व्याख्येशी विरोधाभासी आहे. पर्याय B (३ १७) २) २) २) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय C (२ १८) १) १) १) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (३ १९) ३ ५) ४ २०) २ ६) २ २१) १ ७) २ २२) …) ३ ५) ४ २०) २ ६) २ २१) १ ७) २ २२) …) ३ ५) ४ २०) २ ६) २ २१) १ ७) २ २२) …) प्रश्नातील तथ्ये/गणना/व्याख्येशी विरोधाभासी आहे।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Medical",
+      "topic": "Public Health",
+      "total_occurrences": "60",
+      "years_asked": [
+        2023
+      ],
+      "hard_questions": "10",
+      "medium_questions": "24",
+      "easy_questions": "26",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 29706,
+        "question": "Period prevalence measures",
+        "options": {
+          "A": "All new cases of disease",
+          "B": "Frequency of all current cases of disease (new and old) during a defined period",
+          "C": "Only old, existing cases of disease",
+          "D": "Frequency of all current cases on May 31 of a year."
+        },
+        "correct": "B",
+        "explanation": "Period prevalence measures the frequency of all current cases of disease (new and old) during a defined period.",
+        "year": 2023,
+        "exam": "Deputy Director Health Services"
+      }
+    },
+    {
+      "subject": "Current Affairs",
+      "topic": "Awards & Honours",
+      "total_occurrences": "59",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "59",
+      "easy_questions": "0",
+      "maharashtra_focus": "2",
+      "sample_question": {
+        "id": 22702,
+        "question": "खालीलपैकी कोणी 2025 च्या FISM वर्ल्ड चँपियनशिप ऑफ मॅजिक मध्ये प्रतिष्ठित 'सर्वोत्तम जादू निर्माता' पुरस्कार जिंकला?",
+        "options": {
+          "A": "आंचल कुमावत",
+          "B": "कविता अग्रवाल",
+          "C": "सुहानी शह",
+          "D": "साक्षी शह"
+        },
+        "correct": "C",
+        "explanation": "सोडवत गेल्यास पर्याय C येतो. जादूगर Suhani Shah ला Best Magic Creator FISM २०२५ (Italy) — जागतिक जादू स्पर्धेत भारताचे प्रतिनिधित्व. इतर कलाकार/विभाग हे पुरस्कार नाही पर्याय A (Anchal Kumavat) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय B (Kavita Agrawal) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (Sakshi Shah) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2025,
+        "exam": "MPSC Group B Combined"
+      }
+    },
+    {
+      "subject": "General Studies",
+      "topic": "Indian Economy",
+      "total_occurrences": "58",
+      "years_asked": [
+        2021,
+        2020
+      ],
+      "hard_questions": "7",
+      "medium_questions": "29",
+      "easy_questions": "22",
+      "maharashtra_focus": "3",
+      "sample_question": {
+        "id": 30104,
+        "question": "What was the main objective of First Five Year Plan ?",
+        "options": {
+          "A": "Development of Industry",
+          "B": "Focus on Import & Export",
+          "C": "Development of Agriculture and Infrastructure",
+          "D": "Self-reliance"
+        },
+        "correct": "C",
+        "explanation": "The First Five Year Plan (1951-1956) focused primarily on the development of the agricultural sector and infrastructure like irrigation and power.",
+        "year": 2021,
+        "exam": "TAX ASSISTANT MAIN"
+      }
+    },
+    {
+      "subject": "Economy",
+      "topic": "Public Finance & Budget",
+      "total_occurrences": "58",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2020
+      ],
+      "hard_questions": "0",
+      "medium_questions": "58",
+      "easy_questions": "0",
+      "maharashtra_focus": "4",
+      "sample_question": {
+        "id": 22946,
+        "question": "भारतीय अर्थसंकल्प प्रक्रियेत 'गिलोटिन' चा अर्थ काय आहे? अ. सरकारी तूट भरून काढण्यासाठी कर वाढवणे. ब. अर्थसंकल्पातील अनुदानाच्या उर्वरित मागण्या पुढील चर्चेशिवाय मतदानासाठी ठेवणे. क. आर्थिक संकटाच्या वेळी रिझर्व्ह बँकेची मदत. ड. अर्थसंकल्पाच्या शेवटी संसदेकडून नकार. वरीलपैकी कोणते विधान/विधाने बरोबर आहेत?",
+        "options": {
+          "A": "फक्त ब",
+          "B": "फक्त क आणि ड",
+          "C": "फक्त अ, ब आणि क",
+          "D": "फक्त अ"
+        },
+        "correct": "A",
+        "explanation": "पर्याय A (फक्त b) — Tax hike, RBI crisis tool, संसद end automatic rejection नाहीत पर्याय B (फक्त c and d) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय C (फक्त a, b and c) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय D (फक्त a) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात. पर्याय B (फक्त c and d) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय C (फक्त a, b and c) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय D (फक्त a) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Geography",
+      "topic": "Maharashtra Physical Geography",
+      "total_occurrences": "57",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "57",
+      "easy_questions": "0",
+      "maharashtra_focus": "38",
+      "sample_question": {
+        "id": 22882,
+        "question": "कळसुबाई हे महाराष्ट्रातील सर्वोच्च पर्वत शिखर खालीलपैकी कोणत्या पर्वतरांगेत स्थित आहे?",
+        "options": {
+          "A": "सह्याद्री",
+          "B": "शंभू महादेव",
+          "C": "सातपुडा",
+          "D": "बालाघाट"
+        },
+        "correct": "A",
+        "explanation": "पर्याय A (Sahyadri) — Satpuda, Balaghat east/north; Shambhu Mahadeo distinct hill massif — Kalsubai summit block नाही पर्याय B (Shambhu Mahadeo) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय C (Satpuda) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (Balaghat) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "Zoology (Animal Biology)",
+      "total_occurrences": "52",
+      "years_asked": [
+        2025,
+        2024,
+        2023
+      ],
+      "hard_questions": "0",
+      "medium_questions": "52",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 22729,
+        "question": "खालीलपैकी कोणता प्राणी सर्वात आदिम पृष्ठवंशी प्राण्यांच्या गट अग्नाथाशी संबंधित आहे?",
+        "options": {
+          "A": "स्कॉलिओडॉन (डॉगफिश)",
+          "B": "रॅटस रॅटस (काळा उंदीर)",
+          "C": "पेट्रोमायझॉन (लॅम्प्रे)",
+          "D": "लोरीस"
+        },
+        "correct": "C",
+        "explanation": "Petromyzon (lamprey) belongs to Class Agnatha—jawless, cartilaginous fish with a sucking mouth, no paired fins. Treating it as a bony fish (Osteichthyes) or a gnathostome misses the jawless branch of vertebrate classification पर्याय A (Scoliodon (Dog fish)) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय B (Rattus rattus (Black rat)) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (Loris) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2025,
+        "exam": "MPSC Group B Combined"
+      }
+    },
+    {
+      "subject": "Current Affairs",
+      "topic": "Persons in News & Books",
+      "total_occurrences": "51",
+      "years_asked": [
+        2025,
+        2024,
+        2022,
+        2020,
+        2011
+      ],
+      "hard_questions": "0",
+      "medium_questions": "51",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 22956,
+        "question": "भारताचे मुख्य न्यायाधीश भूषण गवई यांच्या बाबत काय खरे नाही?",
+        "options": {
+          "A": "त्यांचा जन्म 24 नोव्हेंबर 1960 रोजी झाला.",
+          "B": "त्यांनी संवैधानिक कायदा व प्रशासकीय कायदा मध्ये प्रॅक्टीस केली आहे.",
+          "C": "जानेवारी 2005 रोजी त्यांची नागपूर खंडपीठात सरकारी अधिवक्ता आणि सरकारी वकील म्हणून नियुक्ती झाली.",
+          "D": "त्यांना मे, 2019 रोजी भारताच्या सर्वोच्च न्यायालयाचे न्यायाधीश म्हणून बढती देण्यात आली."
+        },
+        "correct": "C",
+        "explanation": "प्रश्नानुसार पर्याय C (He was appointed as सरकार Pleader and Public Prosecutor for Nagpur Bench in January 2005.) हे उत्तर योग्य आहे, कारण प्रश्नाच्या मजकुरानुसार 'He was appointed as सरकार Pleader and Public Prosecutor for Nagpur Bench in January 2005.' हे उत्तर अध्ययनसाहित्य आणि MPSC कीनुसार योग्य आहे. पर्याय A (He was born on 24th November 1960.) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय B (He practiced in Constitutional Law and …) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (He was elevated as a Judge of the Supre…) प्रश्नातील तथ्ये/गणना/व्याख्येशी विरोधाभासी आहे।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "पोषण",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 24407,
+        "question": "खालीलपैकी कोणास अन्नामधून जास्तीत जास्त प्रथिने घेण्याची गरज असेल?",
+        "options": {
+          "A": "गरोदर माता",
+          "B": "कष्ट करणारी व्यक्ती",
+          "C": "१२ ते १८ वषर् वयोगटातील व्यक्ती",
+          "D": "आजारी व्यक्ती"
+        },
+        "correct": "C",
+        "explanation": "योग्य उत्तर पर्याय C आहे १२–१८ वर्ष growth spurt → सर्वाधिक protein गरज पर्याय A (गरोदर माता) आणि B (कष्ट करणारी व्यक्ती) — अर्धवट किंवा सापळा चुकीचा पर्याय; अधिकृत कीनुसार C पर्याय A (गरोदर माता) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय B (कष्ट करणारी व्यक्ती) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (आजारी व्यक्ती) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "प्रकाश",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 24938,
+        "question": "५०)अ) रिफ्रॅक्टिंग प्रकारातील दुर्बीण मिरर आणि लेन्स दोन्ही वापरते. (b) परावर्तित प्रकारच्या दुर्बिणी फक्त लेन्स वापरतात. 1) a बरोबर, b अयोग्य 2) a आणि b बरोबर 3) अ अयोग्य, ब बरोबर 4) अ आणि ब अयोग्य",
+        "options": {
+          "A": "(a) बरोबर, b अयोग्य",
+          "B": "(a) आणि b बरोबर",
+          "C": "अ अयोग्य, ब बरोबर",
+          "D": "(a) आणि b चुकीचे"
+        },
+        "correct": "D",
+        "explanation": "पर्याय D ((a) आणि b चूकीचे) — पर्याय A ((a) बरोबर, b अयोग्य) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही; पर्याय B ((a) आणि b बरोबर) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही; पर्याय C (अ अयोग्य, ब बरोबर) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही. पर्याय A ((a) बरोबर, b अयोग्य) बरोबर, b अयोग्य) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही; पर्याय B ((a) आणि b बरोबर) आणि b बरोबर) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही; पर्याय C (अ अयोग्य, ब बरोबर) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही. पर्याय A ((a) बरोबर, b अयोग्य) बरोबर, b अयोग्य) बरोबर, b अयोग्य) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही; पर्याय B ((a) आणि b बरोबर) आणि b बरोबर) आणि b बरोबर) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही; पर्याय C (अ अयोग्य, ब बरोबर) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "Magnetism and Electromagnetic Spectrum",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 25254,
+        "question": "When a conductor is placed in a changing magnetic field, emf is induced in the conductor and the electric current flows through conductor in opposite direction to the direction of magnetic field. This law is proposed by whom ?",
+        "options": {
+          "A": "Lenz",
+          "B": "Faraday",
+          "C": "Orestad",
+          "D": "Simmon"
+        },
+        "correct": "A",
+        "explanation": "Store the reasoning behind the answer, not just the letter, because topic packs revisit the same idea in different forms. The other options use a different symbol, definition, unit, or formula, so they do not match this stem.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "गुरुत्वाकर्षण, गती व गतीचे प्रकार",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 24778,
+        "question": "विस्थापन आणि अंतर याबाबत कोणती विधाने बरोबर आहेत? (a) जेव्हा पथाची लांबी शून्य नसते तेव्हा विस्थापन शून्य असू शकते. (b) प्रवास केलेले अंतर हे विस्थापनाच्या परिमाणापेक्षा कमी नसते. (c) कोणत्याही वक्र मार्गावर अंतर आणि विस्थापन नेहमी सारखेच असते.",
+        "options": {
+          "A": "फक्त ए",
+          "B": "फक्त बी",
+          "C": "(a) आणि b",
+          "D": "(b) आणि c"
+        },
+        "correct": "C",
+        "explanation": "प्रश्नातील विधाने तपासल्यास पर्याय C बरोबर आहे पर्याय C ((a) आणि b) — (a) zero displacement possible on closed path; (b) distance ≥ |displacement|। चुकीचे पर्याय A (फक्त ए), B (फक्त बी), D ((b) आणि c) पर्यायाचे नाव, सूत्र व एकक एकत्र लक्षात ठेवा — जवळचे चुकीचा पर्याय सापळे टाळा पर्याय A (फक्त ए) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त बी) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय D ((b) आणि c) या प्रश्नाच्या मुख्य संकल्पनेशी सुसंगत नाही।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "बल, कार्य, ऊर्जा, शक्ती आणि ध्वनी",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 24827,
+        "question": "आर्द्रता ध्वनीच्या गतीवर परिणाम करू शकते कारण",
+        "options": {
+          "A": "हवेची सरासरी मोलर मास/ओलावा गुणधर्म बदलते परीक्षा ओळ",
+          "B": "फक्त दबाव",
+          "C": "प्रभाव नाही",
+          "D": "फक्त तापमान"
+        },
+        "correct": "A",
+        "explanation": "पर्याय A (हवेची सरासरी मोलर मास/ओलावा गुणधर्म बदल…) — humidity changes air molecular mass → speed पर्याय B (फक्त दबाव) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय C (प्रभाव नाही) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (फक्त तापमान) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "चुंबकत्व व विद्युत चुंबकीय पट्टा",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 25203,
+        "question": "अ) चुंबकीय मेरिडियन व भौगोलिक मेरिडियन यांतील लहान कोनाला डीप म्हणतात. ब) पृथ्वीच्या एकूण चुंबकीय क्षेत्राचा क्षितिजाशी केलेला कोन विचलनकोन म्हणतात. क) समान विचलन असलेली ठिकाणे ज्या रेषेने जोडली जातात तिला समविचलन रेषा म्हणतात व समान डीप असलेली ठिकाणे ज्या रेषेने जोडली जातात तिला समनत रेषा म्हणतात.",
+        "options": {
+          "A": "अ आणि ब",
+          "B": "फक्त क",
+          "C": "ब आणि क",
+          "D": "अ, ब आणि क"
+        },
+        "correct": "B",
+        "explanation": "सोडवत गेल्यास पर्याय B येतो पर्याय B (फक्त क) — फक्त (क): समविचलन/समनत रेषा व्याख्या बरोबर; (अ)(ब) Dip/Declination उलट. चुकीचे पर्याय A (अ आणि ब), C (ब आणि क), D (अ, ब आणि क) पर्यायाचे नाव, सूत्र व एकक एकत्र लक्षात ठेवा — जवळचे चुकीचा पर्याय सापळे टाळा पर्याय A (अ आणि ब) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी; पर्याय C (ब आणि क) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी; पर्याय D (अ, ब आणि क) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "विद्युत धारा",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 25037,
+        "question": "50) 20 ohm, 30 ohm आणि 50 ohm च्या रेझिस्टन्सचे विद्युत दिवे आहेत. मालिकेत एकमेकांशी जोडलेले आहे आणि 100 V संभाव्य फरक आहे ते 10 सेकंदांसाठी ओलांडून दिले. सर्किटमध्ये इलेक्ट्रिक पॉवर म्हणजे काय? 1) 10W 2) 20W 3) 30W 4) 40W",
+        "options": {
+          "A": "10W",
+          "B": "20W",
+          "C": "30W",
+          "D": "40W"
+        },
+        "correct": "A",
+        "explanation": "सोडवत गेल्यास पर्याय A येतो पर्याय A (10W) — P = V²/R_total = 100²/1000 = 10 W (R series = 100 Ω)। चुकीचे पर्याय B (20W), C (30W), D (40W) पर्यायाचे नाव, सूत्र व एकक एकत्र लक्षात ठेवा — जवळचे चुकीचा पर्याय सापळे टाळा पर्याय B (20W) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी; पर्याय C (30W) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी; पर्याय D (40W) मध्ये किमान एक जोडी चुकीच्या क्रमाने मांडली आहे, म्हणून ती वर्गातून वगळावी।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "पंचसृष्टी वर्गीकरण, प्राणी वर्गीकरण, वनस्पती वर्गीकरण",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 24697,
+        "question": "स्पायरोगारा हे खालीलपैकी कोणते शैवाल आहे?",
+        "options": {
+          "A": "हरित",
+          "B": "लाल",
+          "C": "निल-हरित",
+          "D": "रंगहीन"
+        },
+        "correct": "C",
+        "explanation": "पर्याय C (२ २८) १) — पर्याय A (३ २६) ३) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय B (४ २७) २) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (२ २९) १ ५) ३ ३०) ३ ६) ३ ३१) २ ७) ४ ३२) …) प्रश्नातील तथ्ये/गणना/व्याख्येशी विरोधाभासी आहे. पर्याय A (३ २६) ३) ३) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय B (४ २७) २) २) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (२ २९) १ ५) ३ ३०) ३ ६) ३ ३१) २ ७) ४ ३२) …) १ ५) ३ ३०) ३ ६) ३ ३१) २ ७) ४ ३२) …) प्रश्नातील तथ्ये/गणना/व्याख्येशी विरोधाभासी आहे. पर्याय A (३ २६) ३) ३) ३) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय B (४ २७) २) २) २) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही; पर्याय D (२ २९) १ ५) ३ ३०) ३ ६) ३ ३१) २ ७) ४ ३२) …) १ ५) ३ ३०) ३ ६) ३ ३१) २ ७) ४ ३२) …) १ ५) ३ ३०) ३ ६) ३ ३१) २ ७) ४ ३२) …) प्रश्नातील तथ्ये/गणना/व्याख्येशी विरोधाभासी आहे।",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Economy",
+      "topic": "Poverty & Unemployment",
+      "total_occurrences": "50",
+      "years_asked": [
+        2025,
+        2024,
+        2023,
+        2020
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "2",
+      "sample_question": {
+        "id": 22901,
+        "question": "खालील विधाने विचारात घ्या. अ. लिंगाधारित मानव विकास निर्देशांक हा आरोग्य, शिक्षण, सबलीकरण आणि श्रम बाजार यांचा संयुक्त निर्देशांक आहे. ब. वरील चार घटकांचा विचार केल्यास स्त्री-पुरुषातील असमानतेमुळे मानव विकासावर प्रतिकूल परिणाम होतो.",
+        "options": {
+          "A": "फक्त अ बरोबर आहे",
+          "B": "फक्त ब बरोबर आहे",
+          "C": "अ आणि ब दोन्ही बरोबर आहेत",
+          "D": "अ आणि ब दोन्ही चूक आहेत"
+        },
+        "correct": "C",
+        "explanation": "पर्याय C (दोन्ही A and B are बरोबर) — Gender inequality composite HDI drag women's outcomes lag — दोन्ही vidhane मानक UNDP logic, competing alternatives नाही पर्याय A (फक्त A is बरोबर) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त B is बरोबर) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय D (दोन्ही A and B are चुकी) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही. पर्याय A (फक्त A is बरोबर) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय B (फक्त B is बरोबर) मध्ये फक्त काही विधाने घेतली आहेत, पण प्रश्नातील सर्व बरोबर विधाने एकत्र येतात; पर्याय D (दोन्ही A and B are चुकी) या प्रश्नात विचारलेल्या व्यक्ती/स्थळ/संस्थेशी जुळत नाही।",
+        "year": 2025,
+        "exam": "MPSC State Services (Rajyaseva)"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "Electricity",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 25087,
+        "question": "50) The electric lamps of resistance 20 ohm , 30 ohm and 50 ohm are connected in series to each other and 100 V potential difference is given across to it for 10 seconds. What is electric power in a circuit ? 1) 10W 2) 20W 3) 30W 4) 40W",
+        "options": {
+          "A": "10W",
+          "B": "20W",
+          "C": "30W",
+          "D": "40W"
+        },
+        "correct": "A",
+        "explanation": "Option A is correct because Total series R = 100 Ω → P = V²/R = 100²/100 = 10 W. You can eliminate B (20W), C (30W), D (40W) — each one conflicts with the principle or calculation that leads to option A. Keep the name, formula, and unit together in your notes — that helps you spot incomplete distractors quickly.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "Light",
+      "total_occurrences": "50",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "50",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 24987,
+        "question": "49) Sun rays required 500 seconds to reach earth's surface through the atmosphere. If the atmosphere of earth is filled with water then how much time the sun rays takes to reach the earth's surface ? 1) 500 s 2) 1015 s 3) 3600 s 4) 666.6 s",
+        "options": {
+          "A": "500 s",
+          "B": "1015 s",
+          "C": "3600 s",
+          "D": "666.6 s"
+        },
+        "correct": "D",
+        "explanation": "Store the reasoning behind the answer, not just the letter, because topic packs revisit the same idea in different forms. The other options use a different symbol, definition, unit, or formula, so they do not match this stem.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "English",
+      "topic": "English Grammar",
+      "total_occurrences": "49",
+      "years_asked": [
+        2021
+      ],
+      "hard_questions": "5",
+      "medium_questions": "38",
+      "easy_questions": "6",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 29925,
+        "question": "The judge ordered that the accused be set free. The sentence above expresses mood.",
+        "options": {
+          "A": "Subjunctive",
+          "B": "Imperative.",
+          "C": "Indicative",
+          "D": "Expressive"
+        },
+        "correct": "A",
+        "explanation": "आदेश, इच्छा किंवा सूचना व्यक्त करण्यासाठी Subjunctive mood वापरला जातो.",
+        "year": 2021,
+        "exam": "Group B Main"
+      }
+    },
+    {
+      "subject": "Science",
+      "topic": "आरोग्यशास्त्र",
+      "total_occurrences": "49",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "49",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 25620,
+        "question": "Which of the following diseases is caused by the bacterium Mycobacterium ? (a) Diphtheria (b) Tuberculosis (c) Leprosy (d) Influenza",
+        "options": {
+          "A": "only (a) and (b)",
+          "B": "only (b) and (c)",
+          "C": "only (a) and (d)",
+          "D": "only (b) and (d)"
+        },
+        "correct": "A",
+        "explanation": "Option A is correct because Exam key selects option A—pairing diphtheria and tuberculosis under the Mycobacterium stem as correct; trust the paper's answer grid. You can eliminate B (only (b) and (c)), C (only (a) and (d)), D (only (b) and (d)) — each one conflicts with the principle or calculation that leads to option A. Keep the name, formula, and unit together in your notes — that helps you spot incomplete distractors quickly.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    },
+    {
+      "subject": "Current Affairs",
+      "topic": "India Defence Exercises",
+      "total_occurrences": "49",
+      "years_asked": [
+        2024
+      ],
+      "hard_questions": "0",
+      "medium_questions": "49",
+      "easy_questions": "0",
+      "maharashtra_focus": "0",
+      "sample_question": {
+        "id": 25935,
+        "question": "Exercise 'Yudha Vijay' is a joint military exercise conducted between India and which country?",
+        "options": {
+          "A": "Singapore",
+          "B": "Mongolia",
+          "C": "South Korea",
+          "D": "Indonesia"
+        },
+        "correct": "D",
+        "explanation": "This resolves to Indonesia. For MPSC prelims, one line of revision is enough to lock this fact into memory — add it to your one-page factual notebook.",
+        "year": 2024,
+        "exam": "MPSC Practice Subject Test"
+      }
+    }
+  ],
+  "mhBreakdown": [
+    {
+      "subject": "Science",
+      "total_questions": "2338",
+      "mh_questions": "3",
+      "national_questions": "2335",
+      "mh_percentage": "0.1"
+    },
+    {
+      "subject": "General Studies",
+      "total_questions": "2189",
+      "mh_questions": "78",
+      "national_questions": "2111",
+      "mh_percentage": "3.6"
+    },
+    {
+      "subject": "Economy",
+      "total_questions": "987",
+      "mh_questions": "47",
+      "national_questions": "940",
+      "mh_percentage": "4.8"
+    },
+    {
+      "subject": "Geography",
+      "total_questions": "817",
+      "mh_questions": "225",
+      "national_questions": "592",
+      "mh_percentage": "27.5"
+    },
+    {
+      "subject": "Polity",
+      "total_questions": "787",
+      "mh_questions": "48",
+      "national_questions": "739",
+      "mh_percentage": "6.1"
+    },
+    {
+      "subject": "Reasoning",
+      "total_questions": "764",
+      "mh_questions": "9",
+      "national_questions": "755",
+      "mh_percentage": "1.2"
+    },
+    {
+      "subject": "History",
+      "total_questions": "712",
+      "mh_questions": "31",
+      "national_questions": "681",
+      "mh_percentage": "4.4"
+    },
+    {
+      "subject": "Current Affairs",
+      "total_questions": "707",
+      "mh_questions": "28",
+      "national_questions": "679",
+      "mh_percentage": "4.0"
+    },
+    {
+      "subject": "Law",
+      "total_questions": "367",
+      "mh_questions": "37",
+      "national_questions": "330",
+      "mh_percentage": "10.1"
+    },
+    {
+      "subject": "English",
+      "total_questions": "210",
+      "mh_questions": "0",
+      "national_questions": "210",
+      "mh_percentage": "0.0"
+    },
+    {
+      "subject": "Marathi",
+      "total_questions": "195",
+      "mh_questions": "0",
+      "national_questions": "195",
+      "mh_percentage": "0.0"
+    },
+    {
+      "subject": "General Knowledge",
+      "total_questions": "112",
+      "mh_questions": "16",
+      "national_questions": "96",
+      "mh_percentage": "14.3"
+    },
+    {
+      "subject": "Medical",
+      "total_questions": "93",
+      "mh_questions": "0",
+      "national_questions": "93",
+      "mh_percentage": "0.0"
+    }
+  ],
+  "formatTrends": [
+    {
+      "year": 2014,
+      "total": "26",
+      "multi_statement": "2",
+      "match_columns": "0",
+      "direct_mcq": "24"
+    },
+    {
+      "year": 2015,
+      "total": "37",
+      "multi_statement": "1",
+      "match_columns": "0",
+      "direct_mcq": "36"
+    },
+    {
+      "year": 2016,
+      "total": "44",
+      "multi_statement": "1",
+      "match_columns": "0",
+      "direct_mcq": "43"
+    },
+    {
+      "year": 2017,
+      "total": "198",
+      "multi_statement": "4",
+      "match_columns": "0",
+      "direct_mcq": "194"
+    },
+    {
+      "year": 2018,
+      "total": "456",
+      "multi_statement": "64",
+      "match_columns": "15",
+      "direct_mcq": "387"
+    },
+    {
+      "year": 2019,
+      "total": "397",
+      "multi_statement": "48",
+      "match_columns": "8",
+      "direct_mcq": "343"
+    },
+    {
+      "year": 2020,
+      "total": "652",
+      "multi_statement": "42",
+      "match_columns": "14",
+      "direct_mcq": "609"
+    },
+    {
+      "year": 2021,
+      "total": "1240",
+      "multi_statement": "151",
+      "match_columns": "44",
+      "direct_mcq": "1073"
+    },
+    {
+      "year": 2022,
+      "total": "717",
+      "multi_statement": "96",
+      "match_columns": "14",
+      "direct_mcq": "613"
+    },
+    {
+      "year": 2023,
+      "total": "722",
+      "multi_statement": "99",
+      "match_columns": "11",
+      "direct_mcq": "618"
+    },
+    {
+      "year": 2024,
+      "total": "3941",
+      "multi_statement": "835",
+      "match_columns": "87",
+      "direct_mcq": "3053"
+    },
+    {
+      "year": 2025,
+      "total": "857",
+      "multi_statement": "113",
+      "match_columns": "18",
+      "direct_mcq": "735"
+    }
+  ]
+}

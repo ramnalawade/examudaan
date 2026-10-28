@@ -1,0 +1,233 @@
+{
+  "docId": 1630,
+  "examName": "Assistant Professor- Economics, Maharashtra Education Services, Group-A (Collegiate Branch)",
+  "examNameMr": "सहाय्यक प्राध्यापक - अर्थशास्त्र, महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Economics, Maharashtra Education Services, Group-A (Collegiate Branch)",
+      "paperTitleMr": "सहाय्यक प्राध्यापक - अर्थशास्त्र, महाराष्ट्र शिक्षण सेवा, गट-अ (महाविद्यालयीन शाखा)",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Micro Economics",
+          "unitTitleMr": "स्थूल अर्थशास्त्र",
+          "topics": [
+            "Theory of Demand-Axiomatic approach, Demand functions, Consumer behaviour under conditions of uncertainty",
+            "Theory of production, collusive and non-collusive oligopolies",
+            "Different models of objectives of the firm-Baumol, Morris and Williamson",
+            "Factor pricing",
+            "General equilibrium and Welfare Economics"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Macro Economics",
+          "unitTitleMr": "समष्टि अर्थशास्त्र",
+          "topics": [
+            "Keynesian and post-Keynesian approaches to theory of output and employment",
+            "Concept of investment multiplier, consumption hypotheses",
+            "Theories of investment and accelerator",
+            "Theories of demand for money-Keynesian and post-Keynesian",
+            "Different approaches to money supply; money supply, components and determinants; money multiplier",
+            "Output-price determination (aggregate supply and aggregate demand curve analysis)",
+            "Fleming Mundell open economy model"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Development and Growth",
+          "unitTitleMr": "विकास आणि वाढ",
+          "topics": [
+            "Role of institutions, Theories of growth and development-Models of growth of Joan Robinson and Kaldor",
+            "Technical Progress-Hicks, Harrod and learning by doing, production function approach to the determinants of growth",
+            "Endogenous growth-role of education, research and knowledge-explanation of cross country differentials in economic development and growth",
+            "Theories of development-Classical, Marx, Schumpeter and structural analysis of development-Imperfect market paradigm, Lewis model of development, Ranis-Fei model, Dependency theory of development",
+            "Factors in economy development-natural resources, population capital Human Resource Development and infrastructure",
+            "Trade and development-trade as engine of growth, two-gap analysis, Prebisch, Singer and Myrdal views; gains from trade and LDCs"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Public Finance",
+          "unitTitleMr": "सार्वजनिक वित्त",
+          "topics": [
+            "Theories of taxation, types, incidence and effects",
+            "Theories of public expenditure-effects on savings, investment and growth",
+            "Burden of public debt",
+            "Union Finance-Trends in Revenue and Expenditure of the Government of India",
+            "State finance-Trends in Revenue and Expenditure of the State Governments",
+            "Public Debt-India's Public debt since 1951-growth composition, ownership pattern and debt management",
+            "Union-state Financial Relations-Horizontal and vertical imbalance the Finance Commissions",
+            "Fiscal Policy and Fiscal Reforms in India"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "International Economics",
+          "unitTitleMr": "आंतरराष्ट्रीय अर्थशास्त्र",
+          "topics": [
+            "Monetary approach and adjustment in the balance of payments",
+            "Regional blocs-multilateralism and world trading system",
+            "The Political Economy of imposition of non-tariff barriers",
+            "International trade under conditions of imperfect competition in goods market",
+            "Theory of International reserves",
+            "Optimum Currency Areas-Theory and impact in the developed and developing countries",
+            "WTO and its impact on the different sectors of the economy"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Money and Banking",
+          "unitTitleMr": "नाणे आणि बँकिंग",
+          "topics": [
+            "Components of money supply",
+            "Role, constituents and functions of money and capital markets",
+            "RBI-recent monetary and credit policies",
+            "Commercial banks and cooperative banks",
+            "Specialized financial and investment institutions",
+            "Non-Bank financial institutions and Regional Rural Banks"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Industrial Economics",
+          "unitTitleMr": "औद्योगिक अर्थशास्त्र",
+          "topics": [
+            "Industrial structure and economic growth",
+            "Pattern of industrialization-Public and Private, large and small industries",
+            "Theories of Industrial location-Indian experience",
+            "Industrial productivity-measurement, partial and total trends",
+            "Industrial Finance in India",
+            "Industrial Labour-Problems, policies and reforms in India",
+            "Economic Reforms and industrial growth"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Demography and Environment",
+          "unitTitleMr": "लोकसंख्याशास्त्र आणि पर्यावरण",
+          "topics": [
+            "Population and Economic development-interrelation between population development and environment, sustainable development",
+            "Malthusian theory of population, optimum theory of population, theory of demographic transition, population as Limits to Growth and as Ultimate Source",
+            "Concepts of Demography-Vital rates, life tables, composition and uses, Measurement of fertility-Total fertility rate, gross and net reproduction rate-Age pyramids",
+            "Population projection-stable stationary and quasi-stationary population, characteristics of Indian population through recent census",
+            "Poverty in India-Absolute and relative analysis of poverty in India",
+            "Environment as necessity-amenity and public good; causes of environmental and ecosystem degeneration-policies for controlling pollution-economic and persuasive their relative effectiveness in LDCs",
+            "Relation between population poverty and environmental degradation-microplanning for environment and eco-preservation-water sheds, joint forest management and self-help groups",
+            "Role of State in environmental preservation-Review of environmental legislation in India"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Agricultural Economics",
+          "unitTitleMr": "कृषी अर्थशास्त्र",
+          "topics": [
+            "Role of Agriculture in Indian Economy-Share of Agriculture, interrelationship between agriculture and industry",
+            "Institutional aspects-Land reforms, Green revolution",
+            "Technological aspects-Agricultural inputs and shifts in production function",
+            "Capital formation in the rural sector-Savings, assets and credits",
+            "Strategies for rural development",
+            "Regional disparities in Indian agriculture",
+            "Cooperative movement in India-Organization, structure and development of different types of co-operative in India"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Quantitative Methods",
+          "unitTitleMr": "परिमाणवाचक पद्धती",
+          "topics": [
+            "Application of Differential and Integral Calculus in theories of consumer behaviour, Production and pricing under different market conditions",
+            "Input-output analysis and linear programming",
+            "Application of Correlation and Regression",
+            "Testing of Hypothesis in Regression Analysis"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Econometrics",
+          "unitTitleMr": "अर्थमिती",
+          "topics": [
+            "Single Equation Linear Model: Assumption and properties of OLS",
+            "Multiple Regression Model-Estimation and Interpretation",
+            "Multi-collinearity-Auto-correlation and heteroscedasticity-Causes, detection, consequences and remedy",
+            "Dummy variables, distributed lags-Need, limitations and interpretation, Applications in Economics",
+            "Simultaneous Equation models: Structural and reduced forms, Endogenous and exogenous variables, Identification problems and conditions, Single equation methods of estimations-TSLS, indirect least squares",
+            "Techniques of Forecasting: ARMA, ARIMA",
+            "Econometric properties of time series, Unit root, integrated series, random walk and white noise"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Advanced Economic Theory",
+          "unitTitleMr": "प्रगत आर्थिक सिद्धांत",
+          "topics": [
+            "Theory of Consumer Behaviour and Theory of Firms",
+            "Theory of Pricing-Monopoly, Monopolistic competition, Duopoly and Oligopoly",
+            "Theory of Games-Two-person, Zero-sum Game, Pure and Mixed strategy, Saddle point solution, Linear programming and input output analysis",
+            "Static and Dynamic Multiplier and Accelerator, Samuelson-Hicks trade cycle model",
+            "Growth Models-Harrod and Domar, Neoclassical models-Solow, Meade, Kaldor's Model with technological progress, endogenous growth models",
+            "Employment and output determination with fixed and flexible prices (IS-LM, Aggregate demand and aggregate supply analysis)"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Advanced International Economics",
+          "unitTitleMr": "प्रगत आंतरराष्ट्रीय अर्थशास्त्र",
+          "topics": [
+            "The Rise and fall of Bretton Woods and emerging International Monetary System",
+            "World Trading System-Evolution and Distortions",
+            "Globalization-Developments in Exchange Markets, Euro-Currency Markets, and International Bond Markets, International Debt crises",
+            "Theory of Foreign Exchange Markets-Exchange Trading, Arbitrage and Market Hedging"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Advanced Agricultural Economics",
+          "unitTitleMr": "प्रगत कृषी अर्थशास्त्र",
+          "topics": [
+            "Growth and Productivity trends in Indian Agriculture",
+            "Development of distributive Institutions-Costs and price policies",
+            "Agricultural marketing and credit",
+            "Trends in migration and labour markets, Minimum Wages Act",
+            "WTO and sustainable agricultural development",
+            "Reforms in Indian agriculture"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Indian Economy and Policy",
+          "unitTitleMr": "भारतीय अर्थव्यवस्था आणि धोरण",
+          "topics": [
+            "Planning and Economic Development",
+            "Costs, Prices, WTO and Indian Agriculture",
+            "Globalization, Liberalization and the Indian Industrial Sector",
+            "Infrastructure and Economic Development",
+            "Social Sector, Poverty and Reforms in India",
+            "Women, Environment and Economic development",
+            "Trade Reforms and Liberalization",
+            "Financial sector reforms",
+            "Fiscal policy and fiscal reforms"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

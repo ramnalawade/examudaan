@@ -1,0 +1,41 @@
+{
+  "docId": 1595,
+  "examName": "Government Labour Officer, Maharashtra Labour Services, Gr.-B.",
+  "examNameMr": "शासन श्रम अधिकारी, महाराष्ट्र श्रम सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Government Labour Officer, Maharashtra Labour Services, Gr.-B.",
+      "paperTitleMr": "शासन श्रम अधिकारी, महाराष्ट्र श्रम सेवा, गट-ब",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Minimum Wages Act",
+          "unitTitleMr": "किमान वेतन अधिनियम",
+          "topics": [
+            "Minimum Wages Act provisions and applicability",
+            "Fixation and revision of minimum rates of wages",
+            "Wages for work of piece work and normal working hours",
+            "Maintenance of registers and records",
+            "Inspectors, claims and penalties"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

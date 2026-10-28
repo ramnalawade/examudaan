@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/ai-tools/page.js — ExamUdaan AI Tools Directory
 // 54 curated tools with category filters + detail page links
 // Fully bilingual in Marathi & English using useLanguage()
@@ -621,7 +621,7 @@ Document:
                     </button>
                     <a
                       href={tool.url}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       rel="noopener noreferrer"
                       onClick={() => trackAiToolClick({ tool_name: tool.name, tool_category: tool.category })}
                       style={{

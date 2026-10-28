@@ -1,0 +1,67 @@
+{
+  "docId": 1671,
+  "examName": "Education Officer and Equivalent Posts, MES, Gr-A (Administration Branch)",
+  "examNameMr": "शिक्षण अधिकारी व समतुल्य पदे, म.सा.से., गट-अ (प्रशासन शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "Marathi",
+  "category": "education",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Education Officer and Equivalent Posts, MES, Gr-A (Administration Branch)",
+      "paperTitleMr": "शिक्षण अधिकारी व समतुल्य पदे, म.सा.से., गट-अ (प्रशासन शाखा)",
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "B.Ed. Syllabus Subjects",
+          "unitTitleMr": "बी.एड. अभ्यासक्रमांतर्गत विषय",
+          "topics": [
+            "B.Ed. Syllabus Subjects"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "School Curriculum and Pedagogy",
+          "unitTitleMr": "शाळेय अभ्यासक्रमांतर्गत विषय घट / विषय यांच्याशी संबंधित अध्ययन - अध्यापन पद्धतीचा सखोल अभ्यास व शाळा-निरीक्षण यांसंबंधीचे प्रश्न",
+          "topics": [
+            "In-depth study of teaching methods related to school curriculum subjects",
+            "School inspection related questions"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Studies",
+          "unitTitleMr": "सामान्य अध्ययन",
+          "topics": [
+            "History of India with special reference to Maharashtra",
+            "Geography of India with special reference to Maharashtra",
+            "Indian Polity: State Administration and Local Administration (Rural as well as Urban) structure, powers and functions",
+            "Indian Economy",
+            "General Science",
+            "National and International Current Affairs"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी",
+          "topics": [
+            "Logical reasoning and mental ability"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

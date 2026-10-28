@@ -1,0 +1,119 @@
+{
+  "docId": 10551,
+  "examName": "Health Services and Mechanical Transport Examination",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Mechanical Transport and Health Services Management",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Knowledge and Current Affairs",
+          "unitTitleMr": null,
+          "topics": [
+            "Current trends in health services and mechanical transport.",
+            "Government policies related to health and transport sectors.",
+            "Role of transport in healthcare delivery during emergencies and disasters.",
+            "Sustainable practices in healthcare transport systems."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Mechanical Transport Management in Health Services",
+          "unitTitleMr": null,
+          "topics": [
+            "Principles of mechanical transport systems in healthcare logistics.",
+            "Standards and policies for vehicle fleet management.",
+            "Maintenance schedules and preventive maintenance in healthcare vehicles.",
+            "Major repair procedures for ambulances and other health-related vehicles.",
+            "Vehicle reconditioning and spare parts management.",
+            "Emergency vehicle readiness and performance optimization."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Vehicle Maintenance Theory Knowledge",
+          "unitTitleMr": null,
+          "topics": [
+            "Fundamentals of Vehicle Systems: Engine systems (petrol, diesel, and electric vehicles), Transmission systems (manual, automatic, and hybrid systems), Braking systems (hydraulic brakes, ABS), Electrical and electronics systems (batteries, alternators, and vehicle wiring).",
+            "Preventive Maintenance Concepts: Importance of routine checks and scheduled servicing, Inspection of critical components (tyres, brakes, cooling systems, and suspensions), Lubrication systems and oil change schedules, Ensuring optimal performance through diagnostic testing.",
+            "Repair and Troubleshooting: Identifying and rectifying common mechanical failures in ambulances and service vehicles, Repair methods for engine overheating, transmission failure, and brake malfunctions, Troubleshooting electrical faults in medical vehicles, Steps to address vehicle breakdowns and ensure timely repair.",
+            "Performance Metrics and Cost Control: Analyzing vehicle downtime, fuel efficiency, and maintenance costs, Strategies to extend vehicle lifespan and reduce operational costs, Role of technology (e.g., telematics, vehicle tracking systems) in maintenance."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Transport Policies and Regulations",
+          "unitTitleMr": null,
+          "topics": [
+            "Motor Vehicle Act and its relevance to healthcare transport.",
+            "Safety protocols for transporting patients and medical supplies.",
+            "Standards for mechanical inspections and certifications of vehicles in health services.",
+            "Accident investigation procedures and recommendations for prevention."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Administrative and Technical Oversight",
+          "unitTitleMr": null,
+          "topics": [
+            "Reviewing and analyzing operational performance reports (e.g., KIS reports).",
+            "Cost control measures: spare parts, tyre life, breakdown frequency.",
+            "Procedures for inter-district vehicle transfers for repairs and reconditioning.",
+            "Handling complaints and implementing solutions for mechanical defects.",
+            "Coordination of technical meetings and follow-up on decisions."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Leadership and Personnel Management",
+          "unitTitleMr": null,
+          "topics": [
+            "Staff management: transfers, promotions, and disciplinary actions.",
+            "Performance monitoring through diary reviews of technical officers.",
+            "Conducting training programs for technical personnel.",
+            "Ensuring efficient communication and coordination between districts and workshops."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Analytical and Problem-Solving Skills",
+          "unitTitleMr": null,
+          "topics": [
+            "Interpreting operational data to improve efficiency.",
+            "Investigating and preventing breakdowns and accidents.",
+            "Troubleshooting and managing logistical challenges in healthcare transport."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Communication and Documentation",
+          "unitTitleMr": null,
+          "topics": [
+            "Drafting maintenance policies and technical reports.",
+            "Preparing actionable recommendations from inspection reports.",
+            "Coordinating technical meetings and documenting outcomes.",
+            "Clear and concise communication with health and technical departments."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

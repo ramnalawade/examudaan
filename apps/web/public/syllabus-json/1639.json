@@ -1,0 +1,96 @@
+{
+  "docId": 1639,
+  "examName": "Assistant Professor- Public Administration, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": "सहायक प्राध्यापक - लोकप्रशासन, महाराष्ट्र शिक्षण सेवा, गट - अ (संस्थेची शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Public Administration, Maharashtra Education Services, Group - A (Collegiate Branch)",
+      "paperTitleMr": "सहायक प्राध्यापक - लोकप्रशासन, महाराष्ट्र शिक्षण सेवा, गट - अ (संस्थेची शाखा)",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Public Administration, Organisation and Thinkers",
+          "unitTitleMr": null,
+          "topics": [
+            "Public Administration - Meaning, Nature and Scope, Public and Private Administration, New Public Administration, New Public Management.",
+            "Organisation - Bases of Organisation - Formal and Informal, Principles of Organisation, Hierarchy, Span of Control, Unity of Command, Delegation, Decentralisation, Co-ordination and Line & Staff Agencies.",
+            "Administrative Thinkers - Kautilya, Woodrow Wilson, Luther Gullick and Lyndall Urwick, Max Weber, F. W. Taylor, Henry Fayol, M. P. Follet, Elton Mayo, Chester Barnard, Herbert Simon, D. H. McGregor, Abraham Maslow, Frederick Herzberg and Chris Argyris."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Comparative Public Administration and Development Administration",
+          "unitTitleMr": null,
+          "topics": [
+            "Theories and Models of Comparative Public Administration - Contributions of Fred Riggs, Montgomery and Ferrel Heady.",
+            "A Comparative Study of the Administration, Institutions and Processes in U.K., U.S.A and India.",
+            "Development Administration - Meaning, Nature and Scope, Concept of Development Administration, Development Administration and Traditional Administration, Characteristics of Administration in Developed and Developing Countries, Bureaucracy and Development Administration."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Indian Administration and Personnel & Financial Administration",
+          "unitTitleMr": null,
+          "topics": [
+            "Indian Administration - Organisation of the Union Government - Central Secretariat, Ministries and Departments, Cabinet Secretariat, P.M.O., Organisation of the State Government - Secretariat, Role of Chief Secretary, Organisation of Departments and Directorates.",
+            "Personnel Administration - Classification of Services Recruitment, Recruitment Agencies - U.P.S.C. and State Public Service Commissions, Training, Promotion, Discipline, Morale, Staff Associations, Employer - Employee Relations.",
+            "Financial Administration - Budget - Meaning, Preparation and Enactment, Finance Ministry and its Role, Audit and Accounts, Comptroller and Auditor General."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Research Methodology, District Administration and Social & Economic Administration",
+          "unitTitleMr": null,
+          "topics": [
+            "Research Methodology - Research Methods in Social Sciences, Types of Research, Sampling, Tools of Data Collection.",
+            "Structure of District Administration, Role of District Collector, Local Government - Rural and Urban: Structure, Functions and Role, Finances; State - Local Relations.",
+            "Social and Economic Administration - The Concept of Social Welfare, Social Justices and Social Change, The Concepts of Liberalisation, Privatisation and Globalisation - The new Economic Policy, Role of Voluntary and Non-governmental Agencies in Socio-economic Development."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Public Policy",
+          "unitTitleMr": null,
+          "topics": [
+            "Public Policy - Meaning, Types and Significance, Approaches to Public Policy, Institutional Arrangements for Policy-making, Policy - making Process, Policy Implementation, Policy Education, Policy Monitoring and Evaluation, Policy Analysis."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Social Welfare Administration and Economic Policy in India",
+          "unitTitleMr": null,
+          "topics": [
+            "Concepts of Social Welfare, Social Justice and Social Change, Organisational Structure for Social Justice Administration - Central Social Welfare Board, State Social Welfare Boards, Role of N.G.O.s and Voluntary Organisations, State Departments of Social Welfare and the Union Ministry of Social Justice and Empowerment, Reservation Policy, Major Social Sectors - Health and Education.",
+            "Economic Policy in India since Independence, Concept of Mixed Economy, Industrial Policy Resolutions and Growth of Public Enterprises in India, Public Enterprises - Features, Problems of Management, Accountability and Autonomy, Liberalisation, Privatisation and Globalisation, Disinvestment Policy - The New economic Policy."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Local Self-Government and Rural & Urban Development",
+          "unitTitleMr": null,
+          "topics": [
+            "Local Self-Government - Meaning, Nature and Scope, 73rd and 74th Constitutional Amendments in India, Organisation and Functions, Finances, State and Local Government Relations, Challenges before the Local Self-Government.",
+            "Concept of Rural Development, Approaches to Rural Development, Community Development, Area Development, Integrated Rural Development, Centralization and Decentralization, Role of Cooperatives.",
+            "Process of Urbanization, Urban Development Infrastructure, Housing, Water Supply, Sewerage, Environment, Transport, Master Plan, National Capital Region, Development Authorities, Slums."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

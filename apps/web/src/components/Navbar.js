@@ -15,6 +15,15 @@ import { useLanguage } from '../context/LanguageContext'
 import { apiFetch } from '../lib/apiClient'
 import VoiceSearchButton from './VoiceSearchButton'
 import { triggerOmniSearch } from './OmniSearchModal'
+import {
+  MPSC_TOTAL_QUESTION_PAPERS,
+  MPSC_ARCHIVE_YEARS_SPAN,
+  MPSC_ARCHIVE_YEARS_COUNT,
+  MPSC_CADRE_COUNTS,
+  REAL_AI_TOOLS_COUNT,
+  REAL_BLOGS_COUNT,
+  REAL_SYLLABI_COUNT
+} from '../lib/platformStats'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -76,10 +85,15 @@ export default function Navbar() {
 
   const MORE_NAV_ITEMS = [
     { href: '/answer-keys', label: t('nav.answer_keys', 'Answer Keys'), icon: 'key', badge: 'Keys', desc: 'Official provisional & final answer keys for all exams' },
-    { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', 'MPSC Papers (2024-26)'), icon: 'description', badge: '429 PDFs', desc: 'Official MPSC question papers & final answer keys from mpsc.gov.in' },
+    { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', `MPSC Papers & Keys (${MPSC_ARCHIVE_YEARS_SPAN})`), icon: 'description', badge: `${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} PDFs`, desc: `Official MPSC question papers & final answer keys from mpsc.gov.in (${MPSC_ARCHIVE_YEARS_COUNT} Years Archive)` },
+    { href: '/mpsc/group-b-previous-year-papers', label: 'MPSC Group B Papers', icon: 'local_police', badge: `${MPSC_CADRE_COUNTS.groupB.count} Papers`, desc: `PSI, STI, ASO Prelims & Mains question papers with answer keys (${MPSC_ARCHIVE_YEARS_SPAN})` },
+    { href: '/mpsc/group-c-previous-year-papers', label: 'MPSC Group C Papers', icon: 'assignment_turned_in', badge: `${MPSC_CADRE_COUNTS.groupC.count} Papers`, desc: `Clerk-Typist, Tax Assistant & Excise SI question papers with keys (${MPSC_ARCHIVE_YEARS_SPAN})` },
+    { href: '/mpsc/rajyaseva-previous-year-papers', label: 'MPSC Rajyaseva Papers', icon: 'account_balance', badge: `${MPSC_CADRE_COUNTS.rajyaseva.count} Papers`, desc: `State Services Prelims & Mains GS 1-4 question papers with keys (${MPSC_ARCHIVE_YEARS_SPAN})` },
     { href: '/police-bharti-question-papers', label: 'Police Bharti Papers', icon: 'local_police', badge: 'Solved', desc: 'Unit-wise Maharashtra Police Constable question papers & answer keys' },
     { href: '/talathi-question-papers', label: 'Talathi Question Papers', icon: 'assignment', badge: 'TCS', desc: 'TCS shift-wise solved Talathi Bharti question papers with answer keys' },
-    { href: '/syllabus', label: 'All Exam Syllabi', icon: 'menu_book', badge: '17+ Exams', desc: 'Topic-wise syllabus, papers & pattern for MPSC, Police, UPSC & SSC' },
+    { href: '/mahatet-previous-year-papers', label: 'MAHA TET Papers & Keys', icon: 'school', badge: 'TET', desc: '44+ Official MAHA TET Paper 1 & 2 Question Papers & Official Keys (2013–2026)' },
+    { href: '/syllabus', label: 'All Exam Syllabi', icon: 'menu_book', badge: `${REAL_SYLLABI_COUNT}+ Topics`, desc: 'Topic-wise syllabus, papers & pattern for MPSC, Police, UPSC & SSC' },
+    { href: '/syllabus/maha-tet', label: 'MAHA TET Syllabus 2026', icon: 'school', badge: 'Paper 1 & 2', desc: 'Official MSCE Pune MAHA TET Paper 1 & 2 syllabus, exam pattern & GR PDF' },
     { href: '/syllabus#mpsc-catalog', label: 'MPSC 343 Official Papers', icon: 'account_balance', badge: '343 PDFs', desc: 'Browse all 343 official MPSC syllabus notifications with interactive breakdowns' },
     { href: '/mpsc-syllabus/1181', label: 'MPSC Rajyaseva Syllabus (Eng/Mar)', icon: 'auto_stories', badge: 'Interactive', desc: 'MPSC State Services Main Exam papers, units & topics' },
     { href: '/admit-cards', label: t('nav.admit_cards', 'Admit Cards'), icon: 'badge', desc: 'Hall tickets & exam venue notices for all exams' },
@@ -96,7 +110,7 @@ export default function Navbar() {
     { href: '/alerts', label: t('nav.alerts', 'Telegram Job Alerts'), icon: 'send', badge: 'Free', desc: 'Instant official exam alerts directly on Telegram' },
     //{ href: '/schemes',            label: t('nav.schemes',         'Govt Schemes'),         icon: 'policy',                                desc: 'Scholarship, employment & training schemes' },
     { href: '/youtube', label: t('nav.youtube', 'YouTube Classes'), icon: 'play_circle', desc: 'Free lectures, strategy & exam updates' },
-    { href: '/ai-tools', label: t('nav.ai_tools', 'AI Study Tools'), icon: 'smart_toy', desc: '124+ curated AI study aids' },
+    { href: '/ai-tools', label: t('nav.ai_tools', 'AI Study Tools'), icon: 'smart_toy', desc: `${REAL_AI_TOOLS_COUNT}+ curated AI study aids` },
     { href: '/ai-academy', label: t('nav.ai_academy', 'AI Academy'), icon: 'school', badge: 'New', desc: 'Master AI skills, prompts & workflows' },
     { href: '/mock-interview', label: t('nav.mock_interview', 'Mock Interview AI'), icon: 'mic', badge: 'AI', desc: 'Real-time AI voice/chat board mock interview' },
     { href: '/ai-news', label: t('nav.ai_news', 'AI News Feed'), icon: 'feed', badge: 'Live', desc: 'Real-time AI research & tech updates' },
@@ -106,13 +120,18 @@ export default function Navbar() {
     { href: '/', label: t('nav.home', 'Home'), icon: 'home' },
     { href: '/jobs', label: t('nav.jobs', 'Jobs'), icon: 'work' },
     { href: '/current-affairs', label: t('nav.current_affairs', 'Current Affairs'), icon: 'newspaper', badge: 'Daily' },
-    { href: '/blog', label: t('nav.blog', 'Blog & Guides'), icon: 'article', badge: 'New' },
+    { href: '/blog', label: t('nav.blog', 'Blog & Guides'), icon: 'article', badge: `${REAL_BLOGS_COUNT}` },
     { href: '/question-papers', label: t('nav.question_papers', 'Question Papers'), icon: 'description', badge: 'MPSC' },
     { href: '/answer-keys', label: t('nav.answer_keys', 'Answer Keys'), icon: 'key', badge: 'Keys' },
-    { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', 'MPSC Papers & Keys'), icon: 'description', badge: '841' },
+    { href: '/mpsc-pyq', label: t('nav.mpsc_pyq', 'MPSC Papers & Keys'), icon: 'description', badge: `${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')}` },
+    { href: '/mpsc/group-b-previous-year-papers', label: 'MPSC Group B Papers', icon: 'local_police', badge: `${MPSC_CADRE_COUNTS.groupB.count}` },
+    { href: '/mpsc/group-c-previous-year-papers', label: 'MPSC Group C Papers', icon: 'assignment_turned_in', badge: `${MPSC_CADRE_COUNTS.groupC.count}` },
+    { href: '/mpsc/rajyaseva-previous-year-papers', label: 'MPSC Rajyaseva Papers', icon: 'account_balance', badge: `${MPSC_CADRE_COUNTS.rajyaseva.count}` },
     { href: '/police-bharti-question-papers', label: 'Police Papers & Keys', icon: 'local_police', badge: 'Solved' },
     { href: '/talathi-question-papers', label: 'Talathi TCS Papers', icon: 'assignment', badge: 'TCS' },
+    { href: '/mahatet-previous-year-papers', label: 'MAHA TET Papers & Keys', icon: 'school', badge: '44+' },
     { href: '/syllabus', label: t('nav.syllabus', 'Syllabus'), icon: 'menu_book' },
+    { href: '/syllabus/maha-tet', label: 'MAHA TET Syllabus', icon: 'school', badge: 'TET' },
     { href: '/syllabus#mpsc-catalog', label: 'MPSC 343 Official Papers', icon: 'account_balance', badge: '343 PDFs' },
     { href: '/mpsc-syllabus/1181', label: 'MPSC Rajyaseva Syllabus', icon: 'auto_stories', badge: 'Interactive' },
     { href: '/mock-tests', label: t('nav.mock_tests', 'Mock Tests'), icon: 'quiz', badge: 'Free' },
@@ -284,7 +303,8 @@ export default function Navbar() {
                   position: 'absolute',
                   top: 'calc(100% + 0px)',  /* No gap — prevents mouse leaving dead zone */
                   right: 0,
-                  width: 320,
+                  width: 385,
+                  maxWidth: 'min(385px, calc(100vw - 20px))',
                   maxHeight: '80vh',
                   overflowY: 'auto',
                   background: 'var(--surface-container-lowest)',
@@ -320,17 +340,32 @@ export default function Navbar() {
                     <span className="material-symbols-outlined" style={{ fontSize: 20, color: 'var(--primary)', marginTop: 2 }}>
                       {item.icon}
                     </span>
-                    <div style={{ flex: 1 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontWeight: 600, fontSize: 13 }}>
-                        <span>{item.label}</span>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        gap: 10,
+                        width: '100%',
+                      }}>
+                        <span style={{ fontWeight: 600, fontSize: 13.5, color: 'var(--on-surface)', lineHeight: 1.35 }}>
+                          {item.label}
+                        </span>
                         {item.badge && (
                           <span style={{
-                            fontSize: 9,
-                            fontWeight: 800,
-                            padding: '1px 5px',
+                            fontSize: 10,
+                            fontWeight: 700,
+                            padding: '2px 8px',
                             borderRadius: 999,
                             background: 'var(--primary)',
-                            color: '#fff',
+                            color: '#ffffff',
+                            whiteSpace: 'nowrap',
+                            flexShrink: 0,
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            letterSpacing: '0.02em',
+                            lineHeight: 1.2,
                           }}>
                             {item.badge}
                           </span>
@@ -629,12 +664,18 @@ export default function Navbar() {
                 {badge && (
                   <span style={{
                     fontSize: 10,
-                    fontWeight: 800,
-                    padding: '2px 6px',
+                    fontWeight: 700,
+                    padding: '2px 8px',
                     borderRadius: 999,
                     background: badge === 'New' ? '#22c55e' : 'var(--primary)',
                     color: '#fff',
                     textTransform: 'uppercase',
+                    whiteSpace: 'nowrap',
+                    flexShrink: 0,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    lineHeight: 1.2,
                   }}>
                     {badge}
                   </span>

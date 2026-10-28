@@ -13,6 +13,7 @@ import { AdmitCardDownloadSteps, AdmitCardDocsToCarry } from '../../../component
 import { T } from '../../../context/LanguageContext'
 import { query, queryOne } from '../../../lib/pgdb'
 import { buildAdmitCardMetadata } from '../../../lib/seoMetadata'
+import { safeJsonLd } from '../../../lib/jobSeo'
 
 // ISR cache — revalidate every 5 minutes for instant edge delivery
 export const revalidate = 300
@@ -239,8 +240,8 @@ export default async function AdmitCardDetailPage({ params }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(examEventSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(examEventSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }} />
       <div className="container" style={{ paddingTop: '20px', paddingBottom: '100px' }}>
 
         {/* Breadcrumb */}

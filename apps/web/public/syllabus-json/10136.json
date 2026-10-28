@@ -1,0 +1,144 @@
+{
+  "docId": 10136,
+  "examName": "Associate Professor (Food Technology) and Assistant Professor (Food Technology and Management) Maharashtra Engineering Teachers’ Service, Group-A",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Associate Professor (Food Technology) and Assistant Professor (Food Technology and Management) Maharashtra Engineering Teachers’ Service, Group-A",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "FOOD CHEMISTRY",
+          "unitTitleMr": null,
+          "topics": [
+            "Interactions amongst food constituents including those between the constituents themselves and with each other (water, protein, lipids, carbohydrates, minerals, vitamins), and the consequences thereof on nutritional, safety & sensory quality such as color & texture of foods. Examples include starch-lipid complexes, protein-polysaccharide interactions, protein-protein interactions leading to unnatural amino acids and racemization of amino acids, starch-polyphenol complexes.",
+            "Interactions of food constituents with external agents such as with flavours, food additives; among food additives; packaging materials and flavours; and the consequences thereof on nutritional, safety and sensory quality of foods",
+            "Contaminants generated during food processing (acrylamide, benzene, hydroxymethyl furfural, nitrosamines) and those that find their way in to foods as environmental contaminants (polychlorinated biphenyls, polychlorinated aromatic hydrocarbons, dioxins and furans, pesticide residues)",
+            "Anti-nutritional factors of significance in foods (trypsin inhibitors, phytates, tannins, hemagglutinins) and ways to mitigate them in products as legumes and millets",
+            "Microbial toxins of concern in foods and the effect of food processing therein. Examples are aflatoxin, patulin, bacterial toxins, zearalenone and such others.",
+            "Browning reactions in foods – Caramelization, enzymatic, non-enzymatic, ascorbic acid induced, and approaches to mitigate them. Impact of food processing on browning reactions, Role of browning reactions in foods; beneficial and adverse impacts of browning reactions on food organoleptic properties, browning and food quality, impact of browning reactions on nutritive value of foods.",
+            "Natural colors in foods: chemical structure, extraction, stability in food products and during processing",
+            "Flavours in foods – classification of flavours (natural, nature-identical and artificial); chemical pathways for generation of flavours in thermally processed and biochemical pathways for generation of flavours in fermented foods; quality assurance of flavours; selection of flavours for different types of foods, e.g. bakery, confectionary, microwaveable foods etc; off flavours and taints in foods"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "FOOD BIOCHEMISTRY",
+          "unitTitleMr": null,
+          "topics": [
+            "Carbohydrates: Fundamentals of chemistry of carbohydrates; Qualitative tests / colour reaction; Metabolic pathways and energy yield for breakdown of carbohydrates",
+            "Lipids: Types; Functions & comparative distribution of lipids; beta-oxidation; functions; quantitative analysis",
+            "Proteins: Chemistry; types, qualitative and quantitative analysis; Structural analysis",
+            "Nucleic acids: Types; Chemistry; Functions; Genetic code",
+            "Enzymes: definition, function, nomenclature, classification, mechanism of enzyme action, enzyme kinetics, enzyme inhibition and regulation",
+            "Vitamins & Co-enzymes: Structures & function of Nicotinamide, nicotinic acid, riboflavin, lipoic acid, biotin, thiamine, B6, folic acid, B12, pantothenic acid, ascorbic acid, vitamins A, D, K, and E"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "FOOD MICROBIOLOGY",
+          "unitTitleMr": null,
+          "topics": [
+            "Factors affecting spoilage of foods and associated microflora; Intrinsic and extrinsic factors affecting spoilage of foods; biochemical changes caused by microorganisms - putrefaction, lipolysis; Antagonism and synergism in microorganisms",
+            "Microbiological spoilage problems associated with typical food products such as dairy products, fruits and vegetables, grains and oilseeds, meat/fish and poultry, spices, and their control",
+            "Food borne infections and food poisoning, Microbial toxins, Emerging pathogens.",
+            "Detection methods for E. coli, Staphylococci, Yersinia, Campylobacter, B. cereus, C. botulinum & Salmonella from food samples.",
+            "Indicator organisms, microbiological quality assurance systems in food industry, use of the hazard analysis critical control points system to ensure microbiological safety and quality of foods, microbiological food standards",
+            "Rapid methods of microbial analysis; applications of immunological techniques to food industry"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "FOOD NUTRITION",
+          "unitTitleMr": null,
+          "topics": [
+            "Food composition and nutrients present in foods, terminologies used in nutrition, Food pyramid, my pyramid, my plate, Food exchanges and measures used, Energy value of foods, bomb calorimeter, physiological fuel value, estimation of energy value of foods from proximate composition. Basal Metabolic Energy, factors affecting, and calorie needs for B. M. E., physical activity and diet induced thermogenesis; energy imbalance and body weight regulation; Nutrition through lifecycle.",
+            "Role of carbohydrates in human nutrition- nutritionally important carbohydrates, physiological functions, digestion and absorption of available carbohydrates, dietary fiber, non-digestible oligosaccharides, resistant starch and its types, carbohydrates as prebiotics, dental carries and role of sugar, Lactose intolerance and galactosemia, Glycemic index and glycemic load of carbohydrate containing foods.",
+            "Role of lipids in human nutrition- nutritionally important lipid constituents, physiological functions, digestion and absorption of lipids, conjugated linoleic acid, trans fats, medium chain triglycerides, fat replacers and mimetics, keto diet, Cholesterol, Phytosterols, blood lipids (LDL, HDL, VLDL etc), essential fatty acids, their functions and deficiency, omega 3 and omega 6 PUFAs and their dietary sources, eicosanoids.",
+            "Role of proteins in human nutrition- essential/ non-essential amino acids, complete/ incomplete proteins, limiting amino acid, complementary proteins, physiological functions of proteins, daily protein requirements, digestion absorption and utilization of proteins, common food sources of proteins, protein deficiency (PEM/PCM)- prevalence, causes, effects, remedial measures",
+            "Concept and estimation of protein quality – in vitro (scoring methods, indices, microbiological methods, enzymatic methods) and in vivo methods (growth response methods like PER and Nitrogen balance methods like BV), PDCAAS",
+            "Anti-nutritional factors present in foods- antiproteins (trypsin inhibitor), antiminerals (phytate), anti-vitamins (ascorbic acid oxidase) and others- their chemistry, occurrence in food sources, mechanism of anti-nutritional action, processing stability, and remedial measures to reduce them.",
+            "Role of micronutrients (vitamins and minerals): Vitamins– classification- water soluble (all the B vitamins and C) and fat soluble (Vitamins A, D, E and K); Chemistry, structure and properties; physiological functions; absorption and metabolism; food sources, deficiency and hypervitaminosis; RDA. Minerals- Nutritional and anti-nutritional mineral elements in food, their physiological role, food sources, deficiency diseases, bioavailability, Fortification of foods with vitamins and minerals.",
+            "Principles of Diet Therapy and Therapeutic Nutrition; Formulation of diets and foods for special needs; Techniques of diet and health surveys; Assessment of nutritional status; Effect of food processing, preservation and storage on nutritional quality of foods; Food nutrification; Sport nutrition;"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "PRINCIPLES OF FOOD PRESERVATION",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction to food preservation: Food spoilage; Underlying principles of different modes of food preservation; Preservation methods with emphasis on inactivation, inhibition, and avoiding recontamination.",
+            "Dehydration and drying of foods: Drying curve and drying time calculation; Water activity and moisture absorption isotherms; Psychometric chart; Different types of Dryers-Conductive, convective, and combined; IMF foods; osmotic dehydration.",
+            "Thermal processing of food products: Sterilization and Pasteurization; Canning of food products; Classifications and structure of cans, corrosion, Lacquering; Spoilage in canned foods Thermal death time (TDT) concept; Process time calculation for canned foods; Retort processing; Aseptic packaging.",
+            "Low temperature storage and preservation: Chilling and Freezing; Freezing curve and water activity; Properties of frozen foods; Enthalpy change during freezing; Plank’s equation for freezing time; Cold storage and Refrigeration load; Refrigeration cycle; Cryogenic freezing and IQF; Freeze concentration and freeze drying.",
+            "Hurdle technology: Role of acidity and pH in food preservation; Preservation by fermentation – Curing, Pickling and Smoking; Controlled and modified atmospheric packaging and storage; Chemical and Bio-preservatives; Antimicrobials."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "FOOD ANALYSIS",
+          "unitTitleMr": null,
+          "topics": [
+            "Types of samples analyzed, steps in analysis, choice of methods; sampling procedures, considerations and sample preparation; Evaluation of analytical data – accuracy and precision, sources of errors, specificity, sensitivity and detection limits, regression analysis, reporting results.",
+            "Analysis of chemical constituents, their characterization and significance- moisture, ash, minerals, lipids, fat, proteins, fibre, titratable acidity, starch, reducing sugars.",
+            "Spectroscopic analysis of foods – basic principles, UV, visible, fluorescence, IR, AAS, MS, NMR. Chromatographic analysis of foods – basic principles, HPLC, GC, GLC, principles and applications.",
+            "Analysis of vitamins, extraneous matter, pesticides and mycotoxins. enzymatic, immunoassays, thermal analysis, and rheological profile."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "FOOD SAFETY AND REGULATIONS",
+          "unitTitleMr": null,
+          "topics": [
+            "India Regulations Overview of FSSAI. Detail of FSS Regulations relevant to products and labelling. (FSS Licensing & Registration including Schedule IV, Product Standards & Additives, Labelling & Display, Advertisement & Claims) Introduction to food safety and security: Hygienic design of food plants and equipment.",
+            "Food quality: Various Quality attributes of food, Instrumental, chemical and microbial Quality control. Sensory evaluation of food and statistical analysis. Water quality and other utilities.",
+            "Food Safety Management System: Food Safety, Threat and Fraud Management based on international standards (HACCP / VACCP / TACCP)?",
+            "Global regulations: FAO, Technical Cooperation programmes, Bio-security in Food and Agriculture, World Health Organization (WHO), World Animal Health Organization (OIE), International Plant Protection, Convention (IPPC) Codex Alimentarius Commission - Codex India – Role of Codex Contact point, National Codex contact point (NCCP), National Codex Committee of India – ToR, Functions, Shadow Committees etc.",
+            "Overview of US and EU regulations for food"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "FOOD ADDITIVES AND INGREDIENTS",
+          "unitTitleMr": null,
+          "topics": [
+            "Additives in food processing and preservation, their functions and safety.",
+            "Safety and quality evaluation of additives and ingredients, acute and chronic studies, LD50.",
+            "Analytical methods, chemical and instrumental.",
+            "Various additives such as preservatives, antioxidants and sequestrants, colours and flavours and flavor enhancers, emulsifiers, humectants, hydrocolloids, stabilizers and sweeteners, acidulants etc, with respect to chemistry, food uses and functions in formulations. New emerging additives, regulations as per CODEX and FSSAI.",
+            "Indirect food additives.",
+            "Colour additives in foods and their stability.",
+            "Classification of flavours and the process of preparing including extraction, distillation, fractionation and purification; Stability of flavours.",
+            "Ingredients used in food production e.g. sugars, starches, proteins/protein hydrolysates/isolates, fats, prebiotic oligosaccharides, pectin, chitin, and their technology of production and application, unusual protein sources such as insect proteins, mycoproteins"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "FOOD PACKAGING",
+          "unitTitleMr": null,
+          "topics": [
+            "Introduction to food packaging; Causes of food spoilage; Factors affecting food spoilage; Packaging as a method for preservation of foods; Functions of food packaging including new packaging technologies; Levels of packaging; Food labelling.",
+            "Different materials used in food packaging such as paper, board, glass, metal containers, aluminium foil, plastics, composites, traditional materials"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

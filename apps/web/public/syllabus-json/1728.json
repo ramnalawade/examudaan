@@ -1,0 +1,141 @@
+{
+  "docId": 1728,
+  "examName": "Maharashtra Education Service, Group B (Collegiate Branch) - Lecturer in Zoology",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Zoology",
+      "paperTitleMr": null,
+      "totalMarks": 150,
+      "duration": "1 1/2 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Non-Chordata",
+          "unitTitleMr": null,
+          "topics": [
+            "Concept of species and speciation",
+            "Characteristics of the subkingdoms-Protozoa, Parazoa and Metazoa",
+            "Evolution of symmetry, segmentation and coelom in Metazoa",
+            "Protozoa: Locomotion, Reproduction, Life cycle of Leishmania, Life cycle of Plasmodium, Life cycle of Paramoecium, Parasitic protozoans and diseases",
+            "Porifera: Canal Systems, Skeleton",
+            "Coelenterata: Structure and life history of Obelia, Metagenesis, Polymorphism in Coelenterates, Coral reefs and their significance",
+            "Platyhelminthes and Aschelminthes: Life Cycle of Fasciola hepatica, Life Cycle of Taenia solium, Life Cycle of Ascaris, Parasitic adaptations, Pathology and control of helminths - infecting man",
+            "Annelida: Earthworm - Feeding and digestion, circulatory system, excretory system, Coelom and coelomoducts in annelids, Filter feeding",
+            "Arthropoda: Salient features and phylogeny of Onychophora, Crustacean larvae, Mouth parts in insects (cockroach, mosquito, honey bee and butterfly), Metamorphosis in insects, Social life in termites and honey bees",
+            "Mollusca: Salient features and phylogeny of Monoplacophora, Torsion and detortion in Gastropoda, Respiration in various groups of Mollusca",
+            "Echinodermata: Water canal system, Echinoderm larvae and their phylogenetic significance, Mechanism of locomotion and feeding in starfish, Asterias"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Chordata",
+          "unitTitleMr": null,
+          "topics": [
+            "Protochordata: Structural organisation and affinities of Balanoglossus, Retrogressive metamorphosis in Urochordata, Feeding mechanism in Amphioxus",
+            "Pisces: Migration in fishes, Respiratory organs and mechanism of respiration in fishes, Receptor and effector organs in fishes",
+            "Amphibia: Origin of Amphibia, Parental care, Anatomical pecularities and affinities of Urodela, Apoda and Anura, Neoteny, Morphological and physiological aspects of Metamorphosis in frog, Hibernation and Aestivation",
+            "Reptilia: Adaptive radiation in reptiles, Mesozoic reptiles, general characters and affinities of Sphenedon, Significance of temporal vacuities in classification of reptiles, Non-poisonous and poisonous snakes of India, General characters, aquatic adaptations and conservation of Chelonia",
+            "Aves: Origin of birds, Flightless birds of world, Palate in birds, Bird migration, Flight adaptations in birds, Orientation and homing in birds",
+            "Mammals: Dentition in mammals, Integument and its derivatives, General characters of Prototheria, Metatheria and Eutheria, General Evolution of horse and man, Comparative account of aortic arches, urinogenital system, heart and brain in various groups of Chordata"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Physiology",
+          "unitTitleMr": null,
+          "topics": [
+            "Osmoregulation & Thermoregulation: Osmoregulation in freshwater and marine fishes, Osmoregulation in terrestrial animals, Poikilothermy and homeothermy",
+            "Physiology of digestion",
+            "Physiology of respiration, respiratory pigments",
+            "Cardiac cycle, pace maker and blood composition and functions",
+            "Physiology of excretion",
+            "Eye and its working",
+            "Ear and its working",
+            "Structure and functions of Endocrine glands: Hypothalamus, Pituitary gland, Thyroid, Parathyroid, Islets of Langerhans, Adrenal, Pineal",
+            "Chemical nature, source and mode of action of aminergic, petidergic and steroidal hormones",
+            "Hormonal control of reproduction in male and female mammals",
+            "Mechanism of impulse conduction and synaptic transmission, Neurotransmitters",
+            "Physiology of muscle contraction"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Environmental Science",
+          "unitTitleMr": null,
+          "topics": [
+            "Role of abiotic factors (temperature and light) on animal life",
+            "Impact of inter and intraspecific biotic factors",
+            "Types of ecosystems",
+            "Energy flow and food chain at trophic levels",
+            "Biogeochemical cycles",
+            "Biosphere, Impact of ozone layer, Greenhouse Effect",
+            "Methods and importance of water conservation, water quality standards and interlinking of rivers in India",
+            "Adaptations: in freshwater animals, in desert animals, in marine animals, in terrestrial animals",
+            "Pollution: Air pollution, Water pollution, Land pollution, Biodegradation, biotransformation and biomagnification of pollutants, Trace metals as pollutants, Municipal solid waste disposal, Pesticides as pollutants and their toxic effects on plants, animals and soil",
+            "Wild Life: Present status of wild life in India, Sanctuaries and National Parks in Maharashtra, Project Tiger and conservation of tigers, Red Data Book, Endangered and Biome Restricted Species",
+            "Ethology: Diurnal and seasonal rhythms, Biological clock, Impact of hormones and pheromones on behaviour, Modes of communication in animals, Physiology of learning in animals, Mimicry and coloration"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Cell Biology",
+          "unitTitleMr": null,
+          "topics": [
+            "Structure and functions of cell organelles: Plasma membrane, Mitochondria, Golgibodies, Endoplasmic reticulum, Ribosomes, Nucleus, Cytoskeleton",
+            "Cell division: Mitosis, Meiosis, Cell cycle events at molecular level, Apoptosis",
+            "Chromosome - structure and function, Lampbrush and Polytene chromosomes",
+            "DNA structure and function: Watson - Crick model of DNA, Replication of DNA in Eukaryotes and Prokaryotes, Types of DNA and RNA, Mitochondrial DNA",
+            "Genetic code",
+            "Gene transcription and translation"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Genetics and Molecular Biology",
+          "unitTitleMr": null,
+          "topics": [
+            "Genetics: Mendel’s Laws of inheritance, Crossing over, linkage, multiple alleles, Polyploidy, Mutations (gene and chromosomal), Genetic significance of blood groups, Genetic disorders in man, syndromes",
+            "Molecular Biology and Biotechnology: Eugenics, Cloning techniques, cloning vectors, Cell line preparation, Types and application of stem cells, Haemopoietic system, Applications of cloning technology in medical and veterinary sciences, Human Genome, DNA finger printing, Transgenic animals, PCR, Southern and Western blotting, SDS-PAGE",
+            "Bioinformatics: Introduction to Bioinformatics, Bioinformatics tools/Softwares, Protein sequence databases, Genome databases, Phylogenetic analysis, Bioinformatics and Pharmaceutical industry, National Centre for Biological Information"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Biochemistry and Immunology",
+          "unitTitleMr": null,
+          "topics": [
+            "Biochemistry: Structure of carbohydrates, lipids, amino acids, proteins, saturated and unsaturated fatty acids, cholesterol and steroids, Energy reactions - Glycolysis, Krebs’ cycle, Electron transfer chain, Oxidative phosphorylation, Nature of enzymes, Mechanism of enzyme reactions, Vitamins - types, sources and functions",
+            "Immunology: Immunoglobulins and Immunity, antigenic and antibody vaccines, DNA vaccines and edible vaccines, Monoclonal antibodies, Cellular and humoral immune reactions, Innate and Adaptive immunity, AIDS - causes and remedies, ELISA"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Developmental Biology",
+          "unitTitleMr": null,
+          "topics": [
+            "Gamete Biology: Mechanism of spermatogenesis, oogenesis, vitellogenesis and egg membrane formation, Molecular mechanism of Fertilization, acrosome reaction and sperm penetration, In-vitro fertilization, sperm preservation, Parthenogenesis - causes, mechanism and significance, Types of eggs",
+            "Embryology: Types of cleavages, Types and mechanism of gastrulation, Foetal Membranes and their functions, Formation, types and functions of Placenta, Organizer concept and embryonic induction, Mechanism of regeneration",
+            "IVF: Embryo transfer techniques, GIFT, Test tube baby, Male and female contraceptives and population control, Immunocontraception",
+            "Development: Organogenesis of nervous system, eye, heart and kidney in frog, Teratogenesis in man, Aging in man",
+            "Economic Zoology: Vermiculture, Prawn Culture, Sericulture, Apiculture, Lac culture, Pearl culture, Fish culture (Freshwater and marine), Poultry"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

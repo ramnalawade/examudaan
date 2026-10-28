@@ -1,0 +1,39 @@
+{
+  "docId": 1194,
+  "examName": "Civil Engineering Services Examination",
+  "examNameMr": "अंथरचना अभियांत्रिकी सेवा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2012,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 600,
+  "mainsMarks": 600,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Civil Engineering Paper I",
+      "paperTitleMr": "दिवाणी अभियांत्रिकी कागद १",
+      "totalMarks": 200,
+      "duration": "3 Hours",
+      "type": "Conventional",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Strength of Materials & Theory of Structures",
+          "unitTitleMr": null,
+          "topics": [
+            "Stresses, strains, principal stresses, bending moments, shear forces and torsion theory",
+            "Bending theory of beam, deflection of beam, theories of buckling of columns",
+            "Analysis of beams, frames and trusses, slope deflection method, moment distribution method"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

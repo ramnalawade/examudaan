@@ -1,0 +1,73 @@
+{
+  "docId": 1680,
+  "examName": "Hamal, Gr.-D. Maharashtra Public Service Commission.",
+  "examNameMr": "हमाल, गट-ड, महाराष्ट्र लोकसेवा आयोग.",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "Marathi / English",
+  "category": "group-c",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi, Arithmetic, General Knowledge and Intelligence Test",
+      "paperTitleMr": "मराठी, अंकगणित, सामान्य ज्ञान व बुद्धीमापन चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "marks": 20,
+          "topics": [
+            "Simple sentence structure",
+            "Grammar",
+            "Idioms and proverbs"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Arithmetic",
+          "unitTitleMr": "अंकगणित",
+          "marks": 20,
+          "topics": [
+            "Addition",
+            "Subtraction",
+            "Multiplication",
+            "Division"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Knowledge",
+          "unitTitleMr": "सामान्य ज्ञान",
+          "marks": 30,
+          "topics": [
+            "Daily events",
+            "State administration",
+            "Districts of Maharashtra",
+            "Special information regarding Mumbai"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धीमापन चाचणी",
+          "marks": 30,
+          "topics": [
+            "Questions to test how quickly and accurately a candidate can think"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

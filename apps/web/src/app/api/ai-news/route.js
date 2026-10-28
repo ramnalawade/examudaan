@@ -6,6 +6,7 @@
 // ============================================================
 
 import { NextResponse } from 'next/server'
+import { withValidation, schemas } from '@/lib/validate'
 
 // Clean HTML & XML entities
 function cleanText(str) {
@@ -64,7 +65,7 @@ function parseRssItems(xmlText, defaultSource = 'AI News', sourceIcon = '📰', 
 /**
  * GET /api/ai-news?source=all|news|arxiv|hn&limit=30
  */
-export async function GET(request) {
+async function aiNewsHandler(request) {
   const { searchParams } = new URL(request.url)
   const source = searchParams.get('source') || 'all'
   const limit  = parseInt(searchParams.get('limit') || '30', 10)
@@ -213,3 +214,5 @@ export async function GET(request) {
   response.headers.set('Cache-Control', 'public, s-maxage=1800, stale-while-revalidate=3600')
   return response
 }
+
+export const GET = withValidation(schemas.aiNewsQuery, aiNewsHandler)

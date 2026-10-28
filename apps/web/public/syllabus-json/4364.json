@@ -1,0 +1,99 @@
+{
+  "docId": 4364,
+  "examName": "Police Sub Inspector Limited Departmental Competitive Exam.",
+  "examNameMr": "पोलिस उपनिक्षक मर्यादित विभागीय स्पर्धा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2018,
+  "language": "English",
+  "category": "departmental",
+  "totalMarks": 400,
+  "mainsMarks": 300,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Police Sub Inspector Limited Departmental Competitive Pre Exam",
+      "paperTitleMr": "पोलिस उपनिक्षक मर्यादित विभागीय स्पर्धा पूर्व परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Studies and Intelligence Test / Marathi / English",
+          "unitTitleMr": "सामान्य अध्ययन, बुद्धिमापन चाचणी, मराठी आणि इंग्रजी",
+          "topics": [
+            "General Studies",
+            "Marathi Grammar and Vocabulary",
+            "English: General Vocabulary, Sentence Structure, Grammar, Idioms & Phrases, Comprehension",
+            "Intelligence Test"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Police Sub Inspector Limited Departmental Competitive Main Exam",
+      "paperTitleMr": "पोलिस उपनिक्षक मर्यादित विभागीय स्पर्धा मुख्य परीक्षा",
+      "totalMarks": 300,
+      "duration": "3 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Law (Major Acts)",
+          "unitTitleMr": "कायदे (महत्त्वाचे अधिनियम)",
+          "topics": [
+            "Constitution of India",
+            "Indian Penal Code, 1860",
+            "Code of Criminal Procedure, 1973",
+            "Indian Evidence Act, 1872"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Law (Minor Acts & Other Acts)",
+          "unitTitleMr": "कायदे (किरकोळ व इतर अधिनियम)",
+          "topics": [
+            "The Maharashtra Police Act, 1951",
+            "The Maharashtra Prohibition Act, 1949",
+            "The Maharashtra Prevention of Gambling Act, 1887",
+            "The Protection of Civil Rights Act, 1955",
+            "The Arms Act, 1959",
+            "The Motor Vehicles Act, 1988",
+            "The Maharashtra Motor Vehicles Rules, 1989",
+            "The Mental Health Act, 1987",
+            "Representation of People Act, 1951",
+            "Juvenile Justice (Care and Protection of Children) Act, 2000",
+            "Prevention of Corruption Act, 1988",
+            "The Scheduled Castes & Scheduled Tribes (Prevention of Atrocities) Act, 1989",
+            "The N.D.P.S. Act, 1985",
+            "Maharashtra Prevention of Dangerous Activities of Slumlords, Bootleggers & Drug Offenders Act, 1981",
+            "Maharashtra State Control of Organised Crime Act, 1999",
+            "Maharashtra Protection of Interests of Depositors (In Financial Establishments) Act, 1999",
+            "Information Technology Act, 2000 (Cyber law)",
+            "Protection of Children from Sexual Offences Act, 2012",
+            "Pre-Conception & Pre-Natal Diagnostic Techniques Act (PCPNDT Act), 1994"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Crime Investigation and Scientific Aids to Crime Investigation",
+          "unitTitleMr": "गुन्हे अन्वेषण आणि गुन्हे अन्वेधानातील वैज्ञानिक साहाय्य",
+          "topics": [
+            "Crime Investigation (Practical approach)",
+            "Proposals of externment proceedings & Chapter proceedings",
+            "Scientific Aids to Crime Investigation"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

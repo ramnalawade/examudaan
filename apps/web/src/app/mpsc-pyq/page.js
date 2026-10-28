@@ -8,17 +8,18 @@ import Link from 'next/link'
 import mpscLocalPapers from '@/lib/mpscLocalPapers.json'
 import mpscPairedExams from '@/lib/mpscPairedExams.json'
 import curatedData from '@/lib/curatedExamPyqs.json'
+import { MPSC_TOTAL_QUESTION_PAPERS, MPSC_ARCHIVE_YEARS_SPAN, MPSC_CADRE_COUNTS } from '@/lib/platformStats'
 import MpscPyqClient from './MpscPyqClient'
 import styles from './mpscPyqServer.module.css'
 
 export const metadata = {
   title: {
-    absolute: 'MPSC Question Papers & Answer Keys 2021-2026 | ExamUdaan'
+    absolute: 'MPSC Question Papers & Answer Keys 2009-2026 | ExamUdaan'
   },
-  description: 'Download 841 official MPSC question papers and answer keys (2021–2026) for Rajyaseva, Group B, C & PSI. Read free in browser from mpsc.gov.in.',
+  description: 'Download official MPSC question papers and answer keys (2009–2026) across Rajyaseva, Group B, Group C & Other Services. Read free in browser from mpsc.gov.in.',
   keywords: [
     'MPSC question papers', 'MPSC answer key', 'MPSC previous year papers',
-    'MPSC PYQ 2024', 'MPSC PYQ 2025', 'MPSC PYQ 2026',
+    'MPSC PYQ 2009-2026', 'MPSC PYQ 2024', 'MPSC PYQ 2025', 'MPSC PYQ 2026',
     'MPSC Rajyaseva question paper', 'MPSC Group B question paper',
     'MPSC Group C question paper', 'MPSC PSI STI question paper',
     'Maharashtra PSC papers', 'mpsc.gov.in PDF'
@@ -27,16 +28,16 @@ export const metadata = {
     canonical: 'https://examudaan.in/mpsc-pyq',
   },
   openGraph: {
-    title: 'MPSC Question Papers & Answer Keys 2021-2026 | ExamUdaan',
-    description: '841 official MPSC question papers and answer keys (2021–2026) from mpsc.gov.in. Rajyaseva, Group B, C, PSI, STI, Vanseva — free in-browser PDF reader.',
+    title: 'MPSC Question Papers & Answer Keys 2009-2026 | ExamUdaan',
+    description: 'Official MPSC question papers and answer keys (2009–2026) from mpsc.gov.in. Rajyaseva, Group B, C, PSI, STI, Vanseva — free in-browser PDF reader.',
     url: 'https://examudaan.in/mpsc-pyq',
     siteName: 'ExamUdaan.in',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'MPSC Question Papers & Answer Keys 2021-2026 | ExamUdaan',
-    description: '841 official MPSC papers & answer keys from 2021-2026. Read free in browser from mpsc.gov.in.',
+    title: 'MPSC Question Papers & Answer Keys 2009-2026 | ExamUdaan',
+    description: 'Official MPSC papers & answer keys from 2009-2026. Read free in browser from mpsc.gov.in.',
   },
 }
 
@@ -44,14 +45,15 @@ export default async function MpscPyqPage({ searchParams }) {
   const resolvedParams = await Promise.resolve(searchParams)
   const initialDocId = resolvedParams?.docId ? parseInt(resolvedParams.docId) : null
   const initialPdf = resolvedParams?.pdf || null
+  const initialDocType = resolvedParams?.docType || 'qp'
 
   const mpscQuestions = curatedData.mpsc || []
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'MPSC Question Papers & Answer Keys 2021-2026',
-    description: 'Official repository of 429 MPSC exams (841 question papers and final answer keys in one row) from 2021 to 2026 for Maharashtra Government examinations.',
+    name: `MPSC Question Papers & Answer Keys ${MPSC_ARCHIVE_YEARS_SPAN}`,
+    description: `Official repository of ${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} MPSC question papers and final answer keys in one row from 2009 to 2026 for Maharashtra Government examinations.`,
     url: 'https://examudaan.in/mpsc-pyq',
     publisher: {
       '@type': 'Organization',
@@ -69,7 +71,7 @@ export default async function MpscPyqPage({ searchParams }) {
         name: 'Are these MPSC question papers and answer keys official?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. All 841 question papers and answer keys across 429 exam sets from 2021 to 2026 are sourced directly from the official Maharashtra Public Service Commission portal (mpsc.gov.in) and verified against official gazettes.',
+          text: `Yes. All ${MPSC_TOTAL_QUESTION_PAPERS.toLocaleString('en-IN')} question papers and answer keys from 2009 to 2026 are sourced directly from the official Maharashtra Public Service Commission portal (mpsc.gov.in) and verified against official gazettes.`,
         },
       },
       {
@@ -107,6 +109,7 @@ export default async function MpscPyqPage({ searchParams }) {
         allPapers={mpscLocalPapers}
         initialDocId={initialDocId}
         initialPdf={initialPdf}
+        initialDocType={initialDocType}
       />
 
       {/* ── Server-Rendered Crawlable SEO Content Section (OpenSEO Audit Recommended) ── */}
@@ -122,39 +125,75 @@ export default async function MpscPyqPage({ searchParams }) {
 
           <div className={styles.cadreGrid}>
             <div className={styles.cadreCard}>
-              <span className={styles.cadreBadge}>State Services</span>
-              <h3 className={styles.cadreTitle}>MPSC Rajyaseva (Civil Services)</h3>
-              <div className={styles.cadreSubtitle}>राज्यसेवा पूर्व व मुख्य परीक्षा</div>
-              <ul className={styles.cadreDetails}>
-                <li className={styles.cadreDetailItem}>✓ GS Paper 1 & GS Paper 2 (CSAT)</li>
-                <li className={styles.cadreDetailItem}>✓ Descriptive & Objective Mains Papers</li>
-                <li className={styles.cadreDetailItem}>✓ Official First & Final Answer Keys</li>
-                <li className={styles.cadreDetailItem}>✓ Verified Coverage 2021 to 2026</li>
-              </ul>
+              <div>
+                <span className={styles.cadreBadge}>State Services</span>
+                <h3 className={styles.cadreTitle}>MPSC Rajyaseva (Civil Services)</h3>
+                <div className={styles.cadreSubtitle}>राज्यसेवा पूर्व व मुख्य परीक्षा</div>
+                <ul className={styles.cadreDetails}>
+                  <li className={styles.cadreDetailItem}>✓ GS Paper 1 & GS Paper 2 (CSAT)</li>
+                  <li className={styles.cadreDetailItem}>✓ Descriptive & Objective Mains Papers</li>
+                  <li className={styles.cadreDetailItem}>✓ Official First & Final Answer Keys</li>
+                  <li className={styles.cadreDetailItem}>✓ Complete Coverage 2009 to 2026</li>
+                </ul>
+              </div>
+              <Link href="/mpsc/rajyaseva-previous-year-papers" className={styles.cadreLinkBtn}>
+                <span className={styles.btnLabel}>Explore Rajyaseva ({MPSC_CADRE_COUNTS.rajyaseva.count} Papers)</span>
+                <span className={styles.btnArrow}>→</span>
+              </Link>
             </div>
 
             <div className={styles.cadreCard}>
-              <span className={styles.cadreBadge}>Non-Gazetted Group B</span>
-              <h3 className={styles.cadreTitle}>MPSC Combined Group B (PSI / STI / ASO)</h3>
-              <div className={styles.cadreSubtitle}>गट ब संयुक्त पूर्व व मुख्य परीक्षा</div>
-              <ul className={styles.cadreDetails}>
-                <li className={styles.cadreDetailItem}>✓ 100-Mark Common Combined Prelims</li>
-                <li className={styles.cadreDetailItem}>✓ Paper 1 (Marathi & English) & Paper 2 (Law/GS)</li>
-                <li className={styles.cadreDetailItem}>✓ Police Sub-Inspector & Sales Tax Inspector</li>
-                <li className={styles.cadreDetailItem}>✓ Official Final Revised Answer Keys</li>
-              </ul>
+              <div>
+                <span className={styles.cadreBadge}>Non-Gazetted Group B</span>
+                <h3 className={styles.cadreTitle}>MPSC Combined Group B (PSI / STI / ASO)</h3>
+                <div className={styles.cadreSubtitle}>गट ब संयुक्त पूर्व व मुख्य परीक्षा</div>
+                <ul className={styles.cadreDetails}>
+                  <li className={styles.cadreDetailItem}>✓ 100-Mark Common Combined Prelims</li>
+                  <li className={styles.cadreDetailItem}>✓ Paper 1 (Marathi & English) & Paper 2 (Law/GS)</li>
+                  <li className={styles.cadreDetailItem}>✓ Police Sub-Inspector & Sales Tax Inspector</li>
+                  <li className={styles.cadreDetailItem}>✓ Official Final Revised Answer Keys</li>
+                </ul>
+              </div>
+              <Link href="/mpsc/group-b-previous-year-papers" className={styles.cadreLinkBtn}>
+                <span className={styles.btnLabel}>Explore Group B ({MPSC_CADRE_COUNTS.groupB.count} Papers)</span>
+                <span className={styles.btnArrow}>→</span>
+              </Link>
             </div>
 
             <div className={styles.cadreCard}>
-              <span className={styles.cadreBadge}>Group C Cadre</span>
-              <h3 className={styles.cadreTitle}>MPSC Combined Group C (Clerk & Excise)</h3>
-              <div className={styles.cadreSubtitle}>गट क संयुक्त पूर्व व मुख्य परीक्षा</div>
-              <ul className={styles.cadreDetails}>
-                <li className={styles.cadreDetailItem}>✓ Clerk Typist, Tax Assistant & Excise SI</li>
-                <li className={styles.cadreDetailItem}>✓ 100-Mark Screening Test Sets A/B/C/D</li>
-                <li className={styles.cadreDetailItem}>✓ Typing Skill Test Guidelines</li>
-                <li className={styles.cadreDetailItem}>✓ Complete Official Answer Keys PDF</li>
-              </ul>
+              <div>
+                <span className={styles.cadreBadge}>Group C Cadre</span>
+                <h3 className={styles.cadreTitle}>MPSC Combined Group C (Clerk & Excise)</h3>
+                <div className={styles.cadreSubtitle}>गट क संयुक्त पूर्व व मुख्य परीक्षा</div>
+                <ul className={styles.cadreDetails}>
+                  <li className={styles.cadreDetailItem}>✓ Clerk Typist, Tax Assistant & Excise SI</li>
+                  <li className={styles.cadreDetailItem}>✓ 100-Mark Screening Test Sets A/B/C/D</li>
+                  <li className={styles.cadreDetailItem}>✓ Typing Skill Test Guidelines</li>
+                  <li className={styles.cadreDetailItem}>✓ Complete Official Answer Keys PDF</li>
+                </ul>
+              </div>
+              <Link href="/mpsc/group-c-previous-year-papers" className={styles.cadreLinkBtn}>
+                <span className={styles.btnLabel}>Explore Group C ({MPSC_CADRE_COUNTS.groupC.count} Papers)</span>
+                <span className={styles.btnArrow}>→</span>
+              </Link>
+            </div>
+
+            <div className={styles.cadreCard}>
+              <div>
+                <span className={styles.cadreBadge}>Technical & Other</span>
+                <h3 className={styles.cadreTitle}>MPSC Other Services (Engineering & Forest)</h3>
+                <div className={styles.cadreSubtitle}>इतर सेवा व तांत्रिक परीक्षा</div>
+                <ul className={styles.cadreDetails}>
+                  <li className={styles.cadreDetailItem}>✓ Maharashtra Engineering Services Prelims & Mains</li>
+                  <li className={styles.cadreDetailItem}>✓ Maharashtra Forest Services (वनसेवा)</li>
+                  <li className={styles.cadreDetailItem}>✓ Agriculture Services (कृषी सेवा)</li>
+                  <li className={styles.cadreDetailItem}>✓ Special Recruitment & Cadre Exams</li>
+                </ul>
+              </div>
+              <Link href="/mpsc/other-services-previous-year-papers" className={styles.cadreLinkBtn}>
+                <span className={styles.btnLabel}>Explore Other Services ({MPSC_CADRE_COUNTS.otherServices.count} Papers)</span>
+                <span className={styles.btnArrow}>→</span>
+              </Link>
             </div>
           </div>
 

@@ -1,0 +1,317 @@
+{
+  "docId": 1637,
+  "examName": "Syllabus for the post of Assistant Professor- Mechanical, Government Engineering College",
+  "examNameMr": "सहायक प्राध्यापक- मेकॅनिकल, शासकीय अभियांत्रिकी महाविद्यालय पदासाठी अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Mechanical Engineering",
+      "paperTitleMr": "मेकॅनिकल अभियांत्रिकी",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Applied Thermodynamics",
+          "unitTitleMr": "अपलाईड थर्मोडायनॅमिक्स",
+          "topics": [
+            "Thermodynamic Concepts",
+            "First Law of Thermodynamics",
+            "One dimensional Flow of Compressible Fluid",
+            "Second Law of Thermodynamics",
+            "Availability",
+            "Properties of Steam"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Strength of Materials",
+          "unitTitleMr": "स्ट्रेंथ ऑफ मटेरियल्स",
+          "topics": [
+            "Simple Stress and Strain",
+            "S. F. and B. M. in Beams",
+            "Simple Theory of Bending",
+            "Shear Stress in Beams",
+            "Simple Theory of Torsion",
+            "Bending moment combined with Torsion and Axial Loads",
+            "Principal Stresses",
+            "Deflection of Beams",
+            "Strain Energy",
+            "Theories of failure"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Material Science",
+          "unitTitleMr": "मटेरियल सायन्स",
+          "topics": [
+            "Strain Hardening",
+            "Constitution of Alloys",
+            "Iron-Carbon Equilibrium Diagram",
+            "Heat-Treatment of Steels",
+            "Cast Irons",
+            "Introduction to International Standards/Codes",
+            "Non-Ferrous Metals and Alloys",
+            "Fatigue Failure",
+            "Creep",
+            "Alloy Steels",
+            "Strengthening mechanism",
+            "Powder Metallurgy"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Heat Transfer",
+          "unitTitleMr": "हिट ट्रान्सफर",
+          "topics": [
+            "Conduction, convection & radiation",
+            "Emissivity",
+            "Heat exchangers",
+            "Mass transfer (mechanism, fick's law of diffusion, isothermal evaporation of water into air, convective mass transfer)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Machine Design & Vibration",
+          "unitTitleMr": "मशीन डिझाईन अँड व्हायब्रेशन",
+          "topics": [
+            "Design consideration in castings & forgings",
+            "Theories of failure",
+            "Design for static loadings",
+            "Design against fluctuating loads",
+            "Design of shafts",
+            "Design of springs",
+            "Design of belts",
+            "Free un-damped single degree of freedom vibration system",
+            "Free damped single degree of freedom vibration system",
+            "Free un-damped multi degree of freedom vibration system",
+            "Forced single degree of freedom vibration system",
+            "Vibration measuring system",
+            "Rotor dynamics",
+            "Balancing"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Mechatronics",
+          "unitTitleMr": "मेकॅट्रॉनिक्स",
+          "topics": [
+            "Introduction to mechatronics",
+            "Overview of microprocessors (8085)",
+            "Hydraulic & pneumatic system in automation",
+            "PLC in automation",
+            "Transient response",
+            "Root locus concepts"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Theory of Machines",
+          "unitTitleMr": "थिअरी ऑफ मशिनरीज",
+          "topics": [
+            "Basic Kinematics",
+            "Special Mechanisms",
+            "Velocity Analysis of mechanisms",
+            "Acceleration analysis of Mechanism",
+            "Static and dynamic force analysis",
+            "Flexible connector mechanisms",
+            "Spur gear mechanism",
+            "Gear Trains",
+            "Cam Mechanism",
+            "Clutches",
+            "Brakes dynamometer",
+            "Cam & follower"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Dynamics of Machinery",
+          "unitTitleMr": "डायनॅमिक्स ऑफ मशिनरी",
+          "topics": [
+            "Governors",
+            "Gyroscope",
+            "Static and dynamic balancing of single rotor & multi rotor system",
+            "Balancing of reciprocating masses (In-line engines, Radial Engines, V-Engines)"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Vibrations",
+          "unitTitleMr": "व्हायब्रेशन्स",
+          "topics": [
+            "Classification of Vibrations",
+            "Free Un-damped Multi degree of freedom vibratory systems",
+            "Forced single degree of freedom vibratory system"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Internal Combustion Engines",
+          "unitTitleMr": "इंटरनल कंबशन इंजिन्स",
+          "topics": [
+            "Classification of I.C. Engines",
+            "Cycle Analysis of I.C. Engines",
+            "S.I. Engines",
+            "C.I. Engines",
+            "Supercharging/Turbo charging",
+            "Performance Characteristics of S.I. & C.I. Engines",
+            "Air Pollution due to I.C. Engines",
+            "Fuels of I.C. Engines",
+            "Engine Lubrication",
+            "Engine Cooling",
+            "Introduction to CNG, LPG, Stratified Charge and Wankel engines",
+            "Recent Developments in I.C. Engines"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Production Process",
+          "unitTitleMr": "प्रॉडक्शन प्रोसेस",
+          "topics": [
+            "Metal Casting Process",
+            "Forming Processes",
+            "Welding and Joining Processes",
+            "Powder Metallurgy",
+            "Moulding with polymers",
+            "Non Destructive Techniques",
+            "CNC machines",
+            "Metal Cutting & Tool Engineering",
+            "Surface Finish",
+            "Cutting Tool Materials",
+            "Coolants",
+            "Design of Cutting Tools or Tool design"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Fluid Mechanics",
+          "unitTitleMr": "फ्लुइड मेकॅनिक्स",
+          "topics": [
+            "Fluid Kinematics",
+            "Fluid Dynamics",
+            "Real fluid flows",
+            "Boundary Layer Flows",
+            "Compressible Fluid flow",
+            "Hydraulic Machinery (Turbines, Pumps, compressors)"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Measurement & Metrology",
+          "unitTitleMr": "मेजरमेंट अँड मेट्रॉलॉजी",
+          "topics": [
+            "Static characteristics",
+            "Displacement measurement",
+            "Strain measurement",
+            "Measurement of angular velocity",
+            "Pressure measurement",
+            "Temperature measurement",
+            "Vacuum measurement",
+            "Acceleration measurement",
+            "Metrology"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "CAD/CAM/CIM",
+          "unitTitleMr": "कॅड/कॅम/सीम",
+          "topics": [
+            "Introduction & Elements Of Interactive Computer Graphics",
+            "Techniques For Geometric Modeling",
+            "Transformation, manipulation & data storage",
+            "NC & CNC Technology",
+            "Group Technology",
+            "CAPP, and CAQC",
+            "Computer Integrated Manufacturing & Technology Driven Practices"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Refrigeration and Air Conditioning",
+          "unitTitleMr": "रेफ्रिजरेटर आणि एअर कंडिशनिंग",
+          "topics": [
+            "Introduction to Refrigeration",
+            "Carnot refrigerator",
+            "Carnot heat pump",
+            "Co-efficient of Performance",
+            "Unit of refrigeration",
+            "Aircraft Air refrigeration systems",
+            "Vapor Compression Refrigeration System",
+            "Vapor Absorption Refrigeration",
+            "Psychrometry",
+            "Air-Conditioning",
+            "Duct Design"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Manufacturing Planning and Control",
+          "unitTitleMr": "मॅन्युफॅक्चरिंग प्लॅनिंग अँड कंट्रोल",
+          "topics": [
+            "Manufacturing Planning and control System",
+            "Forecasting",
+            "Planning Function",
+            "Planning for Material requirements",
+            "Scheduling & Sequencing",
+            "Project management",
+            "Advanced concepts in production planning"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Finite Element Analysis",
+          "unitTitleMr": "फिनाइट एलिमेंट अनालिसिस",
+          "topics": [
+            "Introductory Concepts",
+            "Introduction to FEM",
+            "Brief History",
+            "General FEM procedure",
+            "Applications of FEM in various fields",
+            "Advantages and disadvantages of FEM",
+            "Differential Equations in different fields",
+            "Approximate solution of differential equations",
+            "Matrix Algebra",
+            "Minimization of a functional",
+            "Principle of minimum total potential",
+            "Piecewise Rayleigh-Ritz method",
+            "Example problems in one-D Isoparametric and dimensional structural analysis",
+            "Two dimensional finite element formulations",
+            "Finite element formulation of dynamics"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Industrial Engineering and Enterprise Resource Planning",
+          "unitTitleMr": "इंडस्ट्रियल इंजिनिअरिंग अँड एंटरप्राइझ रिसोर्स प्लॅनिंग",
+          "topics": [
+            "Work Study & Ergonomics",
+            "Method Study",
+            "Work Measurement",
+            "Value Engineering",
+            "Resource utilization (Inventory Management, Statistical Quality Control)",
+            "Enterprise Resource Planning",
+            "ERP-Implementation methodologies",
+            "Success and failure cases",
+            "ERP Audit",
+            "Future"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

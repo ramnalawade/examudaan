@@ -1,0 +1,201 @@
+{
+  "docId": 1202,
+  "examName": "Electrical Engineering- Paper - I and II",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Electrical Engineering- Paper - I",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Work, Power and Energy, Resistance, capacitance and inductance, DC circuits, KCL, KVL, Network",
+          "unitTitleMr": null,
+          "topics": [
+            "theorems, fundamentals, RL, RC and RLC circuits, Steady state and transient responses. Series and parallel AC circuits, Three phase circuits, Power calculation in balanced and unbalanced circuits, Linear and non linear loads."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Basics of electromagnetic and electro static, series and parallel magnetic circuits, energy stored in fields",
+          "unitTitleMr": null,
+          "topics": [
+            "types, construction, operation of single and three phase transformers, equivalent circuit and phasor diagrams, OC and SC tests, regulation and efficiency calculation, parallel operation, field tests before commissioning."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Fundamentals of energy conversion, Construction and theory of DC machine, DC generator",
+          "unitTitleMr": null,
+          "topics": [
+            "characteristics, Starting, braking and speed control of DC motors, Application of DC machines."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Principle, types, performance characteristics, starting and speed control of single phase and three phase",
+          "unitTitleMr": null,
+          "topics": [
+            "induction motors, Equivalent circuits, phasor diagrams, applications. VFD for induction motors. Energy saving opportunities in using VFD."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Principle, types of synchronous motors, performance characteristics, starting and speed control of single",
+          "unitTitleMr": null,
+          "topics": [
+            "phase and three phase synchronous motors, Equivalent circuits, phasor diagrams, applications. VFD for synchronous motors."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Analog and Digital electronics fundamentals, devices and characteristics, amplifier and oscillator",
+          "unitTitleMr": null,
+          "topics": [
+            "circuits, Operational amplifier, Gates, flip-flops, Combinational and sequential circuits, ADC and DACs."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Sensors and transducers, Performance characteristics of measuring instruments, instrument transformers",
+          "unitTitleMr": null,
+          "topics": [
+            "measurement of physical parameters such as pressure, force, temperature, flow, vibration, torque, etc. Principles of feedback, transfer function, block diagram, steady state error, Steady state and transient specifications, Bode plot, Nyquist plot and Root locus, Relative and absolute Stability considerations."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Power Devices- Types, Characteristics of various power electronic devices, Triggering and protection",
+          "unitTitleMr": null,
+          "topics": [
+            "circuits, Controlled and uncontrolled rectification, DC to DC converters, DC to AC conversion, modulation techniques, SPWM. Fundamentals of electric drives, 4 quadrant operation, theory and analysis of DC drives, converter and chopper fed DC drives, Voltage, frequency and V/F controlled drives, slip power recovery schemes, fundamentals of wind power generation and grid interface."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Power generation in India and Maharashtra, Renewable Generation, Various types of power plant, major",
+          "unitTitleMr": null,
+          "topics": [
+            "equipment in power plants, Major issues with wind and solar power generation and grid interface. Steady state performance of overhead transmission lines and cables, per unit quantities, Bus admittance and impedance matrices, symmetrical components."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Calculation of sag and tension in transmission of lines, Analysis symmetrical and unsymmetrical faults",
+          "unitTitleMr": null,
+          "topics": [
+            "principle of active and reactive power transfer and distribution. Load flow studies, steady state and transient stability, voltage stability, voltage control, economic load dispatch, load frequency control in power systems."
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Electrical Engineering - Paper - II",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Principle of circuit breaking, arc extinction and arc interruption for and DC breaker, Various types of",
+          "unitTitleMr": null,
+          "topics": [
+            "circuit breakers and their applications, Ratings of breakers, isolators and major HV switchgear."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Principle of over current, earth fault, differential, and distance protection. Concepts of solid state and",
+          "unitTitleMr": null,
+          "topics": [
+            "numeric relays. Protection of generator, transformer, transmission lines, substation, busbar, induction motors. Various LT switchgear devices such as MCCB, ELCB."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Specification of impulse wave, multistage impulse generator, insulation coordination, Routine and type",
+          "unitTitleMr": null,
+          "topics": [
+            "tests for cables and transformers, Lightning protection, Early emission arrestors. Power quality issues, Reactive and harmonic compensation, FT devices and their applications, Passive and Active filters, HVDC transmission."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Energy scenario in India, Energy policies, pricing and reforms, Energy conservation Act, 2001, Electricity",
+          "unitTitleMr": null,
+          "topics": [
+            "Act, 2003. Energy management objectives, Electricity billing, electrical load management and MD control, Tariffs, PF improvements and benefits."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Basic terms in lighting systems and features, lamp types and their features, Recommended illumination",
+          "unitTitleMr": null,
+          "topics": [
+            "levels for various tasks, methodology of lighting system energy efficiency study, Illumination system design for residential, commercial, industrial categories. Solar powered illumination and economics associated."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "DG set selection and installation factors, Operational features, Energy performance assessment of DG sets",
+          "unitTitleMr": null,
+          "topics": [
+            "Energy saving majors for DG sets, Synchronization of DGs with utility supply. Parallel operation. UPS technology, types and specifications, Performance assessment."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Pump types and characteristics, Pump curves, Factors affecting pump performance, Efficient pumping",
+          "unitTitleMr": null,
+          "topics": [
+            "system operation, Energy conservation in pumping systems. Fan and compressor types, Fan and compressor performance evaluation and efficient system operation, Compressor capacity assessment, Energy saving opportunities in fans and compressors."
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "HVAC and refrigeration system, Types of refrigeration system, Common refrigerants and properties",
+          "unitTitleMr": null,
+          "topics": [
+            "Compressor type and applications, Selection of suitable refrigeration system, Factors affecting performance and energy efficiency of refrigeration plants, Energy saving opportunities."
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Underground cable and cable accessories, cable in underground structure, cable installation in conduit",
+          "unitTitleMr": null,
+          "topics": [
+            "cable joints, cable fault detection, over-current protection and lightning protection of underground systems, operation and maintenance of underground system. Grounding systems, Equipment, Ground fault protection, Isolated neutral grounding, Grounding for hazardous locations, substation, tower grounding."
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Substation design, bus designs, substation layout, grounding and ground grid design, substation",
+          "unitTitleMr": null,
+          "topics": [
+            "structures, major substation equipment, auxiliary equipment, substation automation, Commissioning and start up. Industrial, residential and commercial wiring, electrical system design, design and audio and video systems, Lifts and Elevator systems, safety norms and codes. Fire fighting apparatus and systems."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

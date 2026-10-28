@@ -1,0 +1,70 @@
+{
+  "docId": 1197,
+  "examName": "Police Sub Inspector Limited Departmental Competitive Exam",
+  "examNameMr": "पोलिस उप निरीक्षक मर्यादित विभागीय स्पर्धा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2017,
+  "language": "Marathi and English",
+  "category": "departmental",
+  "totalMarks": 500,
+  "mainsMarks": 300,
+  "interviewMarks": 100,
+  "examPattern": "Pre Exam (100 Marks), Main Exam (300 Marks), Physical Test (100 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Police Sub Inspector Limited Departmental Pre Exam",
+      "paperTitleMr": "पोलिस उप-निरीक्षक मर्यादित विभागीय स्पर्धा (पूर्व) परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Marathi",
+          "unitTitleMr": "मराठी",
+          "marks": 25,
+          "topics": [
+            "General vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Idioms & phrases and their meaning and usage",
+            "Comprehension of passage"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी",
+          "marks": 25,
+          "topics": [
+            "General vocabulary",
+            "Sentence structure",
+            "Grammar",
+            "Idioms & phrases - their meaning and use",
+            "Comprehension"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "General Studies",
+          "unitTitleMr": "सामान्य अध्ययन",
+          "marks": 50,
+          "topics": [
+            "Modern History of India",
+            "Geography of India with special reference to Maharashtra",
+            "Indian Economy: Globalisation, Liberalisation, Privatisation with special reference",
+            "Gram Panchayat, Zilla Parishad, State Administration - Structure, Organisation, Functions",
+            "Social Reformers in Maharashtra",
+            "Relations of India with neighbouring countries",
+            "Current Affairs"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

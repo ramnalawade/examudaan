@@ -361,7 +361,7 @@ def build_consolidated_email_html(metrics: dict, spider_results: dict, start_tim
     <!-- Footer -->
     <div style='background:#f8fafc;border-top:1px solid #e2e8f0;padding:20px 32px;text-align:center;font-size:12px;color:#94a3b8'>
       <p style='margin:0 0 4px'>ExamUdaan.in &bull; Automated Daily Crawl Dispatcher</p>
-      <p style='margin:0'>Sent automatically to {os.getenv("BREVO_RECIPIENT_EMAIL", "ramnalawade1986@gmail.com")}</p>
+      <p style='margin:0'>Sent automatically to {os.getenv("BREVO_RECIPIENT_EMAIL", "virajnalawade2010@gmail.com")}</p>
     </div>
 
   </div>
@@ -377,7 +377,7 @@ def send_consolidated_summary_email(run_start_time: datetime, spider_results: di
     api_key = os.getenv("BREVO_API_KEY", "")
     sender_email = os.getenv("BREVO_SENDER_EMAIL", "virajnalawade2010@gmail.com")
     sender_name = os.getenv("BREVO_SENDER_NAME", "Exam Udaan Scraper")
-    recipient_email = os.getenv("BREVO_RECIPIENT_EMAIL", "ramnalawade1986@gmail.com")
+    recipient_email = os.getenv("BREVO_RECIPIENT_EMAIL", "virajnalawade2010@gmail.com")
 
     if not api_key:
         logger.warning("[BREVO] BREVO_API_KEY not configured — skipping summary email.")

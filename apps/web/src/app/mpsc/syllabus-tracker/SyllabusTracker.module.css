@@ -1,0 +1,646 @@
+/* ============================================================
+   SyllabusTracker.module.css — Interactive Syllabus-to-PYQ Checklist
+   ExamUdaan.in — Saffron & Ivory Palette, Strict Zero Inline Styles
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.pageWrapper {
+  background: var(--surface, #FFFBF5);
+  min-height: 100vh;
+  padding-bottom: 80px;
+  color: var(--on-surface, #1E293B);
+}
+
+/* Breadcrumb Strip */
+.breadcrumbNav {
+  background: #FFFFFF;
+  border-bottom: 1px solid #FED7AA;
+  padding: 12px 0;
+  font-size: 13px;
+}
+
+.breadcrumbList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.breadcrumbItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748B;
+}
+
+.breadcrumbLink {
+  color: #64748B;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #EA580C;
+}
+
+.breadcrumbActive {
+  color: #EA580C;
+  font-weight: 700;
+}
+
+.breadcrumbSeparator {
+  font-size: 12px;
+  color: #CBD5E1;
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(180deg, #FFF7ED 0%, #FFFBF5 100%);
+  border-bottom: 1px solid #FED7AA;
+  padding: 32px 0 28px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badgeTracker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid #FDBA74;
+  color: #C2410C;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.badgeVerified {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #047857;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mainHeading {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(24px, 3.8vw, 34px);
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.subHeading {
+  font-size: 14.5px;
+  color: #475569;
+  line-height: 1.55;
+  max-width: 860px;
+  margin: 0;
+}
+
+/* Overall Progress Card */
+.overallProgressCard {
+  background: #FFFFFF;
+  border: 1.5px solid #FED7AA;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 4px 16px rgba(234, 88, 12, 0.05);
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.progressStatsGroup {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.progressCircularBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progressPercentNumber {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #EA580C;
+  line-height: 1;
+}
+
+.progressLabelText {
+  display: flex;
+  flex-direction: column;
+}
+
+.progressLabelText strong {
+  font-size: 13.5px;
+  color: #0F172A;
+}
+
+.progressLabelText span {
+  font-size: 11.5px;
+  color: #64748B;
+}
+
+.progressDetailBar {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progressTrack {
+  height: 12px;
+  background: #F1F5F9;
+  border-radius: 999px;
+  overflow: hidden;
+  display: flex;
+}
+
+.progressFillStudying {
+  background: #F59E0B;
+  height: 100%;
+}
+
+.progressFillRevised {
+  background: #3B82F6;
+  height: 100%;
+}
+
+.progressFillCompleted {
+  background: #10B981;
+  height: 100%;
+}
+
+.progressBreakdownPills {
+  display: flex;
+  gap: 12px;
+  font-size: 11.5px;
+  color: #64748B;
+  flex-wrap: wrap;
+}
+
+.pillStudying { color: #B45309; font-weight: 700; }
+.pillRevised { color: #1D4ED8; font-weight: 700; }
+.pillCompleted { color: #047857; font-weight: 700; }
+
+/* Sticky Exam & Stage Navigation Bar */
+.examNav {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.examNavScroll {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.examNavScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.examNavBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1.5px solid #E2E8F0;
+  background: #FFFFFF;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.examNavBtn:hover {
+  border-color: #FDBA74;
+  background: #FFFBF5;
+}
+
+.examNavBtnActive {
+  background: #EA580C;
+  border-color: #EA580C;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.28);
+}
+
+/* Dashboard Body */
+.dashboardBody {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Version Comparison Callout Box */
+.versionComparisonBox {
+  background: #FFFFFF;
+  border: 1.5px solid #FED7AA;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.versionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.versionTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnToggleVersion {
+  background: #FFF7ED;
+  border: 1px solid #FED7AA;
+  color: #C2410C;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.btnToggleVersion:hover {
+  background: #EA580C;
+  color: #FFFFFF;
+}
+
+.versionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.versionColumn {
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.versionColNew {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+}
+
+.versionColOld {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+}
+
+.versionColTitle {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.versionColNew .versionColTitle {
+  color: #047857;
+}
+
+.versionColOld .versionColTitle {
+  color: #64748B;
+}
+
+.versionPointList {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12.5px;
+  color: #334155;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Paper / Subject Section */
+.stageBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stageHeading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0F172A;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #FED7AA;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.paperCard {
+  background: #FFFFFF;
+  border: 1.5px solid #FED7AA;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.paperHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.paperTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.paperTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.paperMetaBadges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748B;
+  flex-wrap: wrap;
+}
+
+.paperBadge {
+  background: #FFF7ED;
+  border: 1px solid #FED7AA;
+  color: #C2410C;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* Topic Units Container */
+.topicGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topicNameHeader {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #1E293B;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Subtopic Checklist Rows */
+.subtopicList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subtopicRow {
+  background: #FFFBF5;
+  border: 1px solid #FED7AA;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.15s ease;
+  flex-wrap: wrap;
+}
+
+.subtopicRow:hover {
+  background: #FFFFFF;
+  border-color: #EA580C;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.08);
+}
+
+.subtopicInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 260px;
+}
+
+.subtopicTitle {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.4;
+}
+
+.pyqDensityTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  background: #FFF7ED;
+  border: 1px solid #FDBA74;
+  color: #EA580C;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.12s ease;
+}
+
+.pyqDensityTag:hover {
+  background: #EA580C;
+  color: #FFFFFF;
+}
+
+.coverageGapTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #64748B;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* Status Selector Segmented Buttons */
+.statusButtonGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.statusToggleBtn {
+  background: transparent;
+  border: none;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #64748B;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.12s ease;
+  white-space: nowrap;
+}
+
+.statusToggleBtn:hover {
+  background: #F1F5F9;
+  color: #1E293B;
+}
+
+/* Active status states */
+.statusStudyingActive {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.statusRevisedActive {
+  background: #DBEAFE;
+  color: #1D4ED8;
+}
+
+.statusCompletedActive {
+  background: #ECFDF5;
+  color: #047857;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+  .overallProgressCard {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px;
+  }
+
+  .versionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .subtopicRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .statusButtonGroup {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .statusToggleBtn {
+    flex: 1;
+    justify-content: center;
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 24px 0 20px;
+  }
+
+  .mainHeading {
+    font-size: 22px;
+  }
+
+  .progressStatsGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .progressPercentNumber {
+    font-size: 28px;
+  }
+
+  .statusToggleBtn span:last-child {
+    display: none;
+  }
+}

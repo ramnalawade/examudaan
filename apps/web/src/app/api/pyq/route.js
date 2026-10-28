@@ -7,6 +7,7 @@ import { NextResponse } from 'next/server'
 import { query, queryOne, isConfigured } from '@/lib/pgdb'
 import { ok, serverError, badRequest } from '@/lib/apiResponse'
 import pyqSeedData from '@/lib/pyqSeed.json'
+import { withValidation, schemas } from '@/lib/validate'
 
 export const dynamic = 'force-dynamic'
 
@@ -201,7 +202,7 @@ function searchMemoryFallback(q, subject, exam, year, limit, offset) {
   }
 }
 
-export async function GET(request) {
+async function pyqHandler(request) {
   try {
     const { searchParams } = new URL(request.url)
     const id = searchParams.get('id')
@@ -209,7 +210,9 @@ export async function GET(request) {
     const subject = (searchParams.get('subject') || 'All').trim()
     const exam = (searchParams.get('exam') || 'All').trim()
     const year = searchParams.get('year')
-    const limit = Math.min(Math.max(parseInt(searchParams.get('limit') || '50', 10), 1), 100)
+    const paper = searchParams.get('paper')?.trim()
+    const maxLimit = paper ? 500 : 200
+    const limit = Math.min(Math.max(parseInt(searchParams.get('limit') || '50', 10), 1), maxLimit)
     const offset = Math.max(parseInt(searchParams.get('offset') || '0', 10), 0)
 
     // Try PostgreSQL
@@ -220,7 +223,7 @@ export async function GET(request) {
         // 1. Single question lookup by ID
         if (id) {
           const single = await queryOne(
-            `SELECT id, topic, subject, exam, year, question, options, correct, explanation, tags, difficulty 
+            `SELECT id, topic, subject, exam, year, question, options, correct, explanation, tags, difficulty, paper_pdf_name, explanation_mr, key_status 
              FROM pyq_questions 
              WHERE id = $1`,
             [parseInt(id, 10)]
@@ -247,6 +250,12 @@ export async function GET(request) {
         if (year && !isNaN(parseInt(year, 10))) {
           conditions.push(`year = $${pIndex++}`)
           params.push(parseInt(year, 10))
+        }
+
+        if (paper) {
+          const cleanPaper = paper.replace(/\.pdf$/i, '').trim()
+          conditions.push(`(paper_pdf_name ILIKE $${pIndex++} OR paper_pdf_name ILIKE $${pIndex++})`)
+          params.push(`%${cleanPaper}%`, `%${paper}%`)
         }
 
         // Multi-token keyword search
@@ -297,7 +306,7 @@ export async function GET(request) {
         const limitParam = pIndex++
         const offsetParam = pIndex++
         const dataQuery = `
-          SELECT id, topic, subject, exam, year, question, options, correct, explanation, tags, difficulty 
+          SELECT id, topic, subject, exam, year, question, options, correct, explanation, tags, difficulty, paper_pdf_name, explanation_mr, key_status 
           FROM pyq_questions 
           ${whereSql}
           ORDER BY id ASC
@@ -346,3 +355,5 @@ export async function GET(request) {
     return serverError('Failed to fetch PYQ data: ' + err.message)
   }
 }
+
+export const GET = withValidation(schemas.pyqQuery, pyqHandler)

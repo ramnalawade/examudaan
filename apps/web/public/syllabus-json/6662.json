@@ -1,0 +1,151 @@
+{
+  "docId": 6662,
+  "examName": "Maharashtra Agriculture Services Main Examination - Syllabus",
+  "examNameMr": "महाराष्ट्र कृषी सेवा मुख्य परीक्षा - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "agriculture-forest",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Maharashtra Agriculture Services Main Examination - Syllabus",
+      "paperTitleMr": "महाराष्ट्र कृषी सेवा मुख्य परीक्षा - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Section A: Basics of Agriculture",
+          "unitTitleMr": "विभाग अ: शेतीची मूलभूत तत्त्वे",
+          "topics": [
+            "Definition, meaning and its branches, Factors affecting crop production, Agro-Climatic Zones",
+            "Cropping Systems: Definition and types of cropping systems, Problems of dry land agriculture, Seed production, Seed processing, Seed village",
+            "Meteorology: weather parameters, crop-weather advisory, Precision Farming, System of Crop Intensification, organic farming",
+            "Major soil types, soil fertility, fertilizers, watershed management",
+            "Food production and consumption trends in India, Food security and growing population",
+            "Reasons for grain surplus, National and international food policies, Production, procurement, Need for Food Security",
+            "NFSM and other food security related Government Initiatives, Impact of Government Procurement & Distribution, Buffer Stock – Objectives & Norms in India",
+            "Availability of food grains, per capita expenditure on food, Trends in poverty, Public Distribution System and Below Poverty Line population",
+            "Targeted Public Distribution System (PDS), policy implementation in context to globalization, Processing constraints",
+            "Relation of food production to National Dietary Guidelines and food consumption pattern, Food based dietary approaches to eliminate hunger",
+            "Nutrient deficiency – Micronutrient deficiency: Protein Energy Malnutrition or Protein Calorie Malnutrition (PEM or PCM), Micro nutrient deficiency and HRD in context of work capacity of women and children",
+            "Food grain productivity and food security",
+            "Ecology and its relevance to man, natural resources, their sustainable management and conservation",
+            "Causes of climate change, Green House Gases (GHG), major GHG emitting countries, climate analysis, distinguish between adaptation and mitigation, climate change impact to agriculture and rural livelihood",
+            "Carbon credit, IPCC, UNFCCC, CoP meetings, funding mechanisms for climate change projects, initiatives by Govt of India, NAPCC, SAPCC, INDC",
+            "Present Scenario of Indian Agriculture and Allied activities; recent trends, major challenges in agriculture measures to enhance viability of agriculture",
+            "Factors of Production in agriculture; Agricultural Finance and Marketing; Impact of Globalization on Indian Agriculture and issues of Food Security; Concept and Types of Farm Management",
+            "Concept of Rural Area, Structure of the Indian Rural Economy Importance, and role of the rural sector in India",
+            "Economic, Social and Demographic Characteristics of the Indian rural economy, causes of Rural Backwardness, Rural population in India",
+            "Occupational structure, Farmers, Agricultural Laborers, Artisans, Handicrafts, Traders, Forest dwellers/tribes and others in rural India",
+            "Trends of change in rural population and rural workforce, problems and conditions of rural labour",
+            "Precision agriculture: concepts and techniques, Geo-informatics, use in Precision Agriculture",
+            "Crop discrimination and Yield monitoring, soil mapping; fertilizer recommendation using geospatial technologies; Spatial data and their management in GIS",
+            "Remote sensing concepts and application in agriculture; Image processing and interpretation; Global positioning system (GPS), Crop Simulation Models and their uses, STCR approach for precision agriculture",
+            "Nanotechnology- concepts and techniques, nano-particles, nano-pesticides, nano-fertilizers, nano-sensors, Use of nanotechnology in seed, water, fertilizer, plant protection"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Section B: Land Related Laws",
+          "unitTitleMr": "विभाग ब: जमीन विषयक कायदे",
+          "topics": [
+            "Maharashtra land revenue code: Definition and terminologies of Agriculture, Classification of land occupancies, Responsibilities and duties of revenue officer, Title of State in lands and public roads",
+            "Use of lands for agriculture and non- agriculture, Encroachment of land, Land revenue, Revenue surveys, Assessment and settlement of land revenue",
+            "Land within the sides of villages, Boundary and boundary works, Lands records, Records of rights, procedures of revenue officers",
+            "Maharashtra Tenancy and agricultural land Acts, 1948: Concept of tenancy, right of tenancy, Tiller’s Day, Termination of tenancy, Deemed tenancy, Personal cultivation",
+            "Condition of purchase of agriculture land in Maharashtra, Sale of tenanted land, Confiscation of powers of revenue officers",
+            "Land acquisition acts: Essential commodities act in relation to cotton, sugarcane, food grains, milk and meat, Right to Fair compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Section C: Agriculture Related Acts",
+          "unitTitleMr": "विभाग क: कृषी संबंधित कायदे",
+          "topics": [
+            "Scopes, benefits coverage and limitations and subsequent amendments etc. of following Acts in Agriculture and allied sectors",
+            "Agriculture Pest and Disease Act (1950), Prevention of Food Adulteration Act (1954), Food production order Act (1956), Asian Development Bank Act (1966), Indian Seeds Act (1966)",
+            "Vegetable Oil Product Act (1967), Insecticides Act (1968), Agriculture Produce Market Act (1972), Meat Food Products Order (1973)",
+            "Vegetable Oil Product (standard of quality) Order (1975), Regional Rural Banks Act (1976), Indian Veterinary Council Act (1984), Consumer Protection Act (2019), Indian Fisheries Act (1897)",
+            "Central Agricultural Universities Act (1992), Destructive insects and Pests (Amendment and Validation) Act (1992), The Protection of Plant Varieties and Farmers' Rights Act (2001)",
+            "Biodiversity Act (2002), Agricultural Employees Protection Act (2002), Right to Information Act (2005), Food Safety and Standards Act (2006), National Food Security Act (2013)",
+            "Model Agricultural Produce and Livestock Marketing (Promotion & Facilitation) Act (2017), The-State /UT Agricultural Produce & Livestock Contract Farming and Services (Promotion & Facilitation) Act (2018)",
+            "Food Safety and Standards Act, 2006 (FSSA), Food Safety and Standards Authority of India (FSSAI)"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Section D: Agricultural Schemes",
+          "unitTitleMr": "विभाग ड: कृषी योजना",
+          "topics": [
+            "Agricultural Schemes: PM-Kisan Scheme, Pradhan Mantri Kisan Maandhan Yojana (PMKMY), Pradhan Mantri Fasal Bima Yojana (PMFBY), Kisan Credit Card (KCC) Scheme",
+            "Rural Development Schemes: Pradhan Mantri Gram Sadak Yojana (PMGSY), Mission Antyodaya, National Social Assistance Programme (NSAP), Deen Dayal Antyodaya Yojana (DDAY) and MGNAREGA",
+            "Other Schemes: National Agriculture Market (eNAM), National Mission for Sustainable Agriculture (NMSA), Pradhan Mantri Krishi Sinchayee Yojana (PMKSY), Paramparagat Krishi Vikas Yojana (PKVY), Pradhan Mantri Fasal Bima Yojana (PMFBY), APEDA"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Section E: Agricultural Related General Knowledge and Current Affairs",
+          "unitTitleMr": "विभाग इ: कृषी संबंधित सामान्य ज्ञान आणि चालू घडामोडी",
+          "topics": [
+            "Current Affairs Agriculture especially focus on Cropping patterns, Irrigation, storage, transport and marketing of agricultural produce, Farm subsidies, Minimum Support Price (MSP), Public Distribution System, food security, Food processing & Land reforms, Disaster management",
+            "Highlights of Agriculture in current union budgets, economic survey, facts and figures in Various Reports like livestock census, NABARD reports, Economic survey",
+            "Current statistical data about area, production and productivity of agricultural, horticultural crops, forest in country and Maharashtra",
+            "Currently released technologies/ varieties/products/ breeds of livestock animals etc. by ICAR, national research centers, directorates and SAU's with special reference to Maharashtra",
+            "Recent schemes Rules and regulations, norms, acts Recent farm laws etc. formulated by the government of India and Government of Maharashtra and their Impact. Recent facts and figures about agricultural exports and imports",
+            "Recent advancement in agricultural research, ICAR Institutional changes/ updates. States/ National / International awards, fellowships in agriculture and food"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Section A: Agriculture - Agronomy",
+          "unitTitleMr": "विभाग अ: कृषी - सस्यशास्त्र",
+          "topics": [
+            "Tillage and tilth, Seeds and sowing, Crop density and geometry, Crop nutrient Management, and nutrient use efficiency, Plant ideotypes, Crop adaptation and its distribution",
+            "Earth atmosphere, Atmospheric weather variables; Nature and properties of solar radiation, types, solar constant, depletion of solar radiation, net radiation, albedo",
+            "Atmospheric temperature, temperature inversion, lapse rate, daily and seasonal variations of temperature, vertical profile of temperature, Energy balance of earth",
+            "Atmospheric humidity, concept of saturation, vapor pressure, process of condensation, formation of dew, fog, mist, frost, cloud; Precipitation process, types and classification; Artificial rainmaking",
+            "Monsoon- mechanism and importance in Indian agriculture, Weather hazards and extreme weather conditions, Modifications of crop microclimate, climatic normals for crop",
+            "Weather forecasting – types, Climate change, climatic variability, global warming, causes of climate change and its impact",
+            "Water Resources of India and Maharashtra, Irrigation scheduling criteria and methods, Quality of irrigation water, Soil-water–plant relationship, Water requirement of different Agronomic crops",
+            "Evaporation, Transpiration, Evapo-transpiration, Potential-evapotranspiration, effective rainfall and consumptive use of water. Water Use efficiency, Irrigation Efficiencies",
+            "Water logging and Management of water logged soils. Crop water management techniques in problematic areas",
+            "Origin, geographical distribution, economic importance, soil and climatic requirements, varieties, cultural practices Intercropping, pest and disease management and yield of Kharif, Rabi and Summer field crops",
+            "Weed classification, harmful and beneficial effects on ecosystem, Reproduction and dissemination of weeds. Herbicide classification, concept of adjuvant, surfactant, herbicide formulation and their use",
+            "Introduction to mode of action of herbicides and selectivity. Allelopathy and its application for weed management. Bio-herbicides and their application in agriculture",
+            "Herbicide mixture, Herbicide compatibility, Integrated weed management, Herbicide Resistance and management",
+            "Farming system concept, its types, Farming system components and their maintenance, Cropping system and pattern, multiple cropping system, crop rotation and principles, Efficient cropping systems",
+            "Allied enterprises, Tools for determining production and efficiencies in cropping and farming system; Sustainable agriculture, indicators of sustainability, adaptation and mitigation",
+            "Conservation agriculture strategies, HEIA, LEIA and LEISA and its techniques for sustainability, Integrated farming system, objectives and characteristics, components of IFS",
+            "Site specific IFS model for different agro-climatic zones, Resource cycling and flow of energy in different farming system",
+            "Organic farming and its principles, Organic ecosystem concepts; Organic nutrient resources and its fortification; Restrictions to nutrient use in organic farming; Choice of crops and varieties in organic farming",
+            "Fundamentals of insect, pest, disease and weed management under organic mode of production; Operational structure of NPOP; Certification process and standards of organic farming; Processing, marketing and export potential of organic products"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Section B: Botany",
+          "unitTitleMr": "विभाग ब: वनस्पतीशास्त्र",
+          "topics": [
+            "Floral biology and modes of reproduction, cell components and cell division, structure and replication of genetic material, structural changes in chromosome",
+            "Mutation breeding, gene function and gene regulation, linkages and its estimation, Mendelian principles of heredity, gene interaction, cytoplasmic inheritance",
+            "Objectives of plant breeding, heterosis and its exploitation, methods of breeding in self-pollinated and cross pollinated and asexually propagated crops",
+            "Self in-compatibility and male sterility, new plant breeding tools, breeding for biotic and abiotic and quality traits",
+            "Seed production technology in self-pollinated and cross pollinated crops, procedure of seed certification and seed Act, seed marketing",
+            "Diffusion and osmosis, transpiration and stomatal physiology, photosynthesis, respiration, metabolism of carbohydrates, lipids and nuclei"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

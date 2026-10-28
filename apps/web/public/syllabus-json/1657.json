@@ -1,0 +1,329 @@
+{
+  "docId": 1657,
+  "examName": "Assistant Apprenticeship Adviser, Directorate of Vocational Education & Training, Maharashtra Education Service, Gr.-B (Technical)",
+  "examNameMr": "सहाय्यक अप्रेन्टिसशिप सल्लागार, व्यवसाय शिक्षण आणि प्रशिक्षण संचालनालय, महाराष्ट्र शिक्षण सेवा, गट-ब (तांत्रिक)",
+  "conductingBody": "MPSC",
+  "year": 2016,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "MECHANICAL & ELECTRICAL ENGINEERING",
+      "paperTitleMr": "यांत्रिक आणि विद्युत अभियांत्रिकी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "APPLIED THERMODYNAMICS",
+          "unitTitleMr": "अप्लाइड थर्मोडायनामिक्स",
+          "topics": [
+            "Thermodynamic Concepts",
+            "First Law of Thermodynamics",
+            "One dimensional Flow of Compressible Fluid",
+            "Second Law of Thermodynamics",
+            "Availability",
+            "Properties of Steam"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "STRENGTH OF MATERIALS",
+          "unitTitleMr": "स्ट्रेंथ ऑफ मटेरिअल्स",
+          "topics": [
+            "Simple Stress and Strain",
+            "S. F. and B. M. in Beams",
+            "Simple Theory of Bending",
+            "Shear Stress in Beams",
+            "Simple Theory of Torsion",
+            "Bending moment combined with Torsion and Axial Loads",
+            "Principal Stresses",
+            "Deflection of Beams",
+            "Strain Energy",
+            "Theories of failure"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "MATERIAL SCIENCE",
+          "unitTitleMr": "मटेरियल सायन्स",
+          "topics": [
+            "Strain Hardening",
+            "Constitution of Alloys",
+            "Iron-Carbon Equilibrium Diagram",
+            "Heat-Treatment of Steels",
+            "Cast Irons",
+            "Introduction to International Standards/Codes",
+            "Non-Ferrous Metals and Alloys",
+            "Fatigue Failure",
+            "Creep",
+            "Alloy Steels",
+            "Strengthening mechanism",
+            "Powder Metallurgy"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "HEAT TRANSFER",
+          "unitTitleMr": "हीट ट्रान्सफर",
+          "topics": [
+            "Conduction, convection & radiation",
+            "Emissivity",
+            "Heat exchangers",
+            "Mass transfer (mechanism, fick's law of diffusion, isothermal evaporation of water into air, convective mass transfer)"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "MACHINE DESIGN & VIBRATION",
+          "unitTitleMr": "मशीन डिझाईन अँड व्हायब्रेशन",
+          "topics": [
+            "Design consideration in castings & forgings",
+            "Theories of failure",
+            "Design for static loadings",
+            "Design against fluctuating loads",
+            "Design of shafts",
+            "Design of springs",
+            "Design of belts",
+            "Free un-damped single degree of freedom vibration system",
+            "Free damped single degree of freedom vibration system",
+            "Free un-damped multi degree of freedom vibration system",
+            "Forced single degree of freedom vibration system",
+            "Vibration measuring system",
+            "Rotor dynamics",
+            "Balancing"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "MECHATRONICS",
+          "unitTitleMr": "मेकॅट्रॉनिक्स",
+          "topics": [
+            "Introduction to mechatronics",
+            "Overview of microprocessors (8085)",
+            "Hydraulic & pneumatic system in automation",
+            "PLC in automation",
+            "Transient response",
+            "Root locus concepts"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "THEORY OF MACHINES",
+          "unitTitleMr": "थिअरी ऑफ मशिनरीज",
+          "topics": [
+            "Basic Kinematics",
+            "Special Mechanisms",
+            "Velocity Analysis of mechanisms",
+            "Acceleration analysis of Mechanism",
+            "Static and dynamic force analysis",
+            "Flexible connector mechanisms",
+            "Spur gear mechanism",
+            "Gear Trains",
+            "Cam Mechanism",
+            "Clutches",
+            "Brakes dynamometer",
+            "Cam & follower"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "PRODUCTION PROCESS",
+          "unitTitleMr": "प्रॉडक्‍शन प्रोसेस",
+          "topics": [
+            "Metal Casting Process",
+            "Forming Processes",
+            "Welding and Joining Processes",
+            "Powder Metallurgy",
+            "Moulding with polymers",
+            "Non Destructive Techniques",
+            "CNC machines",
+            "Metal Cutting & Tool Engineering",
+            "Surface Finish",
+            "Cutting Tool Materials",
+            "Coolants",
+            "Design of Cutting Tools or Tool design"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "FLUID MECHANICS",
+          "unitTitleMr": "फ्लुइड मेकॅनिक्स",
+          "topics": [
+            "Fluid Kinematics",
+            "Fluid Dynamics",
+            "Real fluid flows",
+            "Boundary Layer Flows",
+            "Compressible Fluid flow",
+            "Hydraulic Machinery (Turbines, Pumps, compressors)"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "MEASUREMENT & METROLOGY",
+          "unitTitleMr": "मेजरमेंट अँड मेट्रॉलॉजी",
+          "topics": [
+            "Static characteristics",
+            "Displacement",
+            "Strain measurement",
+            "Measurement of angular velocity",
+            "Pressure measurement",
+            "Temperature measurement",
+            "Vacuum measurement",
+            "Acceleration measurement",
+            "Metrology"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "MANUFACTURING PLANNING AND CONTROL",
+          "unitTitleMr": "मॅन्युफॅक्चरिंग प्लॅनिंग अँड कंट्रोल",
+          "topics": [
+            "Manufacturing Planning and control System",
+            "Forecasting",
+            "Planning Function",
+            "Planning for Material requirements",
+            "Scheduling & Sequencing",
+            "Project management",
+            "Advanced concepts in production planning"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "ELECTRICAL MACHINES",
+          "unitTitleMr": "इलेक्ट्रिकल मशिन्स",
+          "topics": [
+            "Direct Current machines",
+            "Direct Current motors",
+            "DC machines 3 phase Transformers",
+            "3 phase Induction machines",
+            "Single phase Induction motor",
+            "Synchronous machines",
+            "Permanent magnet machines",
+            "Brushless D.C machines",
+            "Stepper motor",
+            "Tacho generators",
+            "Synchros & resolvers",
+            "AC servo motors",
+            "Induction Generators"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "POWER SYSTEM",
+          "unitTitleMr": "पॉवर सिस्टम",
+          "topics": [
+            "Single phase and three phase Overhead line construction, improvement",
+            "Underground Cables",
+            "Tariff",
+            "Indian Electricity Rules-2003 – General Introduction",
+            "Distribution System",
+            "Distribution substation",
+            "Earthing of Substation"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "CONTROL SYSTEMS",
+          "unitTitleMr": "कंट्रोल सिस्टम्स",
+          "topics": [
+            "Objectives",
+            "Concept of feedback and Automatic Control linear and nonlinear systems",
+            "Elementary concepts of sensitivity and robustness",
+            "Types of control systems: Servomechanisms and regulators, examples of feedback control systems",
+            "Control system component Potentiometer, synchros, resolvers, position encoders, D.C. and A.C. tacho-generators, actuators",
+            "Time domain analysis: PI, PD and PID control"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "ELECTRICAL DRIVES",
+          "unitTitleMr": "इलेक्ट्रिकल ड्राइव्ह्स",
+          "topics": [
+            "Electrical drive: Concept, classification, parts and advantages of electrical drive",
+            "Dynamics of Electrical Drives: Types of Loads, Components of load torques, Fundamental torque equations",
+            "Motor power rating: Thermal model of motor for heating and cooling, classes of motor duty",
+            "DC motor drives: Single phase, three phases fully controlled and half controlled rectifier fed DC drives",
+            "Induction motor drives: Stator voltage variation by three phase controllers, chopper resistance in Stepper motor, Switched Reluctance motor drive",
+            "Industrial application: Drive consideration for Textile mills, Steel rolling mills, Cement mills, Paper mills, Machine tools, Cranes & hoist drives"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "POWER GENERATION ECONOMICS",
+          "unitTitleMr": "पॉवर जनरेशन इकॉनॉमिक्स",
+          "topics": [
+            "Cost of power generation, Domestic, Commercial, Industrial etc.",
+            "Concept of load factor, diversity factor, demand factor",
+            "Electricity Tariff Subsidization and Cross subsidization",
+            "Availability tariff of generation companies",
+            "Pool tariff of transmission companies",
+            "Availability based tariff",
+            "Economics of Power Generation- Unit commitment solution, Dispatch – Transmission loss formulae and its application in economic load scheduling",
+            "Computational methods in economic load scheduling",
+            "Active and reactive power optimization",
+            "State estimation and load forecasting"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "ELECTRICAL AND ELECTRONICS MEASUREMENT",
+          "unitTitleMr": "इलेक्ट्रिकल अँड इलेक्ट्रॉनिक्स मेजरमेंट",
+          "topics": [
+            "Analog, electrodynamometer, measurement of medium resistance, low, and high resistances",
+            "Megger Potentiometers, DC potentiometer AC potentiometers",
+            "Electro-dynamic & induction type AC energy meter, testing of Energy meters",
+            "Cathode Ray Oscilloscope, Digital voltmeter",
+            "Sensors & Transducers: strain gauge, LVDT, temperature transducers, Flow measurement using magnetic flow measurement"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "ELECTRICAL MACHINE DESIGN",
+          "unitTitleMr": "इलेक्ट्रिकल मशीन डिझाईन",
+          "topics": [
+            "Fundamental Aspects of Electrical Machine Design: Design factors, limitation in design, modern trends in design of electric machines, modern machine manufacturing techniques",
+            "Temperature rise, cooling and thermal grading (classification) of insulations",
+            "Principles of Magnetic circuit design: Design of Electromagnets, Design of Transformer, Design of three phases Induction motor"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "CONVENTIONAL AND NON-CONVENTIONAL POWER GENERATION",
+          "unitTitleMr": "पारंपारिक आणि अपारंपरिक वीज निर्मिती",
+          "topics": [
+            "Thermal power plant – Law of Thermodynamics, Analysis of steam cycle-Carnot, Rankine, Reheat cycle and Regenerative cycle",
+            "Layout of power plant, Layout of pulverized coal burners, fluidized bed combustion, coal handling systems, ash handling systems",
+            "Forced draught and induced draught fans, boiler feed pumps, super heater regenerators, condensers, boilers, de-aerators and cooling towers",
+            "Hydro power plant – Rainfall, run off and its measurement hydrograph, flow duration curve, reservoir storage capacity, classification of plants-run off river plant, storage river plant, pumped storage plant",
+            "Layout of hydroelectric power plant, turbine-pelton, Kaplan, Francis",
+            "Nuclear power plant - Introduction of nuclear engineering, fission, fusion, nuclear material, thermal fission reactor and power plant - PWR, BWR, liquid metal fast breeder reactors, reactor control, introduction to plasma technology",
+            "Diesel and gas turbine power plant - General layout, Advantages and disadvantages, component, performance of gas turbine power plant, combined heat power generation"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "POWER GENERATION USING NON-CONVENTIONAL ENERGY SOURCES",
+          "unitTitleMr": "अपारंपरिक ऊर्जा स्रोतांचा वापर करून वीज निर्मिती",
+          "topics": [
+            "Solar Energy - Solar concentrators and tracking; Dish and Parabolic trough concentrating generating systems, Central tower solar thermal power plants; Solar Ponds",
+            "Basic principle of power generation in a PV cell; Band gap and efficiency of PV cells, solar cell characteristics",
+            "Manufacturing methods of mono- and poly-crystalline cells; Amorphous silicon thin film cells",
+            "Wind Energy - Basic component of WEC, Types of wind turbine-HAWT, VAWT, Performance parameters of wind turbine, Power in wind, Wind electric generators, wind characteristics and site selection; Wind farms for bulk power supply to grid",
+            "Fuel Cell - Introduction to fuel cell, principle of operation of fuel cell, Types of fuel cell"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

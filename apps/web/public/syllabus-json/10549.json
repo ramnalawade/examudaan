@@ -1,0 +1,162 @@
+{
+  "docId": 10549,
+  "examName": "Lecturer (Electronics) Maharashtra Education Service, Group-B (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "ագյաոք տռոպ",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Lecturer (Electronics) - Syllabus",
+      "paperTitleMr": "ագյաոք տռոպ",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Semiconductor Devices",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Energy bands in solids, concept of effective mass, density of states, Fermi levels",
+            "Classification: conductors, semiconductors, insulators; intrinsic and extrinsic semiconductors, PN Junction, Forward and reverse biasing of p-n junction, Diode equation and diode equivalent circuit, Breakdown in diodes",
+            "Types of Diodes: Zener diode, Tunnel diode",
+            "Metal semiconductor junction: Ohmic and Schottky contacts",
+            "Bipolar Junction Transistors (BJT): NPN and PNP transistors, working principle, Transistor Output characteristics and various regions of operation",
+            "UJT, JFET, MOSFET: Structure, Working Principles, and Output Characteristics",
+            "High Electron Mobility Transistor (HEMT): Working Principle",
+            "Optoelectronic devices: LED, Photodiode, Phototransistor, Solar cells: I-V characteristics, fill factor and efficiency",
+            "LED, LCD and flexible display devices"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Analog Electronics",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Rectifiers: Half-wave, full-wave, Bridge and related parameters",
+            "Voltage regulated Power Supply, Voltage Regulator ICs",
+            "BJT biasing: Biasing of Bipolar junction, DC and AC Load line, Operating point and stability, BJT as amplifier and as a switch",
+            "BJT as amplifiers: Configurations: C-B, C-C, C-E, Different Biasing methods of C-E amplifier: Base bias, collector feedback bias and voltage divider, Design of Single stage and Multistage C-E amplifiers",
+            "Classification of BJT Amplifiers: Class A, B, AB and C",
+            "Oscillators: Concept of feedback: positive and negative feedback, Barkhausen criteria",
+            "Type of oscillators: Wein bridge, Hartley, Colpitt's and Phase Shift oscillators",
+            "Operational amplifiers (OPAMP): Ideal and Practical parameter values of OPAMP, Block diagram of OPAMP, Differential amplifier",
+            "Configurations of OPAMP: Inverting and Non-inverting amplifier",
+            "Applications of OPAMP: Voltage follower, Adder, Subtractor, Integrator, Differentiator, Comparator, Schmitt Trigger, Instrumentation amplifiers, Wave shaping circuits, Phase locked loops, Active filters, Multivibrators, Voltage to frequency convertors (V/F), frequency to voltage convertors (F/V)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Digital Electronics",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Number systems: Decimal, binary, hexadecimal and their interconversions, BCD code, ASCII and EBCDIC codes, 1's & 2's complement subtraction methods",
+            "Logic Gates: basic, derived, universal gates; Boolean algebra, De Morgan's theorems, minimization techniques (K maps), SOP and POS form of Boolean equations",
+            "Combinational Logic Circuits: Half-adder, Full adder, Multiplexers and Demultiplexers, Encoders, Decoders",
+            "Sequential Circuits: Flip-flops, Memories, Counters: Ring, Ripple, Synchronous, Asynchronous; Shift registers, Programmable Logic Devices (PLD), CPLD, Sequential PLD, FPGA, A/D and D/A converters",
+            "Digital Circuit Design: Analysis and Design of fundamental mode state machines: State variables, State table and State diagram, Design and Analysis of digital circuits using HDL",
+            "Logic Families: Bipolar and unipolar families, TTL and CMOS circuits and its characteristics"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Fabrication and Characterization of Devices",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "IC fabrication: crystal growth, epitaxy, oxidation, lithography, doping, etching, isolation methods, metallization, bonding",
+            "Thin film deposition, characterization Techniques: XRD, TEM, SEM, EDX; Thin film active and passive devices, MOS technology and VLSI, scaling of MOS devices, NMOS and CMOS structures and fabrication, Characteristics of MOS transistors and threshold voltage, NMOS and CMOS inverters",
+            "Charge-Coupled Device (CCD): structure, charge storage and transfer",
+            "Basics of VLSI design, stick diagrams, Layout design rules"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Network Analysis, Signals and Systems",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Concept of voltage source and current source, impedance of the source and its significance",
+            "Network Theorems: Thevenin, Norton, Superposition and Maximum Power Transfer Theorems, Network elements, Network graphs, Nodal and Mesh analysis",
+            "Laplace Transform, Fourier Transform and Z-transform. Time and frequency domain response, Passive filters and Two-port Network Parameters: Z, Y, ABCD and h parameters, Transfer functions, Signal representation, State variable method of circuit analysis, AC circuit analysis, Transient analysis, Zero and Poles, Bode Plots",
+            "Continuous time signals, Fourier Series and Fourier transform representations, Sampling theorem and applications, Discrete time signal, Discrete Fourier transform (DFT), Fast Fourier transform (FFT), Basic concepts of digital signal processing, digital filters - IIR, FIR"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Microcontrollers and Embedded Systems",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Introduction of Microcontrollers: 8051 for embedded systems, Architecture and register set of Microcontroller 8051; Addressing modes, Instruction set of 8051: Data transfer instructions, Arithmetic instructions, Logic instructions, bit level and byte level control transfer instructions",
+            "8051 assembly programming: stack operations, subroutines, interrupts, 8051 programming as timer/counter, 8051 serial communication, 8051 interfacing RS232, LED/LCD display, Keyboard, Stepper motor",
+            "Introduction to Embedded Systems: Definition, Components, Block diagram, Working flow, Characteristics, Classification, Modern trends and Applications, Introduction to Embedded C programming"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Electromagnetism",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Electrostatics: vector calculus, Gauss's Law, Laplace and Poisson's equations, Magnetostatics: Biot Savart's law, Ampere's law",
+            "Electromagnetic induction, Maxwell's equations and wave equations, Plane wave propagation in free space, dielectrics and conductors, Poynting theorem, Reflection and refraction, polarization, interference, coherence and diffraction",
+            "Transmission lines and waveguides: line equations, impedance, reflections and voltage standing wave ratio, rectangular waveguides",
+            "Antennas: retarded potential and Hertzian dipole, half wave antenna, antenna patterns, radiation intensity, gain, effective area and Friis' free space receiver power equation",
+            "Microwave Sources and Devices: Reflex Klystron, Magnetron, TWT, Gunn diode, IMPATT diode, Crystal Detector and PIN diode",
+            "Radar: block diagram of Radar, frequencies and power used, Radar range equation"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Communication Electronics",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Elements of communication system, types of communication, frequency spectrum",
+            "Need of modulation, Analog modulation and demodulation: AM, FM, PAM, PWM, PPM",
+            "Principle of super heterodyne receiver, Random signals, noise, noise temperature and noise figure, Basic concepts of information theory, Error detection and correction",
+            "Digital modulation and demodulation: PCM, ASK, FSK, PSK, BPSK, QPSK and QAM; Time and Frequency-Division Multiplexing, Multiple Access techniques",
+            "Data Communications: Modems, Codes, Principles of Mobile and Satellite Communication, Optical communication",
+            "Optical sources: LED, spontaneous and stimulated emission, semiconductor Lasers; Detectors: PIN photodiodes, Avalanche photodiodes (APD)",
+            "Optical fibers: attenuation and dispersion characteristics, Bandwidth, Wavelength division multiplexing",
+            "Fundamentals of Internet of Things (IoT), IoT protocols used for communication"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Power Electronics and Control System",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Power devices and systems: characteristics of SCR, DIAC, TRIAC, power transistors, Protection of thyristors against over voltage and over current, SCR triggering - dv/dt and di/dt, triggering with single pulse and train of pulses, A.C. and D.C. motors - construction and speed control",
+            "Switch Mode Power Supply (SMPS), Uninterrupted Power Supply (UPS)",
+            "Control Systems: Open loop and closed loop control system, Block Diagram reduction techniques, transfer function and signal flow diagram, Stability criterion: Routh-Hurwitz and Nyquist plot, On-off controller, Proportional (P), Proportional-Integral (PI), Proportional-Derivative (PD), PID controllers",
+            "Programmable Logic Controller: Block diagram, Basics of Ladder Programming"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Electronic Instrumentation",
+          "unitTitleMr": "ագյաոք տռոպ",
+          "topics": [
+            "Sensors and transducers: Classification, selection criteria",
+            "Measurement of physical parameters: temperature, displacement, velocity, acceleration, force, torque, strain, magnetic field, flow, high pressure, low pressure, humidity",
+            "Signal conditioning circuits: Differential amplifier, instrumentation amplifier",
+            "Sensors for IoT applications",
+            "Equipment for measurement of R, L and C, voltage, current, power, energy, frequency/time, phase, Digital Multimeters",
+            "CRO: Block diagram, working of CRO, front panel controls, Digital Storage Oscilloscope",
+            "Function generator: block diagram and working, Spectrum Analyzer",
+            "Biomedical Instruments: ECG, EEG, Blood Pressure Measurements",
+            "MEMS and its applications"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

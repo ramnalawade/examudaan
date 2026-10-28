@@ -1,0 +1,202 @@
+{
+  "docId": 1640,
+  "examName": "Assistant Professor- Sanskrit, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": "सहाय्यक प्राध्यापक - संस्कृत, महाराष्ट्र शिक्षण सेवा, गट - अ (सं Collegiate Branch)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Sanskrit, Maharashtra Education Services, Group - A (Collegiate Branch)",
+      "paperTitleMr": "सहाय्यक प्राध्यापक - संस्कृत, महाराष्ट्र शिक्षण सेवा, गट - अ",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Samhitas, Brahmanas, Aranyakas, Grammar and Schools of Vedic Interpretation",
+          "unitTitleMr": "संहिता, ब्राह्मण, आरण्यक, व्याकरण आणि वैदिक अर्थनिर्णयाची शाळा",
+          "topics": [
+            "Study of hymns: Rgveda-Agni, Indra, Purusa, Hiranyagarbha, Nasadiya, vak",
+            "Atharvaveda-Prthivi",
+            "Brahmanas and Aranyakas: General characteristics, Peculiarities, Darsapaurnamasa sacrifice",
+            "Legends-Sunahsepa and Vanmanas, Pancamahayajnas",
+            "Grammar and Schools of Vedic Interpretation: Padapatha",
+            "Accent-Udatta, Anudatta and Svarita",
+            "Points of difference between Vedic and Classical Sanskrit",
+            "Schools of Vedic Interpretation-Traditional and Modern"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Upanisads",
+          "unitTitleMr": "उपनिषद",
+          "topics": [
+            "Study of the contents and main concepts with special reference to the following Upanisads",
+            "Isa, Katha, Kena, Brhadaranyaka, Taittiriya"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Vedanga",
+          "unitTitleMr": "वेदांग",
+          "topics": [
+            "General and brief introduction of Vedanga",
+            "Nirukta (Chapters I and II)",
+            "Four fold division of Padas- Concept of Nama, Concept of Akhyata",
+            "Meaning of Upasargas, Categories of Nipatas",
+            "Six states of Action (Sadbhavavikara)",
+            "Purposes of the study of Nirukata",
+            "Principles of Etymology",
+            "Etymology of words: Acarya, Vira, Hrada, Go, Samudra, Vrtra, Aditya, Usas, Megha, Vak, Udak, Nadi, Asva, Agni, Jatavedas, Vaisvanara, Nighantu"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Mahabhasya, Siddhantakaumudi and Linguistics",
+          "unitTitleMr": "महाभाष्य, सिद्धान्तकौमुदी आणि भाषाशास्त्र",
+          "topics": [
+            "Mahabhasya (Paspasahnika): Definition of Sabda, Relation between Sabda and Artha, Purposes of the study of grammar",
+            "Definition of Vyakarna, Result of the proper use of word, Method of grammar",
+            "Siddhantakaumudi: Tinanta, Krdanta, Taddita, Karaka, Stri Pratyaya",
+            "Linguistics: Definition of Language, Classification of Languages",
+            "Speech mechanism with reference to Sanskrit sounds, Causes of phonetic change",
+            "Phonetics laws (Grimm, Grassman and Verner)",
+            "Directions of semantic change and reasons of change",
+            "Definition of vakya and its types",
+            "General and brief introduction of Indo-European family of languages",
+            "Difference between Bhasa and Vak, Difference between language and dialect"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Philosophy Texts",
+          "unitTitleMr": "दर्शन ग्रंथ",
+          "topics": [
+            "Explanation and critical questions",
+            "Samkhyakarika of Isvarakrisna",
+            "Vedantasara of Sadanand",
+            "Arthasamgraha of Laugaksi Bhaskara"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Epics and Puranas",
+          "unitTitleMr": "इतिहास आणि पुराण",
+          "topics": [
+            "Ramayana: Arrangement, Legends, Society, Source of later Sanskrit works, Literary value",
+            "Mahabharata: Arrangement, Legends, Society, Source of later Sanskrit works, Literary value",
+            "Puranas: Definition, Mahapuranas and Upapuranas, Puranic cosmology, Puranic secular arts, Puranic legends"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Dharmasastra and Arthasastra",
+          "unitTitleMr": "धर्मशास्त्र आणि अर्थशास्त्र",
+          "topics": [
+            "Kautiliya Arthasastra (First ten Adhikara)",
+            "Manusmrti (I, II and VII Adhyayas)",
+            "Yajnavalkyasmrti (Vyavaharadhyaya only)"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Poetry, Prose and Kavyasastra",
+          "unitTitleMr": "कविता, गद्य आणि काव्यशास्त्र",
+          "topics": [
+            "Poetry: Raghuvamsa, Kiratarjuniya, Sisupalavadha, Naisadhiyacarita",
+            "Prose: Dasakumaracaritam, Harsacaritam, Kadambari",
+            "Kavyasastra: Kavyaprakasa, Alamkaras, Dhvanyaloka"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Drama and Dramaturgy",
+          "unitTitleMr": "नाटक आणि नाट्यशास्त्र",
+          "topics": [
+            "Natya: Karnabhara, Abhijnanasakuntala, Uttararamacarita, Mudraraksasa, Ratnavali",
+            "Natyasastra: Natyasastra of Bharata, Dasarupaka"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Indian Logic",
+          "unitTitleMr": "भारतीय तर्कशास्त्र",
+          "topics": [
+            "Tarkasamgraha (with Dipika)",
+            "Tarkabhasa of Kesavamisra",
+            "Study of the concept of Pramatr, Prameya, Pramana and Pramiti"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Advanced Samhitas, Brahmana and Pratisakhya",
+          "unitTitleMr": "प्रगत संहिता, ब्राह्मण आणि प्रातिशाख्य",
+          "topics": [
+            "Samhitas: Rgveda, Sukla Yajurveda, Atharvaveda hymns",
+            "Brahmana: Subject-matter, Vidhi and its types, Agnihotra and Agnistoma Sacrifices",
+            "Rkpratisakhya: Definitions of phonetic terms",
+            "Nirukta: Types of Mantras, Characteristics of Deities, Number of Deities"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Advanced Grammar and Philosophy of Language",
+          "unitTitleMr": "प्रगत व्याकरण आणि भाषा दर्शन",
+          "topics": [
+            "Vakyapadiya (Brahmakanda): Nature of Sphota, Sabda-Brahma, Powers, Dhvani, Levels of language",
+            "Siddhantakaumudi: Samasa, Parasmaipadavidhana, Atmanepadavidhana",
+            "Paniniyasiksa"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Advanced Philosophy and Systems",
+          "unitTitleMr": "प्रगत दर्शन आणि प्रणाली",
+          "topics": [
+            "Yogasutra-Vyasabhasya",
+            "Vedanta: Brahmasutra-Sankarabhasya",
+            "Nyaya-Vaisesika: Nyayasiddhanta-Muktabali",
+            "Sarvadarsana-sangraha: Jainism, Buddhism"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Advanced Poetics",
+          "unitTitleMr": "प्रगत काव्यशास्त्र",
+          "topics": [
+            "Kavya-prakasa",
+            "Vakroktijivitam",
+            "Kavyamimansa",
+            "Rasagangadhara"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Palaeography and Inscriptions",
+          "unitTitleMr": "पुरातत्वविद्या आणि शिलालेख",
+          "topics": [
+            "History of the decipherment of the Brahmi Script",
+            "Antiquity and theories of the origin of the Brahmi Script",
+            "Types of Epigraphical records",
+            "Brahmi Script of Mauryan and Gupta periods",
+            "Inscriptions of Asoka, Post-Mauryan Inscriptions, Gupta and post-Gupta Inscriptions"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

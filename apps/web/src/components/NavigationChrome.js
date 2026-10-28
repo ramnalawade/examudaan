@@ -35,7 +35,7 @@ export default function NavigationChrome({ children }) {
       <Navbar />
 
       {/* Page content */}
-      <main style={{ paddingBottom: '90px' }}>{children}</main>
+      <main style={{ paddingBottom: '90px', width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>{children}</main>
 
       {/* Desktop footer */}
       <Footer />

@@ -1,0 +1,72 @@
+{
+  "docId": 7190,
+  "examName": "Taluka Sports Officer, General State Service, Group B",
+  "examNameMr": "तालुका क्रीडा अधिकारी, सामान्य राज्य सेवा, गट-ब",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "Marathi",
+  "category": "group-b",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination - 200 marks, Interview - 50 marks",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies & Mental Ability",
+      "paperTitleMr": "इतिहास, सामान्य विज्ञान व तंत्रज्ञान, भूगोल, बुद्धीमापन चाचणी, चालू घडामोडी, राज्यशास्त्र, अर्थव्यवस्था, क्रीडा",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective Multiple Choice",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "State, National and International Current Affairs",
+          "unitTitleMr": "राज्य, राष्ट्रीय व आंतरराष्ट्रीय महत्त्वाच्या चालू घडामोडी."
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Indian Freedom Struggle, Modern History of India and Maharashtra",
+          "unitTitleMr": "भारतीय स्वातंत्र्य लढा व आधुनिक भारताचा इतिहास महाराष्ट्रासह."
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "India and Maharashtra - Polity and Administration, Constitution, Political System, Panchayati Raj, Public Policy, Rights Issues",
+          "unitTitleMr": "भारत आणि महाराष्ट्र- राज्यशास्त्र व प्रशासन, संविधान, राजकीय प्रणाली, पंचायती राज, माहिती अधिकार कायदा."
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Indian Economy and related issues: Planning, Resource Mobilization, Growth and Development, Employment, Inclusive Growth and issues arising from it",
+          "unitTitleMr": "भारतीय अर्थव्यवस्था व खालील बाबींशी निगडीत मुद्दे - नियोजन, साधनांचे एकत्रीकरण, वृद्धी व विकास, रोजगार, सर्वसमावेशक वाढ व त्यापासून निर्माण होणारे प्रश्न."
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "General Science and Technology",
+          "unitTitleMr": "सामान्य विज्ञान व तंत्रज्ञान."
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Geography of Maharashtra, India and World with physical geography of Maharashtra",
+          "unitTitleMr": "महाराष्ट्र, भारत व जगाचा भूगोल महाराष्ट्राच्या भारांशसह."
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Sports - International importance sports, records created in various sports by players, biographies of eminent players, sports policies of Central and State Governments, Sports awards, rules of sports, various aspects in sports and problematic situations",
+          "unitTitleMr": "क्रीडा - आंतरराष्ट्रीय महत्त्वाच्या क्रीडा स्पर्धा, खेळाडूंनी विविध स्पर्धांमध्ये नोंदविलेले विक्रम, नामवंत खेळाडूंची आत्मचरित्रे, केंद्र व राज्य शासनाच्या क्रीडा विषयक योजना, केंद्र व राज्य शासनाचे क्रीडा विषयक पुरस्कार, क्रीडा विषयक नियम, क्रीडा स्पर्धांमधील विविध बाबी व उद्भवणारी परिस्थिती."
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Mental Ability - Arithmetic, Addition, Subtraction, Multiplication, Division, Average, Decimals and Fractions and Intelligence Test",
+          "unitTitleMr": "बुद्धिमत्ता चाचणी - अंकगणित, बेरीज, वजाबाकी, गुणाकार, भागाकार, सरासरी, दशांश व अपूर्णांक तसेच बुद्ध्यांक मापन."
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा / कमी करण्यात येतील.",
+    "अंतिम गुणवत्ता यादी ही वस्तुनिष्ठ परीक्षेतील व मुलाखतीतील एकत्रित गुणांवर आधारीत राहील."
+  ]
+}

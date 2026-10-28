@@ -1,0 +1,46 @@
+{
+  "docId": 8539,
+  "examName": "Other Backward Bahujan Welfare Officer, Group B, Other Backward Bahujan Welfare Department",
+  "examNameMr": "इतर मागास बहुजन कल्याण अधिकारी, गट-ब, इतर मागास बहुजन कल्याण विभाग",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "group-b",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Studies and Aptitude Test",
+      "paperTitleMr": "सामान्य अध्ययन आणि बौद्धिक चाचणी",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "General Awareness and Mental Ability",
+          "unitTitleMr": "सामान्य जागरूकता आणि मानसिक क्षमता",
+          "topics": [
+            "Political",
+            "Industrial",
+            "Economic",
+            "Social",
+            "Educational",
+            "Geographical",
+            "Astronomical",
+            "Cultural",
+            "Scientific",
+            "Mental Ability and Speed of Thought"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

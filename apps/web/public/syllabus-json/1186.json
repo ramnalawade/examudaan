@@ -1,0 +1,106 @@
+{
+  "docId": 1186,
+  "examName": "Maharashtra Group C Services Examination",
+  "examNameMr": "महाराष्ट्र गट-क सेवा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2018,
+  "language": "English",
+  "category": "group-c",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Maharashtra Group C Services Combined Pre Examination",
+      "paperTitleMr": "महाराष्ट्र गट-क सेवा संयुक्त पूर्व परीक्षा",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current Affairs",
+          "unitTitleMr": "चालू घडामोडी",
+          "topics": [
+            "World and Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Civics",
+          "unitTitleMr": "नागरीशास्त्र",
+          "topics": [
+            "Indian Constitution",
+            "Local Government",
+            "Executive",
+            "Judiciary"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "History",
+          "unitTitleMr": "इतिहास",
+          "topics": [
+            "Modern Indian History with special reference to Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Geography",
+          "unitTitleMr": "भूगोल",
+          "topics": [
+            "Physical Geography",
+            "Maharashtra and World Geography",
+            "Climate",
+            "Population",
+            "Settlements",
+            "Minerals",
+            "Industries"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Economics and Social Development",
+          "unitTitleMr": "अर्थव्यवस्था आणि सामाजिक विकास",
+          "topics": [
+            "Poverty",
+            "Unemployment",
+            "Inflation",
+            "Public Finance",
+            "Sustainable Development",
+            "Agriculture",
+            "Industry"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "General Science",
+          "unitTitleMr": "सामान्य विज्ञान",
+          "topics": [
+            "Physics",
+            "Chemistry",
+            "Zoology",
+            "Botany",
+            "Hygiene"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Intelligence Test and Arithmetic",
+          "unitTitleMr": "बुद्धीमापन चाचणी आणि अंकगणित",
+          "topics": [
+            "Logical Reasoning",
+            "Analytical Ability",
+            "Basic Arithmetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

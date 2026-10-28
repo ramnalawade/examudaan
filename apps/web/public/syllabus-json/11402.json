@@ -1,0 +1,157 @@
+{
+  "docId": 11402,
+  "examName": "Assistant Professor (Forensic Science) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education - Syllabus",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Forensic Science) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education - Syllabus",
+      "paperTitleMr": null,
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Unit I: Fundamentals of Forensic Science and Criminal Investigations",
+          "unitTitleMr": null,
+          "topics": [
+            "Definition, History, Development - Scope, Ethics in Forensic Science",
+            "Nature, Types of Physical Evidence - Search Methods, Collection, Preservation, Packing, and Forwarding of Evidence for Analysis - Chain of Custody",
+            "Types of Crime Scenes - Preservation and Documentation of Crime Scenes.",
+            "Criminal Investigations - Various types of Cases: Unnatural Deaths, Assaults, Sexual Offenses, Poisoning, Vehicular Accidents",
+            "Types, Powers, and Jurisdiction of Courts - Admissibility of Evidence, Definition of Experts -Relevant Provisions in Bhartiya Nyaya Sanhita (BNS) 2023, Bhartiya Nagarik Suraksha Sanhita (BNSS) 2023, and Bhartiya Sakshya Adhiniyam (BSA) 2023 - Court Procedures, Expert Testimony",
+            "Forensic Labs at Central and State Levels, NFSU, BPRD, NCRB, NCB",
+            "Right to Equality (Articles 14-18) - Right to Freedom (Articles 19-22)",
+            "Victim and Culprit Profiling, Role in Investigation, Lie Detection (Polygraphy), Narco-Analysis, Brain Mapping",
+            "Management Practices, NABL accreditation"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Unit II: Forensic Analytical Techniques",
+          "unitTitleMr": null,
+          "topics": [
+            "Polarizing, Comparison, Stereoscopic, Fluorescent, Electron Microscopes",
+            "U V, Visible, IR, Raman, Atomic Absorption, Emission, ATR-FTIR",
+            "Principles, Application in Trace Evidence",
+            "XRD, XRF Applications, SEM-EDX",
+            "Basic Principles, Applications in Forensic Chemistry",
+            "TLC, GLC, HPLC, HPTLC",
+            "GC-MS, GC-HS, LC-MS, IR-MS, ICP-MS",
+            "Types, Immunoelectrophoresis",
+            "Principle, Techniques, Forensic Applications"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Unit III: Biological Evidence and DNA Profiling",
+          "unitTitleMr": null,
+          "topics": [
+            "Detection, Species Origin, Blood Group Systems, Blood Group Determination Techniques",
+            "Detection of Seminal and Other Body Fluids, Enzymes, Serum Proteins",
+            "Paternity and Maternity Testing",
+            "Structure, DNA as a Genetic Marker, DNA Extraction, Profiling Techniques, DNA Phenotyping, RNA Profiling",
+            "Wildlife Protection Act (1972), Evidence Collection, Identification"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Unit IV: Toxicology and Analysis of Poisons",
+          "unitTitleMr": null,
+          "topics": [
+            "Ethanol and Methanol Detection, Breath Analysis",
+            "Detection of Chemicals used in Crimes",
+            "Pesticides, OP Compounds, Sedatives, Stimulants, Food poisons",
+            "Opium and opiates, Cannabis & Drugs of abuse their toxicity",
+            "Plant (Datura, Castor, Argemone) & Animal poisons-Snakes",
+            "As, Pb, Th, Zn, Hg their Identification detection and Toxicology",
+            "Extraction, Isolation, Viscera Analysis"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Unit V: Firearms, Tool Marks and Ballistics",
+          "unitTitleMr": null,
+          "topics": [
+            "Types, Composition, Forensic Examination, Velocity, Range and Trajectory, GSR analysis",
+            "Examination of Country-Made Firearms",
+            "Internal, External, Terminal and Wound Ballistics.",
+            "Types, Erased Mark, Restoration"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Unit VI: Fire, Arson, Explosives and Forensic Photography",
+          "unitTitleMr": null,
+          "topics": [
+            "Petroleum and Incendiary Materials",
+            "Types, Bomb Analysis, IEDs",
+            "Protocols & procedures",
+            "Documentation Techniques in Crime Investigation"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Unit VII: Trace Evidence, Digital Forensics, Cyberforensics",
+          "unitTitleMr": null,
+          "topics": [
+            "Types- Human, animal, Forensic Examination",
+            "Applications in Investigation",
+            "Composition, Forensic Relevance",
+            "Forensic Analysis Techniques",
+            "Computer Crimes, Digital Evidence Seizure and Analysis, Mobile Forensics",
+            "Cybercrimes and Cyberforensics"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Unit VIII: Dermatoglyphics/Fingerprints and Biometrics",
+          "unitTitleMr": null,
+          "topics": [
+            "Classification, Lifting, Chance prints, Examination, Preservation, AFIS",
+            "Foot, Shoe, Tyre, Skid Marks, Gait Patterns",
+            "Iris scan, Systems and Applications",
+            "Speaker Identification, Voice Spectrometry, Acoustics, Forensic Relevance"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Unit IX: Document and Handwriting Examination",
+          "unitTitleMr": null,
+          "topics": [
+            "Types, Preliminary Examination, Photographic Reproduction, Erasures, Alterations, Secret Writings",
+            "Scientific Examination Techniques, Ink Analysis, Charred documents analysis",
+            "Identification Techniques, Forgeries, Credit Card Examination"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Unit X: Forensic Medicine, Anthropology, Odontology and Entomology",
+          "unitTitleMr": null,
+          "topics": [
+            "Types of Death, Post-Mortem examination, Digital autopsy/Virtopsy, various methods of estimating post mortem interval",
+            "Blunt injuries, Sharp injuries, Gunshot Wounds, Burns",
+            "Current laws pertaining to various sexual offences-rape, sodomy, POCSO, Collection of various evidences and their analysis and interpretation",
+            "Species, Age, Sex, Stature Estimation, Anthropometry, Skull Superimposition, Bite Marks, Role of artificial intelligence",
+            "Various types of insects used in forensic analysis, their life cycle and role in Estimation of postmortem interval, Entomotoxicology"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Wherever Acts/Rule/Regulations are mentioned in syllabus, latest amendments/versions to be considered."
+  ]
+}

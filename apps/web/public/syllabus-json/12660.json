@@ -1,0 +1,32 @@
+{
+  "docId": 12660,
+  "examName": "State Services Examination - Corrigendum regarding syllabus of Marathi Literature optional paper",
+  "examNameMr": "महाराष्ट्र राजपत्रित नागरी सेवा संयुक्त परीक्षा - राज्य सेवा मुख्य परीक्षा मराठी साहित्य वैकल्पिक विषयाच्या अभ्यासक्रमाबाबत शुद्धिपत्रक",
+  "conductingBody": "MPSC",
+  "year": 2026,
+  "language": "Marathi",
+  "category": "rajyaseva",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Descriptive",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Marathi Literature Optional Paper",
+      "paperTitleMr": "मराठी साहित्य वैकल्पिक विषय",
+      "totalMarks": 100,
+      "duration": "3 Hours",
+      "type": "Descriptive",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": []
+    }
+  ],
+  "optionalSubjects": [
+    "Marathi Literature"
+  ],
+  "importantNotes": [
+    "सदर मराठी भाषेच्या अभ्यासक्रमातील मराठी साहित्य या वैकल्पिक विषयाच्या पेपर - एक भाग ब (अ) १ मध्ये 'इ.स. १८१८ च्या प्रारंभापासून' या शब्दसमुहाऐवजी 'मराठीच्या प्रारंभापासून इ.स. १८१८ पर्यंत' असे वाचण्यात यावे."
+  ]
+}

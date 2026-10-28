@@ -1,0 +1,165 @@
+{
+  "docId": 1699,
+  "examName": "Maharashtra Education Service, Group B (Collegiate Branch) - Lecturer in Commerce",
+  "examNameMr": null,
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 150,
+  "mainsMarks": 150,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Commerce",
+      "paperTitleMr": null,
+      "totalMarks": 150,
+      "duration": "1.5 Hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Accounting",
+          "unitTitleMr": null,
+          "topics": [
+            "Accounting as a financial information system",
+            "Accounting Standards in India and international accounting standards (only outlines)",
+            "Final Accounts",
+            "Depreciation accounting, Depreciation policies as per accounting standard",
+            "Accounts of non-trading institution",
+            "Partnership accounts",
+            "Advanced problems of company accounts",
+            "Amalgamation, absorption and reconstruction of companies",
+            "Valuation of shares and goodwill",
+            "Consolidated books of holding company with one subsidiary only",
+            "Concept, Nature and Scope of cost accounting",
+            "Material, labor and overheads as elements of cost",
+            "Job costing and Contract costing",
+            "Process costing",
+            "Marginal Costing including Cost-volume-profit relationship",
+            "Cost control and cost reduction",
+            "Reconciliation of cost and financial accounts",
+            "Budgetary control, flexible budgets",
+            "Standard costing and variance analysis",
+            "Responsibility accounting, investment, profit and cost centres"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Taxation and Auditing",
+          "unitTitleMr": null,
+          "topics": [
+            "Definitions and Basis of charge in Income Tax",
+            "Aggregation of income and set off/carry forward of losses",
+            "Incomes which do not form part of total income",
+            "Tax management - tax planning, tax deduction at sources, advance payment of tax",
+            "Other Taxes: Introductory concepts - Sales Tax, VAT, State Excise, Customs and Excise Duty, Service Tax",
+            "Concept, objectives, principles and planning of audit including investigations",
+            "Internal check system",
+            "Vouching, Valuation and Verification of transactions, assets and liabilities",
+            "Audit of limited companies: appointment, removal, powers, duties and liabilities of company auditor",
+            "Auditor's report",
+            "Special points in the audit of different organisations like clubs, hospitals, colleges, charitable institutes",
+            "Social Auditing",
+            "Audit under computerised environment"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Business Finance",
+          "unitTitleMr": null,
+          "topics": [
+            "Finance Function - Nature, Scope and Objectives of Financial Management",
+            "Financial Analysis as a diagnostic tool",
+            "Management of Working Capital and its Components - Forecasting of working capital needs, inventory, debtors, cash and credit management",
+            "Investment Decisions - Nature and Scope of Capital Budgeting - Capital Budgeting decisions",
+            "Consideration of Risk and Uncertainty - Analysis of Non-financial Aspects",
+            "Cost of Capital and its measurement",
+            "Concepts of Valuation - Valuation of firm's Fixed Income, Securities and Common Stocks",
+            "Dividend and Retention Policy - Residual Theory - Dividend Policy - Other Models - Actual Practices",
+            "Capital Structure - Leverages - Significance of Leverages - Theories of Capital Structure with special reference to Modigliani and Miller approach",
+            "Planning the Capital Structure of a Company, EBIT-EPS Analysis, Cash-flow ability to service debt, Capital Structure Ratios"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Financial Institutions",
+          "unitTitleMr": null,
+          "topics": [
+            "Raising finance - short term and long term",
+            "Financial Distress - Approaching BIFR, capital markets, securities markets",
+            "Money Market - concepts scope and organisation",
+            "Capital Market – Structure and role of capital market in India",
+            "Types of financial Institutions in India",
+            "International financial Institutions",
+            "Role of SEBI",
+            "Monetary and Credit policy of Reserve Bank of India, NRI deposits, Financial services, Merchant Banking, Credit Rating Agencies"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Organisational Behaviour",
+          "unitTitleMr": null,
+          "topics": [
+            "Concept, goals, types of goals, Displacement, succession, expansion and multiplication of goals",
+            "Types of organisations - formal and informal, Types of Structure - line, line & staff, functional and committee form of organisation and their limitations",
+            "Learning Organisation, Organisation theories - classical, neoclassical systems, chaos and modern theory",
+            "As a dynamic system: technical, social and authority system",
+            "Individual attributes affecting organisational behaviour (Ability, perception learning, attitude, personality), Status, moral and productivity",
+            "Leadership theories and styles, Team leadership, Management of conflicts, T.A. (Transactional Analysis), Life positions",
+            "Managerial Communication - concept and techniques, multicultural organisation, management of change, stress management, Quality of work life, organisational effectiveness and control",
+            "Quality Assurance and certification: ISO and other agencies, Concept of TQM Quality circles"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Legal Regulatory Framework",
+          "unitTitleMr": null,
+          "topics": [
+            "Individual proprietorship, partnership, Joint-stock company, Joint sector organisation & co-operative society – their characteristics, merits and demerits",
+            "Business combinations",
+            "The major provisions of: Law of contract, Indian sale of Goods Act",
+            "Negotiable Instruments Act, Consumer Protection Act",
+            "FEMA, Patents, Shops and Establishments Act"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Marketing",
+          "unitTitleMr": null,
+          "topics": [
+            "Scope, importance, concept, Marketing mix, Market segmentation - concept and bases",
+            "Product policy - types of products, different decisions - introduction of a new product, elimination of the product from product line, product development, After sale service, Product life cycle concept",
+            "Pricing methods, factors affecting price of a product, channels of distribution - role, types, selection of channels of distribution",
+            "Promotions Management - means of sales promotion and advertising - Media - merits and demerits, misleading advertisements, ethics in advertising",
+            "Personal selling - salesmen - functions, remuneration, promotion and evaluation",
+            "International Marketing: Meaning, nature, need, environment - internal and external Foreign market, entry strategy",
+            "Product planning for foreign markets, Branding, labelling and quality issues, Pricing process, price quotations and payment terms, Trade fairs and exhibitions, Logistics decisions, Selection of foreign sales agents",
+            "Current export policy of India - Trends, export procedure, documents, export finance, ECGC's role, export assistance and incentives, exports foreign agreements including WTO"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Human Resources Development and Industrial Relations",
+          "unitTitleMr": null,
+          "topics": [
+            "Importance and characteristics, Human resources planning, its limitations, problems of HRD in India, Job description, Job specifications",
+            "Recruitment – Sources - Internal and external, selection process - interviews, employment test and their applications, Need of scientific selection policy, placement transfer and promotion",
+            "Training and Development - Types of training, limitations of tests, principles of effective training, apprenticeship as an industrial training",
+            "Performance appraisal – need, applications, parties involved, techniques and their limitations",
+            "Nature and scope, need for positive approach, Industrial relations in public enterprises, downsizing, brain drain",
+            "Trade Union movement in India - an overview, its problems, compulsory recognition of trade unions, Impact of liberalisation, privatisation and globalisation on trade union movement",
+            "Prevention and settlement of industrial disputes in India, Collective bargaining, Industrial democracy, Workers' participation in management - problems and prospects",
+            "Motivation and social security measures, Govt wage policy and legislations, Human Resources Department - Role, functions and interrelationship with other departments in promotion of HRD and industrial relations"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

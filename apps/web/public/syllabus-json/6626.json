@@ -1,0 +1,272 @@
+{
+  "docId": 6626,
+  "examName": "Electrical Engineering Services Examination",
+  "examNameMr": "विद्युत अभियांत्रिकी सेवा परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2023,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Electrical Engineering - Paper - I",
+      "paperTitleMr": "विद्युत अभियांत्रिकी - पेपर - I",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Circuit Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "DC circuit elements, ideal current and voltage sources, work power energy calculations",
+            "Network graph, KCL, KVL, node and mesh analysis",
+            "Thevenin’s, Norton’s, Superposition and Maximum Power Transfer theorems"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Circuit Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "Work power energy calculations in AC series and parallel circuits",
+            "Steady state and transient response of DC and AC networks",
+            "Two port networks, magnetically coupled circuits, AC network analysis"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Electric field and Materials",
+          "unitTitleMr": null,
+          "topics": [
+            "Gauss’s Law, electric field and potential due to point, line, plane and spherical charge distributions",
+            "Electric dipoles and systems of charges, Ampere’s and Biot-Savart’s laws",
+            "Inductance, dielectrics, capacitance, Maxwell’s equations",
+            "Characteristics and applications of materials for electrical systems, crystal structures and defects",
+            "Ceramic materials, insulating materials, semiconducting materials, photoelectric materials, superconducting materials"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Magnetic field and Materials",
+          "unitTitleMr": null,
+          "topics": [
+            "Magnetic field, magnetic circuits",
+            "Energy stored in electric and magnetic fields, electromagnetic induction, BH curve",
+            "Magnetic materials ferrites, Ferro-magnetic materials, Basics of Nano materials",
+            "Maxwell’s equations for time varying fields, Electromagnetic waves"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Transformers and DC machines",
+          "unitTitleMr": null,
+          "topics": [
+            "Transformers - principles and performance of Single phase and three phase transformers, three phase transformers connections, parallel operation, auto-transformer, energy conversion principles",
+            "DC Machines - Principles, performance and applications of DC generators and Motors, types, characteristics, armature reaction and commutation, starting and speed control of motors"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "AC Machines",
+          "unitTitleMr": null,
+          "topics": [
+            "AC Machines - Principles, performance characteristics of single phase and three phase induction motors",
+            "Synchronous machines - performance, regulation, parallel operation of generators, motor starting, applications",
+            "Special Machines - Servo Motors, Stepper motors, BLDC and PMSM motors - Characteristics and applications, Linear motors"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Power and Energy Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Concept of power generation, types of turbines, transmission line models and performance",
+            "Calculation of sag and tension in transmission of lines, cable performance, insulation, corona and radio interference",
+            "Power factor correction, principles of protection systems, basics of solid-state relays and digital protection",
+            "Circuit breakers, LT and HT switchgear, Radial and ring-main distribution systems"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Power System Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "Power system Analysis - symmetrical components, fault analysis, load flow analysis",
+            "Power system Operation and Control - voltage control and economic operation, stability analysis",
+            "Swing curves and equal area criterion, Concepts of power system dynamics"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Recent Trends in Power and Energy Systems",
+          "unitTitleMr": null,
+          "topics": [
+            "Energy scenario in India and Maharashtra, energy policies, energy pricing",
+            "Smart energy meters, renewable energy systems, distributed generation",
+            "Energy storage systems, batteries, fuel cells and super capacitors",
+            "Energy systems for hybrid and electric vehicles, Smart Grid systems"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Illumination",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic terms in lighting systems and features, lamp types and their features",
+            "Recommended illumination levels for various tasks, methodology of lighting system energy efficiency study",
+            "Illumination system design for residential, commercial, industrial categories",
+            "Solar powered illumination and associated economics"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "DG set and UPS",
+          "unitTitleMr": null,
+          "topics": [
+            "DG set selection and installation factors, operational features, energy performance assessment of DG sets",
+            "Energy saving measures for DG sets, synchronization of DGs with utility supply, parallel operation",
+            "UPS technology, types and specifications, performance assessment"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Utilization",
+          "unitTitleMr": null,
+          "topics": [
+            "Pump types and characteristics, pump curves, factors affecting pump performance, efficient pumping system operation, energy conservation in pumping systems",
+            "Fan and compressor types, fan and compressor performance evaluation and efficient system operation, compressor capacity assessment, energy saving opportunities in fans and compressors"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Electrical Engineering - Paper - II",
+      "paperTitleMr": "विद्युत अभियांत्रिकी - पेपर - II",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Linear Integrated Circuits",
+          "unitTitleMr": null,
+          "topics": [
+            "Characteristics and applications of operational amplifiers, basics of linear integrated circuits",
+            "Basics of filter circuits and applications"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Analog Electronics",
+          "unitTitleMr": null,
+          "topics": [
+            "Analog communication basics, modulation and de-modulation, noise and bandwidth",
+            "Transmitters and receivers, signal to noise ratio"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Digital Electronics",
+          "unitTitleMr": null,
+          "topics": [
+            "Digital logic gates, combinational and sequential logic circuits, multiplexers, demultiplexers, sample and hold circuits, A/D and D/A converters",
+            "Microprocessor basics - interfaces and applications",
+            "Number systems, Boolean algebra, arithmetic functions, computer architecture, central processing unit, I/O and memory organization",
+            "Peripheral devices, data base management, basics of operating system and networking, virtual memory, file systems, elements of C programming"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Digital Communication",
+          "unitTitleMr": null,
+          "topics": [
+            "Digital communication basics, sampling, quantizing, coding",
+            "Frequency and time domain multiplexing, power line carrier communication systems"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Power Electronics and Applications 1",
+          "unitTitleMr": null,
+          "topics": [
+            "Semiconductor power diodes, transistors, thyristors, triacs, GTOs, MOSFETs and IGBTs – static characteristics and principles of operation",
+            "Triggering circuits, PWM generators, half and fully controlled rectifiers",
+            "DC to DC buck, boost, buck boost, cuk, and sepic converters"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Power Electronics and Applications 2",
+          "unitTitleMr": null,
+          "topics": [
+            "Single phase and three phase inverters, resonant converters",
+            "High frequency inductors and transformers, power supplies"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Power Electronics and Drives",
+          "unitTitleMr": null,
+          "topics": [
+            "Basic concepts of adjustable speed DC and AC drives, v/f control and Direct Torque control of machines",
+            "Different drive mechanism for EVs",
+            "Concepts of HVDC transmission and FACTS"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Continuous Signal Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "Representation of continuous signals",
+            "Fourier series representation of continuous periodic and aperiodic signals",
+            "Fourier and Laplace transforms"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Discrete Signal Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "Representation of discrete-time signals, shift operator, types of systems",
+            "Sampling theorem, Z transforms, Discrete Fourier transform, FFT, convolution",
+            "Discrete cosine transform, FIR filter, IIR filter"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Control Systems Analysis",
+          "unitTitleMr": null,
+          "topics": [
+            "Open loop and closed loop control system, transfer function, block diagrams and signal flow graphs representation and simplification",
+            "Steady-state errors, Routh-Hurwitz criterion, Nyquist techniques, Bode plots, root loci",
+            "Transient and frequency response analysis"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Control Systems Design",
+          "unitTitleMr": null,
+          "topics": [
+            "Lag, lead and lead-lag compensation, classical PID and industrial controllers, tuning of PID controllers",
+            "Stability analysis, state space representation, state transition matrix, controllability and observability",
+            "Linear state variable feedback controller, Luenberger observer"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

@@ -1,0 +1,74 @@
+{
+  "docId": 9435,
+  "examName": "Assistant Professor (Chemistry), Maharashtra Engineering Teachers Service, Group A - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (रसायनशास्त्र), महाराष्ट्र अभियांत्रिकी शिक्षक सेवा, गट अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Chemistry), Maharashtra Engineering Teachers Service, Group A - Syllabus",
+      "paperTitleMr": "सहाय्यक प्राध्यापक (रसायनशास्त्र), महाराष्ट्र अभियांत्रिकी शिक्षक सेवा, गट अ - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Section 1: Physical Chemistry",
+          "unitTitleMr": "विभाग १: भौतिक रसायनशास्त्र",
+          "topics": [
+            "Structure: Postulates of quantum mechanics, operators, time dependent and time independent Schrödinger equations, Born interpretation, Dirac bra-ket notation, particle in a box (infinite and finite square wells, concept of tunnelling, particle in 1D, 2D and 3D-box, applications), harmonic oscillator (harmonic and anharmonic potentials, Hermite polynomials), rotational motion (angular momentum operators, rigid rotor), hydrogen and hydrogen-like atoms (atomic orbitals, radial distribution function), multi-electron atoms (orbital approximation, electron spin, Pauli exclusion principle, Slater determinants), approximation methods (variation method and secular determinants, first order perturbation techniques), atomic units, molecular structure and chemical bonding (Born-Oppenheimer approximation, valence bond theory and linear combination of atomic orbitals – molecular orbital (LCAO-MO) theory, hybrid orbitals, applications of LCAO-MO theory to H2+, H2, orbital theory (MOT) of homo- and heteronuclear diatomic molecules, Hückel approximation and its application to annular π – electron systems)",
+            "Group theory: Symmetry elements and operations, point groups and character tables, internal coordinates and vibrational modes, symmetry adapted linear combination of atomic orbitals (LCAO-MO), construction of hybrid orbitals using symmetry aspects",
+            "Spectroscopy: Atomic spectroscopy, Russell-Saunders coupling, term symbols and spectral details, origin of selection rules, rotational, vibrational, electronic and Raman spectroscopy of diatomic and polyatomic molecules, line broadening, Einstein’s coefficients, relationship of transition moment integral with molar extinction coefficient and oscillator strength, basic principles of nuclear magnetic resonance (gyromagnetic ratio, chemical shift, nuclear coupling)",
+            "Equilibrium: Laws of thermodynamics, standard states, thermochemistry, thermodynamic functions and their relationships (Gibbs-Helmholtz and Maxwell relations, Gibbs-Duhem equation, van’t Hoff equation), criteria of spontaneity and equilibrium, absolute entropy, partial molar quantities, thermodynamics of mixing, chemical potential, fugacity, activity and activity coefficients, ideal and non-ideal solutions, Raoult’s Law and Henry’s Law, chemical equilibria, dependence of equilibrium constant on temperature and pressure, ionic mobility and conductivity, Debye-Hückel limiting law, Debye-Hückel-Onsager equation, standard electrode potentials and electrochemical cells, Nernst Equation and its application, relationship between electrode potential and thermodynamic quantities, potentiometric and conductometric titrations, phase rule, Clausius-Clapeyron equation, phase diagram of one component systems (CO2, H2O, S) and two component systems (liquid-vapour, liquid-liquid and solid-liquid systems), fractional distillation, azeotropes and eutectics, statistical thermodynamics (microcanonical, canonical and grand canonical ensembles, Boltzmann distribution, partition functions and thermodynamic properties)",
+            "Kinetics: Elementary, parallel, opposing and consecutive reactions, steady state approximation, mechanisms of complex reactions, unimolecular reactions, potential energy surfaces and classical trajectories, concept of saddle points, transition state theory (Eyring equation, thermodynamic aspects), kinetics of polymerization, catalysis concepts and enzyme catalysis, kinetic isotope effects, fast reaction kinetics (relaxation and flow methods), diffusion controlled reactions, kinetics of photochemical and photophysical processes",
+            "Surfaces and Interfaces: Physisorption and chemisorption, Langmuir, Freundlich and Brunauer–Emmett–Teller (BET) isotherms, surface catalysis (Langmuir-Hinshelwood mechanism), surface tension, viscosity, self-assembly, physical chemistry of colloids, micelles and macromolecules"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Section 2: Inorganic Chemistry",
+          "unitTitleMr": "विभाग २: अजैविक रसायनशास्त्र",
+          "topics": [
+            "Main Group Elements: Hydrides, halides, oxides, oxoacids, nitrides, sulfides – shapes and reactivity, structure and bonding of boranes, carboranes, silicones, silicates, boron nitride, borazines and phosphazenes, allotropes of carbon, phosphorous and sulphur, industrial synthesis of compounds of main group elements, chemistry of noble gases, pseudohalogens, and interhalogen compounds, acid-base concepts and principles (Lewis, Brønsted, HSAB and acid-base catalysis)",
+            "Transition Elements: Coordination chemistry – structure and isomerism, theories of bonding (VBT, CFT and MOT), energy level diagrams in various crystal fields, CFSE, applications of CFT, Jahn-Teller distortion, electronic spectra of transition metal complexes (spectroscopic term symbols, selection rules, Orgel and Tanabe-Sugano diagrams, nephelauxetic effect and Racah parameter, charge-transfer spectra), magnetic properties of transition metal complexes, Ray-Dutt and Bailar twists, reaction mechanisms (kinetic and thermodynamic stability, substitution and redox reactions), metal-metal multiple bond",
+            "Lanthanides and Actinides: Recovery, periodic properties, spectra and magnetic properties",
+            "Organometallics: 18-Electron rule, metal-alkyl, metal-carbonyl, metal-olefin and metal-carbene complexes and metallocenes, fluxionality in organometallic complexes, types of organometallic reactions, homogeneous catalysis (hydrogenation, hydroformylation, acetic acid synthesis, metathesis and olefin oxidation), heterogeneous catalysis (Fischer-Tropsch reaction, Ziegler-Natta polymerization)",
+            "Radioactivity: Detection of radioactivity, decay processes, half-life of radioactive elements, fission and fusion processes",
+            "Bioinorganic Chemistry: Ion (Na+ and K+) transport, oxygen binding, transport and utilization, electron transfer reactions, nitrogen fixation, metalloenzymes containing magnesium, molybdenum, iron, cobalt, copper and zinc",
+            "Solids: Crystal systems and lattices, Miller planes, crystal packing, crystal defects, Bragg’s law, ionic crystals, structures of AX, AX2, ABX3 type compounds, spinels, band theory, metals and semiconductors",
+            "Instrumental Methods of Analysis: UV-visible, fluorescence and FTIR spectrophotometry, NMR and ESR spectroscopy, mass spectrometry, atomic absorption spectroscopy, Mössbauer spectroscopy (Fe and Sn) and X-ray crystallography, chromatography including GC and HPLC, electroanalytical methods (polarography, cyclic voltammetry, ion-selective electrodes), thermoanalytical methods",
+            "Manufacturing processes and applications of Inorganic Chemicals: Water, Hydrogen, Hydrogen Peroxide, Ammonia, Nitric Acid, Phosphoric acid, Sulfur and Sulfur Compounds, Halogens and Halogen Compounds, Mineral Fertilizers (Phosphorus-Containing Fertilizers, Nitrogen-Containing Fertilizers, Potassium-Containing Fertilizers)",
+            "Metals and Their Compounds: Alkali and Alkaline Earth Metals and their Compounds, Aluminum and its Compounds, Chromium Compounds and Chromium, Silicon and its Inorganic Compounds, Manganese Compounds and Manganese"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Section 3: Organic Chemistry",
+          "unitTitleMr": "विभाग ३: कार्बनिक रसायनशास्त्र",
+          "topics": [
+            "Stereochemistry: Chirality and symmetry of organic molecules with or without chiral centres and determination of their absolute configurations, relative stereochemistry in compounds having more than one stereogenic centre, homotopic, enantiotopic and diastereotopic atoms, groups and faces, stereoselective and stereospecific synthesis, conformational analysis of acyclic and cyclic compounds, geometrical isomerism and optical isomerism, configurational and conformational effects, atropisomerism, and neighbouring group participation on reactivity and selectivity/specificity",
+            "Reaction Mechanisms: Basic mechanistic concepts – kinetic versus thermodynamic control, Hammond’s postulate and Curtin-Hammett principle, methods of determining reaction mechanisms through kinetics, identification of products, intermediates and isotopic labelling, linear free-energy relationship – Hammett and Taft equations, nucleophilic and electrophilic substitution reactions (both aromatic and aliphatic), addition reactions to carbon-carbon and carbon-heteroatom (N and O) multiple bonds, elimination reactions, reactive intermediates – carbocations, carbanions, carbenes, nitrenes, arynes and free radicals, molecular rearrangements",
+            "Organic Synthesis: Synthesis, reactions, mechanisms and selectivity involving alkenes, alkynes, arenes, alcohols, phenols, aldehydes, ketones, carboxylic acids, esters, nitriles, halides, nitro compounds, amines and amides, uses of Mg, Li, Cu, B, Zn, P, S, Sn and Si based reagents in organic synthesis, carbon-carbon bond formation through coupling reactions (Heck, Suzuki, Stille, Sonogoshira, Negishi, Kumada, Hiyama, Tsuji-Trost, olefin metathesis and McMurry), concepts of multistep synthesis (retrosynthetic analysis, strategic disconnections, synthons and synthetic equivalents), atom economy and green chemistry, Umpolung reactivity (formyl and acyl anion equivalents), selectivity in organic synthesis (chemo-, regio- and stereoselectivity), protection and deprotection of functional groups, concepts of asymmetric synthesis (resolution including enzymatic, desymmetrization and use of chiral auxiliaries, organocatalysis), carbon-carbon and carbon-heteroatom bond forming reactions through enolates (including boron enolates), enamines and silyl enol ethers, stereoselective addition to C=O groups (Cram, Prelog and Felkin-Anh models)",
+            "Pericyclic Reactions and Photochemistry: Electrocyclic, cycloaddition and sigmatropic reactions, orbital correlations (FMO and PMO treatments, Woodward-Hoffmann rule), photochemistry of alkenes, arenes and carbonyl compounds, photooxidation and photoreduction, di-π-methane rearrangement, Barton-McCombie reaction, Norrish type-I and II cleavage reaction",
+            "Heterocyclic Compounds: Structure, preparation, properties and reactions of furan, pyrrole, thiophene, pyridine, indole, quinoline and isoquinoline",
+            "Biomolecules: Structure, properties and reactions of mono- and di-saccharides, physicochemical properties of amino acids, chemical synthesis of peptides, chemical structure determination of peptides and proteins, structural features of proteins, nucleic acids, lipids, steroids, terpenoids, carotenoids, and alkaloids",
+            "Experimental techniques in organic chemistry: Optical rotation (polarimetry), applications of chromatographic techniques such as thin-layer, column, HPLC and GC, applications of UV-visible, IR, NMR and Mass spectrometry in the structural determination of organic molecules",
+            "Physicochemical principles of manufacture of important organic bulk chemicals such as methanol, acetic acid, ethanol, ethylene, propylene, butadiene, acetaldehyde, acetylene, BTX, alkyl benzenes, acetone, phenol, styrene, esters, ethylene oxide, phthalic acid, vinyl-halogen and vinyl-oxygen compounds, azo dyes, polyamides, propene conversion products, aromatics – production and oxidation products of xylene and naphthalene, important pharmaceutically active ingredients, agrochemicals, insecticides, pesticides"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

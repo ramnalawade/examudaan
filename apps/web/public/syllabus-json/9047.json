@@ -1,0 +1,60 @@
+{
+  "docId": 9047,
+  "examName": "Translator Hindi, Directorate of Languages, General State Service, Group-C, Marathi Language Department",
+  "examNameMr": "अनुवादक हिंदी, भाषा संचालनालय, सामान्य राज्य सेवा, गट-क, मराठी भाषा विभाग",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "Marathi",
+  "category": "group-c",
+  "totalMarks": 160,
+  "mainsMarks": 160,
+  "interviewMarks": 40,
+  "examPattern": "लिखित परीक्षा - १६० गुण, मुलाखत - ४० गुण",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Hindi and English",
+      "paperTitleMr": "हिंदी व इंग्रजी",
+      "totalMarks": 160,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Hindi",
+          "unitTitleMr": "हिंदी",
+          "topics": [
+            "पारिभाषिक एवं सामान्य शब्दसंग्रह",
+            "वाक्यरचना",
+            "विकारी शब्द",
+            "अविकारी शब्द",
+            "मुहावरें एवं लोकोक्तियाँ",
+            "प्रयोजनमूलक शब्दावली",
+            "अवतरण/गद्यांश - गद्यांश के आधार पर प्रश्न"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "English",
+          "unitTitleMr": "इंग्रजी",
+          "topics": [
+            "Common Vocabulary",
+            "Sentences",
+            "Declinable Words",
+            "Indeclinable Words",
+            "Uses of Idioms and phrases and their meanings",
+            "Administrative Terms",
+            "Comprehension of passage"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "प्रत्येक चुकीच्या उत्तराकरिता २५% किंवा १/४ एवढे गुण एकूण गुणांमधून वजा / कमी करण्यात येतील.",
+    "मुलाखतीच्या एकूण ४० गुणांपैकी, अनुवाद चाचणीकरिता २० गुण व मुलाखतीकरिता २० गुण असतात."
+  ]
+}

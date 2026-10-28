@@ -1,0 +1,208 @@
+{
+  "docId": 1641,
+  "examName": "Assistant Professor- Sociology, Maharashtra Education Services, Group - A (Collegiate Branch)",
+  "examNameMr": "सहाय्यक प्राध्यापक - समाजशास्त्र, महाराष्ट्र शिक्षण सेवा, गट - अ (संबंधित शाखा)",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor- Sociology, Maharashtra Education Services, Group - A (Collegiate Branch)",
+      "paperTitleMr": "सहाय्यक प्राध्यापक - समाजशास्त्र, महाराष्ट्र शिक्षण सेवा, गट - अ (संबंधित शाखा)",
+      "totalMarks": 200,
+      "duration": "1 hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Phenomenology and Ethnomethodology",
+          "unitTitleMr": null,
+          "topics": [
+            "Alfred Shultz, Peter Berger and Luckmann",
+            "Garfinkel and Goffman"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Neo-functionalism and Neo-Marxism",
+          "unitTitleMr": null,
+          "topics": [
+            "J. Alexander",
+            "Habermass, Althusser"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Structuration and Post-Modernism",
+          "unitTitleMr": null,
+          "topics": [
+            "Giddens",
+            "Derrida",
+            "Foucault"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Conceptualising Indian Society",
+          "unitTitleMr": null,
+          "topics": [
+            "Peoples of India : Groups and Communities",
+            "Unity in diversity",
+            "Cultural diversity : Regional, linguistic, religions and tribal"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Theoretical Perspectives",
+          "unitTitleMr": null,
+          "topics": [
+            "Indological/Textual Perspective : G. S. Ghurye, Louis Dumont",
+            "Structural - Functional Perspective : M. N. Srinivas, S. C. Dube",
+            "Marxian Perspective : D. P. Mukherjee, A. R. Desai",
+            "Civilisational Perspective : N. K. Bose, Surajit Sinha",
+            "Subaltern Perspective : B. R. Ambedkar, David Hardiman"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Contemporary Issues : Socio-cultural",
+          "unitTitleMr": null,
+          "topics": [
+            "Poverty",
+            "Inequality of caste and gender",
+            "Regional, ethnic and religious disharmonics",
+            "Family disharmony: (a) Domestic violence (b) Dowry (c) Divorce (d) Intergenerational conflict"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Contemporary Issues : Developmental",
+          "unitTitleMr": null,
+          "topics": [
+            "Population",
+            "Regional disparity",
+            "Slums",
+            "Displacement",
+            "Ecological degradation and environmental pollution",
+            "Health problems"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Issues Pertaining to Deviance",
+          "unitTitleMr": null,
+          "topics": [
+            "Deviance and its forms",
+            "Crime and delinquency",
+            "White collar crime and corruption",
+            "Changing profile of crime and criminals",
+            "Drug addiction",
+            "Suicide"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Current Debates",
+          "unitTitleMr": null,
+          "topics": [
+            "Tradition and Modernity in India",
+            "Problems of Nation Building : Secularism, Pluralism and Nation building"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "The Challenges of Globalisation",
+          "unitTitleMr": null,
+          "topics": [
+            "Indigenisation of Sociology",
+            "Privatisation of Education",
+            "Science and Technology Policy in India"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Rural Sociology",
+          "unitTitleMr": null,
+          "topics": [
+            "Approaches to the study of Rural Society",
+            "Rural-Urban differences",
+            "Rurbanism",
+            "Peasant studies",
+            "Agrarian Institutions : Land ownership and its types",
+            "Agrarian relations and Mode of production debate",
+            "Jajmani system and Jaimani relations",
+            "Agrarian class structure",
+            "Panchayati Raj Institution : Panchayat before and after 73rd amendment",
+            "Rural Leadership and Factionalism",
+            "Empowerment of people",
+            "Social Issues and Strategies for Rural Development : Bonded and Migrant labourers",
+            "Pauperization and Depeasantisation",
+            "Agrarian unrest and Peasant movements",
+            "Rural Development and Change : Trends of changes in rural society",
+            "Processes of change : Migration - Rural to Urban and Rural to Rural Mobility : Social/Economic",
+            "Factors of change"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Industry and Society",
+          "unitTitleMr": null,
+          "topics": [
+            "Industrial Society in the Classical Sociological Tradition : Division of labour, Bureaucracy, Rationality, Production relations, Surplus value, Alienation",
+            "Industry and Society : Factory as a social system, Formal and informal organization, Impact of social structure on industry, Impact of industry on society",
+            "Industrial Relations : Changing profile of labour, Changing labour-management relations, Conciliation, adjudication, arbitration, Collective bargaining, Trade unions, Worker’s participation in management, Quality circles",
+            "Industrialisation and Social Change in India : Impact of industrialization on family, education and stratification, Class and class conflict in industrial society, Obstacles to and limitations of industrialization",
+            "Industrial Planning : Industrial Policy, Labour legislation, Human relations in industry"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Sociology of Development",
+          "unitTitleMr": null,
+          "topics": [
+            "Conceptual Perspectives on Development : Economic growth, Human development, Social development, Sustainable development : Ecological and Social",
+            "Theories of Underdevelopment : Liberal (Max Weber, Gunnar Myrdal), Dependency (Centre-periphery, Uneven development, World-system), Paths of Development (Modernisation, Globalisation, Socialist, Mixed, Gandhian)",
+            "Social Structure and Development : Social structure as a facilitator/inhibitor, Development and Socio-economic disparities, Gender and development",
+            "Culture and Development : Culture as an aid/impediment, Development and displacement of tradition, Development and upsurge of ethnic movements"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Population and Society",
+          "unitTitleMr": null,
+          "topics": [
+            "Theories of Population Growth : Malthusian, Demographic transition",
+            "Population Growth and Distribution in India : Growth of Indian population since 1901, Determinants of population",
+            "Concepts of Fertility, Mortality, Morbidity and Migration : Age and Sex composition, Determinants of fertility and mortality, Morbidity rates, Determinants and consequences of migration",
+            "Population and Development : Population as a constraint on and a resource for development, Socio-cultural factors affecting population growth",
+            "Population Control : Population policy, Population education, Measures taken for population control"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Gender and Society",
+          "unitTitleMr": null,
+          "topics": [
+            "Gender as a Social Construct : Models of Gendered socialisation, Cultural symbolism and general roles",
+            "Social Structure and Gender Inequality : Patriarchy and Matriarchy, Division of labour - Production and reproduction",
+            "Theories of Gender Relations : Liberalist, Radical, Socialist, Post-modernist",
+            "Gender and Development : Effect of development policies on gender relations, Perspectives, Empowerment",
+            "Women and Development in India : Indicators of women’s status, Special schemes and strategies, Voluntary sector, Globalisation, Eco-feminism"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

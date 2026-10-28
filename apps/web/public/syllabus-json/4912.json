@@ -1,0 +1,121 @@
+{
+  "docId": 4912,
+  "examName": "Assistant Public Prosecutor, General State Service, Group-A - Syllabus",
+  "examNameMr": "सहाय्यक सरकारी अभियोक्ता, महाराष्ट्र राजपत्रित सेवा, गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "judicial-legal",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Paper - I",
+      "paperTitleMr": "पेपर - १",
+      "totalMarks": 50,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Criminal Procedure Code with amendments",
+          "unitTitleMr": "फौजदारी प्रक्रिया संहिता आणि सुधारणा",
+          "topics": [
+            "Section 1 to 25A",
+            "Section 41 to 105",
+            "Section 144 to 192",
+            "Section 195 to 199",
+            "Section 204 to 224",
+            "Section 238 to 327",
+            "Section 340, 344, 345",
+            "Section 372 to 405 and 410",
+            "Section 436 to 484"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Evidence Act with amendments",
+          "unitTitleMr": "पुराव्याचा कायदा आणि सुधारणा",
+          "topics": [
+            "Section 4 to 39",
+            "Section 45 to 90",
+            "Section 101 to 167"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Appeal & Revision Proposal",
+          "unitTitleMr": "अपील आणि पुनरावलोकन प्रस्ताव",
+          "topics": [
+            "Appeal & Revision Proposal"
+          ]
+        }
+      ]
+    },
+    {
+      "paperNumber": 2,
+      "paperTitle": "Paper - II",
+      "paperTitleMr": "पेपर - २",
+      "totalMarks": 50,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Indian Penal Code, 1860 with amendments",
+          "unitTitleMr": "भारतीय दंड संहिता, १८६० आणि सुधारणा",
+          "topics": [
+            "Section 1 to 52A, Section 53, Section 64 to 67, Section 71",
+            "Section 76 to 120B",
+            "Section 141 to 160",
+            "Section 172 to 205",
+            "Section 268 to 294A",
+            "Section 295 to 298",
+            "Section 299 to 377",
+            "Section 378 to 477A",
+            "Section 493 to 511"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Minor Acts with amendments",
+          "unitTitleMr": "किरकोळ कायदे आणि सुधारणा",
+          "topics": [
+            "The Maharashtra Prohibition Act, 1949",
+            "Maharashtra Prevention of Gambling Act, 1887",
+            "Indian Forest Act, 1927",
+            "The Immoral Traffic (Prevention) Act, 1956",
+            "The Prevention of Cruelty to Animals Act, 1960",
+            "Indian Arms Act, 1959",
+            "The Food Safety and Standards Act, 2006",
+            "The Prevention of Damage to Public Property Act, 1984",
+            "The Narcotic Drugs and Psychotropic Substances Act, 1985",
+            "The Juvenile Justice (Care and Protection of Children) Act, 2015",
+            "The Pre-Conception and Pre-natal Diagnostic Techniques (Prohibitions of Sex Selection) Act, 1994",
+            "The Essential Commodities Act, 1955",
+            "The Information Technology Act, 2000",
+            "Wild Life Protection Act, 1972",
+            "Maharashtra Police Act, 1951"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Essay writing on criminal laws",
+          "unitTitleMr": "फौजदारी कायद्यांवर निबंधलेखन",
+          "topics": [
+            "Essay writing on criminal laws"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

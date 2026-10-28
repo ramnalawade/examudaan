@@ -1,0 +1,171 @@
+{
+  "docId": 9436,
+  "examName": "Assistant Professor (Mathematics), Maharashtra Engineering Teachers Service, Group A - Syllabus",
+  "examNameMr": "सहाय्यक प्राध्यापक (गणित), महाराष्ट्र अभियांत्रिकी शिक्षक सेवा, गट-अ - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Mathematics",
+      "paperTitleMr": "गणित",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Calculus",
+          "unitTitleMr": "कॅल्क्युलस",
+          "topics": [
+            "Functions of two or more variables, limit, continuity, directional derivatives",
+            "Partial derivatives, total derivative, Taylor’s theorem and its applications",
+            "Maxima and minima, saddle point, relative maxima and minima, method of Lagrange’s multipliers",
+            "Double and Triple integrals and their applications to area, volume and surface area, change of variables",
+            "Vector Calculus: gradient, divergence and curl, Line integrals and Surface integrals",
+            "Green’s theorem, Stokes’ theorem, and Gauss divergence theorem"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Linear Algebra",
+          "unitTitleMr": "रৈखिक बीजगणित",
+          "topics": [
+            "Finite dimensional vector spaces over real or complex fields",
+            "Linear transformations and their matrix representations, rank, nullity, rank-nullity theorem",
+            "Systems of linear equations, characteristic polynomial, eigen values and eigen vectors",
+            "Diagonalization, minimal polynomial, Cayley-Hamilton Theorem",
+            "Finite dimensional inner product spaces, Gram-Schmidt orthonormalization process, orthogonal decomposition",
+            "Symmetric, skew-symmetric, Hermitian, skew-Hermitian, normal, orthogonal and unitary matrices",
+            "Diagonalization by a unitary matrix, Jordan canonical form, bilinear and quadratic forms",
+            "Least Square methods, Singular Value Decomposition (SVD)"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Real Analysis",
+          "unitTitleMr": "वास्तविक विश्लेषण",
+          "topics": [
+            "LUB property of real numbers and its applications",
+            "Sequence and Series, Limit and Continuity and differentiability",
+            "Metric spaces, connectedness, compactness, completeness",
+            "Sequences and series of functions, uniform convergence, Ascoli-Arzela theorem",
+            "Weierstrass approximation theorem, contraction mapping principle, Power series",
+            "Differentiation of functions of several variables, Inverse and Implicit function theorems"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Complex Analysis",
+          "unitTitleMr": "जटिल विश्लेषण",
+          "topics": [
+            "Functions of a complex variable: continuity, differentiability, analytic functions, harmonic functions",
+            "Complex integration: Cauchy’s integral theorem and formula",
+            "Liouville’s theorem, maximum modulus principle, Morera’s theorem",
+            "Zeros and singularities, Power series, radius of convergence, Taylor’s series and Laurent’s series",
+            "Residue theorem and applications for evaluating real integrals",
+            "Rouche’s theorem, Argument principle, Schwarz lemma, Conformal mappings, Mobius transformations"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Ordinary Differential Equations",
+          "unitTitleMr": "सामान्य विकलन समीकरणे",
+          "topics": [
+            "First order ordinary differential equations, existence and uniqueness theorems for initial value problems",
+            "Linear ordinary differential equations of higher order with constant coefficients",
+            "Second order linear ordinary differential equations with variable coefficients, Cauchy-Euler equation",
+            "Method of Laplace transforms for solving ordinary differential equations, series solutions (power series, Frobenius method)",
+            "Legendre and Bessel functions and their orthogonal properties",
+            "Systems of linear first order ordinary differential equations, Sturm's oscillation and separation theorems",
+            "Sturm-Liouville eigen value problems, Planar autonomous systems of ordinary differential equations",
+            "Stability of stationary points for linear systems with constant coefficients, Linearized stability, Lyapunov functions"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Algebra",
+          "unitTitleMr": "बीजगणित",
+          "topics": [
+            "Groups, subgroups, normal subgroups, quotient groups, homomorphisms, automorphisms",
+            "Cyclic groups, permutation groups, Group action, Sylow’s theorems and their applications",
+            "Rings, ideals, prime and maximal ideals, quotient rings, unique factorization domains",
+            "Principal ideal domains, Euclidean domains, polynomial rings, Eisenstein’s irreducibility criterion",
+            "Fields, finite fields, field extensions, algebraic extensions, algebraically closed fields"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Functional Analysis",
+          "unitTitleMr": "कार्यात्मक विश्लेषण",
+          "topics": [
+            "Normed linear spaces, Banach spaces, Hahn-Banach theorem",
+            "Open mapping and closed graph theorems, principle of uniform boundedness",
+            "Inner-product spaces, Hilbert spaces, orthonormal bases, projection theorem",
+            "Riesz representation theorem, spectral theorem for compact self-adjoint operators"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Numerical Analysis",
+          "unitTitleMr": "संख्यात्मक विश्लेषण",
+          "topics": [
+            "Error analysis, Systems of linear equations: Direct methods (Gaussian elimination, LU decomposition, Cholesky factorization)",
+            "Iterative methods (Gauss-Seidel and Jacobi) and their convergence",
+            "Numerical solutions of nonlinear equations: bisection method, secant method, Newton-Raphson method, fixed point iteration",
+            "Interpolation: Lagrange and Newton forms of interpolating polynomial, Error in polynomial interpolation",
+            "Numerical differentiation and error, Numerical integration: Trapezoidal and Simpson rules, Newton-Cotes integration formulas",
+            "Numerical solution of initial value problems for ordinary differential equations: Methods of Euler, Runge-Kutta methods",
+            "Numerical eigen values and eigen vectors"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Partial Differential Equations",
+          "unitTitleMr": "अंशतः विकलन समीकरणे",
+          "topics": [
+            "Method of characteristics for first order linear and quasilinear partial differential equations",
+            "Second order partial differential equations in two independent variables: classification and canonical forms",
+            "Method of separation of variables for Laplace equation in Cartesian and polar coordinates, heat and wave equations",
+            "Wave equation: Cauchy problem and d'Alembert formula, domains of dependence and influence",
+            "Heat equation: Cauchy problem, Laplace and Fourier transform methods"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Topology",
+          "unitTitleMr": "टोपोलॉजी",
+          "topics": [
+            "Basic concepts of topology, bases, subbases, subspace topology, order topology",
+            "Product topology, quotient topology, metric topology",
+            "Connectedness, compactness, countability and separation axioms, Urysohn’s Lemma"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Linear Programming",
+          "unitTitleMr": "रैखिक प्रोग्रामिंग",
+          "topics": [
+            "Linear programming models, convex sets, extreme points, Basic feasible solution",
+            "Graphical method, simplex method, two phase methods, revised simplex method",
+            "Infeasible and unbounded linear programming models, alternate optima",
+            "Duality theory, weak duality and strong duality",
+            "Integer programming problems and their solutions",
+            "Balanced and unbalanced transportation problems, Initial basic feasible solution (least cost method, north-west corner rule, Vogel’s approximation method)",
+            "Optimal solution, modified distribution method, Solving assignment problems, Hungarian method"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

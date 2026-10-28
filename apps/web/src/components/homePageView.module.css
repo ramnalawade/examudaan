@@ -4,6 +4,9 @@
   background: var(--surface, #FFFBF5);
   min-height: 100vh;
   color: var(--on-surface, #1C1917);
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* ── Hero Section ────────────────────────────── */
@@ -11,6 +14,9 @@
   background: linear-gradient(180deg, rgba(234, 88, 12, 0.04) 0%, rgba(255, 251, 245, 1) 100%);
   border-bottom: 1px solid var(--outline-variant, #E7E5E4);
   padding: 40px 0 48px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .heroGrid {
@@ -18,12 +24,22 @@
   grid-template-columns: 1.15fr 0.85fr;
   gap: 36px;
   align-items: center;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.heroGrid > div {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
   .heroGrid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
 }
 
@@ -76,6 +92,8 @@
   gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 22px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .ctaPrimary {
@@ -91,6 +109,7 @@
   gap: 8px;
   box-shadow: 0 4px 14px rgba(234, 88, 12, 0.28);
   transition: transform 0.15s, background-color 0.15s;
+  box-sizing: border-box;
 }
 
 .ctaPrimary:hover {
@@ -168,9 +187,17 @@
 }
 
 @media (max-width: 640px) {
+  .heroSection {
+    padding: 24px 0 30px;
+  }
   .heroTitle {
-    font-size: clamp(20px, 6.2vw, 28px);
+    font-size: clamp(19px, 5.8vw, 26px);
     line-height: 1.25;
+  }
+  .heroSubtitle {
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin: 0 0 16px;
   }
   .heroCtas {
     display: flex;
@@ -182,13 +209,16 @@
   .ctaPrimary {
     width: 100%;
     justify-content: center;
-    padding: 12px 18px;
-    font-size: 14px;
+    padding: 11px 14px;
+    font-size: 13.5px;
+    box-sizing: border-box;
+    text-align: center;
   }
   .heroChannelRow {
     display: flex;
     gap: 8px;
     width: 100%;
+    box-sizing: border-box;
   }
   .ctaTelegram, .ctaWhatsAppSecondary {
     flex: 1 1 0;
@@ -197,10 +227,18 @@
     padding: 10px 8px;
     font-size: 12px;
     white-space: nowrap;
+    box-sizing: border-box;
   }
 }
 
 @media (max-width: 380px) {
+  .heroTitle {
+    font-size: 18.5px;
+  }
+  .ctaPrimary {
+    padding: 10px 10px;
+    font-size: 12.5px;
+  }
   .ctaTelegram, .ctaWhatsAppSecondary {
     padding: 8px 6px;
     font-size: 11px;
@@ -215,6 +253,7 @@
   gap: 10px;
   margin: 18px 0 16px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .pillarCard {
@@ -229,6 +268,13 @@
   color: inherit;
   transition: all 0.18s ease;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.pillarCard > div {
+  min-width: 0;
+  flex: 1;
 }
 
 .pillarCard:hover {
@@ -248,6 +294,7 @@
   font-weight: 700;
   color: var(--on-surface, #1C1917);
   line-height: 1.25;
+  word-break: break-word;
 }
 
 .pillarCard span {
@@ -258,7 +305,7 @@
   margin-top: 2px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .portalCorePillars {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -340,6 +387,17 @@
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(28, 25, 23, 0.06);
   padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .urgentCard {
+    padding: 14px 12px;
+  }
 }
 
 .urgentHeader {
@@ -349,6 +407,7 @@
   border-bottom: 1px solid var(--outline-variant, #E7E5E4);
   padding-bottom: 12px;
   margin-bottom: 14px;
+  gap: 8px;
 }
 
 .urgentTitle {
@@ -358,6 +417,7 @@
   align-items: center;
   gap: 6px;
   color: var(--on-surface, #1C1917);
+  word-break: break-word;
 }
 
 .urgentBadge {
@@ -370,6 +430,7 @@
   border-radius: 999px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* ── What's New Hero Tab Switcher & Items ── */
@@ -377,9 +438,13 @@
   display: flex;
   gap: 6px;
   overflow-x: auto;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   margin-bottom: 12px;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .heroTabsBar::-webkit-scrollbar {
@@ -1193,6 +1258,9 @@
   padding: 32px;
   margin: 20px 0;
   box-shadow: 0 6px 20px rgba(28, 25, 23, 0.04);
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .rankGrid {
@@ -1200,11 +1268,29 @@
   grid-template-columns: 1.15fr 0.85fr;
   gap: 36px;
   align-items: center;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.rankGrid > div {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
   .rankGrid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .rankSuiteSection {
+    padding: 18px 14px;
+    margin: 16px 0;
+    border-radius: 12px;
   }
 }
 
@@ -1520,6 +1606,35 @@
   gap: 24px;
   flex-wrap: wrap;
   margin: 40px 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .preFooterBanner {
+    padding: 22px 14px;
+    margin: 24px 0 16px;
+    gap: 16px;
+  }
+  .bannerTitle {
+    font-size: 19px;
+  }
+  .bannerSubtitle {
+    font-size: 13px;
+  }
+  .bannerActions {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .bannerBtnBlue, .bannerBtnGreen, .bannerBtnLight {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
 }
 
 .bannerTitle {

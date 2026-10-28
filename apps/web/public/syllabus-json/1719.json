@@ -1,0 +1,84 @@
+{
+  "docId": 1719,
+  "examName": "Lecturer in Food Technology, Government Polytechnics, Group-A",
+  "examNameMr": "अन्न तंत्रज्ञान प्राध्यापक, शासकीय तंत्रनिकेतन, गट-अ",
+  "conductingBody": "MPSC",
+  "year": 2015,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 200,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Food Technology",
+      "paperTitleMr": "अन्न तंत्रज्ञान",
+      "totalMarks": 200,
+      "duration": "3 hours",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Food Chemistry and Nutrition",
+          "unitTitleMr": "अन्न रसायनशास्त्र आणि पोषण",
+          "topics": [
+            "Carbohydrates: Structure and functional properties of mono-, oligo-, polysaccharides including starch, cellulose, pectic substances and dietary fibre",
+            "Proteins: Classification and structure of proteins in food",
+            "Lipids: Classification and structure of lipids, Rancidity of fats, Polymerization and polymorphism",
+            "Pigments: Carotenoids, chlorophylls, anthocyanins, tannins and myoglobin",
+            "Food flavours: Terpenes, esters, ketones and quinones",
+            "Enzymes: Specificity, Kinetics and inhibition, Coenzymes, Enzymatic and non-enzymatic browning",
+            "Nutrition: Balanced diet, Essential amino acids and fatty acids, PER, Water soluble and fat soluble vitamins, Role of minerals in nutrition, Antinutrients, Nutrition deficiency diseases"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Food Microbiology",
+          "unitTitleMr": "अन्न सूक्ष्मजीवशास्त्र",
+          "topics": [
+            "Characteristics of microorganisms: Morphology, structure and detection of bacteria, yeast and mold in food, Spores and vegetative cells",
+            "Microbial growth in food: Intrinsic and extrinsic factors, Growth and death kinetics, serial dilution method for quantification",
+            "Food spoilage: Contributing factors, Spoilage bacteria, Microbial spoilage of milk and milk products, meat and meat products",
+            "Foodborne disease: Toxins produced by Staphylococcus, Clostridium and Aspergillus",
+            "Bacterial pathogens: Salmonella, Bacillus, Listeria, Escherichia coli, Shigella, Campylobacter",
+            "Fermented food: Buttermilk, yoghurt, cheese, sausage, alcoholic beverage, vinegar, sauerkraut and soya sauce"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Food Products Technology",
+          "unitTitleMr": "अन्न उत्पादने तंत्रज्ञान",
+          "topics": [
+            "Processing principles: Canning, chilling, freezing, dehydration, control of water activity, CA and MA storage, fermentation, hurdle technology, addition of preservatives and food additives, Food packaging, cleaning in place and food laws",
+            "Grain products processing: Milling of rice, wheat, and maize, parboiling of paddy, production of bread, biscuits, extruded products and breakfast cereals, Solvent extraction, refining and hydrogenation of oil",
+            "Fruits, vegetables and plantation products processing: Extraction, clarification concentration and packaging of fruit juice, Production of jam, jelly, marmalade, squash, candies, and pickles, pectin from fruit waste, tea, coffee, chocolate and essential oils from spices",
+            "Milk and milk products processing: Pasteurized and sterilized milk, cream, butter, ghee, ice-cream, cheese and milk powder",
+            "Animal products processing: Drying and canning of fish, post mortem changes, tenderization and freezing of meat, egg powder"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Food Engineering",
+          "unitTitleMr": "अन्न अभियांत्रिकी",
+          "topics": [
+            "Mass and energy balance",
+            "Momentum transfer: Flow rate and pressure drop relationships for Newtonian fluids flowing through pipe, Characteristics of non-Newtonian fluids - generalized viscosity coefficient and Reynolds number, Flow of compressible fluid, Flow measurement, Pumps and compressors",
+            "Heat transfer: Heat transfer by conduction, convection, radiation, boiling and condensation, Unsteady state heat transfer in simple geometry, NTU- effectiveness relationship of co-current and counter current double pipe heat exchanger",
+            "Mass transfer: Molecular diffusion and Fick's Law, Steady state mass transfer, Convective mass transfer, Permeability of films and laminates",
+            "Mechanical operations: Energy requirement and rate of operations involved in size reduction of solids, high pressure homogenization, filtration, centrifugation, settling, sieving, flow through porous bed, agitation of liquid, solid-solid mixing, and single screw extrusion",
+            "Thermal operations: Energy requirement and rate of operations involved in process time evaluation in batch and continuous sterilization, evaporation of liquid foods, hot air drying of solids, spray and freeze-drying, freezing and crystallization",
+            "Mass transfer operations: Properties of air-water vapor mixture; Humidification and dehumidification operations"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Final merit list will be prepared by considering the marks obtained in Written test & Interview."
+  ]
+}

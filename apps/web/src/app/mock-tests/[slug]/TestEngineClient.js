@@ -4,7 +4,7 @@
 // Client component — all state local (no login required)
 // ============================================================
 'use client'
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import Link from 'next/link'
 import {
   trackMockTestStart,
@@ -15,7 +15,16 @@ import {
 } from '@/lib/analytics'
 import { getSyllabusForMockTest } from '@/lib/syllabusData'
 import MpscFeedbackModal from '@/components/MpscFeedbackModal'
+import { recordTestAttempt } from '@/lib/prepVault'
 import styles from './testEngine.module.css'
+
+function TestProgressFillBar({ percent }) {
+  const fillRef = useRef(null)
+  useEffect(() => {
+    if (fillRef.current) fillRef.current.style.width = `${percent}%`
+  }, [percent])
+  return <div ref={fillRef} className={styles.progressFill} />
+}
 
 export default function TestEngineClient({ test }) {
   const [phase, setPhase] = useState('idle') // idle | running | submitted
@@ -211,6 +220,33 @@ export default function TestEngineClient({ test }) {
       rank: stateRank ? `#${stateRank}` : '',
     })
 
+    // Local preparation vault recording (100% offline & private)
+    try {
+      const questionsWithUserAnswers = (test.questions || []).map(q => ({
+        id: q.id,
+        question: q.text || q.question,
+        options: q.options || {},
+        correct: q.correct,
+        userAnswer: answers[q.id] || null,
+        explanation: q.explanation,
+        subject: q.subject || test.subject || 'General Studies',
+        topic: q.topic || 'General'
+      }))
+
+      recordTestAttempt({
+        testSlug: test.slug,
+        testTitle: test.title,
+        examCadre: test.exam || 'MPSC',
+        score: parseFloat(marksEarned.toFixed(2)),
+        maxMarks,
+        percentage: percent,
+        timeSpentSeconds: ((test.durationMinutes || 60) * 60) - timeLeft,
+        questions: questionsWithUserAnswers
+      })
+    } catch (vaultErr) {
+      console.warn('[prepVault] Error recording attempt in vault:', vaultErr)
+    }
+
     // Auto-record attempt in database and pre-fetch personalized roadmap
     try {
       fetch('/api/mock-tests/submit', {
@@ -290,7 +326,7 @@ export default function TestEngineClient({ test }) {
     return (
       <main className={styles.page}>
         <div className="container">
-          <nav className="breadcrumb" style={{ padding: '16px 0' }}>
+          <nav className={`breadcrumb ${styles.breadcrumbNav}`}>
             <Link href="/">Home</Link><span>/</span>
             <Link href="/mock-tests">Mock Tests</Link><span>/</span>
             <span>{test.title}</span>
@@ -301,7 +337,7 @@ export default function TestEngineClient({ test }) {
               <span className={styles.examBadge} data-exam={test.examType}>{test.examType}</span>
               <span className={styles.diffBadge} data-diff={test.difficulty}>{test.difficulty}</span>
               {test.isFullMock && (
-                <span style={{ fontSize: '11px', fontWeight: 800, padding: '4px 12px', borderRadius: '100px', background: '#ecfdf5', color: '#047857', border: '1px solid #6ee7b7' }}>
+                <span className={styles.blueprintBadge}>
                   💯 Official Blueprint (100 Qs)
                 </span>
               )}
@@ -330,13 +366,13 @@ export default function TestEngineClient({ test }) {
 
             {/* Sections Breakdown if full exam */}
             {test.sections && test.sections.length > 0 && (
-              <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '18px 20px', marginBottom: '24px' }}>
-                <h3 style={{ fontSize: '14px', fontWeight: 700, margin: '0 0 10px', color: '#1e293b' }}>
+              <div className={styles.sectionsBox}>
+                <h3 className={styles.sectionsTitle}>
                   📚 Examination Sections & Marks Weightage:
                 </h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '8px' }}>
+                <div className={styles.sectionsGrid}>
                   {test.sections.map((s, idx) => (
-                    <div key={s.id || idx} style={{ fontSize: '13px', color: '#475569', background: '#fff', padding: '8px 12px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                    <div key={s.id || idx} className={styles.sectionItem}>
                       <strong>Section {idx + 1}:</strong> {s.name} ({s.qEnd - s.qStart + 1} Qs)
                     </div>
                   ))}
@@ -814,7 +850,10 @@ export default function TestEngineClient({ test }) {
               >
                 📝 Feedback & Report (अभिप्राय / त्रुटी)
               </button>
-              <Link href="/mock-tests" className="btn-primary">Browse All Mock Tests →</Link>
+              <Link href="/mpsc/my-preparation" className={`btn-primary ${styles.btnPreparation}`}>
+                📓 View in Mistake Notebook (चूक वही) →
+              </Link>
+              <Link href="/mock-tests" className="btn-outline">Browse All Mock Tests →</Link>
             </div>
           </div>
           <MpscFeedbackModal
@@ -1040,7 +1079,7 @@ export default function TestEngineClient({ test }) {
             </div>
 
             <div className={styles.progressBar}>
-              <div className={styles.progressFill} style={{ width: `${(answered / test.totalQuestions) * 100}%` }} />
+              <TestProgressFillBar percent={(answered / test.totalQuestions) * 100} />
             </div>
             <p className={styles.progressText}>{answered} of {test.totalQuestions} questions answered</p>
 

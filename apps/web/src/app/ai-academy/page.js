@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // app/ai-academy/page.js — ExamUdaan AI Academy
 // Practical AI Courses & Live Cohorts for Students, Aspirants & Engineers
 // Mentored by a 20-Year Enterprise Software Architect & AI Veteran
@@ -214,7 +214,7 @@ export default function AiAcademyPage() {
             </a>
             <a
               href={SITE_CONFIG?.social?.whatsappChannel || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v'}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               rel="noopener noreferrer"
               style={{
                 background: '#16a34a', color: '#fff', padding: '12px 24px',
@@ -467,7 +467,7 @@ export default function AiAcademyPage() {
               </p>
               <a
                 href={SITE_CONFIG?.social?.whatsappChannel || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v'}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 style={{
                   background: '#16a34a', color: '#fff', padding: '10px 20px',

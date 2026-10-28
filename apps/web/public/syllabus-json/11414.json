@@ -1,0 +1,101 @@
+{
+  "docId": 11414,
+  "examName": "Assistant Professor (Biophysics) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+  "examNameMr": "सहायक प्राध्यापक (बायोफिजिक्स) महाराष्ट्र शिक्षण सेवा, गट-अ (कॉलेज शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+  "conductingBody": "MPSC",
+  "year": 2025,
+  "language": "English",
+  "category": "education",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Assistant Professor (Biophysics) Maharashtra Education Service, Group-A (Collegiate Branch) Higher and Technical Education Department - Syllabus",
+      "paperTitleMr": "सहायक प्राध्यापक (बायोफिजिक्स) महाराष्ट्र शिक्षण सेवा, गट-अ (कॉलेज शाखा) उच्च आणि तंत्र शिक्षण विभाग - अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Molecular Biophysics",
+          "unitTitleMr": "रेणू जैवभौतिकशास्त्र",
+          "topics": [
+            "Biomolecules and biopolymers: amino acids, their classification and properties, peptides, nucleotides and their properties, oligonucleotides, monosaccharides, polysaccharides and their properties, linkages in polysaccharides, structure and function of cellulose and chitin, glyco-conjugates, classification and biological role of vitamins and hormones.",
+            "Nucleic acids: structure of DNA, conformational parameters of nucleic acids and their constituents, Chargaff’s rule, DNA polymorphism, DNA supercoiling, hyperchromicity, circular DNA, types and structure of mRNA, tRNA, rRNA and modified nucleotides, nucleic acid sequencing.",
+            "Proteins: structural levels of proteins and stabilizing factors, protein conformation, Ramchandran plot, helical parameters and conformation, organization and interaction of angles, structure of alpha keratin, silk fibrin, collagen, actin, myosin, haemoglobin, myoglobin, lysozyme, cytochromes, classification and role of beta-bends and bulges, super secondary structure, domains and motifs, proteins in solution, protein sequencing, concept of protein evolution with reference to cytochrome and haemoglobin."
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Biophysical chemistry",
+          "unitTitleMr": "जैवभौतिक रसायनशास्त्र",
+          "topics": [
+            "Water, acids, bases and redox potential: structure of water molecule, association of water molecules through hydrogen bonding, nature of hydrophobic interactions, physico-chemical properties of water, state of water in biological systems and its significance, strong and weak acids and bases, molarity and normality, amphoteric electrolytes, pH, determination of pH from concentration of H+ and OH- ions, measurement of pH, Henderson and Haselbach equation, pH titration curve, pKa value and its significance, buffers, oxidation and reduction, redox potential, equivalence and electrical and chemical energy, electrochemical cells, galvanic cell, potential of half-cell, Nernst equation, examples of redox potential in biological systems.",
+            "Thermodynamics and bioenergetics: laws of thermodynamics, concept of free-energy, unavailable energy and entropy, negative entropy change in living systems, heat content of food, bomb calorimeter, energy generation and energy transfer processes in biochemical reactions, metabolism of glucose and generation of ATP, energy requirements in cell metabolism, role and structure of mitochondria, high-energy phosphate bond, electron transfer phenomenon and biological energy transfer.",
+            "Macromolecular interactions: ligand interaction at equilibrium, identical independent sites, Scatchard plot, multiple classes of independent sites, interaction between binding sites, allosterism, MWC model, sequential model, binding of oxygen to haemoglobin, binding of two different ligands, energetics and dynamics of binding, structures of protein-ligand complexes, relationship between protein conformation and binding, binding of immunoglobulins and DNA-binding proteins, free radicals in biology and medicine."
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Cellular Biophysics",
+          "unitTitleMr": "पेरणीय जैवभौतिकशास्त्र",
+          "topics": [
+            "Membrane structure and function: models of membrane, composition, electrical properties, principles of membrane organization and stability, biogenesis of cell membrane, self-organization of lipids and proteins, linear aggregates of membrane components, aggregation of lipid molecules in mycelia and lipid double layers, biologically important non-lamellar lipid phases, formation of flexible membranous nanodomains (lipid rafts), lateral phase separation of membranous components, aggregation of nanodomains, formation and stability of membranous nanotubes.",
+            "Elastic properties of membranes: deformation in levels of a membrane, flexible energy, influence of forms of membrane components and direct interactions between membranous components in elastic properties of membranes, lateral distribution of membranous components and elastic properties of membranes, elastic properties of membranes and forms of cells and organelles, influence of cytoskeleton on forms of cells, molecular motion in membrane and membrane fluidity, protein-lipid interactions, phase properties of biological membranes.",
+            "Cell-cell interactions: connection between cell and its environment, glycocalyx, extracellular matrix, collagen, elastin, fibronectin, lamin, proteoglycans, integrins, cell junctions, desmosomes, gap junction, tight junction, plasmodesmata, synapse and synaptic vesicles, cell signalling, paracrine, autocrine, endocrine and synaptic signalling, heat shock proteins, G-protein structure and role in signalling, cyclic AMP, role of calcium ions in signalling, CAM kinases, interaction between cyclic MP and Ca++ ions, role of methylation in adaptation and bacterial chemotaxis."
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "Microscopic Techniques",
+          "unitTitleMr": "सूक्ष्मदर्शकीय तंत्रे",
+          "topics": [
+            "General introduction: electromagnetic radiations, properties of light, light intensity, amplitude, frequency, wavelength, polarization, microscope design, parts of microscope, magnification, resolution, numerical aperture, principles of light microscopy, types of light microscope, image formation, aberrations, imaging modes, specimen preparation, bright field microscopy, dark field microscopy, phase-contrast microscopy, applications and limitations of light microscopy.",
+            "Electron microscopy: introduction to transmission electron microscopy, instrumentation, electron sources, electromagnetic lenses, imaging modes, image contrast, bright field, dark field, magnification, resolution, energy filtered TEM, electron diffraction, techniques in TEM, negative staining, shadow casting, freeze fracture, freeze etching, applications and limitations of TEM, introduction to scanning electron microscopy, instrumentation, electron beam-specimen interaction, energy dispersive spectroscopy (EDS), types of signals produced by SEM, x-rays, light rays, secondary electrons, back scattered electrons, applications and limitations of SEM.",
+            "Scanning probe microscopy: general introduction, scanning tunnelling microscopy, atomic force microscopy, principle of working, working modes, applications and limitations of scanning tunnelling microscopy and atomic force microscopy.",
+            "Advanced microscopy techniques: fluorescence microscopy (principle, design and working), choosing a probe, choosing a light source, choosing a filter set, controls for antibody staining, bleed through, autofluorescence, FRET, fluorophores, types of fluorescence microscopes, epifluorescence microscopy, confocal microscope, multiphoton microscope, total internal reflection fluorescence (TIRF), applications and limitations of fluorescence microscopy."
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Molecular enzymology",
+          "unitTitleMr": "आण्विक विकरशास्त्र",
+          "topics": [
+            "Enzymes as biocatalysts: remarkable properties of enzymes as biocatalysts, active site of enzymes, three-point attachment, mechanism of enzyme action, flexible enzymes, lock-and-key hypothesis, induced-fit hypothesis, catalytic efficiency of enzymes, micro-environmental approach to enzyme dynamics, enzyme nomenclature and classification, different classes of enzymes with examples, isomerization, rearrangement and condensation reactions, molecular dynamics and transient state in enzyme catalysis.",
+            "Basic principles of chemical catalysis and enzyme kinetics: introduction to chemical kinetics, velocity, order and molecularity of a chemical reaction, kinetic equations for zero, first, second and third order reactions, determination of order of reaction, Arrhenius equation, activation energy and its estimation, collision and transition state theories of reaction rate, catalysts, mode of action of catalysts, nucleophilic, electrophilic and acid-base catalysis, enzyme catalysis, kinetics of single substrate reaction, Michaelis equation, steady state kinetics, transient phases of enzyme reactions, Lineweaver-Burk plot, Eddie-Hofstee plot, Woolf plot, effect of pH, temperature, metal ions and substrate concentration on enzyme activity, enzyme turn over, mechanisms of multi-substrate enzyme reactions (conceptual approach), kinetics of reversible enzyme inhibition, mechanism of action of chymotrypsin and ribonuclease.",
+            "Enzyme regulation and enzyme technology: control of enzyme activity, feedback inhibition, kinetic behaviour of allosteric enzymes, mechanism of allosteric interactions, subunit structure and protein assembly, aspartate transcarbamoylase, proton ATPase, metalloenzymes, carboxypeptidase A, role of zinc in enzyme activity, enzyme immobilization techniques, use of isolated enzymes in industrial processes, enzymes in clinical diagnosis, isozymes, abzymes, ribozymes, enzyme therapy, extremozymes, solventogenic and non-aqueous enzymes."
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Environmental Biophysics",
+          "unitTitleMr": "पर्यावरणीय जैवभौतिकशास्त्र",
+          "topics": [
+            "Introduction to environment, microenvironment, energy exchange, mass and momentum transport, conservation of energy and mass, continuity in the biosphere. Atmospheric temperature and its behaviour, temperature variation, modelling of vertical and temporal variation in air temperature, thermal time, temperature and biological development. Water potential in organism and their surrounding.",
+            "General understanding of conductance of heat, mass and transport; molecular diffusion, diffusive conductance of integument, conductance of heat, mass and transport in laminar force convection. Animal shapes and heat conductance. Radiation fluxes in natural environment, direct, diffuse and reflected radiation, direct and diffuse shortwave irradiance, solar radiation under clouds, absorptivities for thermal and solar radiation.",
+            "Energy concept, metabolism, conduction of heat in animal coats and tissues, quantitative analysis of animal thermal response, operative temperature, complexities of animal energetic, animal and water; human and their environment: metabolism, evaporation, survival in cold and heat.",
+            "Leaf temperature, aerodynamics temperature of plant canopies, transpiration, canopy transpiration, assimilation models, biochemical model, stomatal conduction, leaf area index and light transmission, light transmission through stomatal conductance, transmission of diffuse radiation, light scattering in canopies, reflection of light in plants, light scattering in canopies, reflection of light by plant."
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Physiology and Biophysics",
+          "unitTitleMr": "शरीरक्रियाविज्ञान आणि जैवभौतिकशास्त्र",
+          "topics": [
+            "Brain, neurophysiology and special senses: general anatomy of brain, central and peripheral nervous system, nerve cell structure, myelinated and non-myelinated nerve cells, blood brain barrier, generation of nerve impulse, synaptic transmission, physico-chemical basis of membrane potential, resting and action potential, propagation of action potential, voltage clamp, patch clamp technique, Hodgkin-Huxley analysis, motor and cortical control, sleep and consciousness, neuromuscular junction, excitation contraction coupling, neuronal networks, processing of information, memory and neuropeptides, special senses: biophysics of sensory mechanism and function of receptor cells, cutaneous, olfactory and gustatory sensations, vision, physical aspects of vision: neurophysiology of color vision, visual evoked potentials, audition: physical aspects, auditory transduction, acoustic encoding.",
+            "Cardiovascular and pulmonary physiology: physical characteristics of blood, hemodynamics principles and equations, genesis and spread of cardiac impulse, cardiodynamics, regulation of blood pressure and blood volume, heart rate, cardiac output and venous return, cardiovascular responses to stress (exercise, shock and hypertension), biophysical aspects of lung expansion, respiratory mechanics and gas exchange process, gas diffusion and transport, pulmonary function test and its significance.",
+            "Renal and reproduction physiology: ionic composition and distribution of body fluids, body fluid osmolality, dialysis and dehydration, biophysical aspects of renal filtration and blood flow, renal tubules and their function, effective circulation volume, autoregulation, reabsorption and secretion, regulation of acid-base balance, hormonal control of reproductive mechanisms, morphology and dynamics of sperms, kinematics parameters of sperm movement and sperm motility, basic principles of assisted reproductive technology: IUI and IVF."
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

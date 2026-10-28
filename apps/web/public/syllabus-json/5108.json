@@ -1,0 +1,261 @@
+{
+  "docId": 5108,
+  "examName": "Town Planner, Group-A Examination",
+  "examNameMr": "नगर रचनाकार, गट-अ परीक्षा",
+  "conductingBody": "MPSC",
+  "year": 2022,
+  "language": "English",
+  "category": "engineering",
+  "totalMarks": 100,
+  "mainsMarks": 100,
+  "interviewMarks": 0,
+  "examPattern": "Written Examination / Screening Test followed by Document Verification or Interview",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "Town Planner, Group-A Syllabus",
+      "paperTitleMr": "नगर रचनाकार, गट-अ अभ्यासक्रम",
+      "totalMarks": 100,
+      "duration": "1 Hour",
+      "type": "Objective",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": 1,
+          "unitTitle": "Current events and Technology",
+          "unitTitleMr": "चालू घडामोडी आणि तंत्रज्ञान",
+          "topics": [
+            "Current events of national and international importance",
+            "Industrial, Economic, Spatial Planning, Urban Development",
+            "Technology - Applications of Total station, Drone, Remote sensing, GIS, GPS, Computer-Aided Design in Urban Planning"
+          ]
+        },
+        {
+          "unitNumber": 2,
+          "unitTitle": "Urbanisation, Govt. Schemes and Missions",
+          "unitTitleMr": "शहरीकरण, शासकीय योजना आणि मोहिमा",
+          "topics": [
+            "Salient features of Indian Urbanisation, Challenges of Urbanisation",
+            "Atal Mission for Rejuvenation and Urban Transformation, Shyam Prasad Mukherjee Rurban Mission, Pradhan Mantri Awas Yojna, Smart City",
+            "National Urban Information System, National Natural Resources Management System, India Urban Observatory",
+            "Various schemes for financial assistance to Municipal Councils under plan schemes, Preparation of DPR"
+          ]
+        },
+        {
+          "unitNumber": 3,
+          "unitTitle": "Policies in India and Maharashtra",
+          "unitTitleMr": "भारत आणि महाराष्ट्रातील धोरणे",
+          "topics": [
+            "National Urban Transport Policy, National Land-utilisation policy, National Housing Policy",
+            "National Energy Policy, The Street Vendors Act, 2014",
+            "Policy, Scheme and Project-Hierarchy, Policy and Act interrelationship"
+          ]
+        },
+        {
+          "unitNumber": 4,
+          "unitTitle": "RTI & RTS Acts",
+          "unitTitleMr": "माहिती अधिकार आणि सेवा हक्क कायदा",
+          "topics": [
+            "Right to Information Act",
+            "Right to Services Act"
+          ]
+        },
+        {
+          "unitNumber": 5,
+          "unitTitle": "Theories of Planning",
+          "unitTitleMr": "नियोजनाचे सिद्धांत",
+          "topics": [
+            "Garden City Concept, Geddian Trio Concept, Concentric zone model, Sector Theory, Multi-nuclei theory, Neighborhood Concept",
+            "Central Place Theory by Christaller and Losch"
+          ]
+        },
+        {
+          "unitNumber": 6,
+          "unitTitle": "Analysis",
+          "unitTitleMr": "विश्लेषण",
+          "topics": [
+            "Threshold analysis",
+            "SWOT Analysis",
+            "Land Suitability Analysis"
+          ]
+        },
+        {
+          "unitNumber": 7,
+          "unitTitle": "Regional Plan",
+          "unitTitleMr": "प्रादेशिक आराखडा",
+          "topics": [
+            "Need of Regional Plan, Delineation of Region, Types of Regions, Contents of Regional Plan",
+            "Surveys necessary for Regional Plan, Analysis and Projections",
+            "Process of preparation of Regional Plan as per provisions of MR and TP Act, 1966, Relation with State Plan and surroundings",
+            "National Capital Region"
+          ]
+        },
+        {
+          "unitNumber": 8,
+          "unitTitle": "Development Plan",
+          "unitTitleMr": "विकास आराखडा",
+          "topics": [
+            "Difference between Structure Plan and Development Plan, Classification of Towns",
+            "Surveys, Analysis and Projections, Demographic projections, Goals and Objectives, Public participation",
+            "Implementation and financial aspects, Relation with Regional Plan, Contents of D.P., Planning norms",
+            "Modifications to sanctioned DP, Modifications of substantial nature, Notices under section 49 and 127",
+            "Process of DP preparation, publication, submission and approval as per provisions of MR and TP Act, 1966, GIS based Development Plans under AMRUT"
+          ]
+        },
+        {
+          "unitNumber": 9,
+          "unitTitle": "Town Planning Scheme",
+          "unitTitleMr": "नगर रचना योजना",
+          "topics": [
+            "Concept, Preparation of TP Scheme as per provisions of MR and TP Act, 1966, Relation with DP",
+            "Original Plot, Final Plot, Semi-final plot, Incremental contribution and rationale for charging it",
+            "Contents of TPS, Cost of TPS, Advance possession, Amenities partially beneficial",
+            "Functions of Arbitrator, Functions of Tribunal of Appeal"
+          ]
+        },
+        {
+          "unitNumber": 10,
+          "unitTitle": "Local Area Plan",
+          "unitTitleMr": "स्थानिक क्षेत्र योजना",
+          "topics": [
+            "Concept, Objectives, Delineation of LAP boundary, Methodology of preparation",
+            "Case studies in India, Provision in UDCPR"
+          ]
+        },
+        {
+          "unitNumber": 11,
+          "unitTitle": "Various Planning Authorities in Maharashtra",
+          "unitTitleMr": "महाराष्ट्रातील विविध नियोजन प्राधिकारी",
+          "topics": [
+            "MMRDA, PMRDA, CIDCO, MSRDC, MADC, MIDC",
+            "Functions, roles and responsibilities, projects carried out"
+          ]
+        },
+        {
+          "unitNumber": 12,
+          "unitTitle": "Land Measurement & Ownership",
+          "unitTitleMr": "जमीन मोजणी आणि मालकी",
+          "topics": [
+            "Measurement plan and record of rights"
+          ]
+        },
+        {
+          "unitNumber": 13,
+          "unitTitle": "Unified Development Control Regulations",
+          "unitTitleMr": "एकत्रित विकास नियंत्रण नियमावली",
+          "topics": [
+            "Procedure for obtaining development permission/building permission, Grant/ refusal of permission, deemed permission",
+            "Approvals on risk-based categorisation, Commencement of works, General land development requirements",
+            "Land-Use Classification and equivalency of zones, concept of p-line, Ancillary FSI, TDR, AR, Reservation Credit Certificate",
+            "Removal of difficulties, Redevelopment of old dilapidated/dangerous buildings, housing for EWS/LIG, Incentive for green buildings",
+            "Off-street parking requirements, Affordable housing, Voluntary TP Schemes, Heritage list card, premiums and their payment",
+            "Integrated Township, Transit oriented development, SRA"
+          ]
+        },
+        {
+          "unitNumber": 14,
+          "unitTitle": "Development Charges & Appeals",
+          "unitTitleMr": "विकास शुल्क आणि अपिले",
+          "topics": [
+            "Development charges, Revocation of permission, Provisions of appeal under section 47 and 126, Actions against unauthorised development",
+            "Difference between volume based building code and conventional building code"
+          ]
+        },
+        {
+          "unitNumber": 15,
+          "unitTitle": "Implementation of Projects",
+          "unitTitleMr": "प्रकल्पांची अंमलबजावणी",
+          "topics": [
+            "PPP models – BOT, BOO, BOOT, BOLT"
+          ]
+        },
+        {
+          "unitNumber": 16,
+          "unitTitle": "Transportation System",
+          "unitTitleMr": "वाहतूक प्रणाली",
+          "topics": [
+            "Transportation Studies, Origin and Destination, traffic volume survey, modal split, transport",
+            "Public transport, BRT, Metro/ Mono Rail, Intelligent Transport System and its applications"
+          ]
+        },
+        {
+          "unitNumber": 17,
+          "unitTitle": "Environment",
+          "unitTitleMr": "पर्यावरण",
+          "topics": [
+            "Environment Clearance, Environmental Impact Assessment",
+            "Eco-sensitive zones, Sustainable development"
+          ]
+        },
+        {
+          "unitNumber": 18,
+          "unitTitle": "Acts and Rules",
+          "unitTitleMr": "कायदे आणि नियम",
+          "topics": [
+            "Evolution of Planning Legislation in India",
+            "Maharashtra Regional Town Planning Act, 1966 and rules thereunder",
+            "Maharashtra Municipal Corporations Act, 1949",
+            "Maharashtra Municipal Councils, Nagar Panchayats and Industrial Townships Act, 1965",
+            "Maharashtra Land Revenue Code, 1966",
+            "Environment Protection Act, 1986",
+            "Bombay Stamp Act, 1958",
+            "73rd and 74th Constitutional Amendment Act",
+            "Maharashtra Metropolitan Planning Committees (Constitution and Functions) Act, 1999 and rules thereunder",
+            "Maharashtra Metropolitan Region Development Authority Act, 2016"
+          ]
+        },
+        {
+          "unitNumber": 19,
+          "unitTitle": "Land Acquisition",
+          "unitTitleMr": "भूसंपाद",
+          "topics": [
+            "Need of compulsory acquisition, Functions of Land Acquisition officer",
+            "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013",
+            "Land reference cases"
+          ]
+        },
+        {
+          "unitNumber": 20,
+          "unitTitle": "Valuation",
+          "unitTitleMr": "मूल्यांकन",
+          "topics": [
+            "Value, Cost, Price, Purposes of Valuation, Special Characteristics of landed property",
+            "Supply and demand of landed property, Interests in landed property",
+            "Forms of Value, Forms of rent, Capitalised value, Year’s purchase",
+            "Outgoing, Depreciation, sinking fund, reversionary value"
+          ]
+        },
+        {
+          "unitNumber": 21,
+          "unitTitle": "Valuation Tables",
+          "unitTitleMr": "मूल्यांकन तक्ते",
+          "topics": [
+            "Meaning and utilities of valuation tables",
+            "Amount of Rs. 1/-, Present value of Rs 1/-, Amount of Rs.1/- p.a., Present value of Rs.1/-p.a.",
+            "Annuity of Rs.1/-, Sinking fund, Single and dual rate table-concepts"
+          ]
+        },
+        {
+          "unitNumber": 22,
+          "unitTitle": "Methods of Valuation",
+          "unitTitleMr": "मूल्यांकनाचे पद्धती",
+          "topics": [
+            "Comparative methods, Market Approach, Contractor’s method, Investment method, Belting method"
+          ]
+        },
+        {
+          "unitNumber": 23,
+          "unitTitle": "Annual Statement of Rates",
+          "unitTitleMr": "वार्षिक दर तक्ता",
+          "topics": [
+            "True Market Value, Procedure for preparation of Annual Statement of Rates",
+            "Valuation for bulk land, Guidelines"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": []
+}

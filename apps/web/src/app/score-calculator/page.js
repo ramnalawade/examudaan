@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // score-calculator/page.js — Official Response Sheet Raw Score Calculator
 // ExamUdaan.in | TCS iON, MPSC, Police Bharti & SSC Response Sheet Parser
 // Fully responsive across Mobile, Tablet, Laptop, and Desktop
@@ -488,6 +488,11 @@ export default function ScoreCalculatorPage() {
               </div>
             </div>
 
+            {/* Transparent Normalization & Merit Disclaimer */}
+            <div className={styles.disclaimerNote}>
+              ⚖️ <strong>Normalization & Merit Disclaimer:</strong> Raw scores are computed strictly according to your entered responses and official exam marking rules. Final normalized scores, percentile bands, and merit lists depend on official commission shift normalization formulas (equi-percentile / mean-standard deviation) and revised final answer keys.
+            </div>
+
             {/* Section Breakdown Card */}
             <div className={styles.card}>
               <h3 className={styles.cardTitle} style={{ marginBottom: 14 }}>
@@ -535,7 +540,7 @@ export default function ScoreCalculatorPage() {
                   href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
                     `🎯 *My ExamUdaan Scorecard*\n\nExam: ${exam.name}\nRaw Score: *${result.rawScore} / ${result.maxScore} Marks*\nCorrect: ${result.correctCount} | Wrong: ${result.wrongCount}\nAccuracy: ${result.accuracy}%\n\nCalculate your exact raw score & cutoff standing here: https://examudaan.in/score-calculator`
                   )}`}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   rel="noopener noreferrer"
                   className={styles.shareBtn}
                 >

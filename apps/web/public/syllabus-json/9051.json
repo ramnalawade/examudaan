@@ -1,0 +1,149 @@
+{
+  "docId": 9051,
+  "examName": "Assistant Director in the Directorate of Cultural Affairs, Group-B Tourism and Cultural Affairs Department",
+  "examNameMr": "सहाय्यक संचालक, सांस्कृतिक कार्य संचालनालय, गट-ब, पर्यटन व सांस्कृतिक कार्य विभाग",
+  "conductingBody": "MPSC",
+  "year": 2024,
+  "language": "Marathi",
+  "category": "group-b",
+  "totalMarks": 250,
+  "mainsMarks": 200,
+  "interviewMarks": 50,
+  "examPattern": "Written Examination (200 Marks) followed by Interview (50 Marks)",
+  "papers": [
+    {
+      "paperNumber": 1,
+      "paperTitle": "General Knowledge, Intelligence Test, and Department-related Subject/Knowledge",
+      "paperTitleMr": "सामान्य ज्ञान, बुद्धीमापन चाचणी, विभागाशी संबंधित घटक",
+      "totalMarks": 200,
+      "duration": "1 Hour",
+      "type": "Objective Multiple Choice",
+      "isQualifying": false,
+      "isMerit": true,
+      "units": [
+        {
+          "unitNumber": "1",
+          "unitTitle": "General Knowledge",
+          "unitTitleMr": "सामान्य ज्ञान",
+          "topics": [
+            "History of Maharashtra",
+            "Geography of Maharashtra",
+            "Right to Information Act 2005",
+            "Ancient Monuments and Archaeological Sites and Remains Act 1960",
+            "Indian Constitution",
+            "Computer and Information Technology",
+            "Human Rights and Responsibilities",
+            "Current Affairs at Global, National, and Maharashtra Level (Political, Industrial, Economic, Social, Educational, Geographical, Astronomical, Cultural, Scientific, etc.)",
+            "Science and Technology"
+          ]
+        },
+        {
+          "unitNumber": "2",
+          "unitTitle": "Intelligence Test",
+          "unitTitleMr": "बुद्धीमापन विषयक प्रश्न",
+          "topics": [
+            "Questions designed to measure how quickly and accurately a candidate can think"
+          ]
+        },
+        {
+          "unitNumber": "3",
+          "unitTitle": "Department-related Subject/Knowledge - Cultural Policy of Maharashtra",
+          "unitTitleMr": "विभागाशी संबंधित घटक/ज्ञान - महाराष्ट्राचे सांस्कृतिक धोरण",
+          "topics": [
+            "Cultural Policy of Maharashtra and its background",
+            "Priority areas and prominent features in the cultural policy of Maharashtra",
+            "Provisions regarding women in the cultural policy of Maharashtra",
+            "Extinction-prone folk arts in the cultural policy of Maharashtra"
+          ]
+        },
+        {
+          "unitNumber": "3.2",
+          "unitTitle": "Cultural Events of Maharashtra",
+          "unitTitleMr": "महाराष्ट्रातील सांस्कृतिक घडामोडी",
+          "topics": [
+            "Maharashtra Bhushan Award",
+            "Gaanratna Lata Mangeshkar Award",
+            "Rashtriya Sanskriti Mahotsav (Ek Bharat Shreshtha Bharat)",
+            "Awards given by Maharashtra Government for Theatre",
+            "Maharashtra State Cultural Awards",
+            "Various awards in the field of music",
+            "Maharashtra Chitrapat Chintan",
+            "Hindavi Swarajya Mahotsav",
+            "Features of Kalaangan Programs",
+            "Ellora-Ajanta Mahotsav",
+            "Various initiatives at the state level for the protection of movable and immovable cultural heritage"
+          ]
+        },
+        {
+          "unitNumber": "3.3",
+          "unitTitle": "Organizations working in the Cultural Field",
+          "unitTitleMr": "सांस्कृतिक क्षेत्रात कार्यरत विविध संघटना",
+          "topics": [
+            "South Central Zone Cultural Centre and its work",
+            "West Zone Cultural Centre and its work",
+            "Directorate of Archaeology and Museums and its work",
+            "Directorate of Tourism and Cultural Affairs and its work",
+            "P. L. Deshpande Maharashtra Kala Academy and its work",
+            "Dadasaheb Phalke Chitrnagari work",
+            "Kolhapur Chitranagari work",
+            "Work of Directorate of Archives",
+            "Work of Directorate of Cultural Affairs",
+            "Work of Darshnika Department",
+            "Work of Hindi, Sindhi, and Gujarati Sahitya Academy",
+            "Work of Rangbhumi Parinrikshan Mandal",
+            "Work of Sangeet Natak Academy",
+            "Work of Bharatiya Sanskriti Sambandh Parishad"
+          ]
+        },
+        {
+          "unitNumber": "3.4",
+          "unitTitle": "Various Cultural Schemes of Maharashtra Government",
+          "unitTitleMr": "महाराष्ट्र शासनाच्या विविध सांस्कृतिक योजना",
+          "topics": [
+            "Various schemes of Directorate of Cultural Affairs",
+            "Grants given by Maharashtra Government to various institutions working in the cultural field"
+          ]
+        },
+        {
+          "unitNumber": "3.5",
+          "unitTitle": "Cultural Event Management",
+          "unitTitleMr": "सांस्कृतिक कार्यक्रम व्यवस्थापन",
+          "topics": [
+            "Concept of cultural event management",
+            "Fundamentals of cultural event management",
+            "Necessary provisions for cultural event management from a security perspective"
+          ]
+        },
+        {
+          "unitNumber": "3.6",
+          "unitTitle": "Review of Cultural Events",
+          "unitTitleMr": "सांस्कृतिक घडामोडींचा आढावा",
+          "topics": [
+            "Famous fairs, festivals, and celebration features in Maharashtra",
+            "State Government schemes for the film sector",
+            "State Government schemes for folk art",
+            "Rajarshi Shahu Maharaj Vriddha Sahityik va Kalavant Mandhan Yojana",
+            "Multifaceted cultural nature of Maharashtra",
+            "Introduction to various cultures of Maharashtra (e.g. attire, agriculture, festivals)",
+            "Introduction to art - nature of performing arts",
+            "Relationship between art and culture",
+            "Information about classical music and semi-classical music",
+            "Impact of social media and new media on culture",
+            "Impact of artificial intelligence on culture and art forms",
+            "International cultural relations",
+            "Impact of social media on art",
+            "Festival, pre-publicity of programs and post-program publicity"
+          ]
+        }
+      ]
+    }
+  ],
+  "optionalSubjects": [],
+  "importantNotes": [
+    "Negative marking: 25% or 1/4th of the total marks given for the question will be deducted for each wrong answer.",
+    "If more than one answer is given or if the candidate has not filled the complete circle on the OMR sheet, it will be treated as a wrong answer and 25% or 1/4th marks will be deducted.",
+    "If the total final marks come with decimals, they will remain in decimals and further action will be taken based on those decimal marks.",
+    "If a question is left unattempted, no negative marking will apply.",
+    "Final merit list will be based on the combined marks of the objective test and interview."
+  ]
+}
