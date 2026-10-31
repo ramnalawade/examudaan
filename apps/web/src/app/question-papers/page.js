@@ -392,7 +392,7 @@ export default function QuestionPapersPage() {
                             )}
                           </div>
                           <Link
-                            href={`/mpsc-pyq?docId=${row.id}`}
+                            href={`/mpsc-pyq?docId=${row.id}&docType=qp`}
                             className={styles.examTitleLink}
                             title="View paper in workspace"
                           >
@@ -406,18 +406,24 @@ export default function QuestionPapersPage() {
                         {/* Question Paper */}
                         <div>
                           {qp ? (
-                            <div className={styles.docItemBox}>
-                              <span className={styles.qpIcon}>📄</span>
-                              <div className={styles.docTextWrap}>
-                                <div className={styles.docTitle} title={qp.title}>
-                                   {row.paperNameMr || row.paperName || 'प्रश्नपत्रिका'}
-                                </div>
-                                <div className={styles.docMeta}>
-                                  <span className={styles.qpBadge}>QP</span>
-                                  <span>{qp.sizeFormatted || 'PDF'}</span>
+                            <Link
+                              href={`/mpsc-pyq?docId=${row.id}&docType=qp`}
+                              className={styles.docItemLink}
+                              title={`View ${row.paperNameMr || row.paperName || 'Question Paper'} in Study Workspace`}
+                            >
+                              <div className={styles.docItemBox}>
+                                <span className={styles.qpIcon}>📄</span>
+                                <div className={styles.docTextWrap}>
+                                  <div className={styles.docTitle} title={qp.title}>
+                                     {row.paperNameMr || row.paperName || 'प्रश्नपत्रिका'}
+                                  </div>
+                                  <div className={styles.docMeta}>
+                                    <span className={styles.qpBadge}>QP</span>
+                                    <span>{qp.sizeFormatted || 'PDF'}</span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </Link>
                           ) : (
                             <span className={styles.curationBadge}>Paper Not Found</span>
                           )}
@@ -426,20 +432,26 @@ export default function QuestionPapersPage() {
                         {/* Answer Key */}
                         <div>
                           {ak ? (
-                            <div className={styles.docItemBox}>
-                              <span className={styles.qpIcon}>🔑</span>
-                              <div className={styles.docTextWrap}>
-                                <div className={styles.docTitle} title={ak.title}>
-                                  {ak.isFinal ? 'अंतिम उत्तरतालिका' : 'प्रथम उत्तरतालिका'}
-                                </div>
-                                <div className={styles.docMeta}>
-                                  <span className={styles.akBadge}>
-                                    {ak.isFinal ? 'FINAL KEY' : 'FIRST KEY'}
-                                  </span>
-                                  <span>{ak.sizeFormatted || 'PDF'}</span>
+                            <Link
+                              href={`/mpsc-pyq?docId=${row.id}&docType=ak`}
+                              className={styles.docItemLink}
+                              title={`View ${ak.isFinal ? 'Official Final Answer Key' : 'Answer Key'} in Study Workspace`}
+                            >
+                              <div className={styles.docItemBox}>
+                                <span className={styles.qpIcon}>🔑</span>
+                                <div className={styles.docTextWrap}>
+                                  <div className={styles.docTitle} title={ak.title}>
+                                    {ak.isFinal ? 'अंतिम उत्तरतालिका' : 'प्रथम उत्तरतालिका'}
+                                  </div>
+                                  <div className={styles.docMeta}>
+                                    <span className={styles.akBadge}>
+                                      {ak.isFinal ? 'FINAL KEY' : 'FIRST KEY'}
+                                    </span>
+                                    <span>{ak.sizeFormatted || 'PDF'}</span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </Link>
                           ) : (
                             <span className={styles.curationBadge}>Key in Verification</span>
                           )}
@@ -448,7 +460,7 @@ export default function QuestionPapersPage() {
                         {/* Direct In-Browser Viewer CTA */}
                         <div>
                           <Link
-                            href={`/mpsc-pyq?docId=${row.id}`}
+                            href={`/mpsc-pyq?docId=${row.id}&docType=qp`}
                             className={styles.btnViewerDirect}
                           >
                             <span>📄</span> View Paper
@@ -487,7 +499,7 @@ export default function QuestionPapersPage() {
                       </div>
 
                       <Link
-                        href={`/mpsc-pyq?docId=${row.id}`}
+                        href={`/mpsc-pyq?docId=${row.id}&docType=qp`}
                         className={styles.mobileExamTitleLink}
                         title="View paper"
                       >
@@ -500,24 +512,36 @@ export default function QuestionPapersPage() {
 
                       <div className={styles.mobileDocsRow}>
                         {qp && (
-                          <div className={styles.mobileDocPill}>
-                            <span className={styles.qpIconSmall}>📄</span>
-                            <span>{row.paperNameMr || row.paperName || 'प्रश्नपत्रिका'}</span>
-                            <span className={styles.qpBadge}>{qp.sizeFormatted || 'PDF'}</span>
-                          </div>
+                          <Link
+                            href={`/mpsc-pyq?docId=${row.id}&docType=qp`}
+                            className={styles.mobileDocLink}
+                            title="View Question Paper"
+                          >
+                            <div className={styles.mobileDocPill}>
+                              <span className={styles.qpIconSmall}>📄</span>
+                              <span>{row.paperNameMr || row.paperName || 'प्रश्नपत्रिका'}</span>
+                              <span className={styles.qpBadge}>{qp.sizeFormatted || 'PDF'}</span>
+                            </div>
+                          </Link>
                         )}
                         {ak && (
-                          <div className={styles.mobileDocPill}>
-                            <span className={styles.qpIconSmall}>🔑</span>
-                            <span>{ak.isFinal ? 'अंतिम उत्तरतालिका' : 'उत्तरतालिका'}</span>
-                            <span className={styles.akBadge}>{ak.sizeFormatted || 'PDF'}</span>
-                          </div>
+                          <Link
+                            href={`/mpsc-pyq?docId=${row.id}&docType=ak`}
+                            className={styles.mobileDocLink}
+                            title="View Answer Key"
+                          >
+                            <div className={styles.mobileDocPill}>
+                              <span className={styles.qpIconSmall}>🔑</span>
+                              <span>{ak.isFinal ? 'अंतिम उत्तरतालिका' : 'उत्तरतालिका'}</span>
+                              <span className={styles.akBadge}>{ak.sizeFormatted || 'PDF'}</span>
+                            </div>
+                          </Link>
                         )}
                       </div>
 
                       <div className={styles.mobileActionRow}>
                         <Link
-                          href={`/mpsc-pyq?docId=${row.id}`}
+                          href={`/mpsc-pyq?docId=${row.id}&docType=qp`}
                           className={styles.btnViewerDirectMobile}
                         >
                           <span>📄</span> View Paper

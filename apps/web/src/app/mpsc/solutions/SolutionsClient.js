@@ -74,6 +74,8 @@ export default function SolutionsClient() {
   const handlePaperSelect = (paper) => {
     setSelectedPaper(paper)
     setCurrentPage(1)
+    const el = document.getElementById('solutions-list')
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   // Key Status Badge Helper
@@ -303,7 +305,7 @@ export default function SolutionsClient() {
         </section>
 
         {/* Results Header */}
-        <div className={styles.solutionsHeader}>
+        <div className={styles.solutionsHeader} id="solutions-list">
           <h2 className={styles.solutionsTitle}>
             <span>📝</span>
             <span>

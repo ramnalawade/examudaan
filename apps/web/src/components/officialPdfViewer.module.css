@@ -804,6 +804,15 @@
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
+  cursor: pointer;
+  user-select: none;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.docOverviewToggleBar:hover {
+  background-color: rgba(234, 88, 12, 0.05);
 }
 
 .docOverviewToggleLeft {
@@ -931,6 +940,158 @@
   margin: 0;
 }
 
+/* ── Redesigned Executive Blueprint Specification Matrix ── */
+.blueprintSpecGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 8px 0;
+}
+
+@media (max-width: 860px) {
+  .blueprintSpecGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .blueprintSpecGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blueprintSpecCard {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.15s ease-in-out;
+}
+
+.blueprintSpecCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cardPurple {
+  border-left: 4px solid #7C3AED;
+  background: linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 30%);
+}
+
+.cardGreen {
+  border-left: 4px solid #16A34A;
+  background: linear-gradient(180deg, #F0FDF4 0%, #FFFFFF 30%);
+}
+
+.cardRed {
+  border-left: 4px solid #DC2626;
+  background: linear-gradient(180deg, #FEF2F2 0%, #FFFFFF 30%);
+}
+
+.cardBlue {
+  border-left: 4px solid #2563EB;
+  background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 30%);
+}
+
+.cardAmber {
+  border-left: 4px solid #D97706;
+  background: linear-gradient(180deg, #FFFBEB 0%, #FFFFFF 30%);
+}
+
+.cardTeal {
+  border-left: 4px solid #0D9488;
+  background: linear-gradient(180deg, #F0FDFA 0%, #FFFFFF 30%);
+}
+
+.specCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.specCardLabel {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748B;
+}
+
+.specCardPill {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+}
+
+.pillPurple { color: #7C3AED; background: #FAF5FF; }
+.pillGreen { color: #16A34A; background: #F0FDF4; }
+.pillRed { color: #DC2626; background: #FEF2F2; }
+.pillBlue { color: #2563EB; background: #EFF6FF; }
+.pillAmber { color: #D97706; background: #FFFBEB; }
+.pillTeal { color: #0D9488; background: #F0FDFA; }
+
+.specCardVal {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 18px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-top: 2px;
+}
+
+.specCardSub {
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* Scoring Formula & Negative Marking Box */
+.scoringFormulaBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #FFF7ED;
+  border: 1.5px solid #FED7AA;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-top: 4px;
+}
+
+.formulaIconWrap {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.formulaContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.formulaHeading {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  color: #9A3412;
+}
+
+.formulaText {
+  font-size: 12px;
+  color: #7C2D12;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Legacy fallback classes preserved for safety */
 .blueprintGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -960,6 +1121,91 @@
   font-size: 11.5px;
   color: #64748B;
   font-weight: 500;
+}
+
+.mobileDirectLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobileFullscreenBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mobileFullscreenBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.toolbarIcon {
+  font-size: 16px;
+}
+
+.topBarVerifiedIcon {
+  font-size: 16px;
+}
+
+.filterTypeIcon {
+  font-size: 15px;
+}
+
+.selectPaperIcon {
+  font-size: 16px;
+}
+
+.footerCheckIcon {
+  font-size: 14px;
+  color: #22C55E;
+}
+
+.chipSelectedIcon {
+  font-size: 15px;
+  color: var(--primary, #EA580C);
+}
+
+.chipUnselectedKeyIcon {
+  font-size: 15px;
+  color: #16A34A;
+}
+
+.chipUnselectedPaperIcon {
+  font-size: 15px;
+  color: #64748B;
+}
+
+.directoryItemIcon {
+  font-size: 14px;
+}
+
+.matrixYearKey {
+  background: #F0FDF4;
+  border-color: #BBF7D0;
+  color: #15803D;
+}
+
+.matrixYearPaper {
+  background: #FFF7ED;
+  border-color: #FFEDD5;
+  color: #C2410C;
+}
+
+.directoryTitleIcon {
+  font-size: 18px;
+}
+
+.overviewCtaIcon {
+  font-size: 18px;
 }
 
 .overviewCtaRow {

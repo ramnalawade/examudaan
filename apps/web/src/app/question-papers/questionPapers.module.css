@@ -365,6 +365,31 @@
   margin-top: 2px;
 }
 
+.docItemLink {
+  text-decoration: none;
+  display: block;
+  border-radius: 6px;
+  padding: 4px 6px;
+  transition: all 0.15s ease;
+}
+
+.docItemLink:hover {
+  background-color: #fff7ed;
+}
+
+.docItemLink:hover .docTitle {
+  color: #ea580c;
+}
+
+.mobileDocLink {
+  text-decoration: none;
+}
+
+.mobileDocLink:hover .mobileDocPill {
+  border-color: #ea580c;
+  background-color: #fff7ed;
+}
+
 .docItemBox {
   display: flex;
   align-items: center;

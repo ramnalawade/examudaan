@@ -290,6 +290,8 @@ export default function MyPreparationClient() {
                 onClick={() => {
                   setActiveTab(tab.id)
                   setPage(1)
+                  const el = document.getElementById('my-prep-content')
+                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
                 }}
               >
                 <span>{tab.icon}</span>
@@ -308,7 +310,7 @@ export default function MyPreparationClient() {
         </div>
       </nav>
 
-      <main className={styles.container}>
+      <main className={styles.container} id="my-prep-content">
         <div className={styles.dashboardBody}>
           {/* Spaced Repetition Due Alert Strip */}
           {stats.dueTodayCount > 0 && (

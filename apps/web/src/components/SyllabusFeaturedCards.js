@@ -18,7 +18,7 @@ const FEATURED_EXAMS = [
     stages: 'Prelims (GS + CSAT) → Mains (1750 M) → Interview',
     badges: ['9 Official Papers', 'All Keys', 'Marathi & Eng'],
     buttonLabel: 'Explore Syllabus →',
-    downloadUrl: '/downloads/mpsc/syllabus/general/1181.pdf',
+    downloadUrl: '/api/mpsc-pdf/doc_876988be_98af8b85_179ad4fa',
     downloadTitle: 'Download Official Rajyaseva Syllabus PDF'
   },
   {

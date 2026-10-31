@@ -23,6 +23,7 @@ import { getCleanMpscPaperSitemapEntries } from '../lib/mpscDocumentResolver.js'
 import { buildMpscSyllabusSlug } from '../lib/mpscTaxonomy.js'
 import mpscSyllabusCatalog from '../lib/mpscSyllabusCatalog.json'
 import mpscPyqArchiveManifest from '../lib/mpscPyqArchiveManifest.json'
+import { TOPIC_SLUG_PAIRS } from '../lib/mpscTopicSlugs.js'
 
 
 // Revalidate sitemap from database & RSS every 24 hours (86,400s)
@@ -295,6 +296,14 @@ export default async function sitemap() {
     console.error('Sitemap MPSC archive error:', archErr)
   }
 
+  // 5i. MPSC High-Frequency Recurring Concept Pages (/mpsc/pyq-analysis/[slug])
+  const mpscConceptEntries = (TOPIC_SLUG_PAIRS || []).map(item => ({
+    url: `${BASE_URL}/mpsc/pyq-analysis/${item.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.88,
+  }))
+
   // 6. Database Exam Notifications (Up to 45,000 published entries)
   let postEntries = []
   try {
@@ -333,6 +342,7 @@ export default async function sitemap() {
     ...mpscPaperEntries,
     ...mpscSyllabusEntries,
     ...mpscArchiveEntries,
+    ...mpscConceptEntries,
     ...postEntries,
   ]
 

@@ -7,6 +7,7 @@
 
 import { useState, useEffect, use } from 'react'
 import Link from 'next/link'
+import { toSecureDocUrl } from '@/lib/docObfuscate'
 import styles from './syllabus.module.css'
 
 // Glimpse of authentic MPSC Previous Year Question mapped to this syllabus
@@ -217,7 +218,7 @@ export default function MpscSyllabusPage({ params }) {
   const numericDocId = trailingMatch ? trailingMatch[1] : (data?.officialDocId || data?.docId || id)
   const isMarathi = (typeof window !== 'undefined' && window.location.search.includes('lang=mr')) || (id && id.includes('-marathi'))
   const cleanBaseSlug = id ? id.replace(/\?.*$/, '') : ''
-  const officialPdfUrl = data?.pdfPublicPath || data?.pdfUrl || data?._dbMeta?.pdfUrl || (numericDocId ? `/downloads/mpsc/syllabus/general/${numericDocId}.pdf` : null)
+  const officialPdfUrl = toSecureDocUrl(data?.pdfPublicPath || data?.pdfUrl || data?._dbMeta?.pdfUrl || (numericDocId ? `/downloads/mpsc/syllabus/general/${numericDocId}.pdf` : null))
 
   return (
     <div className={styles.page}>

@@ -133,7 +133,7 @@ export const SYLLABUS_EXAMS = [
         label: "2026 Rajyaseva Gazetted Prelims Paper 1 (GS)",
         title: "Advt. No. 132/2025 Maharashtra Civil Services Gazetted Combined Preliminary Examination 2026 — Paper No. 1 General Studies",
         size: "1.82 MB",
-        url: "/downloads/mpsc/question_papers/2025/13629_PAPER_1.pdf",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
         badge: "LATEST 2026",
         isAnswerKey: false,
         pairId: 13801
@@ -144,7 +144,7 @@ export const SYLLABUS_EXAMS = [
         label: "2026 Rajyaseva Prelims Paper 1 Final Key",
         title: "Advt. No. 132/2025 Maharashtra Civil Services Gazetted Prelims 2026 — Paper No. 1 Final Answer Key",
         size: "468 KB",
-        url: "/downloads/mpsc/answer_keys/2025/13801_Final Answerkey of Maharashtra Civil Services Gazetted Paper I.pdf",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
         badge: "FINAL KEY",
         isAnswerKey: true,
         pairId: 13629
@@ -155,7 +155,7 @@ export const SYLLABUS_EXAMS = [
         label: "2026 Rajyaseva Gazetted Prelims Paper 2 (CSAT)",
         title: "Advt. No. 132/2025 Maharashtra Civil Services Gazetted Combined Preliminary Examination 2026 — Paper No. 2 CSAT",
         size: "2.14 MB",
-        url: "/downloads/mpsc/question_papers/2025/13628_PAPER_2.pdf",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
         badge: "CSAT 2026",
         isAnswerKey: false,
         pairId: 13802
@@ -166,7 +166,7 @@ export const SYLLABUS_EXAMS = [
         label: "2026 Rajyaseva Prelims Paper 2 Final Key",
         title: "Advt. No. 132/2025 Maharashtra Civil Services Gazetted Prelims 2026 — Paper No. 2 CSAT Final Answer Key",
         size: "455 KB",
-        url: "/downloads/mpsc/answer_keys/2025/13802_Final Answerkey of Maharashtra Civil Services Gazetted Paper II.pdf",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
         badge: "FINAL KEY",
         isAnswerKey: true,
         pairId: 13628
@@ -268,7 +268,7 @@ export const SYLLABUS_EXAMS = [
         label: "2026 Group B Combined Prelims (Latest)",
         title: "Advt. No. 011/2026 MPSC Group-B Services Combined Preliminary Examination 2026 — Question Paper",
         size: "975 KB",
-        url: "/downloads/mpsc/question_papers/2026/13763_011-2026 Group-B Pre 2026 - Question Paper.pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "LATEST 2026",
         isAnswerKey: false
       },
@@ -278,7 +278,7 @@ export const SYLLABUS_EXAMS = [
         label: "2026 Group B First Answer Key",
         title: "Advt. No. 011/2026 MPSC Group-B Services Combined Prelims 2026 — Official First Answer Key",
         size: "480 KB",
-        url: "/downloads/mpsc/answer_keys/2026/13768_011-2026 Group-B Pre 2026 - First Answer Key.pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "ANSWER KEY",
         isAnswerKey: true
       },
@@ -288,7 +288,7 @@ export const SYLLABUS_EXAMS = [
         label: "2025 Group B Combined Prelims",
         title: "MPSC Group-B Services Combined Preliminary Examination 2025 — Official Question Paper",
         size: "1.34 MB",
-        url: "/downloads/mpsc/question_papers/2025/12496_GROUP-B SERVICES COMBINED PRE EXAMINATION - 2025.pdf",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
         isAnswerKey: false
       },
       {
@@ -297,7 +297,7 @@ export const SYLLABUS_EXAMS = [
         label: "2025 Group B First Answer Key",
         title: "MPSC Group-B Combined Preliminary Examination 2025 — Official First Answer Key",
         size: "520 KB",
-        url: "/downloads/mpsc/answer_keys/2025/12540_First Answer Key of Maharashtra Group B (Non Gazzeted) Services Combined Preliminary Examination 2025.pdf",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
         isAnswerKey: true
       },
       {
@@ -306,7 +306,7 @@ export const SYLLABUS_EXAMS = [
         label: "2024 Group B Combined Prelims",
         title: "MPSC Non-Gazetted Group B Combined Preliminary Exam 2024 — Official Question Paper",
         size: "982 KB",
-        url: "/downloads/mpsc/question_papers/2024/10063_GROUP_B_PRE_2024.pdf",
+        url: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853",
         isAnswerKey: false
       },
       {
@@ -315,7 +315,7 @@ export const SYLLABUS_EXAMS = [
         label: "2024 Group B Final Answer Key",
         title: "MPSC Group B Non-Gazetted Combined Prelims 2024 — Final Official Answer Key",
         size: "444 KB",
-        url: "/downloads/mpsc/answer_keys/2024/10214_maharashtra  gr-b non-gazzetted combined pre exam 2024 final key 4225 pdf.pdf",
+        url: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853",
         isAnswerKey: true
       },
       {
@@ -324,7 +324,7 @@ export const SYLLABUS_EXAMS = [
         label: "2024 Group C Combined Prelims",
         title: "MPSC Group C Combined Preliminary Examination 2024 — Official Question Paper",
         size: "1.24 MB",
-        url: "/downloads/mpsc/question_papers/2024/10893_GROUP_C_PRE_2024.pdf",
+        url: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853",
         isAnswerKey: false
       },
       {
@@ -333,7 +333,7 @@ export const SYLLABUS_EXAMS = [
         label: "2024 Group C Final Answer Key",
         title: "MPSC Group C Combined Preliminary Examination 2024 — Final Official Answer Key",
         size: "452 KB",
-        url: "/downloads/mpsc/answer_keys/2024/11232_Maharashtra Group C  pre exam 2024 Final Answer key.pdf",
+        url: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853",
         isAnswerKey: true
       }
     ],
@@ -342,33 +342,33 @@ export const SYLLABUS_EXAMS = [
         year: 2026,
         exam: "Combined Prelims Group B",
         label: "MPSC Combined Prelims 2026 Question Paper & First Key",
-        paperUrl: "/downloads/mpsc/question_papers/2026/13763_011-2026 Group-B Pre 2026 - Question Paper.pdf",
-        answerKeyUrl: "/downloads/mpsc/answer_keys/2026/13768_011-2026 Group-B Pre 2026 - First Answer Key.pdf",
-        url: "/downloads/mpsc/question_papers/2026/13763_011-2026 Group-B Pre 2026 - Question Paper.pdf"
+        paperUrl: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
+        answerKeyUrl: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909"
       },
       {
         year: 2025,
         exam: "Combined Prelims Group B",
         label: "MPSC Combined Prelims 2025 Question Paper & Key",
-        paperUrl: "/downloads/mpsc/question_papers/2025/12496_GROUP-B SERVICES COMBINED PRE EXAMINATION - 2025.pdf",
-        answerKeyUrl: "/downloads/mpsc/answer_keys/2025/12540_First Answer Key of Maharashtra Group B (Non Gazzeted) Services Combined Preliminary Examination 2025.pdf",
-        url: "/downloads/mpsc/question_papers/2025/12496_GROUP-B SERVICES COMBINED PRE EXAMINATION - 2025.pdf"
+        paperUrl: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
+        answerKeyUrl: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98"
       },
       {
         year: 2024,
         exam: "Combined Prelims Group B",
         label: "MPSC Combined Prelims 2024 Question Paper & Final Key",
-        paperUrl: "/downloads/mpsc/question_papers/2024/10063_GROUP_B_PRE_2024.pdf",
-        answerKeyUrl: "/downloads/mpsc/answer_keys/2024/10214_maharashtra  gr-b non-gazzetted combined pre exam 2024 final key 4225 pdf.pdf",
-        url: "/downloads/mpsc/question_papers/2024/10063_GROUP_B_PRE_2024.pdf"
+        paperUrl: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853",
+        answerKeyUrl: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853",
+        url: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853"
       },
       {
         year: 2024,
         exam: "Combined Prelims Group C",
         label: "MPSC Group C Prelims 2024 Question Paper & Final Key",
-        paperUrl: "/downloads/mpsc/question_papers/2024/10893_GROUP_C_PRE_2024.pdf",
-        answerKeyUrl: "/downloads/mpsc/answer_keys/2024/11232_Maharashtra Group C  pre exam 2024 Final Answer key.pdf",
-        url: "/downloads/mpsc/question_papers/2024/10893_GROUP_C_PRE_2024.pdf"
+        paperUrl: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853",
+        answerKeyUrl: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853",
+        url: "/api/mpsc-pdf/doc_13bf0fc2_bf39ac94_6d44f853"
       },
       {
         year: 2023,
@@ -448,7 +448,7 @@ export const SYLLABUS_EXAMS = [
         label: "2026 गट-ब संयुक्त पूर्व परीक्षा पेपर",
         title: "महाराष्ट्र दुय्यम सेवा अराजपत्रित गट-ब (PSI/STI/ASO) संयुक्त पूर्व परीक्षा २०२६ अधिकृत प्रश्नपत्रिका",
         size: "1.78 MB",
-        url: "/downloads/mpsc/question_papers/2026/13763_011-2026 Group-B Pre 2026 - Question Paper.pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "LATEST 2026",
         isAnswerKey: false,
         pairId: "mpsc-psi-2026-pre-ak"
@@ -459,7 +459,7 @@ export const SYLLABUS_EXAMS = [
         label: "2026 गट-ब पूर्व अंतिम उत्तरतालिका",
         title: "महाराष्ट्र दुय्यम सेवा अराजपत्रित गट-ब संयुक्त पूर्व परीक्षा २०२६ — अधिकृत अंतिम उत्तरतालिका (Final Answer Key)",
         size: "445 KB",
-        url: "/downloads/mpsc/answer_keys/2026/13877_011-2026 Gr-B Pre 2026 - Final Answer Key.pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "FINAL KEY",
         isAnswerKey: true,
         pairId: "mpsc-psi-2026-pre-qp"
@@ -470,7 +470,7 @@ export const SYLLABUS_EXAMS = [
         label: "2025 गट-ब मुख्य पेपर १ (भाषा)",
         title: "महाराष्ट्र गट-ब मुख्य परीक्षा २०२५ — पेपर क्रमांक १ भाषा (मराठी व इंग्रजी) अधिकृत प्रश्नपत्रिका",
         size: "1.95 MB",
-        url: "/downloads/mpsc/question_papers/2026/13548_GROUP B MAIN 2025_PAPER_1.pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "2025 MAINS",
         isAnswerKey: false,
         pairId: "mpsc-psi-2025-mains-p1-ak"
@@ -481,7 +481,7 @@ export const SYLLABUS_EXAMS = [
         label: "2025 गट-ब मुख्य पेपर १ उत्तरतालिका",
         title: "महाराष्ट्र गट-ब मुख्य परीक्षा २०२५ — पेपर क्रमांक १ अंतिम उत्तरतालिका",
         size: "460 KB",
-        url: "/downloads/mpsc/answer_keys/2026/13799_Final Answer key of Maharashtra Group B Non Gazetted Main Exam 2025 Paper 1 (1).pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "FINAL KEY",
         isAnswerKey: true,
         pairId: "mpsc-psi-2025-mains-p1-qp"
@@ -492,7 +492,7 @@ export const SYLLABUS_EXAMS = [
         label: "2025 गट-ब मुख्य पेपर २ (सामान्य अध्ययन)",
         title: "महाराष्ट्र गट-ब मुख्य परीक्षा २०२५ — पेपर क्रमांक २ सामान्य अध्ययन व बुद्धिमत्ता चाचणी अधिकृत प्रश्नपत्रिका",
         size: "2.10 MB",
-        url: "/downloads/mpsc/question_papers/2026/13547_GROUP B MAIN 2025_PAPER_2.pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "2025 MAINS",
         isAnswerKey: false,
         pairId: "mpsc-psi-2025-mains-p2-ak"
@@ -503,7 +503,7 @@ export const SYLLABUS_EXAMS = [
         label: "2025 गट-ब मुख्य पेपर २ उत्तरतालिका",
         title: "महाराष्ट्र गट-ब मुख्य परीक्षा २०२५ — पेपर क्रमांक २ अंतिम उत्तरतालिका",
         size: "450 KB",
-        url: "/downloads/mpsc/answer_keys/2026/13800_Final Answer key of Maharashtra Group B Non Gazetted Main Exam 2025 Paper 2 (1).pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "FINAL KEY",
         isAnswerKey: true,
         pairId: "mpsc-psi-2025-mains-p2-qp"
@@ -1004,7 +1004,7 @@ export const SYLLABUS_EXAMS = [
         label: "2024 वनसेवा मुख्य वनशास्त्र पेपर",
         title: "महाराष्ट्र वनसेवा मुख्य परीक्षा २०२४ — वनशास्त्र (Forestry) अधिकृत प्रश्नपत्रिका",
         size: "1.92 MB",
-        url: "/downloads/mpsc/question_papers/2026/13489_FORESTRY.pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "2024 MAINS",
         isAnswerKey: false
       },
@@ -1014,7 +1014,7 @@ export const SYLLABUS_EXAMS = [
         label: "2024 वनसेवा कृषी (Agriculture) पेपर",
         title: "महाराष्ट्र वनसेवा मुख्य परीक्षा २०२४ — कृषी शास्त्र (Agriculture) अधिकृत प्रश्नपत्रिका",
         size: "2.05 MB",
-        url: "/downloads/mpsc/question_papers/2026/13497_AGRICULTURE.pdf",
+        url: "/api/mpsc-pdf/doc_931ebf83_33ed994f_7c155909",
         badge: "2024 MAINS",
         isAnswerKey: false
       },
@@ -1024,7 +1024,7 @@ export const SYLLABUS_EXAMS = [
         label: "2023 वनसेवा पूर्व परीक्षा पेपर",
         title: "महाराष्ट्र नागरी सेवा राजपत्रित संयुक्त पूर्व परीक्षा २०२३ — वनसेवा घटक पेपर १",
         size: "1.80 MB",
-        url: "/downloads/mpsc/question_papers/2025/12078_012-2025 PRE 2025 P1.pdf",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
         badge: "PRELIMS",
         isAnswerKey: false,
         pairId: "mpsc-vanseva-2023-pre-ak"
@@ -1035,7 +1035,7 @@ export const SYLLABUS_EXAMS = [
         label: "2023 वनसेवा पूर्व उत्तरतालिका",
         title: "महाराष्ट्र नागरी सेवा राजपत्रित संयुक्त पूर्व परीक्षा २०२३ — पेपर १ प्रथम उत्तरतालिका",
         size: "410 KB",
-        url: "/downloads/mpsc/answer_keys/2025/12098_Maharashtra Civil Services Gazetted Combined Pre Exam 2025 Paper I First Anwer key Advt 012-2025.pdf",
+        url: "/api/mpsc-pdf/doc_daaced4e_775c9157_72874a98",
         badge: "FINAL KEY",
         isAnswerKey: true,
         pairId: "mpsc-vanseva-2023-pre-qp"

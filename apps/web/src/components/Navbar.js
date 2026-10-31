@@ -15,6 +15,7 @@ import { useLanguage } from '../context/LanguageContext'
 import { apiFetch } from '../lib/apiClient'
 import VoiceSearchButton from './VoiceSearchButton'
 import { triggerOmniSearch } from './OmniSearchModal'
+import styles from './navbar.module.css'
 import {
   MPSC_TOTAL_QUESTION_PAPERS,
   MPSC_ARCHIVE_YEARS_SPAN,
@@ -78,8 +79,8 @@ export default function Navbar() {
     { href: '/jobs', label: t('nav.jobs', 'Jobs'), icon: 'work' },
     { href: '/current-affairs', label: t('nav.current_affairs', 'Current Affairs'), icon: 'newspaper', badge: 'Daily', badgeBg: '#16a34a' },
     { href: '/question-papers', label: t('nav.question_papers', 'Question Papers'), icon: 'description', badge: 'MPSC', badgeBg: '#ea580c' },
-    { href: '/blog', label: t('nav.blog', 'Blog & Guides'), icon: 'article', badge: 'New', badgeBg: '#ea580c' },
-    { href: '/syllabus', label: t('nav.syllabus', 'Syllabus'), icon: 'menu_book' },
+    { href: '/blog', label: t('nav.blog', 'Blog & Guides'), icon: 'article', badge: 'New', badgeBg: '#ea580c', secondary: true },
+    { href: '/syllabus', label: t('nav.syllabus', 'Syllabus'), icon: 'menu_book', secondary: true },
     { href: '/mock-tests', label: t('nav.mock_tests', 'Mock Tests'), icon: 'quiz', badge: 'Free', badgeBg: '#9a3412' },
   ]
 
@@ -91,7 +92,7 @@ export default function Navbar() {
     { href: '/mpsc/rajyaseva-previous-year-papers', label: 'MPSC Rajyaseva Papers', icon: 'account_balance', badge: `${MPSC_CADRE_COUNTS.rajyaseva.count} Papers`, desc: `State Services Prelims & Mains GS 1-4 question papers with keys (${MPSC_ARCHIVE_YEARS_SPAN})` },
     { href: '/police-bharti-question-papers', label: 'Police Bharti Papers', icon: 'local_police', badge: 'Solved', desc: 'Unit-wise Maharashtra Police Constable question papers & answer keys' },
     { href: '/talathi-question-papers', label: 'Talathi Question Papers', icon: 'assignment', badge: 'TCS', desc: 'TCS shift-wise solved Talathi Bharti question papers with answer keys' },
-    { href: '/mahatet-previous-year-papers', label: 'MAHA TET Papers & Keys', icon: 'school', badge: 'TET', desc: '44+ Official MAHA TET Paper 1 & 2 Question Papers & Official Keys (2013–2026)' },
+    { href: '/mahatet-previous-year-papers', label: 'MAHA TET Papers & Keys', icon: 'school', badge: 'TET', desc: '49+ Official MAHA TET Paper 1 & 2 Question Papers & Official Keys (2013–2026)' },
     { href: '/syllabus', label: 'All Exam Syllabi', icon: 'menu_book', badge: `${REAL_SYLLABI_COUNT}+ Topics`, desc: 'Topic-wise syllabus, papers & pattern for MPSC, Police, UPSC & SSC' },
     { href: '/syllabus/maha-tet', label: 'MAHA TET Syllabus 2026', icon: 'school', badge: 'Paper 1 & 2', desc: 'Official MSCE Pune MAHA TET Paper 1 & 2 syllabus, exam pattern & GR PDF' },
     { href: '/syllabus#mpsc-catalog', label: 'MPSC 343 Official Papers', icon: 'account_balance', badge: '343 PDFs', desc: 'Browse all 343 official MPSC syllabus notifications with interactive breakdowns' },
@@ -129,7 +130,7 @@ export default function Navbar() {
     { href: '/mpsc/rajyaseva-previous-year-papers', label: 'MPSC Rajyaseva Papers', icon: 'account_balance', badge: `${MPSC_CADRE_COUNTS.rajyaseva.count}` },
     { href: '/police-bharti-question-papers', label: 'Police Papers & Keys', icon: 'local_police', badge: 'Solved' },
     { href: '/talathi-question-papers', label: 'Talathi TCS Papers', icon: 'assignment', badge: 'TCS' },
-    { href: '/mahatet-previous-year-papers', label: 'MAHA TET Papers & Keys', icon: 'school', badge: '44+' },
+    { href: '/mahatet-previous-year-papers', label: 'MAHA TET Papers & Keys', icon: 'school', badge: '49+' },
     { href: '/syllabus', label: t('nav.syllabus', 'Syllabus'), icon: 'menu_book' },
     { href: '/syllabus/maha-tet', label: 'MAHA TET Syllabus', icon: 'school', badge: 'TET' },
     { href: '/syllabus#mpsc-catalog', label: 'MPSC 343 Official Papers', icon: 'account_balance', badge: '343 PDFs' },
@@ -201,10 +202,10 @@ export default function Navbar() {
   // Search is available on individual listing pages — no global navbar search needed
 
   return (
-    <header className="navbar" style={{ position: 'relative' }}>
+    <header className={`navbar ${styles.header}`}>
       <div className="navbar-inner">
         {/* ---- Left: Mobile Drawer Trigger + Brand Logo ---- */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div className={styles.logoWrap}>
           {/* Hamburger (Mobile only — completely hidden on tablet/laptop/desktop via CSS) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -224,14 +225,14 @@ export default function Navbar() {
               width={140}
               height={36}
               priority
-              style={{ height: 36, width: 'auto', display: 'block' }}
+              className={styles.logoImg}
             />
           </Link>
         </div>
 
         {/* ---- Center: Desktop & Laptop Navigation ---- */}
         <nav className="navbar-nav" aria-label="Main navigation">
-          {PRIMARY_NAV_ITEMS.map(({ href, label, badge, badgeBg }) => {
+          {PRIMARY_NAV_ITEMS.map(({ href, label, badge, secondary }) => {
             const isActive = href === '/'
               ? pathname === '/'
               : pathname.startsWith(href)
@@ -239,27 +240,19 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`nav-link${isActive ? ' active' : ''}`}
+                className={`nav-link${isActive ? ' active' : ''}${secondary ? ' nav-link-secondary' : ''}`}
               >
                 <span>{label}</span>
                 {badge && (
-                  <span style={{
-                    fontSize: '9.5px',
-                    fontWeight: 800,
-                    lineHeight: 1,
-                    padding: '2.5px 6.5px',
-                    borderRadius: 999,
-                    background: badgeBg || (badge === 'New' ? '#16a34a' : 'var(--primary)'),
-                    color: '#ffffff',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.04em',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    verticalAlign: 'middle',
-                    flexShrink: 0,
-                    marginLeft: '2px',
-                  }}>
+                  <span
+                    className={`${styles.navBadge} ${
+                      badge === 'Daily'
+                        ? styles.badgeDaily
+                        : badge === 'Free'
+                        ? styles.badgeFree
+                        : styles.navBadgeDefault
+                    }`}
+                  >
                     {badge}
                   </span>
                 )}
@@ -269,28 +262,17 @@ export default function Navbar() {
 
           {/* More Prep Tools Dropdown */}
           <div
-            style={{ position: 'relative' }}
+            className={styles.moreDropdownWrapper}
             onMouseEnter={openMoreDropdown}
             onMouseLeave={scheduleCloseMoreDropdown}
           >
             <button
               type="button"
               onClick={() => setMoreDropdownOpen(o => !o)}
-              className={`nav-link${MORE_NAV_ITEMS.some(m => pathname.startsWith(m.href)) ? ' active' : ''}`}
-              style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '4px',
-                fontFamily: 'inherit',
-                fontSize: 15,
-                fontWeight: 500,
-              }}
+              className={`nav-link ${styles.moreBtn}${MORE_NAV_ITEMS.some(m => pathname.startsWith(m.href)) ? ' active' : ''}`}
             >
               <span>More</span>
-              <span className="material-symbols-outlined" style={{ fontSize: 18, transition: 'transform 0.2s', transform: moreDropdownOpen ? 'rotate(180deg)' : 'none' }}>
+              <span className={`material-symbols-outlined ${styles.moreExpandIcon}${moreDropdownOpen ? ' ' + styles.moreExpandIconRotated : ''}`}>
                 expand_more
               </span>
             </button>
@@ -299,79 +281,31 @@ export default function Navbar() {
               <div
                 onMouseEnter={openMoreDropdown}
                 onMouseLeave={scheduleCloseMoreDropdown}
-                style={{
-                  position: 'absolute',
-                  top: 'calc(100% + 0px)',  /* No gap — prevents mouse leaving dead zone */
-                  right: 0,
-                  width: 385,
-                  maxWidth: 'min(385px, calc(100vw - 20px))',
-                  maxHeight: '80vh',
-                  overflowY: 'auto',
-                  background: 'var(--surface-container-lowest)',
-                  border: '1px solid var(--outline-variant)',
-                  borderRadius: 12,
-                  boxShadow: '0 12px 32px rgba(0,0,0,0.18)',
-                  padding: '8px',
-                  zIndex: 99,
-                  /* Transparent top padding bridges any sub-pixel gap between button and panel */
-                  paddingTop: 12,
-                  marginTop: -4,
-                }}
+                className={styles.moreDropdownPanel}
               >
                 {/* Invisible bridge strip at the very top prevents gap-related close */}
-                <div style={{ position: 'absolute', top: -8, left: 0, right: 0, height: 8, background: 'transparent' }} />
+                <div className={styles.bridgeStrip} />
                 {MORE_NAV_ITEMS.map(item => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: 12,
-                      padding: '10px 12px',
-                      borderRadius: 8,
-                      textDecoration: 'none',
-                      color: 'var(--on-surface)',
-                      transition: 'background 0.15s',
-                    }}
-                    onMouseEnter={e => e.currentTarget.style.background = 'var(--surface-container-low)'}
-                    onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                    className={styles.dropdownItem}
                   >
-                    <span className="material-symbols-outlined" style={{ fontSize: 20, color: 'var(--primary)', marginTop: 2 }}>
+                    <span className={`material-symbols-outlined ${styles.dropdownItemIcon}`}>
                       {item.icon}
                     </span>
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        gap: 10,
-                        width: '100%',
-                      }}>
-                        <span style={{ fontWeight: 600, fontSize: 13.5, color: 'var(--on-surface)', lineHeight: 1.35 }}>
+                    <div className={styles.dropdownItemContent}>
+                      <div className={styles.dropdownItemHeader}>
+                        <span className={styles.dropdownItemTitle}>
                           {item.label}
                         </span>
                         {item.badge && (
-                          <span style={{
-                            fontSize: 10,
-                            fontWeight: 700,
-                            padding: '2px 8px',
-                            borderRadius: 999,
-                            background: 'var(--primary)',
-                            color: '#ffffff',
-                            whiteSpace: 'nowrap',
-                            flexShrink: 0,
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            letterSpacing: '0.02em',
-                            lineHeight: 1.2,
-                          }}>
+                          <span className={styles.dropdownItemBadge}>
                             {item.badge}
                           </span>
                         )}
                       </div>
-                      <div style={{ fontSize: 11, color: 'var(--secondary)', marginTop: 2, lineHeight: 1.3 }}>
+                      <div className={styles.dropdownItemDesc}>
                         {item.desc}
                       </div>
                     </div>
@@ -396,7 +330,7 @@ export default function Navbar() {
           >
             <div className="omni-search-left">
               <span className="material-symbols-outlined omni-search-icon">search</span>
-              <span className="omni-search-text">Search 1,600+ Exams, Syllabus...</span>
+              <span className="omni-search-text">Search exams, syllabus...</span>
             </div>
             <kbd className="omni-search-kbd">⌘K</kbd>
           </button>
@@ -410,7 +344,7 @@ export default function Navbar() {
             id="nav-omni-search-mobile-btn"
           >
             <span className="material-symbols-outlined omni-search-mobile-icon">search</span>
-            <span>Search</span>
+            <span className="omni-search-mobile-text">Search</span>
           </button>
 
           {/* Voice search button — uses Web Speech API, shows only on supported browsers */}
@@ -431,9 +365,8 @@ export default function Navbar() {
             </button>
             <button
               type="button"
-              className={`lang-btn font-marathi${lang === 'mr' ? ' active' : ''}`}
+              className={`lang-btn font-marathi ${styles.langToggleMarathi}${lang === 'mr' ? ' active' : ''}`}
               onClick={() => handleLangChange('mr')}
-              style={{ fontFamily: 'Mukta, sans-serif' }}
             >
               मराठी
             </button>
@@ -441,30 +374,16 @@ export default function Navbar() {
 
           {/* ── User: avatar dropdown if logged in, else Sign In button ── */}
           {navUser ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative' }}>
+            <div className={styles.userNavWrapper}>
               {/* Admin Theme & Settings Quick Pill (Admin only) */}
               {Boolean(navUser?.is_admin || navUser?.role === 'admin') && (
                 <Link
                   href="/admin?tab=themes"
                   id="nav-admin-theme-pill"
                   title="Admin Theme & Appearance Studio"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '5px',
-                    background: 'linear-gradient(135deg, #0F172A, #1E293B)',
-                    color: '#FB923C',
-                    border: '1px solid rgba(251, 146, 60, 0.4)',
-                    padding: '4px 10px',
-                    borderRadius: '20px',
-                    fontSize: '11.5px',
-                    fontWeight: 700,
-                    textDecoration: 'none',
-                    boxShadow: '0 2px 6px rgba(0,0,0,0.12)',
-                    transition: 'transform 0.15s ease'
-                  }}
+                  className={styles.adminThemePill}
                 >
-                  <span className="material-symbols-outlined" style={{ fontSize: 15 }}>palette</span>
+                  <span className={`material-symbols-outlined ${styles.adminThemeIcon}`}>palette</span>
                   <span>Theme Studio</span>
                 </Link>
               )}
@@ -474,19 +393,10 @@ export default function Navbar() {
                 id="navbar-user-avatar-btn"
                 onClick={() => setDropdownOpen(o => !o)}
                 aria-label="User menu"
-                style={{
-                  width: 36, height: 36, borderRadius: '50%',
-                  background: navUser.avatar_url ? 'transparent' : 'var(--primary)',
-                  border: '2px solid var(--primary)',
-                  cursor: 'pointer',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  overflow: 'hidden', padding: 0,
-                  fontSize: 13, fontWeight: 700, color: '#fff',
-                  flexShrink: 0,
-                }}
+                className={`${styles.avatarBtn} ${navUser.avatar_url ? styles.avatarBtnTransparent : styles.avatarBtnColor}`}
               >
                 {navUser.avatar_url
-                  ? <img src={navUser.avatar_url} alt="avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  ? <img src={navUser.avatar_url} alt="avatar" className={styles.avatarImg} />
                   : getInitials(navUser)
                 }
               </button>
@@ -496,27 +406,21 @@ export default function Navbar() {
                 <>
                   {/* Backdrop to close on outside click */}
                   <div
-                    style={{ position: 'fixed', inset: 0, zIndex: 60 }}
+                    className={styles.avatarBackdrop}
                     onClick={() => setDropdownOpen(false)}
                   />
-                  <div style={{
-                    position: 'absolute', top: 'calc(100% + 10px)', right: 0,
-                    background: 'var(--surface-container-lowest)',
-                    border: '1px solid var(--outline-variant)',
-                    borderRadius: 12, boxShadow: '0 8px 32px rgba(28,25,23,0.14)',
-                    minWidth: 220, zIndex: 61, overflow: 'hidden',
-                  }}>
+                  <div className={styles.avatarDropdownMenu}>
                     {/* User info header */}
-                    <div style={{ padding: '12px 16px', borderBottom: '1px solid var(--outline-variant)', background: 'var(--primary-fixed)' }}>
-                      <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div className={styles.userMenuHeader}>
+                      <div className={styles.userMenuName}>
                         <span>{[navUser.first_name, navUser.last_name].filter(Boolean).join(' ') || 'My Account'}</span>
                         {Boolean(navUser?.is_admin || navUser?.role === 'admin') && (
-                          <span style={{ fontSize: 9.5, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '1px 5px', borderRadius: 4 }}>
+                          <span className={styles.adminTag}>
                             ADMIN
                           </span>
                         )}
                       </div>
-                      {navUser.email && <div style={{ fontSize: 12, color: 'var(--secondary)', marginTop: 2 }}>{navUser.email}</div>}
+                      {navUser.email && <div className={styles.userMenuEmail}>{navUser.email}</div>}
                     </div>
 
                     {/* Menu items */}
@@ -535,24 +439,14 @@ export default function Navbar() {
                         href={item.href}
                         id={`nav-dd-${item.icon}`}
                         onClick={() => setDropdownOpen(false)}
-                        style={{
-                          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                          padding: '10px 16px', fontSize: 13.5, fontWeight: item.badge ? 700 : 500,
-                          color: item.badge ? '#C2410C' : 'var(--on-surface)',
-                          background: item.badge ? '#FFF7ED' : 'transparent',
-                          textDecoration: 'none',
-                          transition: 'background 0.1s',
-                          borderBottom: item.badge ? '1px solid #FFEDD5' : 'none',
-                        }}
-                        onMouseEnter={e => e.currentTarget.style.background = item.badge ? '#FFEDD5' : 'var(--surface-container-low)'}
-                        onMouseLeave={e => e.currentTarget.style.background = item.badge ? '#FFF7ED' : 'transparent'}
+                        className={`${styles.userMenuItem} ${item.badge ? styles.userMenuItemAdmin : ''}`}
                       >
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                          <span className="material-symbols-outlined" style={{ fontSize: 18, color: item.badge ? '#EA580C' : 'var(--primary)' }}>{item.icon}</span>
+                        <div className={styles.userMenuItemLeft}>
+                          <span className={`material-symbols-outlined ${item.badge ? styles.userMenuItemIconAdmin : styles.userMenuItemIcon}`}>{item.icon}</span>
                           <span>{item.label}</span>
                         </div>
                         {item.badge && (
-                          <span style={{ fontSize: 10, fontWeight: 800, background: '#EA580C', color: '#FFF', padding: '1px 6px', borderRadius: 4 }}>
+                          <span className={styles.userMenuItemBadge}>
                             {item.badge}
                           </span>
                         )}
@@ -560,21 +454,13 @@ export default function Navbar() {
                     ))}
 
                     {/* Sign out */}
-                    <div style={{ borderTop: '1px solid var(--outline-variant)' }}>
+                    <div className={styles.userMenuSignOutWrap}>
                       <button
                         id="navbar-signout-btn"
                         onClick={handleSignOut}
-                        style={{
-                          display: 'flex', alignItems: 'center', gap: 10,
-                          padding: '10px 16px', fontSize: 14, fontWeight: 500,
-                          color: '#dc2626', background: 'none', border: 'none',
-                          width: '100%', cursor: 'pointer', textAlign: 'left',
-                          transition: 'background 0.1s',
-                        }}
-                        onMouseEnter={e => e.currentTarget.style.background = '#fef2f2'}
-                        onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                        className={styles.userMenuSignOutBtn}
                       >
-                        <span className="material-symbols-outlined" style={{ fontSize: 18 }}>logout</span>
+                        <span className="material-symbols-outlined">logout</span>
                         Sign Out
                       </button>
                     </div>
@@ -602,17 +488,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="navbar-mobile-menu"
-          style={{
-            position: 'absolute',
-            top: '100%',
-            left: 0,
-            right: 0,
-            background: 'var(--surface-container-lowest)',
-            borderBottom: '1px solid var(--outline-variant)',
-            padding: '12px 0',
-            boxShadow: '0 8px 24px rgba(28,25,23,0.12)',
-            zIndex: 49,
-          }}
+          className={styles.mobileMenuContainer}
         >
           {/* Mobile Drawer Top Search Box */}
           <div className="mobile-menu-search-box">
@@ -641,42 +517,16 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px',
-                  padding: '12px 20px',
-                  color: isActive ? 'var(--primary)' : 'var(--on-surface)',
-                  textDecoration: 'none',
-                  fontWeight: isActive ? 600 : 400,
-                  fontSize: 16,
-                  background: isActive ? 'var(--primary-fixed)' : 'transparent',
-                  transition: 'background 0.12s',
-                }}
+                className={`${styles.mobileMenuItem} ${isActive ? styles.mobileMenuItemActive : ''}`}
               >
                 <span
-                  className="material-symbols-outlined"
-                  style={{ fontSize: 20, color: isActive ? 'var(--primary)' : 'var(--secondary)' }}
+                  className={`material-symbols-outlined ${styles.mobileMenuIcon} ${isActive ? styles.mobileMenuIconActive : ''}`}
                 >
                   {icon}
                 </span>
-                <span style={{ flex: 1 }}>{label}</span>
+                <span className={styles.mobileMenuLabel}>{label}</span>
                 {badge && (
-                  <span style={{
-                    fontSize: 10,
-                    fontWeight: 700,
-                    padding: '2px 8px',
-                    borderRadius: 999,
-                    background: badge === 'New' ? '#22c55e' : 'var(--primary)',
-                    color: '#fff',
-                    textTransform: 'uppercase',
-                    whiteSpace: 'nowrap',
-                    flexShrink: 0,
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    lineHeight: 1.2,
-                  }}>
+                  <span className={`${styles.mobileMenuBadge} ${badge === 'New' ? styles.mobileMenuBadgeNew : ''}`}>
                     {badge}
                   </span>
                 )}
@@ -685,39 +535,37 @@ export default function Navbar() {
           })}
 
           {/* Secondary links for mobile */}
-          <div style={{ borderTop: '1px solid var(--outline-variant)', marginTop: 8, paddingTop: 8 }}>
+          <div className={styles.mobileMenuDivider}>
             <Link
               href="/feedback"
-              style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 20px', fontSize: 14, color: 'var(--secondary)', textDecoration: 'none' }}
+              className={styles.mobileMenuSecondaryLink}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>rate_review</span>
+              <span className="material-symbols-outlined">rate_review</span>
               Suggest Exam / Feedback
             </Link>
             <Link
               href="/faq"
-              style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 20px', fontSize: 14, color: 'var(--secondary)', textDecoration: 'none' }}
+              className={styles.mobileMenuSecondaryLink}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>help</span>
+              <span className="material-symbols-outlined">help</span>
               Help & FAQ
             </Link>
           </div>
 
           {/* Mobile Language Toggle */}
-          <div style={{ padding: '12px 20px', borderTop: '1px solid var(--outline-variant)', marginTop: 8 }}>
-            <div className="lang-toggle" style={{ display: 'flex', maxWidth: 200 }}>
+          <div className={styles.mobileMenuLangSection}>
+            <div className={`lang-toggle ${styles.mobileMenuLangToggle}`}>
               <button
                 type="button"
-                className={`lang-btn${lang === 'en' ? ' active' : ''}`}
+                className={`lang-btn ${styles.flex1}${lang === 'en' ? ' active' : ''}`}
                 onClick={() => handleLangChange('en')}
-                style={{ flex: 1 }}
               >
                 English
               </button>
               <button
                 type="button"
-                className={`lang-btn font-marathi${lang === 'mr' ? ' active' : ''}`}
+                className={`lang-btn font-marathi ${styles.langToggleMarathi} ${styles.flex1}${lang === 'mr' ? ' active' : ''}`}
                 onClick={() => handleLangChange('mr')}
-                style={{ fontFamily: 'Mukta, sans-serif', flex: 1 }}
               >
                 मराठी
               </button>

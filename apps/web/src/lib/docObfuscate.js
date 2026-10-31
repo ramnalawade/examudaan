@@ -123,8 +123,9 @@ export function toSecureDocUrl(pathOrId, secretKey = null) {
   // e.g. /downloads/mpsc/archive/rajyaseva/2026/13372_state-services.../question_paper.pdf
   // or /downloads/mpsc/cached/13372_mpsc_document.pdf
   // or /downloads/mpsc/question_papers/2026/13763_...pdf
+  // or /downloads/mpsc/syllabus/general/1181.pdf
   if (str.includes('/downloads/mpsc/')) {
-    const folderMatch = str.match(/\/(\d{4,6})_[^\/]+(?:\/|\.pdf|$)/)
+    const folderMatch = str.match(/\/(\d{3,6})(?:_[^\/]+)?(?:\/|\.pdf|$)/)
     if (folderMatch) {
       const extractedNum = parseInt(folderMatch[1], 10)
       if (!isNaN(extractedNum) && extractedNum > 0) {

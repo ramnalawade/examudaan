@@ -165,34 +165,19 @@ export default async function MahatetPreviousYearPapersPage({ searchParams }) {
             <p className={styles.heroDesc}>
               Download and read authentic Maharashtra Teacher Eligibility Test (MAHA TET) Paper I (Classes 1–5) and Paper II (Classes 6–8) question papers paired with official final answer keys in Marathi, English, and Hindi mediums.
             </p>
-
-            <div className={styles.heroStats}>
-              <div className={styles.statPill}>
-                <span>📚</span> {totalSets > 0 ? `${totalSets} Official Exam Sets` : '56+ Official Exam Sets'}
-              </div>
-              <div className={styles.statPill}>
-                <span>🔑</span> {totalWithKey > 0 ? `${totalWithKey} Verified Final Keys` : '42+ Final Keys'}
-              </div>
-              {totalLiveQuestions > 0 && (
-                <div className={`${styles.statPill} ${styles.statPillSuccess}`}>
-                  <span>🎯</span> {totalLiveQuestions.toLocaleString('en-IN')}+ MCQs Ready to Solve
-                </div>
-              )}
-              <div className={styles.statPill}>
-                <span>📅</span> 2013–2026 Active Years
-              </div>
-              <div className={styles.statPill}>
-                <span>🌐</span> Marathi • English • Hindi • Urdu
-              </div>
-            </div>
           </header>
 
-          {/* Interactive Filtering & Listing Client Component */}
+          {/* Interactive Filtering, Stat Buttons & Listing Client Component */}
           <MahatetPyqClient
             catalog={catalog}
             initialDocId={initialDocId}
             initialPdf={initialPdf}
             questionCountsMap={questionCountsMap}
+            stats={{
+              totalSets,
+              totalWithKey,
+              totalLiveQuestions
+            }}
           />
         </div>
       </div>

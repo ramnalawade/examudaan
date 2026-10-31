@@ -7,8 +7,9 @@
 
 'use client'
 
-import React, { useState, useMemo, useEffect, useRef } from 'react'
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import OfficialPdfViewer from '@/components/OfficialPdfViewer'
 import { toSecureDocUrl } from '@/lib/docObfuscate'
 import { trackCtaClick } from '@/lib/analytics'
@@ -204,8 +205,62 @@ export default function MpscPyqClient({
   initialPdf = null,
   initialDocType = 'qp',
 }) {
-  // All 1,491 archive items
-  const allArchivePapers = useMemo(() => manifest.items || [], [])
+  const searchParams = useSearchParams()
+
+  // All archive items: manifest items merged with any pairedExams items
+  const allArchivePapers = useMemo(() => {
+    const items = [...(manifest.items || [])]
+    const existingIds = new Set(items.map(p => String(p.id)))
+    if (pairedExams && Array.isArray(pairedExams)) {
+      for (const p of pairedExams) {
+        if (!existingIds.has(String(p.id))) {
+          items.push({
+            id: p.id,
+            slug: `mpsc-paper-${p.id}`,
+            cadreKey: (p.category || '').toLowerCase().includes('group b') ? 'group-b' : (p.category || '').toLowerCase().includes('group c') ? 'group-c' : (p.category || '').toLowerCase().includes('rajya') ? 'rajyaseva' : 'other-services',
+            cadreNameEn: p.category || 'MPSC Services',
+            cadreShortName: p.category || 'MPSC',
+            stage: 'prelims',
+            stageLabel: 'Preliminary Examination',
+            stageLabelMr: 'पूर्व परीक्षा',
+            examYear: p.year,
+            advertisementNumber: p.advertisementNumber,
+            paperName: p.paperName || p.title,
+            paperNameMr: p.paperNameMr || p.titleMr,
+            title: p.title,
+            titleMr: p.titleMr,
+            keyStatus: p.hasKey ? 'Official Final Answer Key' : 'Key Awaited',
+            questionPaper: p.questionPaper ? {
+              id: p.questionPaper.id || p.id,
+              downloadUrl: p.questionPaper.localPath || `/api/mpsc-pdf/${p.questionPaper.id}`,
+              readOnlineUrl: `/mpsc-pyq?docId=${p.id}&year=${p.year}`,
+              status: 'Available'
+            } : null,
+            answerKey: p.answerKey ? {
+              id: p.answerKey.id,
+              downloadUrl: p.answerKey.localPath || `/api/mpsc-pdf/${p.answerKey.id}`,
+              readOnlineUrl: `/mpsc-pyq?docId=${p.id}&year=${p.year}&docType=ak`,
+              status: 'Available'
+            } : null,
+          })
+          existingIds.add(String(p.id))
+        }
+      }
+    }
+    return items
+  }, [pairedExams])
+
+  // Helper to reliably find paper by docId, slug, or inner QP/AK id
+  const findMatchingPaper = useCallback((targetId) => {
+    if (!targetId) return null
+    const targetStr = String(targetId).trim()
+    return allArchivePapers.find(p =>
+      String(p.id) === targetStr ||
+      p.slug === targetStr ||
+      String(p.questionPaper?.id) === targetStr ||
+      String(p.answerKey?.id) === targetStr
+    ) || null
+  }, [allArchivePapers])
 
   const [selectedCategory, setSelectedCategory] = useState('all') // 'all' | 'rajyaseva' | 'group-b' | 'group-c' | 'other-services'
   const [selectedYear, setSelectedYear] = useState('all')
@@ -232,7 +287,7 @@ export default function MpscPyqClient({
   // Active exam and doc type for Workspace
   const [activePaper, setActivePaper] = useState(() => {
     if (initialDocId) {
-      const match = allArchivePapers.find(p => p.id === initialDocId || p.slug === String(initialDocId))
+      const match = findMatchingPaper(initialDocId)
       if (match) return match
     }
     // Default to latest 2026 Group B combined prelims or first paper
@@ -242,14 +297,21 @@ export default function MpscPyqClient({
 
   const [activeDocType, setActiveDocType] = useState(initialDocType || 'qp') // 'qp' | 'ak'
 
-    // Scroll to workspace on initial load if URL requested a specific document
+  // Reactive URL parameter listener: seamlessly update active paper when docId or docType changes
   useEffect(() => {
-    if (initialDocId || initialPdf) {
-      if (workspaceRef.current) {
-        workspaceRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const rawDocId = searchParams?.get('docId') || initialDocId
+    const rawDocType = searchParams?.get('docType') || initialDocType || 'qp'
+    if (rawDocId) {
+      const match = findMatchingPaper(rawDocId)
+      if (match) {
+        setActivePaper(match)
+        setActiveDocType(rawDocType)
+        if (workspaceRef.current) {
+          workspaceRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
       }
     }
-  }, [initialDocId, initialPdf])
+  }, [searchParams, initialDocId, initialDocType, findMatchingPaper])
 
   // Intelligent client-side prefetching to warm up server disk and Cloudflare CDN edge cache
   const prefetchedUrls = useRef(new Set())
@@ -302,7 +364,7 @@ export default function MpscPyqClient({
         size: 'Official PDF',
         url: toSecureDocUrl(activePaper.answerKey.downloadUrl),
         isAnswerKey: true,
-        pairId: 1,
+        pairId: activePaper.id || 1,
         badge: 'KEY'
       })
     }
@@ -416,6 +478,9 @@ export default function MpscPyqClient({
       setFeedbackNotice(`⚡ Filter Applied: Verified Paired Sets with Final Keys`)
     }
     setFeedbackKey(k => k + 1)
+    if (cardsSectionRef.current) {
+      cardsSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   return (
@@ -508,6 +573,9 @@ export default function MpscPyqClient({
                       setSelectedYear(yr)
                       setFeedbackNotice(`📅 Filtered by Year: ${yr === 'all' ? 'All Years (2009–2026)' : yr}`)
                       setFeedbackKey(k => k + 1)
+                      if (cardsSectionRef.current) {
+                        cardsSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      }
                     }}
                   >
                     {yr === 'all' ? 'All' : yr} ({countForYr})
@@ -537,6 +605,9 @@ export default function MpscPyqClient({
                   setSelectedCategory(cat.id)
                   setFeedbackNotice(`⚡ Cadre Selected: ${cat.label} (${cat.count} Papers)`)
                   setFeedbackKey(k => k + 1)
+                  if (cardsSectionRef.current) {
+                    cardsSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
                 }}
               >
                 <span>{cat.icon}</span>

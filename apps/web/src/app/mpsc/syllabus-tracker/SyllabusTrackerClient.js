@@ -175,7 +175,11 @@ export default function SyllabusTrackerClient({ syllabusExams }) {
                   key={exam.slug}
                   type="button"
                   className={`${styles.examNavBtn} ${isActive ? styles.examNavBtnActive : ''}`}
-                  onClick={() => setSelectedExamSlug(exam.slug)}
+                  onClick={() => {
+                    setSelectedExamSlug(exam.slug)
+                    const el = document.getElementById('tracker-content')
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }}
                 >
                   <span>🏛️</span>
                   <span>{exam.shortName || exam.nameEn}</span>
@@ -186,7 +190,7 @@ export default function SyllabusTrackerClient({ syllabusExams }) {
         </div>
       </nav>
 
-      <main className={styles.container}>
+      <main className={styles.container} id="tracker-content">
         <div className={styles.dashboardBody}>
           {/* Documented Version Comparison (Old vs. Revised UPSC Pattern) */}
           {showVersionComparison && (

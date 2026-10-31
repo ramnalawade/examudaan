@@ -6,6 +6,7 @@
 
 import { NextResponse } from 'next/server'
 import https from 'https'
+import { obfuscateDocId } from '@/lib/docObfuscate.js'
 
 function findLocalPdf(id) {
   try {
@@ -206,43 +207,7 @@ export async function GET(request, { params }) {
     return NextResponse.json({ error: 'Document not found' }, { status: 404 })
   }
 
-  try {
-    // 1. Check local disk cache
-    const localFile = findLocalPdf(docId)
-    if (localFile) {
-      const fsMod = eval("require('fs')")
-      if (fsMod.existsSync(localFile)) {
-        const fileBuffer = fsMod.readFileSync(localFile)
-        return servePdfBuffer(fileBuffer, docId, request, true)
-      }
-    }
-
-    // 2. Fetch live from MPSC API
-    const pdfBuffer = await fetchFromMpsc(docId)
-    if (!pdfBuffer || pdfBuffer.length < 100) {
-      return NextResponse.json({ error: 'PDF not available on official MPSC portal' }, { status: 404 })
-    }
-
-    // 3. Cache to disk asynchronously
-    try {
-      const fsMod = eval("require('fs')")
-      const pathMod = eval("require('path')")
-      const cacheDir = pathMod.join(process.cwd(), 'public', 'downloads', 'mpsc', 'cached')
-      fsMod.mkdirSync(cacheDir, { recursive: true })
-      fsMod.writeFileSync(pathMod.join(cacheDir, `${docId}_mpsc_document.pdf`), pdfBuffer)
-    } catch (saveErr) {
-      console.warn('Failed to cache PDF to disk:', saveErr.message)
-    }
-
-    return servePdfBuffer(pdfBuffer, docId, request, true)
-  } catch (error) {
-    console.error(`Error serving MPSC download for slug ${slug.join('/')}:`, error)
-    return NextResponse.json(
-      { error: 'Failed to retrieve document from official portal. Please try again or refresh.' },
-      {
-        status: 502,
-        headers: { 'Cache-Control': 'no-store, max-age=0' }
-      }
-    )
-  }
+  // Obfuscate ID and redirect to secure streamer so direct PDF files are never exposed
+  const secureToken = obfuscateDocId(docId)
+  return NextResponse.redirect(new URL(`/api/mpsc-pdf/${secureToken}`, request.url), 307)
 }

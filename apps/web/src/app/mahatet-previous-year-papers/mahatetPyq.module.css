@@ -94,8 +94,9 @@
 
 .heroStatsRow {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
 .statPill {
@@ -109,6 +110,33 @@
   font-size: 13px;
   font-weight: 600;
   color: #9a3412;
+  font-family: inherit;
+}
+
+.statPillBtn {
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.statPillBtn:hover {
+  transform: translateY(-2px);
+  border-color: #ea580c;
+  background: #fff7ed;
+  color: #c2410c;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.15);
+}
+
+.statPillBtn:active {
+  transform: translateY(0);
+}
+
+.statPillActive {
+  background: #ea580c !important;
+  color: #ffffff !important;
+  border-color: #ea580c !important;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.35);
 }
 
 /* ── Filter Controls Section ── */
@@ -429,6 +457,24 @@
   font-weight: 600;
   line-height: 1.45;
   margin-bottom: 12px;
+}
+
+.paperTitleMrBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: #ea580c;
+  text-align: left;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.paperTitleMrBtn:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .paperMeta {

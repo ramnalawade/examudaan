@@ -18,6 +18,22 @@ import MpscFeedbackModal from '@/components/MpscFeedbackModal'
 import { recordTestAttempt } from '@/lib/prepVault'
 import styles from './testEngine.module.css'
 
+function getSectionPracticeUrl(section) {
+  const id = (section?.id || '').toLowerCase()
+  const name = (section?.name || '').toLowerCase()
+  if (id.includes('marathi') || name.includes('मराठी')) return '/pyq/marathi'
+  if (id.includes('english') || name.includes('english') || name.includes('इंग्रजी')) return '/pyq/english'
+  if (id.includes('math') || id.includes('reason') || name.includes('अंकगणित') || name.includes('बुद्धिमत्ता')) return '/pyq/reasoning'
+  if (id.includes('science') || name.includes('विज्ञान')) return '/pyq/science'
+  if (id.includes('geography') || name.includes('भूगोल')) return '/pyq/geography'
+  if (id.includes('history') || name.includes('इतिहास')) return '/pyq/history'
+  if (id.includes('polity') || name.includes('राज्यघटना') || name.includes('पंचायतराज')) return '/pyq/polity'
+  if (id.includes('economy') || name.includes('अर्थव्यवस्था')) return '/pyq/economy'
+  if (id.includes('law') || name.includes('कायदा') || name.includes('विधी')) return '/pyq/law'
+  if (id.includes('gk') || id.includes('general') || name.includes('सामान्य ज्ञान') || name.includes('चालू घडामोडी')) return '/pyq/polity'
+  return '/pyq'
+}
+
 function TestProgressFillBar({ percent }) {
   const fillRef = useRef(null)
   useEffect(() => {
@@ -319,6 +335,23 @@ export default function TestEngineClient({ test }) {
     }
   }
 
+  const handleStartAtSection = (s, idx) => {
+    trackMockTestStart({ exam_name: test?.title, test_id: test?.slug, section: s?.name })
+    if (typeof trackMockTestSectionStart === 'function') {
+      trackMockTestSectionStart({ exam_name: test?.title, section_name: s?.name, section_index: idx + 1 })
+    }
+    setPhase('running')
+    const qIdx = Math.max(0, (s?.qStart || 1) - 1)
+    setCurrent(qIdx)
+    const targetQ = test?.questions?.[qIdx]
+    if (targetQ) {
+      setVisited(prev => ({ ...prev, [targetQ.id]: true }))
+    }
+    if (s?.id) {
+      setPaletteFilter(s.id)
+    }
+  }
+
   if (!test) return null
 
   // ── IDLE Phase (Pre-test screen) ──────────────────────────
@@ -371,11 +404,41 @@ export default function TestEngineClient({ test }) {
                   📚 Examination Sections & Marks Weightage:
                 </h3>
                 <div className={styles.sectionsGrid}>
-                  {test.sections.map((s, idx) => (
-                    <div key={s.id || idx} className={styles.sectionItem}>
-                      <strong>Section {idx + 1}:</strong> {s.name} ({s.qEnd - s.qStart + 1} Qs)
-                    </div>
-                  ))}
+                  {test.sections.map((s, idx) => {
+                    const qCount = s.qEnd - s.qStart + 1
+                    const practiceUrl = getSectionPracticeUrl(s)
+                    return (
+                      <div key={s.id || idx} className={styles.sectionCard}>
+                        <div className={styles.sectionCardHeader}>
+                          <span className={styles.sectionCardBadge}>Section {idx + 1}</span>
+                          <span className={styles.sectionCardCount}>{qCount} Questions</span>
+                        </div>
+                        <h4 className={styles.sectionCardName}>{s.name}</h4>
+                        <div className={styles.sectionCardMeta}>
+                          <span>Questions: <strong>Q{s.qStart} – Q{s.qEnd}</strong></span>
+                          <span>•</span>
+                          <span>Marks: <strong>{qCount * (s.marksPerQuestion || test.marksPerQuestion || 1)}</strong></span>
+                        </div>
+                        <div className={styles.sectionCardActions}>
+                          <button
+                            type="button"
+                            className={styles.sectionBtnStart}
+                            onClick={() => handleStartAtSection(s, idx)}
+                            title={`Start CBT test directly at Section ${idx + 1}: ${s.name}`}
+                          >
+                            <span>▶ Start Section {idx + 1}</span>
+                          </button>
+                          <Link
+                            href={practiceUrl}
+                            className={styles.sectionBtnPractice}
+                            title={`Practice ${s.name} Solved PYQs in question bank`}
+                          >
+                            <span>📚 Practice PYQs ↗</span>
+                          </Link>
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             )}

@@ -7,6 +7,7 @@
 
 import { useState, useMemo, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import { getTopicSlug } from '@/lib/mpscTopicSlugs'
 import styles from './PyqAnalytics.module.css'
 
 function ShareFillBar({ percent }) {
@@ -178,39 +179,39 @@ export default function PyqAnalyticsClient({ initialData }) {
               Compare subject frequency, year-wise trends, question formats, difficulty ratings, and Maharashtra-specific weightage across 18 examination cycles.
             </p>
 
-            {/* Quick Metrics Ribbon */}
+            {/* Quick Metrics Ribbon (Single Card Structure - Zero Double Border) */}
             <div className={styles.statsRibbon}>
-              <div className={styles.statCard}>
+              <Link href="/pyq" className={styles.statCard} title="Browse All PYQ Question Banks">
                 <span className={styles.statValue}>
                   {Number(overview.total_questions || 10392).toLocaleString('en-IN')}
                 </span>
-                <span className={styles.statLabel}>Questions Cataloged</span>
+                <span className={styles.statLabel}>Questions Cataloged ↗</span>
                 <span className={styles.statSubtext}>Across {overview.distinct_exams || 89} exam sessions</span>
-              </div>
+              </Link>
 
-              <div className={styles.statCard}>
+              <Link href="/mpsc-pyq" className={styles.statCard} title="Browse MPSC Question Paper Archive">
                 <span className={styles.statValue}>
                   {overview.min_year} – {overview.max_year}
                 </span>
-                <span className={styles.statLabel}>Historical Coverage</span>
+                <span className={styles.statLabel}>Historical Coverage ↗</span>
                 <span className={styles.statSubtext}>{overview.distinct_years || 18} Active examination years</span>
-              </div>
+              </Link>
 
-              <div className={styles.statCard}>
+              <a href="#recurring-concepts" className={styles.statCard} title="Jump to Recurring Question Concepts">
                 <span className={styles.statValue}>
                   {Math.round(((overview.multi_statement_count || 1475) / (overview.total_questions || 10392)) * 100)}%
                 </span>
-                <span className={styles.statLabel}>Multi-Statement Ratio (All Qs)</span>
+                <span className={styles.statLabel}>Multi-Statement Ratio (All Qs) ↓</span>
                 <span className={styles.statSubtext}>Across all 10,392 questions in DB (GS + Lang)</span>
-              </div>
+              </a>
 
-              <div className={styles.statCard}>
+              <Link href="/pyq/geography" className={styles.statCard} title="Browse Maharashtra Specific Geography & History PYQs">
                 <span className={styles.statValue}>
                   {Number(overview.mh_specific_count || 522).toLocaleString('en-IN')}
                 </span>
-                <span className={styles.statLabel}>Maharashtra Specific</span>
+                <span className={styles.statLabel}>Maharashtra Specific ↗</span>
                 <span className={styles.statSubtext}>State history, geography & schemes</span>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -234,6 +235,8 @@ export default function PyqAnalyticsClient({ initialData }) {
                   onClick={() => {
                     setActiveCadre(cadre.id)
                     setActiveSubject('all')
+                    const el = document.getElementById('analytics-content')
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
                   }}
                 >
                   <span>{cadre.icon}</span>
@@ -246,7 +249,7 @@ export default function PyqAnalyticsClient({ initialData }) {
         </div>
       </nav>
 
-      <main className={styles.container}>
+      <main className={styles.container} id="analytics-content">
         <div className={styles.dashboardBody}>
           {/* Module 1: Subject-wise Frequency & Weightage Matrix */}
           <section aria-labelledby="section-subject-weightage">
@@ -326,8 +329,8 @@ export default function PyqAnalyticsClient({ initialData }) {
                       className={styles.actionPracticeLink}
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <span>Practise {s.subject} MCQs →</span>
-                      <span>{s.questions_count} Available</span>
+                      <span className={styles.actionPracticeText}>Practise MCQs →</span>
+                      <span className={styles.actionPracticeBadge}>{s.questions_count} Qs</span>
                     </Link>
                   </div>
                 )
@@ -336,7 +339,7 @@ export default function PyqAnalyticsClient({ initialData }) {
           </section>
 
           {/* Module 2: High-Yield Recurring Concepts Hitlist ("हमखास विचारले जाणारे घटक") */}
-          <section aria-labelledby="section-recurring-hitlist">
+          <section aria-labelledby="section-recurring-hitlist" id="recurring-concepts">
             <div className={styles.sectionHeader}>
               <div className={styles.sectionTitleGroup}>
                 <span className={styles.sectionTag}>Recurring Concepts • वारंवार विचारले जाणारे घटक</span>
@@ -399,19 +402,63 @@ export default function PyqAnalyticsClient({ initialData }) {
                           </div>
                         </td>
                         <td>
-                          <button
-                            type="button"
-                            className={styles.btnInspect}
-                            onClick={() => handleInspectTopic(item.topic, item.subject, 1)}
-                            aria-label={`Inspect questions for ${item.topic}`}
+                          <Link
+                            href={`/mpsc/pyq-analysis/${getTopicSlug(item.topic)}`}
+                            className={styles.btnInspectOrange}
+                            aria-label={`View questions for ${item.topic}`}
                           >
-                            Inspect Questions →
-                          </button>
+                            View Questions →
+                          </Link>
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
+              </div>
+
+              {/* Mobile Responsive Card-wise Hitlist (< 768px) */}
+              <div className={styles.hitlistMobileCards}>
+                {filteredHitlist.map((item, idx) => (
+                  <div key={`m-${item.subject}-${item.topic}`} className={styles.hitlistMobileCard}>
+                    <div className={styles.hitlistCardHeader}>
+                      <span className={`${styles.rankBadge} ${idx < 3 ? styles.rankBadgeTop3 : ''}`}>
+                        #{idx + 1}
+                      </span>
+                      <span className={styles.topicSubjectBadge}>{item.subject}</span>
+                      <span className={styles.frequencyBadge}>🔥 {item.total_occurrences} Qs</span>
+                    </div>
+
+                    <h3 className={styles.hitlistCardTitle}>{item.topic}</h3>
+
+                    {item.maharashtra_focus > 0 && (
+                      <div className={styles.badgeTopRank}>
+                        🏛️ {item.maharashtra_focus} Maharashtra-Specific Questions
+                      </div>
+                    )}
+
+                    <div className={styles.hitlistCardYears}>
+                      <span className={styles.yearsLabel}>Exam Years:</span>
+                      <div className={styles.yearsChipList}>
+                        {(item.years_asked || []).slice(0, 4).map((yr) => (
+                          <span key={yr} className={styles.yearChip}>{yr}</span>
+                        ))}
+                        {(item.years_asked || []).length > 4 && (
+                          <span className={styles.yearChip}>+{(item.years_asked || []).length - 4} more</span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className={styles.hitlistCardAction}>
+                      <Link
+                        href={`/mpsc/pyq-analysis/${getTopicSlug(item.topic)}`}
+                        className={styles.btnInspectOrangeFull}
+                        aria-label={`View questions for ${item.topic}`}
+                      >
+                        View Questions →
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>

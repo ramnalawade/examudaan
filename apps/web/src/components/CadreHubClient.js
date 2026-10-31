@@ -42,6 +42,19 @@ export default function CadreHubClient({ cadreEntry, papers = [] }) {
     setSelectedYear(y)
   }, [searchParams])
 
+  // Automatically scroll to papers listing when navigating from cadre distribution card or hash
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window.location.hash === '#cadre-listing' || window.location.hash === '#papers-list')) {
+      const scrollTimer = setTimeout(() => {
+        const el = document.getElementById('cadre-listing') || listTopRef.current
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 120)
+      return () => clearTimeout(scrollTimer)
+    }
+  }, [pathname])
+
   // Available distinct years for this cadre
   const availableYears = useMemo(() => {
     const yrs = Array.from(new Set(papers.map(p => p.examYear).filter(Boolean)))
@@ -105,12 +118,18 @@ export default function CadreHubClient({ cadreEntry, papers = [] }) {
     setSelectedStage(stg)
     setCurrentPage(1)
     updateUrl(1, stg, selectedYear)
+    if (listTopRef.current) {
+      listTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   function handleYearChange(yr) {
     setSelectedYear(yr)
     setCurrentPage(1)
     updateUrl(1, selectedStage, yr)
+    if (listTopRef.current) {
+      listTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   function handleClearFilters() {
@@ -119,12 +138,15 @@ export default function CadreHubClient({ cadreEntry, papers = [] }) {
     setSearchQuery('')
     setCurrentPage(1)
     updateUrl(1, 'all', 'all')
+    if (listTopRef.current) {
+      listTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="cadre-listing">
       {/* ── Interactive Filter & Search Bar ── */}
-      <div className={styles.filterBar} ref={listTopRef}>
+      <div className={styles.filterBar} ref={listTopRef} id="papers-list">
         <div className={styles.filterRowTop}>
           <div className={styles.searchWrap}>
             <span className={styles.searchIcon}>🔍</span>
@@ -267,14 +289,24 @@ export default function CadreHubClient({ cadreEntry, papers = [] }) {
                 </div>
 
                 <h2 className={styles.paperTitle}>
-                  <Link href={`/mpsc/${paper.slug}`} className={styles.paperTitleLink}>
+                  <Link
+                    href={`/mpsc-pyq?docId=${paper.id || ''}&year=${paper.examYear}&docType=qp`}
+                    className={styles.paperTitleLink}
+                    title="Open paper directly in Study Workspace"
+                  >
                     {paper.title}
                   </Link>
                 </h2>
 
                 {paper.titleMr && (
                   <div className={styles.paperTitleMr}>
-                    {paper.titleMr}
+                    <Link
+                      href={`/mpsc-pyq?docId=${paper.id || ''}&year=${paper.examYear}&docType=qp`}
+                      className={styles.paperTitleLink}
+                      title="Open paper directly in Study Workspace"
+                    >
+                      {paper.titleMr}
+                    </Link>
                   </div>
                 )}
 

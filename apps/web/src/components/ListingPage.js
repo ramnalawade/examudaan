@@ -20,6 +20,7 @@ import { LoadMore } from './Pagination'
 import { useLanguage } from '../context/LanguageContext'
 import { trackJobFilterApply, trackJobSearch } from '../lib/analytics'
 import { formatTitle } from '../lib/formatTitle'
+import styles from './ListingPage.module.css'
 
 // ── Category tabs shown at top of every listing page ──────────
 const CATEGORY_TABS = [
@@ -165,19 +166,15 @@ function toCard(n) {
 function FilterSection({ title, children, defaultOpen = true }) {
   const [open, setOpen] = useState(defaultOpen)
   return (
-    <div style={{ borderBottom: '1px solid var(--outline-variant)', paddingBottom: 16, marginBottom: 16 }}>
+    <div className={styles.filterSection}>
       <button
         onClick={() => setOpen(o => !o)}
-        style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          width: '100%', background: 'none', border: 'none', cursor: 'pointer',
-          padding: '0 0 12px 0', fontFamily: 'inherit',
-        }}
+        className={styles.filterSectionToggle}
       >
-        <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+        <span className={styles.filterSectionTitle}>
           {title}
         </span>
-        <span className="material-symbols-outlined" style={{ fontSize: 18, color: 'var(--secondary)' }}>
+        <span className={`material-symbols-outlined ${styles.filterSectionChevron}`}>
           {open ? 'expand_less' : 'expand_more'}
         </span>
       </button>
@@ -360,6 +357,8 @@ function ListingPageInner({
       admit_card: 'Admit Cards', answer_key: 'Answer Keys', syllabus: 'Syllabi',
     }[activeTab] || 'Notifications')
 
+  // primaryColor: expose as CSS custom property on the wrapper element
+  // so child CSS classes can reference var(--listing-accent)
   const primaryColor = accentColor || 'var(--primary)'
 
   const categoryTabs = [
@@ -399,31 +398,22 @@ function ListingPageInner({
   ] : STATES
 
   return (
-    <div className="container" style={{ paddingTop: 20, paddingBottom: 80 }}>
+    // Set --listing-accent CSS custom property on the root div so all
+    // descendant CSS classes can reference it without any inline styles.
+    <div className={`container ${styles.pageWrapper}`} style={{ '--listing-accent': primaryColor }}>
 
       {/* ── Page Header / H1 ──────────────────────────────── */}
-      <div style={{ marginBottom: 18 }}>
-        <h1
-          style={{
-            fontSize: 'clamp(22px, 3.2vw, 30px)',
-            fontWeight: 800,
-            color: 'var(--on-surface)',
-            margin: '0 0 6px 0',
-            letterSpacing: '-0.02em',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-          }}
-        >
+      <div className={styles.pageHeaderBox}>
+        <h1 className={styles.pageH1}>
           {headerIcon && (
-            <span className="material-symbols-outlined" style={{ fontSize: 28, color: primaryColor }}>
+            <span className={`material-symbols-outlined ${styles.pageH1Icon}`}>
               {headerIcon}
             </span>
           )}
           {title || tabLabel}
         </h1>
         {subtitle && (
-          <p style={{ margin: 0, fontSize: 14, color: 'var(--secondary)', lineHeight: 1.5 }}>
+          <p className={styles.pageSubtitle}>
             {subtitle}
           </p>
         )}
@@ -432,10 +422,7 @@ function ListingPageInner({
       {/* ── Category Tab Nav ──────────────────────────────── */}
       <div
         id="listing-category-tabs"
-        style={{
-          display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4,
-          marginBottom: 20, scrollbarWidth: 'none',
-        }}
+        className={styles.categoryTabsRow}
       >
         {categoryTabs.map(tab => {
           const isActive = tab.id === activeTab || (tab.id === 'recruitment' && activeTab === 'all' && defaultType === 'recruitment')
@@ -449,19 +436,10 @@ function ListingPageInner({
                   setActiveTab(tab.id)
                 }
               }}
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 6,
-                padding: '8px 16px', borderRadius: 999, whiteSpace: 'nowrap',
-                border: isActive ? `1.5px solid ${primaryColor}` : '1.5px solid var(--outline-variant)',
-                background: isActive ? primaryColor : 'var(--surface-container-low)',
-                color: isActive ? '#fff' : 'var(--on-surface)',
-                fontWeight: isActive ? 700 : 500, fontSize: 13,
-                textDecoration: 'none', cursor: 'pointer',
-                transition: 'all 0.18s',
-              }}
+              className={`${styles.categoryTab}${isActive ? ` ${styles.categoryTabActive}` : ''}`}
               id={`tab-${tab.id}`}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 16 }}>{tab.icon}</span>
+              <span className={`material-symbols-outlined ${styles.categoryTabIcon}`}>{tab.icon}</span>
               {tab.label}
             </Link>
           )
@@ -471,10 +449,7 @@ function ListingPageInner({
       {/* ── Quick Filter Bar ── */}
       <div
         id="listing-quick-chips"
-        style={{
-          display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 8,
-          marginBottom: 16, scrollbarWidth: 'none',
-        }}
+        className={styles.quickChipsRow}
       >
         {[
           { label: isMarathi ? '🚩 महाराष्ट्र' : '🚩 Maharashtra', type: 'state', value: 'maharashtra' },
@@ -509,27 +484,19 @@ function ListingPageInner({
                 if (chip.type === 'sort') setSort(prev => prev === chip.value ? 'latest' : chip.value)
                 if (chip.type === 'status') setStatusFilter(prev => prev === chip.value ? 'published' : chip.value)
               }}
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 4,
-                padding: '6px 14px', borderRadius: 999, whiteSpace: 'nowrap',
-                border: isChipActive ? `1.5px solid ${primaryColor}` : '1px solid var(--outline-variant)',
-                background: isChipActive ? '#FFF7ED' : 'var(--surface-container-low)',
-                color: isChipActive ? primaryColor : 'var(--on-surface)',
-                fontWeight: isChipActive ? 700 : 500, fontSize: 13,
-                cursor: 'pointer', transition: 'all 0.15s',
-              }}
+              className={`${styles.quickChip}${isChipActive ? ` ${styles.quickChipActive}` : ''}`}
             >
               {chip.label}
-              {isChipActive && <span className="material-symbols-outlined" style={{ fontSize: 14 }}>check</span>}
+              {isChipActive && <span className={`material-symbols-outlined ${styles.quickChipCheckIcon}`}>check</span>}
             </button>
           )
         })}
       </div>
 
       {/* ── Search + Sort row ─────────────────────────────── */}
-      <div style={{ display: 'flex', gap: 10, marginBottom: 20, alignItems: 'center' }}>
+      <div className={styles.searchSortRow}>
         {/* Search - Dominant width */}
-        <div className="search-hero" style={{ flex: 1, minWidth: 0 }}>
+        <div className={`search-hero ${styles.searchWrapper}`}>
           <span className="material-symbols-outlined search-icon">search</span>
           <input
             type="text"
@@ -538,14 +505,14 @@ function ListingPageInner({
             onChange={e => setSearch(e.target.value)}
             id="listing-search-input"
             aria-label={`Search ${tabLabel}`}
-            style={{ height: 48, fontSize: 15 }}
+            className={styles.searchInput}
           />
           {search && (
             <button
               onClick={() => setSearch('')}
-              style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--secondary)', display: 'flex' }}
+              className={styles.searchClearBtn}
             >
-              <span className="material-symbols-outlined" style={{ fontSize: 18 }}>close</span>
+              <span className={`material-symbols-outlined ${styles.searchClearIcon}`}>close</span>
             </button>
           )}
         </div>
@@ -553,15 +520,8 @@ function ListingPageInner({
         {/* Mobile filter toggle */}
         <button
           onClick={() => setSidebarOpen(true)}
-          className="listing-mobile-filter-btn"
-          style={{
-            background: hasFilters ? primaryColor : 'var(--surface-container-low)',
-            border: '1px solid var(--outline-variant)',
-            borderRadius: 12, padding: '0 14px',
-            display: 'none', alignItems: 'center', gap: 6,
-            cursor: 'pointer', color: hasFilters ? '#fff' : 'var(--on-surface)',
-            fontFamily: 'inherit', fontSize: 14, height: 48,
-          }}
+          className={`listing-mobile-filter-btn ${styles.mobileFilterBtn}`}
+          data-active={hasFilters ? 'true' : 'false'}
           id="mobile-filter-toggle"
           aria-label="Open filters"
         >
@@ -570,26 +530,11 @@ function ListingPageInner({
         </button>
 
         {/* Sort - Compact */}
-        <div style={{ position: 'relative', flexShrink: 0, width: 'auto' }}>
+        <div className={styles.sortWrapper}>
           <select
             value={sort}
             onChange={e => setSort(e.target.value)}
-            className="form-select"
-            style={{
-              width: 'auto',
-              minWidth: 140,
-              maxWidth: 175,
-              flexShrink: 0,
-              height: 48,
-              padding: '0 34px 0 14px',
-              fontSize: 14,
-              fontWeight: 600,
-              borderRadius: 12,
-              background: 'var(--surface-container-lowest)',
-              border: '1px solid var(--outline-variant)',
-              cursor: 'pointer',
-              color: 'var(--on-surface)',
-            }}
+            className={`form-select ${styles.sortSelect}`}
             id="listing-sort-select"
             aria-label="Sort"
           >
@@ -597,99 +542,78 @@ function ListingPageInner({
             <option value="closing">{t('listing.sort_closing', 'Closing Soon')}</option>
             <option value="vacancies">{t('listing.sort_vacancies', 'Most Posts')}</option>
           </select>
-          <span className="material-symbols-outlined" style={{
-            position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)',
-            pointerEvents: 'none', color: 'var(--secondary)', fontSize: 20
-          }}>
+          <span className={`material-symbols-outlined ${styles.sortIcon}`}>
             expand_more
           </span>
         </div>
       </div>
 
       {/* ── Count + active filter chips ───────────────────── */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, flexWrap: 'wrap', gap: 8 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <span style={{ fontSize: 18, fontWeight: 700, color: 'var(--on-surface)' }}>
+      <div className={styles.countRow}>
+        <div className={styles.countLeft}>
+          <span className={styles.countLabel}>
             {loading && items.length === 0 ? 'Loading…' : `${total.toLocaleString('en-IN')} ${tabLabel}`}
           </span>
           {/* Active / Closed toggle pills (On Demand) */}
-          <div style={{ display: 'inline-flex', background: 'var(--surface-container-low)', padding: 3, borderRadius: 999, border: '1px solid var(--outline-variant)' }}>
+          <div className={styles.statusToggleGroup}>
             <button
               type="button"
               onClick={() => setStatusFilter('published')}
-              style={{
-                border: 'none',
-                background: statusFilter === 'published' ? 'var(--surface-container-lowest)' : 'transparent',
-                color: statusFilter === 'published' ? 'var(--primary)' : 'var(--secondary)',
-                fontWeight: statusFilter === 'published' ? 700 : 500,
-                fontSize: 12, padding: '4px 12px', borderRadius: 999, cursor: 'pointer',
-                boxShadow: statusFilter === 'published' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                display: 'inline-flex', alignItems: 'center', gap: 5,
-                fontFamily: 'inherit'
-              }}
+              className={`${styles.statusBtn}${statusFilter === 'published' ? ` ${styles.statusBtnActive}` : ''}`}
               id="filter-status-active-btn"
             >
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#16A34A', display: 'inline-block' }}></span>
+              <span className={styles.statusDotGreen}></span>
               {isMarathi ? 'सुरू जाहिराती (Active)' : 'Active Jobs'}
             </button>
             <button
               type="button"
               onClick={() => setStatusFilter('closed')}
-              style={{
-                border: 'none',
-                background: statusFilter === 'closed' ? 'var(--surface-container-lowest)' : 'transparent',
-                color: statusFilter === 'closed' ? '#DC2626' : 'var(--secondary)',
-                fontWeight: statusFilter === 'closed' ? 700 : 500,
-                fontSize: 12, padding: '4px 12px', borderRadius: 999, cursor: 'pointer',
-                boxShadow: statusFilter === 'closed' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
-                display: 'inline-flex', alignItems: 'center', gap: 5,
-                fontFamily: 'inherit'
-              }}
+              className={`${styles.statusBtn}${statusFilter === 'closed' ? ` ${styles.statusBtnClosed}` : ''}`}
               id="filter-status-closed-btn"
             >
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#9CA3AF', display: 'inline-block' }}></span>
+              <span className={styles.statusDotGray}></span>
               {isMarathi ? 'बंद जाहिराती (Closed)' : 'Closed / Expired'}
             </button>
           </div>
           {hasFilters && (
             <button
               onClick={clearAll}
-              style={{ marginLeft: 6, fontSize: 12, color: primaryColor, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600, fontFamily: 'inherit' }}
+              className={styles.clearAllBtn}
             >
               Clear all filters
             </button>
           )}
         </div>
         {/* Active filter pills */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+        <div className={styles.activePillsRow}>
           {selOrgs.map(o => (
-            <span key={o} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 999, fontSize: 12, color: '#C2410C', fontWeight: 600 }}>
+            <span key={o} className={styles.activePillOrg}>
               {o}
-              <button onClick={() => toggleOrg(o)} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
+              <button onClick={() => toggleOrg(o)} className={styles.pillRemoveBtn}><span className={`material-symbols-outlined ${styles.pillRemoveIcon}`}>close</span></button>
             </span>
           ))}
           {selQual && (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 999, fontSize: 12, color: '#1D4ED8', fontWeight: 600 }}>
+            <span className={styles.activePillQual}>
               {QUALIFICATIONS.find(q => q.id === selQual)?.label}
-              <button onClick={() => setSelQual('')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
+              <button onClick={() => setSelQual('')} className={styles.pillRemoveBtn}><span className={`material-symbols-outlined ${styles.pillRemoveIcon}`}>close</span></button>
             </span>
           )}
           {selState && (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#F0FDF4', border: '1px solid #BBF7D0', borderRadius: 999, fontSize: 12, color: '#15803D', fontWeight: 600 }}>
+            <span className={styles.activePillState}>
               {STATES.find(s => s.id === selState)?.label}
-              <button onClick={() => setSelState('')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
+              <button onClick={() => setSelState('')} className={styles.pillRemoveBtn}><span className={`material-symbols-outlined ${styles.pillRemoveIcon}`}>close</span></button>
             </span>
           )}
           {selCity && (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#FEF3C7', border: '1px solid #FDE68A', borderRadius: 999, fontSize: 12, color: '#B45309', fontWeight: 600 }}>
+            <span className={styles.activePillCity}>
               📍 {selCity}
-              <button onClick={() => setSelCity('')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
+              <button onClick={() => setSelCity('')} className={styles.pillRemoveBtn}><span className={`material-symbols-outlined ${styles.pillRemoveIcon}`}>close</span></button>
             </span>
           )}
           {selVacancies && (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', background: '#FFF7ED', border: '1px solid #FED7AA', borderRadius: 999, fontSize: 12, color: '#EA580C', fontWeight: 600 }}>
+            <span className={styles.activePillVacancies}>
               {VACANCY_RANGES.find(v => v.id === selVacancies)?.label || `${selVacancies}+ Posts`}
-              <button onClick={() => setSelVacancies('')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', color: 'inherit', padding: 0 }}><span className="material-symbols-outlined" style={{ fontSize: 14 }}>close</span></button>
+              <button onClick={() => setSelVacancies('')} className={styles.pillRemoveBtn}><span className={`material-symbols-outlined ${styles.pillRemoveIcon}`}>close</span></button>
             </span>
           )}
         </div>
@@ -703,7 +627,7 @@ function ListingPageInner({
         {sidebarOpen && (
           <div
             onClick={() => setSidebarOpen(false)}
-            style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 200 }}
+            className={styles.mobileOverlay}
           />
         )}
 
@@ -712,13 +636,13 @@ function ListingPageInner({
           id="listing-filter-sidebar"
           aria-label="Filters"
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-            <h2 style={{ fontSize: 15, fontWeight: 700, color: 'var(--on-surface)' }}>{t('listing.filter_title', 'Filters')}</h2>
-            <div style={{ display: 'flex', gap: 8 }}>
+          <div className={styles.sidebarHeader}>
+            <h2 className={styles.sidebarTitle}>{t('listing.filter_title', 'Filters')}</h2>
+            <div className={styles.sidebarHeaderActions}>
               {hasFilters && (
                 <button
                   onClick={clearAll}
-                  style={{ fontSize: 12, color: primaryColor, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600, fontFamily: 'inherit' }}
+                  className={styles.sidebarClearBtn}
                 >
                   {t('listing.clear_all', 'Clear All')}
                 </button>
@@ -726,8 +650,7 @@ function ListingPageInner({
               {/* Mobile close */}
               <button
                 onClick={() => setSidebarOpen(false)}
-                className="listing-sidebar-close"
-                style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'none', color: 'var(--secondary)' }}
+                className={`listing-sidebar-close ${styles.sidebarCloseBtn}`}
               >
                 <span className="material-symbols-outlined">close</span>
               </button>
@@ -736,7 +659,7 @@ function ListingPageInner({
 
           {/* Application Status Filter (Active vs Closed On Demand) */}
           <FilterSection title={isMarathi ? 'अर्जाची स्थिती' : 'Application Status'} defaultOpen={true}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div className={styles.filterColGap6}>
               {[
                 { id: 'published', label: isMarathi ? 'सुरू जाहिराती (नवीनतम)' : 'Active Jobs (Latest First)' },
                 { id: 'closed', label: isMarathi ? 'मुदत संपलेल्या जाहिराती (Closed / Archive)' : 'Closed / Past Deadlines' },
@@ -744,7 +667,8 @@ function ListingPageInner({
               ].map(st => (
                 <label
                   key={st.id}
-                  style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: statusFilter === st.id ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                  className={styles.filterLabel}
+                  data-active={statusFilter === st.id ? 'true' : 'false'}
                   htmlFor={`filter-status-${st.id}`}
                 >
                   <input
@@ -753,9 +677,12 @@ function ListingPageInner({
                     name="statusFilter"
                     checked={statusFilter === st.id}
                     onChange={() => setStatusFilter(st.id)}
-                    style={{ accentColor: primaryColor, width: 16, height: 16 }}
+                    className={styles.filterInputAccent}
                   />
-                  <span style={{ fontSize: 13, color: statusFilter === st.id ? primaryColor : 'var(--on-surface)', fontWeight: statusFilter === st.id ? 700 : 400 }}>
+                  <span
+                    className={styles.filterTextStatus}
+                    data-active={statusFilter === st.id ? 'true' : 'false'}
+                  >
                     {st.label}
                   </span>
                 </label>
@@ -765,11 +692,12 @@ function ListingPageInner({
 
           {/* Organization filter */}
           <FilterSection title={t('listing.filter_board', 'Organization / Board')}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div className={styles.filterColGap8}>
               {ORGS.map(org => (
                 <label
                   key={org.id}
-                  style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: selOrgs.includes(org.id) ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                  className={styles.filterLabel}
+                  data-active={selOrgs.includes(org.id) ? 'true' : 'false'}
                   htmlFor={`filter-org-${org.id}`}
                 >
                   <input
@@ -777,9 +705,12 @@ function ListingPageInner({
                     id={`filter-org-${org.id}`}
                     checked={selOrgs.includes(org.id)}
                     onChange={() => toggleOrg(org.id)}
-                    style={{ accentColor: primaryColor, width: 16, height: 16 }}
+                    className={styles.filterInputAccent}
                   />
-                  <span style={{ fontSize: 14, color: selOrgs.includes(org.id) ? '#C2410C' : 'var(--on-surface)', fontWeight: selOrgs.includes(org.id) ? 600 : 400 }}>
+                  <span
+                    className={styles.filterTextOrg}
+                    data-active={selOrgs.includes(org.id) ? 'true' : 'false'}
+                  >
                     {org.label}
                   </span>
                 </label>
@@ -789,11 +720,12 @@ function ListingPageInner({
 
           {/* Education filter */}
           <FilterSection title={t('listing.filter_qualification', 'Education / Qualification')}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div className={styles.filterColGap6}>
               {qualList.map(q => (
                 <label
                   key={q.id}
-                  style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: selQual === q.id ? '#EFF6FF' : 'transparent', transition: 'background 0.15s' }}
+                  className={styles.filterLabelQual}
+                  data-active={selQual === q.id ? 'true' : 'false'}
                   htmlFor={`filter-qual-${q.id}`}
                 >
                   <input
@@ -802,9 +734,12 @@ function ListingPageInner({
                     name="qualification"
                     checked={selQual === q.id}
                     onChange={() => setSelQual(prev => prev === q.id ? '' : q.id)}
-                    style={{ accentColor: '#1D4ED8', width: 16, height: 16 }}
+                    className={styles.filterInputBlue}
                   />
-                  <span style={{ fontSize: 14, color: selQual === q.id ? '#1D4ED8' : 'var(--on-surface)', fontWeight: selQual === q.id ? 600 : 400 }}>
+                  <span
+                    className={styles.filterTextQual}
+                    data-active={selQual === q.id ? 'true' : 'false'}
+                  >
                     {q.label}
                   </span>
                 </label>
@@ -814,11 +749,12 @@ function ListingPageInner({
 
           {/* State filter */}
           <FilterSection title={t('listing.filter_state', 'State')} defaultOpen={false}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div className={styles.filterColGap6}>
               {statesList.map(s => (
                 <label
                   key={s.id}
-                  style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: selState === s.id ? '#F0FDF4' : 'transparent', transition: 'background 0.15s' }}
+                  className={styles.filterLabelState}
+                  data-active={selState === s.id ? 'true' : 'false'}
                   htmlFor={`filter-state-${s.id}`}
                 >
                   <input
@@ -827,9 +763,12 @@ function ListingPageInner({
                     name="state"
                     checked={selState === s.id}
                     onChange={() => setSelState(prev => prev === s.id ? '' : s.id)}
-                    style={{ accentColor: '#15803D', width: 16, height: 16 }}
+                    className={styles.filterInputGreen}
                   />
-                  <span style={{ fontSize: 14, color: selState === s.id ? '#15803D' : 'var(--on-surface)', fontWeight: selState === s.id ? 600 : 400 }}>
+                  <span
+                    className={styles.filterTextState}
+                    data-active={selState === s.id ? 'true' : 'false'}
+                  >
                     {s.label}
                   </span>
                 </label>
@@ -839,11 +778,12 @@ function ListingPageInner({
 
           {/* Maharashtra District / City filter */}
           <FilterSection title={isMarathi ? 'महाराष्ट्र जिल्हे' : 'Maharashtra District'} defaultOpen={true}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, maxHeight: 220, overflowY: 'auto', paddingRight: 4 }}>
+            <div className={styles.districtList}>
               {MAHARASHTRA_DISTRICTS.map(d => (
                 <label
                   key={d.id}
-                  style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '5px 8px', borderRadius: 8, background: selCity === d.id ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                  className={styles.filterLabelDistrict}
+                  data-active={selCity === d.id ? 'true' : 'false'}
                   htmlFor={`filter-district-${d.id}`}
                 >
                   <input
@@ -852,9 +792,12 @@ function ListingPageInner({
                     name="city"
                     checked={selCity === d.id}
                     onChange={() => setSelCity(prev => prev === d.id ? '' : d.id)}
-                    style={{ accentColor: 'var(--primary)', width: 16, height: 16 }}
+                    className={styles.filterInputAccent}
                   />
-                  <span style={{ fontSize: 13, color: selCity === d.id ? 'var(--primary)' : 'var(--on-surface)', fontWeight: selCity === d.id ? 700 : 400 }}>
+                  <span
+                    className={styles.filterTextDistrict}
+                    data-active={selCity === d.id ? 'true' : 'false'}
+                  >
                     {isMarathi ? d.label_mr : d.label}
                   </span>
                 </label>
@@ -864,7 +807,7 @@ function ListingPageInner({
 
           {/* Government Level filter */}
           <FilterSection title={t('listing.filter_govt_level', 'Government Level')} defaultOpen={false}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div className={styles.filterColGap6}>
               {[
                 { id: 'Central', label: '🏛️ Central Govt', desc: 'UPSC, SSC, Railways, Banks' },
                 { id: 'State', label: '🏢 State Govt', desc: 'MPSC, Police, ZP, BMC' },
@@ -873,7 +816,8 @@ function ListingPageInner({
               ].map(gl => (
                 <label
                   key={gl.id}
-                  style={{ display: 'flex', alignItems: 'flex-start', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: selGovtLevel === gl.id ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                  className={styles.filterLabelGovt}
+                  data-active={selGovtLevel === gl.id ? 'true' : 'false'}
                   htmlFor={`filter-govtlevel-${gl.id}`}
                 >
                   <input
@@ -882,11 +826,14 @@ function ListingPageInner({
                     name="govt_level"
                     checked={selGovtLevel === gl.id}
                     onChange={() => setSelGovtLevel(prev => prev === gl.id ? '' : gl.id)}
-                    style={{ accentColor: 'var(--primary)', width: 16, height: 16, marginTop: 2 }}
+                    className={styles.filterInputGovtAccent}
                   />
                   <div>
-                    <div style={{ fontSize: 14, color: selGovtLevel === gl.id ? 'var(--primary)' : 'var(--on-surface)', fontWeight: selGovtLevel === gl.id ? 700 : 400 }}>{gl.label}</div>
-                    <div style={{ fontSize: 11, color: 'var(--secondary)' }}>{gl.desc}</div>
+                    <div
+                      className={styles.filterGovtLabel}
+                      data-active={selGovtLevel === gl.id ? 'true' : 'false'}
+                    >{gl.label}</div>
+                    <div className={styles.filterGovtDesc}>{gl.desc}</div>
                   </div>
                 </label>
               ))}
@@ -896,11 +843,12 @@ function ListingPageInner({
           {/* Salary filter — only on recruitment/all */}
           {(activeTab === 'all' || activeTab === 'recruitment') && (
             <FilterSection title={t('listing.filter_salary', 'Minimum Salary')} defaultOpen={false}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              <div className={styles.filterColGap6}>
                 {salaryList.map(s => (
                   <label
                     key={s.id}
-                    style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: selSalary === s.id ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                    className={styles.filterLabel}
+                    data-active={selSalary === s.id ? 'true' : 'false'}
                     htmlFor={`filter-salary-${s.id}`}
                   >
                     <input
@@ -909,9 +857,12 @@ function ListingPageInner({
                       name="salary"
                       checked={selSalary === s.id}
                       onChange={() => setSelSalary(prev => prev === s.id ? '' : s.id)}
-                      style={{ accentColor: '#C2410C', width: 16, height: 16 }}
+                      className={styles.filterInputOrangeRed}
                     />
-                    <span style={{ fontSize: 14, color: selSalary === s.id ? '#C2410C' : 'var(--on-surface)', fontWeight: selSalary === s.id ? 600 : 400 }}>
+                    <span
+                      className={styles.filterTextSalary}
+                      data-active={selSalary === s.id ? 'true' : 'false'}
+                    >
                       {s.label}
                     </span>
                   </label>
@@ -923,11 +874,12 @@ function ListingPageInner({
           {/* Vacancies / Posts filter — only on recruitment/all */}
           {(activeTab === 'all' || activeTab === 'recruitment') && (
             <FilterSection title={t('listing.filter_vacancies', isMarathi ? 'एकूण पदे / जागा' : 'Number of Posts / Vacancies')} defaultOpen={true}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              <div className={styles.filterColGap6}>
                 {VACANCY_RANGES.map(v => (
                   <label
                     key={v.id}
-                    style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '6px 8px', borderRadius: 8, background: selVacancies === v.id ? '#FFF7ED' : 'transparent', transition: 'background 0.15s' }}
+                    className={styles.filterLabel}
+                    data-active={selVacancies === v.id ? 'true' : 'false'}
                     htmlFor={`filter-vacancies-${v.id}`}
                   >
                     <input
@@ -936,9 +888,12 @@ function ListingPageInner({
                       name="min_vacancies"
                       checked={selVacancies === v.id}
                       onChange={() => setSelVacancies(prev => prev === v.id ? '' : v.id)}
-                      style={{ accentColor: '#EA580C', width: 16, height: 16 }}
+                      className={styles.filterInputOrange}
                     />
-                    <span style={{ fontSize: 14, color: selVacancies === v.id ? '#EA580C' : 'var(--on-surface)', fontWeight: selVacancies === v.id ? 700 : 400 }}>
+                    <span
+                      className={styles.filterTextVacancies}
+                      data-active={selVacancies === v.id ? 'true' : 'false'}
+                    >
                       {isMarathi && v.label_mr ? v.label_mr : v.label}
                     </span>
                   </label>
@@ -948,20 +903,17 @@ function ListingPageInner({
           )}
 
           {/* Career Compass Promo Card */}
-          <div style={{ marginTop: 24, padding: '16px', background: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)', border: '1px solid #fdba74', borderRadius: 12 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
-              <span className="material-symbols-outlined" style={{ color: '#ea580c', fontSize: 20 }}>explore</span>
-              <strong style={{ fontSize: 13, color: '#9a3412' }}>{isMarathi ? '१० वी व १२ वी करिअर दिशा' : 'Career Compass 2026'}</strong>
+          <div className={styles.careerPromoCard}>
+            <div className={styles.careerPromoHeader}>
+              <span className={`material-symbols-outlined ${styles.careerPromoIcon}`}>explore</span>
+              <strong className={styles.careerPromoTitle}>{isMarathi ? '१० वी व १२ वी करिअर दिशा' : 'Career Compass 2026'}</strong>
             </div>
-            <p style={{ fontSize: 12, color: '#7c2d12', margin: '0 0 10px', lineHeight: 1.45 }}>
+            <p className={styles.careerPromoText}>
               {isMarathi ? 'सायन्स, कॉमर्स, आर्ट्स आणि पॉलिटेक्निकमधील ४०+ करिअर रोडमॅप, पगार व परीक्षा चक्र.' : 'Science, Commerce & Arts decision roadmaps, salary ladders & entrance exams.'}
             </p>
             <Link
               href="/career"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 4,
-                fontSize: 12, fontWeight: 700, color: '#ea580c', textDecoration: 'none'
-              }}
+              className={styles.careerPromoLink}
             >
               <span>{isMarathi ? 'सर्व करिअर पर्याय पहा →' : 'Explore 40+ Careers →'}</span>
             </Link>
@@ -973,7 +925,7 @@ function ListingPageInner({
 
           {/* Error state */}
           {error && (
-            <div style={{ padding: 24, textAlign: 'center', background: 'var(--error-container)', borderRadius: 12, marginBottom: 16, color: 'var(--on-error-container)' }}>
+            <div className={styles.errorBanner}>
               {error}
             </div>
           )}
@@ -982,20 +934,20 @@ function ListingPageInner({
           {loading && items.length === 0 && (
             <div className="grid-jobs">
               {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} style={{ background: 'var(--surface-container-lowest)', border: '1px solid var(--outline-variant)', borderRadius: 16, height: 180, animation: 'pulse 1.5s ease-in-out infinite' }} />
+                <div key={i} className={styles.skeletonCard} />
               ))}
             </div>
           )}
 
           {/* Empty state */}
           {!loading && items.length === 0 && !error && (
-            <div style={{ textAlign: 'center', padding: '48px 24px', background: 'var(--surface-container-lowest)', borderRadius: 16, border: '1px dashed var(--outline-variant)' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: 48, color: 'var(--secondary)', display: 'block', marginBottom: 12 }}>search_off</span>
-              <p style={{ color: 'var(--secondary)', fontSize: 16, marginBottom: 8 }}>
+            <div className={styles.emptyState}>
+              <span className={`material-symbols-outlined ${styles.emptyIcon}`}>search_off</span>
+              <p className={styles.emptyText}>
                 {search ? (isMarathi ? `"${search}" साठी कोणतेही निकाल सापडले नाहीत` : `No results for "${search}"`) : (isMarathi ? `कोणत्याही ${tabLabel} सापडल्या नाहीत.` : `No ${tabLabel} found with current filters.`)}
               </p>
               {hasFilters && (
-                <button className="btn-outline" onClick={clearAll} style={{ marginTop: 8 }}>
+                <button className={`btn-outline ${styles.emptyClearBtn}`} onClick={clearAll}>
                   {isMarathi ? 'फिल्टर्स हटवा' : 'Clear Filters'}
                 </button>
               )}
@@ -1004,7 +956,7 @@ function ListingPageInner({
 
           {/* Cards grid */}
           {items.length > 0 && (
-            <div className="grid-jobs" style={{ marginBottom: 32 }}>
+            <div className={`grid-jobs ${styles.cardsGrid}`}>
               {items.map(item => (
                 <JobCard key={item.slug || item.id} job={item} />
               ))}
@@ -1020,18 +972,12 @@ function ListingPageInner({
           />
           {/* On-Demand Closed / Expired Prompt */}
           {statusFilter === 'published' && !loading && items.length > 0 && (
-            <div style={{
-              margin: '28px 0 20px', padding: '16px 20px', borderRadius: 12,
-              background: 'var(--surface-container-low)',
-              border: '1px dashed var(--outline-variant)',
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              flexWrap: 'wrap', gap: 12,
-            }}>
+            <div className={styles.closedPromptBanner}>
               <div>
-                <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--on-surface)' }}>
+                <div className={styles.closedPromptTitle}>
                   {isMarathi ? '📁 जुन्या किंवा मुदत संपलेल्या जाहिराती शोधत आहात?' : '📁 Looking for previously closed or expired job postings?'}
                 </div>
-                <div style={{ fontSize: 12, color: 'var(--secondary)', marginTop: 2 }}>
+                <div className={styles.closedPromptDesc}>
                   {isMarathi ? 'अभ्यासक्रम, जुन्या जाहिरात क्रमांक व संदर्भासाठी बंद जाहिराती पहा.' : 'View archived government recruitment notices for reference, syllabus, and notification numbers.'}
                 </div>
               </div>
@@ -1041,8 +987,7 @@ function ListingPageInner({
                   setStatusFilter('closed')
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
-                className="btn-outline"
-                style={{ fontSize: 13, padding: '7px 16px', borderRadius: 8, cursor: 'pointer' }}
+                className={`btn-outline ${styles.closedPromptBtn}`}
               >
                 {isMarathi ? 'बंद जाहिराती पहा' : 'View Closed Jobs'}
               </button>
@@ -1050,19 +995,14 @@ function ListingPageInner({
           )}
 
           {statusFilter === 'closed' && (
-            <div style={{
-              margin: '20px 0', padding: '12px 18px', borderRadius: 8,
-              background: '#FEF2F2', border: '1px solid #FECACA',
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              flexWrap: 'wrap', gap: 8,
-            }}>
-              <span style={{ fontSize: 13, color: '#B91C1C', fontWeight: 600 }}>
+            <div className={styles.viewingClosedBanner}>
+              <span className={styles.viewingClosedText}>
                 {isMarathi ? 'ℹ️ आपण सध्या मुदत संपलेल्या जाहिराती पहात आहात (On Demand).' : 'ℹ️ Currently viewing closed & past-deadline job advertisements (On Demand).'}
               </span>
               <button
                 type="button"
                 onClick={() => setStatusFilter('published')}
-                style={{ fontSize: 12, color: primaryColor, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 700 }}
+                className={styles.backToActiveBtn}
               >
                 {isMarathi ? '← सुरू जाहिरातींवर परत जा' : '← Back to Active Jobs'}
               </button>
@@ -1073,8 +1013,8 @@ function ListingPageInner({
 
 
           {loading && items.length > 0 && (
-            <div style={{ textAlign: 'center', padding: 24 }}>
-              <span className="spinner" style={{ width: 28, height: 28, borderWidth: 3, display: 'inline-block' }} />
+            <div className={styles.spinnerRow}>
+              <span className={`spinner ${styles.spinnerInline}`} />
             </div>
           )}
         </main>
@@ -1087,16 +1027,16 @@ export default function ListingPage(props) {
   const fallbackTitle = props.title || 'Government Jobs & Exam Alerts'
   return (
     <Suspense fallback={
-      <div className="container" style={{ padding: '40px 0 80px', textAlign: 'center' }}>
-        <h1 style={{ fontSize: 'clamp(22px, 3vw, 28px)', fontWeight: 800, color: 'var(--on-surface)', marginBottom: 12 }}>
+      <div className={`container ${styles.suspenseFallback}`}>
+        <h1 className={styles.suspenseFallbackH1}>
           {fallbackTitle}
         </h1>
         {props.subtitle && (
-          <p style={{ fontSize: 14, color: 'var(--secondary)', marginBottom: 24 }}>
+          <p className={styles.suspenseFallbackSubtitle}>
             {props.subtitle}
           </p>
         )}
-        <span className="spinner" style={{ width: 36, height: 36, display: 'inline-block' }} />
+        <span className={`spinner ${styles.suspenseFallbackSpinner}`} />
       </div>
     }>
       <ListingPageInner {...props} />

@@ -1,11 +1,15 @@
+'use client'
+
 // ============================================================
 // components/MpscDistributionChart.js — Visual Paper Distribution Pie/Donut Chart
 // ExamUdaan | Visual breakdown of 1,284 Question Papers across Rajyaseva, Group B, Group C & Other Services
 // ZERO INLINE STYLES POLICY: Pure SVG attributes & CSS Modules
+// Mobile Enhancement: Directs user smoothly to paper listing when clicked
 // ============================================================
 
-import React from 'react'
+import React, { useCallback } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styles from './MpscDistributionChart.module.css'
 import {
   MPSC_CADRE_COUNTS,
@@ -15,6 +19,8 @@ import {
 } from '@/lib/platformStats'
 
 export default function MpscDistributionChart({ currentCadre = null }) {
+  const pathname = usePathname()
+
   const cadres = [
     MPSC_CADRE_COUNTS.otherServices,
     MPSC_CADRE_COUNTS.rajyaseva,
@@ -25,6 +31,18 @@ export default function MpscDistributionChart({ currentCadre = null }) {
   const total = MPSC_TOTAL_QUESTION_PAPERS // 1284
   const radius = 40
   const circumference = 2 * Math.PI * radius // ~251.327
+
+  // Smooth scroll helper to redirect user directly to papers listing below
+  const scrollToListing = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const target =
+      document.getElementById('cadre-listing') ||
+      document.getElementById('papers-list') ||
+      document.querySelector('[class*="filterBar"]')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [])
 
   // Calculate SVG strokeDasharray and strokeDashoffset cumulatively
   let accumulatedOffset = 0
@@ -69,20 +87,35 @@ export default function MpscDistributionChart({ currentCadre = null }) {
               r={radius}
               className={styles.svgCircleBg}
             />
-            {segments.map(seg => (
-              <circle
-                key={seg.key}
-                cx="50"
-                cy="50"
-                r={radius}
-                className={styles.svgSegment}
-                stroke={seg.color}
-                strokeDasharray={`${seg.strokeLength} ${circumference - seg.strokeLength}`}
-                strokeDashoffset={seg.offset}
-              >
-                <title>{`${seg.name}: ${seg.count} papers (${seg.percent}%)`}</title>
-              </circle>
-            ))}
+            {segments.map(seg => {
+              const isSegCurrent =
+                (currentCadre && (currentCadre === seg.key || currentCadre === seg.slug)) ||
+                (pathname && pathname.includes(seg.slug))
+
+              return (
+                <circle
+                  key={seg.key}
+                  cx="50"
+                  cy="50"
+                  r={radius}
+                  className={styles.svgSegment}
+                  stroke={seg.color}
+                  strokeDasharray={`${seg.strokeLength} ${circumference - seg.strokeLength}`}
+                  strokeDashoffset={seg.offset}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => {
+                    if (isSegCurrent) {
+                      scrollToListing()
+                    } else if (typeof window !== 'undefined') {
+                      window.location.href = `/mpsc/${seg.slug}#cadre-listing`
+                    }
+                  }}
+                >
+                  <title>{`${seg.name}: ${seg.count} papers (${seg.percent}%)`}</title>
+                </circle>
+              )
+            })}
           </svg>
 
           <div className={styles.donutCenterText}>
@@ -95,13 +128,22 @@ export default function MpscDistributionChart({ currentCadre = null }) {
         {/* Legend Cards */}
         <div className={styles.legendGrid}>
           {cadres.map(c => {
-            const isActive = currentCadre && (currentCadre === c.key || currentCadre === c.slug)
+            const isActive =
+              (currentCadre && (currentCadre === c.key || currentCadre === c.slug)) ||
+              (pathname && pathname.includes(c.slug))
+
             return (
               <Link
                 key={c.key}
-                href={`/mpsc/${c.slug}`}
+                href={`/mpsc/${c.slug}#cadre-listing`}
                 className={`${styles.legendCard} ${isActive ? styles.legendCardActive : ''}`}
                 title={`Browse ${c.name} Previous Year Papers`}
+                onClick={(e) => {
+                  if (isActive) {
+                    e.preventDefault()
+                    scrollToListing()
+                  }
+                }}
               >
                 <div className={styles.legendCardTop}>
                   <div className={styles.legendDotWrap}>
@@ -128,7 +170,9 @@ export default function MpscDistributionChart({ currentCadre = null }) {
 
                 <div className={styles.legendSub}>
                   <span>{c.nameMr}</span>
-                  <span className={styles.legendLinkText}>Browse →</span>
+                  <span className={styles.legendLinkText}>
+                    {isActive ? 'View Papers ↓' : 'Browse →'}
+                  </span>
                 </div>
               </Link>
             )

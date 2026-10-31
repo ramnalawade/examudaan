@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
@@ -78,11 +78,15 @@ export default function NotificationsTrackerClient() {
   const handleStageChange = (newStage) => {
     setStage(newStage)
     setCurrentPage(1)
+    const el = document.getElementById('notifications-list')
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   const handleCadreChange = (newCadre) => {
     setCadre(newCadre)
     setCurrentPage(1)
+    const el = document.getElementById('notifications-list')
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   const formatDate = (dateStr) => {
@@ -312,7 +316,7 @@ export default function NotificationsTrackerClient() {
         </section>
 
         {/* Feed Timeline Header */}
-        <div className={styles.feedHeader}>
+        <div className={styles.feedHeader} id="notifications-list">
           <h2 className={styles.feedTitle}>
             <span>📋</span>
             <span>

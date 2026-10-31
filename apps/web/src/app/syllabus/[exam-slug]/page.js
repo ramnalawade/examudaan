@@ -184,20 +184,18 @@ export default function ExamDetailPage({ params }) {
                   </div>
                 </a>
 
-                {/* Question Paper (PDF) Highlight Card — Clickable, opens question paper in PDF format */}
+                {/* Question Paper (PDF) Highlight Card — Clickable, jumps to in-page study workspace */}
                 {(hasOfficialPdfs || hasPyqLinks) && (
                   <a
-                    href={hasDirectPdf ? primaryPdfUrl : '#pyq'}
-                    target={hasDirectPdf ? "_blank" : undefined}
-                    rel={hasDirectPdf ? "noopener noreferrer" : undefined}
+                    href="#pyq"
                     className={`${styles.keyStat} ${styles.keyStatClickable}`}
-                    title={hasDirectPdf ? `Open verified ${exam.shortName} Question Paper in PDF format` : "View verified previous year question papers"}
+                    title={`View verified ${exam.shortName} Question Papers in interactive study workspace`}
                   >
                     <span className={`material-symbols-outlined ${styles.pdfStatIcon}`}>picture_as_pdf</span>
                     <div>
                       <strong>Question Paper (PDF)</strong>
                       <span className={styles.pdfStatBadge}>
-                        {hasDirectPdf ? `${verifiedPdfs.length} Verified PDFs ↗` : `${pyqLinksList.length} Papers Available ↓`}
+                        {hasDirectPdf ? `${verifiedPdfs.length} Verified PDFs ↓` : `${pyqLinksList.length} Papers Available ↓`}
                       </span>
                     </div>
                   </a>
@@ -222,17 +220,15 @@ export default function ExamDetailPage({ params }) {
               </div>
 
               <div className={styles.heroButtons}>
-                {/* Question Paper in PDF format direct action */}
+                {/* Question Paper in study workspace direct action */}
                 {(hasOfficialPdfs || hasPyqLinks) && (
                   <a
-                    href={hasDirectPdf ? primaryPdfUrl : '#pyq'}
-                    target={hasDirectPdf ? "_blank" : undefined}
-                    rel={hasDirectPdf ? "noopener noreferrer" : undefined}
+                    href="#pyq"
                     className={`${styles.heroOfficialBtn} ${styles.heroPdfBtn}`}
-                    title={`Open authentic ${exam.shortName || exam.nameEn} question paper in PDF format`}
+                    title={`Open authentic ${exam.shortName || exam.nameEn} question papers in study workspace`}
                   >
                     <span className="material-symbols-outlined">description</span>
-                    Question Paper (PDF) {hasDirectPdf ? '↗' : '↓'}
+                    Question Paper (PDF) ↓
                   </a>
                 )}
 

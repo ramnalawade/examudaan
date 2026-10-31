@@ -75,11 +75,14 @@ export default function MahatetPyqClient({
   catalog = [],
   initialDocId = null,
   initialPdf = null,
-  questionCountsMap = {}
+  questionCountsMap = {},
+  stats = {}
 }) {
   const [selectedStage, setSelectedStage] = useState('all') // 'all' | 'paper-1' | 'paper-2-math-sci' | 'paper-2-social'
   const [selectedMedium, setSelectedMedium] = useState('all') // 'all' | 'Marathi' | 'English' | 'Hindi' | 'Urdu'
   const [selectedYear, setSelectedYear] = useState('all')
+  const [onlyWithKey, setOnlyWithKey] = useState(false)
+  const [activeStatPill, setActiveStatPill] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
 
@@ -103,6 +106,9 @@ export default function MahatetPyqClient({
 
   // Scroll to workspace on initial load if requested via URL
   useEffect(() => {
+    if (initialDocId) {
+      setActiveExamId(initialDocId)
+    }
     if (initialDocId || initialPdf) {
       if (workspaceRef.current) {
         workspaceRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -150,6 +156,11 @@ export default function MahatetPyqClient({
         return false
       }
 
+      // Answer Key Filter
+      if (onlyWithKey && !item.answerKey?.downloadUrl) {
+        return false
+      }
+
       // Search Query
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim()
@@ -159,7 +170,7 @@ export default function MahatetPyqClient({
 
       return true
     })
-  }, [catalog, selectedStage, selectedMedium, selectedYear, searchQuery])
+  }, [catalog, selectedStage, selectedMedium, selectedYear, onlyWithKey, searchQuery])
 
   // Active exam set for the embedded workspace
   const activeExamSet = useMemo(() => {
@@ -289,8 +300,102 @@ export default function MahatetPyqClient({
     }
   }
 
+  // Click handlers for Hero Stat Buttons (interactive navigation & filtering)
+  const handleAllSetsClick = useCallback(() => {
+    setActiveStatPill('all')
+    setOnlyWithKey(false)
+    setSelectedStage('all')
+    setSelectedMedium('all')
+    setSelectedYear('all')
+    setSearchQuery('')
+    setCurrentPage(1)
+    if (listTopRef.current) {
+      listTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [])
+
+  const handleFinalKeysClick = useCallback(() => {
+    setActiveStatPill('key')
+    setOnlyWithKey(true)
+    setCurrentPage(1)
+    if (activeExamSet?.answerKey?.downloadUrl) {
+      setActiveDocType('ak')
+    }
+    if (listTopRef.current) {
+      listTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [activeExamSet])
+
+  const handleSolvePyqClick = useCallback(() => {
+    setActiveStatPill('solve')
+    const setWithQuestions = catalog.find(item => getQuestionCount(item) > 0)
+    if (setWithQuestions) {
+      setActiveExamId(setWithQuestions.id)
+    }
+    setActiveDocType('solve')
+    if (workspaceRef.current) {
+      workspaceRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [catalog, getQuestionCount])
+
+  const handleYearsClick = useCallback(() => {
+    if (listTopRef.current) {
+      listTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [])
+
+  const handleMediumClick = useCallback(() => {
+    if (listTopRef.current) {
+      listTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [])
+
   return (
     <div>
+      {/* ── Interactive Hero Stat Buttons ── */}
+      <div className={styles.heroStatsRow}>
+        <button
+          type="button"
+          className={`${styles.statPill} ${styles.statPillBtn} ${activeStatPill === 'all' ? styles.statPillActive : ''}`}
+          onClick={handleAllSetsClick}
+          title="Click to view all question papers"
+        >
+          <span>📚</span> {stats?.totalSets > 0 ? `${stats.totalSets} Official Exam Sets` : '49 Official Exam Sets'}
+        </button>
+        <button
+          type="button"
+          className={`${styles.statPill} ${styles.statPillBtn} ${activeStatPill === 'key' ? styles.statPillActive : ''}`}
+          onClick={handleFinalKeysClick}
+          title="Click to filter papers with verified final answer keys"
+        >
+          <span>🔑</span> {stats?.totalWithKey > 0 ? `${stats.totalWithKey} Verified Final Keys` : '35 Verified Final Keys'}
+        </button>
+        <button
+          type="button"
+          className={`${styles.statPill} ${styles.statPillSuccess} ${styles.statPillBtn} ${activeStatPill === 'solve' ? styles.statPillActive : ''}`}
+          onClick={handleSolvePyqClick}
+          title="Click to start solving MCQs in interactive practice workspace"
+        >
+          <span>🎯</span> {(stats?.totalLiveQuestions || 4753).toLocaleString('en-IN')}+ MCQs Ready to Solve
+        </button>
+        <button
+          type="button"
+          className={`${styles.statPill} ${styles.statPillBtn}`}
+          onClick={handleYearsClick}
+          title="Click to jump to year filter"
+        >
+          <span>📅</span> 2013–2026 Active Years
+        </button>
+        <button
+          type="button"
+          className={`${styles.statPill} ${styles.statPillBtn}`}
+          onClick={handleMediumClick}
+          title="Click to jump to medium filter"
+        >
+          <span>🌐</span> Marathi • English • Hindi • Urdu
+        </button>
+      </div>
+
       {/* ── Live Study Workspace (Integrated In-Browser PDF Reader) ── */}
       <section ref={workspaceRef} className={styles.workspaceSection} aria-label="Official Study Workspace">
         <div className={styles.workspaceHeader}>
@@ -661,7 +766,14 @@ export default function MahatetPyqClient({
 
                 {item.titleMr && (
                   <div className={styles.paperTitleMr}>
-                    {item.titleMr} अधिकृत प्रश्नपत्रिका व अंतिम उत्तरतालिका
+                    <button
+                      type="button"
+                      onClick={() => handleOpenInWorkspace(item, 'qp')}
+                      className={styles.paperTitleMrBtn}
+                      title="Click to view question paper in study workspace"
+                    >
+                      {item.titleMr} अधिकृत प्रश्नपत्रिका व अंतिम उत्तरतालिका
+                    </button>
                   </div>
                 )}
 

@@ -4,6 +4,7 @@
 // 100% Sourced from Maharashtra Public Service Commission (mpsc.gov.in)
 // ============================================================
 
+import { Suspense } from 'react'
 import Link from 'next/link'
 import mpscLocalPapers from '@/lib/mpscLocalPapers.json'
 import mpscPairedExams from '@/lib/mpscPairedExams.json'
@@ -104,13 +105,15 @@ export default async function MpscPyqPage({ searchParams }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <MpscPyqClient
-        pairedExams={mpscPairedExams}
-        allPapers={mpscLocalPapers}
-        initialDocId={initialDocId}
-        initialPdf={initialPdf}
-        initialDocType={initialDocType}
-      />
+      <Suspense fallback={null}>
+        <MpscPyqClient
+          pairedExams={mpscPairedExams}
+          allPapers={mpscLocalPapers}
+          initialDocId={initialDocId}
+          initialPdf={initialPdf}
+          initialDocType={initialDocType}
+        />
+      </Suspense>
 
       {/* ── Server-Rendered Crawlable SEO Content Section (OpenSEO Audit Recommended) ── */}
       <section className={styles.seoContainer}>
