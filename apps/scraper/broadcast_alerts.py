@@ -49,6 +49,7 @@ logger = logging.getLogger("broadcast_alerts")
 # Telegram & WhatsApp configuration
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "@examudaanjobs").strip()
+TELEGRAM_PERSONAL_CHAT_ID = (os.getenv("TELEGRAM_PERSONAL_CHAT_ID") or os.getenv("TELEGRAM_ADMIN_CHAT_ID") or "").strip()
 WHATSAPP_CHANNEL_URL = os.getenv("WHATSAPP_CHANNEL_URL", "https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v").strip()
 TELEGRAM_CHANNEL_URL = os.getenv("TELEGRAM_CHANNEL_URL", "https://t.me/examudaanjobs").strip()
 
@@ -480,17 +481,49 @@ def extract_common_fields(row):
     }
 
 
-def send_telegram_message(text):
+def get_personal_chat_id():
     """
-    Send formatted message to Telegram Channel via Telegram Bot API.
+    Retrieves the user's personal Telegram Chat ID for 1-click WhatsApp forward alerts.
+    Checks:
+      1. TELEGRAM_PERSONAL_CHAT_ID or TELEGRAM_ADMIN_CHAT_ID in environment
+      2. Telegram bot getUpdates API for any incoming private user message
     """
-    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        logger.error("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID in environment variables.")
+    if TELEGRAM_PERSONAL_CHAT_ID:
+        return TELEGRAM_PERSONAL_CHAT_ID
+
+    if not TELEGRAM_BOT_TOKEN:
+        return None
+
+    try:
+        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/getUpdates"
+        resp = requests.get(url, timeout=10)
+        if resp.status_code == 200:
+            data = resp.json()
+            for update in reversed(data.get("result", [])):
+                msg = update.get("message")
+                if msg and msg.get("chat", {}).get("type") == "private":
+                    chat_id = str(msg["chat"]["id"])
+                    sender_name = msg.get("from", {}).get("first_name", "Admin")
+                    logger.info(f"[TELEGRAM] Auto-discovered personal chat ID for {sender_name}: {chat_id}")
+                    return chat_id
+    except Exception as e:
+        logger.debug(f"Could not auto-discover personal chat ID: {e}")
+
+    return None
+
+
+def send_telegram_message(text, chat_id=None):
+    """
+    Send formatted message to Telegram Channel or private user via Telegram Bot API.
+    """
+    target_chat = chat_id or TELEGRAM_CHAT_ID
+    if not TELEGRAM_BOT_TOKEN or not target_chat:
+        logger.error(f"Missing TELEGRAM_BOT_TOKEN or target chat ID (target: {target_chat}).")
         return False
 
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {
-        "chat_id": TELEGRAM_CHAT_ID,
+        "chat_id": target_chat,
         "text": text,
         "disable_web_page_preview": False
     }
@@ -499,13 +532,13 @@ def send_telegram_message(text):
         resp = requests.post(url, json=payload, timeout=15)
         data = resp.json()
         if resp.status_code == 200 and data.get("ok"):
-            logger.info("Successfully broadcasted message to Telegram channel!")
+            logger.info(f"Successfully sent message to Telegram ({target_chat})!")
             return True
         else:
-            logger.error(f"Telegram API error ({resp.status_code}): {data.get('description')}")
+            logger.error(f"Telegram API error ({resp.status_code}) for {target_chat}: {data.get('description')}")
             return False
     except Exception as e:
-        logger.error(f"Failed to connect to Telegram API: {e}")
+        logger.error(f"Failed to connect to Telegram API for {target_chat}: {e}")
         return False
 
 
@@ -617,13 +650,68 @@ https://examudaan.in/syllabus/{syllabus_item['slug']}
 #MaharashtraJobs #MPSC #PoliceBharti #Talathi #ExamUdaan""".strip()
 
 
-def broadcast_daily_digest(dry_run=False, force=False, send_poll=True):
+def format_whatsapp_post(jobs, mock_1=None):
+    """
+    Creates an ultra-high converting, mobile-optimized WhatsApp broadcast message.
+    Designed for maximum CTR, clean readability, viral forwarding, and Google Analytics tracking.
+    """
+    today_str = datetime.now().strftime("%d %B %Y")
+
+    lines = [
+        f"🚨 *महाराष्ट्र शासकीय नोकरी मेगा भरती — {today_str}* 📢",
+        "━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "⚡ *नवीन प्रसिद्ध झालेल्या महत्त्वाच्या जाहिराती:*",
+        ""
+    ]
+
+    for idx, j in enumerate(jobs[:2], 1):
+        f = extract_common_fields(j)
+        emoji = "1️⃣" if idx == 1 else "2️⃣"
+        wa_url = f"{f['examudaan_url']}?utm_source=whatsapp&utm_medium=channel&utm_campaign=wa_alert"
+
+        lines.extend([
+            f"{emoji} *{f['org_name']}*",
+            f"📌 *पद / Post:* {f['title_mr']}",
+            f"👥 *एकूण जागा:* *{f['vacancies_mr']}*",
+            f"🎓 *पात्रता:* {f['qualification']}",
+            f"⏰ *शेवटची तारीख:* {f['deadline_str']}",
+            f"👉 *सविस्तर जाहिरात व ऑनलाईन अर्ज लिंक:*",
+            f"{wa_url}",
+            ""
+        ])
+
+    if mock_1:
+        mock_url = f"https://examudaan.in/mock-tests/{mock_1['slug']}?utm_source=whatsapp&utm_medium=channel&utm_campaign=wa_mock"
+        lines.extend([
+            "━━━━━━━━━━━━━━━━━━━━━━━━━",
+            "🎯 *आजची मोफत ऑनलाइन CBT सराव टेस्ट:*",
+            f"✍️ *{mock_1['title_mr']}*",
+            f"⏱️ {mock_1['desc']}",
+            f"👉 *मोफत टेस्ट सोडवा:* {mock_url}",
+            ""
+        ])
+
+    lines.extend([
+        "━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "📢 *सर्व गरजू मित्रांना व आपल्या अभ्यास WhatsApp ग्रुपवर नक्की शेअर करा!* 👥",
+        "",
+        "🔗 *अशाच मोफत व खात्रीशीर भरती अपडेट्ससाठी आमचा अधिकृत WhatsApp चॅनेल जॉइन करा:*",
+        f"{WHATSAPP_CHANNEL_URL}",
+        "",
+        "#ExamUdaan #SarkariNaukri #MPSC #PoliceBharti #MaharashtraJobs"
+    ])
+
+    return "\n".join(lines).strip()
+
+
+def broadcast_daily_digest(dry_run=False, force=False, send_poll=True, personal_chat_id=None, send_only_personal=False):
     """
     Curated Daily Digest Broadcaster:
     - 2 Latest Jobs from DB
     - 2 Mock Tests (1 Full blueprint + 1 Speed drill rotated daily)
     - 1 Syllabus guide (rotated daily)
-    - 1 Native Telegram Quiz Poll
+    - 1 Native Telegram Quiz Poll to Channel
+    - 1 Personal Telegram Message containing high-converting WhatsApp Post (for 1-click forwarding)
     """
     history = load_broadcast_history()
     all_jobs = get_active_notifications(limit=10)
@@ -651,8 +739,11 @@ def broadcast_daily_digest(dry_run=False, force=False, send_poll=True):
     syllabus_item = CURATED_SYLLABUS[day_idx % len(CURATED_SYLLABUS)]
     quiz_item = CURATED_QUIZ_POOL[day_idx % len(CURATED_QUIZ_POOL)]
 
-    # Format the Digest text
+    # Format both Channel Digest and High-Converting WhatsApp Post
     digest_text = format_daily_digest(selected_jobs, mock_1, mock_2, syllabus_item)
+    whatsapp_post = format_whatsapp_post(selected_jobs, mock_1)
+
+    target_personal_id = personal_chat_id or get_personal_chat_id()
 
     # Prepare Quiz Poll payload
     poll_question = f"🧠 प्रश्नमंजुषा (Quiz of the Day) | {quiz_item['subject']}\n\n{quiz_item['question']}"
@@ -665,47 +756,74 @@ def broadcast_daily_digest(dry_run=False, force=False, send_poll=True):
 
     if dry_run:
         print("\n" + "=" * 65)
-        print("📢 [PREVIEW] TELEGRAM & WHATSAPP DAILY DIGEST (BILINGUAL):")
+        print("📢 [PREVIEW 1] TELEGRAM CHANNEL DIGEST (@examudaanjobs):")
         print("=" * 65)
         print(digest_text)
         print("\n" + "=" * 65)
-        print("🎯 [PREVIEW] TELEGRAM NATIVE QUIZ POLL:")
+        print("🎯 [PREVIEW 2] TELEGRAM NATIVE QUIZ POLL:")
         print("=" * 65)
         print(f"Question : {poll_question}")
         for i, opt in enumerate(poll_options):
             marker = "✅" if i == poll_correct else "🔘"
             print(f"  {marker} Option {i + 1}: {opt}")
         print(f"Explanation: {poll_explanation}")
+        print("\n" + "=" * 65)
+        print("📲 [PREVIEW 3] WHATSAPP HIGH-CONVERTING POST (READY FOR FORWARDING):")
+        print("=" * 65)
+        print(whatsapp_post)
+        if target_personal_id:
+            print(f"\n✅ Personal Telegram forwarding target: {target_personal_id}")
+        else:
+            print("\nℹ️ Personal chat ID not detected. Send /start to @ExamUdaanJobsBot or set TELEGRAM_PERSONAL_CHAT_ID in .env")
         print("=" * 65 + "\n")
         sent_count = 1
     else:
-        # 1. Send Main Digest
-        ok_msg = send_telegram_message(digest_text)
-        if ok_msg:
-            sent_count += 1
-            time.sleep(2)
-        else:
-            fail_count += 1
-
-        # 2. Send Interactive Quiz Poll
-        if send_poll:
-            ok_poll = send_telegram_poll(poll_question, poll_options, poll_correct, poll_explanation)
-            if ok_poll:
+        if not send_only_personal:
+            # 1. Send Main Digest to Public Telegram Channel
+            ok_msg = send_telegram_message(digest_text, chat_id=TELEGRAM_CHAT_ID)
+            if ok_msg:
                 sent_count += 1
+                time.sleep(2)
             else:
                 fail_count += 1
 
-        # Mark jobs in history
-        for j in selected_jobs:
-            if j.get('id'):
-                history.add(j['id'])
-        save_broadcast_history(history)
+            # 2. Send Interactive Quiz Poll to Public Telegram Channel
+            if send_poll:
+                ok_poll = send_telegram_poll(poll_question, poll_options, poll_correct, poll_explanation)
+                if ok_poll:
+                    sent_count += 1
+                else:
+                    fail_count += 1
+
+            # Mark jobs in history
+            for j in selected_jobs:
+                if j.get('id'):
+                    history.add(j['id'])
+            save_broadcast_history(history)
+
+        # 3. Send WhatsApp-Formatted Post directly to User's Personal Telegram
+        if target_personal_id:
+            wa_forward_card = (
+                "📲 *[WhatsApp Channel Forwarding Alert]*\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+                "_खालील मेसेज कॉपी / फॉरवर्ड करून थेट WhatsApp चॅनेल किंवा ग्रुपवर शेअर करा:_\n\n"
+                f"{whatsapp_post}"
+            )
+            ok_personal = send_telegram_message(wa_forward_card, chat_id=target_personal_id)
+            if ok_personal:
+                logger.info(f"Successfully sent WhatsApp forward post to personal chat ({target_personal_id})!")
+                sent_count += 1
+            else:
+                logger.warning(f"Could not send WhatsApp forward post to personal chat ({target_personal_id}).")
+                fail_count += 1
+        else:
+            logger.info("ℹ️ To receive WhatsApp posts on personal Telegram: send /start to @ExamUdaanJobsBot, or set TELEGRAM_PERSONAL_CHAT_ID in apps/scraper/.env")
 
     # Save to WhatsApp digest file
     try:
         with open(WHATSAPP_DIGEST_FILE, "w", encoding="utf-8") as f:
             f.write(f"# ExamUdaan Daily WhatsApp Post — {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n")
-            f.write(digest_text)
+            f.write(whatsapp_post)
             f.write("\n\n" + ("=" * 50) + "\n\n")
             f.write(f"🧠 आजची प्रश्नमंजुषा (Question of the Day):\n{quiz_item['question']}\n\n")
             for i, opt in enumerate(poll_options, 1):
@@ -736,6 +854,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Print formatted messages without sending")
     parser.add_argument("--telegram", action="store_true", help="Broadcast to Telegram channel")
     parser.add_argument("--whatsapp", action="store_true", help="Generate WhatsApp post, copy to clipboard")
+    parser.add_argument("--personal-id", type=str, help="Specify personal Telegram Chat ID for 1-click WhatsApp forward alerts")
+    parser.add_argument("--send-personal", action="store_true", help="Send only the WhatsApp forward post to personal Telegram")
     parser.add_argument("--force", action="store_true", help="Force broadcast even if already in history")
     parser.add_argument("--skip-poll", action="store_true", help="Skip sending the interactive Telegram Quiz Poll")
     parser.add_argument("--id", type=int, help="Broadcast a specific notification by ID (legacy)")
@@ -748,13 +868,11 @@ def main():
     if args.whatsapp:
         day_idx = datetime.now().timetuple().tm_yday
         mock_1 = CURATED_FULL_MOCKS[day_idx % len(CURATED_FULL_MOCKS)]
-        mock_2 = CURATED_SECTIONAL_DRILLS[(day_idx + 1) % len(CURATED_SECTIONAL_DRILLS)]
-        syllabus_item = CURATED_SYLLABUS[day_idx % len(CURATED_SYLLABUS)]
         jobs = get_active_notifications(limit=2, specific_id=args.id)
-        post_text = format_daily_digest(jobs, mock_1, mock_2, syllabus_item)
+        post_text = format_whatsapp_post(jobs, mock_1)
 
         print("\n" + "=" * 60)
-        print("📲 WHATSAPP POST READY TO PUBLISH:")
+        print("📲 WHATSAPP POST READY TO PUBLISH (HIGH-CONVERSION FORMAT):")
         print("=" * 60)
         print(post_text)
         print("=" * 60)
@@ -768,8 +886,14 @@ def main():
         return
 
     # Telegram / Dry Run Mode
-    is_dry = args.dry_run or (not args.telegram)
-    broadcast_daily_digest(dry_run=is_dry, force=args.force, send_poll=(not args.skip_poll))
+    is_dry = args.dry_run or (not args.telegram and not args.send_personal)
+    broadcast_daily_digest(
+        dry_run=is_dry,
+        force=args.force,
+        send_poll=(not args.skip_poll),
+        personal_chat_id=args.personal_id,
+        send_only_personal=args.send_personal
+    )
 
 
 if __name__ == "__main__":

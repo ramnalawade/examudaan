@@ -663,18 +663,13 @@ class PostgresPipeline:
         if is_irrelevant_title(title):
             raise DropItem(f"Irrelevant title (blocked keyword): {title[:80]}")
 
-        # 3b1. Drop items whose notification_type is 'other' — these are
-        #      documents that don't fit any known exam category and are
-        #      never shown on the site. No point storing them.
-        ntype = item.get('notification_type', 'other')
-        if ntype == 'other':
-            raise DropItem(f"notification_type=other, not a known exam category: {title[:60]}")
-
         # 3b2. DATE CUTOFF — drop items older than 3 weeks.
         #      We check the best available date: apply_end_date first
         #      (still-open jobs are always fresh), then scraped_at.
         #      If no date is available, we let it through.
-        _MAX_AGE_DAYS = 21   # 3 weeks
+        # 3b2. Date handling — distinguish between closed jobs and active notifications.
+        #      Spiders like MPSC specify all official notifications, which should be stored.
+        _MAX_AGE_DAYS = getattr(spider, 'max_age_days', 180)   # Default 180 days (6 months) for exam portals
         _cutoff_date = None
         try:
             from dateutil import parser as _dp
@@ -689,7 +684,11 @@ class PostgresPipeline:
             for _dc in _date_candidates:
                 if _dc:
                     try:
-                        _parsed = _dp.parse(str(_dc), dayfirst=True)
+                        _date_str = str(_dc).strip()
+                        if re.match(r'^\d{4}-\d{2}-\d{2}', _date_str):
+                            _parsed = _dp.parse(_date_str, yearfirst=True, dayfirst=False)
+                        else:
+                            _parsed = _dp.parse(_date_str, dayfirst=True)
                         if _parsed.tzinfo is None:
                             _parsed = _parsed.replace(tzinfo=_tz.utc)
                         _cutoff_date = _parsed
@@ -702,11 +701,10 @@ class PostgresPipeline:
                 _age_days = (_now - _cutoff_date).days
 
                 # If apply_end_date is in the past, mark as 'closed'
-                # (but only drop if it's VERY old — older than cutoff)
                 if item.get('apply_end_date') and _age_days > 0:
                     item['status'] = 'closed'
 
-                # Drop items that are older than the cutoff
+                # Drop only if older than max allowed age (default 180 days)
                 if _age_days > _MAX_AGE_DAYS:
                     raise DropItem(
                         f"Stale item (age={_age_days}d > {_MAX_AGE_DAYS}d): {title[:60]}"

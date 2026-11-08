@@ -57,11 +57,9 @@ for p in ENV_PATHS:
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 PDF_DIR = ROOT_DIR / 'apps' / 'web' / 'public' / 'downloads' / 'mpsc' / 'syllabus' / 'general'
 CATALOG_PATH = ROOT_DIR / 'apps' / 'web' / 'src' / 'lib' / 'mpscSyllabusCatalog.json'
-JSON_OUT_DIR = ROOT_DIR / 'apps' / 'web' / 'src' / 'lib' / 'mpscSyllabusData'
 PUBLIC_JSON_DIR = ROOT_DIR / 'apps' / 'web' / 'public' / 'syllabus-json'
 
-# Ensure output directories exist
-JSON_OUT_DIR.mkdir(parents=True, exist_ok=True)
+# Ensure output directory exists
 PUBLIC_JSON_DIR.mkdir(parents=True, exist_ok=True)
 
 # Parse multiple Gemini API keys for round-robin rotation
@@ -437,16 +435,13 @@ def process_document(doc_id, pdf_file=None, dry_run=False):
     print(f"🤖 Validating & enriching via Gemini ({GEMINI_MODEL}) with key rotation...")
     syllabus_json = validate_and_refine_with_gemini(draft_json, extracted_text, pdf_path)
 
-    # Save local JSON files
-    json_path_lib = JSON_OUT_DIR / f"{doc_id}.json"
+    # Save local JSON file to public static folder
     json_path_pub = PUBLIC_JSON_DIR / f"{doc_id}.json"
 
-    with open(json_path_lib, 'w', encoding='utf-8') as f:
-        json.dump(syllabus_json, f, indent=2, ensure_ascii=False)
     with open(json_path_pub, 'w', encoding='utf-8') as f:
         json.dump(syllabus_json, f, indent=2, ensure_ascii=False)
 
-    print(f"💾 Saved local JSON: {json_path_lib}")
+    print(f"💾 Saved static JSON: {json_path_pub}")
 
     if dry_run:
         print("Dry run requested — skipping DB upsert.")

@@ -1,4 +1,4 @@
-﻿"""
+"""
 extract_syllabus_pdf.py -- MPSC Syllabus PDF -> Structured JSON via Gemini
 Usage:
   python extract_syllabus_pdf.py --file 1181
@@ -24,11 +24,11 @@ MODEL  = "gemini-flash-lite-latest"
 # REPO_ROOT = examudaan/  (SCRIPT_DIR is apps/scraper/, parent is apps/, parent.parent is examudaan/)
 REPO_ROOT    = SCRIPT_DIR.parent.parent
 WEB_ROOT     = REPO_ROOT / "apps" / "web"
-PUBLIC_OUT   = WEB_ROOT / "public" / "dev" / "syllabus-json"
-LIB_OUT      = WEB_ROOT / "src" / "lib" / "mpscSyllabusData"
+PUBLIC_OUT   = WEB_ROOT / "public" / "syllabus-json"
+
 SYLLABUS_DIR = WEB_ROOT / "public" / "downloads" / "mpsc" / "syllabus" / "general"
 PUBLIC_OUT.mkdir(parents=True, exist_ok=True)
-LIB_OUT.mkdir(parents=True, exist_ok=True)
+
 
 SCHEMA = '''{
   "examName": "full official name in English",
@@ -122,10 +122,10 @@ def process(pdf_path, doc_id):
     data["pdfPublicPath"] = f"/downloads/mpsc/syllabus/general/{pdf_path.name}"
     out = f"{doc_id}.json"
     (PUBLIC_OUT / out).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    (LIB_OUT / out).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
     print(f"\n[3] Saved:")
     print(f"  {PUBLIC_OUT / out}")
-    print(f"  {LIB_OUT / out}")
+
     papers = data.get("papers", [])
     print(f"\nPapers: {len(papers)}")
     for p in papers:
