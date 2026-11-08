@@ -10,11 +10,11 @@ import { CAREER_PATHS } from './careerGuideData.js'
 import { BLOG_POSTS } from './blogData.js'
 
 // Real exact counts from active data registries
-export const REAL_AI_TOOLS_COUNT = (AI_TOOLS || []).length || 124
+export const REAL_AI_TOOLS_COUNT = (AI_TOOLS || []).length || 126
 export const REAL_MOCK_TESTS_COUNT = (MOCK_TESTS || []).length || 13
 export const REAL_SYLLABI_COUNT = 280
 export const REAL_CAREERS_COUNT = (CAREER_PATHS || []).length || 50
-export const REAL_BLOGS_COUNT = (BLOG_POSTS || []).length || 28
+export const REAL_BLOGS_COUNT = (BLOG_POSTS || []).length || 33
 
 // 18-Year MPSC Archive (2009-2026) verified counts — Single Source of Truth
 export const MPSC_ARCHIVE_YEARS_SPAN = '2009-2026'

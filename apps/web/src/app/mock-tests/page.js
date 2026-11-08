@@ -153,10 +153,10 @@ export default function MockTestsPage() {
       </section>
 
       {/* ── Related Official Prep Hubs ── */}
-      <section className={styles.ctaSection} style={{ padding: '36px 0', background: 'var(--surface-container-lowest)' }}>
+      <section className={styles.ctaSection}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 24px' }}>
-            <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          <div className={styles.ecosystemHeader}>
+            <span className={styles.ecosystemOverline}>
               Complete Preparation Ecosystem
             </span>
             <h2 className={styles.ecosystemTitle}>
@@ -268,7 +268,7 @@ export default function MockTestsPage() {
 
 // ── Test Card Component ──────────────────────────────────────
 function TestCard({ test }) {
-  const diffColor = DIFFICULTY_COLORS[test.difficulty] || '#ea580c'
+  const diffClass = test.difficulty === 'Easy' ? styles.diffEasy : (test.difficulty === 'Hard' ? styles.diffHard : styles.diffMedium)
   const qCount = test.questions?.length || test.totalQuestions
   const totalMarks = test.marksPerQuestion * qCount
 
@@ -282,7 +282,7 @@ function TestCard({ test }) {
     >
       <div className={styles.testCardTop}>
         <span className={styles.examBadge} data-exam={test.examType}>{test.examType}</span>
-        <span className={styles.diffBadge} style={{ color: diffColor, borderColor: diffColor, background: diffColor + '15' }}>
+        <span className={`${styles.diffBadge} ${diffClass}`}>
           {test.difficulty}
         </span>
         {test.isFullMock && (
@@ -296,7 +296,7 @@ function TestCard({ test }) {
       <p className={styles.testDesc}>{test.description}</p>
 
       {test.sections && test.sections.length > 1 && (
-        <div style={{ fontSize: '12px', fontWeight: 600, color: '#64748b', background: '#f8fafc', padding: '6px 10px', borderRadius: '6px', marginBottom: '12px' }}>
+        <div className={styles.testSectionsPreview}>
           📌 {test.sections.length} Sections: {test.sections.map(s => s.name.split(' ')[0]).join(' • ')}
         </div>
       )}
@@ -307,18 +307,18 @@ function TestCard({ test }) {
         <span>🏆 {totalMarks} marks</span>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '4px' }}>
+      <div className={styles.testFooterRow}>
         {test.negativeMark > 0 ? (
-          <span style={{ fontSize: '11px', color: '#dc2626', fontWeight: 600 }}>⚠️ -{test.negativeMark} per wrong</span>
+          <span className={styles.testNegativeWarning}>⚠️ -{test.negativeMark} per wrong</span>
         ) : (
-          <span style={{ fontSize: '11px', color: '#059669', fontWeight: 600 }}>✓ No Negative Marking</span>
+          <span className={styles.testNoNegative}>✓ No Negative Marking</span>
         )}
         {test.cutoffs && (
-          <span style={{ fontSize: '11px', color: '#475569', fontWeight: 700 }}>Open Cutoff: {test.cutoffs.open}</span>
+          <span className={styles.testCutoffText}>Open Cutoff: {test.cutoffs.open}</span>
         )}
       </div>
 
-      <div className={styles.startBtn} style={{ marginTop: '14px' }}>
+      <div className={styles.startBtn}>
         {test.isFullMock ? 'Start Official Mock Exam →' : 'Start Speed Drill →'}
       </div>
     </Link>

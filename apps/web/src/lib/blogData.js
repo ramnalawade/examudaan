@@ -6,6 +6,7 @@
 
 import { CAREER_COMPARISON_BLOGS } from './blogs/careerComparisonBlogs.js'
 import { NEW_ASPIRANT_BLOGS } from './blogs/newAspirantBlogs.js'
+import { FEATURED_STRATEGY_BLOGS } from './blogs/featuredStrategyBlogs.js'
 
 export const BLOG_CATEGORIES = [
   'All',
@@ -1229,7 +1230,8 @@ Candidates who exhaustively analyze Previous Year Questions do not just learn an
 export const BLOG_POSTS = [
   ...ORIGINAL_BLOG_POSTS,
   ...CAREER_COMPARISON_BLOGS,
-  ...NEW_ASPIRANT_BLOGS
+  ...NEW_ASPIRANT_BLOGS,
+  ...FEATURED_STRATEGY_BLOGS
 ]
 
 // ---- Helpers ----

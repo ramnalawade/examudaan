@@ -352,6 +352,13 @@ export default function TestEngineClient({ test }) {
     }
   }
 
+  const handleScrollToExam = () => {
+    const target = document.getElementById('examination-sections-box') || document.getElementById('start-test-btn')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   if (!test) return null
 
   // ── IDLE Phase (Pre-test screen) ──────────────────────────
@@ -378,30 +385,69 @@ export default function TestEngineClient({ test }) {
             <h1 className={styles.startTitle}>{test.title}</h1>
             <p className={styles.startDesc}>{test.description}</p>
 
-            <div className={styles.startMeta}>
-              <div className={styles.metaItem}>
+            <div className={styles.startMeta} aria-label="Exam Overview & Specifications">
+              <div
+                className={`${styles.metaItem} ${styles.metaItemInteractive}`}
+                onClick={handleScrollToExam}
+                role="button"
+                tabIndex={0}
+                title="Exam Duration — Click to view examination sections & start test"
+              >
                 <span className="material-symbols-outlined">timer</span>
-                <div><strong>{test.durationMinutes} Minutes</strong><span>Exam Duration</span></div>
+                <div>
+                  <strong>{test.durationMinutes} Minutes</strong>
+                  <span>Exam Duration ↓</span>
+                </div>
               </div>
-              <div className={styles.metaItem}>
+
+              <div
+                className={`${styles.metaItem} ${styles.metaItemInteractive}`}
+                onClick={handleScrollToExam}
+                role="button"
+                tabIndex={0}
+                title="Total MCQs — Click to view examination sections & questions"
+              >
                 <span className="material-symbols-outlined">quiz</span>
-                <div><strong>{test.totalQuestions} Questions</strong><span>Total MCQs</span></div>
+                <div>
+                  <strong>{test.totalQuestions} Questions</strong>
+                  <span>Total MCQs (View Qs ↓)</span>
+                </div>
               </div>
-              <div className={styles.metaItem}>
+
+              <div
+                className={`${styles.metaItem} ${styles.metaItemInteractive}`}
+                onClick={handleScrollToExam}
+                role="button"
+                tabIndex={0}
+                title="Maximum Marks — Click to view section marks weightage"
+              >
                 <span className="material-symbols-outlined">grade</span>
-                <div><strong>{test.marksPerQuestion * test.totalQuestions} Marks</strong><span>Maximum Marks</span></div>
+                <div>
+                  <strong>{test.marksPerQuestion * test.totalQuestions} Marks</strong>
+                  <span>Maximum Marks ↓</span>
+                </div>
               </div>
-              <div className={styles.metaItem}>
+
+              <div
+                className={`${styles.metaItem} ${styles.metaItemInteractive}`}
+                onClick={handleScrollToExam}
+                role="button"
+                tabIndex={0}
+                title="Negative Marking Rule — Click to view instructions"
+              >
                 <span className="material-symbols-outlined">remove_circle</span>
-                <div><strong>{test.negativeMark > 0 ? `-${test.negativeMark} per wrong` : 'No Negative'}</strong><span>Negative Marking</span></div>
+                <div>
+                  <strong>{test.negativeMark > 0 ? `-${test.negativeMark} per wrong` : 'No Negative'}</strong>
+                  <span>Negative Marking ↓</span>
+                </div>
               </div>
             </div>
 
             {/* Sections Breakdown if full exam */}
             {test.sections && test.sections.length > 0 && (
-              <div className={styles.sectionsBox}>
+              <div className={styles.sectionsBox} id="examination-sections-box">
                 <h3 className={styles.sectionsTitle}>
-                  📚 Examination Sections & Marks Weightage:
+                  📚 Examination Sections &amp; Marks Weightage:
                 </h3>
                 <div className={styles.sectionsGrid}>
                   {test.sections.map((s, idx) => {
@@ -433,7 +479,7 @@ export default function TestEngineClient({ test }) {
                             className={styles.sectionBtnPractice}
                             title={`Practice ${s.name} Solved PYQs in question bank`}
                           >
-                            <span>📚 Practice PYQs ↗</span>
+                            <span>📚 PYQ Bank ↗</span>
                           </Link>
                         </div>
                       </div>
@@ -460,6 +506,7 @@ export default function TestEngineClient({ test }) {
             </div>
 
             <button
+              id="start-test-btn"
               className={styles.startBtn}
               onClick={() => {
                 trackMockTestStart({ exam_name: test?.title, test_id: test?.slug })

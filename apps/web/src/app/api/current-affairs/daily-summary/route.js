@@ -13,6 +13,7 @@
 
 import { NextResponse } from 'next/server'
 import { query } from '@/lib/pgdb'
+import { getDailyDigest } from '@/lib/currentAffairsData'
 
 // ── Helpers ────────────────────────────────────────────────────
 
@@ -233,10 +234,13 @@ export async function GET(request) {
     )
   )
 
-  // Try Gemini summary; fall back to structured list
+  // Try Gemini summary; fall back to structured list, then to guaranteed offline digest
   const geminiDigest = await generateGeminiSummary(rawArticles, dateParam)
-  const digest = geminiDigest || buildFallbackDigest(rawArticles, dateParam)
-  digest.article_count = rawArticles.length
+  let digest = geminiDigest || (rawArticles.length > 0 ? buildFallbackDigest(rawArticles, dateParam) : null)
+  if (!digest || !digest.sections || digest.sections.length === 0) {
+    digest = getDailyDigest(dateParam)
+  }
+  digest.article_count = rawArticles.length || (digest.sections ? digest.sections.reduce((acc, s) => acc + (s.articles?.length || 0), 0) : 0)
 
   return NextResponse.json(digest, {
     headers: { 'Cache-Control': 'public, s-maxage=1800, stale-while-revalidate=3600' }
@@ -285,8 +289,11 @@ export async function POST(request) {
   )
 
   const geminiDigest = await generateGeminiSummary(articles, today)
-  const digest = geminiDigest || buildFallbackDigest(articles, today)
-  digest.article_count = articles.length
+  let digest = geminiDigest || (articles.length > 0 ? buildFallbackDigest(articles, today) : null)
+  if (!digest || !digest.sections || digest.sections.length === 0) {
+    digest = getDailyDigest(today)
+  }
+  digest.article_count = articles.length || (digest.sections ? digest.sections.reduce((acc, s) => acc + (s.articles?.length || 0), 0) : 0)
 
   // Save to DB
   try {

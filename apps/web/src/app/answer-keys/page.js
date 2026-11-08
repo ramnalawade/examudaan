@@ -1,16 +1,12 @@
 // ============================================================
 // app/answer-keys/page.js — Answer Keys Listing Page
-// Metadata is set dynamically: filter/query params (?org=, ?q=)
-// receive robots: { index: false, follow: true } and canonical to clean URL.
+// All URLs are indexable. Canonical URL always points to /answer-keys.
 // ============================================================
 
 import ListingPage from '../../components/ListingPage'
 import { fitDescription } from '../../lib/seoMetadata'
 
-export async function generateMetadata({ searchParams }) {
-  const resolvedParams = await searchParams
-  const hasParams = resolvedParams && Object.keys(resolvedParams).length > 0
-
+export async function generateMetadata() {
   const title = 'Official Answer Keys 2026 — Response Sheet & PDF'
   const description = fitDescription(
     'Download official & provisional answer keys for MPSC, SSC, RRB, UPSC, Police Bharti 2026. Calculate your score and raise objections before results.',
@@ -28,7 +24,7 @@ export async function generateMetadata({ searchParams }) {
     alternates: {
       canonical: canonicalUrl,
     },
-    ...(hasParams ? { robots: { index: false, follow: true } } : {}),
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       title,
       description,

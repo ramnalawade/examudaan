@@ -607,7 +607,7 @@ Generate a comprehensive production-grade architecture blueprint:
   ]
 }
 
-// ── DYNAMIC ENRICHMENT GENERATOR FOR ALL 124 TOOLS ─────────────
+// ── DYNAMIC ENRICHMENT GENERATOR FOR ALL 126 TOOLS ─────────────
 // Generates intelligent, category-specific 10-minute authoritative
 // guides, step-by-step masterclasses, real-world student exam examples,
 // multi-tool AI power workflows, advanced mega-prompts with student examples,

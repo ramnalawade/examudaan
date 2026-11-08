@@ -84,7 +84,6 @@ export function proxy(request) {
       status: 403,
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',
-        'X-Robots-Tag': 'noindex, nofollow',
       },
     })
   }
@@ -101,7 +100,6 @@ export function proxy(request) {
         status: 403,
         headers: {
           'Content-Type': 'text/plain; charset=utf-8',
-          'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet',
         },
       })
     }
@@ -115,7 +113,6 @@ export function proxy(request) {
       status: 403,
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',
-        'X-Robots-Tag': 'noindex, nofollow, noai, noimageai',
       },
     })
   }
@@ -148,7 +145,6 @@ export function proxy(request) {
         status: 403,
         headers: {
           'Content-Type': 'text/plain; charset=utf-8',
-          'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet, noimageindex',
         },
       })
     }
@@ -162,7 +158,7 @@ export function proxy(request) {
       const origin = request.headers.get('origin') || ''
       const referer = request.headers.get('referer') || ''
       const isInternal = origin.includes('examudaan.in') || origin.includes('localhost') || origin.includes('127.0.0.1') ||
-                         referer.includes('examudaan.in') || referer.includes('localhost') || referer.includes('127.0.0.1')
+        referer.includes('examudaan.in') || referer.includes('localhost') || referer.includes('127.0.0.1')
       const hasVerify = Boolean(request.headers.get('x-verify') || request.headers.get('X-Verify'))
       if (!isInternal && !hasVerify) {
         return new Response(JSON.stringify({ status: 403, success: false, message: 'Forbidden: Untrusted API origin' }), {

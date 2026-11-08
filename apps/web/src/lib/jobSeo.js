@@ -233,9 +233,11 @@ export function buildSeoDescription(en, posts = []) {
 /* Thin pages: true empty notifications only. Real government jobs with links, pdfs or vacancies are never noindexed. */
 export function isThinNotification(en, posts = []) {
   if (!en) return true
-  // Crucial: If it has vacancies, PDF notification, apply link or substantive title, it is authentic content
+  // Real government jobs are never thin:
   if (Number(en.total_vacancies) > 0) return false
   if (en.notification_pdf || en.source_url) return false
+  if (en.application_links?.notification_pdf || en.application_links?.apply_online || en.application_links?.official_website) return false
+  if ((en.title || '').length > 15) return false
   if ((en.title || '').length > 25 && (en.description || '').length > 60) return false
 
   const ai = en.ai_extracted_data || {}

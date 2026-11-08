@@ -979,6 +979,43 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.clickableSpecCard {
+  cursor: pointer;
+  user-select: none;
+}
+
+.clickableSpecCard:hover {
+  transform: translateY(-2px);
+  border-color: #ea580c !important;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.16);
+}
+
+.clickableSpecCard:focus-visible {
+  outline: 2px solid #ea580c;
+  outline-offset: 2px;
+}
+
+.specCardActionHint {
+  font-family: var(--font-inter, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ea580c;
+  background: #fff7ed;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid #fed7aa;
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.15s ease-in-out;
+}
+
+.clickableSpecCard:hover .specCardActionHint {
+  background: #ea580c;
+  color: #ffffff;
+  border-color: #ea580c;
+}
+
 .cardPurple {
   border-left: 4px solid #7C3AED;
   background: linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 30%);

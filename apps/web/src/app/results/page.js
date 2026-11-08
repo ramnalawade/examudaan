@@ -1,16 +1,12 @@
 // ============================================================
 // app/results/page.js — Results Listing Page
-// Metadata is set dynamically: filter/query params (?org=, ?q=)
-// receive robots: { index: false, follow: true } and canonical to clean URL.
+// All URLs are indexable. Canonical URL always points to /results.
 // ============================================================
 
 import ListingPage from '../../components/ListingPage'
 import { fitDescription } from '../../lib/seoMetadata'
 
-export async function generateMetadata({ searchParams }) {
-  const resolvedParams = await searchParams
-  const hasParams = resolvedParams && Object.keys(resolvedParams).length > 0
-
+export async function generateMetadata() {
   const title = 'Exam Results 2026 — Merit List & Scorecard Out'
   const description = fitDescription(
     'Latest declared government exam results 2026 — MPSC, SSC, RRB, UPSC, Banking & Police Bharti. Check merit list, final answer key and cut-off marks.',
@@ -28,7 +24,7 @@ export async function generateMetadata({ searchParams }) {
     alternates: {
       canonical: canonicalUrl,
     },
-    ...(hasParams ? { robots: { index: false, follow: true } } : {}),
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       title,
       description,

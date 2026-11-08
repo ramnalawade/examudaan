@@ -8,6 +8,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
+import { trackCtaClick, trackSocialCommunity } from '../lib/analytics'
 import {
   MPSC_TOTAL_QUESTION_PAPERS,
   MPSC_ARCHIVE_YEARS_SPAN,
@@ -107,8 +108,8 @@ const WHATS_NEW_ITEMS = [
     badge: 'AI LAB',
     badge_mr: 'AI टूल्स',
     badgeClass: 'badgeAi',
-    title: '124+ Curated AI Study Tools, Resume Builder & Mock Interview',
-    title_mr: '१२४+ AI अभ्यास साधने, रेझ्युमे बिल्डर व थेट AI मॉक मुलाखत',
+    title: '126+ Curated AI Study Tools, Resume Builder & Mock Interview',
+    title_mr: '१२६+ AI अभ्यास साधने, रेझ्युमे बिल्डर व थेट AI मॉक मुलाखत',
     subtitle: 'Free NotebookLM, PDF chat, prompt templates & real-time MPSC interview simulator.',
     subtitle_mr: 'NotebookLM, PDF चॅट, मुलाखत सिम्युलेटर आणि स्पर्धा परीक्षेसाठी उपयुक्त AI साधने.',
     href: '/ai-tools',
@@ -191,8 +192,8 @@ const NEW_TOOLS_ITEMS = [
     badge: 'AI TOOLS LAB',
     badge_mr: 'AI लॅब',
     badgeClass: 'badgeAi',
-    title: '124+ Curated AI Study Tools, Resume Builder & Mock Interview',
-    title_mr: '१२४+ AI अभ्यास साधने, रेझ्युमे बिल्डर व थेट AI मॉक मुलाखत',
+    title: '126+ Curated AI Study Tools, Resume Builder & Mock Interview',
+    title_mr: '१२६+ AI अभ्यास साधने, रेझ्युमे बिल्डर व थेट AI मॉक मुलाखत',
     subtitle: 'Free NotebookLM, PDF chat, prompt templates & real-time MPSC interview simulator.',
     subtitle_mr: 'NotebookLM, PDF चॅट, मुलाखत सिम्युलेटर आणि स्पर्धा परीक्षेसाठी उपयुक्त AI साधने.',
     href: '/ai-tools',
@@ -1159,7 +1160,7 @@ export default function HomePageView({
             <Link href="/ai-tools" className={styles.statBox} title="Free AI Tools for Exam Preparation">
               <span className={`material-symbols-outlined ${styles.statIcon}`}>smart_toy</span>
               <div>
-                <div className={styles.statValue}>{stats.total_ai_tools ? `${stats.total_ai_tools}+` : '124+'}</div>
+                <div className={styles.statValue}>{stats.total_ai_tools ? `${stats.total_ai_tools}+` : '126+'}</div>
                 <div className={styles.statLabel}>{isMarathi ? 'AI अभ्यास साधने' : 'AI Prep Study Tools'}</div>
               </div>
             </Link>

@@ -91,8 +91,7 @@ const STATIC_PAGES = [
   { url: '/terms', priority: 0.40, changeFrequency: 'monthly' },
   { url: '/privacy', priority: 0.40, changeFrequency: 'monthly' },
   { url: '/disclaimer', priority: 0.40, changeFrequency: 'monthly' },
-  { url: '/login', priority: 0.30, changeFrequency: 'yearly' },
-  { url: '/register', priority: 0.30, changeFrequency: 'yearly' },
+  // NOTE: /login and /register are disallowed in robots.txt — do NOT list in sitemap
   // Hyperlocal district index
   { url: '/jobs/district', priority: 0.90, changeFrequency: 'daily' },
   // Official Question Papers & Keys Directory
@@ -138,7 +137,7 @@ export default async function sitemap() {
     priority: page.priority,
   }))
 
-  // 2. AI Tools Detail Pages (/ai-tools/[slug]) — All 124 Tools
+  // 2. AI Tools Detail Pages (/ai-tools/[slug]) — All 126 Tools
   const aiToolEntries = (AI_TOOLS || []).map(tool => ({
     url: `${BASE_URL}/ai-tools/${tool.slug}`,
     lastModified: now,

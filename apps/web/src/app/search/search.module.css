@@ -1,0 +1,81 @@
+/* ============================================================
+   app/search/search.module.css — Search Page Styles
+   ExamUdaan | CSS Module — NO inline styles allowed
+   ============================================================ */
+
+/* Search mode toggle row */
+.modeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.modeLabel {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.modeToggleGroup {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.modeBtn {
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-body);
+  transition: all 0.2s;
+}
+
+.modeBtnActive {
+  background: var(--accent);
+  color: white;
+}
+
+.aiPoweredBadge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--accent-light);
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+.fallbackNote {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Card wrapper for similarity badge positioning */
+.cardWrapper {
+  position: relative;
+}
+
+/* Similarity % badge overlaid on top-right of card */
+.similarityBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--accent);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  pointer-events: none;
+}
+
+/* "Try Keyword Search" button margin */
+.tryKeywordBtn {
+  margin-top: 12px;
+}
+

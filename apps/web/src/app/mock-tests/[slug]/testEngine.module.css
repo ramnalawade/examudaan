@@ -61,18 +61,43 @@
 
 .startMeta {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
   margin-bottom: 28px;
+}
+
+@media (max-width: 860px) {
+  .startMeta {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 .metaItem {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
-  background: #f8fafc;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
   border-radius: 12px;
-  padding: 14px;
+  padding: 12px 14px;
+  transition: all 0.15s ease-in-out;
+}
+
+.metaItemInteractive {
+  cursor: pointer;
+  user-select: none;
+}
+
+.metaItemInteractive:hover {
+  background: #fff7ed;
+  border-color: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.14);
+}
+
+.metaItemInteractive:hover strong {
+  color: #ea580c;
 }
 
 .metaItem .material-symbols-outlined { font-size: 24px; color: var(--primary); flex-shrink: 0; }
@@ -1465,61 +1490,73 @@
 .sectionCardActions {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-top: 4px;
-  padding-top: 8px;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px dashed #fed7aa;
+  align-items: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .sectionCardActions {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
 
 .sectionBtnStart {
-  background: #ea580c;
+  background: var(--primary, #ea580c);
   color: #ffffff;
-  border: 1.5px solid #ea580c;
+  border: 1.5px solid var(--primary, #ea580c);
   border-radius: 8px;
-  padding: 8px 10px;
-  font-size: 12px;
+  padding: 10px 12px;
+  min-height: 42px;
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  transition: all 0.15s ease;
-  box-shadow: 0 1px 3px rgba(234, 88, 12, 0.2);
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.22);
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .sectionBtnStart:hover {
   background: #c2410c;
   border-color: #c2410c;
   transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);
 }
 
 .sectionBtnPractice {
-  background: #ffffff;
-  color: #c2410c;
-  border: 1.5px solid #fed7aa;
+  background: #fff7ed;
+  color: #ea580c;
+  border: 1.5px solid #ea580c;
   border-radius: 8px;
-  padding: 8px 10px;
-  font-size: 12px;
+  padding: 10px 12px;
+  min-height: 42px;
+  font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  transition: all 0.15s ease;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(234, 88, 12, 0.1);
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .sectionBtnPractice:hover {
-  background: #fff7ed;
+  background: #ea580c;
+  color: #ffffff;
   border-color: #ea580c;
-  color: #ea580c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.25);
 }
 
 .sectionItem {

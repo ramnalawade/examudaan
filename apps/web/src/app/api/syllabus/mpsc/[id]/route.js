@@ -59,10 +59,10 @@ export async function GET(request, { params }) {
       console.warn('[api/syllabus/mpsc] DB query failed, falling back to static JSON:', dbErr.message)
     }
 
-    // 2. Fallback to filesystem JSON
+    // 2. Fallback to filesystem JSON in public static folder
     const searchDirs = [
-      path.join(process.cwd(), 'src/lib/mpscSyllabusData'),
-      path.join(process.cwd(), 'public/syllabus-json')
+      path.join(process.cwd(), 'public/syllabus-json'),
+      path.join(process.cwd(), 'apps/web/public/syllabus-json')
     ]
 
     for (const dir of searchDirs) {

@@ -19,7 +19,6 @@ import {
   isWalkInNotification,
   buildSeoTitle,
   buildSeoDescription,
-  isThinNotification,
   buildJobPostingSchema,
   safeJsonLd,
   safeHref,
@@ -267,7 +266,7 @@ export async function generateMetadata({ params }) {
     title: { absolute: metaTitle },
     description: metaDesc,
     alternates: { canonical: canonicalUrl },
-    robots: isThinNotification(en, posts) ? { index: false, follow: true } : undefined,
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       title: metaTitle,
       description: metaDesc,

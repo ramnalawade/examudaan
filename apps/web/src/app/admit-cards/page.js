@@ -1,16 +1,12 @@
 // ============================================================
 // app/admit-cards/page.js — Admit Cards Listing Page
-// Metadata is set dynamically: filter/query params (?org=, ?q=)
-// receive robots: { index: false, follow: true } and canonical to clean URL.
+// All URLs are indexable. Canonical URL always points to /admit-cards.
 // ============================================================
 
 import ListingPage from '../../components/ListingPage'
 import { fitDescription } from '../../lib/seoMetadata'
 
-export async function generateMetadata({ searchParams }) {
-  const resolvedParams = await searchParams
-  const hasParams = resolvedParams && Object.keys(resolvedParams).length > 0
-
+export async function generateMetadata() {
   const title = 'Admit Cards 2026 — Download Hall Ticket Online'
   const description = fitDescription(
     'Download official admit cards and hall tickets for MPSC, SSC, RRB, UPSC & Police Bharti 2026. Get exam date, center & reporting time in one click.',
@@ -28,7 +24,7 @@ export async function generateMetadata({ searchParams }) {
     alternates: {
       canonical: canonicalUrl,
     },
-    ...(hasParams ? { robots: { index: false, follow: true } } : {}),
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       title,
       description,

@@ -232,6 +232,22 @@ export default function OfficialPdfViewer({
     })
   }
 
+  // Handle scroll to question paper canvas in reader
+  const handleScrollToCanvas = () => {
+    const target = document.getElementById('official-pdf-canvas') || viewerRef.current
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  // Handle scroll to official scoring formula & negative marking rules
+  const handleScrollToFormula = () => {
+    const target = document.getElementById('scoring-formula-box')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
+
   if (!allDocuments || allDocuments.length === 0) return null
 
   return (
@@ -603,37 +619,70 @@ export default function OfficialPdfViewer({
                       {/* Redesigned Executive Examination Blueprint Matrix */}
                       <div className={styles.blueprintSpecGrid}>
                         {/* 1. Exam Pattern */}
-                        <div className={`${styles.blueprintSpecCard} ${styles.cardPurple}`}>
+                        <div
+                          className={`${styles.blueprintSpecCard} ${styles.cardPurple} ${styles.clickableSpecCard}`}
+                          onClick={handleScrollToCanvas}
+                          role="button"
+                          tabIndex={0}
+                          title="Click to view question paper in reader canvas above"
+                        >
                           <div className={styles.specCardTop}>
                             <span className={styles.specCardLabel}>Exam Pattern</span>
                             <span className={`${styles.specCardPill} ${styles.pillPurple}`}>OMR / CBT Standard</span>
                           </div>
-                          <div className={styles.specCardVal}>100 Questions</div>
+                          <div className={styles.specCardVal}>
+                            100 Questions
+                            <span className={styles.specCardActionHint}>↑ View Paper</span>
+                          </div>
                           <div className={styles.specCardSub}>Objective MCQs (बहुपर्यायी प्रश्न)</div>
                         </div>
 
                         {/* 2. Total Marks */}
-                        <div className={`${styles.blueprintSpecCard} ${styles.cardGreen}`}>
+                        <div
+                          className={`${styles.blueprintSpecCard} ${styles.cardGreen} ${styles.clickableSpecCard}`}
+                          onClick={handleScrollToFormula}
+                          role="button"
+                          tabIndex={0}
+                          title="Click to view official marks formula below"
+                        >
                           <div className={styles.specCardTop}>
                             <span className={styles.specCardLabel}>Total Marks</span>
                             <span className={`${styles.specCardPill} ${styles.pillGreen}`}>+1 Correct Mark</span>
                           </div>
-                          <div className={styles.specCardVal}>100 Marks</div>
+                          <div className={styles.specCardVal}>
+                            100 Marks
+                            <span className={styles.specCardActionHint}>↓ Formula</span>
+                          </div>
                           <div className={styles.specCardSub}>1 Mark per correct answer</div>
                         </div>
 
                         {/* 3. Negative Marking */}
-                        <div className={`${styles.blueprintSpecCard} ${styles.cardRed}`}>
+                        <div
+                          className={`${styles.blueprintSpecCard} ${styles.cardRed} ${styles.clickableSpecCard}`}
+                          onClick={handleScrollToFormula}
+                          role="button"
+                          tabIndex={0}
+                          title="Click to view negative marking calculation rule below"
+                        >
                           <div className={styles.specCardTop}>
                             <span className={styles.specCardLabel}>Negative Marking</span>
                             <span className={`${styles.specCardPill} ${styles.pillRed}`}>Official 1/4th Rule</span>
                           </div>
-                          <div className={styles.specCardVal}>-0.25 (1/4th)</div>
+                          <div className={styles.specCardVal}>
+                            -0.25 (1/4th)
+                            <span className={styles.specCardActionHint}>↓ 1/4th Rule</span>
+                          </div>
                           <div className={styles.specCardSub}>Deducted for each wrong answer</div>
                         </div>
 
                         {/* 4. Duration & Pace */}
-                        <div className={`${styles.blueprintSpecCard} ${styles.cardBlue}`}>
+                        <div
+                          className={`${styles.blueprintSpecCard} ${styles.cardBlue} ${styles.clickableSpecCard}`}
+                          onClick={handleScrollToCanvas}
+                          role="button"
+                          tabIndex={0}
+                          title="Click to view question paper in reader canvas"
+                        >
                           <div className={styles.specCardTop}>
                             <span className={styles.specCardLabel}>Duration & Pace</span>
                             <span className={`${styles.specCardPill} ${styles.pillBlue}`}>Speed Drill Pace</span>
@@ -643,7 +692,13 @@ export default function OfficialPdfViewer({
                         </div>
 
                         {/* 5. Language Medium */}
-                        <div className={`${styles.blueprintSpecCard} ${styles.cardAmber}`}>
+                        <div
+                          className={`${styles.blueprintSpecCard} ${styles.cardAmber} ${styles.clickableSpecCard}`}
+                          onClick={handleScrollToCanvas}
+                          role="button"
+                          tabIndex={0}
+                          title="Click to view question paper booklet"
+                        >
                           <div className={styles.specCardTop}>
                             <span className={styles.specCardLabel}>Language Medium</span>
                             <span className={`${styles.specCardPill} ${styles.pillAmber}`}>Dual Language</span>
@@ -653,7 +708,13 @@ export default function OfficialPdfViewer({
                         </div>
 
                         {/* 6. Commission Verification */}
-                        <div className={`${styles.blueprintSpecCard} ${styles.cardTeal}`}>
+                        <div
+                          className={`${styles.blueprintSpecCard} ${styles.cardTeal} ${styles.clickableSpecCard}`}
+                          onClick={handleScrollToCanvas}
+                          role="button"
+                          tabIndex={0}
+                          title="Click to view authentic commission document"
+                        >
                           <div className={styles.specCardTop}>
                             <span className={styles.specCardLabel}>Verification</span>
                             <span className={`${styles.specCardPill} ${styles.pillTeal}`}>Commission Verified</span>
@@ -664,7 +725,7 @@ export default function OfficialPdfViewer({
                       </div>
 
                       {/* Official Scoring Formula Callout Banner */}
-                      <div className={styles.scoringFormulaBox}>
+                      <div className={styles.scoringFormulaBox} id="scoring-formula-box">
                         <span className={styles.formulaIconWrap}>⚖️</span>
                         <div className={styles.formulaContent}>
                           <span className={styles.formulaHeading}>
@@ -751,34 +812,67 @@ export default function OfficialPdfViewer({
 
                 {/* Redesigned Executive Examination Blueprint Matrix */}
                 <div className={styles.blueprintSpecGrid}>
-                  <div className={`${styles.blueprintSpecCard} ${styles.cardPurple}`}>
+                  <div
+                    className={`${styles.blueprintSpecCard} ${styles.cardPurple} ${styles.clickableSpecCard}`}
+                    onClick={handleScrollToCanvas}
+                    role="button"
+                    tabIndex={0}
+                    title="Click to view question paper in reader canvas above"
+                  >
                     <div className={styles.specCardTop}>
                       <span className={styles.specCardLabel}>Exam Pattern</span>
                       <span className={`${styles.specCardPill} ${styles.pillPurple}`}>OMR / CBT Standard</span>
                     </div>
-                    <div className={styles.specCardVal}>100 Questions</div>
+                    <div className={styles.specCardVal}>
+                      100 Questions
+                      <span className={styles.specCardActionHint}>↑ View Paper</span>
+                    </div>
                     <div className={styles.specCardSub}>Objective MCQs (बहुपर्यायी प्रश्न)</div>
                   </div>
 
-                  <div className={`${styles.blueprintSpecCard} ${styles.cardGreen}`}>
+                  <div
+                    className={`${styles.blueprintSpecCard} ${styles.cardGreen} ${styles.clickableSpecCard}`}
+                    onClick={handleScrollToFormula}
+                    role="button"
+                    tabIndex={0}
+                    title="Click to view official marks formula below"
+                  >
                     <div className={styles.specCardTop}>
                       <span className={styles.specCardLabel}>Total Marks</span>
                       <span className={`${styles.specCardPill} ${styles.pillGreen}`}>+1 Correct Mark</span>
                     </div>
-                    <div className={styles.specCardVal}>100 Marks</div>
+                    <div className={styles.specCardVal}>
+                      100 Marks
+                      <span className={styles.specCardActionHint}>↓ Formula</span>
+                    </div>
                     <div className={styles.specCardSub}>1 Mark per correct answer</div>
                   </div>
 
-                  <div className={`${styles.blueprintSpecCard} ${styles.cardRed}`}>
+                  <div
+                    className={`${styles.blueprintSpecCard} ${styles.cardRed} ${styles.clickableSpecCard}`}
+                    onClick={handleScrollToFormula}
+                    role="button"
+                    tabIndex={0}
+                    title="Click to view negative marking calculation rule below"
+                  >
                     <div className={styles.specCardTop}>
                       <span className={styles.specCardLabel}>Negative Marking</span>
                       <span className={`${styles.specCardPill} ${styles.pillRed}`}>Official 1/4th Rule</span>
                     </div>
-                    <div className={styles.specCardVal}>-0.25 (1/4th)</div>
+                    <div className={styles.specCardVal}>
+                      -0.25 (1/4th)
+                      <span className={styles.specCardActionHint}>↓ 1/4th Rule</span>
+                    </div>
                     <div className={styles.specCardSub}>Deducted for each wrong answer</div>
                   </div>
 
-                  <div className={`${styles.blueprintSpecCard} ${styles.cardBlue}`}>
+                  <div
+                    className={`${styles.blueprintSpecCard} ${styles.cardBlue} ${styles.clickableSpecCard}`}
+                    onClick={handleScrollToCanvas}
+                    role="button"
+                    tabIndex={0}
+                    title="Click to view question paper in reader canvas"
+                  >
                     <div className={styles.specCardTop}>
                       <span className={styles.specCardLabel}>Duration & Pace</span>
                       <span className={`${styles.specCardPill} ${styles.pillBlue}`}>Speed Drill Pace</span>
@@ -787,7 +881,13 @@ export default function OfficialPdfViewer({
                     <div className={styles.specCardSub}>54 seconds per question pace</div>
                   </div>
 
-                  <div className={`${styles.blueprintSpecCard} ${styles.cardAmber}`}>
+                  <div
+                    className={`${styles.blueprintSpecCard} ${styles.cardAmber} ${styles.clickableSpecCard}`}
+                    onClick={handleScrollToCanvas}
+                    role="button"
+                    tabIndex={0}
+                    title="Click to view question paper booklet"
+                  >
                     <div className={styles.specCardTop}>
                       <span className={styles.specCardLabel}>Language Medium</span>
                       <span className={`${styles.specCardPill} ${styles.pillAmber}`}>Dual Language</span>
@@ -796,7 +896,13 @@ export default function OfficialPdfViewer({
                     <div className={styles.specCardSub}>Bilingual Question Booklet</div>
                   </div>
 
-                  <div className={`${styles.blueprintSpecCard} ${styles.cardTeal}`}>
+                  <div
+                    className={`${styles.blueprintSpecCard} ${styles.cardTeal} ${styles.clickableSpecCard}`}
+                    onClick={handleScrollToCanvas}
+                    role="button"
+                    tabIndex={0}
+                    title="Click to view authentic commission document"
+                  >
                     <div className={styles.specCardTop}>
                       <span className={styles.specCardLabel}>Verification</span>
                       <span className={`${styles.specCardPill} ${styles.pillTeal}`}>Commission Verified</span>
@@ -807,7 +913,7 @@ export default function OfficialPdfViewer({
                 </div>
 
                 {/* Official Scoring Formula Callout Banner */}
-                <div className={styles.scoringFormulaBox}>
+                <div className={styles.scoringFormulaBox} id="scoring-formula-box">
                   <span className={styles.formulaIconWrap}>⚖️</span>
                   <div className={styles.formulaContent}>
                     <span className={styles.formulaHeading}>

@@ -61,8 +61,8 @@ export default function AiAcademyPage() {
         'Excel & Spreadsheet automation using AI without complex formulas',
       ],
       forWhom: isMarathi ? 'शालेय/कॉलेज विद्यार्थी, स्पर्धा परीक्षा उमेदवार व नोकरदार वर्ग.' : 'School/College students, exam aspirants, teachers, and professionals.',
-      fee: '₹499',
-      originalFee: '₹1,499',
+      fee: '₹***',
+      originalFee: '₹****',
     },
     {
       id: 'track2_jobs',
@@ -86,8 +86,8 @@ export default function AiAcademyPage() {
         'Confidence, body language & vernacular-to-English transition tips',
       ],
       forWhom: isMarathi ? 'पदवीधर, अंतिम वर्षाचे विद्यार्थी आणि स्पर्धा परीक्षा उमेदवार.' : 'Final-year college students, competitive exam aspirants, and job seekers.',
-      fee: '₹799',
-      originalFee: '₹2,499',
+      fee: '₹***',
+      originalFee: '₹****',
     },
     {
       id: 'track3_exam',
@@ -111,8 +111,8 @@ export default function AiAcademyPage() {
         'Marathi Medium Support: AI tools workflow fully mapped to Marathi exam prep',
       ],
       forWhom: isMarathi ? 'MPSC, UPSC, तलाठी, पोलीस व बँकिंग परीक्षेची तयारी करणारे उमेदवार.' : 'MPSC, UPSC, Banking, and SSC competitive exam aspirants at any stage.',
-      fee: '₹1,299',
-      originalFee: '₹3,999',
+      fee: '₹***',
+      originalFee: '₹****',
     },
     {
       id: 'track4_engg',
@@ -136,8 +136,8 @@ export default function AiAcademyPage() {
         'Live Capstone: Build your own AI aggregator or legal/exam AI assistant',
       ],
       forWhom: isMarathi ? 'BE, B.Tech, MCA, BCA विद्यार्थी आणि सॉफ्टवेअर इंजिनिअर्स.' : 'BE, B.Tech, MCA, BCA students, and junior/mid-level software engineers.',
-      fee: '₹3,499',
-      originalFee: '₹9,999',
+      fee: '₹****',
+      originalFee: '₹****',
     },
     {
       id: 'track5_educators',
@@ -161,12 +161,14 @@ export default function AiAcademyPage() {
         'Assessment & Grading: AI-assisted rubric creation for descriptive answers',
       ],
       forWhom: isMarathi ? 'शाळा/कॉलेजचे शिक्षक, कोचिंग क्लासेसचे प्राध्यापक आणि YouTube क्रिएटर्स.' : 'School/college teachers, coaching institute educators, and YouTube content creators.',
-      fee: '₹999',
-      originalFee: '₹2,999',
+      fee: '₹****',
+      originalFee: '₹****',
     },
   ]
 
   return (
+
+
     <div style={{ background: 'var(--surface)', minHeight: '100vh', paddingBottom: 80 }}>
       {/* ── 1. Hero Header ── */}
       <div style={{
@@ -204,14 +206,14 @@ export default function AiAcademyPage() {
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: 14, flexWrap: 'wrap' }}>
-            <a
+            {/* <a
               href="#enroll"
               className="btn-primary"
               style={{ padding: '12px 28px', fontSize: 15, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
             >
               <span className="material-symbols-outlined">event_available</span>
               {isMarathi ? 'मोफत रविवार कार्यशाळेसाठी नोंदणी करा' : 'Register for Free Sunday Workshop'}
-            </a>
+            </a> */}
             <a
               href={SITE_CONFIG?.social?.whatsappChannel || 'https://whatsapp.com/channel/0029Vb9E7Kw9sBI4vpwn2y3v'}
               target="_blank" rel="noopener noreferrer"
@@ -223,7 +225,7 @@ export default function AiAcademyPage() {
               }}
             >
               <span className="material-symbols-outlined">chat</span>
-              {isMarathi ? 'WhatsApp AI VIP ग्रुप जॉइन करा' : 'Join WhatsApp AI VIP Group'}
+              {isMarathi ? 'WhatsApp AI VIP ग्रुप जॉइन करा' : 'Join WhatsApp Group For Job Alerts and PYQ'}
             </a>
           </div>
         </div>
@@ -370,7 +372,7 @@ export default function AiAcademyPage() {
                   style={{ width: '100%', textAlign: 'center', padding: '10px 0', textDecoration: 'none', display: 'block', fontSize: 14 }}
                   onClick={() => setEnquiryForm({ ...enquiryForm, course: course.id })}
                 >
-                  {isMarathi ? 'प्रवेश घ्या / अभ्यासक्रम मागवा' : 'Enroll Now / Request Syllabus'}
+                  {isMarathi ? 'प्रवेश घ्या / अभ्यासक्रम मागवा' : 'Coming soon'}
                 </a>
               </div>
             </div>
@@ -423,7 +425,7 @@ export default function AiAcademyPage() {
         </div>
 
         {/* ── 5. Free Workshop Registration Form ── */}
-        <div id="enroll" style={{
+        {/*<div id="enroll" style={{
           background: 'var(--surface-container-lowest)',
           border: '1.5px solid var(--primary-fixed-dim)',
           borderRadius: 'var(--radius-lg)',
@@ -432,7 +434,7 @@ export default function AiAcademyPage() {
           margin: '0 auto',
           boxShadow: '0 6px 24px rgba(234, 88, 12, 0.08)',
         }}>
-          <div style={{ textAlign: 'center', marginBottom: 24 }}>
+           <div style={{ textAlign: 'center', marginBottom: 24 }}>
             <span style={{ fontSize: 12, fontWeight: 800, color: 'var(--primary)', textTransform: 'uppercase' }}>
               {isMarathi ? 'मोफत नोंदणी' : 'FREE REGISTRATION'}
             </span>
@@ -444,9 +446,9 @@ export default function AiAcademyPage() {
                 ? 'थेट प्रात्यक्षिक: AI द्वारे नोकऱ्या शोधणे, मुलाखतीचे प्रश्न सोडवणे व अभ्यासाच्या नोट्स ऑटोमेशन.'
                 : 'Live demonstration: How to use AI to find jobs, solve interview questions & automate study notes.'}
             </p>
-          </div>
+          </div> */}
 
-          {enquirySuccess ? (
+        {/* {enquirySuccess ? (
             <div style={{
               background: '#F0FDF4',
               border: '1.5px solid #BBF7D0',
@@ -535,8 +537,8 @@ export default function AiAcademyPage() {
                   : (isMarathi ? 'माझी मोफत जागा निश्चित करा' : 'Reserve My Free Seat for Sunday Masterclass')}
               </button>
             </form>
-          )}
-        </div>
+          )} 
+        </div>*/}
       </div>
     </div>
   )

@@ -81,6 +81,19 @@ export default function CurrentAffairsPage() {
     loadFeeds(false)
   }, [])
 
+  // ── Sync URL filter params (?exam=..., ?category=..., ?search=...) on mount ────
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const examParam = params.get('exam')
+      const catParam = params.get('category')
+      const qParam = params.get('search')
+      if (examParam) setActiveExam(examParam)
+      if (catParam) setActiveCategory(catParam)
+      if (qParam) setSearch(qParam)
+    }
+  }, [])
+
   const PAGE_SIZE = 12
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
 

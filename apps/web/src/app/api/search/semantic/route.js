@@ -53,14 +53,15 @@ async function semanticHandler(req) {
     // Requires: pgvector extension + embedding column on exam_notifications
     const rows = await pgQuery(
       `SELECT
-         id, title, slug, notification_type, status,
-         total_vacancies, apply_end_date, org_name,
-         1 - (embedding <=> $1::vector) AS similarity
-       FROM exam_notifications
-       WHERE status = 'published'
-         AND embedding IS NOT NULL
-         AND 1 - (embedding <=> $1::vector) >= 0.4
-       ORDER BY embedding <=> $1::vector
+         en.id, en.title, en.slug, en.notification_type, en.status,
+         en.total_vacancies, en.apply_end_date, coalesce(o.name, o.acronym, '') AS org_name,
+         1 - (en.embedding <=> $1::vector) AS similarity
+       FROM exam_notifications en
+       LEFT JOIN organizations o ON o.id = en.organization_id
+       WHERE en.status = 'published'
+         AND en.embedding IS NOT NULL
+         AND 1 - (en.embedding <=> $1::vector) >= 0.4
+       ORDER BY en.embedding <=> $1::vector
        LIMIT $2`,
       [vectorLiteral, limit]
     )
@@ -95,12 +96,17 @@ async function _keywordSearch(q, limit) {
       `SELECT
          en.id, en.title, en.slug, en.notification_type, en.status,
          en.total_vacancies, en.apply_end_date,
-         o.name AS org_name,
+         coalesce(o.name, o.acronym, '') AS org_name,
          NULL::float AS similarity
        FROM exam_notifications en
-       JOIN organizations o ON o.id = en.organization_id
+       LEFT JOIN organizations o ON o.id = en.organization_id
        WHERE en.status = 'published'
-         AND en.title ILIKE $1
+         AND (
+           en.title ILIKE $1
+           OR o.name ILIKE $1
+           OR o.acronym ILIKE $1
+           OR en.slug ILIKE $1
+         )
        ORDER BY en.published_at DESC NULLS LAST
        LIMIT $2`,
       [`%${q}%`, limit]

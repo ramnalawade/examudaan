@@ -75,10 +75,21 @@ export const metadata = {
       "ExamUdaan is Maharashtra's #1 competitive exam portal for MPSC, Police Bharti, BMC, ZP & Talathi. Real-time job alerts, CBT mock tests & PYQ papers.",
     images: [`${SITE_URL}/logo-light.png`],
   },
-  // Google Search Console verification — set GOOGLE_SITE_VERIFICATION in .env
-  ...(process.env.GOOGLE_SITE_VERIFICATION && {
-    verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
-  }),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  // Google Search Console verification
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || 'uZyoLIN8oRIAAlJ9zsueDi-8nz1smurC71rNGZR15yU',
+  },
   icons: {
     icon: [
       { url: '/favicon-32x32.png',  sizes: '32x32',  type: 'image/png' },

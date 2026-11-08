@@ -73,7 +73,6 @@ function servePdfBuffer(buffer, numId, request, isCached = true) {
     'Content-Disposition': `inline; filename="mpsc_${numId}.pdf"`,
     'Accept-Ranges': 'bytes',
     'X-Content-Type-Options': 'nosniff',
-    'X-Robots-Tag': 'noindex, noarchive',
     'Cache-Control': isCached
       ? 'public, max-age=31536000, immutable'
       : 'public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400'

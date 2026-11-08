@@ -1,16 +1,13 @@
 // ============================================================
 // app/jobs/page.js — Jobs Listing Page (Server component wrapper)
-// Metadata is set dynamically: filter/query params (?org=, ?q=, ?state=)
-// receive robots: { index: false, follow: true } and canonical to clean URL.
+// All URLs including filtered ones are indexable. Canonical URL always
+// points to /jobs so Google consolidates link equity.
 // ============================================================
 
 import ListingPage from '../../components/ListingPage'
 import { fitDescription } from '../../lib/seoMetadata'
 
-export async function generateMetadata({ searchParams }) {
-  const resolvedParams = await searchParams
-  const hasParams = resolvedParams && Object.keys(resolvedParams).length > 0
-
+export async function generateMetadata() {
   const title = 'Govt Jobs 2026 — Latest Recruitment Notifications'
   const description = fitDescription(
     'Browse 270+ latest Maharashtra & India government jobs 2026. MPSC, Police Bharti, SSC, RRB, Banking, ZP & BMC — filter by qualification, state & salary.',
@@ -28,7 +25,7 @@ export async function generateMetadata({ searchParams }) {
     alternates: {
       canonical: canonicalUrl,
     },
-    ...(hasParams ? { robots: { index: false, follow: true } } : {}),
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       title,
       description,

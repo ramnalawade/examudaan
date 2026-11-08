@@ -7756,6 +7756,128 @@ export const AI_TOOLS = [
       "trinka",
       "grammarly"
     ]
+  },
+  {
+    "slug": "quizgecko",
+    "name": "Quizgecko AI",
+    "tagline": "Turn notes, PDFs, articles and YouTube videos into instant exam quizzes with explanations.",
+    "category": "Study",
+    "badge": "🎯 Best MCQ Generator",
+    "free": true,
+    "url": "https://quizgecko.com",
+    "logo": "quiz",
+    "targetUsers": [
+      "MPSC Combined Aspirants",
+      "UPSC Prelims Students",
+      "Banking & SSC Aspirants",
+      "Talathi & Police Bharti Candidates"
+    ],
+    "whatIs": "Quizgecko is an AI-powered quiz and test generator that transforms any study material — text, uploaded PDF, webpage URL, or YouTube video — into multiple-choice questions (MCQs), true/false tests, and fill-in-the-blank assessments. Every generated question comes complete with detailed explanations for correct and incorrect options, helping aspirants test active recall on government syllabus topics in minutes.",
+    "whyItMatters": "Instead of waiting for coaching test series, aspirants can paste any chapter of Maharashtra State Board or NCERT textbooks and instantly generate a 25-question CBT mock test. It cements memory through spaced testing rather than passive reading.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Input Your Study Material",
+        "desc": "Paste textbook notes, upload a government gazette PDF, or provide a link to a PIB press release on quizgecko.com."
+      },
+      {
+        "step": 2,
+        "title": "Choose Question Format & Difficulty",
+        "desc": "Select 'Multiple Choice', specify the number of questions (5 to 50), and set difficulty to 'Hard' for civil services depth."
+      },
+      {
+        "step": 3,
+        "title": "Generate AI Quiz",
+        "desc": "Click 'Generate' to create questions with 4 options and detailed pedagogical answer rationales in under 30 seconds."
+      },
+      {
+        "step": 4,
+        "title": "Attempt Test in Interactive Mode",
+        "desc": "Solve questions under a timer, review instant score analytics, and study explanations for incorrect choices."
+      },
+      {
+        "step": 5,
+        "title": "Export to Anki or Print PDF",
+        "desc": "Export questions to CSV, Anki flashcard format, or formatted PDF question papers for offline revision."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Generate 20 Polity MCQs",
+        "text": "Based on the uploaded chapter on Fundamental Rights and Directive Principles, generate 20 challenging MPSC-standard multiple-choice questions with 4 options and detailed Marathi-English explanations."
+      },
+      {
+        "title": "Economic Survey Speed Test",
+        "text": "Extract 15 numerical data-driven MCQs from this Maharashtra Economic Survey agriculture summary, focusing on scheme budgetary allocations and growth rates."
+      }
+    ],
+    "limitations": "Free tier has monthly test generation limits; advanced question export features require premium subscription.",
+    "relatedSlugs": [
+      "notebooklm",
+      "anki",
+      "knowt"
+    ]
+  },
+  {
+    "slug": "cramly",
+    "name": "Cramly AI",
+    "tagline": "AI study companion for rapid syllabus revision, discussion question prep & essay outlines.",
+    "category": "Study",
+    "badge": "⚡ Rapid Revision Aid",
+    "free": true,
+    "url": "https://cramly.ai",
+    "logo": "school",
+    "targetUsers": [
+      "College Students Appearing for Govt Exams",
+      "UPSC & MPSC Mains Aspirants",
+      "Current Affairs Students",
+      "Competitive Exam Candidates"
+    ],
+    "whatIs": "Cramly AI is a dedicated study platform built to accelerate learning and revision. It offers specialized study tools including long-form content simplifiers, multiple-choice generators, essay argument builders, and discussion question prompt engines. Cramly helps aspirants break down dense government reports, legal frameworks, and academic papers into digestible study nuggets.",
+    "whyItMatters": "Saves hours when tackling massive 500-page standard reference books by extracting core analytical concepts and turning them into question-and-answer revision prompts.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Select Study Mode",
+        "desc": "Navigate to cramly.ai and select your required workflow: 'Study Guide', 'Multiple Choice', or 'Essay Assistant'."
+      },
+      {
+        "step": 2,
+        "title": "Paste Topic or Notes",
+        "desc": "Paste complex topics such as 'Panchayati Raj 73rd Constitutional Amendment' or 'Fiscal Deficit Trends in India'."
+      },
+      {
+        "step": 3,
+        "title": "Run Concept Simplification",
+        "desc": "Use the 'Explain to Me Like a 5th Grader' or 'Advanced Academic' slider to customize depth."
+      },
+      {
+        "step": 4,
+        "title": "Generate Mains Question Outlines",
+        "desc": "Generate balanced points in favor, against, and practical solutions for policy essay topics."
+      },
+      {
+        "step": 5,
+        "title": "Save to Revision Notebook",
+        "desc": "Organize generated insights by subject tags for quick weekend review before exams."
+      }
+    ],
+    "prompts": [
+      {
+        "title": "Civil Services Essay Framework",
+        "text": "Create an introduction, 5 thematic body paragraphs with Indian constitutional precedents, and a forward-looking conclusion on: 'Technological Sovereignty and Digital Public Infrastructure in India'."
+      },
+      {
+        "title": "Topic Simplifier for Beginners",
+        "text": "Explain the difference between Monetary Policy Committee (MPC) repo rate cuts and Fiscal Stimulus in 5 crisp bullet points with Indian examples."
+      }
+    ],
+    "limitations": "Requires free account signup; essay generation requires thoughtful fact-checking against official government statistics.",
+    "relatedSlugs": [
+      "notebooklm",
+      "claude",
+      "quillbot"
+    ]
   }
 ]
 
@@ -8123,6 +8245,12 @@ const SLUG_ALIASES = {
   'studyx-ai': 'studyx',
   'yomu': 'yomu-ai',
   'yomuai': 'yomu-ai',
+
+  // Quizgecko & Cramly Aliases
+  'quizgecko-ai': 'quizgecko',
+  'quiz-gecko': 'quizgecko',
+  'cramly-ai': 'cramly',
+  'cramlyai': 'cramly',
 }
 
 // Helper: get a tool by slug (with case-insensitivity and alias resolution)

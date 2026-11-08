@@ -8,6 +8,7 @@ import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import JobCard from '../../components/JobCard'
 import SkeletonCard from '../../components/SkeletonCard'
+import styles from './search.module.css'
 
 function SearchResults() {
   const searchParams = useSearchParams()
@@ -34,8 +35,9 @@ function SearchResults() {
           const res = await fetch(`/api/search/semantic?q=${encodeURIComponent(query)}&limit=20`)
           if (res.ok) {
             data = await res.json()
-            setPosts(data.results || [])
-            setSearchMode(data.mode || 'semantic')
+            const payload = data.data || data
+            setPosts(payload.results || payload.posts || [])
+            setSearchMode(payload.mode || 'semantic')
           } else {
             setPosts([])
           }
@@ -44,7 +46,8 @@ function SearchResults() {
           const res = await fetch(`/api/posts?q=${encodeURIComponent(query)}&page=1`)
           if (res.ok) {
             data = await res.json()
-            setPosts(data.posts || [])
+            const payload = data.data || data
+            setPosts(payload.posts || payload.results || [])
             setSearchMode('keyword')
           } else {
             setPosts([])
@@ -73,56 +76,31 @@ function SearchResults() {
 
       {/* Smart Search toggle */}
       {query && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', flexWrap: 'wrap' }}>
-          <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 500 }}>Search mode:</span>
-          <div style={{ display: 'flex', border: '1px solid var(--border)', borderRadius: 'var(--radius-full)', overflow: 'hidden' }}>
+        <div className={styles.modeRow}>
+          <span className={styles.modeLabel}>Search mode:</span>
+          <div className={styles.modeToggleGroup}>
             <button
               id="search-mode-smart"
               onClick={() => setMode('smart')}
-              style={{
-                padding: '6px 16px',
-                fontSize: '13px',
-                fontWeight: 600,
-                border: 'none',
-                cursor: 'pointer',
-                background: mode === 'smart' ? 'var(--accent)' : 'transparent',
-                color: mode === 'smart' ? 'white' : 'var(--text-body)',
-                transition: 'all 0.2s',
-              }}
+              className={`${styles.modeBtn} ${mode === 'smart' ? styles.modeBtnActive : ''}`}
             >
               Smart Search
             </button>
             <button
               id="search-mode-keyword"
               onClick={() => setMode('keyword')}
-              style={{
-                padding: '6px 16px',
-                fontSize: '13px',
-                fontWeight: 600,
-                border: 'none',
-                cursor: 'pointer',
-                background: mode === 'keyword' ? 'var(--accent)' : 'transparent',
-                color: mode === 'keyword' ? 'white' : 'var(--text-body)',
-                transition: 'all 0.2s',
-              }}
+              className={`${styles.modeBtn} ${mode === 'keyword' ? styles.modeBtnActive : ''}`}
             >
               Keyword
             </button>
           </div>
           {mode === 'smart' && (
-            <span style={{
-              fontSize: '11px',
-              padding: '3px 10px',
-              borderRadius: 'var(--radius-full)',
-              background: 'var(--accent-light)',
-              color: 'var(--accent-text)',
-              fontWeight: 600,
-            }}>
+            <span className={styles.aiPoweredBadge}>
               AI-powered — understands meaning, not just words
             </span>
           )}
           {!loading && searchMode === 'keyword' && mode === 'smart' && (
-            <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+            <span className={styles.fallbackNote}>
               (Smart search unavailable — showing keyword results)
             </span>
           )}
@@ -154,8 +132,7 @@ function SearchResults() {
                     {mode === 'smart' && (
                       <button
                         onClick={() => setMode('keyword')}
-                        className="btn-primary"
-                        style={{ marginTop: '12px' }}
+                        className={`btn-primary ${styles.tryKeywordBtn}`}
                       >
                         Try Keyword Search
                       </button>
@@ -163,21 +140,11 @@ function SearchResults() {
                   </div>
                 )
                 : posts.map(post => (
-                    <div key={post.id} style={{ position: 'relative' }}>
-                      <JobCard post={post} />
+                    <div key={post.id} className={styles.cardWrapper}>
+                      <JobCard job={post} />
                       {/* Similarity badge for semantic results */}
                       {post.similarity !== undefined && post.similarity !== null && (
-                        <div style={{
-                          position: 'absolute',
-                          top: '8px',
-                          right: '8px',
-                          background: 'var(--accent)',
-                          color: 'white',
-                          fontSize: '10px',
-                          fontWeight: 700,
-                          padding: '2px 7px',
-                          borderRadius: 'var(--radius-full)',
-                        }}>
+                        <div className={styles.similarityBadge}>
                           {Math.round(post.similarity * 100)}% match
                         </div>
                       )}
